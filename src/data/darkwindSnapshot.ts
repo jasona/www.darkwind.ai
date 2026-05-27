@@ -28,7 +28,7 @@ export type GuildFeature = {
 export type Guild = {
   name: string;
   roles: GuildRole[];
-  image: string;
+  image?: string;
   pitch: string;
   style: string;
   features: GuildFeature[];
@@ -102,9 +102,9 @@ export const maturityStats: MaturityStat[] = [
     detail: "A large world map spanning Geshtai, Dailos, and legacy continents.",
   },
   {
-    value: "20+",
+    value: "16",
     label: "guild paths",
-    detail: "Classic classes, hidden societies, mythic paths, and guild-specific mechanics.",
+    detail: "Highlighted live guilds with distinct playstyles, resources, commands, and progression.",
   },
   {
     value: "17",
@@ -208,9 +208,49 @@ export const featuredGuilds: Guild[] = [
     ],
   },
   {
+    name: "Dragon",
+    roles: ["Shapeshifter", "Melee"],
+    image: "guild-dragon",
+    pitch:
+      "A mythic transformation guild built around draconic will, claws, breath, scales, fear, flight, and lair identity.",
+    style: "Become the monster in the room: declare, transform, breathe, fly, and make enemies deal with your size.",
+    features: [
+      { label: "Form", value: "Dragon" },
+      { label: "Power", value: "Breath" },
+      { label: "Mobility", value: "Flight" },
+    ],
+    commands: ["dragonhelp", "dtransform", "breathe", "dfly", "lair", "dscales"],
+    progression:
+      "Dragon is a live guild with source under /guilds/dragon and commands under /cmds/guilds/dragon.",
+    mechanics: [
+      "The command set includes claws, fear, breath, flight, lair, loot, scales, stomps, spikes, and will-based tools.",
+      "It reads as a high-fantasy physical-caster hybrid rather than a conventional spellbook guild.",
+    ],
+  },
+  {
+    name: "Fighter",
+    roles: ["Melee"],
+    image: "guild-fighter",
+    pitch:
+      "The direct martial baseline: weapon pressure, balance, defense, rushes, tactical calls, and heavy physical verbs.",
+    style: "Win with positioning, toughness, weapon skill, and clean combat fundamentals.",
+    features: [
+      { label: "Role", value: "Weapon master" },
+      { label: "Tempo", value: "Balance" },
+      { label: "Combat", value: "Direct pressure" },
+    ],
+    commands: ["fhelp", "fstats", "fbalance", "fdefend", "fcharge", "cleave"],
+    progression:
+      "Fighter remains the central martial guild path and also backs several legacy martial variants in the daemon.",
+    mechanics: [
+      "The command list includes bash, cleave, disarm, defend, charge, rush, rage, surge, and inspection tools.",
+      "Fighter is the clean contrast point for more specialized martial guilds such as Monk, Ranger, and Swashbuckler.",
+    ],
+  },
+  {
     name: "Ranger",
     roles: ["Survival", "Hybrid"],
-    image: "guild-thief",
+    image: "guild-ranger",
     pitch:
       "A wilderness guild with domains, camp craft, traps, tea, poultices, nets, bows, and terrain-aware travel.",
     style: "Prepare the field, live off the land, and bring practical answers to dangerous roads.",
@@ -279,7 +319,7 @@ export const featuredGuilds: Guild[] = [
   {
     name: "Monk",
     roles: ["Melee", "Support"],
-    image: "guild-fighter",
+    image: "guild-monk",
     pitch:
       "A disciplined martial guild centered on chi, stance-like routes, restraint, training, and physical mastery.",
     style: "Build momentum through clean combat rhythm and measured defensive control.",
@@ -341,6 +381,46 @@ export const featuredGuilds: Guild[] = [
     ],
   },
   {
+    name: "Paladin",
+    roles: ["Melee", "Support"],
+    image: "guild-paladin",
+    pitch:
+      "A holy martial guild built around courage, devotion, consecration, favor, smiting, seals, warhorse identity, and protective presence.",
+    style: "Stand in the open, bind faith to steel, and make protection part of the attack plan.",
+    features: [
+      { label: "Power", value: "Faith" },
+      { label: "Role", value: "Holy defender" },
+      { label: "Ally", value: "Warhorse" },
+    ],
+    commands: ["palhelp", "palskills", "devote", "smite", "seal", "warhorse"],
+    progression:
+      "Paladin is a live guild with source under /guilds/paladin and commands under /cmds/guilds/paladin.",
+    mechanics: [
+      "The command surface includes courage, devote, divine favor, evoke, holy presence, javelin, repel, retribution, rush, sanctify, seal, smite, and warhorse.",
+      "It shares divine space with Mitra and Priest paths but plays as a front-line holy combatant.",
+    ],
+  },
+  {
+    name: "Priest",
+    roles: ["Support", "Caster"],
+    image: "guild-priest",
+    pitch:
+      "A divine caster path with its own prayer soul, spell commands, emotes, and support identity separate from the Mitra cleric lineage.",
+    style: "Work through ritual, prayer, and protective magic rather than weapon-first doctrine.",
+    features: [
+      { label: "Power", value: "Prayer" },
+      { label: "Role", value: "Divine caster" },
+      { label: "Support", value: "Blessings" },
+    ],
+    commands: ["priest spells", "priest emotes"],
+    progression:
+      "Priest is present in the live guild daemon and maps to /guilds/priest plus /cmds/guilds/priest.",
+    mechanics: [
+      "The command paths are split into spells, emotes, and other support commands.",
+      "It should be shown as a distinct divine guild rather than collapsed into the existing Cleric of Mitra card.",
+    ],
+  },
+  {
     name: "Swashbuckler",
     roles: ["Melee", "Hybrid"],
     image: "guild-swashbuckler",
@@ -365,7 +445,7 @@ export const featuredGuilds: Guild[] = [
   {
     name: "Thief",
     roles: ["Stealth"],
-    image: "guild-charlatan",
+    image: "guild-thief",
     pitch:
       "A shadow economy guild of stealth, opportunity, misdirection, and tools that reward player cunning.",
     style: "Control the terms of engagement before the fight ever begins.",
@@ -385,7 +465,7 @@ export const featuredGuilds: Guild[] = [
     ],
   },
   {
-    name: "Cleric",
+    name: "Cleric of Mitra",
     roles: ["Support", "Caster"],
     image: "guild-cleric",
     pitch:

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -117,6 +117,15 @@ function Shell({ children, page, setPage }: { children: React.ReactNode; page: P
           border: 1px solid rgba(222, 198, 146, 0.18);
           box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
           border-radius: 8px;
+        }
+        .guild-selector-scroll {
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+        }
+        .guild-selector-scroll::-webkit-scrollbar {
+          height: 0;
+          width: 0;
+          display: none;
         }
       `}</style>
       <TopNav page={page} setPage={setPage} />
@@ -501,6 +510,9 @@ function Fact({ title, copy, icon }: { title: string; copy: string; icon: React.
 function GuildsPage() {
   const [role, setRole] = useState<"All" | GuildRole>("All");
   const [query, setQuery] = useState("");
+  const [selectedGuildName, setSelectedGuildName] = useState(featuredGuilds[0]?.name || "");
+  const guildListRef = useRef<HTMLDivElement | null>(null);
+  const [guildScroll, setGuildScroll] = useState({ top: 0, height: 100, visible: false });
   const filteredGuilds = useMemo(() => {
     const needle = query.trim().toLowerCase();
     return featuredGuilds.filter((guild) => {
@@ -513,6 +525,28 @@ function GuildsPage() {
       return matchesRole && matchesQuery;
     });
   }, [query, role]);
+  const selectedGuild =
+    filteredGuilds.find((guild) => guild.name === selectedGuildName) || filteredGuilds[0] || featuredGuilds[0];
+
+  useEffect(() => {
+    if (filteredGuilds.length && !filteredGuilds.some((guild) => guild.name === selectedGuildName)) {
+      setSelectedGuildName(filteredGuilds[0].name);
+    }
+  }, [filteredGuilds, selectedGuildName]);
+  const updateGuildScroll = () => {
+    const list = guildListRef.current;
+    if (!list) return;
+
+    const maxScroll = Math.max(0, list.scrollHeight - list.clientHeight);
+    const visible = maxScroll > 0;
+    const height = visible ? Math.max(18, (list.clientHeight / list.scrollHeight) * 100) : 100;
+    const top = visible ? (list.scrollTop / maxScroll) * (100 - height) : 0;
+    setGuildScroll({ top, height, visible });
+  };
+
+  useEffect(() => {
+    updateGuildScroll();
+  }, [filteredGuilds.length]);
 
   return (
     <>
@@ -553,63 +587,120 @@ function GuildsPage() {
         </div>
       </section>
       <section className="grain py-20">
-        <div className="mx-auto grid max-w-7xl gap-4 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
-          {filteredGuilds.map((guild) => (
-            <motion.article key={guild.name} {...fadeUp} className="panel overflow-hidden">
-              <div className="grid gap-0 md:grid-cols-[0.82fr_1.18fr]">
-                <img src={imagePath(guild.image)} alt={guild.name} className="h-full min-h-72 w-full object-cover" />
-                <div className="p-6">
-                  <div className="flex flex-wrap items-center justify-between gap-3">
-                    <h2 className="font-display text-3xl text-white">{guild.name}</h2>
-                    <div className="flex flex-wrap gap-2">
-                      {guild.roles.map((guildRole) => (
-                        <span key={guildRole} className="rounded border border-[#d6a94b]/35 px-2 py-1 text-xs text-[#d6a94b]">
-                          {guildRole}
+        <div className="mx-auto grid max-w-7xl gap-5 px-4 sm:px-6 lg:grid-cols-[20rem_1fr] lg:px-8">
+          <motion.aside {...fadeUp} className="panel flex max-h-[44rem] min-h-0 flex-col overflow-hidden lg:sticky lg:top-24">
+            <div className="shrink-0 border-b border-white/10 p-4">
+              <div className="font-display text-xl text-white">Guilds</div>
+              <div className="mt-1 text-sm text-[#aaa294]">{filteredGuilds.length} matching paths</div>
+            </div>
+            <div className="relative min-h-0 flex-1">
+              <div ref={guildListRef} onScroll={updateGuildScroll} className="guild-selector-scroll h-full overflow-y-scroll p-2 pr-5">
+                {filteredGuilds.length ? (
+                  filteredGuilds.map((guild) => (
+                    <button
+                      key={guild.name}
+                      onClick={() => setSelectedGuildName(guild.name)}
+                      className={`mb-2 w-full rounded border p-3 text-left transition ${
+                        selectedGuild?.name === guild.name
+                          ? "border-[#d6a94b] bg-[#d6a94b]/14"
+                          : "border-white/10 bg-black/16 hover:border-white/25 hover:bg-white/7"
+                      }`}
+                    >
+                      <div className="font-display text-lg text-white">{guild.name}</div>
+                      <div className="mt-2 flex flex-wrap gap-1.5">
+                        {guild.roles.map((guildRole) => (
+                          <span key={guildRole} className="rounded border border-[#d6a94b]/30 px-2 py-0.5 text-[0.68rem] uppercase text-[#d6a94b]">
+                            {guildRole}
+                          </span>
+                        ))}
+                      </div>
+                    </button>
+                  ))
+                ) : (
+                  <div className="p-4 text-sm leading-6 text-[#aaa294]">No guilds match that filter.</div>
+                )}
+              </div>
+              <div className="pointer-events-none absolute bottom-2 right-2 top-2 w-2 rounded-full bg-white/10">
+                <div
+                  className="absolute left-0 right-0 rounded-full bg-[#d6a94b] shadow-[0_0_14px_rgba(214,169,75,0.35)]"
+                  style={{
+                    top: `${guildScroll.top}%`,
+                    height: `${guildScroll.height}%`,
+                    opacity: guildScroll.visible ? 0.9 : 0.35,
+                  }}
+                />
+              </div>
+            </div>
+          </motion.aside>
+
+          {selectedGuild && (
+            <motion.article key={selectedGuild.name} {...fadeUp} className="panel overflow-hidden">
+              {selectedGuild.image ? (
+                <div
+                  role="img"
+                  aria-label={selectedGuild.name}
+                  className="aspect-[16/7] min-h-80 bg-cover bg-center"
+                  style={{ backgroundImage: `url(${imagePath(selectedGuild.image)})` }}
+                >
+                  <img src={imagePath(selectedGuild.image)} alt="" className="sr-only" />
+                </div>
+              ) : (
+                <div className="flex aspect-[16/7] min-h-80 flex-col items-center justify-center bg-[radial-gradient(circle_at_50%_30%,rgba(214,169,75,0.2),rgba(8,11,15,0.92)_58%),linear-gradient(135deg,rgba(36,24,14,0.95),rgba(5,8,12,0.98))] p-8 text-center">
+                  <Sparkles className="h-14 w-14 text-[#d6a94b]" />
+                  <div className="mt-4 font-display text-4xl text-white">{selectedGuild.name}</div>
+                </div>
+              )}
+              <div className="p-6 lg:p-8">
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <h2 className="font-display text-4xl text-white">{selectedGuild.name}</h2>
+                  <div className="flex flex-wrap gap-2">
+                    {selectedGuild.roles.map((guildRole) => (
+                      <span key={guildRole} className="rounded border border-[#d6a94b]/35 px-2 py-1 text-xs text-[#d6a94b]">
+                        {guildRole}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <p className="mt-5 text-xl leading-8 text-[#ddd3bd]">{selectedGuild.pitch}</p>
+                <p className="mt-4 text-base leading-7 text-[#bdb5a5]">{selectedGuild.style}</p>
+                {selectedGuild.progression && (
+                  <p className="mt-5 rounded border border-[#d6a94b]/25 bg-[#d6a94b]/8 p-4 text-sm leading-6 text-[#ead9b7]">
+                    {selectedGuild.progression}
+                  </p>
+                )}
+                <div className="mt-6 grid gap-3 sm:grid-cols-3">
+                  {selectedGuild.features.map((feature) => (
+                    <div key={feature.label} className="rounded border border-white/10 bg-black/18 p-4">
+                      <div className="text-xs uppercase text-[#8d8577]">{feature.label}</div>
+                      <div className="mt-1 font-semibold text-white">{feature.value}</div>
+                    </div>
+                  ))}
+                </div>
+                {selectedGuild.commands && (
+                  <div className="mt-6">
+                    <div className="text-xs uppercase text-[#d6a94b]">Commands to recognize</div>
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      {selectedGuild.commands.map((command) => (
+                        <span key={command} className="font-rune rounded border border-white/10 bg-black/25 px-2 py-1 text-xs text-[#d8cfbd]">
+                          {command}
                         </span>
                       ))}
                     </div>
                   </div>
-                  <p className="mt-4 text-lg leading-8 text-[#ddd3bd]">{guild.pitch}</p>
-                  <p className="mt-4 text-base leading-7 text-[#bdb5a5]">{guild.style}</p>
-                  {guild.progression && (
-                    <p className="mt-4 rounded border border-[#d6a94b]/25 bg-[#d6a94b]/8 p-3 text-sm leading-6 text-[#ead9b7]">
-                      {guild.progression}
-                    </p>
-                  )}
-                  <div className="mt-5 grid grid-cols-3 gap-2">
-                    {guild.features.map((feature) => (
-                      <div key={feature.label} className="rounded border border-white/10 bg-black/18 p-3">
-                        <div className="text-xs uppercase text-[#8d8577]">{feature.label}</div>
-                        <div className="mt-1 text-sm font-semibold text-white">{feature.value}</div>
-                      </div>
+                )}
+                {selectedGuild.mechanics && (
+                  <ul className="mt-6 grid gap-3 lg:grid-cols-2">
+                    {selectedGuild.mechanics.map((mechanic) => (
+                      <li key={mechanic} className="flex gap-2 rounded border border-white/10 bg-white/5 p-3 text-sm leading-6 text-[#c8bfad]">
+                        <Sparkles className="mt-1 h-4 w-4 shrink-0 text-[#d6a94b]" />
+                        {mechanic}
+                      </li>
                     ))}
-                  </div>
-                  {guild.commands && (
-                    <div className="mt-5">
-                      <div className="text-xs uppercase text-[#d6a94b]">Commands to recognize</div>
-                      <div className="mt-2 flex flex-wrap gap-2">
-                        {guild.commands.map((command) => (
-                          <span key={command} className="font-rune rounded border border-white/10 bg-black/25 px-2 py-1 text-xs text-[#d8cfbd]">
-                            {command}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                  {guild.mechanics && (
-                    <ul className="mt-5 space-y-2">
-                      {guild.mechanics.map((mechanic) => (
-                        <li key={mechanic} className="flex gap-2 text-sm leading-6 text-[#c8bfad]">
-                          <Sparkles className="mt-1 h-4 w-4 shrink-0 text-[#d6a94b]" />
-                          {mechanic}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
+                  </ul>
+                )}
               </div>
             </motion.article>
-          ))}
+          )}
         </div>
       </section>
     </>
