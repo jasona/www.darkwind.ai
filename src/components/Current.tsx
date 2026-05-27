@@ -1,1136 +1,881 @@
-import { useState, useEffect, useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useEffect, useMemo, useState } from "react";
+import { motion } from "framer-motion";
 import {
-  Sword,
+  ArrowRight,
+  Award,
+  BookOpen,
+  Castle,
+  Compass,
+  Crown,
+  Globe2,
+  Hammer,
+  Map,
+  Monitor,
+  Moon,
+  Search,
   Shield,
   Skull,
-  Leaf,
-  Music,
-  Eye,
-  Zap,
-  Wind,
-  Compass,
-  Anchor,
-  Store,
-  Crosshair,
-  Dog,
-  Castle,
-  Users,
-  UtensilsCrossed,
-  Map,
   Sparkles,
-  ChevronDown,
-  Globe,
+  Swords,
   Terminal,
-  Monitor,
-  Smartphone,
-  Crown,
-  Flame,
-  Snowflake,
-  Sun,
-  Moon,
-  Mountain,
-  Waves,
-  ChevronLeft,
-  ChevronRight,
 } from "lucide-react";
+import {
+  featuredGuilds,
+  gameLoops,
+  gods,
+  imagePath,
+  loreTimeline,
+  maturityStats,
+  races,
+  systems,
+  worldRegions,
+  type GuildRole,
+  type Region,
+} from "../data/darkwindSnapshot";
 
-const IMG = "/images";
+type PageKey = "home" | "about" | "world" | "guilds" | "systems" | "races" | "start";
 
-/* ─── Google Fonts ─── */
-const FontLoader = () => (
-  <style>{`
-    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
-    :root {
-      --navy: #0d1117;
-      --charcoal: #161b22;
-      --gold: #d4a843;
-      --gold-light: #e8c564;
-      --gold-dim: #a68532;
-      --blue: #58a6ff;
-      --red: #f85149;
-      --green: #238636;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      background: var(--navy);
-      font-family: 'DM Sans', sans-serif;
-      color: #c9d1d9;
-      overflow-x: hidden;
-    }
-    .font-cinzel { font-family: 'Cinzel', serif; }
-    .font-body { font-family: 'DM Sans', sans-serif; }
-    .scrollbar-hide::-webkit-scrollbar { display: none; }
-    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+const pagePaths: Record<PageKey, string> = {
+  home: "/",
+  about: "/about",
+  world: "/world",
+  guilds: "/guilds",
+  systems: "/systems",
+  races: "/races",
+  start: "/start",
+};
 
-    @keyframes fogDrift {
-      0% { transform: translateX(-10%) translateY(0); opacity: 0.3; }
-      50% { transform: translateX(5%) translateY(-8px); opacity: 0.6; }
-      100% { transform: translateX(-10%) translateY(0); opacity: 0.3; }
-    }
-    @keyframes fogDrift2 {
-      0% { transform: translateX(10%) translateY(0); opacity: 0.2; }
-      50% { transform: translateX(-5%) translateY(-12px); opacity: 0.5; }
-      100% { transform: translateX(10%) translateY(0); opacity: 0.2; }
-    }
-    @keyframes particleFloat {
-      0%, 100% { transform: translateY(0) translateX(0); opacity: 0; }
-      10% { opacity: 1; }
-      90% { opacity: 1; }
-      50% { transform: translateY(-120px) translateX(30px); }
-    }
-    @keyframes swirlRotate {
-      0% { transform: rotate(0deg) scale(1); opacity: 0.08; }
-      50% { transform: rotate(180deg) scale(1.1); opacity: 0.15; }
-      100% { transform: rotate(360deg) scale(1); opacity: 0.08; }
-    }
-    @keyframes glowPulse {
-      0%, 100% { text-shadow: 0 0 20px rgba(212,168,67,0.4), 0 0 60px rgba(212,168,67,0.2); }
-      50% { text-shadow: 0 0 30px rgba(212,168,67,0.6), 0 0 80px rgba(212,168,67,0.3), 0 0 120px rgba(212,168,67,0.1); }
-    }
-    .glow-text { animation: glowPulse 3s ease-in-out infinite; }
-  `}</style>
-);
+const navItems: Array<[string, PageKey]> = [
+  ["About", "about"],
+  ["World", "world"],
+  ["Guilds", "guilds"],
+  ["Systems", "systems"],
+  ["Races", "races"],
+  ["Start", "start"],
+];
 
-/* ─── Fog Divider ─── */
-const FogDivider = ({ flip = false }: { flip?: boolean }) => (
-  <div className={`relative w-full h-24 md:h-32 overflow-hidden ${flip ? "rotate-180" : ""}`}>
-    <div
-      className="absolute bottom-0 left-0 w-[120%] h-20"
-      style={{
-        background: `radial-gradient(ellipse at 30% 100%, rgba(212,168,67,0.06) 0%, transparent 60%),
-                     radial-gradient(ellipse at 70% 100%, rgba(88,166,255,0.04) 0%, transparent 60%)`,
-        animation: "fogDrift 12s ease-in-out infinite",
-      }}
-    />
-    <div
-      className="absolute bottom-0 left-0 w-[130%] h-16"
-      style={{
-        background: `radial-gradient(ellipse at 50% 100%, rgba(255,255,255,0.04) 0%, transparent 70%)`,
-        animation: "fogDrift2 15s ease-in-out infinite",
-      }}
-    />
-  </div>
-);
+const roles: Array<"All" | GuildRole> = [
+  "All",
+  "Melee",
+  "Caster",
+  "Support",
+  "Stealth",
+  "Shapeshifter",
+  "Hybrid",
+  "Survival",
+];
 
-/* ─── Particle System ─── */
-const Particles = ({ count = 20 }: { count?: number }) => (
-  <div className="absolute inset-0 overflow-hidden pointer-events-none">
-    {Array.from({ length: count }).map((_, i) => (
-      <div
-        key={i}
-        className="absolute rounded-full"
-        style={{
-          width: Math.random() * 3 + 1 + "px",
-          height: Math.random() * 3 + 1 + "px",
-          left: Math.random() * 100 + "%",
-          bottom: Math.random() * 30 + "%",
-          background: i % 3 === 0 ? "rgba(212,168,67,0.6)" : "rgba(200,200,200,0.3)",
-          animation: `particleFloat ${Math.random() * 8 + 6}s ease-in-out ${Math.random() * 5}s infinite`,
-        }}
-      />
-    ))}
-  </div>
-);
+const iconMap = {
+  swords: Swords,
+  crown: Crown,
+  compass: Compass,
+  hammer: Hammer,
+  sparkles: Sparkles,
+  skull: Skull,
+};
 
-/* ─── Section Wrapper ─── */
-const Section = ({
-  id,
+const fadeUp = {
+  initial: { opacity: 0, y: 24 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: "-80px" },
+  transition: { duration: 0.55, ease: "easeOut" },
+};
+
+function normalizePath(pathname: string): PageKey {
+  const clean = pathname.replace(/\/+$/, "") || "/";
+  if (clean === "/lore") return "about";
+  const found = Object.entries(pagePaths).find(([, path]) => path === clean);
+  return (found?.[0] as PageKey) || "home";
+}
+
+function sectionKicker(children: string) {
+  return (
+    <div className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase text-[#d6a94b]">
+      <span className="h-px w-8 bg-[#d6a94b]" />
+      {children}
+    </div>
+  );
+}
+
+function Shell({ children, page, setPage }: { children: React.ReactNode; page: PageKey; setPage: (page: PageKey) => void }) {
+  return (
+    <main className="min-h-screen bg-[#07090b] text-[#f0eadb]">
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=IBM+Plex+Mono:wght@500;600&family=Spectral:wght@400;500;600;700&display=swap');
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Spectral', Georgia, serif; background: #07090b; }
+        .font-display { font-family: 'Cinzel', Georgia, serif; }
+        .font-rune { font-family: 'IBM Plex Mono', monospace; }
+        .grain {
+          background-image:
+            radial-gradient(circle at 20% 10%, rgba(214, 169, 75, 0.14), transparent 28rem),
+            radial-gradient(circle at 80% 30%, rgba(98, 168, 199, 0.12), transparent 24rem),
+            linear-gradient(180deg, #07090b 0%, #0d1116 46%, #08090b 100%);
+        }
+        .panel {
+          background: linear-gradient(180deg, rgba(24, 30, 36, 0.86), rgba(10, 13, 16, 0.92));
+          border: 1px solid rgba(222, 198, 146, 0.18);
+          box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+          border-radius: 8px;
+        }
+      `}</style>
+      <TopNav page={page} setPage={setPage} />
+      {children}
+      <Footer setPage={setPage} />
+    </main>
+  );
+}
+
+function go(page: PageKey, setPage: (page: PageKey) => void) {
+  const path = pagePaths[page];
+  window.history.pushState({ page }, "", path);
+  setPage(page);
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function PageLink({
+  page,
+  setPage,
   children,
-  className = "",
-  bg = "bg-navy",
+  className,
 }: {
-  id: string;
+  page: PageKey;
+  setPage: (page: PageKey) => void;
   children: React.ReactNode;
   className?: string;
-  bg?: string;
-}) => (
-  <section id={id} className={`relative ${className}`} style={{ background: bg === "bg-navy" ? "var(--navy)" : "var(--charcoal)" }}>
-    {children}
-  </section>
-);
+}) {
+  return (
+    <a
+      href={pagePaths[page]}
+      onClick={(event) => {
+        event.preventDefault();
+        go(page, setPage);
+      }}
+      className={className}
+    >
+      {children}
+    </a>
+  );
+}
 
-/* ─── Data ─── */
-const NAV_LINKS = [
-  { label: "Lore", href: "#lore" },
-  { label: "World", href: "#world" },
-  { label: "Races", href: "#races" },
-  { label: "Guilds", href: "#guilds" },
-  { label: "Features", href: "#features" },
-  { label: "Gods", href: "#gods" },
-];
+function TopNav({ page, setPage }: { page: PageKey; setPage: (page: PageKey) => void }) {
+  return (
+    <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-[#07090b]/84 backdrop-blur-xl">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <PageLink page="home" setPage={setPage} className="flex items-center gap-3">
+          <span className="flex h-9 w-9 items-center justify-center rounded border border-[#d6a94b]/45 bg-[#d6a94b]/10">
+            <Castle className="h-5 w-5 text-[#d6a94b]" />
+          </span>
+          <span className="font-display text-lg font-semibold text-white">DarkWind</span>
+        </PageLink>
+        <nav className="hidden items-center gap-5 text-sm text-[#d5d0c2] lg:flex">
+          {navItems.map(([label, key]) => (
+            <PageLink
+              key={key}
+              page={key}
+              setPage={setPage}
+              className={`transition hover:text-white ${page === key ? "text-[#d6a94b]" : ""}`}
+            >
+              {label}
+            </PageLink>
+          ))}
+        </nav>
+        <a
+          href="https://play.darkwind.ai/"
+          className="inline-flex items-center gap-2 rounded border border-[#d6a94b]/55 bg-[#d6a94b] px-3 py-2 text-sm font-bold text-[#18100a] transition hover:bg-[#f0c761]"
+        >
+          Play
+          <ArrowRight className="h-4 w-4" />
+        </a>
+      </div>
+    </header>
+  );
+}
 
-const CONTINENTS = [
-  { name: "Darkwind Mainland", desc: "Cosmopolitan hub of trade, politics, and intrigue", races: ["Human", "Half-Elf", "Dwarf"], icon: Crown, img: "continent-mainland" },
-  { name: "Hyperborea", desc: "Frozen tundra of glacial peaks and Viking longships", races: ["Northman", "Frost Giant", "Troll"], icon: Snowflake, img: "continent-hyperborea" },
-  { name: "Souvrael", desc: "Scorching deserts, sandstone temples, and hidden oases", races: ["Drow", "Halfling", "Centaur"], icon: Sun, img: "continent-souvrael" },
-  { name: "The Underworld", desc: "Bioluminescent caverns and fungal forests below the earth", races: ["Goblin", "Dark Elf"], icon: Moon, img: "continent-underworld" },
-  { name: "Kerei", desc: "Mountain monasteries, cherry blossoms, and ancient pagodas", races: ["Kereian", "Ogre"], icon: Mountain, img: "continent-kerei" },
-  { name: "The Islands", desc: "Volcanic archipelago of jagged cliffs and lava flows", races: ["Islander", "Lizardman"], icon: Flame, img: "continent-islands" },
-  { name: "Wayfare", desc: "Colorful caravans, rolling hills, and festival lanterns", races: ["Gnome", "Faerie"], icon: Waves, img: "continent-wayfare" },
-];
+function Hero({ setPage }: { setPage: (page: PageKey) => void }) {
+  return (
+    <section className="relative min-h-[88vh] overflow-hidden">
+      <img src={imagePath("hero-castle-gate")} alt="DarkWind castle gate" className="absolute inset-0 h-full w-full object-cover" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#050607] via-[#06080a]/82 to-[#050607]/35" />
+      <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-[#07090b] to-transparent" />
+      <div className="relative z-10 mx-auto flex min-h-[88vh] max-w-7xl items-end px-4 pb-16 pt-32 sm:px-6 lg:px-8">
+        <motion.div {...fadeUp} className="max-w-3xl">
+          <div className="mb-5 inline-flex items-center gap-3 rounded border border-white/15 bg-black/35 px-3 py-2 text-sm text-[#d7d0be] backdrop-blur">
+            <Moon className="h-4 w-4 text-[#9bbcf7]" />
+            A living fantasy MUD with modern browser play
+          </div>
+          <h1 className="font-display text-6xl font-bold leading-[0.95] text-white sm:text-7xl lg:text-8xl">DarkWind</h1>
+          <p className="mt-6 max-w-2xl text-xl leading-8 text-[#e2dccb] sm:text-2xl">
+            A decades-old command-driven RPG with deep guild mechanics, explorable continents, professions,
+            divine pressure, reputation, and a browser client built for modern play.
+          </p>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a
+              href="https://play.darkwind.ai/"
+              className="inline-flex items-center justify-center gap-2 rounded border border-[#d6a94b] bg-[#d6a94b] px-5 py-3 font-bold text-[#15100a] transition hover:bg-[#f1c965]"
+            >
+              <Terminal className="h-5 w-5" />
+              Play in browser
+            </a>
+            <PageLink
+              page="world"
+              setPage={setPage}
+              className="inline-flex items-center justify-center gap-2 rounded border border-white/20 bg-white/8 px-5 py-3 font-bold text-white backdrop-blur transition hover:bg-white/14"
+            >
+              <Map className="h-5 w-5" />
+              Explore the world
+            </PageLink>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
 
-const RACES = [
-  { name: "Human", origin: "Mainland", desc: "Versatile and ambitious, the most common race across the realm", group: "Mainland", img: "race-human" },
-  { name: "Half-Elf", origin: "Mainland", desc: "Born of two worlds, gifted with grace and adaptability", group: "Mainland", img: "race-half-elf" },
-  { name: "Dwarf", origin: "Mainland", desc: "Stout miners and master smiths who delve deep beneath the mountains", group: "Mainland", img: "race-dwarf" },
-  { name: "Elf", origin: "Mainland", desc: "Ancient and ageless, keepers of forgotten arcane knowledge", group: "Mainland", img: "race-elf" },
-  { name: "Halfling", origin: "Mainland", desc: "Quick-footed tricksters with an uncanny knack for survival", group: "Mainland", img: "race-halfling" },
-  { name: "Gnome", origin: "Mainland", desc: "Clever tinkerers and illusionists, small in stature but vast in cunning", group: "Mainland", img: "race-gnome" },
-  { name: "Northman", origin: "Hyperborea", desc: "Hardy warriors of the frozen wastes, born to the axe and shield", group: "Hyperborea", img: "race-northman" },
-  { name: "Troll", origin: "Hyperborea", desc: "Regenerating brutes feared across the tundra for their savagery", group: "Hyperborea", img: "race-troll" },
-  { name: "Ogre", origin: "Hyperborea", desc: "Towering berserkers whose strength is matched only by their hunger", group: "Hyperborea", img: "race-ogre" },
-  { name: "Frost Giant", origin: "Hyperborea", desc: "Ancient colossi of ice who remember the world before the Dark Wind", group: "Hyperborea", img: "race-frost-giant" },
-  { name: "Centaur", origin: "Hyperborea", desc: "Noble horsekind who roam the frozen steppes in thundering herds", group: "Hyperborea", img: "race-centaur" },
-  { name: "Drow", origin: "Souvrael", desc: "Dark-skinned desert mystics wielding sand magic and ancient rites", group: "Souvrael", img: "race-drow" },
-  { name: "Lizardman", origin: "Souvrael", desc: "Cold-blooded warriors at home in the scorching dunes and swamps", group: "Souvrael", img: "race-lizardman" },
-  { name: "Kereian", origin: "Kerei", desc: "Disciplined monks and samurai from the eastern mountain kingdoms", group: "Souvrael", img: "race-kereian" },
-  { name: "Goblin", origin: "Underworld", desc: "Cunning scavengers of the deep, experts in poison and trapcraft", group: "Underworld", img: "race-goblin" },
-  { name: "Dark Elf", origin: "Underworld", desc: "Exiled elves twisted by centuries in the lightless caverns below", group: "Underworld", img: "race-dark-elf" },
-  { name: "Blancmange", origin: "Unknown", desc: "An amorphous race of sentient beings, now extinct — lost to the Dark Wind", group: "Extinct", img: "race-blancmange" },
-];
+function HomePage({ setPage }: { setPage: (page: PageKey) => void }) {
+  return (
+    <>
+      <Hero setPage={setPage} />
+      <section className="grain py-14">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-3 md:grid-cols-4">
+            {maturityStats.map((stat) => (
+              <motion.div key={stat.label} {...fadeUp} className="panel p-5">
+                <div className="font-rune text-3xl font-semibold text-[#d6a94b]">{stat.value}</div>
+                <div className="mt-2 font-display text-lg text-white">{stat.label}</div>
+                <p className="mt-2 text-sm leading-6 text-[#bbb4a4]">{stat.detail}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="bg-[#080b0f] py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <motion.div {...fadeUp} className="max-w-3xl">
+            {sectionKicker("Old world")}
+            <h2 className="font-display text-4xl font-semibold text-white sm:text-5xl">
+              The world is still living in the shadow of divine intervention.
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-[#c8bfad]">
+              DarkWind's present is shaped by the Cataclysm, the Race Wars, and the active pressure of
+              Mitra, Gaea, and Set. The gods are not decorative lore: reputation, divine omens, guild
+              identity, holy hours, patron strain, and even how NPCs react can all trace back to the old
+              conflict between mercy, wild balance, and shadowed ambition.
+            </p>
+          </motion.div>
+          <div className="mt-10 grid gap-4 lg:grid-cols-3">
+            {loreTimeline.map((beat) => (
+              <motion.article key={beat.title} {...fadeUp} className="panel overflow-hidden">
+                <img src={imagePath(beat.image)} alt={beat.title} className="h-48 w-full object-cover" />
+                <div className="p-5">
+                  <div className="text-sm uppercase text-[#d6a94b]">{beat.era}</div>
+                  <h3 className="mt-1 font-display text-2xl text-white">{beat.title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-[#c8bfad]">{beat.detail}</p>
+                </div>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="bg-[#0c1015] py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <motion.div {...fadeUp} className="max-w-3xl">
+            {sectionKicker("Explore")}
+            <h2 className="font-display text-4xl font-semibold text-white sm:text-5xl">
+              Follow the thread that catches your eye.
+            </h2>
+          </motion.div>
+          <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {[
+              ["About", "about", "The Cataclysm, Race Wars, active gods, and why reputation matters.", BookOpen],
+              ["World and Areas", "world", "Geshtai, Dailos, regions, wayshards, level ranges, and notable destinations.", Map],
+              ["Guilds", "guilds", "Commands, resources, unlocks, and playstyle details for the major guild paths.", Crown],
+              ["Systems", "systems", "Professions, reputation, waypoints, Eternal Dungeons, dailies, achievements, and Darkflow.", Hammer],
+              ["Races", "races", "Playable heritages with origin flavor and identity hooks.", Globe2],
+              ["Getting Started", "start", "A practical first-session route through city services, commands, guilds, and survival habits.", Compass],
+            ].map(([title, key, copy, Icon]) => {
+              const LucideIcon = Icon as typeof Map;
+              return (
+                <PageLink key={key as string} page={key as PageKey} setPage={setPage} className="panel block p-6 transition hover:border-[#d6a94b]/60">
+                  <LucideIcon className="h-7 w-7 text-[#d6a94b]" />
+                  <h3 className="mt-5 font-display text-2xl text-white">{title as string}</h3>
+                  <p className="mt-3 text-base leading-7 text-[#c8bfad]">{copy as string}</p>
+                </PageLink>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+      <GameLoopPreview />
+    </>
+  );
+}
 
-const GUILDS = [
-  { name: "Fighter", type: "Melee", abilities: ["Cleave", "Shield Wall", "Battle Cry", "Riposte"], color: "#dc2626", icon: Sword, img: "guild-fighter" },
-  { name: "Thief", type: "Stealth", abilities: ["Backstab", "Pickpocket", "Shadow Step", "Disarm Trap"], color: "#6b7280", icon: Eye, img: "guild-thief" },
-  { name: "Mage", type: "Caster", abilities: ["Fireball", "Teleport", "Arcane Shield", "Meteor"], color: "#3b82f6", icon: Sparkles, img: "guild-mage" },
-  { name: "Cleric", type: "Support", abilities: ["Heal", "Sanctuary", "Holy Smite", "Resurrect"], color: "#eab308", icon: Shield, img: "guild-cleric" },
-  { name: "Necromancer", type: "Caster", abilities: ["Raise Dead", "Soul Drain", "Bone Armor", "Death Coil"], color: "#7c3aed", icon: Skull, img: "guild-necromancer" },
-  { name: "Druid", type: "Shapeshifter", abilities: ["Wild Shape", "Entangle", "Nature's Wrath", "Regrowth"], color: "#16a34a", icon: Leaf, img: "guild-druid" },
-  { name: "Bard", type: "Support", abilities: ["War Song", "Lullaby", "Inspire", "Discord"], color: "#ec4899", icon: Music, img: "guild-bard" },
-  { name: "Ninja", type: "Stealth", abilities: ["Shuriken", "Vanish", "Assassinate", "Smoke Bomb"], color: "#475569", icon: Wind, img: "guild-ninja" },
-  { name: "Garou", type: "Shapeshifter", abilities: ["Wolf Form", "Howl", "Frenzy", "Pack Bond"], color: "#92400e", icon: Dog, img: "guild-garou" },
-  { name: "Psionicist", type: "Caster", abilities: ["Mind Blast", "Telekinesis", "Psychic Shield", "Dominate"], color: "#06b6d4", icon: Zap, img: "guild-psionicist" },
-  { name: "Charlatan", type: "Stealth", abilities: ["Disguise", "Con", "Misdirect", "Forgery"], color: "#d97706", icon: Users, img: "guild-charlatan" },
-  { name: "Swashbuckler", type: "Melee", abilities: ["Lunge", "Parry", "Flourish", "Riposte"], color: "#b91c1c", icon: Compass, img: "guild-swashbuckler" },
-];
+function GameLoopPreview() {
+  return (
+    <section className="bg-[#0c1015] py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <motion.div {...fadeUp} className="max-w-3xl">
+          {sectionKicker("Core loops")}
+          <h2 className="font-display text-4xl font-semibold text-white sm:text-5xl">
+            A command RPG with more than combat.
+          </h2>
+        </motion.div>
+        <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {gameLoops.map((loop) => {
+            const Icon = iconMap[loop.icon as keyof typeof iconMap] || Sparkles;
+            return (
+              <motion.article key={loop.title} {...fadeUp} className="panel p-6">
+                <Icon className="h-7 w-7 text-[#d6a94b]" />
+                <h3 className="mt-5 font-display text-2xl text-white">{loop.title}</h3>
+                <p className="mt-3 text-lg leading-7 text-[#ddd3bd]">{loop.short}</p>
+                <p className="mt-4 text-sm leading-6 text-[#aaa294]">{loop.detail}</p>
+              </motion.article>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
 
-const FEATURES = [
-  { title: "Naval Exploration", desc: "Sail between continents on carracks, galleys, and catamarans", icon: Anchor, span: "md:col-span-2" },
-  { title: "Player Economy", desc: "Own pubs, trade at auctions, build your fortune", icon: Store, span: "" },
-  { title: "Deep Combat", desc: "Critical strikes, damage types, armor absorption, and guild-specific combat styles", icon: Crosshair, span: "" },
-  { title: "Pets & Mounts", desc: "Tame animals, summon familiars, stable your companions", icon: Dog, span: "md:col-span-2" },
-  { title: "Clan Warfare", desc: "Build citadels, wage PvP in designated zones, rise in the ranks", icon: Castle, span: "" },
-  { title: "27 Unique Classes", desc: "From Fighters to Charlatans, Samurai to Werewolves", icon: Users, span: "" },
-  { title: "Food & Drink", desc: "Heal at taverns, brew poisons, feast before battle", icon: UtensilsCrossed, span: "" },
-  { title: "Seven Continents", desc: "From frozen Hyperborea to the volcanic Islands", icon: Map, span: "md:col-span-2" },
-];
+function PageHero({
+  kicker,
+  title,
+  copy,
+  image,
+}: {
+  kicker: string;
+  title: string;
+  copy: string;
+  image: string;
+}) {
+  return (
+    <section className="relative overflow-hidden pt-28">
+      <div className="absolute inset-0 opacity-38">
+        <img src={imagePath(image)} alt="" className="h-full w-full object-cover" />
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-b from-[#07090b]/80 via-[#07090b]/92 to-[#07090b]" />
+      <div className="relative mx-auto max-w-7xl px-4 pb-16 pt-16 sm:px-6 lg:px-8">
+        <motion.div {...fadeUp} className="max-w-4xl">
+          {sectionKicker(kicker)}
+          <h1 className="font-display text-5xl font-semibold leading-tight text-white sm:text-6xl">{title}</h1>
+          <p className="mt-6 max-w-3xl text-xl leading-8 text-[#d8cfbd]">{copy}</p>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
 
-/* ─── MAIN COMPONENT ─── */
-export default function DarkwindLanding() {
-  const [scrolled, setScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState("");
-  const raceScrollRef = useRef<HTMLDivElement>(null);
-  const heroRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
-  const heroY = useTransform(scrollYProgress, [0, 1], [0, 150]);
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
-
-  useEffect(() => {
-    const onScroll = () => {
-      setScrolled(window.scrollY > 50);
-      const sections = ["lore", "world", "races", "guilds", "features", "gods", "play"];
-      for (const s of [...sections].reverse()) {
-        const el = document.getElementById(s);
-        if (el && window.scrollY >= el.offsetTop - 200) {
-          setActiveSection(s);
-          break;
-        }
-      }
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  const scrollRaces = (dir: number) => {
-    raceScrollRef.current?.scrollBy({ left: dir * 320, behavior: "smooth" });
-  };
-
-  const typeBadgeColor = (type: string) => {
-    switch (type) {
-      case "Melee": return "bg-red-900/60 text-red-300";
-      case "Caster": return "bg-blue-900/60 text-blue-300";
-      case "Stealth": return "bg-gray-800/80 text-gray-300";
-      case "Support": return "bg-yellow-900/60 text-yellow-300";
-      case "Shapeshifter": return "bg-green-900/60 text-green-300";
-      default: return "bg-gray-800 text-gray-300";
-    }
-  };
+function WorldPage() {
+  const [activeRegion, setActiveRegion] = useState<Region>(worldRegions[1] || worldRegions[0]);
 
   return (
     <>
-      <FontLoader />
-
-      {/* ═══════ STICKY NAV ═══════ */}
-      <nav
-        className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
-        style={{
-          background: scrolled ? "rgba(13,17,23,0.92)" : "rgba(13,17,23,0.3)",
-          backdropFilter: scrolled ? "blur(12px)" : "blur(4px)",
-          borderBottom: scrolled ? "1px solid rgba(212,168,67,0.15)" : "1px solid transparent",
-        }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
-          <a href="#" className="font-cinzel text-xl font-bold tracking-widest" style={{ color: "var(--gold)" }}>
-            DARKWIND
-          </a>
-          <div className="hidden md:flex items-center gap-8">
-            {NAV_LINKS.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="font-body text-sm tracking-wide transition-colors duration-300"
-                style={{
-                  color: activeSection === link.href.slice(1) ? "var(--gold)" : "rgba(201,209,217,0.7)",
-                }}
+      <PageHero
+        kicker="World and areas"
+        title="Geshtai, Dailos, and the roads between danger."
+        copy="DarkWind is organized around player-facing worlds and regions: Geshtai's old continents, Dailos's newer wetlands, city hubs, remote islands, underworld routes, and wayshards that turn discovery into future travel."
+        image="world-map"
+      />
+      <section className="bg-[#080b0f] py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {worldRegions.map((region) => (
+              <button
+                key={region.name}
+                onClick={() => setActiveRegion(region)}
+                className={`rounded border p-4 text-left transition ${
+                  activeRegion.name === region.name
+                    ? "border-[#d6a94b] bg-[#d6a94b]/12"
+                    : "border-white/10 bg-white/5 hover:border-white/25"
+                }`}
               >
-                {link.label}
-              </a>
+                <div className="font-display text-lg text-white">{region.name}</div>
+                <div className="mt-1 text-sm text-[#aaa294]">{region.areaCount} areas, levels {region.levelRange}</div>
+              </button>
             ))}
           </div>
-          <a
-            href="https://play.darkwind.ai"
-            className="font-body text-sm font-semibold px-5 py-2 rounded transition-all duration-300 hover:brightness-110"
-            style={{ background: "var(--green)", color: "#fff" }}
-          >
-            Play Now
-          </a>
         </div>
-      </nav>
-
-      {/* ═══════ 1. HERO ═══════ */}
-      <div ref={heroRef} className="relative h-screen min-h-[600px] overflow-hidden">
-        <motion.div className="absolute inset-0" style={{ y: heroY }}>
-          <img
-            src={`${IMG}/hero-castle-gate.jpg`}
-            alt="A towering stone fortress at dusk with torchlit cobblestone path"
-            className="w-full h-[120%] object-cover"
-          />
-          {/* Gradient overlay for text legibility */}
-          <div className="absolute inset-0" style={{
-            background: `
-              linear-gradient(180deg, rgba(13,17,23,0.3) 0%, rgba(13,17,23,0.1) 30%, rgba(13,17,23,0.4) 60%, rgba(13,17,23,0.95) 100%),
-              radial-gradient(ellipse at center, transparent 30%, rgba(13,17,23,0.5) 100%)
-            `,
-          }} />
-        </motion.div>
-
-        <Particles count={25} />
-
-        <div className="absolute bottom-0 left-0 w-[120%] h-40 pointer-events-none" style={{
-          background: "radial-gradient(ellipse at 40% 100%, rgba(13,17,23,0.9) 0%, transparent 70%)",
-          animation: "fogDrift 10s ease-in-out infinite",
-        }} />
-        <div className="absolute bottom-0 left-0 w-[130%] h-32 pointer-events-none" style={{
-          background: "radial-gradient(ellipse at 60% 100%, rgba(22,27,34,0.8) 0%, transparent 60%)",
-          animation: "fogDrift2 13s ease-in-out infinite",
-        }} />
-
-        <div className="absolute inset-0 pointer-events-none" style={{
-          background: "radial-gradient(ellipse at center, transparent 30%, rgba(13,17,23,0.6) 100%)",
-        }} />
-
-        <motion.div
-          className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4"
-          style={{ opacity: heroOpacity }}
-        >
-          <motion.h1
-            className="font-cinzel text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-[0.15em] glow-text"
-            style={{ color: "var(--gold)" }}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, ease: "easeOut" }}
-          >
-            DARKWIND
-          </motion.h1>
-          <motion.p
-            className="font-cinzel text-base sm:text-lg md:text-xl tracking-[0.2em] mt-4 uppercase"
-            style={{ color: "rgba(212,168,67,0.7)" }}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.4 }}
-          >
-            A World Reborn From Darkness — Since 1992
-          </motion.p>
-          <motion.div
-            className="flex flex-col sm:flex-row gap-4 mt-10"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-          >
-            <a
-              href="https://play.darkwind.ai"
-              className="font-body font-semibold text-base px-8 py-3 rounded transition-all duration-300 hover:brightness-110 hover:scale-105"
-              style={{ background: "var(--green)", color: "#fff" }}
-            >
-              Play Now
-            </a>
-            <a
-              href="#lore"
-              className="font-body font-semibold text-base px-8 py-3 rounded border transition-all duration-300 hover:bg-white/5"
-              style={{ borderColor: "rgba(212,168,67,0.5)", color: "var(--gold)" }}
-            >
-              Learn More
-            </a>
-          </motion.div>
-          <motion.div
-            className="absolute bottom-10"
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          >
-            <ChevronDown size={28} style={{ color: "rgba(212,168,67,0.5)" }} />
-          </motion.div>
-        </motion.div>
-      </div>
-
-      {/* ═══════ 2. LORE ═══════ */}
-      <FogDivider />
-      <Section id="lore" bg="bg-navy">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <motion.div
-            className="text-center mb-16 pt-20"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="font-cinzel text-3xl sm:text-4xl md:text-5xl font-bold tracking-wider" style={{ color: "var(--gold)" }}>
-              The Dark Wind
-            </h2>
-            <div className="w-24 h-0.5 mx-auto mt-4" style={{ background: "linear-gradient(90deg, transparent, var(--gold-dim), transparent)" }} />
-          </motion.div>
-        </div>
-
-        {/* Panel 1 — The Cataclysm */}
-        <motion.div
-          className="relative min-h-[50vh] flex items-center"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 1 }}
-        >
-          <div className="absolute inset-0">
-            <img
-              src={`${IMG}/lore-cataclysm.jpg`}
-              alt="Apocalyptic supernatural cataclysm destroying a medieval city"
-              className="w-full h-full object-cover"
-              loading="lazy"
-            />
-            <div className="absolute inset-0" style={{
-              background: "linear-gradient(180deg, rgba(13,17,23,0.5) 0%, rgba(13,17,23,0.3) 40%, rgba(13,17,23,0.6) 100%)",
-            }} />
-            <div className="absolute inset-0" style={{
-              background: "radial-gradient(ellipse at center, transparent 20%, rgba(13,17,23,0.7) 100%)",
-            }} />
-          </div>
-          <div className="relative z-10 max-w-3xl mx-auto px-6 py-20 text-center">
-            <p className="font-cinzel text-sm tracking-[0.3em] uppercase mb-4" style={{ color: "var(--red)" }}>
-              The Cataclysm
-            </p>
-            <p className="font-body text-lg sm:text-xl md:text-2xl leading-relaxed" style={{ color: "rgba(201,209,217,0.85)" }}>
-              1,800 years ago, an unliving force of pure malice swept across the world.
-              <span className="block mt-3" style={{ color: "rgba(201,209,217,0.6)" }}>
-                Cities fell. Nations were erased. All history before this moment was lost.
-              </span>
-            </p>
-          </div>
-        </motion.div>
-
-        {/* Panel 2 — Divine Intervention */}
-        <motion.div
-          className="relative min-h-[50vh] flex items-center"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 1 }}
-        >
-          <div className="absolute inset-0">
-            <img
-              src={`${IMG}/lore-divine-intervention.jpg`}
-              alt="Three divine figures descending upon a war-torn battlefield"
-              className="w-full h-full object-cover"
-              loading="lazy"
-            />
-            <div className="absolute inset-0" style={{
-              background: "linear-gradient(180deg, rgba(13,17,23,0.5) 0%, rgba(13,17,23,0.25) 40%, rgba(13,17,23,0.6) 100%)",
-            }} />
-            <div className="absolute inset-0" style={{
-              background: "radial-gradient(ellipse at center, transparent 20%, rgba(13,17,23,0.65) 100%)",
-            }} />
-          </div>
-          <div className="relative z-10 max-w-3xl mx-auto px-6 py-20 text-center">
-            <p className="font-cinzel text-sm tracking-[0.3em] uppercase mb-4" style={{ color: "var(--gold-dim)" }}>
-              Divine Intervention
-            </p>
-            <p className="font-body text-lg sm:text-xl md:text-2xl leading-relaxed" style={{ color: "rgba(201,209,217,0.85)" }}>
-              The survivors tore themselves apart in the Race Wars that followed. Until three gods descended —
-              <span className="font-semibold" style={{ color: "#7cb87c" }}> Gaea</span>,
-              <span className="font-semibold" style={{ color: "var(--gold-light)" }}> Mitra</span>, and
-              <span className="font-semibold" style={{ color: "#a070d0" }}> Set</span> —
-              to end the bloodshed and forge a fragile peace.
-            </p>
-          </div>
-        </motion.div>
-
-        {/* Panel 3 — The Founding */}
-        <motion.div
-          className="relative min-h-[50vh] flex items-center"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 1 }}
-        >
-          <div className="absolute inset-0">
-            <img
-              src={`${IMG}/lore-founding.jpg`}
-              alt="Radiant coastal bay at sunrise with the first stones of Darkwind City"
-              className="w-full h-full object-cover"
-              loading="lazy"
-            />
-            <div className="absolute inset-0" style={{
-              background: "linear-gradient(180deg, rgba(13,17,23,0.4) 0%, rgba(13,17,23,0.2) 40%, rgba(13,17,23,0.6) 100%)",
-            }} />
-            <div className="absolute inset-0" style={{
-              background: "radial-gradient(ellipse at center, transparent 20%, rgba(13,17,23,0.6) 100%)",
-            }} />
-          </div>
-          <div className="relative z-10 max-w-3xl mx-auto px-6 py-20 text-center">
-            <p className="font-cinzel text-sm tracking-[0.3em] uppercase mb-4" style={{ color: "var(--gold)" }}>
-              The Founding
-            </p>
-            <p className="font-body text-lg sm:text-xl md:text-2xl leading-relaxed" style={{ color: "rgba(201,209,217,0.85)" }}>
-              From the ashes, the Immortals built a city open to all races.
-              <span className="block mt-3 font-cinzel text-2xl md:text-3xl font-semibold" style={{ color: "var(--gold)" }}>
-                They named it Darkwind.
-              </span>
-            </p>
-          </div>
-        </motion.div>
-      </Section>
-
-      {/* ═══════ 3. WORLD MAP ═══════ */}
-      <FogDivider />
-      <Section id="world" bg="bg-charcoal">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-24 md:py-32">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="font-cinzel text-3xl sm:text-4xl md:text-5xl font-bold tracking-wider" style={{ color: "var(--gold)" }}>
-              Seven Continents
-            </h2>
-            <p className="font-body text-base mt-4" style={{ color: "rgba(201,209,217,0.6)" }}>
-              A world vast and varied — each land holds its own dangers and wonders
-            </p>
-            <div className="w-24 h-0.5 mx-auto mt-4" style={{ background: "linear-gradient(90deg, transparent, var(--gold-dim), transparent)" }} />
-          </motion.div>
-
-          {/* World Map */}
-          <motion.div
-            className="relative w-full max-w-4xl mx-auto mb-16 rounded overflow-hidden"
-            style={{ aspectRatio: "16/9" }}
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
-          >
-            <img
-              src={`${IMG}/world-map.jpg`}
-              alt="Hand-drawn dark fantasy world map of the seven continents"
-              className="w-full h-full object-cover"
-              loading="lazy"
-            />
-            <div className="absolute inset-0" style={{
-              background: "radial-gradient(ellipse at center, transparent 40%, rgba(13,17,23,0.5) 100%)",
-            }} />
-            <div className="absolute inset-0 border border-amber-900/20 rounded" />
-          </motion.div>
-
-          {/* Continent Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            {CONTINENTS.map((c, i) => {
-              const Icon = c.icon;
-              return (
-                <motion.div
-                  key={c.name}
-                  className="group relative rounded overflow-hidden cursor-pointer"
-                  style={{ background: "var(--navy)", border: "1px solid rgba(212,168,67,0.1)" }}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.08 }}
-                  whileHover={{ scale: 1.02 }}
-                >
-                  <div className="relative h-36 overflow-hidden">
-                    <img
-                      src={`${IMG}/${c.img}.jpg`}
-                      alt={`${c.name} landscape`}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0" style={{
-                      background: "linear-gradient(180deg, transparent 30%, rgba(13,17,23,0.9) 100%)",
-                    }} />
-                  </div>
-                  <div className="p-4">
-                    <div className="flex items-center gap-3 mb-2">
-                      <Icon size={18} style={{ color: "var(--gold-dim)" }} />
-                      <h3 className="font-cinzel text-sm font-semibold tracking-wide" style={{ color: "var(--gold-light)" }}>
-                        {c.name}
-                      </h3>
-                    </div>
-                    <p className="font-body text-sm leading-relaxed mb-3" style={{ color: "rgba(201,209,217,0.6)" }}>
-                      {c.desc}
-                    </p>
-                    <div className="flex flex-wrap gap-1.5">
-                      {c.races.map((r) => (
-                        <span
-                          key={r}
-                          className="font-body text-xs px-2 py-0.5 rounded-sm"
-                          style={{ background: "rgba(212,168,67,0.1)", color: "rgba(212,168,67,0.7)" }}
-                        >
-                          {r}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  <div
-                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-                    style={{ background: "radial-gradient(ellipse at 50% 0%, rgba(212,168,67,0.06), transparent 70%)" }}
-                  />
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </Section>
-
-      {/* ═══════ 4. RACES ═══════ */}
-      <FogDivider />
-      <Section id="races" bg="bg-navy">
-        <div className="py-24 md:py-32">
-          <motion.div
-            className="text-center mb-12 px-4"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="font-cinzel text-3xl sm:text-4xl md:text-5xl font-bold tracking-wider" style={{ color: "var(--gold)" }}>
-              Choose Your Heritage
-            </h2>
-            <p className="font-body text-base mt-4" style={{ color: "rgba(201,209,217,0.6)" }}>
-              17 races shaped by the lands they call home
-            </p>
-            <div className="w-24 h-0.5 mx-auto mt-4" style={{ background: "linear-gradient(90deg, transparent, var(--gold-dim), transparent)" }} />
-          </motion.div>
-
-          <div className="relative max-w-[100vw]">
-            <button
-              onClick={() => scrollRaces(-1)}
-              className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 items-center justify-center rounded-full transition-colors"
-              style={{ background: "rgba(13,17,23,0.8)", border: "1px solid rgba(212,168,67,0.3)" }}
-            >
-              <ChevronLeft size={20} style={{ color: "var(--gold)" }} />
-            </button>
-            <button
-              onClick={() => scrollRaces(1)}
-              className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 items-center justify-center rounded-full transition-colors"
-              style={{ background: "rgba(13,17,23,0.8)", border: "1px solid rgba(212,168,67,0.3)" }}
-            >
-              <ChevronRight size={20} style={{ color: "var(--gold)" }} />
-            </button>
-
-            <div
-              ref={raceScrollRef}
-              className="flex gap-4 overflow-x-auto scrollbar-hide px-6 md:px-16 pb-4"
-            >
-              {RACES.map((race, i) => {
-                const isExtinct = race.group === "Extinct";
-                return (
-                  <motion.div
-                    key={race.name}
-                    className="flex-shrink-0 w-56 rounded overflow-hidden relative"
-                    style={{
-                      background: "var(--navy)",
-                      border: isExtinct
-                        ? "1px solid rgba(100,100,100,0.3)"
-                        : "1px solid rgba(212,168,67,0.1)",
-                      filter: isExtinct ? "grayscale(0.8)" : "none",
-                    }}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: i * 0.05 }}
-                  >
-                    <div className="w-full h-56 relative overflow-hidden">
-                      <img
-                        src={`${IMG}/${race.img}.jpg`}
-                        alt={`${race.name} portrait`}
-                        className="w-full h-full object-cover object-top"
-                        loading="lazy"
-                      />
-                      <div className="absolute inset-0" style={{
-                        background: "linear-gradient(180deg, transparent 50%, rgba(13,17,23,0.8) 100%)",
-                      }} />
-                      {isExtinct && (
-                        <>
-                          <div className="absolute inset-0" style={{
-                            background: `
-                              linear-gradient(45deg, transparent 30%, rgba(100,100,100,0.25) 30.5%, transparent 31%),
-                              linear-gradient(-30deg, transparent 40%, rgba(100,100,100,0.2) 40.5%, transparent 41%),
-                              linear-gradient(60deg, transparent 60%, rgba(80,80,80,0.15) 60.5%, transparent 61%)
-                            `,
-                          }} />
-                          <div className="absolute inset-0 flex items-center justify-center">
-                            <span className="font-cinzel text-xs tracking-[0.3em] uppercase px-3 py-1 rounded-sm"
-                              style={{ background: "rgba(0,0,0,0.7)", color: "rgba(248,81,73,0.8)", border: "1px solid rgba(248,81,73,0.3)" }}>
-                              Extinct
-                            </span>
-                          </div>
-                        </>
-                      )}
-                    </div>
-                    <div className="p-4">
-                      <h3
-                        className="font-cinzel text-sm font-semibold tracking-wider"
-                        style={{ color: isExtinct ? "rgba(150,150,150,0.6)" : "var(--gold)" }}
-                      >
-                        {race.name}
-                      </h3>
-                      <span
-                        className="inline-block font-body text-[10px] tracking-wide uppercase mt-1 px-2 py-0.5 rounded-sm"
-                        style={{
-                          background: "rgba(88,166,255,0.1)",
-                          color: isExtinct ? "rgba(150,150,150,0.4)" : "rgba(88,166,255,0.7)",
-                        }}
-                      >
-                        {race.origin}
-                      </span>
-                      <p className="font-body text-xs mt-2 leading-relaxed" style={{
-                        color: isExtinct ? "rgba(150,150,150,0.4)" : "rgba(201,209,217,0.5)",
-                      }}>
-                        {race.desc}
-                      </p>
-                    </div>
-                  </motion.div>
-                );
-              })}
+      </section>
+      <section className="grain py-20">
+        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
+          <motion.div {...fadeUp} className="panel overflow-hidden">
+            <img src={imagePath(activeRegion.image)} alt={activeRegion.name} className="h-80 w-full object-cover" />
+            <div className="p-6">
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <h2 className="font-display text-4xl text-white">{activeRegion.name}</h2>
+                <span className="font-rune rounded border border-[#d6a94b]/35 px-3 py-1 text-sm text-[#d6a94b]">
+                  {activeRegion.areaCount} areas
+                </span>
+              </div>
+              <p className="mt-4 text-lg leading-8 text-[#ddd3bd]">{activeRegion.overview || activeRegion.tone}</p>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {activeRegion.highlights.map((highlight) => (
+                  <span key={highlight} className="rounded border border-white/12 bg-white/6 px-3 py-1 text-sm text-[#cfc6b2]">
+                    {highlight}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
-        </div>
-      </Section>
-
-      {/* ═══════ 5. GUILDS ═══════ */}
-      <FogDivider />
-      <Section id="guilds" bg="bg-charcoal">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-24 md:py-32">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="font-cinzel text-3xl sm:text-4xl md:text-5xl font-bold tracking-wider" style={{ color: "var(--gold)" }}>
-              Master Your Path
-            </h2>
-            <p className="font-body text-base mt-4" style={{ color: "rgba(201,209,217,0.6)" }}>
-              12 guilds, each with a unique combat philosophy and playstyle
-            </p>
-            <div className="w-24 h-0.5 mx-auto mt-4" style={{ background: "linear-gradient(90deg, transparent, var(--gold-dim), transparent)" }} />
           </motion.div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            {GUILDS.map((guild, i) => {
-              return (
-                <motion.div
-                  key={guild.name}
-                  className="group relative rounded overflow-hidden"
-                  style={{
-                    background: "rgba(13,17,23,0.6)",
-                    borderLeft: `3px solid ${guild.color}`,
-                    borderTop: "1px solid rgba(255,255,255,0.05)",
-                    borderRight: "1px solid rgba(255,255,255,0.05)",
-                    borderBottom: "1px solid rgba(255,255,255,0.05)",
-                  }}
-                  initial={{ opacity: 0, y: 15 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: i * 0.06 }}
-                  whileHover={{ y: -4 }}
-                >
-                  <div className="w-full h-40 relative overflow-hidden">
-                    <img
-                      src={`${IMG}/${guild.img}.jpg`}
-                      alt={`${guild.name} class illustration`}
-                      className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0" style={{
-                      background: `linear-gradient(180deg, transparent 30%, rgba(13,17,23,0.85) 100%)`,
-                    }} />
-                    {/* Color tint overlay */}
-                    <div className="absolute inset-0 opacity-20" style={{
-                      background: `linear-gradient(135deg, ${guild.color}40, transparent)`,
-                    }} />
+          <motion.div {...fadeUp} className="space-y-4">
+            <div className="panel p-6">
+              <h3 className="font-display text-2xl text-white">How this region plays</h3>
+              <p className="mt-3 text-lg leading-8 text-[#c8bfad]">{activeRegion.tone}</p>
+              <div className="mt-5 space-y-3">
+                {(activeRegion.routes || []).map((route) => (
+                  <div key={route} className="flex gap-3 rounded border border-white/10 bg-white/5 p-3 text-sm leading-6 text-[#d8cfbd]">
+                    <Compass className="mt-1 h-4 w-4 shrink-0 text-[#d6a94b]" />
+                    {route}
                   </div>
-                  <div className="p-4">
-                    <div className="flex items-center justify-between mb-2">
-                      <h3 className="font-cinzel text-sm font-semibold tracking-wider" style={{ color: "var(--gold)" }}>
-                        {guild.name}
-                      </h3>
-                      <span className={`font-body text-[10px] tracking-wide uppercase px-2 py-0.5 rounded-sm ${typeBadgeColor(guild.type)}`}>
-                        {guild.type}
-                      </span>
-                    </div>
-                    <div className="flex flex-wrap gap-1.5 mt-3">
-                      {guild.abilities.map((a) => (
-                        <span
-                          key={a}
-                          className="font-body text-[10px] px-2 py-0.5 rounded-sm"
-                          style={{
-                            background: `${guild.color}15`,
-                            color: `${guild.color}bb`,
-                            border: `1px solid ${guild.color}25`,
-                          }}
-                        >
-                          {a}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  <div
-                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-                    style={{ background: `radial-gradient(ellipse at 0% 50%, ${guild.color}10, transparent 70%)` }}
-                  />
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </Section>
-
-      {/* ═══════ 6. FEATURES ═══════ */}
-      <FogDivider />
-      <Section id="features" bg="bg-navy">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-24 md:py-32">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="font-cinzel text-3xl sm:text-4xl md:text-5xl font-bold tracking-wider" style={{ color: "var(--gold)" }}>
-              A Living World
-            </h2>
-            <p className="font-body text-base mt-4" style={{ color: "rgba(201,209,217,0.6)" }}>
-              More than a game — a persistent realm with deep systems
-            </p>
-            <div className="w-24 h-0.5 mx-auto mt-4" style={{ background: "linear-gradient(90deg, transparent, var(--gold-dim), transparent)" }} />
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {FEATURES.map((f, i) => {
-              const Icon = f.icon;
-              return (
-                <motion.div
-                  key={f.title}
-                  className={`group relative rounded overflow-hidden p-6 ${f.span}`}
-                  style={{
-                    background: "rgba(22,27,34,0.8)",
-                    border: "1px solid rgba(212,168,67,0.08)",
-                  }}
-                  initial={{ opacity: 0, y: 15 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: i * 0.06 }}
-                  whileHover={{ borderColor: "rgba(212,168,67,0.2)" }}
-                >
-                  <div className="flex items-start gap-4">
-                    <div
-                      className="flex-shrink-0 w-12 h-12 rounded flex items-center justify-center"
-                      style={{ background: "rgba(212,168,67,0.08)" }}
-                    >
-                      <Icon size={22} style={{ color: "var(--gold-dim)" }} />
-                    </div>
-                    <div>
-                      <h3 className="font-cinzel text-sm font-semibold tracking-wider mb-1.5" style={{ color: "var(--gold-light)" }}>
-                        {f.title}
-                      </h3>
-                      <p className="font-body text-sm leading-relaxed" style={{ color: "rgba(201,209,217,0.55)" }}>
-                        {f.desc}
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </Section>
-
-      {/* ═══════ 7. GODS ═══════ */}
-      <FogDivider />
-      <Section id="gods" bg="bg-charcoal">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-24 md:py-32">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="font-cinzel text-3xl sm:text-4xl md:text-5xl font-bold tracking-wider" style={{ color: "var(--gold)" }}>
-              Three Powers Shape the World
-            </h2>
-            <div className="w-24 h-0.5 mx-auto mt-4" style={{ background: "linear-gradient(90deg, transparent, var(--gold-dim), transparent)" }} />
-          </motion.div>
-
-          {/* Triptych */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 items-stretch">
-            {/* Mitra */}
-            <motion.div
-              className="relative rounded overflow-hidden"
-              style={{ border: "1px solid rgba(212,168,67,0.15)" }}
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="relative w-full h-72 md:h-96 overflow-hidden">
-                <img
-                  src={`${IMG}/god-mitra.jpg`}
-                  alt="Mitra, Goddess of Goodness — golden radiance and divine light"
-                  className="w-full h-full object-cover object-top"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0" style={{
-                  background: "linear-gradient(180deg, transparent 40%, rgba(13,17,23,0.7) 100%)",
-                }} />
+                ))}
               </div>
-              <div className="p-6 text-center" style={{ background: "rgba(13,17,23,0.6)" }}>
-                <h3 className="font-cinzel text-xl font-bold tracking-wider mb-2" style={{ color: "var(--gold-light)" }}>
-                  Mitra
-                </h3>
-                <p className="font-cinzel text-xs tracking-[0.15em] uppercase mb-3" style={{ color: "rgba(212,168,67,0.5)" }}>
-                  Goddess of Goodness
-                </p>
-                <p className="font-body text-sm leading-relaxed" style={{ color: "rgba(201,209,217,0.6)" }}>
-                  She guides through priests and champions. Her light pushes back the lingering darkness, offering redemption to those who seek it.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Gaea (center, larger) */}
-            <motion.div
-              className="relative rounded overflow-hidden md:-mt-4 md:mb-[-16px]"
-              style={{ border: "1px solid rgba(100,180,80,0.2)" }}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, delay: 0.15 }}
-            >
-              <div className="relative w-full h-72 md:h-[420px] overflow-hidden">
-                <img
-                  src={`${IMG}/god-gaea.jpg`}
-                  alt="Gaea, the Earth Mother — roots and vines, emerald energy"
-                  className="w-full h-full object-cover object-top"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0" style={{
-                  background: "linear-gradient(180deg, transparent 40%, rgba(13,17,23,0.7) 100%)",
-                }} />
-              </div>
-              <div className="p-6 text-center" style={{ background: "rgba(13,17,23,0.6)" }}>
-                <h3 className="font-cinzel text-2xl font-bold tracking-wider mb-2" style={{ color: "#7cb87c" }}>
-                  Gaea
-                </h3>
-                <p className="font-cinzel text-xs tracking-[0.15em] uppercase mb-3" style={{ color: "rgba(100,180,80,0.6)" }}>
-                  The Earth Mother
-                </p>
-                <p className="font-body text-sm leading-relaxed" style={{ color: "rgba(201,209,217,0.6)" }}>
-                  She restored the broken world and created the Immortals. The land itself bends to her will — roots, rivers, and stone are her instruments.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Set */}
-            <motion.div
-              className="relative rounded overflow-hidden"
-              style={{ border: "1px solid rgba(120,50,180,0.15)" }}
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-            >
-              <div className="relative w-full h-72 md:h-96 overflow-hidden">
-                <img
-                  src={`${IMG}/god-set.jpg`}
-                  alt="Set, God of Chaos — dark purple chaos energy and serpentine motifs"
-                  className="w-full h-full object-cover object-top"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0" style={{
-                  background: "linear-gradient(180deg, transparent 40%, rgba(13,17,23,0.7) 100%)",
-                }} />
-              </div>
-              <div className="p-6 text-center" style={{ background: "rgba(13,17,23,0.6)" }}>
-                <h3 className="font-cinzel text-xl font-bold tracking-wider mb-2" style={{ color: "#a070d0" }}>
-                  Set
-                </h3>
-                <p className="font-cinzel text-xs tracking-[0.15em] uppercase mb-3" style={{ color: "rgba(120,50,180,0.6)" }}>
-                  God of Chaos
-                </p>
-                <p className="font-body text-sm leading-relaxed" style={{ color: "rgba(201,209,217,0.6)" }}>
-                  He offers power to those bold enough to seize it. Through corruption and ambition, his influence spreads like venom through the world.
-                </p>
-              </div>
-            </motion.div>
-          </div>
-
-          <motion.p
-            className="font-cinzel text-center text-sm sm:text-base tracking-[0.1em] mt-12"
-            style={{ color: "rgba(201,209,217,0.4)" }}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-          >
-            The gods cannot directly intervene. Their war for influence is fought through <span style={{ color: "var(--gold)" }}>you</span>.
-          </motion.p>
-        </div>
-      </Section>
-
-      {/* ═══════ 8. PLAY NOW CTA ═══════ */}
-      <FogDivider />
-      <Section id="play" bg="bg-navy">
-        <div className="relative py-24 md:py-32 overflow-hidden">
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full" style={{
-              background: "radial-gradient(circle, rgba(212,168,67,0.04), transparent 70%)",
-              animation: "swirlRotate 20s linear infinite",
-            }} />
-            <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full" style={{
-              background: "radial-gradient(circle, rgba(88,166,255,0.03), transparent 70%)",
-              animation: "swirlRotate 25s linear infinite reverse",
-            }} />
-          </div>
-
-          <Particles count={15} />
-
-          <motion.div
-            className="relative z-10 max-w-2xl mx-auto text-center px-4"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="font-cinzel text-4xl sm:text-5xl md:text-6xl font-bold tracking-wider glow-text" style={{ color: "var(--gold)" }}>
-              The Realm Awaits
-            </h2>
-            <p className="font-body text-base sm:text-lg mt-6 leading-relaxed" style={{ color: "rgba(201,209,217,0.6)" }}>
-              Darkwind has been running continuously since 1992. Join thousands of adventurers who have shaped this world.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
-              <a
-                href="https://play.darkwind.ai"
-                className="font-body font-semibold text-base px-10 py-4 rounded transition-all duration-300 hover:brightness-110 hover:scale-105 flex items-center justify-center gap-2"
-                style={{ background: "var(--green)", color: "#fff" }}
-              >
-                <Monitor size={18} />
-                Play in Browser
-              </a>
-              <button
-                className="font-body font-semibold text-base px-10 py-4 rounded transition-all duration-300 hover:bg-white/5 flex items-center justify-center gap-2"
-                style={{ border: "1px solid rgba(88,166,255,0.4)", color: "var(--blue)" }}
-                onClick={() => {
-                  alert("Connect via telnet:\n\nHost: darkwind.ai\nPort: 4000\n\nExample: telnet darkwind.ai 4000");
-                }}
-              >
-                <Terminal size={18} />
-                Connect via Telnet
-              </button>
             </div>
-
-            <div className="flex flex-wrap justify-center gap-6 mt-10">
-              {[
-                { label: "Free to Play", icon: Sparkles },
-                { label: "No Download Required", icon: Globe },
-                { label: "Cross-Platform", icon: Smartphone },
-              ].map(({ label, icon: BadgeIcon }) => (
-                <div key={label} className="flex items-center gap-2">
-                  <BadgeIcon size={14} style={{ color: "var(--gold-dim)" }} />
-                  <span className="font-body text-xs tracking-wide uppercase" style={{ color: "rgba(201,209,217,0.4)" }}>
-                    {label}
+            <div className="panel p-6">
+              <h3 className="font-display text-2xl text-white">Catalog context</h3>
+              <div className="mt-4 grid gap-3 sm:grid-cols-3">
+                <Metric label="Areas" value={String(activeRegion.areaCount)} />
+                <Metric label="Levels" value={activeRegion.levelRange} />
+                <Metric label="Type" value={activeRegion.name === "Dailos" ? "Planet" : "Region"} />
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      <section className="bg-[#0c1015] py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <motion.div {...fadeUp} className="max-w-3xl">
+            {sectionKicker("Notable areas")}
+            <h2 className="font-display text-4xl font-semibold text-white sm:text-5xl">
+              Places worth understanding before you walk in.
+            </h2>
+          </motion.div>
+          <div className="mt-10 grid gap-4 md:grid-cols-2">
+            {(activeRegion.notableAreas || []).map((area) => (
+              <motion.article key={area.name} {...fadeUp} className="panel p-6">
+                <div className="flex flex-wrap items-start justify-between gap-3">
+                  <div>
+                    <div className="text-sm uppercase text-[#d6a94b]">{area.region}</div>
+                    <h3 className="mt-1 font-display text-2xl text-white">{area.name}</h3>
+                  </div>
+                  <span className="rounded border border-white/12 bg-white/5 px-3 py-1 text-sm text-[#d8cfbd]">
+                    {area.levels}
                   </span>
                 </div>
+                <p className="mt-4 text-lg leading-8 text-[#ddd3bd]">{area.summary}</p>
+                <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                  <Fact title="Why go" copy={area.whyGo} icon={<Sparkles className="h-4 w-4" />} />
+                  <Fact title="Watch for" copy={area.watchFor} icon={<Skull className="h-4 w-4" />} />
+                </div>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
+function Metric({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="rounded border border-white/10 bg-black/18 p-4">
+      <div className="text-xs uppercase text-[#8d8577]">{label}</div>
+      <div className="mt-1 font-rune text-lg text-white">{value}</div>
+    </div>
+  );
+}
+
+function Fact({ title, copy, icon }: { title: string; copy: string; icon: React.ReactNode }) {
+  return (
+    <div className="rounded border border-white/10 bg-white/5 p-4">
+      <div className="flex items-center gap-2 text-sm font-semibold text-[#d6a94b]">
+        {icon}
+        {title}
+      </div>
+      <p className="mt-2 text-sm leading-6 text-[#c8bfad]">{copy}</p>
+    </div>
+  );
+}
+
+function GuildsPage() {
+  const [role, setRole] = useState<"All" | GuildRole>("All");
+  const [query, setQuery] = useState("");
+  const filteredGuilds = useMemo(() => {
+    const needle = query.trim().toLowerCase();
+    return featuredGuilds.filter((guild) => {
+      const matchesRole = role === "All" || guild.roles.includes(role);
+      const matchesQuery =
+        !needle ||
+        guild.name.toLowerCase().includes(needle) ||
+        guild.pitch.toLowerCase().includes(needle) ||
+        guild.style.toLowerCase().includes(needle);
+      return matchesRole && matchesQuery;
+    });
+  }, [query, role]);
+
+  return (
+    <>
+      <PageHero
+        kicker="Guilds"
+        title="Guilds are the game's real character engines."
+        copy="The strongest guilds do not just give combat verbs. They add resources, monitors, followers, rituals, style budgets, terrain rules, hidden sequences, and advancement choices that change how a character thinks."
+        image="guild-bard"
+      />
+      <section className="bg-[#080b0f] py-12">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="panel p-4">
+            <label className="flex items-center gap-3 rounded border border-white/10 bg-black/25 px-3 py-2">
+              <Search className="h-5 w-5 text-[#d6a94b]" />
+              <input
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+                placeholder="Search guilds, roles, or mechanics"
+                className="w-full bg-transparent text-white outline-none placeholder:text-[#827b6f]"
+              />
+            </label>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {roles.map((option) => (
+                <button
+                  key={option}
+                  onClick={() => setRole(option)}
+                  className={`rounded border px-3 py-2 text-sm font-semibold transition ${
+                    role === option
+                      ? "border-[#d6a94b] bg-[#d6a94b] text-[#15100a]"
+                      : "border-white/12 bg-white/5 text-[#d7d0be] hover:border-white/30"
+                  }`}
+                >
+                  {option}
+                </button>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="grain py-20">
+        <div className="mx-auto grid max-w-7xl gap-4 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+          {filteredGuilds.map((guild) => (
+            <motion.article key={guild.name} {...fadeUp} className="panel overflow-hidden">
+              <div className="grid gap-0 md:grid-cols-[0.82fr_1.18fr]">
+                <img src={imagePath(guild.image)} alt={guild.name} className="h-full min-h-72 w-full object-cover" />
+                <div className="p-6">
+                  <div className="flex flex-wrap items-center justify-between gap-3">
+                    <h2 className="font-display text-3xl text-white">{guild.name}</h2>
+                    <div className="flex flex-wrap gap-2">
+                      {guild.roles.map((guildRole) => (
+                        <span key={guildRole} className="rounded border border-[#d6a94b]/35 px-2 py-1 text-xs text-[#d6a94b]">
+                          {guildRole}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <p className="mt-4 text-lg leading-8 text-[#ddd3bd]">{guild.pitch}</p>
+                  <p className="mt-4 text-base leading-7 text-[#bdb5a5]">{guild.style}</p>
+                  {guild.progression && (
+                    <p className="mt-4 rounded border border-[#d6a94b]/25 bg-[#d6a94b]/8 p-3 text-sm leading-6 text-[#ead9b7]">
+                      {guild.progression}
+                    </p>
+                  )}
+                  <div className="mt-5 grid grid-cols-3 gap-2">
+                    {guild.features.map((feature) => (
+                      <div key={feature.label} className="rounded border border-white/10 bg-black/18 p-3">
+                        <div className="text-xs uppercase text-[#8d8577]">{feature.label}</div>
+                        <div className="mt-1 text-sm font-semibold text-white">{feature.value}</div>
+                      </div>
+                    ))}
+                  </div>
+                  {guild.commands && (
+                    <div className="mt-5">
+                      <div className="text-xs uppercase text-[#d6a94b]">Commands to recognize</div>
+                      <div className="mt-2 flex flex-wrap gap-2">
+                        {guild.commands.map((command) => (
+                          <span key={command} className="font-rune rounded border border-white/10 bg-black/25 px-2 py-1 text-xs text-[#d8cfbd]">
+                            {command}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                  {guild.mechanics && (
+                    <ul className="mt-5 space-y-2">
+                      {guild.mechanics.map((mechanic) => (
+                        <li key={mechanic} className="flex gap-2 text-sm leading-6 text-[#c8bfad]">
+                          <Sparkles className="mt-1 h-4 w-4 shrink-0 text-[#d6a94b]" />
+                          {mechanic}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </div>
+            </motion.article>
+          ))}
+        </div>
+      </section>
+    </>
+  );
+}
+
+function SystemsPage() {
+  const icons = [Hammer, Award, Map, Monitor, Shield, Skull];
+  return (
+    <>
+      <PageHero
+        kicker="Systems"
+        title="The mature loops that make DarkWind sticky."
+        copy="Combat is only one layer. The current game tracks professions, saved reagents, reputation signs, waypoints, daily streaks, achievements, generated dungeon runs, divine pressure, and browser-client state."
+        image="lore-divine-intervention"
+      />
+      <section className="grain py-20">
+        <div className="mx-auto grid max-w-7xl gap-4 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+          {systems.map((system, index) => {
+            const Icon = icons[index % icons.length];
+            return (
+              <motion.article key={system.title} {...fadeUp} className="panel p-6">
+                <div className="flex items-start gap-4">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded border border-[#d6a94b]/35 bg-[#d6a94b]/10">
+                    <Icon className="h-6 w-6 text-[#d6a94b]" />
+                  </span>
+                  <div>
+                    <div className="text-sm font-semibold uppercase text-[#d6a94b]">{system.eyebrow}</div>
+                    <h2 className="mt-1 font-display text-3xl text-white">{system.title}</h2>
+                    <p className="mt-3 leading-7 text-[#c8bfad]">{system.detail}</p>
+                  </div>
+                </div>
+                <div className="mt-5 grid gap-2 sm:grid-cols-3">
+                  {system.points.map((point) => (
+                    <div key={point} className="rounded border border-white/10 bg-white/5 p-3 text-sm leading-6 text-[#d8cfbd]">
+                      {point}
+                    </div>
+                  ))}
+                </div>
+                {system.commands && (
+                  <div className="mt-5">
+                    <div className="text-xs uppercase text-[#d6a94b]">Useful commands</div>
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      {system.commands.map((command) => (
+                        <span key={command} className="font-rune rounded border border-white/10 bg-black/25 px-2 py-1 text-xs text-[#d8cfbd]">
+                          {command}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {system.mechanics && (
+                  <ul className="mt-5 space-y-2">
+                    {system.mechanics.map((mechanic) => (
+                      <li key={mechanic} className="flex gap-2 text-sm leading-6 text-[#c8bfad]">
+                        <Compass className="mt-1 h-4 w-4 shrink-0 text-[#d6a94b]" />
+                        {mechanic}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </motion.article>
+            );
+          })}
+        </div>
+      </section>
+    </>
+  );
+}
+
+function AboutPage() {
+  return (
+    <>
+      <PageHero
+        kicker="About"
+        title="A world shaped by catastrophe, race memory, and gods."
+        copy="DarkWind's lore is not just background text. The gods, old wars, and broken world pressure guild identity, reputation, divine systems, and area tone."
+        image="lore-cataclysm"
+      />
+      <section className="bg-[#080b0f] py-20">
+        <div className="mx-auto grid max-w-7xl gap-4 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
+          {loreTimeline.map((beat) => (
+            <motion.article key={beat.title} {...fadeUp} className="panel overflow-hidden">
+              <img src={imagePath(beat.image)} alt={beat.title} className="h-60 w-full object-cover" />
+              <div className="p-5">
+                <div className="text-sm uppercase text-[#d6a94b]">{beat.era}</div>
+                <h2 className="mt-1 font-display text-2xl text-white">{beat.title}</h2>
+                <p className="mt-3 leading-7 text-[#c8bfad]">{beat.detail}</p>
+              </div>
+            </motion.article>
+          ))}
+        </div>
+      </section>
+      <section className="grain py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          {sectionKicker("Pantheon")}
+          <div className="grid gap-4 lg:grid-cols-3">
+            {gods.map((god) => (
+              <motion.article key={god.name} {...fadeUp} className="panel overflow-hidden">
+                <img src={imagePath(god.image)} alt={god.name} className="h-80 w-full object-cover object-top" />
+                <div className="p-5">
+                  <h2 className="font-display text-3xl text-white">{god.name}</h2>
+                  <div className="mt-2 text-sm uppercase text-[#d6a94b]">{god.domain}</div>
+                  <p className="mt-3 leading-7 text-[#c8bfad]">{god.detail}</p>
+                </div>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
+function RacesPage() {
+  return (
+    <>
+      <PageHero
+        kicker="Playable peoples"
+        title="Seventeen heritages, each with a place in the world."
+        copy="Character identity starts before guild choice. Heritage influences fantasy, culture, and how a player imagines moving through the old conflicts of Geshtai and beyond."
+        image="race-human"
+      />
+      <section className="grain py-20">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-3 px-4 sm:grid-cols-3 sm:px-6 lg:grid-cols-5 lg:px-8 xl:grid-cols-6">
+          {races.map((race) => (
+            <motion.article key={race.name} {...fadeUp} className="group overflow-hidden rounded border border-white/10 bg-white/5">
+              <div className="aspect-[3/4] overflow-hidden">
+                <img src={imagePath(race.image)} alt={race.name} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+              </div>
+              <div className="p-3">
+                <h2 className="font-display text-base text-white">{race.name}</h2>
+                <p className="mt-1 text-xs text-[#d6a94b]">{race.origin}</p>
+                <p className="mt-2 text-xs leading-5 text-[#b6ad9c]">{race.note}</p>
+              </div>
+            </motion.article>
+          ))}
+        </div>
+      </section>
+    </>
+  );
+}
+
+function StartPage() {
+  return (
+    <>
+      <PageHero
+        kicker="Getting started"
+        title="A practical first-session path."
+        copy="DarkWind is old and deep, so the best first experience is to learn the core loop, pick a guild direction, and use the browser client panes instead of trying to memorize everything."
+        image="hero-castle-gate"
+      />
+      <section className="grain py-20">
+        <div className="mx-auto grid max-w-7xl gap-4 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
+          {[
+            ["1", "Create and orient", "Use the browser client, read the room, find city services, and learn the prompt, score, inventory, and help habits."],
+            ["2", "Try nearby areas", "Stay near Darkwind City at first. Early areas teach combat pacing, looting, retreating, and reading descriptions."],
+            ["3", "Choose a guild", "Pick based on mechanics: Bard performance, Druid nwyfre, Monk chi, Ranger survival, Ninja marks, or a classic path."],
+            ["4", "Learn systems slowly", "Professions, reputation, wayshards, daily rewards, and divine systems are long-term layers, not day-one chores."],
+            ["5", "Ask players", "DarkWind is intentionally mysterious. Player knowledge is part of the game loop, and social channels matter."],
+            ["6", "Return tomorrow", "Daily streaks, guild training, crafting, exploration, and area discovery reward repeated play."],
+          ].map(([step, title, copy]) => (
+            <motion.article key={step} {...fadeUp} className="panel p-6">
+              <div className="font-rune text-3xl text-[#d6a94b]">{step}</div>
+              <h2 className="mt-4 font-display text-2xl text-white">{title}</h2>
+              <p className="mt-3 leading-7 text-[#c8bfad]">{copy}</p>
+            </motion.article>
+          ))}
+        </div>
+      </section>
+      <section className="bg-[#0c1015] py-20">
+        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
+          <motion.div {...fadeUp}>
+            {sectionKicker("Client")}
+            <h2 className="font-display text-4xl font-semibold text-white sm:text-5xl">
+              Browser play is the recommended first route.
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-[#d8cfbd]">
+              Darkflow gives new players a modern terminal with panels, maps, truecolor, sound hooks, GMCP
+              vitals, guild panes, and notifications while preserving traditional MUD play.
+            </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a
+                href="https://play.darkwind.ai/"
+                className="inline-flex items-center justify-center gap-2 rounded border border-[#d6a94b] bg-[#d6a94b] px-5 py-3 font-bold text-[#15100a] transition hover:bg-[#f1c965]"
+              >
+                <Monitor className="h-5 w-5" />
+                Open Darkflow
+              </a>
+              <a
+                href="telnet://darkwind.ai:4242"
+                className="inline-flex items-center justify-center gap-2 rounded border border-white/20 bg-white/8 px-5 py-3 font-bold text-white backdrop-blur transition hover:bg-white/14"
+              >
+                <Terminal className="h-5 w-5" />
+                Telnet
+              </a>
+            </div>
+          </motion.div>
+          <motion.div {...fadeUp} className="panel p-5">
+            <div className="rounded border border-white/10 bg-black/60 p-4 font-rune text-sm leading-7 text-[#d7d0be]">
+              <div className="text-[#d6a94b]">Connected to DarkWind</div>
+              <div className="mt-4 text-[#8bd3ff]">You stand before the gates of Darkwind.</div>
+              <div>Obvious exits: north, south, east, west</div>
+              <div className="mt-3 text-[#f2e98f]">A wayshard hums with quiet blue fire.</div>
+              <div className="text-[#8effad]">A bard tunes a lute nearby.</div>
+              <div className="mt-5 text-[#d6a94b]">&gt; look</div>
+              <div>The city smells of rain, iron, horse leather, and old magic.</div>
             </div>
           </motion.div>
         </div>
-      </Section>
-
-      {/* ═══════ 9. FOOTER ═══════ */}
-      <footer style={{ background: "#0a0d12", borderTop: "1px solid rgba(212,168,67,0.08)" }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="text-center md:text-left">
-              <h3 className="font-cinzel text-xl font-bold tracking-[0.15em]" style={{ color: "var(--gold)" }}>
-                DARKWIND
-              </h3>
-              <p className="font-body text-xs mt-1" style={{ color: "rgba(201,209,217,0.3)" }}>
-                A world reborn from darkness since 1992
-              </p>
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-6">
-              {NAV_LINKS.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="font-body text-xs tracking-wide transition-colors hover:text-amber-400"
-                  style={{ color: "rgba(201,209,217,0.4)" }}
-                >
-                  {link.label}
-                </a>
-              ))}
-              <a
-                href="https://play.darkwind.ai"
-                className="font-body text-xs tracking-wide transition-colors hover:text-amber-400"
-                style={{ color: "rgba(201,209,217,0.4)" }}
-              >
-                Play Now
-              </a>
-            </div>
-
-            <div className="flex gap-4">
-              {["Discord", "Reddit", "Wiki"].map((s) => (
-                <span
-                  key={s}
-                  className="font-body text-[10px] tracking-wide uppercase px-3 py-1 rounded-sm cursor-pointer transition-colors hover:border-amber-700"
-                  style={{ border: "1px solid rgba(201,209,217,0.15)", color: "rgba(201,209,217,0.3)" }}
-                >
-                  {s}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-8 pt-6 text-center" style={{ borderTop: "1px solid rgba(201,209,217,0.06)" }}>
-            <p className="font-body text-[10px]" style={{ color: "rgba(201,209,217,0.2)" }}>
-              Darkwind — A world reborn from darkness since 1992. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
+      </section>
     </>
+  );
+}
+
+function Footer({ setPage }: { setPage: (page: PageKey) => void }) {
+  return (
+    <footer className="border-t border-white/10 bg-[#060708] py-10">
+      <div className="mx-auto flex max-w-7xl flex-col gap-6 px-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+        <div>
+          <div className="font-display text-2xl text-white">DarkWind</div>
+          <p className="mt-2 text-sm text-[#aaa294]">A living MUD for players who still like mystery.</p>
+        </div>
+        <div className="flex flex-wrap gap-3 text-sm text-[#d7d0be]">
+          {navItems.map(([label, key]) => (
+            <PageLink key={key} page={key} setPage={setPage} className="rounded border border-white/10 px-3 py-2 hover:border-white/25">
+              {label}
+            </PageLink>
+          ))}
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+function PageBody({ page, setPage }: { page: PageKey; setPage: (page: PageKey) => void }) {
+  switch (page) {
+    case "world":
+      return <WorldPage />;
+    case "guilds":
+      return <GuildsPage />;
+    case "systems":
+      return <SystemsPage />;
+    case "about":
+      return <AboutPage />;
+    case "races":
+      return <RacesPage />;
+    case "start":
+      return <StartPage />;
+    default:
+      return <HomePage setPage={setPage} />;
+  }
+}
+
+export default function Current() {
+  const [page, setPage] = useState<PageKey>(() => normalizePath(window.location.pathname));
+
+  useEffect(() => {
+    const onPopState = () => setPage(normalizePath(window.location.pathname));
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
+  }, []);
+
+  return (
+    <Shell page={page} setPage={setPage}>
+      <PageBody page={page} setPage={setPage} />
+    </Shell>
   );
 }
