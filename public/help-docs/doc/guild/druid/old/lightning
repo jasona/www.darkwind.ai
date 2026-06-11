@@ -1,0 +1,16 @@
+Call Lightning
+
+A druid of sufficient power may channel the power of
+the storm, drawing forth lightning out of even the
+clearest skies.  Aside from the damage it causes,
+this spell has a high chance of stunning its target
+for a short time.  It also causes greater damage
+against flying targets, since it is an air-element
+spell.
+
+Command: lightning <target> (defaults to attacker)
+Base Cost: 5 * guild level SP
+Base Recovery: medium
+Base Effect: damage (high)
+Base Duration: instant
+Guild Level: 20

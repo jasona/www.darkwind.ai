@@ -1,0 +1,10 @@
+Check Styles - information skill
+------------------------------------------------------------
+Use 'scheck' to check which techniques you are currently
+using. It will give you a list of all active techniques, or
+it will tell you 'None.' if none are in use.
+
+GL:  1
+SP:  0
+command:  scheck
+duration: instant

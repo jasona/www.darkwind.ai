@@ -1,0 +1,13 @@
+|GKB-- Frenzy ----------------------------------------------------|000
+
+The druid opens to the savage Daloan current and lets its heat
+flood muscle, breath, and instinct.  While the frenzy lasts, the
+druid strikes harder and with greater violence, but is less able
+to move defensively.
+
+|CKBCommand:      |000 frenzy
+|CKBBase Cost:    |000 90 Daloan nwyfre
+|CKBBase Recovery:|000 long
+|CKBBase Effect:  |000 offense increase, dodge penalty
+|CKBBase Duration:|000 short
+|CKBGuild Level:  |000 12

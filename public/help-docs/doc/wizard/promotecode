@@ -1,0 +1,3 @@
+Syntax:  promotecode <filename>
+
+Used to move files from the development server to the live server.

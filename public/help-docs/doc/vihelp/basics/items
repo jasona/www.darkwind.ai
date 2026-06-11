@@ -1,0 +1,23 @@
+Items.
+
+Use items to list visible non-living objects in your current room.
+
+This command is useful when you want to hear only the objects in the room,
+without NPCs, players, exits, or the room description.
+
+Common forms:
+
+items
+  List visible items in the room.
+
+look <item>
+  Look more closely at one item from the list.
+
+get <item>
+  Pick up an item, if it can be taken.
+
+put <item> in <container>
+  Put an item into a visible container, if allowed.
+
+If several visible items have the same name, the command condenses them and
+gives a count.

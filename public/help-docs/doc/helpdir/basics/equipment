@@ -1,0 +1,42 @@
+                           |WKB-=< |CKBEQUIPMENT |WKB>=-
+
+
+|YKBThere have been several changes made to equipment on DarkWind. We
+believe that in total, they will make for a more vibrant playstyle
+for our players.
+
+|WKBSaved Gear
+|WKO==========
+
+  |YKOYou will now save the gear you are carrying on you when you leave
+  the game. If you're wearing/wielding equipment, you will wear/
+  wield it when you re-enter the game.
+
+  Not every item will be saved to your character, including the
+  following items:
+  |BKB -- |CKBGear that was previously donated, or is currently broken.
+  |BKB -- |CKBFood and/or Drinks.
+  |BKB -- |CKBUniques.
+  |BKB -- |CKBAnything directly restricted by the immortals of DarkWind.
+  |BKB -- |CKBAnything that you normally cannot drop on your own.
+  |BKB -- |CKBAnything inside of a container (the container may save though)
+
+  |YKOAny modifications to the equipment will also be stripped when you
+  re-enter the game (harden, lighten, flaming, etc.).
+
+  There is also a limit to the number of items that will safely
+  be stored. It is many hundreds of items, and you would have
+  to work to break it. Therefore, any items lost when you
+  re-enter the game can not, and will not be refunded.
+
+|WKBSLOTS
+|WKO=====
+
+  |YKOCharacters and monsters can wear equipment on the head, body,
+  legs, hands, feet, shield arm, cloak/body, shoulders, aura, two
+  fingers, and two neck slots. Ordinary rings and amulets will fill
+  the first available matching slot.
+
+  Use |YKOeq|WKO or |YKOmyeq|WKO to see what you are currently wearing.
+  Strength and level both help determine how much gear you can carry
+  before becoming encumbered.

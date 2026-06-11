@@ -1,0 +1,9 @@
+_______________________________________________________________________________
+"Inertial Barrier"  
+        A simple protective power.  For a length of time dependent on
+        the psionicist's guild level, the target receives a shielding of
+        mental energy which will increase armor.  
+ 
+SP Cost:  Variable	Guild Level:  4		Potential Points:  3
+ 
+Command:  barrier <target>

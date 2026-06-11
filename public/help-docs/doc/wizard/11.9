@@ -1,0 +1,37 @@
+Guild restrictions by Race
+--------------------------
+
+Guild restrictions by race are setup in the RACE_RESTRICT #define in the
+guild header: guildd.h
+
+The current moment (when this doc was written) the #define looks something
+like this:
+
+#define RACE_RESTRICT ([ \
+"Barbarian" : ({}), \
+"Bard" : ({ "ice ogre", }), \
+"Charlatan" : ({ "barbarian", "high elf", "silver elf", "stone dwarf", }), \
+  .
+  .
+  . 
+"Smith" : ({ }), \
+"Thief" : ({ "desert dwarf", "stone dwarf", "barbarian" }) \
+])
+
+The keys to the mapping are the string names of the guilds. Each value
+associated with a key is an string array player race names. The array
+specifies the races that are NOT allowed to join the guild. Thus any
+race can join the "Smith" guild, and only "ice ogre"s are disallowed
+from joining bards. These restrictions have very little to do with
+whether the race/guild is a good fit or not.
+ 
+Race/guild restrictions should ONLY be checked when actually joining
+the guild or switching race, not in any other guild code. Adding/removing
+restrictions should not affect people already in the guild.
+
+Every guild should be added as a key into this mapping, even if the
+race list is empty. Guild coders can modify the restriction list simply
+by adding/removing items from the race array for their guild.
+
+------
+Version 1:  Bob - April 07, 2003

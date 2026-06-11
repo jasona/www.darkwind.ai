@@ -1,0 +1,17 @@
+SYNTAX
+======
+
+l
+l <string>
+
+DESCRIPTION
+===========
+
+Look at the room you are in, or look at <string>.
+
+SEE ALSO
+========
+
+gl
+look
+

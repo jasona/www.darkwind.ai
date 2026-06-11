@@ -1,0 +1,25 @@
+Ranger Help for: carve bow
+===========================
+
+SYNTAX:      make bow
+             make shortbow
+             make longbow
+             make crossbow
+             carve bow
+             carve shortbow
+             carve longbow
+             carve crossbow
+USAGE:       Any terrain
+SLOT COST:   7
+BASE SP:     70
+SKILL TYPE:  archery
+
+SUMMARY:
+This skill allows a Ranger to craft one of three temporary ranged
+weapons from wood: shortbow, longbow, or crossbow. The quality of the
+bow depends on the Ranger's wilderness training and mental/physical
+crafting ability.
+
+Shortbows are suited to fast archery and furyfire. Longbows are suited
+to longfire. Crossbows are slower, hit harder, use bolts, and are
+required for heartshot.

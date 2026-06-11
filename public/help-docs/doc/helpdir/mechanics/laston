@@ -1,0 +1,7 @@
+|WKBSyntax: |YKBlaston <player>
+ 
+|WKBDESCRIPTION
+|WKO===========
+
+|YKOTells the last time <player> was logged on or if they are on,
+how long since they logged on.

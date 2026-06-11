@@ -1,0 +1,60 @@
+                     WELCOME TO THE RANGER'S GUILD!
+-----------------------------------------------------------------------------
+Congratulations! You are now a Ranger, a guardian of the wild places
+of Darkwind. The Wind speaks to you now, connecting you to all Rangers
+across the land. This guide will help you get started.
+
+FIRST STEPS (do these immediately):
+------------------------------------
+1. SET YOUR TERRAINS AND ENEMY. You cannot advance until these are set.
+   These are permanent choices that define your Ranger, so choose wisely.
+   Type each command with no argument to see your options:
+
+     setprime           Choose your primary terrain (biggest bonuses)
+     setsecond          Choose your secondary terrain (smaller bonuses)
+     setenemy           Choose your enemy species (combat bonuses vs them)
+
+   Example: setprime forest, setsecond mountain, setenemy bear
+
+2. LEARN YOUR FIRST SKILL. You start knowing 'forage' but haven't
+   learned it yet. Type 'learn forage' to learn it. This unlocks
+   more skills you can learn. Type 'skilltree' to see all skills
+   and how they connect.
+
+3. GET TO THE WILDERNESS. Ranger skills only work outside of cities.
+   Head out of town to start using your abilities.
+
+HOW RANGERS WORK:
+-----------------
+- You earn SLOTS by advancing your guild level (type 'cost' to see
+  requirements, 'improve guild' to advance when ready).
+- Spend slots + experience to LEARN skills (type 'learn' to see what's
+  available, 'learn <skill>' to learn one).
+- Skills have TERRAIN requirements - some only work in certain places.
+  Type 'check <terrain>' to see what works where.
+- Your PRIMARY terrain gives +20% damage, -20% SP cost, -20% cooldown.
+  Your SECONDARY terrain gives +10% to those same things.
+- Fighting your ENEMY SPECIES gives +30% critical hit chance.
+
+ESSENTIAL COMMANDS:
+-------------------
+ranhelp / rh         Full help system. 'rh <topic>' for details.
+skilltree / tree     View the entire skill tree and your progress.
+learn                See available skills and learn new ones.
+skills / myskills    See your learned skills.
+slots                See your available slots.
+cost / tally         See advancement costs.
+improve <stat>       Advance stats or guild level.
+rscore / rsc         Your full Ranger status report.
+rangers              See who else is online.
+ran <message>        Chat with other Rangers.
+
+GETTING AROUND:
+---------------
+The Ranger's Lodge is in the deep forest southwest of Darkwind.
+From town, go to the forest (west from Village Road area) and
+keep heading deeper. When you reach the deep forest, go northeast
+to find the forest meadow, then northeast again to the Lodge.
+
+Type 'rh' for the full command list, or 'rh <topic>' for help
+on any topic. Good luck, Ranger!

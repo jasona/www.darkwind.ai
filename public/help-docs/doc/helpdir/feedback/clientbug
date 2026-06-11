@@ -1,0 +1,21 @@
+clientbug is for reporting problems with the web client or connected
+client-side interface, rather than a mudlib gameplay bug.
+
+Syntax:
+
+  clientbug <description>
+  clientbug <object>:<description>
+
+Examples:
+
+  clientbug the achievements modal shows blank fields
+  clientbug map: the minimap stops updating after I change floors
+
+Clientbug reports are stored internally and mirrored to the GitHub issue
+tracker with client-specific labels so they can be triaged separately
+from game-world bugs.
+
+Use the regular bug command for gameplay, room, mob, or command bugs
+that are not specifically client-side.
+
+See also: help bugs

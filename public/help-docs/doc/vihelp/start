@@ -1,0 +1,46 @@
+Darkwind help for screenreader users.
+
+This help path is shown first because your screenreader setting is on. If a
+screenreader-specific help topic exists, you will hear that version. If it does
+not exist yet, Darkwind falls back to the normal help topic.
+
+Good first commands:
+
+help basics look
+  How to read your current room.
+
+help basics exits
+  How to find where you can move.
+
+help basics npcs
+  How to list non-player characters in the room.
+
+help basics players
+  How to list other players in the room.
+
+help basics items
+  How to list visible items in the room.
+
+help basics actions
+  How to find room-specific actions, things to look at, and things to read.
+
+help basics inventory
+  How to review what you are carrying.
+
+help interface screenreader
+  How to turn screenreader support on or off.
+
+Useful commands while exploring:
+
+look
+exits
+npcs
+players
+items
+actions
+inventory
+score
+who
+
+Use help list to hear the available help sections. Use help list basics to hear
+topics in the basics section.

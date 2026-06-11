@@ -1,0 +1,21 @@
+
+|WKBDESCRIPTION
+============|YKO
+
+Combatbrief allows you to customize various aspects of the way combat
+messages are displayed. Each toggle is it's own setting. It's is 
+possible to have all, none, or a few toggled on at a time.
+
+|YKBcombatbrief        |WKO- |YKODisplays your current combatbrief status
+
+|YKBcombatbrief short  |WKO- |YKOAll combat messages are displayed as 'A hits B' or
+                     'A misses B'
+
+|YKBcombatbrief self   |WKO- |YKOOnly attacks by you will be displayed.
+
+|YKBcombatbrief hit    |WKO- |YKOOnly hits will be displayed. Dodges and misses will
+                     be ignored.
+                    
+|YKBcombatbrief damage |WKO- |YKODamage numbers will be shown at the end of your combat
+                     messages. This setting is available at any level and
+                     is on by default.

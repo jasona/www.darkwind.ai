@@ -1,0 +1,18 @@
+Ranger Help for: rh
+====================
+
+SYNTAX:      rh [topic]
+             rhelp [topic]
+             ranhelp [topic]
+USAGE:       Anywhere
+
+SUMMARY:
+This command accesses the Ranger guild help system. Type 'rh' followed
+by a topic to view help on that subject. Without a topic, it displays
+a list of available help categories. The 'rh' command is a shorthand
+alias for 'rhelp' and 'ranhelp'.
+
+EXAMPLES:
+  rh skills          - View help on Ranger skills
+  rh archery         - View help on archery
+  rh general         - View general guild overview

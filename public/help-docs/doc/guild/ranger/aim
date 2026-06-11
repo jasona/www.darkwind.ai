@@ -1,0 +1,15 @@
+Ranger Help for: aim
+====================
+
+SYNTAX:      aim <target>
+USAGE:       Any terrain
+SLOT COST:   NA
+BASE SP:     variable
+
+SUMMARY:
+This skill allows a Ranger to take careful aim with a bow at a target
+that is not currently in combat. The longer the Ranger aims, the more
+damage the shot will deal when released. Aim is interrupted if the
+Ranger moves, is attacked, or enters combat. The SP cost scales with
+the time spent aiming. Requires a bow to be wielded and an arrow to
+be readied.

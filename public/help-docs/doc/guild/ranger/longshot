@@ -1,0 +1,16 @@
+Ranger Help for: longshot
+=========================
+
+SYNTAX:      longshot <target>
+USAGE:       Any terrain
+SLOT COST:   NA
+BASE SP:     variable
+SKILL TYPE:  archery
+
+SUMMARY:
+This skill allows a Ranger to fire a long-range bow attack at a target.
+Longshot trades speed for power, delivering a carefully aimed shot that
+deals more damage than a quickshot. The SP cost varies based on the
+Ranger's archery skill level and the bow used. The Ranger must have a
+bow wielded and an arrow readied. Longshot is the standard ranged
+attack for Rangers who prefer precision over rapid fire.

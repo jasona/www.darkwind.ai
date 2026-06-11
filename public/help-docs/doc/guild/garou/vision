@@ -1,0 +1,18 @@
+|GKO================================================================
+                          |MKBVision
+|GKO================================================================
+
+|YKOThe power to invoke a spiritual vision is only granted to
+the upper echelon of shamans, those who have proved their
+dedication to Gaia. The vision through the spirit world can
+be very confusing, but also very powerful. The shaman has
+three options for the focus of his vision. He may choose
+'narrow' and see all items and rooms nearby. He may choose
+'wide' and get general information on various players
+around the world. He may also choose a specific player, and
+get a vision of that player's location and some of her
+equipment.
+
+|WKOUsable in Form: |GKOMan Only
+|RKOSyntax: |YKBvision wide|WKO, |YKBvision narrow|WKO, or |YKBvision <target>
+|WKOCost: |CKO 75 sp

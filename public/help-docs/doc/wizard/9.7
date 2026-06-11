@@ -1,0 +1,74 @@
+TOWN CRIERS:
+
+Darkwind's town crier system allows the addition of both general and
+domain-specific messages that can be queried and announced via various
+means. The messages can be advertisements for areas, quests, specific
+events, and the like.
+
+Relevant commands:
+
+Read the help for the following commands:
+criermsgs, crieradd, crieraddtimed, crierremove
+
+
+Town Crier Inheritable:
+
+There is a generic town crier inheritable (TOWN_CRIER) that will
+automatically shout a variety of messages, preferring general domain
+messages and messages from its own domain (set with set_domain()).
+It recognizes souvrael, darkwind, kerei, hyperborea, and underworld
+as domains. There is an example at /domains/darkwind/roads/obj/crier.c
+that uses this inheritable.
+
+void set_domain(string domain): 
+Sets the message domain that the crier will prefer when shouting messages.
+
+void set_all_domains(int flag):
+If 1, the crier will select messages from all domains. If 0, the crier will
+shout only messages only from its specified set_domain() domain and from
+general messages.
+
+void set_crier_message(string msg):
+Sets the message the crier will prepend to its shouts. Defaults to "Hear ye,
+hear ye!".
+
+
+To add an announcement programmatically:
+
+CRIER_D->add_announcment(string key, string msg, string domain, int minutes);
+
+Domain is optional, and defaults to "all". The key needs to be unique
+*across all the announcements*! A good key would be something like
+"malraux.newbie.ad". A bad key would be something like "message".
+
+Do not put newlines or double quotes in your messages.
+
+You can add an announcement as many times as you want. Successive
+additions of the same key merely replace. Announcements are saved,
+so you only need to add the message once. The announcement will
+stay until you remove it explicitly.
+
+The "minutes" parameter will put a timeout of that many minutes on the 
+announcement, after which it will automatically be removed.
+
+
+To remove an announcement: 
+
+CRIER_D->remove_announcement(string key);
+
+
+To query a random announcement by domain:
+
+CRIER_D->query_random_announcement(string domain);
+
+Domain is optional; default is "all".
+
+Valid domains are:
+
+darkwind, hyperborea, souvrael, kerei, underworld, all
+
+Of course, you can create your own domains for internal use, but
+they announcements will never be queried anywhere else.
+
+
+/inherits/towncrier.c is an example of a way to use the CRIER_D.

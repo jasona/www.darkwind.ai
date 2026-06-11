@@ -1,0 +1,105 @@
+                 --Hungarian Notation--
+
+Hungarian Variable Naming Notation:
+
+Hungarian notation basically encodes the variable type and scope of the
+variable in the name of the variable itself.
+
+There are 4 parts to it:
+1) The variable's scope
+2) Is it an array?
+3) The variable's type
+4) The variable's name
+
+The variable's scope
+--------------------
+At the basic level, there are two types of scope.
+
+- Local scope
+- Module-level scope
+
+If a variable has been declared inside of a function, then its scope is
+local.  Otherwise, the variable can be used anywhere in the file, and
+it has module-level scope.
+
+If the variable has module-level scope, then start your variable name with
+an "m".  If it has local scope, then do not add anything to the variable
+name.
+
+
+Is it an array?
+---------------
+In LPC, arrays are designated by use of the "*" when declaring variables.
+
+For example:
+  int  iIndex;    // This is not an array.
+  int *aiSize;    // This is an array of integers.
+
+If your variable is an array, then you add an "a" to the variable name.  The
+"a" goes after the "m" mentioned above if your variable has module-level
+scope.  If your variable is not an array, then do not add anything to the
+variable name.
+
+The variable's type
+-------------------
+Basically, this is taking the variable type (IE, int, string, mixed, etc.)
+and shortening it to 1 unique letter so that you know what the variable's
+type is every time you look at it.
+
+The LPC Unique letter for each variable type is:
+i  : integer
+ib : integer used as a bitfield
+m  : mapping
+o  : object
+s  : string
+t  : status
+x  : mixed
+
+Whatever type your variable is, add the unique letter to the variable name.
+The variable type letter goes after the "m" and the "a" if they exist.  It
+is not allowable to not encode the variable type into the name.
+
+The variable's name
+-------------------
+
+This is the easy part.  It is what you call your variable.  The variable
+name should be descriptive of the function of the variable, and should use
+proper case.
+
+All that "proper case" means is that you should capitalize the first letter
+of the variable name as well as all letters of "new words" inside the
+variable name, and that you should not use underscores to separate the "new
+words."
+
+Examples
+--------
+
+  iCount: local integer variable
+ aiCount: local array of integers
+maiCount: module level array of integers
+
+ mIDsToNames: local mapping
+mmIDsToNames: module level mapping
+
+asNames: local array of strings
+
+int iCount;
+int *aiCount;
+string *asNames;
+object oPerson;
+
+The second part: WHY should I use Hungarian notation?
+-----------------------------------------------------
+At its simplest, because redundancy in variable naming is a good thing.
+
+If you have a long file which contains a global variable named something
+generic without the scope and type encoded in the name, then by the time
+you reach the end of the file and spot a line which uses that variable,
+you may have forgotten what kind of variable it is.  If, however, your
+variable uses Hungarian notation, you can look at the variable name and
+you will immediately know that it is, for example, a module-level array
+of mappings which you're using to store Responses (IE, mamResponses).
+
+------
+Version 1:  Malraux, 1997-Aug-26
+Version 2:  Rodney, 1998-Apr-15

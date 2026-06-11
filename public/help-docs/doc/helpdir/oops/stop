@@ -1,0 +1,18 @@
+/doc/helpdir/stop
+=================
+
+SYNTAX
+======
+
+stop
+
+DESCRIPTION
+===========
+
+Stop hunting a fleeing player. You can not stop being hunted though.
+
+SEE ALSO
+========
+
+kill
+

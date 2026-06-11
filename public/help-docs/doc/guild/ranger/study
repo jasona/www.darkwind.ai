@@ -1,0 +1,16 @@
+Ranger Help for: study
+======================
+
+SYNTAX:      study
+USAGE:       Any terrain
+SLOT COST:   NA
+BASE SP:     15
+SKILL TYPE:  cartography
+
+SUMMARY:
+This skill allows a Ranger to perform a detailed analysis of their
+current area, revealing information about the terrain, exits, hidden
+features, and environmental conditions. Study provides more detail
+than a standard look, including terrain type, weather effects, and
+any notable natural features. The depth of information revealed
+depends on the Ranger's skill level and familiarity with the terrain.

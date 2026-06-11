@@ -1,0 +1,35 @@
+                     |CKBChapter 12 - Partying
+              |BKB-----------------------------------
+     
+     |WKBAt levels 1-5 you can form parties with other newbies to make
+     your newbie experience more enjoyable. After level 6 you will
+     only be able to party with players level 6 and up. 
+     
+     Party experience is shared based on the level of the players,
+     and whether or not all members are present in the room where
+     the experience was awarded. More experience is granted to
+     those of higher level. Gold is split equally between all members.
+     
+     To form a party, go up to another unpartied person and use the
+     |YKB'poffer' |WKBcommand.
+     
+     |BKBParty Commands:
+     |MKOpstatus                   |BKB- |CKOLists members and other info.
+     |MKOpsplit <amount>           |BKB- |CKOShares amount of gold with party.
+     |MKOpautosplit <on|off>       |BKB- |CKOTurns on or off automatic gold split
+     |MKOpleave                    |BKB- |CKOUse this to leave the party.
+     |MKOpfollow <on|off>          |BKB- |CKOToggles following the party leader.
+     |MKOpsay <message>            |BKB- |CKOSends a message to all members.
+     |MKOepsay <message>           |BKB- |CKOEmotes a message to all members.
+     |MKOpartyhist                 |BKB- |CKOShows the history of the party channel
+  
+     |WKBIf you're the party leader, you can also do the following:
+     |MKOpoffer <member>           |BKB- |CKOAdds a member to your party. This can
+                                 also be used by a person not in a
+                                 party to form a new party.
+     |MKOpboot <member>           |BKB - |CKORemoves a member from your party.
+     |MKOpname <party_name>        |BKB- |CKOSets a party name (displayed in who).
+     |MKOpleader <member>          |BKB- |CKOChanges the leader of the party.
+
+     |WKBFor more information on any of these commands, use |RKB'help <command>'|WKB.
+     General information on parties is listed in |RKB'help party'|WKB.

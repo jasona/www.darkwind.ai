@@ -1,0 +1,24 @@
+|CKBFormat:|WK0
+    (Living_Object)->set_attribute("extra_hp_function", 
+        ({ Source_Object/Source_Object_File, .. }) );
+
+|CKBDescription:|WK0
+    Will add the result from call_other(
+        Source_Object/Source_Object_File, "extra_hp_function")
+        to the monitor ("hp", ".", "st") for each object/file
+        in the array.
+
+|CKBExample:|WK0
+    (this_player())->set_attribute("extra_hp_function",
+        ({ "/guilds/ex/ex_bar_maker.c" }) );
+    Will call the extra_hp_function() on the ex_bar_maker.c file
+        and add it to the monitor, while removing whatever
+        object(s)/file(s) were called previously.
+
+To add another file to the array and keep whatever files/objects
+    are being called already:
+
+    this_player()->set_attribute("extra_hp_function",( 
+        this_player()->query_attribute("extra_hp_function") ? 
+        (this_player()->query_attribute("extra_hp_function") + 
+        ({ NEW_OBJECT/NEW_FILE })) : ({ NEW_OBJECT/NEW_FILE }));

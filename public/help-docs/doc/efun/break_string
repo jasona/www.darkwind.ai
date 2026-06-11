@@ -1,0 +1,14 @@
+SYNOPSIS
+        varargs string break_string(string sWhat, int iLength,
+          int iIndent, status tNoFirst)
+
+DESCRIPTION
+        Breaks a continous string without newlines into a string
+        with newlines inserted at regular intervals replacing spaces.
+        Each newline separeted string can be indented with a given
+        number of spaces.
+        sWhat: Original message
+        iLength: The total maximum width of each line
+        iIndent: (optional) How many spaces to indent with
+        tNoFirst: (optional) Don't indent the first line
+        Returns: A string with newline separated strings

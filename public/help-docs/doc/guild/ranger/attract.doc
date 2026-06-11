@@ -1,0 +1,43 @@
+
+Ranger Help for: attract
+========================
+
+SYNTAX:      attract follower/attract <race> follower
+USAGE:       primary terrain only
+SLOT COST:   9
+BASE SP:     variable
+SKILL TYPE:  follower
+
+SUMMARY:    
+Once a Ranger gains this ability, he or she may attract a friend follower
+from any room that has his or her primary terrain in it. Followers
+come in all shapes and sizes, from ants to elephants. Some are smarter
+than others, some are stronger than others. What comes out of the 
+wilderness to aid you is dependent on what your primary terrain is. IE:
+You won't get a seal if your primary terrain is desert. Once you attract
+a follower, you will get the same one until it dies.
+
+As you increase your level, its level will go up along side of you. Each
+follower has a max level that it can achieve, which will affect things
+such as fighting or carrying weight. Each follower is also rated on how
+smart and trainable it is. All followers can learn at least one task, some
+can learn two, and the smartest ones can learn three. Some tasks are too 
+tough for some followers to learn as well. A list of tasks are:
+
+Easy Tasks:        slay, burden and guard
+Medium Tasks:      fetch, carry and obscure
+Difficult Tasks:   explore, hunt and forage
+
+Tasks are very handy, and helpful to a Ranger. For more detail on each
+task, type 'rh <task name>' and 'rh teach'.
+
+IMPORTANT NOTE:
+Each Ranger has a set amount of followers that will come to his or her
+aid over time that is determined at join time. Everytime a Ranger allows
+a follower to die, you get one closer to that number. Once a Ranger has
+let his or personal number of followers die, no followers will ever come
+to the Ranger's aid again! And, if you teach a follower a task, and then
+let it die, you will have to reteach it to the next follower if it is
+capable of learning it. You are guaranteed at least 2 followers, but after
+that be wary and take care of your follower. YOU HAVE BEEN WARNED.
+

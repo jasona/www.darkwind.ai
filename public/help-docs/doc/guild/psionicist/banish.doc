@@ -1,0 +1,11 @@
+_______________________________________________________________________________
+"Banish"        
+        An expensive but powerful effect, the target of the power will be
+        teleported away to otherdimensional space unless it resists the
+        spell.  Such strenous mental efforts cannot be maintained long,
+        however, and the target will soon return to Darkwind.  Make good
+        use of the time provided to search, move on, or escape!
+ 
+SP Cost:  Variable	Guild Level:  12	Potential Points:  5
+ 
+Command:  pbanish <target>

@@ -1,0 +1,27 @@
+|WKBNAME|000
+    query_shield
+
+|WKBSYNOPSIS|000
+    |YK0int|000     |CKBquery_shield|000()
+    |YK0int|000     |CKBquery_shield|000(|YK0int|000 |GKBiType|000)
+    |YK0mapping|000 |CKBquery_shield|000(|YK0-1|000)
+
+|WKBDESCRIPTION|000
+    Query a living creature/player's shield. Output changes based on
+    argument passed.
+
+    If no argument is passed (or |GKB0|000 is passed), the player's generic
+    shield amount is returned.  This shield will block damage, regardless
+    of damage type.
+
+    If a valid damage type (see <types.h>) is passed, the specific shield
+    amount is returned.  This shield will only block that type of damage.
+
+    If a value less than |GKB0|000 or greater than |GKBALL_DAM_TYPES|000 is passed,
+    a mapping in the form of <type>:<shield> is returned.
+
+    |CKBquery_shield|000() is defined in /secure/living.c
+
+|WKBSEE ALSO|000
+    |CKBset_shield|000(L), |CKBadd_shield|000(L), |CKBremove_shield|000(L)
+

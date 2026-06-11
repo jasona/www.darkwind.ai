@@ -1,0 +1,16 @@
+
+Ranger Help for: enemy horse
+============================
+
+SUMMARY:
+Choosing horse means your Ranger specializes against horses, wild mounts,
+mustangs, chargers, and similar equine creatures.
+
+This is a plains, forest, hill, mountain, desert, and arctic choice. Keep
+in mind that your follower will never be the same race as your enemy.
+
+COMMAND:
+  setenemy horse
+
+=============================================================================
+SEE ALSO: enemy, setenemy and followers

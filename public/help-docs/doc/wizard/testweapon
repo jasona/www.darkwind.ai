@@ -1,0 +1,34 @@
+------------------------------------------------------------------
+Test Char Weapon Help         By: Bullseye a.k.a Scyrus
+------------------------------------------------------------------
+Ok, now we're going to cover how to load a weapon for your test
+char, then transfer it.  First let me tell you about the weapon
+and what you can do with it:
+
+------------------------------------------------------------------
+Weapon Commands:
+------------------------------------------------------------------
+  setq - Set the quality of the weapon
+Syntax: setq <amt>
+------------------------------------------------------------------
+  setwc - Set the class of the weapon
+Syntax: setwc <amt>
+------------------------------------------------------------------
+  settype - Sets the type of the weapon
+Syntax: settype <none|slash|pierce|cleave|blunt|pole|missile> 
+------------------------------------------------------------------
+  setid - Sets the alias of the weapon
+Syntax: setid <new alias>
+------------------------------------------------------------------
+
+Ok, now to cover how to load the weapon, all you need to do is type
+the following string:
+
+clone /objects/testchar/test_armor.c
+
+Simple enough.
+
+Now to transfer the object to your test char, to do this just type
+the following command, changing "scyrus" to "thenameofyourtestchar"
+
+execute move_object(present("weapon", this_player()), find_player("scyrus"));

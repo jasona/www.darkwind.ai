@@ -1,0 +1,14 @@
+You may get help on the following topics:
+psireport - explains the psireport screen
+advancement - explains how advancement works in the Guild
+levels - gives the xp and gp chart for levels
+powers - a quick reference chart to the powers with Guild Level and cost
+emotes - a list of guild specific emotes
+concentration - explains the concentration requirement
+banishment - explains the process for guild punishment
+
+You may get help on a particular power using 'phelp <power name>'.
+
+just do phelp <topic>.  To get a list of psionicists online do 'psions'.  For
+your guild statistics use 'psireport'.  To talk or emote on the guild chat
+line use 'psi' or 'epsi' respectively.  

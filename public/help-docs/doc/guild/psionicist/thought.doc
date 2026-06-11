@@ -1,0 +1,11 @@
+_______________________________________________________________________________
+"Thought Shield"    
+        This protects the psionicist from energy attacks.  The shield
+        may also be cast on an adventuring companion.  It offers good
+        psi resistance and some, but not a lot, of magic resistance for
+        a length of time based on guild level.  The amount of protection
+        also goes up with guild level.  
+ 
+SP Cost:  Variable	Guild Level:  5		Potential Points:  1
+ 
+Command:  tshield <target>

@@ -1,0 +1,26 @@
+|WKBThese are the allowable combos for each guild|WK0
+
+Guilds are broken into 4 distinct groups:
+
+|YK0Neutral Aligned|WK0
+    Bard        |  Psionicist     |  Fighter
+    Swashbuckler|  
+
+|YK0Aligned with |GKBGaea|WK0
+    Garou       |  Lunar         |  Ninja
+
+|YK0Aligned with |YKBMitra|WK0
+    Cleric      |  Mage          |  Paladin
+
+|YK0Aligned with |RK0Set|WK0
+    Priest      | Thief
+
+
+Those aligned with a diety may not join a guild aligned with another diety.
+Neutrally aligned guilds may join any other guild, regardless of diety.
+
+For example, a Lunar may not join the Cleric guild, but can join the
+ranks of Bard or even Ninja.
+
+|XX0See Also:
+|XX0    |CKB"help list guilds"|XX0

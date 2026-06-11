@@ -1,0 +1,12 @@
+                       |BKB-= |CKBExit Message |BKB=-
+               
+|MKOExmess is the command used to change your exit message that
+only thieves will see when you log off of Darkwind. Exmess
+followed by no value will reset your exit message to the standard
+message. Exmess <message> will set your exit message correctly.
+Placing a $N in the message will put your name into the exit
+message, just as it does when setting your title when you advance
+a level.
+
+|CKOGLVL required: |GKB1
+|CKOSyntax: |YKOexmess <message>                |CKOCost: |WKOFree

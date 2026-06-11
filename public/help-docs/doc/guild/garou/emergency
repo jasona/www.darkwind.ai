@@ -1,0 +1,13 @@
+|GKO================================================================
+                        |CKOEmergency
+|GKO================================================================
+
+|YKOThe Garou in wolf form is unable to use tells
+or shouts, and thus could have a situation where
+they will be unable to contact a wizard for
+assistance. The emergency command will send
+a message to all wizards currently on Darkwind.
+Please do not use it for casual conversation, and
+be aware that all use of this command is logged.
+
+|RKOSyntax: |YKBemergency <msg>

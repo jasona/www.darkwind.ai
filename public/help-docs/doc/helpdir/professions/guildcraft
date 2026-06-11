@@ -1,0 +1,31 @@
+                          Guildcraft
+
+    Guildcraft lets guild members consume saved profession materials for
+guild-themed preparations. These preparations support guild roleplay,
+guild command hooks, and material demand loops.
+
+Commands:
+  guildcraft list
+  guildcraft <guild> <use>
+
+Examples:
+  guildcraft bard strings
+  guildcraft ninja smoke bomb
+  guildcraft mage scribing ink
+  guildcraft cleric incense
+  guildcraft ranger poultice
+  guildcraft druid verdant bundle
+
+    Each preparation consumes saved materials from your profession storage
+and sets a timed preparation on you. If you do not belong to the matching
+guild, the preparation is refused.
+
+    Druids, Bards, Ninjas, Mages, Clerics, Paladins, and Rangers all have
+starter reagent uses. Use guildcraft list to see the current catalog.
+
+Getting started:
+  1. Use 'guildcraft list' to see the current guild material uses.
+  2. Use 'reagents search <item>' when you need source hints.
+  3. Gather the materials through professions, workers, monster reagents,
+     fishing, or work-order rewards.
+  4. Use 'guildcraft <guild> <use>' while in the matching guild.

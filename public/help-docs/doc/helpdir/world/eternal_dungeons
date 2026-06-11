@@ -1,0 +1,41 @@
+The Eternal Dungeon is an instanced endless dungeon run for a solo
+player or a small group.
+
+Use:
+
+  eternal enter [floor]
+  eternal status
+  eternal leave
+  eternal rejoin
+  eternal leaderboard [v2|legacy]
+  eternal choose <1-3>
+
+Each run is private to its entrants. Floors are generated for the run,
+with objectives, affixes, and route choices. Completing the floor
+objective opens a portal to the next level.
+
+Use portal <route> or enter portal <route> when the dungeon offers
+routes such as safe, elite, boss, or unstable. Riskier routes pay more
+Eternal Shards and make the next floor more dangerous.
+
+Recover and cleanse objectives appear in earlier chambers before the
+final leader. Look for the relic or shrine in the room description, then
+use recover relic or cleanse shrine after its guardians are gone.
+
+When the dungeon offers a checkpoint bargain, the run leader can use
+eternal choose <1-3> before advancing.
+
+Checkpoints unlock every 5 floors. Solo checkpoints belong to the
+player who unlocked them. Group checkpoints belong to the exact party
+composition that unlocked them, so the same players must reunite to use
+those group checkpoints.
+
+Use eternal enter [floor] to start from an unlocked checkpoint. Use
+eternal status to view your available solo checkpoints and, when your
+party is assembled, any group checkpoints for that composition.
+
+Leaderboard entries show the starting floor when a run began from a
+checkpoint. Skipped floors do not grant reward compensation. V2 and
+legacy leaderboards are separate because the dungeon rules are different.
+
+See also: help eternal, help eternal_dungeon

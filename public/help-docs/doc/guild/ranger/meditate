@@ -1,0 +1,16 @@
+Ranger Help for: meditation
+============================
+
+SYNTAX:      meditate
+USAGE:       Any terrain
+SLOT COST:   3
+BASE SP:     NA
+SKILL TYPE:  religious
+
+SUMMARY:
+This skill allows a Ranger to enter a meditative state, communing with
+nature to restore spell points. The Ranger must not be in combat to
+meditate. The amount of spell points restored depends on the Ranger's
+wisdom, guild level, and the terrain they are in. Meditating in the
+Ranger's primary terrain is more effective. This is the primary way
+Rangers recover their spell points in the field.

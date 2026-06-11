@@ -1,0 +1,14 @@
+Ranger Help for: flame arrow
+=============================
+
+SYNTAX:      flame arrow
+             flame bolt
+USAGE:       Any terrain
+SLOT COST:   NA
+BASE SP:     15
+SKILL TYPE:  archery
+
+SUMMARY:
+This skill allows a Ranger to set an arrow or bolt on fire, adding fire
+damage to the next shot. The Ranger needs ammo and a lit torch in their
+inventory. Flaming ammo must be used quickly before it burns out.

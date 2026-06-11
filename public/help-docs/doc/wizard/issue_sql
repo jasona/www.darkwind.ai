@@ -1,0 +1,3 @@
+create table tbl_issue ( keyid int not null auto_increment primary key, issue_type tinyint, submitter varchar(25) not null, submit_date timestamp, status tinyint not null, description text, area varchar(255), location varchar(255), assigned varchar(25), response text, response_date datetime );
+
+create table tbl_issue_history ( keyid int not null, change_date timestamp, description varchar(255), user varchar(25) );

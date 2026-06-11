@@ -1,0 +1,19 @@
+make_limited_obj(string sFile, int iLimit)
+
+  An lfun defined for all objects inheriting CLONE, which includes rooms
+  and monsters. Attempts to create a limited-instance object and move it 
+  to the calling object. Won't create an object if doing so would result
+  in more objects in-game than specific by iLimit. Of course, this limit
+  only counts objects that have been created through previous calls to
+  make_limited_obj or clone_limited_object.
+
+  Note: make_limited_obj returns 0 if the clone is unsuccessful.
+
+  Example: 
+           if(!make_limited_obj("/obj/exceptional_sword", 4))
+             make_obj("/obj/regular_sword");
+
+
+See also: make_limited_and_equip, make_obj, make_unique_obj, 
+          clone_limited_object
+          

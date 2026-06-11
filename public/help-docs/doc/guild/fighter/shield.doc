@@ -1,0 +1,9 @@
+Skill: make shield Timer: Support      GL:  2    Cost: VARIES
+
+This skill lets you try to make a shield from the nearby terrain. The 
+Fighter's shield is a very good shield that improves as you gain skill
+as a fighter.
+
+Type "destroy shield" to get rid of it.
+
+Syntax is: make shield

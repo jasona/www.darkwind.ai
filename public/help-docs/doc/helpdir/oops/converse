@@ -1,0 +1,17 @@
+/doc/helpdir/converse
+=====================
+ 
+SYNTAX
+======
+ 
+converse
+ 
+DESCRIPTION
+===========
+ 
+Stay in conversation mode until stopped by '**'.
+ 
+SEE ALSO
+========
+ 
+say

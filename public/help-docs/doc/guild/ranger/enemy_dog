@@ -1,0 +1,16 @@
+
+Ranger Help for: enemy dog
+==========================
+
+SUMMARY:
+Choosing dog means your Ranger specializes against wolves, hounds, jackals,
+feral dogs, and similar pack hunters.
+
+This is a broad predator choice that can matter in forests, plains,
+swamps, deserts, mountains, arctic lands, and underground areas.
+
+COMMAND:
+  setenemy dog
+
+=============================================================================
+SEE ALSO: enemy, setenemy and terrains

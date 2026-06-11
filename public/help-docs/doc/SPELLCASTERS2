@@ -1,0 +1,21 @@
+SPELLCASTERS
+
+Specifics
+  Divine:
+    Level 30: Miracle others (full heal)
+    Level 35: Miracle yourself (full heal)
+    Level 40: Grand Miracle (heal everyone in the room)
+  Natural:
+    Locate Object - useful only if random_cloning
+      become more common.
+    Shield - based on the existing Necro spell.
+    Level 30: Total Recall (transports everyone in
+      the room back to the adv guild - query domain)
+  Dark:
+    Raise Dead - Corpses into pets.
+    Conjure Spirit - Can send it to spy adjoining rooms.
+    Rot Corpse - Dest the corpse.
+    Soul Steal - Drain the emotion of the victim restricting
+      say, tell and causing the victim to stumble around.
+These are just general specifics ;) just some ideas
+of what I'd do and allow ;)

@@ -1,0 +1,9 @@
+Sharpen - utility skill
+------------------------------------------------------------
+A swashbuckler always takes good care of his blades. He can
+hone them to razor-sharpness, improving their quality.
+
+GL:  2
+SP: 40
+command:  ssharpen <weapon>
+duration: permanent

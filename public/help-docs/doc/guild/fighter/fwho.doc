@@ -1,0 +1,11 @@
+Fwho is a basic fighter command. It allows you to see all the current
+fighters on Darkwind. It also allows you to see some information about
+your fellow fighters as listed below:
+
+F = fighter is currently fighting.
+I = fighter is currently reading or writing.
+M = fighter is currently muffing the fighter line.
+E = fighter wiz is editing.
+[idle] = fighter is currently idle.
+
+Syntax is: fwho

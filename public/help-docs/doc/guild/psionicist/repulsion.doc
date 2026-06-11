@@ -1,0 +1,13 @@
+_______________________________________________________________________________
+"Repulsion Field"   
+        Through the use of this power, the psionicist can create
+        a telekinetic forcefield behind which he can stand, completely
+        separated from other people and events in the area.  The
+        psionicist will be able to look and talk in the room, but cannot
+        pick anything up, attack, or be attacked.  Any items or conversation
+        WITHIN the forcefield can be completely separated from those
+        outside.
+ 
+SP Cost:  50		Guild Level:  10	Potential Points:  4
+ 
+Command:  rfield  |  killfield  (To kill a field you have created)

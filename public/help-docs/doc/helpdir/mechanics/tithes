@@ -1,0 +1,21 @@
+Divine Tithes
+
+Tithes let you offer coins to Mitra, Gaea, or Set. They can push the hidden
+divine pressure of the world and may earn favor when you tithe to your own
+patron.
+
+Commands:
+
+  tithe <amount> to <mitra|gaea|set>
+  tithe <mitra|gaea|set> <amount>
+  tithe <amount> at shrine
+
+Tithes also tug your alignment and ethics toward the god you honor. The omens
+command describes the public result without showing raw pressure numbers.
+
+Related help:
+
+  help divine
+  help patron
+  help omens
+  help shrine

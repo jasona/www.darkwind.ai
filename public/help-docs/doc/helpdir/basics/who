@@ -1,0 +1,31 @@
+
+|WKBSYNTAX
+======
+|YKBwho <argument|#>
+
+|WKBDESCRIPTION
+===========
+|YKBwho         |YKO- shows everyone on at that time.
+|YKBwho play    |YKO- shows all players on at that time.
+|YKBwho wiz     |YKO- shows all Wizards on at that time.
+|YKBwho level <#> |YKO- shows all players over that given level on at that time.
+|YKBwho ghost   |YKO- shows all ghosts on at that time.
+|YKBwho new     |YKO- shows all the newbies on at that time.
+|YKBwho legend  |YKO- shows all the Legends on at that time.
+|YKBwho hero    |YKO- shows all heroes on at that time.
+|YKBwho pk      |YKO- shows all registered player killers on at that time.
+|YKBwho male    |YKO- shows all the males on at that time.
+|YKBwho female  |YKO- shows all the females on at that time.
+|YKBwho neuter  |YKO- shows all the neuters on at that time.
+|YKBwho single  |YKO- shows all unmarried players on at that time.
+|YKBwho pavail  |YKO- shows all players available for a party at that time.
+|YKBwho <race>  |YKO- shows all members of <race> on at that time.
+|YKBwho <guild> |YKO- shows all the <guild> members on at that time.
+|YKBwho mitra   |YKO- shows all the devotees of Mitra on at that time.
+|YKBwho gaea    |YKO- shows all the devotees of Gaea on at that time.
+|YKBwho web     |YKO- shows the name and address of all players on who
+              have set their web page address.
+
+# is an optional argument to pause the listing length. Default is 15.
+Invisible players will show as "hidden", though this does not
+apply to the user running the command.

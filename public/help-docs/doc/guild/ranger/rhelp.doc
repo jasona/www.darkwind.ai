@@ -1,0 +1,35 @@
+                          RANGER'S GUILD HELP
+----------------------------------------------------------------------------
+COMMAND:             DESCRIPTION:
+--------             ------------
+ranhelp              Shows this screen. Do 'ranhelp <command/topic>' for
+                     further info on most things. You may use 'rh' in
+                     place of 'ranhelp'.
+rangers              Shows what Rangers are currently on.
+rangerbug <message>  Reports a bug about Rangers.
+ran <message>        Chats on the Ranger Guild line.
+eran <message>       Emotes on the Ranger Guild line.
+skills               Shows your current skills.
+bio                  Shows your personal Ranger bio.
+slots/slots #        Shows how many slots you have and available skills for
+                     you.
+recruit <name>       Recruits another player into the guild. They have to
+                     accept.
+rebuild quiver       If you have lost your quiver, you can get a new one
+                     with this command.
+repair quiver        Refreshes your quiver if you are having problems.
+motto <motto>        Declares your motto which is seen on the rangers screen.
+improve <what>       Advances stats and your level.
+cost                 Shows current costs for advancing.
+journal              Lists available quests.
+learn <skill>        Lets you learns a new skill.
+check <terrain>      Checks what skills are available to be learned or used
+		     in that terrain.
+
+
+ADDITIONAL TOPICS:   glevels terrains stats archery weapons armour
+                     emotes followers enemy alignment history skills
+
+TERRAINS:            forest plains swamp desert jungle city hills sea
+                     lake river road dock inside beach underground
+                     mountain arctic barren underwater

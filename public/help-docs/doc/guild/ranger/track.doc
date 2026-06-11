@@ -1,0 +1,25 @@
+
+Ranger Help for: track
+======================
+
+SYNTAX:      track <opponent>
+USAGE:       forest,plains,swamp,desert,jungle,hills,road,beach,
+             mountain,arctic,barren,outside,underground
+SLOT COST:   13
+BASE SP:     50 sp
+SKILL TYPE:  tracking
+
+SUMMARY:
+This skill allows a Ranger to track down opponents like dogs. A Ranger
+can set out to track an opponent in any terrain, but once the Ranger
+finds the tracks, they may only be intermitent..IE: tracks won't be left
+in water terrains. And just remember, because you find a set of
+tracks, it doesn't mean its your query. You must look over the tracks
+and determine if its your foe from what you know of him or her. Also,
+when following a set of tracks, depending how good you are and how clever
+your query is, the information you get from tracks might change from
+set to set. Don't mess around when tracking an opponent because the
+environments in the Domains of Darkwind are ever changing, so tracks
+only last for so long and the trail won't go on forever, so you must
+be quick on your feet in order to catch a query.
+

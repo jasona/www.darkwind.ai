@@ -1,0 +1,17 @@
+
+Ranger Help for: enemy lycanthrope
+==================================
+
+SUMMARY:
+Choosing lycanthrope means your Ranger has made enemies of shapeshifters:
+werewolves, werebeasts, cursed hunters, and other creatures caught between
+person and predator.
+
+This is a flavorful choice for forests, swamps, hills, and mountains. It
+is often narrower than choosing dog or mammal, but more specific.
+
+COMMAND:
+  setenemy lycanthrope
+
+=============================================================================
+SEE ALSO: enemy, setenemy and terrains

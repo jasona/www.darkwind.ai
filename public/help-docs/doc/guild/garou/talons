@@ -1,0 +1,16 @@
+|GKO================================================================
+                   |MKBTalons of the Eagle
+|GKO================================================================
+
+|YKOBy focusing on the spirit of the eagle, a Garou may gain the
+knowledge to sharpen his claws to a deadly razor sharp edge.
+By using the item at the Garou's disposal, he will inflict
+additional damage on any foe that attacks him.
+
+|WKOUsable in form: |GKOcrinos and wolf only
+|WKORestricted to:|RKB Warrior
+|RKOSyntax: |YKBtalons      |WKOCost: |CKOvaried
+
+|WKBNOTE: This ability shows in the 'buffs' command. It can be ended
+early with 'clearbuff'. Also, talons cannot be used in conjuction with
+the skill fangs.

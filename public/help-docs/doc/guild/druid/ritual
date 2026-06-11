@@ -1,0 +1,85 @@
+|GKB-- Rituals ----------------------------------------------------|000
+
+Druid rituals are prepared workings that shape your nwyfre before
+or between fights.  They may restore vessels, expand capacity, or
+improve regeneration for a time.  Later rites can also conserve
+nwyfre, convert one current into another, or bind short-lived
+companions and spirits.
+
+Some newer rites are long-running rituals.  These toggle on and off,
+stay with you while you travel, and react to movement or other future
+events instead of ending after a fixed timer.
+
+Learn rituals in the Druid Grove inside the guild hall:
+
+  |CKBlearn ritual <name>|000
+
+Use these commands to inspect them:
+
+  |CKBritual               |000 Show your current rite and active effects.
+  |CKBritual list          |000 List rituals you know.
+  |CKBritual stop <name>   |000 End a long-running ritual.
+  |CKBnwyfre rituals        |000 List rituals you know.
+  |CKBnwyfre learnable      |000 List rituals you can learn.
+  |CKBnwyfre ritual <name>  |000 Show requirements and effect.
+
+Ritual material costs come from the profession material stores shown
+by |CKBreagents|000.  Use |CKBreagents search <item>|000 to check an
+exact herb, creature reagent, skin, ore, bolt, or special shard.
+
+Perform a ritual with:
+
+  |CKBritual <name>|000
+
+Some rituals require an argument:
+
+  |CKBritual drawing of the tide tellurian|000
+  |CKBritual lunar draught marken|000
+  |CKBritual vessel expansion daloan|000
+
+Current-based rituals show the exact profession materials for each
+current in |CKBnwyfre ritual <name>|000.
+
+Conversion rituals require two currents:
+
+  |CKBritual tide exchange tellurian daloan|000
+  |CKBritual equinox channel daloan marken|000
+
+When all three moons are new, the lunar currents are all weak at once:
+
+  |CKBritual moonless drawing|000
+
+This rite uses common Daloan, Marken, and Tekali herbs to restore part
+of each lunar vessel without needing lunar nwyfre first.
+
+Some rituals may leave you with a companion or tool:
+
+  |CKBraven pact    |000 Adds |CKBraven scout|000 for nearby paths.
+  |CKBhearth spirit |000 Adds a quiet healing spirit for a short time.
+
+Long-running rituals remain active until you end them:
+
+  |CKBverdant refrain|000 Quietly hum and sing while traveling, sometimes
+                     gathering profession herbs and saved reagents in
+                     natural places.
+
+For the Druid menagerie and its companion-summoning rites, use
+|CKBdhelp companions|000.
+
+Conjunction rituals are rarer.  They only work when the sky agrees:
+
+  |CKBtwin-moon pact             |000 Needs two full moons at night.
+  |CKBtriple confluence calling  |000 Needs all three full moons and
+                                 an ancient Sacred Grove.
+
+Most prepared rituals require you to stand still until the rite
+completes.  Moving or entering combat breaks the pattern.  Long-running
+rituals are different: they are toggles, and their active effects
+simply pause when conditions are wrong.
+
+New druids should start with:
+
+  |CKBlearn ritual drawing of the tide|000
+  |CKBritual drawing of the tide marken|000
+
+Use |CKBdhelp beginner|000 for the full first-hour path.

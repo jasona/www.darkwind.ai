@@ -1,0 +1,33 @@
+                          |CKBChapter 6 - Food and Drink
+                      |BKB-----------------------------------
+
+     |WKBDarkwind has a player owned pub and inn system. You can purchase
+     food and alcohol at pubs and inns in any of the major cities.      
+     Food and Drink is created through a magical process which requires  
+     ash from corpses. It is all level based, so you need to check the    
+     level requirement listed in the menu at the pub or inn.              
+                                                                          
+     Food will heal you once by the amount listed in the menu. You can    
+     only eat a limited amount of food before becoming satiated. The      
+     amount that you can eat is determined by your level and the level    
+     for which the food is created.                                      
+                                                                       
+     Alcohol will heal you by the amount listed in the menu and also     
+     will make you intoxicated. When you are intoxicated you heal both    
+     hitpoints and spellpoints faster. As with food the amount you can     
+     drink before being too intoxicated is determined by your level and  
+     the level for which the alcohol was created.   
+                                                                        
+     If you notice an empty menu or your favorite food/alcohol is not
+     in stock then the inn/pub is out of ash. There are three types of
+     ash -- |RKBred, |BKBblue, |WKBand |WKOgrey|WKB. The color of ash is generally related
+     to the continent where it was obtained. Darkwind has grey ash, 
+     Kerei and Hyperborea have blue ash, and Souvrael, Underworld and
+     Talamh Darag have red.  Grey ash is used as the base for all meals 
+     and drinks. Blue ash is for high sp food/drink and red is for high 
+     hp. Ash is obtained by burning corpses with a corpse burner. Inns and 
+     pubs pay for ash, so this is a good way to make gold. If you do not 
+     have a corpse burner you can get one by pushing a button in any inn 
+     or pub except for the newbie inn. Look at the processor to see the 
+     payout for ash at that inn or pub. Look at the burner for instructions
+     on its use.

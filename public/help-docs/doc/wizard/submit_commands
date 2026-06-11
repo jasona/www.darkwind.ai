@@ -1,0 +1,57 @@
+
+Submission Command List
+
+Player Commands       Aliases
+----------------------------------
+  bug
+  typo
+  idea
+  editbug
+  edittypo
+  editidea
+  editemote
+  listbug
+  listtypo
+  listemote
+  listidea
+  listsubmitters      listsub
+  submitemote
+
+Builder Commands      Aliases
+----------------------------------
+  editsub             updatesub
+  listassgnments      listassm
+  listassigned        listass
+  listreview          listrev
+  listresponse        listresp
+  listtable
+  listclosedtable
+  lst
+  submit
+
+Balance Commands      Aliases
+----------------------------------
+  assignrev           arev
+  assignsub           asub
+  changesubarea
+  closerev
+  closesub
+  listhistory         listhist
+  listopenreviews     listopenrevs
+  listpendingreview
+  listpendingrev
+  listpendingresponse
+  listpendingresp
+  listtally
+  listunassigned      listunass
+  listreviews         listrevs
+  openrev
+  opensub
+  reassignsub
+  removesub
+  respond
+  response
+  reviewsub           revsub
+  responsdsub         respsub
+
+

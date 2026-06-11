@@ -1,0 +1,43 @@
++-------------------------------------------------------------------+
+                        Paladin Warhorses
++-------------------------------------------------------------------+
+
+Paladin warhorses are an important thematic part of your game play
+experience with the guild.
+
+Warhorse commands:
+
+  "horsename [name]" - Give your horse a name.
+
+  "horsedesc"        - Describe what people see when they look at
+                       your horse.
+
+  "mount/dismount"   - Mount and dismount your horse. This is
+                       important. See details below under hstatus
+
+  "hitch/unhitch"    - Hitch and unhitch your horse, if you want
+                       it to not follow you.
+
+  "dismiss"          - Send your horse away until you call it back
+                       later.
+
+  "autoassist"       - Enable your horse to attack your foes along
+                       side of you.
+
+  "reign"            - Reign in your horse's attacks, temporarily.
+    
+  "rear"             - A fun emote.
+  
+  "clamp"            - A fun emote.
+    
+  "hstatus"          - Get the details of your horse's level and
+                       basic stats.
+                       
+Your horse gains level, just like you do. However, your horse only 
+gains levels when you are mounted.
+
+The overall effectiveness of your horse is tied directly to it's 
+level. It's important to try to level your horse.
+                       
++-------------------------------------------------------------------+
++-------------------------------------------------------------------+

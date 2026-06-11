@@ -1,0 +1,16 @@
+
+Ranger Help for: enemy goat
+===========================
+
+SUMMARY:
+Choosing goat means your Ranger knows how to hunt goats, rams, ibex, and
+similar sure-footed horned animals.
+
+This is most thematic for mountains, hills, forests, plains, and jungles.
+It fits Rangers who know cliffs, ridges, and rocky grazing paths.
+
+COMMAND:
+  setenemy goat
+
+=============================================================================
+SEE ALSO: enemy, setenemy and terrains

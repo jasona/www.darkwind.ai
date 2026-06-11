@@ -1,0 +1,9 @@
+|YKOBasic Player conversation tools:
+|BKB-------------------------------------------------------------------------
+' <msg>                 say <msg>                 newbie <msg>
+shout <msg>             tell <player> <msg>
+
+|WKOExample: |YKBnewbie Hello |YKOwould display |MKB[Newbie] (Wizard) Dink: Hello|XX0
+
+|YK0See "|YKBhelp list communication|YK0"
+

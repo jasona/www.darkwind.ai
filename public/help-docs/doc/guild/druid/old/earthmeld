@@ -1,0 +1,15 @@
+Earth Meld
+
+With the aid of this ritual, a druid may become
+one with nature, sinking bodily into the earth and
+emerging in the Heart of Geshtai, an ancient druid
+sanctum.  From there, it is possible to meld through
+the earth to a variety of locations -- those who
+master the power have more to choose from.
+
+Command: earthmeld
+Base Cost: 65 SP
+Base Recovery: long
+Base Effect: travel (teleport)
+Base Duration: instant
+Guild Level: 21

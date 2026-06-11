@@ -1,0 +1,14 @@
+Wind Walk
+
+An experienced druid may use this spell to gain the
+protection of the spirits of wind and storm, allowing
+him to walk on the air as though it were solid.  At
+higher levels of mastery, the druid can impart this
+ability to others.
+
+Command: windwalk <target> (defaults to caster)
+Base Cost: 35 SP
+Base Recovery: very long
+Base Effect: travel (through sky)
+Base Duration: medium-long
+Guild Level: 15

@@ -1,0 +1,59 @@
+                                   Poison
+                                   ======
+
+Introduction
+------------
+Purpose of this document is to explain and document the ongoing additions
+of various poisons to the game.
+
+Definitions
+-----------
+Meal/Keg/Food/Alcohol Poisons - These are what will be referred to as 
+           Ingested poisons.  These poisons are a one-time damage, with
+	   no lingering effect.  They can and will kill the victim if 
+	   they are too low on health.
+
+
+Existing Methods of Delivery
+----------------------------
+Currently there are the following devices in the game to deliver Poisons:
+
+A dull grey jar  Can be purchased in the Thief Guild poison hall. Is 
+	 	 capable of delivering ingested poisons. One use per
+		 keg or meal, 3 uses for drinks or foods. Reverses
+		 healing effects of item.
+
+Regulations
+-----------
+Poisons are not to affect NPK players.  Ingested poisons have been written
+to support NPK checks, keeping them from ingesting the contaminated 
+substance at all, with no loss to uses.
+
+Code Support
+------------
+The code in the ingested poisons allow for future implementations of
+purification spells or abilities. The following call applies:
+
+void set_purified()
+
+When called on the contaminated item, it will be restored to original
+healing values.  
+
+*Note* Purification isn't to be easy.  The cost for ingested poisons
+are steep and making purification easy is very counter-productive
+to mud balance.
+
+You can query any ingested poison object with int query_poisoned() and it
+will return 1 if the item is contaminated, null if not.
+
+When actually poisoning an ingested substance, you can use set_poisoned()
+to throw the query_poisoned() flag and save old healing values which, as
+mentioned, can be restored via set_purified().  Actual modifying of the
+healing values of the ingested items are modified using:
+
+set_hp_heal(int arg) and set_sp_heal(int arg)
+
+Revision History
+----------------
+4/20/98 - Original document
+

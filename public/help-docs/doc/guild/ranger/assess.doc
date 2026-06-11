@@ -1,0 +1,18 @@
+
+Ranger Help for: assess
+=======================
+
+SYNTAX:      assess <opponent>
+USAGE:       Any terrain
+SLOT COST:   1
+BASE SP:     2*GLEVEL+5
+SKILL TYPE:  knowledge
+
+SUMMARY:    
+This allows a Ranger to assess his or her opponent up against themselves.
+It will match up your ratings against your opponent's and give you some
+idea of how hard it would be to kill. It also shows if your opponent
+is of your enemy race or not. 'Assess' does not take into account your
+primary and secondary terrains, in which in most cases you have an
+advanatage over your opponents.
+

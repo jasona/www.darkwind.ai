@@ -1,0 +1,34 @@
+|GKB-- Living Vines ----------------------------------------------|000
+
+|CKBCommand:|000 vines <mode|off>
+|CKBGuild Level:|000 3
+|CKBCurrent:|000 Tellurian
+
+Living Vines is a sustained combat invocation.  Once invoked, the
+vines coil around your steps and become part of your combat rhythm.
+During combat rounds they may lash the target you are attacking.  When
+you are struck, they may also twist defensively around the attacker,
+fouling footing or punishing the blow.
+
+Use:
+
+  |CKBvines|000              Show current mode and unlocked modes.
+  |CKBvines lash|000         Basic striking vines.
+  |CKBvines venom|000        Toxic sap and poison-tinged lashes.
+  |CKBvines barbs|000        Stronger thorned retaliation.
+  |CKBvines snare|000        Entangling roots that hinder movement.
+  |CKBvines off|000          Dismiss the vines.
+
+Lash is available when you first learn the invocation.  Venom, barbs,
+and snare unlock as your training and guild level grow.  Mastery makes
+the vines more efficient and more likely to answer during combat.
+
+Mode unlocks:
+
+  |CKBlash|000     When you learn Living Vines.
+  |CKBvenom|000    Training 2, or Druid guild level 8.
+  |CKBbarbs|000    Training 3, or Druid guild level 14.
+  |CKBsnare|000    Training 4, or Druid guild level 20.
+
+Living Vines spends Tellurian nwyfre when it lashes.  If your Tellurian
+current runs dry, the vines will sink back into the earth.

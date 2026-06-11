@@ -1,0 +1,12 @@
+                       |BKB-= |CKBEnter Message |BKB=-
+               
+|MKOEmess is the command used to change your entrance message that
+only thieves will see when you log into Darkwind. Emess followed
+by no value will reset your entrance message to the standard
+message. Emess <message> will set your entrance message correctly.
+Placing a $N in the message will put your name into the entrance
+message, just as it does when setting your title when you advance
+a level.
+
+|CKOGLVL required: |GKB1
+|CKOSyntax: |YKOemess <message>                |CKOCost: |WKOFree

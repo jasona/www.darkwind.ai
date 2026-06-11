@@ -1,0 +1,11 @@
+|GKB-- Wind Walk -------------------------------------------------|000
+
+Current: |CKBTekali|000
+Command: |CKBwindwalk <target>|000
+Guild Level: 15
+
+Wind Walk firms the air under the target's feet, granting temporary
+travel and positioning utility.  It defaults to the caster.
+
+At higher mastery, the druid can carry another person on the wind and
+extend the duration.

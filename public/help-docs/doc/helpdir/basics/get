@@ -1,0 +1,18 @@
+
+|WKBSyntax: |YKBget <object> [from <object>]
+        |YKBget all <object> [from <object>]
+ 
+|WKBDESCRIPTION
+|WKO===========
+ 
+|YKOGet an item.  You can also |YKB"get all"|YKO.  If the thing you want is in something
+else, type |YKB"get <object> from <object>" |YKOsuch as "get knife from bag".
+Similarly if you're getting something from a corpse.  You would type
+something like "get coins from corpse" or "get knife from corpse".
+
+The second method allows you to get all of one specific object instead
+of everything.  You do do things such as|CKB:
+
+   get all sword OR get all sword from bag.
+ 
+|WKBSee also: |YKBdrop, put, give

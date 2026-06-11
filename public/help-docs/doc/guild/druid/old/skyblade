@@ -1,0 +1,25 @@
+Sky Blade
+
+Calling on the power of Gaea, the druid forges
+a piece of the sky into a scythelike weapon.
+This weapon is weightless and in addition, can
+be commanded at the time of its creation to deal
+different types of damage.  Depending on the
+Druid's mastery level and alignment, these
+may include:
+
+magic - pure magical damage
+fire - flame damage (good only)
+holy - holy damage through Gaea's light side (good only)
+unholy - unholy damage through Gaea's dark side (evil only)
+cold - cold damage (evil only)
+void - damage from the night
+lightning - damage from the storm
+rain - damage from immersion
+
+Command: skyblade <type> (defaults to magic)
+Base Cost: 60 SP
+Base Recovery: medium-long
+Base Effect: create items (weapon)
+Base Duration: long
+Guild Level: 9

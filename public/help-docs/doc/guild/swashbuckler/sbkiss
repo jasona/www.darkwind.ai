@@ -1,0 +1,10 @@
+Kiss of True Love - healing skill
+------------------------------------------------------------
+Passion is in the nature of a swashbuckler, and his kiss
+will revitalize both the recipient and himself.  Each will
+be healed a small amount.
+
+GL:  2
+SP: 30
+command:  sbkiss <who>
+duration: instant

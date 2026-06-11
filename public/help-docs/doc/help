@@ -1,0 +1,31 @@
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+This is DarkWind's basic help screen. Listed below are help files for some
+of the most commonly asked questions. You can get a full list by doing
+'help topics' or specific information by doing 'help <topic>'.
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+[ New Players: Please type 'help new' to get you started. ]
+
+Player conversations:
+-------------------------------------------------------------------------
+' <msg>			converse		say <msg>
+shout <msg>		tell <player> <msg>	whisper <player> <message>
+csay <msg>		rsay <msg>
+ 
+Personal/MUD Information:
+-------------------------------------------------------------------------
+chr			con		describe		dex
+finger			help		i/inv (inventory)	int
+money			sc		score			str
+users			who		wis
+ 
+Attacking players/npc's:
+-------------------------------------------------------------------------
+kill <target>		mon		spell
+stop <hunted name>	xa		pk
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+For a list of general commands, type 'commands' or 'help commands'
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+format for help is: 'help topics' or 'help <topic>'
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=

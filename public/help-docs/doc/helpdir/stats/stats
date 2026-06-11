@@ -1,0 +1,14 @@
+|WKBSTATISTICS
+
+|YKOA player's statistics (or "stats") are measures of advanced a player is in
+certain aspects of his development. There are currently six stats that you
+can raise on Darkwind. They are:
+
+          |CKBstrength, constitution, dexterity,
+          intelligence, wisdom, and charisma.
+
+|YKOFor help on a specific stat, type "help <stat_abbrev>" at the prompt,
+where <stat_abbrev> is the three-letter abbreviation for the statistic
+you want to see the information of.
+
+|WKBeg.  |YKBhelp str    |YKO(for strength)

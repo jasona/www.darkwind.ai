@@ -1,0 +1,14 @@
+Ranger Help for: camps
+======================
+
+SYNTAX:      camps
+USAGE:       Anywhere.
+
+SUMMARY:
+List all registered Ranger camps. Shows the name of each Ranger
+who has a camp and the location where it's set up.
+
+Use 'trailblaze to camp <name>' to visit another Ranger's camp.
+
+=============================================================================
+SEE ALSO: camp, trailblaze, rest

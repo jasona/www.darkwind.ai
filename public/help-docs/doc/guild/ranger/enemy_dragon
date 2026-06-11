@@ -1,0 +1,16 @@
+
+Ranger Help for: enemy dragon
+=============================
+
+SUMMARY:
+Choosing dragon means your Ranger has sworn against dragons and dragonkin:
+scaled monsters, wyrms, drakes, and other ancient reptilian terrors.
+
+This is a dramatic, high-risk identity choice. Dragons are not everywhere,
+but when they appear they are often dangerous and memorable.
+
+COMMAND:
+  setenemy dragon
+
+=============================================================================
+SEE ALSO: enemy, setenemy and terrains

@@ -1,0 +1,48 @@
+|WKBClan: Commands
+|WKO--------------
+
+|YKOAvailable to the entire MUD:
+|YKBcwar <#>          |BKB-- |GKBLook at information from wars that have already ended.
+|YKBcwar list            |GKBThe information accessed via this command is deleted
+                     over time. Older wars vanish after awhile, etc.
+|YKBclans             |BKB-- |GKBList the available clans on Darkwind.
+|YKBclaninfo <clan>   |BKB-- |GKBRead information about a particular clan.
+|YKBwho <clan>        |BKB-- |GKBSee who is logged on from a particular clan.
+|YKBwclan             |BKB-- |GKBShow all clan members logged on, sorted by clan reputation.
+|YKBwclan leader      |BKB-- |GKBShow all clan leaders logged on, sorted by clan reputation.
+
+
+|YKOAvailable to anyone in a clan:
+|YKBcl/ecl <msg>      |BKB-- |GKBTalk/emote on your clan channel.
+|YKBclhist            |BKB-- |GKBDisplay clan channel history.
+|YKBclwho             |BKB-- |GKBSee who is logged in from your clan.
+|YKBcstat             |BKB-- |GKBSee statistics about your clan.
+|YKBclleave           |BKB-- |GKBLeave your clan.
+|YKBclemote           |BKB-- |GKBClan emote. Works on channels like normal emotes.
+                     Leaders can talk to James to have the emote customized 
+                     for their clan.
+|YKBcvote             |BKB-- |GKBVote on outstanding clan issue (listed in cstat).
+|YKBcheckclan         |BKB-- |GKBCheck if you have unread message on your clan board.
+
+
+|YKOAvailable to clan members while in the Clan Operations Room:
+|YKBcdeposit <coins>  |BKB-- |GKBDeposit money into clan coffers.
+|YKBcwithdraw <coins> |BKB-- |GKBWithdraw money from clan coffers.
+|YKBcbalance          |BKB-- |GKBShow the number of coins currently in the coffers.
+
+
+|YKOAvailable to clan leaders:
+|YKBleadercmds        |BKB-- |GKBList all your leader-only commands.
+|YKBcinitiate         |BKB-- |GKBAdd someone to your clan.
+|YKBcdismiss          |BKB-- |GKBDismiss someone from your clan.
+|YKBcdeclare          |BKB-- |GKBAsk a clan leader if he/she wants to start a war.
+|YKBchangedesc       |BKB -- |GKBChange description of a room in clan headquarters.
+                     Can only be used while in one of the rooms.
+|YKBcdescribe         |BKB-- |GKBChange the information shown in 'claninfo'
+|YKBcaddissue         |BKB-- |GKBAdd issue for members to vote on.
+|YKBcdelissue         |BKB-- |GKBRemove outstanding issue, preventing additional votes.
+|YKBctithe            |BKB-- |GKBSet your clan automatic tithe amount.
+
+|YKOPlease see |YKB"help clans" |YKOfor a basic overview.
+|YKOPlease see |YKB"help clans basics" |YKOfor a more detailed intro to clans.
+|YKOPlease see |YKB"help clans war" |YKOfor warfare information.

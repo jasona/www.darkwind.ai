@@ -1,0 +1,12 @@
+Skulk - utility skill
+------------------------------------------------------------
+Swashbucklers of the more roguish sort often have reasons
+for wanting to leave--or enter--a room unnoticed.  This
+ability allows them to do just that.  If you wish to move
+silently further than one room, you must use skulk each
+time.
+
+GL:  1
+SP: 10
+command:  skulk <direction>
+duration: instant

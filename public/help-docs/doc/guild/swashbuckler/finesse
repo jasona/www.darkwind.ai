@@ -1,0 +1,23 @@
+|MKB                       @}--- Finesse ---{@                 |XX0
+
+Finesse is a measure of a Swashbuckler's combative abilities. As
+a Swashbuckler becomes more skilled, they will learn to fight with
+more finesse. Different fighting styles will require more or less
+finesse depending on their difficulty. More about these finesse
+requirements can be found in sbhelp '|YKBstyles|XX0'.
+
+A Swashbuckler starts with 1 point of finesse and gains one 
+additional point of finesse per guild level. They can then run up
+to or equal to that finesse in different styles. Here are some
+examples:
+
+    Bodach is a guild level 9 Swashbuckler. He could run:
+        '|YKBcstrike|XX0', '|YKBcalledshot|XX0' and '|YKBslash|XX0'             OR
+        '|YKBriposte|XX0', '|YKBcalledshot|XX0', '|YKBospin|XX0' and '|YKBparry|XX0'    OR
+        '|YKBriposte|XX0', '|YKBospin|XX0', '|YKBsdodge|XX0', and '|YKBslash|XX0'       ...
+
+    Cowman is a guild level 15 Swashbuckler. He could run:
+        '|YKBsdance|XX0', and '|YKBimpale|XX0'                          OR
+        '|YKBtblades|XX0', '|YKBflourish|XX0' and '|YKBflurry|XX0'              OR
+        '|YKBsdance|XX0', '|YKBsdodge|XX0', and '|YKBparry|XX0'                 ...
+

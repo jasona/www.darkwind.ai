@@ -1,0 +1,9 @@
+/doc/attribute/detect_alignment
+
+Format: (Living_Object)->set_attribute("detect_alignment", tValue);
+
+Description:
+  Detect alignment will allow the Living_Object to see the
+  alignment of other living objects. It attachs to the
+  short() of the object, so it's seen at a glance. tValue
+  simply turns it on with 1, off with 0.

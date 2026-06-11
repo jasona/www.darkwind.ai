@@ -1,0 +1,16 @@
+
+Ranger Help for: move
+=====================
+
+SYNTAX:      move silently/move normally
+USAGE:       forest,plains,swamp,desert,jungle,hills,road,inside,
+             beach,underground,mountain,arctic,barren,outside
+SLOT COST:   6
+BASE SP:     20 sp/5 sp per move
+SKILL TYPE:  defensive
+
+SUMMARY:    
+In certain terrains, once a Ranger has learned this skill, he or she
+can move through the area silently. Other players can see you, but
+they can't hear you enter or leave via normal exits.
+

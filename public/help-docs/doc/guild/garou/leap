@@ -1,0 +1,11 @@
+|GKO================================================================
+                             |CKOLeap
+|GKO================================================================
+
+|YKOLeap allows a Garou to jump onto a surprised opponent
+and get a free attack. It must either be used from an
+adjacent room, or by a blended wolf. Success is not
+guaranteed.
+
+|WKOSyntax: |YKBleap at <target> |WKOor |YKBleap <dir> at <target>
+|WKOCost: |CKO25 sps

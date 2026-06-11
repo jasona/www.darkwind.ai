@@ -1,0 +1,18 @@
+Ranger Help for: essence of the land
+======================================
+
+SYNTAX:      essence
+USAGE:       forest,plains,swamp,desert,jungle,hills,road,beach,
+             mountain,arctic,barren,outside
+SLOT COST:   7
+BASE SP:     variable
+SKILL TYPE:  religious
+
+SUMMARY:
+This skill allows a Ranger to draw power from the surrounding terrain,
+granting temporary stat buffs that vary depending on the type of land.
+A forest might grant agility, while mountains might grant endurance.
+The strength and duration of the buffs depend on the Ranger's wisdom,
+guild level, and familiarity with the terrain. This skill works best
+in the Ranger's primary terrain and cannot be used in cities or
+indoor areas.

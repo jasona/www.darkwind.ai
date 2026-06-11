@@ -1,0 +1,61 @@
+
+  Lunar Magi are the mages with the widest array of knowledge available
+  to them.  They draw their power from the Moons, each moon has a 
+  differant effect and each moon will give the caster certain spells 
+  for them to cast.  For more info about the Moons and their powers,
+  <lmhelp moons>.  
+
+   Lunar Magi must remain disciplined at all times.  If a Lunar Mage
+   should become chaotic, that Mage will lose all ability to cast
+   spells.  As you may realize, it is to your advantage to have spells
+   available to you.  Remember to maintain a positive ethics score.
+   If you would like to know whether you are lawful or not, type <statme>.
+   
+   Lunar Magi have a wide variety of spells that they may draw upon,
+   each one having a disctinct flavor and power.  For a quick list
+   of spells and the Guild Level (gl) needed to cast them, see
+   <lmhelp spells>.  For a full description, type <lmhelp> followed
+   by the spell's name.  To report a spell idea to Duuktsaryth, use
+   <lmspell> plus the idea.  However, only ideas that are in theme
+   will be added.
+
+   Lunar Magi have several unique emotions to represent the effects
+   of having a reputation as a lesser magical guild.  For a full
+   list of emotions, enter <lmhelp emotes>.  To contribute an idea
+   to Duuktsaryth, enter <lmemote> followed by the emote.
+
+   Spells fail.  Even the greatest of Mages can get unlucky.
+   One of the unique aspects of this guild is spell failure.
+   Once a spell fails, you will recieve a report of exactly
+   what effect, if any, your spell has had.  To report
+   an idea for a new failure message, please use <lmfail> 
+   plus the idea.
+
+   Communicating with fellow guild members is a very easy process.
+   To say something to all Lunar Magi, type <lm> plus a message.
+   To emote over that line, use <elm> plus a message.
+   Example:  <lm Hi!>
+    [Lunar] Duuktsaryth: Hi!
+             <elm says Hi!>
+    [Lunar] Duuktsaryth says Hi!
+
+   Also, in order to help you to know who your compatriots are
+   in the world, at any time you may type <lms> for a list of all
+   Lunar Magi active in the world.  This will display their names,
+   levels, guild level, and motto.
+
+   In addition, upon reachin Guild Level 15 (Master Status), you
+   will gain access to the Guild Master chat line.  This line
+   can be used in th esame manner, except using the commands
+   <hilm> and <ehilm>.
+
+   The final command you must be aware of it <lmbug>.  This command
+   will report to Duuktsaryth any erros you may find in the Guild.
+   Please make use of this command if you feel that there is a 
+   problem withe the guild code.  Remember that not all bugs produce
+   a 'sensitive mind' message, they may just be a typo that Duuk 
+   overlooked.  
+  
+   Enjoy your Guild.
+
+   15-December-1995 					Duuktsaryth

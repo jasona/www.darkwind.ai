@@ -1,0 +1,94 @@
+BARD COMMAND LADDER
+
+Use help <command> for exact syntax. Use bcmds for a live list based on your
+current guild level.
+
+Probationer - guild level 1
+
+  bard             Guild chat line.
+  bemotes          List Bard emotes.
+  bmon             Toggle the Bard performance monitor.
+  bpatterns        Show hidden harmonies and pivots you have discovered.
+  bscore           Show Bard stats and Performance.
+  fix lute         Retune and restore your Bardic lute anywhere.
+  instrument       Select an alternate Bard instrument.
+  legend           Read information about items.
+  lore             Rate a monster relative to yourself.
+  play lute        Play a single note for others nearby.
+  pulsebeat        Start a Rhythm song field for nearby allies.
+
+Fochlucan - guild level 2
+
+  emberaria        Start a Melody song field around you.
+  silververse      Start a Melody song field that mends allies.
+  playdead         Trick people into thinking you are a corpse.
+  scroll           Create a scroll.
+
+Rhymer - guild level 3
+
+  echochord        Start a Harmony song field around you.
+  perform          People toss coins into your hat.
+
+MacFuirmidh - guild level 4
+
+  dirgeash         Start a Dissonance song that unsettles enemies.
+  drunk            You heal faster when drunk.
+  Sing             Attract a follower to help you.
+
+Doss - guild level 5
+
+  defame           Spread nasty rumours about people.
+  fame             Give someone a good reputation.
+
+Lyrist - guild level 6
+
+  ashlullaby       Start a Dissonance song that mesmerizes enemies.
+  soothe           Melody song that calms combat in a room.
+
+Canaith - guild level 7
+
+  hero             Harmony role song for heroic combat.
+  lite             Cast a spell to create a light.
+  villain          Dissonance role song for villainous combat.
+
+Troubador - guild level 8
+
+  act              Pretend to be someone else.
+  brestore         Undo the effects of a defaming.
+  mirrorrefrain    Chimes song that disrupts enemy timing.
+  whispercanticle  Flute song that clouds enemy focus.
+
+Sonateer - guild level 9
+
+  compose          Write songs for the fiddler to play.
+
+Cli - guild level 10
+
+  :                Bard emoter.
+  apexchord        Crescendo song for high Performance.
+  echoburst        Finale that bursts active song fields.
+  specialize       Choose or view your Bard archetype.
+  vent             Ventriloquism.
+
+Anstruth - guild level 11
+
+  muse             Harmony song field that inspires allies.
+
+Muse - guild level 12
+
+  battlefieldsilence  Finale that disrupts nearby enemies.
+  brew             Make your own white lightning.
+  study            Read a target's bardic emotional resonance.
+
+Racaraide - guild level 13
+
+  otto             Dissonance song that forces a target to dance.
+
+Ollamh - guild level 14
+
+  rally            Harmony song that lends courage to allies.
+  ssing            Create a singing sword.
+
+Magna Alumnae - guild level 15
+
+  Wail             Finale that releases a banshee wail.

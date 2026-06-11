@@ -1,0 +1,65 @@
+BARD ARCHETYPES
+
+At guild level 10, Bards can choose a performance archetype:
+
+  specialize
+  specialize <archetype>
+
+Your first choice is free. Changing archetypes later costs coin, because it
+requires relearning how you structure a performance.
+
+Archetypes change the feel and mechanics of Bard songs and older Bard skills.
+They can affect Performance gains, song-field strength, field duration with
+favored instruments, hidden harmony resonance, role songs, social reputation
+work, control songs, Finales, and the flavor of your performances.
+
+Current archetypes:
+
+  War Conductor
+    Tactical battle support. Rhythm and Harmony gain more momentum and stronger
+    fields, especially with drums, horn, or war harp. Certain hidden harmonies
+    resolve with a sharper command of formation and tempo. Rally, Hero,
+    follower songs, and other support moments benefit from this style.
+
+  Shadow Minstrel
+    Control, misdirection, and emotional pressure. Melody and Dissonance gain
+    more momentum and stronger morale pressure, especially with flute, chimes,
+    or violin. Some hidden harmonies gain shadowed, misleading resolutions.
+    Soothe, Otto, Defame, and other control or social tricks benefit from this
+    style.
+
+  Skald
+    Aggressive combat performance. Rhythm and Crescendo hit harder, especially
+    with drums, horn, or war harp. Active song fields can add skaldic sound
+    damage in combat, and some hidden harmonies become battle cries. Wail,
+    singing weapons, follower songs, and direct pressure benefit from this
+    style.
+
+  Virtuoso
+    Mastery through precision. Your song-chain memory extends, allowing longer
+    hidden chains. Complex chains and favored instruments such as concert lute,
+    violin, and chimes improve field power and momentum. Study, lore, craft,
+    and precision-based command moments benefit from this style.
+
+  Doom Singer
+    Dissonance, dread, and morale warfare. Dissonance and Finale performances
+    gain more pressure, especially with violin, war harp, or chimes. Certain
+    hidden harmonies resolve into colder and more terrible patterns. Wail,
+    Villain, Battlefield Silence, and enemy morale pressure benefit from this
+    style.
+
+Use bscore to see your current archetype.
+
+Choosing an archetype is a playstyle decision:
+
+  Pick War Conductor if you like directing a party.
+  Pick Shadow Minstrel if you like control and misdirection.
+  Pick Skald if you want aggressive combat music.
+  Pick Virtuoso if you want precision and complex chains.
+  Pick Doom Singer if you want dread, pressure, and Finales.
+
+Recommended next topics:
+
+  bardhelp instruments
+  bardhelp songs
+  bardhelp combat

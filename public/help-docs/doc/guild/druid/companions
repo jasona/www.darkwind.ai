@@ -1,0 +1,47 @@
+|GKB-- Druid Companions ------------------------------------------|000
+
+Druids can keep a living menagerie.  Each companion unlocks at a
+different guild level, can be summoned beside the others, and grows
+stronger as it fights with you.
+
+|CKBcompanions|000
+  Show every companion, its role, current, nwyfre cost, level, XP to
+  next level, and status.
+
+|CKBcompanions summon <animal>|000
+  Call one unlocked companion.  The call consumes that companion's
+  required nwyfre current and profession materials, then completes
+  after a short preparation timer.  Moving or entering combat breaks
+  the pattern.
+
+|CKBcompanions dismiss <animal>|000
+  Release one active companion back to the wild.
+
+|CKBcompanions dismiss all|000
+  Release the whole menagerie.
+
+|CKBcompanions name <animal> <name>|000
+|CKBcompanions rename <animal> <name>|000
+  Give one unlocked companion a personal name.  Names must be 3 to
+  11 letters, and can be used in companion commands.
+
+|CKBcompanions unname <animal>|000
+  Clear a companion's personal name.
+
+Unlocked companions:
+
+  |CKBJaguar   |000 guild  5   stalker
+  |CKBWolf     |000 guild  9   hunter
+  |CKBBoar     |000 guild 13   breaker
+  |CKBStag     |000 guild 17   warden
+  |CKBBear     |000 guild 21   guardian
+  |CKBLion     |000 guild 25   apex
+
+Companions gain experience from battle participation and auto-level
+from their saved XP.  A companion that dies is wounded, not erased.
+It keeps its XP and level, but must recover before it can answer
+your call again.
+
+Each companion answers a different current and material pattern.
+Use |CKBcompanions|000 to see your adjusted nwyfre costs and exact
+profession material requirements.

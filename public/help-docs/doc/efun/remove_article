@@ -1,0 +1,9 @@
+SYNOPSIS
+        string remove_article(string sItem)
+
+DESCRIPTION
+        Returns the string sItem without "a " "an " or "the " if
+        found at the beginning of the string.
+
+SEE ALSO
+        article(E)

@@ -1,0 +1,14 @@
+Ranger Help for: motto
+======================
+
+SYNTAX:      motto <your motto>
+USAGE:       Anywhere.
+
+SUMMARY:
+Set your personal motto, which appears on the 'rangers' list next
+to your name. Keep it short (max 60 characters).
+
+Also accessible as 'declare'.
+
+=============================================================================
+SEE ALSO: bio, rangers

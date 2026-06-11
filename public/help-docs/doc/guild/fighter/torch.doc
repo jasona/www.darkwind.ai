@@ -1,0 +1,8 @@
+Skill: make torch  Timer: Support      GL:  2    Cost: VARIES
+
+This skill lets you try to make a torch from nearby materials. The torch lasts
+a long time.
+
+Type "destroy torch" to get rid of it, or just throw it away.
+
+Syntax is: make torch

@@ -1,0 +1,20 @@
+|GKB-- Sky Blade -------------------------------------------------|000
+
+Current: |CKBTekali|000
+Command: |CKBskyblade <type>|000
+Guild Level: 9
+
+Sky Blade shapes a temporary scythe-like weapon from the sky.  Its
+weapon class and duration follow the same scale as a cleric's spiritual
+hammer.  The default type is magic.  Other types become available
+through alignment and mastery.
+
+Mastery expands the available damage forms.
+
+At Druid guild level 10, |CKBTwin Sky Blades|000 lets you shape two Sky
+Blades at once:
+
+  |CKBtwinskyblades <type>|000
+
+It costs the same Tekali nwyfre as casting Sky Blade twice, but avoids
+waiting through the cooldown between the two invocations.

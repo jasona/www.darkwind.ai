@@ -1,0 +1,15 @@
+_______________________________________________________________________________
+"Animate Weapon"   
+        This allows a psionicist to cause a weapon to pick itself up and
+        wield itself in battle!  One of the most useful combat spells in
+        the guild. It has a duration and hit points of the weapon dependent
+        on the psionicist's guild level.  The psionicist must stay in the
+        same room but may perform other powers, attack the monster
+        himself, or whatever.  Another great advantage of this power is
+        that it is not subject to weapon restrictions.  A weapon not
+        normally usable by the guild MAY be animated.  If the animated 
+	weapon "dies", it will be permanently broken.
+ 
+SP Cost:  1 per second	Guild Level:  11	Potential Points:  3
+ 
+Command:  animate <object (must be weapon)>

@@ -1,0 +1,50 @@
+Area Code Review Checklist
+==============================
+
+Structure
+---------
+__ Files are divided into directories by type (rooms, monsters etc).
+__ Area directory does not contain unused files.
+__ Area is portable by changing a header.
+__ Variables are as localized as possible.
+
+Naming
+------
+__ File names are meaningful to a casual viewer.
+__ Variables use Hungarian notation.
+__ Variables have useful mnemonics.
+__ Function names have useful mnemonics.
+__ Aliases intended for internal use (not used by players) must
+   begin with double underscores, and the coder name. (e.g. __bob_key).
+   These aliases are unique to the application.
+
+Code Format
+-----------
+__ Indentation should is clear and consistent.
+__ Code is not crowded (adequate spacing, blank lines etc.)
+__ Code is not sparse (not too many blank lines)
+__ Code is blocked where possible to collect similar instructions.
+__ Difficult/complex/obscure code is commented.
+__ Lines of code should 80 characters wide or less where possible.
+
+Object Creation Standard
+------------------------
+__ All objects use current standards for settings.
+__ Deprecated calls are not used.
+__ replace_program() is NOT used. (new standard)
+
+Code Correctness and Efficiency
+-------------------------------
+__ All objects load.
+__ Sanity checks and fail outs are appropriately placed.
+__ All active code serves a purpose.
+__ Code is efficient as possible, without being unreadable.
+__ is_clone() checks are used wherever possible.
+__ Code performs the tasks intended by designer.
+__ All function redefinitions use all formal parameters.
+__ All non-void functions return a value.
+__ Under no circumstances will a sensitive mind error occur.
+
+------
+Version 1.1: Bob - March 02, 2004
+Version 1:   Bob - June 09, 2003

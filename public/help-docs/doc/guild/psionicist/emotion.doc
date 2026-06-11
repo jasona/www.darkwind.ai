@@ -1,0 +1,13 @@
+_______________________________________________________________________________
+"Emotion Control"  
+        This allows the psionicist to telepathically alter the emotions
+        of creatures.  For a short time, it will make a peaceful monster
+        aggressive, or an aggressive monster peaceful.  The monster's
+        original attitude then returns.  Note that this is a GENERAL
+        attitude change.  If the monster is already fighting someone, it
+        won't stop fighting that particular character.  This is an
+        unusual power that has many creative uses.  
+ 
+SP Cost:  15		Guild Level:  10	Potential Points:  3
+ 
+Command:  emotion <target>

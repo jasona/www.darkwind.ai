@@ -1,0 +1,6 @@
+SPELL NAME  : Holy Word
+SPELL SYNTAX: Word <target>
+SPELL COST  : 150 SP
+DESCRIPTION : This spell allows the caster to 'turn' any monster of
+              opposite alignment of the caster.
+

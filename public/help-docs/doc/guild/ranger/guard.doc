@@ -1,0 +1,16 @@
+
+Ranger Help for: guard
+======================
+
+SYNTAX:      guard/unguard
+USAGE:       Any terrain
+SLOT COST:   NA
+BASE EXP:    NA
+BASE SP:     variable
+
+SUMMARY:    
+This task teaches a follower to be your 'watchdog'. Once you command 
+your follower to be on guard, it will attack anyone that enters the room!
+Use this task with care. To make your follower be off guard, just type
+unguard. This is an easy task, so any follower can learn it.
+

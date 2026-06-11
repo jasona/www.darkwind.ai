@@ -1,0 +1,23 @@
+|WKBNAME|000
+    set_shield
+
+|WKBSYNOPSIS|000
+    |YK0void|000 |CKBset_shield|000(|YK0int|000 |GKBiAmount|000)
+    |YK0void|000 |CKBset_shield|000(|YK0int|000 |GKBiAmount|000, |YK0int|000 |GKBiType|000)
+
+|WKBDESCRIPTION|000
+    Set a living creature/player's shield for damage
+
+    |GKBiAmount|000 is the amount of damage the shield will
+    absorb or block [Required]
+
+    |GKBiType|000 is an optional parameter (|YK0damage type|000) specifying the type of
+    damage the shield will block/absorb.  If not specified, this is
+    set the generic shield. May be useful to check <types.h>
+
+
+    |CKBset_shield|000() is defined in /secure/living.c
+
+|WKBSEE ALSO|000
+    |CKBadd_shield|000(L), |CKBquery_shield|000(L), |CKBremove_shield|000(L)
+

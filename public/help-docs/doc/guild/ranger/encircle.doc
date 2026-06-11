@@ -1,0 +1,20 @@
+
+Ranger Help for: encircle
+=========================
+
+SYNTAX:      encircle <target>
+USAGE:       forest,plains,swamp,desert,jungle,hills,road,beach,
+             underground,mountain,arctic,barren,outside
+SLOT COST:   4
+BASE SP:     30 sp
+SKILL TYPE:  attack
+
+SUMMARY:
+This skill allows a Ranger to use his or her superior knowledge of the
+outdoors to gain an advantage against an opponent by circling around
+it. While circling, if you use an attack type skill when BEHIND an
+opponent, you do additional damage, since the opponent can't defend
+itself from behind. But, some other skills such as firing your ranger's
+bow won't work, since your moving around and never have the time to
+stop and aim your bow.
+

@@ -1,0 +1,17 @@
+Evaluate Weapon - information skill
+------------------------------------------------------------
+Swashbucklers are well trained in the lore of weapons,
+including those weapons which they themselves choose not to
+use, such as polearms. They may call upon this knowledge in
+order to evaluate a weapon. Aside from anaccurate evaluation
+of the weapon's strength, some additional information may be
+gleaned, such as whether the weapon is unique, whether it
+causes a special effect when it strikes, and so on. It will
+not, however, determine hidden information about a weapon in
+the manner an identify spell would; it is still a non-
+magical skill, no matter how accurate.
+
+GL:  1
+SP:  5
+command:  sevaluate <weapon>
+duration: instant

@@ -1,0 +1,295 @@
+***************************************************************************
+                              Making Weapons
+***************************************************************************
+Note: All literal code in this help document is separated by a bunch of =
+signs. The = signs are NOT part of the code. For example:
+
+====================
+#include <mudlib.h>
+#include <types.h>
+#include <material.h>
+====================
+
+refers to the three include lines, literally.
+
+
+***************************************************************************
+                              Basic Weapons
+***************************************************************************
+A basic acceptable weapon inherits WEAPON and sets a few parameters.
+Your weapon file MUST have the following lines of code at the top:
+
+====================
+#include <mudlib.h>
+#include <types.h>
+#include <material.h>
+inherit WEAPON;
+====================
+
+If you want to put in comments before these lines, that's fine, but
+these MUST precede any active code in the file.
+
+Your weapon MUST haved a reset function, with appropriate checks for
+clones. That is, it must have the code:
+
+====================
+void reset(int iArg) {
+    if (!is_clone(this_object())) return;
+    ::reset(iArg);
+    if (iArg) return;
+====================
+
+Even a basic weapon has to have a few settings to make it interesting.
+You should have the following settings for your weapon:
+
+set_short("short");
+        Replace "short" with the quoted short description of your weapon.
+        The short description is the one a player sees when an object
+        is just lying on the ground, in a shop, in someone's inventory etc.
+
+set_long("long.\n");
+        Replace "long" with the quoted long description of your weapon.
+        The long description is the one a player sees when he actually
+        does a 'look' or 'examine' on an object. Remember to add both a
+        period and a newline (\n) at the end of your description since
+        LPC won't do that for you.
+
+set_name("name");
+        Replace "name" with the quoted name of your weapon. This name
+        should be the main name by which your weapon is called, since it
+        may show up on occasion in spam to players. It should never be
+        a secret id key used to uniquely identify it for coding purposes.
+        For example, "bobs_magic_sword_key" is a terrible name for a
+        weapon. It is often a good idea to use the short description of
+        the weapon as its name as well, but always use all lowercase
+        letters and no articles. (e.g. "silver longsword" is good, but
+        "a silver longsword" or "Silver Longsword" are bad).
+
+set_alias("alias");
+        Replace "alias" with the quoted alias of your weapon. This alias
+        can be any other way to refer to a weapon. For example, if you
+        had a silver longsword with the name "silver longsword" you would
+        also want to have the aliases "silver sword", "longsword" and
+        "sword" as aliases. If you want to use a secret id key to uniquely
+        identify your weapon, you can use set it as an alias. You can add
+        multiple aliases by using this setting over and over again. This
+        setting is optional.        
+
+set_new_type(TYPE1|TYPE2|etc.);
+        Replace TYPE1|TYPE2|etc. with an ORed set of weapon type values.
+        That is, something that looks like:  MEDIUM|SLASH|PIERCE
+        Exactly one of the values must be a size (SMALL, MEDIUM, LARGE,
+        or HUGE) and at least one value must be a weapon damage type
+        (SLASH, PIERCE, BLUNT or CLEAVE). Other acceptable components
+        are: TWO_HANDED, POLE and MISSILE.
+
+set_material(TYPE1|TYPE2|etc.);
+        Replace TYPE1|TYPE2|etc. with an ORed set of material values.
+        That is, something that looks like:  MAT_STEEL|MAT_WOOD
+        Valid material types are listed in the material documentation,
+        wizhelp 4.16 'materials'.
+
+set_material_composition(TYPE);
+        Replace TYPE with the material type which characterizes the
+        'business end' of the weapon. Thus for a steel sword with a
+        wooden hilt, you would set_material(MAT_STEEL|MAT_WOOD); and
+        set_material_composition(MAT_STEEL); since the wood is not
+        particularly relevant to the cutting edge. Material composition
+        ratings for weapons can be found in /open/INCLUDE/weapon_stats.h.
+        NB your TYPE can ONLY be a single type. A composite type like
+        MAT_STEEL|MAT_SILVER will not work. There is an additional syntax
+        available if you absolutely want to use multiple types in your
+        composition. Replace TYPE with a type:percetage mapping to use
+        that syntax. For example:
+        set_material_composition(([MAT_STEEL:40, MAT_SILVER:60]));
+
+set_quality(quality);
+        Replace quality with an integer quality value from -100 to 100.
+        Quality is how good your weapon is, compared to other weapons
+        of the given composition. A quality of 0 is average, and a quality
+        of 100 is the best of the best. A -100 quality would be something
+        laughably bad (like a bent spoon maybe). Any weapon with a
+        quality of greater than 40 is considered at least exceptional.
+        Any with a quality greater than 60 is unique. (see also wizhelp
+        4.14 'uniques'). Typical factors that should affect quality are:
+        craftsmanship, wear/damage, rust, non-weapon types (things that
+        are not usually weapons such as pitchforks), extra hurty bits
+        (knobs, spikes, flanges), odd shape, balance etc.
+
+set_weight(weight);
+        Replace weight with an integer weight value. This is the weight 
+        of the object. Weight on Darkwind also represents bulk and
+        awkwardness of carrying.
+        |000|CKBIf you want to have the game set a standard weight, you can|000
+        |000|CKBset_weight(query_equipment_weight()); You need to use that after|000
+        |000|CKByou have set_new_type() and set_material().|000
+
+set_value(-1);
+        Weapon values are automatically determined by the characteristics
+        of the weapon. Do not set a value for basic weapons. (The -1
+        means to use the automatically generated value) NOTE: this
+        should be the very last function called in your reset function.
+
+That's it! An example basic weapon is given in
+/open/EXAMPLES/WEAPONS/basic_weapon.c
+
+If all you want is to make a basic weapon, copy that file to directory
+where your area's weapons are, and replace all the content values (e.g.
+the quoted text used for set_long(), set_short() etc.) with your own
+stuff.
+
+
+***************************************************************************
+                              Extra Settings
+***************************************************************************
+The following extra settings can be used in your weapon as well, but are
+not required:
+
+set_read("text.\n");
+        Replace "text.\n" with the quoted string to be seen when the
+        weapon is read. It there is writing on the blade of a sword, for
+        example, you may wish to use this. Remember to add both a period
+        and a newline (\n) at the end of your description since LPC won't
+        do that for you.
+
+set_info("info.\n");
+        Replace "info.\n" with the quoted string to be seen when a mage
+        or such identifies the weapon. It should NEVER give specific
+        numbers but it should give enough information for a person to get
+        a fair idea of a weapons strengths or powers.
+
+set_no_buy();
+        Put this in if this weapon cannot be bought from the shop. (After
+        someone has sold it as loot.)
+
+set_no_sell(sell_setting);
+        Replace sell_setting with an integer. If sell_setting is 1, the
+        item will be marked as unsellable. If it is 0, it will clear
+        a previously set sell_setting of 1. If you use a sell_setting
+        greater than 1, then it will take that many calls of
+        set_sell(0); to make it sellable again.
+
+set_steal(1 or 0);
+        If set_steal(1); is used, the weapon is not stealable. If you
+        set_steal(0); the weapon will be stealable by thieves. Yes, it
+        seems backwards and very stupid, which it is, but it is correct.
+
+set_cursed(curse_chance);
+        Replace curse_chance by an integer percentage indicating the
+        likelihood of any clone of this weapon being cursed. If this line
+        is not used, objects will default to a 1% chance of being cursed.
+
+set_no_curse();
+        Put this line in if you want the weapon to never be cursed. This
+        should be used very sparingly. It will prevent the 1% chance that
+        any given weapon or armour in the game will be cursed.  It should
+        be stressed that this should only be set on items that under no
+        circumstances should be cursed. I.e. quest items, a holy defender
+        unique sword etc.
+
+set_value(-1, ##);
+        Replace ## by an integer value to INCREASE the value of this weapon
+        above the default value. Use this instead of the normal call to
+        set_value(-1); if you want your weapon to be extra valuable.
+
+set_damage_type(TYPE1|TYPE2|etc..);
+        Replace TYPE1|TYPE2|etc. with an ORed set of damage types.
+        That is, something that looks like:  DAM_GOOD|DAM_FIRE
+        Valid damage types are listed in the damage type documentation,
+        wizhelp 4.17 'damage types'. Do not use this to set the standard
+        weapon damage types set by set_new_type().
+
+set_hit_bonus(bonus)
+        Replace bonus with a integer value. The weapon's hit bonus
+        increases the wielder's hitting stat (average of dex, int) while
+        using this weapon. A negative value will reduce the wielder's
+        hitting stat. This is a very powerful ability and should be used
+        sparingly. (A 6 point increase is roughly equivalent to a level's
+        increase in stats) Weapons with a hit_bonus are considered
+        exceptional or unique; see wizhelp 4.14 'uniques' for details.
+
+set_guild_allow(GUILD|GUILD|...);
+        Replace GUILD|GUILD|... with an ORed set of guild defines (from
+        guildd.h) which indicate which guilds are allowed to use this
+        weapon, weapon restrictions notwithstanding. In order to use this
+        setting, you must include guildd.h at the beginning of your file.
+ 
+set_guild_restrict(GUILD|GUILD|...);
+        This function is the same as set_guild_allow() except it will
+        disallow the use of that particular weapon by the guilds you have
+        listed.
+
+
+***************************************************************************
+                              Hit/Wield Functions
+***************************************************************************
+Hitting and wielding functions cause things to happen when the weapon
+hits in combat, or is wielded. This is useful for example, if you want
+to give some spam in combat, or extra bonuses, or if you want to give
+the player a stat boost when wielding it.
+
+set_hit_func(oFuncObject);
+        Pass the object that defines weapon_hit() (explained below) as
+        oFuncObject. In most cases, oFuncObject this_object(). Whenever a
+        hit is made in combat, oFuncObject->weapon_hit(oTarget); will be
+        called with oTarget being the current target of the hit.
+
+int weapon_hit(oTarget);
+        This function is defined in the oFuncObject passed to
+        set_hit_func(). Usually both functions are in the weapon anyway.
+        This function gets called if the set_hit_func() was set, and
+        a player/monster has made a swing, and actually made contact
+        (not dodged). It is the builder's job to fill out this function
+        with whatever special things that are to happen. The
+        returned value is a bonus applied to the wielder's damage stat,
+        for that hit. Use of this function almost always make this weapon
+        a unique-class weapon, so be warned and ask questions before using
+        it. See wizhelp 4.14 'uniques' for guidelines on special hits.)
+
+
+set_wield_func(oFuncObject);
+        Pass the object that defines wield_func() and unwield_func()
+        (explained below) as oFuncObject. In most cases, oFuncObject
+        this_object(). Whenever the weapon is wielded oFuncObject->
+        wield_func(this_object()) will be called, and whenever unwielded,
+        oFuncObject->unwield_func(this_object()) will be called.
+
+int wield_func(oWeapon);
+        This function is defined in the oFuncObject passed to
+        set_wield_func(). Usually both functions are in the weapon anyway.
+        This function gets called if the set_wield_func() was set, and
+        a player/monster tries to wield this weapon. It is the builder's
+        job to fill out the this function with whatever special things
+        that are to happen. If this function returns 0, then the wield
+        will fail. Thus you can use this to block a weapon being wielded
+        by certain people.    
+
+int unwield_func(oWeapon);
+        This function is defined in the oFuncObject passed to
+        set_wield_func(). Usually both functions are in the weapon anyway.
+        This function gets called if the set_wield_func() was set, and
+        a player/monster tries to unwield this weapon. It is the builder's
+        job to fill out the this function with whatever special things
+        that are to happen. If this function returns 0, then the unwield
+        will fail.
+
+|CKBvoid add_equipment_stat(string sStat, int iValue, string sStart, string sStop);|XX0
+        This function will handle adding the stat sStat to the
+        player when they wield the item, and remove the stat when
+        the player unwields the item. It eliminates the need of
+        creating start_wearing/stop_wearing functions in the item.
+        sStat can be "con","dex","int","wis","str","chr","hp","sp",
+      |RK0    "tmp_to_hit_stat","tmp_to_dam_stat","tmp_to_dodge_stat",|XX0
+      |RK0    "tmp_to_absorb_stat","tmp_to_crit_stat","tmp_to_swings",|XX0
+      |RK0    "tmp_to_hit","tmp_to_dam","tmp_to_dodge","tmp_to_absorb",|XX0
+      |RK0    "tmp_to_crit","tmp_to_type"|XX0
+      |RK0    tmp_to_* should only be used with permission.|XX0
+        sStart is the message when the player wears the armor.
+        sStop is the message when the player stops wearing the armor.
+        The message is in the same format as room_message.
+      |RK0  The messages should only be used once per item, not stat.|XX0
+    |GKBExample:|XX0add_equipment_stat("con",5,"$N $vseem hardier.",
+        "$N $vseem less robust.");
+------
+Version 1: ?
+Version 2: Bob - July 02, 2003

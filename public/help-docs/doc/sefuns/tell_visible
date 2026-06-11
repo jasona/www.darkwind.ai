@@ -1,0 +1,21 @@
+SYNOPSIS
+        void tell_visible(object oRoom, string sMsg, mixed xExclude,
+			  object oVisCheck)
+
+DESCRIPTION
+	Sends the message '<sMsg>' to all living objects in object '<oRoom>'
+	that are visible to object '<oVisCheck>' except for objects
+	'<xExclude>', which can be either an object or an array of objects.
+
+	If the function 'catch_tell' is defines in the objects this message goes
+	to, then it will be called with '<sMsg>' as the argument.
+
+EXAMPLE
+	// This first example will tell all living objects visible to
+	// this_player() in the room the message supplied.
+	tell_visible(environment(this_player()), "I can see you!\n",
+		     0, this_player());
+
+SEE ALSO
+	environment_visible, visible_inventory, visible, visible_to,
+	catch_tell

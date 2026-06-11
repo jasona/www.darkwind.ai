@@ -1,0 +1,13 @@
+Create Water
+
+This spell causes a small amount of water to pour out of
+thin air, even in the most barren desert.  It will refill
+a waterskin.  At higher levels of mastery, the druid will
+also be able to conjure the waterskin itself.
+
+Command: cwater
+Base Cost: 10 SP
+Base Recovery: short
+Base Effect: create items (water)
+Base Duration: permanent
+Guild Level: 3

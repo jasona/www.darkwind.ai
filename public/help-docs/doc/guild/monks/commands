@@ -1,0 +1,26 @@
+|GKB~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+|YKB                        MONK COMMANDS
+|GKB~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+|CK0  Monks have a variety of other commands available to them that
+|CK0  aren't necessarily skills or spells.
+
+|CK0  The following other commands are available:
+
+|CK0      "mhp"    "monk/emonk"    "monkhelp"    "monks"
+|CK0      "msc"    "mskills"       "mswitch"     "mtithe"
+|CK0      "mtitle" "mmon"          "mcombo"      "notch"
+
+|CK0  "msc" gives you your monk score sheet and training details.
+|CK0  "mskills" lists monk skills with stance and combo role.
+|CK0  "mmon" toggles the monk monitor line.
+|CK0  "mcombo" shows your current combo state, legal follow-ups, and
+|CK0  can explain likely next steps if you pass a skill name.
+|CK0  "monkhelp combos" explains chains, tempo, tags, and the monitor.
+|CK0  "monkhelp training post" explains the safe Wooden Man Post room.
+|CK0  "notch" records or reviews the places marked on your staff.
+
+|CKB  View more details at "monkhelp <command>".
+
+|GKB~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+|GKB~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 

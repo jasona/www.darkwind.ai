@@ -1,0 +1,19 @@
+
+Ranger Help for: enemy any
+==========================
+
+SUMMARY:
+Barren terrain is unusual. Its enemy list may show 'any', which means the
+land is hostile enough that a Ranger can choose almost any non-civilized
+species as a personal enemy.
+
+If you are a barren Ranger, use 'setenemy' to see the valid choices, then
+choose a real species such as reptile, insect, dog, dragon, or another
+race that fits your hunting story. Choosing a specific species is usually
+more useful than choosing the literal word 'any'.
+
+COMMAND:
+  setenemy <species>
+
+=============================================================================
+SEE ALSO: enemy, setenemy and barren

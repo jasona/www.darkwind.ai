@@ -1,0 +1,16 @@
+
+Ranger Help for: enemy pinniped
+===============================
+
+SUMMARY:
+Choosing pinniped means your Ranger specializes against seals, sea lions,
+walruses, and similar flippered shoreline or arctic creatures.
+
+This is a specialized beach and arctic choice. It matters most around
+coasts, ice, cold seas, and seal-haunted shores.
+
+COMMAND:
+  setenemy pinniped
+
+=============================================================================
+SEE ALSO: enemy, setenemy and terrains

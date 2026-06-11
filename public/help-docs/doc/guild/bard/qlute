@@ -1,0 +1,19 @@
+  Adaon turns toward a rack on the wall behind him, and lifts an 
+instrument from it.  He says, "This be a >lute<, me friend, the symbol 
+of what it is t' be a bard.  It's an invaluable tool for our profession.  
+Mark me words, if you join the >bards< and lose y'r >lute<, y'll find 
+y'rsel' nigh helpless.  O' course, if ye come back here, I can get ye 
+another one.  Always have a few extras about, for in my younger 
+days, when I wooed women wi' me >music< and braved the world 
+>fighting< impossible dangers, I managed to lose mine occasionally.  
+Twas nae a fun thing, let me tell you.
+  "Most o' a bard's >talents< are derived from the >lute<.  It allows 
+much greater expression o' y'rsel' than mere speech or song alone 
+does."
+
+  A bard may also play single clear notes on the lute with:
+
+     play lute <note>
+
+  Available notes are C4 D4 E4 F4 G4 A4 B4 C5 D5 E5 F5 G5 A5 B5 C6.
+Those nearby may hear the note through Darkflow if their sound is enabled.

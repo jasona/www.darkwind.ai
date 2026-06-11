@@ -1,0 +1,16 @@
+Ranger Help for: echo
+=====================
+
+SYNTAX:      echo
+USAGE:       Underground only
+SLOT COST:   NA
+BASE SP:     20
+SKILL TYPE:  cartography
+
+SUMMARY:
+This skill allows a Ranger to use a sonar-like technique underground,
+sending out a sound and listening to the echoes to detect creatures in
+adjacent rooms. The results report what creatures are nearby and in
+which direction they can be found. This skill only works in underground
+terrain. The accuracy depends on the Ranger's perception and skill
+level. Echo is invaluable for navigating dangerous underground areas.

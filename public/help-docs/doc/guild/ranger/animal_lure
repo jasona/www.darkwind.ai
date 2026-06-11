@@ -1,0 +1,16 @@
+Ranger Help for: animal lure
+=============================
+
+SYNTAX:      lure <race>
+USAGE:       Wilderness
+SLOT COST:   NA
+BASE SP:     40
+SKILL TYPE:  husbandry
+
+SUMMARY:
+This skill allows a Ranger to lure a temporary wild animal to their
+location by mimicking its calls and scent. The lured animal will fight
+alongside the Ranger for a limited time before wandering off. The type
+of animal that can be lured depends on the terrain. Unlike a bonded
+follower, a lured animal is not permanent and cannot be trained. This
+skill is useful when the Ranger needs temporary combat assistance.

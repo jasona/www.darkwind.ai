@@ -1,0 +1,28 @@
+BARD COMMUNICATION
+
+Bards are social by design. These commands help you stay connected with other
+Bards and with the guild.
+
+  bard <message>
+    Speak on the Bard guild channel.
+
+  : <message>
+    Send a Bard emote.
+
+  bemotes
+    List available Bard emotes.
+
+  bardhist
+    Review recent Bard channel history.
+
+  bards
+    List Bards currently online.
+
+  bgm <message>
+    Guild master channel. Requires guild level 11.
+
+  bgmhist
+    Review recent Bard guild master channel history.
+
+Bards also learn more racial languages than most guilds. Communication is part
+of the guild's identity, not just a convenience.

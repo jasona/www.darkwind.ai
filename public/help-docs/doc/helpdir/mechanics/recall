@@ -1,0 +1,21 @@
+
+|WKBSyntax: |YKBrecall
+
+|YKOThe |YKBrecall|YKO command lets you beg the powers of Darkwind to
+whisk you back to the center of town (COT) from anywhere in the
+world that allows teleportation. After each successful use, the
+powers must replenish for |YKB15 minutes|YKO before you can recall
+again. You will be told when the cooldown has elapsed and recall
+is available once more.
+
+|WKBNotes:
+|YKO    * Cannot be used if you are already at COT.
+    * Cannot be used in rooms that block teleportation.
+    * The 15-minute cooldown is independent of |YKBncot|YKO and any
+      guild teleport abilities.
+    * Newbies and applicants typically use |YKBncot|YKO instead, which
+      has no cooldown.
+
+|WKOSEE ALSO
+========
+|YKBncot, gocot

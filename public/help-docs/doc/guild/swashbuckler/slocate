@@ -1,0 +1,16 @@
+Locate Swashbuckler - information/theme skill
+------------------------------------------------------------
+Swashbucklers are a close brotherhood, and tend to know each
+other very well. Drawing on this knowledge, it is possible
+for one swashbuckler to imagine himself at the side of
+another, and actually catch a glimpse that other's immediate
+surroundings.
+
+Should you not desire to be found, use 'slocate off' to
+prevent others from locating you. 'Slocate on' will allow
+them to do so once more.
+
+GL:  6
+SP: 10
+command:  slocate on/off/<who>
+duration: instant

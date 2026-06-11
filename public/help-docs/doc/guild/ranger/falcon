@@ -1,0 +1,18 @@
+Ranger Help for: falcon
+=======================
+
+SYNTAX:      falcon <direction>
+USAGE:       Wilderness terrains.
+SLOT COST:   4
+BASE SP:     variable
+
+SUMMARY:
+Sends a falcon to scout in a given direction, reporting back what
+lies ahead. The falcon describes the room, any creatures present,
+and terrain type. More skilled Rangers receive more detailed
+reports.
+
+Also known as 'falcon eyes'.
+
+=============================================================================
+SEE ALSO: reconnoiter, study, survey

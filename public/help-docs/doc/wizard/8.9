@@ -1,0 +1,71 @@
+Recoding 
+=========
+
+Recoding is a code maintenance process that involves large scale changes
+to a body of code. Recoding can be complex and tedious, but if done well,
+can result in large, overall improvements to not possible by hacking code
+on a case by case basis. If done poorly however, recoding can exacerbate
+existing problems while introducing new ones.
+
+The objective of recoding is always to IMPROVE code already in play, and
+to do so CHEAPLY in terms of time and effort. In general, recode work is
+much less fun than creating new code, and involves code that works well
+enough for the most part anyway. There's a cost/benefit tradeoff involved
+in all recodes that should be considered before a serious recode effort
+is undertaken.
+
+
+1 - Functional recode
+---------------------
+
+A functional recode is a bare-bones, minimalist recode that aims to
+simply get the code working properly. This is really a fancy name for
+general bugfixing and whatnot. Where possible (i.e. doesn't cause
+compatibility problems), current coding standards should be used in a
+localized way, but the goal here is not to make the code pretty or even
+more maintainable. Just get it working. This approach is often taken for
+complex mudlib/guild code that needs a few tweaks here and there, but
+where complete recoding would be difficult. It can also be used for
+areas that break due to mudlib changes.
+
+
+2 - Structural recode
+---------------------
+
+A structural recode is aimed at fixing external code organization so that
+it is easier to maintain. This kind of recode is most commonly performed
+when moving old areas out of a wizard's personal directories. For this
+kind of recode, it is sufficient to move files into the correct structure
+(see wizhelp 8.7) and make sure everything works as per a functional
+recode. N.B. This may include fixing things that break because they were
+not very portable to begin with, and miscellaneous bugs that have been
+there from before the recode - since you're in there anyway, you may as
+well fix the real bugs.
+
+
+3 - Full themeless recode
+-------------------------
+
+This is comprehensive recode that aims to bring all aspects of the code
+in line with current code/balance/content standards. The aim is to bring
+the code up to minimum spec only, not to completely redo it into
+something much better than the original. This should be done periodically
+to all maintained code/areas to keep them in line with current coding
+standards.
+
+
+4 - Complete recode
+-------------------
+
+There are no upper bounds to what this entails. Usually complete recodes
+are not done on areas because it's a lot of work that's not particularly
+fun, for little gain. Complete recodes of guild/mudlib code are more
+common, and tend to include things like tightening up code in general,
+altering aspects of theme, adding new functionality etc. This type of
+recode is almost as much work as starting from scratch.
+
+
+------
+Version 1:   Bob - June 06, 2004
+
+

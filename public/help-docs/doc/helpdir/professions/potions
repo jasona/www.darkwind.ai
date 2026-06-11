@@ -1,0 +1,67 @@
+                            Potions
+|YKBAvatar Charge|000
+|0001) Avatar Charge Potion     : 6 x Desert Lace       3 x Frozen Rose
+|000
+|YKBCharisma|000
+|0001) Rose Hip Potion           : 6 x Rose Hip           3 x Spine Flower
+|0002) Pokeweed Potion           : 6 x Pokeweed           3 x Ice Leaf
+|0003) Star Flower Potion        : 6 x Star Flower        3 x Trillum
+|0004) Konjac Potion             : 6 x Konjac             3 x Ballamault
+|000
+|YKBConstitution|000
+|0001) Ash Root Potion           : 6 x Ash Root           3 x Cow Leaf
+|0002) Crown Root Potion         : 6 x Crown Root         3 x Mint Leaf
+|0003) Spiner Root Potion        : 6 x Spiner Root        3 x Passion Flower
+|0004) Mint Root Potion          : 6 x Mint Root          3 x Cactus Flower
+|000
+|YKBDetox|000
+|0001) Bristlegrass Potion       : 6 x Bristlegrass      3 x Netherroot
+|0002) Dragon Root Potion        : 6 x Dragon Root       3 x Rocky Thorns
+|0003) Glowing Lily Potion       : 6 x Glowing Lily      3 x Red Ivy
+|0004) Valerian Potion           : 6 x Valerian          3 x Living Rock
+|000
+|YKBDexterity|000
+|0001) Galingale Potion          : 6 x Galingale          3 x Catchfly
+|0002) Desert Lace Potion        : 6 x Desert Lace        3 x Frozen Rose
+|0003) Knotweed Potion           : 6 x Knotweed           3 x Sun Flower
+|0004) Exotic Bai Potion         : 6 x Exotic Bai         3 x Helio
+|000
+|YKBDigestion|000
+|0001) Bamboo Leaf Potion        : 6 x Bamboo Leaf        3 x Lava Root
+|0002) Death Mint Potion         : 6 x Death Mint         3 x Enchanted Sumac
+|0003) Rotten Root Potion        : 6 x Rotten Root        3 x Mandrake
+|0004) Pond Weed Potion          : 6 x Pond Weed          3 x Tunnera
+|000
+|YKBHP Regen|000 **
+|0001) Wild Weed Potion          : 6 x Wild Weed          3 x Dinkweed
+|0002) Chamomile Potion          : 6 x Chamomile          3 x Snowweed
+|0003) Opium Potion              : 6 x Opium              3 x Whore's Rose
+|0004) Cancansa Potion           : 6 x Cancansa           3 x Novaroot
+|000
+|YKBIntelligence|000
+|0001) White Mushroom Potion     : 6 x White Mushroom     3 x Death Shoots
+|0002) Black Mushroom Potion     : 6 x Black Mushroom     3 x Ice Bain
+|0003) Slimy Mushroom Potion     : 6 x Slimy Mushroom     3 x Sparkling Yopo
+|0004) Glowing Mushroom Potion   : 6 x Glowing Mushroom   3 x SilverLeaf
+|000
+|YKBSP Regen|000 **
+|0001) Brown Mushroom Potion     : 6 x Brown Mushroom     3 x Frozen Root
+|0002) Honey Mushroom Potion     : 6 x Honey Mushroom     3 x Jungle Root
+|0003) Pokadot Mushroom Potion   : 6 x Pokadot Mushroom   3 x Pixie Root
+|0004) Psilocyin Mushroom Potion : 6 x Psilocyin Mushroom 3 x Vampire Root
+|000
+|YKBStrength|000
+|0001) Dark Root Potion          : 6 x Dark Root          3 x Cannabis
+|0002) Rock Leaf Potion          : 6 x Rock Leaf          3 x Cryoflora
+|0003) Spurge Leaf Potion        : 6 x Spurge Leaf        3 x Wild Kanna
+|0004) Bergamot Potion           : 6 x Bergamot           3 x Lord Leaf
+|000
+|YKBWisdom|000
+|0001) Oak Leaf Potion           : 6 x Oak Leaf           3 x Feverfew
+|0002) Flaming Sari Potion       : 6 x Flaming Sari       3 x Frosty Mushroom
+|0003) Sleepwillow Potion        : 6 x Sleepwillow        3 x Pixie Breath
+|0004) Velvet Larz Potion        : 6 x Velvet Larz        3 x Daturas
+|000
+Level Restrictions: Level 1 potions - 0   Level 2 potions - 20
+                    Level 3 potions - 45  Level 4 potions - 65
+** Garou are restricted from using regen potions.

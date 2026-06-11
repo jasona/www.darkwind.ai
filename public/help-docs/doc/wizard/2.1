@@ -1,0 +1,240 @@
+                 --Strict Typing--
+ 
+It has come to my attention recently that there are some of you
+out there who do not fully understand the concept of stricttyping and
+why we do it.  This doc will attempt to explain why we stricttype,
+and will hopefully give you a better understanding of how to stricttype
+your functions.
+ 
+The first part : WHY
+====================
+ 
+Why do we stricttype our functions in LPC?  It requires more thought,
+more time, and can turn out to be a general pain in the ass if you
+don't know how to do it.  However, there are several legitimate reasons
+behind we (the management) requiring you to stricttype your functions.
+ 
+1) It's more efficient.  If you tell the compiler exactly what type of
+   function you are writing, then it doesn't have to go through the code
+   and attempt to determine what kind of function you are writing.
+   Also, stricttyped code uses less memory since the interpreter doesn't
+   have to reserve the maximum amount of space for each variable in the case
+   that it might be large.
+ 
+2) Better for debugging.  There are two sub-sections under this part.
+ 
+   a) More verbose error messages.  If you incorrectly stricttype a
+      function, you will get more detailed error messages than if you
+      didn't stricttype your function at all.  As a matter of fact,
+      if you don't stricttype your functions at all, the compiler may miss
+      some errors BECAUSE your file isn't stricttyped.  This incorrect file
+      will update and load correctly, but it will crash at run-time.  As
+      any programmer knows, it is MUCH harder to debug a logical
+      (i.e., run-time) error than it is to debug a syntactical
+      (i.e., compile-time) error.  This is true if for no other reason than,
+      if you have a compile-time error, the compiler tells you what
+      line you made your mistake on, and what kind of error it is.  Once
+      you have seen enough of these errors, you get to know what to look
+      for and where to look without much thought.
+ 
+   b) Easier to read.  One of the most important things to know
+      about programming is that, most likely, you will NOT be the
+      only person to ever read your own code.  You might have trouble
+      trying to do something, or you might have to leave for an extended
+      period of time, or something might come up while you aren't
+      here which someone else has to fix.  Therefore, it is important
+      to make your code readable and self-documenting.  This is where
+      stricttyping comes in.  It is easier for the other human fixing
+      your code to fix it if he/she knows what they are looking for.
+ 
+The second part : HOW
+=====================
+ 
+I will start this section off with a list of stricttyping "reserved
+words" (to borrow a term from Pascal), and continue on with how to
+implement them.
+ 
+Qualifiers
+==========
+static
+varargs
+nomask
+ 
+types
+=====
+void
+int
+status
+object
+mixed
+string
+ 
+How to implement these "reserved words"
+=======================================
+ 
+The first three, what I will call "qualifiers," are not necessary for
+all functions, and, in fact, SHOULD NOT be used for all functions.
+Most of the time, these qualifiers are used in files which many other
+files inherit (like player.c or living.c or newroom.c).
+ 
+A brief description of each qualifier follows:
+ 
+static - This variable will not change, and this qualifier is for variables
+           only.  Variables of this type will not be saved when the object
+           containing them is saved via a save_object() call.  Functions
+           of this type cannot be called from outside the object they are
+           defined upon.
+ 
+           [NOTE: The first version of this doc incorrectly stated that
+           functions could not be typed "static."  That was incorrect.
+           The way it is stated here is correct.]
+ 
+varargs - There are a variable number of arguments to this function.  An
+            example of a varargs function which you all should be
+            familiar with is make_object().  If you only want one of the
+            object made, then you don't have to pass a 1 as the third
+            argument to make_object().  Therefore, the third argument
+            is optional; its existence could be said to be variable.
+ 
+            This is also used to allow certain functions to compile.  For
+            example, if a function is stricttyped, and you attempt to call it
+            with fewer args elsewhere in the code, the compiler will puke
+            nasty error messages at you unless you have stricttyped the
+            function as "varargs."
+ 
+            [NOTE: The second paragraph was added in the second version.  The
+            first paragraph is correct.]
+ 
+nomask - Functions of this type are typically only used in inheritable
+           files, however, this type can be used anywhere.  Typing a
+           function as a nomask is a security procedure.  The nomask
+           does not allow any file which inherits that file to change
+           the value of a function.  Also, these functions cannot be
+           shadowed, which is another security procedure.
+ 
+           For example, in living.c, we have:
+ 
+           nomask query_value() { return 0; }
+ 
+           This sets the value of any object inheriting living.c to 0,
+           and does not allow the inheriting object to change the value
+           of itself.
+ 
+           [NOTE: The first version of this doc incorrectly stated that
+           "nomask" functions were ONLY used in inheritables.  That was
+           incorrect.  The way it is stated here is correct.]
+ 
+Now, I will move on to the other types of stricttyping "reserved words,"
+what I will call "types."  These should be used on every function (but not
+all at once!)  You can tell what type a function is by looking at what
+kind of value it returns.  You are all familiar with statements that
+return 0; or just return; at certain spots.  These return lines will
+give you clues as to what type your function is.  A brief description
+of each type follows:
+ 
+void - This function does not return a value.  Examples of this are
+         reset() and init().
+ 
+int - This function returns integer values.  These can be more useful
+        if you have a function which will determine how you want something
+        to perform in another function.  Functions which will only return
+        a 1 or a 0 can also be stricttyped at "status" functions.
+        Those that possibly would return something other than a 1 or a 0
+        must be stricttyped "int," and are generally more complex (but
+        not necessarily so.)  Examples of this are
+        int <or status> north_hook(), buy().
+ 
+status - As explained above, these functions only return a 1 or a 0
+           (which can be thought of as "True" and "False" respectively.
+           Examples of this are status <or int> north_hook() and
+           status is_npc().
+ 
+object - This type is used for functions which return objects.  I have
+           mostly seen these type of functions used in code for shops,
+           or code which searches through a player's inventory looking
+           for a specific object.
+ 
+mixed - Type a function mixed when it is possible that more than one
+          of the listed types can be returned.  For example, a function
+          that would return an array or a string, depending on what is
+          appropriate for your uses should be typed "mixed."
+ 
+          [NOTE: The first version of this doc incorrectly stated that
+          "mixed" functions should be used to return 0 or (for example)
+          an object.  That was incorrect.  0 is an acceptable value for any
+          type; it is the "nothing" or "does not exist" value for all types.
+          The way it is stated here is correct.]
+ 
+string - This type of function wiz used to represent strings.  A string is a
+           group of letters placed back to back.  Every word is a string of
+           characters.  Something important to note about strings is that
+           any argument passed into any function is automatically passed
+           as a string.  This is important for rooms such as stores where
+           you might want to "buy 42".  Since I warned you about this, I
+           should inform you of how to fix it, eh?  This is where the function
+           "to_int(string)" comes in.  For something like the "buy 42", you
+           would have a function, possibly "int buy(string arg)", and to turn
+           that string arg into an int, you would call "to_int(arg);".  If
+           the string that you pass to to_int() can be turned into a number,
+           then to_int() will return it as a number.  If, however, you pass
+           something that cannot be turned into an integer (such as a word),
+           then to_int() will return 0.
+ 
+Prototyping functions
+=====================
+ 
+You may have heard of this as "forward typing" (I hate to reference Pascal
+so much, but it is the only language in which I have formal training.)  All
+that it is, is if you make a call to an argument before it is defined, the
+compiler will barf at you.  That's no fun, but it is a syntax error, and
+therefore easy to fix.  To prototype a function, all you have to do is,
+before you call the undefined function, place the header (declaration line)
+of the function before you call it.  However, you must remember to replace
+the open brace (  {  ) with a semicolon (  ;  ).  Example:
+ 
+int foo(string str);
+ 
+status bar() {
+  .
+  .
+  .
+  foo("baz");
+  .
+  .
+  .
+  return 1;
+}
+ 
+int foo(string str) {
+  .
+  .
+  .
+  return 3;
+}
+ 
+In most files, there is a prototyping section at the beginning of a file
+where all the necessary prototyping is done in one spot so you don't have to
+go searching for it.  Also, most of the time, prototyping can be avoided by
+simply moving the undefined called function to before the calling function.
+This is no always possible, but most of the time it is.
+ 
+Advanced Stricttyping
+=====================
+ 
+Arrays - If you wish to return an array of any type, simply place a * before
+           the name of the function, just as if you were naming an array
+           variable.
+ 
+ 
+ 
+ 
+ 
+ 
+------
+Version 1.0 by Rodney@Darkwind - 10/21/94
+Version 1.1 by Rodney@Darkwind - 10/26/94 - Thanks Malraux.
+ 
+[All comments contained in brackets are editor's notes.  They delimit changes
+between versions 1.0 and 1.1 of this document.  I am sorry for any problems
+anything incorrect from the first version may have caused.  Hopefully,
+everything in here is correct.]

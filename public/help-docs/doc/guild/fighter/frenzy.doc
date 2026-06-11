@@ -1,0 +1,6 @@
+Skill: frenzy      Timer: Damage       GL: 10    Cost: Varies
+
+An experienced fighter may work himself into a killing frenzy where
+he is able to fire off a quick succession of blows for a short period of time.
+
+Syntax is: frenzy <target>

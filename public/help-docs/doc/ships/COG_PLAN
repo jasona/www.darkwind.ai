@@ -1,0 +1,15 @@
+          Deck Plans for the Cog
+
+  Main Deck               Lower Deck
+
+ Forecastle                  Crew
+     |                         |
+     |                         |
+   Deck*                    Hallway*
+     | \                       |
+     |  1                      |
+  Bridge                   Cargo Bay
+ 
+ 1: Captain's Cabin
+ *: Deck and Hallway connect
+ 

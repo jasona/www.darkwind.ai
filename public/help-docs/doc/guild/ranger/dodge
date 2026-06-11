@@ -1,0 +1,15 @@
+Ranger Help for: dodge
+======================
+
+SYNTAX:      dodge
+USAGE:       Any terrain
+SLOT COST:   NA
+BASE SP:     20 + martial level
+SKILL TYPE:  attack
+
+SUMMARY:
+This skill allows a Ranger to enter an active dodging stance, granting
+a passive evasion buff for a limited duration. While active, the Ranger
+has an increased chance to dodge incoming attacks. The SP cost increases
+with the Ranger's martial skill level, but so does the effectiveness
+of the evasion. The Ranger must be in combat to use this skill.

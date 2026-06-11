@@ -1,0 +1,14 @@
+|CKODESCRIPTION
+|WKO===========
+
+|YKOPut something in or on something else, such as "put bottle in bag."
+
+The second form allows you to put all of one specific item on or
+in something else, such as
+    put all sword in bag    OR
+    put all swords in bag
+    
+|WKBSyntax: |YKBput <object> <preposition> <object>
+        put all <object> <preposition> <object>
+
+|WKBSee also: |YKBdrop, give, get

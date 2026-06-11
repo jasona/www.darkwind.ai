@@ -1,0 +1,15 @@
+varargs make_obj(string sFile, int iHowMany)
+
+  An lfun defined for all objects inheriting CLONE, which includes rooms
+  and monsters. Clones up to iHowMany objects into the calling object,
+  making sure to count how many objects are already cloned as to not
+  exceed iHowMany. iHowMany is optional. When not specificied, it will
+  default to 1.
+
+  Example: 
+           make_obj("/obj/goblin", 4);
+           make_obj("/obj/wolf");
+
+See also: make_and_equip, make_limited_obj, make_unique_obj, 
+          clone_object
+          

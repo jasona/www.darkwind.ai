@@ -1,0 +1,7 @@
+SPELL NAME  : Cause light wounds
+SPELL SYNTAX: -Clw <target>
+SPELL COST  : 15 SP
+DESCRIPTION : The devote Cleric has the power to call upon the power of Mitra
+	      to inflict damage, as well as to heal it. By force of will and
+	      through the Cleric's devotion, Mitra will inflict light wounds
+	      upon the target of her wrath.

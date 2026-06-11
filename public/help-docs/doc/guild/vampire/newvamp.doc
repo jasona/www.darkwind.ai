@@ -1,0 +1,154 @@
+Ok here goes the second version :). This one is
+a more classical approach. All vampires are part
+of one big family. They must receive the Dark Gift
+from another PC vampire or from me. For each 
+vampire the Dark Gift bestows them with different
+abilities. The abilities that each Vampire receive
+will be random. As they increase in age( I dont
+think I will have guild levels, maybe they spend
+thier experience to age or something. So a GL20
+Vampire would be an Ancient or something. I
+will come up with more romantic names as I get
+further into it.) All vampire will receive one the 
+same. The ability to draw blood from the victem.
+This blood siphoned will add to the Vampires
+store of blood. (I wont call it a blood pool if you
+dont want but I feel its a generic enough term :)
+As a vampire wanders through life thier blood
+will slowly be used up. As it gets lower and lower
+the vampire will get penalties to thier actions and
+start to get massive cravings. They will have a 
+base blood pool level based on thier age. If they
+go below this base they will get the penalties. The
+vampire may also go above this base and receive
+increased strength and a sense of euphoric drunk-
+eness. This will be how vampire get drunk as
+alcohol will not affect them. The can also get drunk
+by drinking off a PC who is drunk or stoned. Food
+will also not affect a vampire as they are dead and 
+have absolutely no need to eat. Blood is thier
+food and drink. To be fair though, things like 
+drowning and poison should not affect them. This
+will have to be up to the wizard who makes such
+items to decide though. I would like it if they
+could traverse the sea without penalty:). Another
+penalty of Vampires is that travelling in ANY
+outdoors areas that are lit will damage them.
+Maybe a call_out() of every 10 secs or so to
+query thier environment and will do some damage
+to them. This damage will have to be more than
+one per heartbeat so maybe 4 per 10 secs? The 
+numbers will have to come through testing cause
+its kinda mean having them perishing to quickly
+out there. Effectively they WILL NOT be able
+to heal in a lit area. Also xp reqs for both normal
+levels and guild levels will be more stringent. They
+will get bonus's on stat advancement for str/con/
+int/dex.  In the dark they will receive faster regen
+rates. Escepcially if they are high on blood. Benefits
+at the guild hall (I will be putting this in my own
+Necropolis type city and it will be called the 
+Theatre De' Vampires. I dont think AR will mind
+as I have already ripped off my chars name from
+her anyway :) will include coffins for each 
+vampire that they can store stuff in and rest in for
+added healing power. BTW this city will be
+permanently dark so they can travel without 
+harm but it will be a ways from ML darkwind. Oh
+yeah, vampires will get a better ac as they go up
+level as they become increasingly harder to damage
+and thier skin becomes harder. When they start
+getting REALLY old the damage they sustain in
+the sun decreases to.
+
+
+OK heres the powers list:
+Heightened Senses type thing: Vamps can see players
+that are hiding, can track things etc.
+
+Locate Person: They can free thier mind and send it
+across the MUD to locate where a person is.
+
+Read minds: They can follow the person around kinda
+like a snoop? Dunno is this will be allowed
+
+Flight: The vampire can fly around. I am not to sure
+of the game benefits of this power yet.
+
+Shapechange into various animals: Just like it says.
+The different forms will be rat, cat, bat and wolf.
+
+Form of mist: Let the Vampire turn into a mist form
+and float away.
+
+Dissapear: Hiding ability. Starts of weak bit at high
+levels will be able to go unseen in darkplaces.
+
+Control Emotion: Will make a monster/player
+aggressive or non-aggressive.
+
+Mesmerise: While the vampire stares into the targets
+eyes they cannot move or do anything.
+
+Awe: Targets become extremely impressed with the
+vampires power. Bonus to char.
+
+Night sight: Like it says.
+
+Taloned hands: The nails on the Vampires hand can
+grow out into long talons which are very sharp.
+
+Meld into the earth: Allows the vampire to escape into
+the loving embrace of the earth.
+
+Manipulate Shadows: Make little shadow puppet 
+thingamies. 
+
+Death Mark: The target is marked for death by all
+vampires.
+
+Speed: Allows the vampire to move in a blur of
+motion for brief periods of time.
+
+Burning things: Will begin with inanimate objects
+made of paper and wood but will eventually go
+onto less combustable materials then onto living
+flesh.
+
+Telekinesis: Can move objects around without 
+touching them. Advanced form would be to squeeze
+a persons heart till it stopped :)
+
+Dread Gaze: The target instantly flees away from
+the Vampire.
+
+And any more that Vader or I can think of
+laters :)
+
+Also the only guilds I really know the powers for
+are Necros and Psions. If these powers are
+to much like other guilds let me know so I can
+maybe change em.
+
+Like I said they will get a random couple of 
+powers to begin with and each time the reach a
+new milestone on thier aging they will receive 
+a new random power. Each power starts off weak
+but gets more powerful as the Vampire get older.
+Eventually a TRUELY ANCIENT vampire will get
+all the powers but hopefully this will take a while.
+By TRUELY ANCIENT I am meaning like 50th+
+level. I want this guild to be one that will be good 
+for players 20+. That is all for this doc for now. 
+it was good reading.
+
+BTW this is just a basic outline. I have lotsa emotes
+for them and plenty of atmospheric stuff. I dont
+have the time to write everything down :)
+
+Also I dont know if I mentioned before but 
+only humans and maybe elves can be vampires. I
+dont have any real logical bases except my
+preference :)
+
+Oh btw.....Weapons and Armor restrictions. No HUGE weapons and no platemail type armor.

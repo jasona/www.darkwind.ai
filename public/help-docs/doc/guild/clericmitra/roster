@@ -1,0 +1,5 @@
+COMMAND NAME  : Cleric Roster
+COMMAND SYNTAX: Roster
+COMMAND COST  : None
+DESCRIPTION   : This command should show active Clerics rather than the
+		history shown in the player list scroll in the guild.

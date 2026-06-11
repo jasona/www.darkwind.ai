@@ -1,0 +1,132 @@
+-=-=-=-=-=-=-=- My Vision Of Castles -=-=-=-=-=-=-=-
+                        -or-
+-=-=-=-=-=-=-= My Kingdom For A Horse =-=-=-=-=-=-=-
+
+1) Environs
+
+a) Should be specially prepared sites (ie. this area looks suitable for a castle)
+b) Various topographies: forested, plains, mountainous, etc.
+	 i) terrain governs foodstuffs, wood, mining
+	ii) terrain governs defense
+c) Should be a 20x20(?) grid around the castle for taxes, food production, wars
+d) Should include a town and a castle
+e) Various benefits/detriments based on continent
+
+
+2) Economy
+
+a) Inhabitants are taxed.
+b) Stores and the like can be located in towns/keeps
+c) NPC inhabitants slowly accrue over time depending on tax and factors in 1)
+d) PC inhabitants make their own decisions. :-)
+e) Kingdom city starts out as a few huts.
+f) Kingdoms can commission uniques or Wonders.
+
+
+3) Castle
+
+a) Each room must be bought and built (which takes time).
+b) Rooms include:
+	  i) Castle walls, of various materials, size, and strength
+	 ii) Specialty defense: barbican, drawbridge, etc.
+	iii) Interior rooms (market place, stables, bunkhouses, etc)
+	 iv) Keep rooms (throne rooms, banquet, sleeping, etc)
+c) The bigger the castle, the better the morale of the kingdom inhabitants
+d) Castles can also be things like strongholds (think of a thief king stronghold in the forest)
+e) Materials: wood, stone, steel, "wizard's stone" (requires a Mage to create)
+f) Castles can be built within a kingdom by allowed nobility of that kingdom, which extends the influence and boundaries of that kingdom.
+
+
+4) Wars
+
+a) Kingdom can hire guards and militia
+	  i) Patrols
+	 ii) Keep guards
+	iii) Companies of archers
+	 iv) Infantry
+	  v) Cavalry - uses a modified Paladin warhorse
+	 vi) Mountain/forest/desert units
+b) Militia treated as group NPCs, ie. "a company of archers (5)"
+c) Siege engines can be employed to damage or defend the castle
+	  i) hard to get catapults into the mountains, etc.
+	 ii) vehicle based "covered gate ram"
+	iii) oil, fire, etc.
+d) The Engineer's Guild
+	  i) Players can design/create siege weapons
+	 ii) Players can "size up" opponent castles (wall height, etc) from afar
+	iii) Players can research technology
+e) When hiring militia, the kingdom can announce that it is hiring. Militia will then trickle in. This is to avoid a situation where people hire militia just before a war and then dismiss them all immediately afterwards.
+
+
+Terrain Statistics And Factors
+
+                                      Off  Max
+           Fert  Food  Res  Gem  Ore  Def  Popn   Notes
+===========================================================
+Farm         *   100    0    0    0    2   1000   1
+Plains      50    80   10    0    0    2   1000   2,3
+Hills       40    20   60    0    1    3    900   2,3
+Forest      60    30   60    0    0    3   1000   3,4,5,6
+Jungle      70    30   50    0    0    4   1000   3,5,6,7
+Swamp       90    10    5    0    0    1    900   3,8
+Desert      10     0   50    0    1    3    200   3,9
+Arctic       0    35   25    0    1    3    100   4,9,11,12
+Mountain     0    10   90    1    1    5    400   4,9
+Sea          0    90    5    1    0    1      0   4,12,13
+Lake         0    90    0    0    0    1      0   4,12
+River        0    70   10    1    0    1    800   4,5,12
+Beach        0    10   30    1    0    2    500   4,12
+Barren       0     0   30    1    1    4     50   4
+
+* Depends on fertility of square converted to farmland.
+
+1.  Must be created from Plains.
+2.  Livestock and farming produce food.
+3.  Can convert to Farm.
+4.  Cannot convert to Farm.
+4.  Food is small and large animals.
+5.  Produces wood.
+6.  Must be clearcut to Plains before Farm.
+7.  Food is fruit, small animals.
+8.  Unusable without draining, for the most part. Some food from animals.
+9.  Produces stone for building.
+10. Can be converted to Plains and Farm with irrigation.
+11. Food comes from seals, polar bears, etc.
+12. Food comes from fishing.
+13. Gems are pearls.
+
+
+
+Castle Types:
+
+Each outdoor square can house 5x5 inner rooms. One room is taken up
+along the outside walls for wall. You must have courtyard rooms to make
+a stable or larege barracks.
+
+      Outdoor     Indoors
+Size  Squares  Courtyard/Keep  Stables  Barracks      Towers    Influence
+-------------------------------------------------------------------------
+ 1        1         0/4x4        N/A     1 small       5 sm         5
+ 2        4       9x9/4x4         1     1 sm,1 lg   4 sm, 1 lg      6
+ 3        9     14x14/7x7         2     1 sm,2 lg   8 sm, 5 lg      7
+ 4       16     19x19/10x10       3     2 sm,3 lg   12sm, 6 lg      8
+ 5       25     24x24/13x13       4     3 sm,4 lg   16sm, 13lg      9
+
+1) 1 small tower at each corner, 1 small tower on keep.
+2) 1 small tower at each corner, 1 large on keep.
+3) 1 small/large tower at each corner, 1 small at each mid-wall, 
+   1 large on keep.
+4) 1 small/large tower at each corner, 2 small on each wall,
+   2 large on keep.
+5) 1 small/large tower at each corner, 2 small on each wall,
+   1 small/large tower at mid-wall, 4 large towers on keep
+
+Small towers are 1 indoor room in size. Large towers are 4 (2x2).
+
+Materials:
+
+wood:         height max 20', no large towers
+stone:        height max 40', strength +3, influence +1, cost * 1.5
+granite:      height max 50', strength +4, influence +2, cost * 2
+steel:        height max 60', strength +6, influence +3, cost * 3
+wizard stone: height max 80', strength +9, influence +5, cost * 5

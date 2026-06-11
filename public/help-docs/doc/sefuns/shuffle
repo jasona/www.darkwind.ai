@@ -1,0 +1,14 @@
+SYNOPSIS
+        int *shuffle(int A, int B)
+
+DESCRIPTION
+	Returns an array of integers from 'A' to 'B' in random order.
+
+EXAMPLE
+	int *aiNums = shuffle(1, 10);
+
+        // aiNums will contain the numbers 1-10 in random order within the array
+        // eg. '({ 4, 2, 7, 5, 1, 9, 3, 6, 10, 8 })'
+
+SEE ALSO
+	random

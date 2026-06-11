@@ -1,0 +1,25 @@
+|YKOThe Darkwind world-wide market is a player driven economy system
+that allows players to sell things on a price they set. Players
+can sell things from each city's market (found near the main shop
+in each city). Other players may buy from the market from most any
+room on Darkwind.
+
+Commands involved in the market are:
+
+|YKBmarketcmds|YKO - The prompt to show all commands available for the market
+             system.
+
+|YKBmarketbuy #|YKO - This will allow a player to buy the item from the room
+             in which the player is in. The money must be on hand.
+
+|YKBmarketlist|YKO - This will display all items available for purchase on
+             the market.
+
+|YKBmarketshow #|YKO - This will display the description of the item that is
+             availabe on market.
+
+|YKBmarketmylist|YKO - This will show all the items that you have for sale
+             on the market this boot.
+
+|YKBmarketmysales|YKO - This will show you all the items that have been
+             bought from you this boot.

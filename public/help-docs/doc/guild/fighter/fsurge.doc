@@ -1,0 +1,7 @@
+Skill: fsurge      Timer: Healing      GL: 12    Cost: GL * 10
+
+This skill allows you to release a surge of adrenaline that boosts
+your endurance regeneration. After you use it, there is a 5 minute
+timer before you can use it again as you recover.
+
+Syntax is: fsurge

@@ -1,0 +1,21 @@
+|GKO================================================================
+                      |MKBSpirit Claws
+|GKO================================================================
+
+|YKOSpirit claws are a potent weapon that can be called forth
+by shamans with enough skill. They will remain for a good
+amount of time, but are not usable in wolf form.
+
+By default the claws are Medium.  If you
+want Large claws, try |YKB"claws large" |YKOor |YKB"claws blarge"|YKO. If
+you would like Small claws, try |YKB"claws small" |YKOor |YKB"claws
+bsmall".  |YKOThe |YKU"b" |YKOsignifies blunt claws, and will cause
+you to wield the Spiritual Paw, instead of the Spiritual
+Claws.
+
+NOTE: Shaman may summon and wield two claws/paws.
+
+
+|WKOUsable in form: |GKOCrinos & Man        |WKOCost:  |CKO150 sp
+|WKORestricted to: |MKBShaman               |WKOTimer: |CKOMedium
+|RKOSyntax: |YKBclaws                       |WKOType:  |CKOSupport

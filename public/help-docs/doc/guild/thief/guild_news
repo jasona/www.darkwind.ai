@@ -1,0 +1,50 @@
+        |BKB<<--|CKBWelcome to your Thiefly News|BKB-->>|000
+|YKBJune 29th, 2019|000
+
+|YK0Wow, what's this? More changes??
+|YK0
+|YK0As you may have seen from '|YKBhelp guilds|YK0', '|YKBhelp guilds archetypes|YK0',
+|YK0and '|YKBhelp guilds roles|YK0', Thieves are a Hybird guild excelling at
+|YK0the Specialist and Nuker roles.
+|YK0
+|YK0The poison room should be working mostly again. We're working how
+|YK0poison operates for Thiefs. With the new changes, you can purchase
+|YK0poison packets from the guild house. These will get stored on your
+|YK0character without you having to do anything. You can see how many
+|YK0you're carrying by using the "|YKBsc|YK0" command. See: "|YKBthelp poison|YK0"
+|YK0
+|YK0We've reduced the duration of the |RKBCritical Hit|YK0 ability and limited
+|YK0it to one strike per round.
+|YK0
+|YK0We've moved the majority of the damage |RKBClever Strike|YK0 does into the
+|YK0follow-up critical hit.
+|YK0
+|YK0There are two other new abilities: |RKBPilfer|YK0 and |RKBDeep Pockets|YK0.
+|YK0
+|YK0Pilfer will let you try and steal something off a humanoid mark.
+|YK0Right now, you can find some profession-related items. We'll be
+|YK0experimenting to see what makes sense reward-wise.
+|YK0
+|YK0Deep Pockets allows you to re-arrange what you're holding and
+|YK0increase your carrying capacity as you focus on smuggling as much
+|YK0of your... totally legitimate items as possible.
+|YK0
+|YK0
+|YK0I know there are still some decently big bugs and we're working
+|YK0through them as we get the cycles.
+|YK0
+|GKBUpcoming features:
+|YK0
+|YK0  |YKB* |YK0The poison system is going to be expanded. Some poisons will
+|YK0    be craftable via the profession system.
+|YK0  |YKB* |YK0Working on making hide/unhide cleaner and easier
+|YK0  |YKB* |YK0The rank system is going to be replaced by specialities.
+|YK0    Currently, I'm looking at Cutpurse, Burglar, and Plunderer.
+|YK0    |GK0-|YK0 Cutpurse will have an increase to roll, reduced cooldowns
+|YK0      on plant/pick, etc.
+|YK0    |GK0-|YK0 Burglars will get cheaper hide, better breakin, etc
+|YK0    |GK0-|YK0 Plunderers will likely get better pilfer/trick/circle
+|YK0
+|YK0  If you have ideas/feedback, send them my way. I won't guarentee
+|YK0  I'll include them, but I promise to read them.
+|YK0

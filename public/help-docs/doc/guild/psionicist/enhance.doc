@@ -1,0 +1,10 @@
+_______________________________________________________________________________
+"Enhance"         
+        This is a global power modifier. Casting it before another power
+        focuses the psionicist's mental energy, giving a guild level 
+        increase for purposes of damage, duration, etc of the next power
+	used.
+ 
+SP Cost:  10		Guild Level:  2		Potential Points:  2
+ 
+Command:  enhance

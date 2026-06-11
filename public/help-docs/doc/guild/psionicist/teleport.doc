@@ -1,0 +1,18 @@
+_______________________________________________________________________________
+"Teleport"         
+        This power has 3 uses. First, for a flat 75 sp, the psionicist
+        can teleport back to the guild hall. Second, for 10 sp per room,
+        the psionicist can set up a movement path of no more than his
+        glevel worth in rooms, and will appear at the end of the chain
+        without passing through each one. Third, it can be used in
+        conjunction with Mental Beacon to teleport back and forth between
+        a marked area for a short period of time. You may teleport back
+        to your own beacon, or to a shared beacon placed by another
+        Psionicist. Can be used to escape, to move about quickly, to
+        bypass aggressive monsters, to go somewhere without other players
+        knowing where you are going, to aid another Psionicist, etc.
+
+SP Cost:  75 / 10 / 150     Guild Level: 13       Potential Points:  5
+
+Command:  teleport guild, teleport dir,dir,...,dir, teleport beacon,
+          or teleport <name> beacon    (To go to <name>s shared beacon)

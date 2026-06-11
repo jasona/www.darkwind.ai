@@ -1,0 +1,15 @@
+Eviscerate - attack skill
+------------------------------------------------------------
+Eviscerate represents the blademaster swashbuckler's ability
+to swiftly strike a decisive blow. It deals hideous damage
+to the enemy--the stronger the enemy,the more damage it does.
+An eviscerating attack is usually used to finish off an
+already seriously wounded opponent, and should the attack
+fail to slay the enemy, the swashbuckler will find himself
+off-balance and disadvantaged in combat. Naturally, such a
+bold move cannot be repeated even on the densest of enemies.
+
+GL: 14
+SP: variable (60-300)
+command:  eviscerate <target> (defaults to opponent if in combat)
+duration: instant

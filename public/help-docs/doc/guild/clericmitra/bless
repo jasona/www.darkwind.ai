@@ -1,0 +1,7 @@
+SPELL NAME  : Bless
+SPELL SYNTAX: Bless <target>
+SPELL COST  : 35 SP
+DESCRIPTION : One of the most powerful gifts granted the Cleric by Mitra is her
+	      divine protection in the form of a glowing nimbus. The nimbus
+	      will protect its wearer with a strength and duration dependent
+	      upon the Cleric's devotion.

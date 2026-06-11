@@ -1,0 +1,85 @@
+Ranger Help for: powerlist
+===========================
+
+SUMMARY:
+Below is the complete learnable Ranger skill list, grouped by branch.
+Slot costs match the current Ranger skill tree.
+
+SURVIVAL:
+  Forage                          1 slot
+  Make Rope                       1 slot
+  Make Torch                      2 slots
+  Make Fish Trap                  4 slots
+  Make Tent                       2 slots
+  Camp                            free
+  Make Tools                      2 slots
+  Make Satchel                    4 slots
+  Nature Lore                     7 slots
+  Mix                             4 slots
+  Defend                          5 slots
+  Fortify                         8 slots
+  Treat                           9 slots
+
+CARTOGRAPHY:
+  Survey                          1 slot
+  Trailmark                       3 slots
+  Prospect                        3 slots
+  Mine                            free
+  Study Area                      7 slots
+  Trail Signs                     free
+  Echo                            6 slots
+  Trailblaze                      10 slots
+  Rest                            10 slots
+  Guide                           13 slots
+  Desert Survival                 14 slots
+  Arctic Survival                 14 slots
+  Claim                           15 slots
+
+HUNTING:
+  Run                             1 slot
+  Skin                            2 slots
+  Make Trophy                     3 slots
+  Reconnoiter                     6 slots
+  Make Snare                      10 slots
+  Stealth                         8 slots
+  Stalk                           9 slots
+  Camoflage                       11 slots
+  Hunt                            14 slots
+
+HUSBANDRY:
+  Assess                          2 slots
+  Calm                            6 slots
+  Attract                         8 slots
+  Teach                           6 slots
+  Locate                          9 slots
+  Animal Lure                     12 slots
+
+ATTACK:
+  Strike                          3 slots
+  Inspect                         5 slots
+  Gash                            6 slots
+  Sharpen                         5 slots
+  Compare                         free
+  Circle                          6 slots
+  Impale                          9 slots
+  Disarm                          7 slots
+  Improvise                       12 slots
+  Naturestrike                    15 slots
+
+ARCHERY:
+  Make Arrow                      2 slots
+  Flame Arrow                     free
+  Poison Arrow                    free
+  Tip Arrow                       free
+  Make Bow                        7 slots
+  Heartshot                       13 slots
+  Furyfire                        13 slots
+  Longfire                        13 slots
+
+TIP:
+Use 'ranhelp <skill name>' for details. The canonical names above now
+work directly, including multi-word names such as 'study area',
+'animal lure', 'make satchel', and 'desert survival'.
+
+=============================================================================
+SEE ALSO: skills, skilltree, learn, slots, glevels

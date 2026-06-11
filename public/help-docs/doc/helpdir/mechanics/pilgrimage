@@ -1,0 +1,20 @@
+Divine Pilgrimage
+
+Pilgrimage is a patron activity. After pledging to Mitra, Gaea, or Set, you
+may begin a pilgrimage and visit divine shrines before the omen-thread grows
+cold.
+
+Commands:
+
+  patron pilgrimage start
+  patron pilgrimage status
+  look token
+
+You must have a patron before beginning a pilgrimage. Completing one can earn
+patron favor and help tie your character more closely to the divine cycle.
+
+Related help:
+
+  help divine
+  help patron
+  help shrine

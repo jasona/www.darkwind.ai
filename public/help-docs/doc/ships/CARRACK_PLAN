@@ -1,0 +1,20 @@
+                    Deck Plans for the Carrack
+
+ Main Deck                 Cabin Deck               Cargo Deck
+
+*    1    4                   Crew                        %
+ \   |   /                  -------                    C--C
+  Foredeck                  *  |  %                    |  |
+     |                         |                       C--C
+  Aftdeck                Guest-|-Guest                 |  |
+ /   |   \                     |                       C--C
+3    2    *                 %  |  *                    %
+     |                      -------
+   Bridge                     Mess
+
+1: Forecastle              
+2: Sterncastle             
+3: Captain's Cabin
+4: Weapons Room
+*: Stairway between Main deck and Cabin deck
+%: Stairway between Cabin deck and Cargo deck

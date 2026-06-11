@@ -1,0 +1,17 @@
+
+Ranger Help for: enemy mammal
+=============================
+
+SUMMARY:
+Choosing mammal means your Ranger has a broad hatred for warm-blooded
+beasts that nurse their young and live by tooth, claw, hoof, or hide.
+
+This is a general-purpose animal choice. It may cover many ordinary beasts
+that are not better represented by a more specific race such as bear, cat,
+dog, deer, horse, or rodent.
+
+COMMAND:
+  setenemy mammal
+
+=============================================================================
+SEE ALSO: enemy, setenemy and terrains

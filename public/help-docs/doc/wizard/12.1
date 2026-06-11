@@ -1,0 +1,27 @@
+                        |BKB--=|CKBSpecial Event - Halloween|BKB=--|WK0
+
+Traditionally, Halloween becomes an Open PK night. In order to facilitate
+this, there should be a backup made before the special boot. Then, the
+following variables should be changed in /secure/include/login.h:
+
+------
+
+#define LOGIN_OPENPK 0
+
+  to:
+
+#define LOGIN_OPENPK 1
+
+------
+
+#define LOGIN_BANNERS STANDARD_BANNERS
+
+  to:
+
+#define LOGIN_BANNERS HALLOWEEN_BANNERS
+
+------
+
+Toys are located in /holidays/halloween/
+  
+

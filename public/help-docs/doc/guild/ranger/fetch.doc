@@ -1,0 +1,18 @@
+
+Ranger Help for: fetch
+======================
+
+SYNTAX:      fetch <what> from <whom>
+USAGE:       Any terrain
+SLOT COST:   NA
+BASE EXP:    NA
+BASE SP:     variable
+
+SUMMARY:    
+This task allows a follower to fetch an item off of the ground in the
+same room of any player that is in the same domain. Communicate with
+the player you are having your fetch from to have the item on the
+ground and use the correct syntax. If the player is where the follower
+can reach them, the item will be fetched. This is a medium task so
+only fairly smart followers can learn it.
+

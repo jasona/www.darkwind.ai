@@ -1,0 +1,20 @@
+                              Refining
+
+    Refining allows you to break down equipment to base materials. What
+you receive after refining will depend on the material the equipment
+is composed of. If the equipment isn't made of cloth, metals, or leathers,
+it will not be refined. If you '|GKBrefine verbose|000' while in the refinery,
+it will tell you the item name as well what was recovered. If you simply 
+type '|GKBrefine|000' it will just list what was recovered.
+
+    The refinery is in the profession building, 4e, n from Center of Town.
+Refining is a good way to turn unused equipment into saved profession
+materials for crafting, work orders, recipe cards, and guildcraft.
+
+
+    Most equipment that contains metal will break down to their base
+metals. Leather equipment will always break down into Cow Leather. Cloth
+equipment will always break down into Cotton Bolt(s). There is always
+material loss while refining, so do not be surprised by that fact. If
+you identify an object (using an identify scroll for example), you will
+see if the object refines into anything, and what the result will be.

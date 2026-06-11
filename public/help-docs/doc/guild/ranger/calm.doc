@@ -1,0 +1,17 @@
+
+Ranger Help for: calm
+=====================
+
+SYNTAX:      calm <target>
+USAGE:       Any terrain
+SLOT COST:   9
+BASE SP:     45 sp
+SKILL TYPE:  defensive
+
+SUMMARY:
+This skill allows a Ranger to use his nature-like behavior to overcome
+hesitation by animals and calm it. A calmed animal stops attacking, 
+and anything attacking the animal stops attacking. There is a chance
+that the animal will get scared and start attacking again. A Ranger
+cannot calm his or her enemy race.
+

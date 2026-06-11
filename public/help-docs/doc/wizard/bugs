@@ -1,0 +1,59 @@
+The bug reporting system on darkwind is quite featured and unique.  This document
+will attempt to show some of the commands associtated with the bug system.  When
+a player submits a bug|typo|idea|emote, a message is transmitted to the balance 
+line for assignement.  Currently, most assignements are executed by Zureal, or 
+other IMP+.  
+
+To see what bugs are currently not assigned to anyone type:
+
+		listunassigned bug|typo|idea|emote|all
+
+To see which bugs are assigned to you type:
+
+		listassigned bug|typo|idea|emote|all
+
+Before you can close a bug assigned to you, you must first respond to that sumission.
+To respond, type:
+
+		respond bug|typo|idea|emote <sub ##>
+
+Once you have responded to the submission and it has been fixed|added|rejected|etc you
+then close the submission by typing:
+
+		closesub bug|typo|idea|emote <sub ##>
+
+If you want to see some general statistics about the overall submission situation type:
+
+		listtally bug|typo|idea|emote|all
+		listassignments bug|typo|idea|emote|all all|top open|closed|total <name>
+
+To see what another wizard has assigned to them type:
+
+		listassigned bug|typo|idea|emote|all <wizard name>
+
+If you want to close a submission that was entered by error or any other reason that the
+sumission should be closed without response, type:
+
+		removesub bug|typo|idea|emote <sub ##>
+
+To simply display the text of a bug type:
+
+		lst bug|typo|idea|emote <sub ##>
+
+To review all entries that are associated with a specific submission, type:
+
+		listhistory bug|typo|idea|emote <sub ##>
+
+If you are a member of the balance group to assign the initial sub or need to reassign
+a submission to another wiz, use:
+
+		assignsub bug|typo|idea|emote <sub ##> <wizard name>
+		reassignsub bug|typo|idea|emote <sub ##> <wizard name>
+
+If you need to edit a current submission type:
+
+		editsub bug|typo|idea|emote (sub ##>
+
+
+
+This file written by Zureal 						10-06-01 12:03a

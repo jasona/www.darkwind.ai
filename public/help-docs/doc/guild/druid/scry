@@ -1,0 +1,20 @@
+|GKB-- Scry ------------------------------------------------------|000
+
+A druid may use the Tekali current to create a scrying pool --
+a tiny, short-lived pool of water which can be
+used to magically locate others.  This is not
+foolproof -- even a druid who has both mastered
+this invocation and is very wise may be detected by
+a perceptive target, and the effort involved in
+scrying is not trivial.  Yet it is still considered
+a useful talent by those who practice it. Scrying
+only works if both you and the object of your
+attention are outside, on solid ground, and in
+natural settings.
+
+|CKBCommand:      |000 scry <target>
+|CKBBase Cost:    |000 20 Tekali nwyfre
+|CKBBase Recovery:|000 slow
+|CKBBase Effect:  |000 locate
+|CKBBase Duration:|000 instant
+|CKBGuild Level:  |000 5

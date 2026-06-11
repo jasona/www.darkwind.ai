@@ -1,0 +1,142 @@
+|CKBSpecialization
+|WKO==============
+
+|YKOSpecialization allows a player to gain extra bonuses in combat at the cost
+of flexibility. Over time, a specialist's skill with his chosen weapons or
+armors will increase, while his ability to use other kinds of equipment
+will decrease due to disuse.
+
+There are two areas in which a player may specialize: weapons and armour.
+While similar, there are a few differences in the way specialization works
+in the two cases that are worth noting.
+
+
+|CKOWeapon Specialization
+|WKO---------------------
+
+|YKOOn DarkWind, weapon types are characterized by their sizes, damage types,
+and miscellaneous characteristics. The following lists give some examples
+of typical weapons and their characterizations:
+
+|WKBSize:
+  |CKBSmall weapons:   |GKBdaggers, saps, small short swords, hand axes
+  |CKBMedium weapons:  |GKBlarger short swords, maces, clubs, longer swords
+  |CKBLarge weapons:   |GKBlongswords, battleaxes, long maces, shorter staves
+  |CKBHuge weapons:    |GKBawl pikes, two-handed swords, greatbows, long staves
+
+|WKBDamage type:
+  |CKBSlash:           |GKBmost sword variants, naginata, some polearms
+  |CKBPierce:          |GKBdaggers, rapiers, spears, bows, wooden stakes
+  |CKBBlunt:           |GKBstaves, maces, clubs, hammers, rocks
+  |CKBCleave:          |GKBaxes, halberds, cleavers, some polearms
+
+|WKBMiscellaneous:
+  |CKBMissile:         |GKBbows, crossbows, slings, throwing daggers, darts
+  |CKBPole:            |GKBmost staves, halberds, spears, tridents
+
+
+|YKONote that weapons may have multiple damage types if they can be used in
+muliple ways. For example, shortswords can generally be used as slashing
+and also piercing weapons. In addition, size and miscellaneous character-
+istics affect a player's ability to dual wield certain weapons. Normal
+sized players can dual wield one large (or smaller) weapons, and one
+medium (or smaller) weapon. Players who are smaller or larger due to race
+may find their choices more limited. Missile and pole weapons
+can never be dual wielded.
+
+The first step in weapon specialization is to pick a size. Although you
+only pick one size category, you will automatically get the next larger
+size as well in your specialization. Every specialist must pick a size.
+Optionally, a specialist may pick one or two damage types. Choosing
+one damage type will give a bonus with any weapon that has that damage
+type, even if it's in combination with another type. If you pick two types
+the weapon used must have BOTH damage types to get a bonus. Finally, a
+specialist may also choose a miscellaneous type, which further restricts
+the bonus to those weapons with that miscellaneous characteristic.
+
+The nature of weapon specialization is that the more precisely one
+specializes, the larger the bonus he gets. The corresonding penalty for
+using a weapon not in his specialization is also larger. So, while a
+specialization in large, cleave, pierce, polearm may give a very large
+bonus when using some halberds, there is a tradeoff in flexibility.
+
+In order to specialize, you must find the specialization trainer in
+Darkwind city and train in the type desired. Once you've specialized, you
+will gain experience using that weapon. Every so often you may notice that
+your skill is improving with that weapon as well. When you have accumu-
+lated enough experience with your specialized weapon type, you can return
+to the training hall and advance your weapon specialization level.
+
+At some point, you may choose to change your weapon specialization.
+Depending on the difference between your current specialization and your
+desired one, you may find that your skill level drops somewhat when
+changing your specialization. This can be done at the training hall as
+well.
+
+
+|CKOArmour specialization
+|WKO---------------------
+
+|YKOArmour specialization works much like weapon specialization but the
+choices are much smaller. You may choose one of four kinds armor:
+
+  |CKBclothes:   |GKBnormal clothing, padded armours, small shields
+  |CKBlight:     |GKBleather, studded leather, medium shields
+  |CKBmedium:    |GKBchain mail, scale mail, large shields
+  |CKBheavy:     |GKBplate mail, splint mail, banded mail, large/huge shields
+
+|YKOThe effect of armour specialization is much more pronounced in the lighter
+varieties of armour than the heavier ones due to the constricting nature
+of such heavy armours. Experienced specialists in lighter armour varieties
+have been known to dodge and deflect blows with such skill that their
+overall defense rivalled that of knights wearing the heaviest suits of
+plate armour.
+
+Armour specialization is trained in the same training hall as weapon
+specialization in DarkWind city.
+
+|CKBWhy Specialize?
+|WKO---------------
+
+|YKOSpecialization is NOT required to play DarkWind. Generally speaking
+specialization trades off effectiveness using all equipment against
+increased effectiveness using a smaller set of equipment.
+
+In the case of weapons, selecting more types and miscellaneous
+characteristics will increase the bonus given, but will also increase
+the penalties for using out-of-spec equipment, and also decrease the
+number of in-spec items available. For armours, the bonus or penalty
+for specialization is higher for the lighter types and lower for the
+heavier types (in order from highest to lowest: clothes, light, medium,
+heavy). Note that in the case of armours, even if a piece of armour
+feels awkward to you, it will usually still contribute substantially
+to your defensive abilities over being naked (unless that armour plain
+sucks to begin with).
+
+While specialization does give substantial bonuses in combat, it is
+worth noting that other factors affect offense and defense. Specific
+to equipment use, certain unique items may be so powerful as to dwarf
+the effects of specialization, and may be worth using despite being
+awkward.
+
+|CKBRaising Specialist Level
+|WKO------------------------
+
+|YKODuring the course of adventuring, your will gain experience in your
+specilized weapon and armour. Occasionally, you will find that you
+notice yourself becoming better in the use of your equipment. When you
+reach the point that you can no longer advance without training, go
+to the combat trainer in DarkWind city and advance your weapon or
+armour specialization level.
+
+You will only gain experience in your specialized weapon if the weapon
+you are using as your main weapon is in your specialized type (you gain
+the benefits of specializion for both weapons though, for dual wielders)
+and you will only gain experience in your specialized armour if you
+wear the armour type you're specialized in. The more pieces of armour
+you wear in that type, the faster your specialization will advance.
+Additionally, you can only gain experience in your specializations by
+fighting in reasonably challenging combats. If you fight monsters that
+you easily overwhelm, you will not progress much. Finally, wisdom and
+intelligence influences how fast you learn how to use your equipment
+as well.

@@ -1,0 +1,10 @@
+SPELL NAME  : Turn Undead
+SPELL SYNTAX: Turn <target>
+SPELL COST  : Varies
+DESCRIPTION : This spell allows the cleric to channel his powers of
+              goodness in order to drive away undead creatures.  If
+              the cleric is significantly more powerful than the target
+              undead creature, it will be crushed under the overwhelming
+              power of good the cleric possesses.
+              Wisdom also helps in this spell.
+

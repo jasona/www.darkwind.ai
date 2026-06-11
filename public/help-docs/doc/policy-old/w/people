@@ -1,0 +1,20 @@
+Command: people
+
+List fact of all players:
+
+What internet number they call from.
+The current name.
+The level of the player.
+The age of the player (m=minutes, h=hours, D=days).
+Idle flag 'I' if the player has been idle for more than 5 minutes.
+Where they are.
+
+There is also shown the number of active players, number of commandes per
+second executed (averaged over the last 15 minutes) and number of
+lines compiled per second (averaged of the last 15 minutes).
+This information is only displayed if you are of demigod level or above.
+
+You can type people wiz or people players to get just a list of wizards or
+just a list of players.
+
+See also: w/wizlist

@@ -1,0 +1,18 @@
+Ranger Help for: skin
+=====================
+
+SYNTAX:      skin
+USAGE:       Any terrain
+SLOT COST:   NA
+BASE SP:     20
+SKILL TYPE:  hunting
+
+SUMMARY:
+This skill allows a Ranger to skin a corpse, harvesting useful materials
+from a slain creature. The Ranger must have a slash-type weapon wielded
+and a corpse present in the room.
+
+Skinning field-dresses the corpse into Ranger survival stores instead
+of loose inventory clutter. It can add raw meat to camp stores and
+hide scraps or sinew to wildcraft supplies. These materials support
+camp cooking, camp tending, make satchel, and other survival work.

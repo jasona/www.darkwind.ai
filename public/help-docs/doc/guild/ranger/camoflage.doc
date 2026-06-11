@@ -1,0 +1,20 @@
+
+Ranger Help for: camoflage (camo)
+=================================
+
+SYNTAX:      camoflage/camoflage <target>
+USAGE:       forest,plains,swamp,desert,jungle,hills,road,beach,
+             mountain,arctic,barren,outside,underground
+SLOT COST:   11
+BASE SP:     35 sp
+SKILL TYPE:  defensive
+
+SUMMARY:    
+This skill allows a Ranger to conceal him or herself in the surrounding
+terrain. A Ranger can also conceal other players as well. Any concealed
+player will remain concealed until they perform any action besides:
+(look,users,sc,hp,inv,i,inventory,who,rangers,ran or eran). Any commands
+besides the ones listed here will cause the player to become unconcealed.
+A concealed player is invisible to all players except for Rangers that
+have a higher wisdom and wizards+. 
+

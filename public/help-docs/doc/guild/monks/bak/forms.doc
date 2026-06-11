@@ -1,0 +1,25 @@
+|YK0++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|GKB
+                        MONK FIGHTING FORMS
+|YK0++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+|YKB'The power to challenge ones beliefs lies within us all, only
+when we awaken it do we truly advance.'|WK0 - |RKBMaster Shal Wei
+|YK0
+Monks are highly capable fighters and can change their fighting
+stance to accomodate different fighting situations. There are 8
+forms available and some powers are only usable when that form
+has been activated.
+
+Further details on each form are found under the helpfile for the
+creature.
+
+The |GKBmonkforms |YK0command provides current cost and levels at 
+which each respective form is achieved. As well as the command
+syntax.
+
+|YK0All forms can be ceased by utilizing the |GKBEndform |YK0command.
+
+|YK0These forms are: |GKBRat|YK0, |GKBSpider|YK0, |GKBMonkey|YK0, |GKBSnake|YK0, |GKBCrane|YK0,
+|GKBTiger|YK0, |GKBPhoenix|YK0 and |GKBDragon|YK0.
+|YK0
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

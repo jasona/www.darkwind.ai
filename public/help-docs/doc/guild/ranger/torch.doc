@@ -1,0 +1,17 @@
+
+Ranger Help for: torch
+======================
+
+SYNTAX:      torch arrow/bolt
+USAGE:       forest,plains,jungle,swamp,beach
+SLOT COST:   5
+BASE SP:     15 sp
+SKILL TYPE:  arrow
+
+SUMMARY:    
+This skill allows a Ranger to take an arrow or bolt and set it a blaze.
+Flaming arrows do a good deal more damage than plain or other enhanced
+arrows or bolts. Arrows are used in shortbows and longbows, while bolts
+are used in crossbows. Flaming arrows only last for so long, and then 
+they burn up.
+

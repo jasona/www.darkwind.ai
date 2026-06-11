@@ -1,0 +1,17 @@
+Ranger Help for: train animal
+===============================
+
+SYNTAX:      train <follower> <trick>
+USAGE:       Any terrain
+SLOT COST:   7
+BASE SP:     variable
+SKILL TYPE:  husbandry
+
+SUMMARY:
+This skill allows a Ranger to teach their bonded animal follower a new
+trick. The available tricks are: power, speed, senses, dart, unleash,
+fetch, deliver, and seek. Not all followers can learn all tricks, as
+some require a certain level of intelligence. The smarter the follower,
+the more tricks it can learn. Training takes time and patience, and
+the chance of success depends on the Ranger's charisma and the
+follower's intelligence.

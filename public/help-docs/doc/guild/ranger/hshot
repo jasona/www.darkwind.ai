@@ -1,0 +1,19 @@
+Ranger Help for: heartshot
+==========================
+
+SYNTAX:      heartshot <target>
+USAGE:       Any terrain
+SLOT COST:   14
+BASE SP:     variable
+SKILL TYPE:  bow
+
+SUMMARY:
+This skill allows a Ranger a special attack with crossbows. The Ranger
+takes an extra carefully aimed shot for the target's heart. The Ranger
+must be wielding a crossbow and carrying at least one bolt.
+
+Heartshot uses the best bolt available and is intended as a finishing
+shot. It deals heavy single-target damage based on dexterity, Ranger
+progression, crossbow quality, and bolt quality. A poor shot still clips
+the target for partial damage, while a clean hit is much stronger.
+Wounded targets are especially vulnerable.

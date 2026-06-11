@@ -1,0 +1,8 @@
+SPELL NAME  : Spiritual Hammer
+SPELL SYNTAX: Hammer
+SPELL COST  : 10+5*GL SP
+DESCRIPTION : This spell calls forth the powers of good and embodies
+              them in the form of a great hammer. The hammer is not 
+              permanent, but instead, lasts for a duration based upon the
+              Cleric's guild level. You may 'unsummon' your hammer, should
+              you be so inclined.

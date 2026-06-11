@@ -1,0 +1,37 @@
+Clans: Warfare
+---------------
+
+The clan system allows two clans to agree to go to war with each other.
+This decision is made by the leader of each clan. All wars are set
+in duration, with the smallest war allowed being 5 days. Please read
+the information in "help clan_cmds" for details about starting a war.
+
+Once a war starts, it is impossible to initiate new members into the
+clan and current members of the clan aren't allowed to leave. There
+are no exceptions to this rule.
+
+During a war, clans gain points. The points are gained by killing
+members of the opposing clan. All kills are real, just like in PK.
+
+The number of points awarded per kill is largely based by the level
+difference between the killer and the victim. Members who kill
+enemies of greater or equal level than themselves receive more points
+than members who kill enemies at lower levels. A clan is much more
+likely to win a war if everyone goes after the hardest opponent they
+can successfully kill, rather than going after the weakest opponent
+over and over.
+
+During a war clan members can look at ongoing war statistics via
+the 'cstat' command. After a war, a variety of details are saved
+and can be accessed via the 'cwar' command.
+
+There is no way to stop a war early. Once a war starts, the clans
+involved must deal with it. As mentioned in 'help clans', normal
+PK status is ignored during a war. Non-PKers can, and will, be
+killed during a clan war. Of course, Non-PKers can kill as well.
+
+Enjoy, and may the best clan win.
+
+Please see "help clans" for a basic overview.
+Please see "help clans_basics" for a more detailed intro to clans.
+Please see "help clans_cmds" for clan command information.

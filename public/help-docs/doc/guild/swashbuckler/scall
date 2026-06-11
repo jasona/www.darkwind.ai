@@ -1,0 +1,23 @@
+Call to Arms - teamwork skill
+------------------------------------------------------------
+Although many swashbucklers are loners, all are bound to
+each other by mutual respect.  When swashbucklers come
+together to fight as a team, each becomes more effective
+than he would be individually.  The more swashbucklers
+gather, the greater the improvement when they fight in
+tandem.  When a group of swashbucklers gather, one of them,
+usually the leader, will issue a call to arms.  Each
+swashbuckler who hears the call will join in, both adding
+to and sharing in the benefits of the call.  Swashbucklers
+who cannot give the call to arms due to inexperience can
+still add to the effect of others' calls, while benefitting
+themselves.  Once the call is made, the effect will
+continue for the duration even if the group disperses. The
+effect of the original call to arms can be renewed
+periodically in a smaller group, as long as it is done
+before the effect expires.
+
+GL:  5
+SP: 30
+command:  scall
+duration: long

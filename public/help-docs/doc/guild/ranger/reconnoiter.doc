@@ -1,0 +1,16 @@
+
+Ranger Help for: reconnoiter(recon)
+===================================
+
+SYNTAX:      reconnoiter <direction>/reconnoiter far <direction>
+USAGE:       Any terrain
+SLOT COST:   7
+BASE SP:     40 sp
+SKILL TYPE:  knowledge
+
+SUMMARY:    
+This skill allows a Ranger to take in information, such as sound, smells
+and keen eyesight to get an idea of what creatures are in the direction
+that the Ranger reconnoiters. Extra perceptive Rangers can sense 
+far(two rooms aways).
+

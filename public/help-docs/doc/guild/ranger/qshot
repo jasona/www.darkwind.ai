@@ -1,0 +1,16 @@
+Ranger Help for: quickshot
+==========================
+
+SYNTAX:      quickshot <target> or qshot <target>
+USAGE:       Any terrain
+SLOT COST:   6
+BASE SP:     variable
+SKILL TYPE:  bow
+
+SUMMARY:
+This skill allows a Ranger to fire a rapid volley of arrows at a
+target. The Ranger sacrifices accuracy for speed, firing multiple
+shots in quick succession. Each individual hit does less damage than
+a carefully aimed shot, but the combined effect of multiple arrows
+can be devastating. The number of arrows fired depends on the
+Ranger's dexterity and proficiency with the skill.

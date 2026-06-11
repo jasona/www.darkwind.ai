@@ -1,0 +1,18 @@
+Ranger Help for: concealment
+=============================
+
+SYNTAX:      conceal
+USAGE:       forest,plains,swamp,desert,jungle,hills,road,beach,
+             underground,mountain,arctic,barren
+SLOT COST:   8
+BASE SP:     25
+SKILL TYPE:  stealth
+
+SUMMARY:
+This skill allows a Ranger to hide using natural camouflage, blending
+into the surrounding terrain. The Ranger must not be in combat to use
+this skill. While concealed, the Ranger is invisible to most creatures
+and players. Moving or initiating combat will break the concealment.
+Concealment is a prerequisite for the ambush skill. The effectiveness
+depends on the Ranger's dexterity, skill level, and the type of
+terrain. Some terrains offer better natural cover than others.

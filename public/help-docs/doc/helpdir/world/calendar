@@ -1,0 +1,46 @@
+|YKODarkwind's calendar is based on a 300 day year, Each Day is
+approximately 20 hours, and 1 week is a ten-day long.  There
+are 3 ten-day in a month (or 30 days), and 10 months in a
+year.  There are three moons that orbit high above Geshtei
+all of which are distinctly diferentiable because of their
+colors.  The largest is Dailos, also known as the Magenta moon.
+The next largest is Markas, the Red moon, and the smallest,
+Tekal, is called the Green moon.
+ 
+The names of the days of the week and months of the year
+are as follows:
+ 
+        |WKBDays of the week
+ 
+|GKOShort Name      Full Name
+|WKO-----------     --------------------------------
+|CKOGodsday         |CKBDay of the Gods
+|CKOMoonday         |CKBDay of the Placid Moon
+|CKOSeasday         |CKBDay of the Open seas
+|CKOWindsday        |CKBDay of the Whispering Winds
+|CKOTreesday        |CKBDay of the Towering Trees
+|CKOHearthday       |CKBDay of the Hearth Fire
+|CKOStarday         |CKBDay of the Blinking stars
+|CKOSunday          |CKBDay of the Living Sun
+|CKOPeaksday        |CKBDay of the Soaring Peaks
+|CKOMarketday       |CKBDay of the Golden Harvest
+ 
+ 
+        |WKBMonths of the Year
+ 
+|GKOMonth           Nickname
+|WKO-----------     ----------------------
+|CKOHammer          |CKBDeepwinter
+|CKOAlturiak        |CKBThe Claws of Winter
+|CKOChes            |CKBThe Claws of Storms
+|CKOTarsakh         |CKBThe Melting
+|CKOMirtul          |CKB Time of Flowers
+|CKOKythorn         |CKBSummertide
+|CKOFlamerule       |CKBHighsun
+|CKOMarpenoth       |CKBLeafall
+|CKOUktar           |CKBThe Rotting
+|CKONighal          |CKBThe Dawning Down
+ 
+|YKOThe commands |YKB'time' and 'date' |YKOwill show you the current time and
+date here on Darkwind.  The year is calculated from the time Darkwind
+first opened.

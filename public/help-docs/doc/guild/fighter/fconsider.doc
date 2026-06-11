@@ -1,0 +1,5 @@
+Skill: fconsider   Timer: None         GL:  1    Cost: 5
+Use this when you are not sure of an opponent. It will rate you against it
+in experience and stats.
+
+Syntax is: fconsider <target>

@@ -1,0 +1,24 @@
+Divine Shrines
+
+Shrines are places where divine patronage becomes visible in the world. At a
+shrine you may pray or tithe, and shrine visits can also advance a pilgrimage.
+
+Commands:
+
+  pray at shrine
+  tithe <amount> at shrine
+  look shrine
+  patron pilgrimage status
+
+Shrines can currently be found at:
+
+  Mitra  The Temple of Mitra in DarkWind City.
+  Gaea   The rose garden near the chapel.
+  Set    The black altar in the temple of Qazaash.
+
+Related help:
+
+  help divine
+  help patron
+  help omens
+  help pilgrimage

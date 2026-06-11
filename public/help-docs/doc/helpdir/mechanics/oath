@@ -1,0 +1,24 @@
+|YKOYour blood oath gives you several abilities related to the person you
+have sworn the oath with.  Available commands are:
+ 
+|YKBotell|BKB:    |CKBThis allows you to send a message over your oath line.  It is
+          essentially a free tell.
+ 
+|YKBoemote|BKB:   |CKBWhen given with <msg> it will display <yourname> <msg>.  If you
+          are Brunhilda and you type oemote "is fighting an orc" then the
+          person you are sworn to will see 'Brunhilda is fighting an orc'.
+ 
+|YKBohist|BKB:    |CKBThis lists the past 15 messages on the oath channel.
+
+|YKBolook|BKB:    |CKBThis ability will allow one oath taker to see where the other is
+          located.  It costs a nominal (5) amount of spell points to use.
+ 
+|YKBoinspire|BKB: |CKBThis may only be performed when both blood oath takers are in
+          the same room.  It will inspire you, adding to your combat abilities
+          and your statistics for a time.
+ 
+|YKBrenounce|BKB: |CKBIf you 'renounce oath' your blood oath will be cancelled.  You will
+          suffer the penalties for failure to uphold your oath and in addition
+          will lose respect and be marked as an oathbreaker.  You may remove
+          the oathbreaker status by swearing a new oath, but must earn the
+          lost respect back yourself.  Do not take oath renunciation lightly.

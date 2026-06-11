@@ -1,0 +1,11 @@
+                       |BKB-= |CKBTrap Room |BKB=-
+               
+|MKOThis command will allow you to quickly construct a lethal trap
+that can be placed in a room.  Anybody, except Thieves, that 
+attempt to leave the room, or pick up the trap will set it off,
+causing damage to that person.   Any Thief can remove a trap with 
+'disarm trap'.
+
+
+|CKOGLVL required: |GKB10
+|CKOSyntax: |YKOtrap                 |CKOCost: |WKO~35

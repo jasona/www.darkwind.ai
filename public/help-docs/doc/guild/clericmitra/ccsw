@@ -1,0 +1,7 @@
+SPELL NAME  : Cause serious wounds
+SPELL SYNTAX: -Csw <target>
+SPELL COST  : 27 SP
+DESCRIPTION : The devote Cleric has the power to call upon the power of Mitra
+	      to inflict damage, as well as to heal it. By force of will and
+	      through the Cleric's devotion, Mitra will inflict serious wounds
+	      upon the target of her wrath.

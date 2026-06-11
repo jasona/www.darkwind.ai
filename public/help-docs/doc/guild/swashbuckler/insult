@@ -1,0 +1,18 @@
+Insult - offensive trick
+------------------------------------------------------------
+The flip side of the swashbuckler's charming wit is his
+ability to taunt and enrage an opponent, making them more
+careless and prone to mistakes.  If the swashbuckler is
+successful in his taunt attempt, the foe's wild swings will
+be easier to dodge, and his defense will be easier to
+penetrate.  The chance of success depends largely on the
+swashbuckler's charisma.  Note that an enraged opponent,
+while hitting much less often, will hit *harder* than usual
+when it does connect.
+
+To customize your taunt, use 'setinsult <taunt>'.
+
+GL:  6
+SP: 40
+command:  insult <who> (defaults to opponent if in combat)
+duration: medium

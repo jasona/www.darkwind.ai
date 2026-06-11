@@ -1,0 +1,83 @@
+void set_heartbeat_function(string sEffectID, int iTicks,
+ status tReverse, mixed xTickMessage, mixed xEndMessage,
+ string sFunction, mixed *axVariables, int iNoTick)
+
+sEffectID - this should be a unique ID. it does a check
+-- on that ID, and fails if it's already in use.
+
+iTicks - how many heartbeat ticks will it go for.
+
+tReverse - reverse whatever arg you called onto the player.
+-- this means the value is only set at the start, and removed
+-- at the end, and not every tick.
+
+xTickMessage - will give a room_message(({TO}),ENV(TO),
+-- sTickMessage) each tick. if you don't wish to have a message,
+-- you need to put in a 0.
+
+xEndMessage - will give a room_message(({TO}),ENV(TO),
+-- xEndMessage) at the last tick. if you don't wish to have
+-- a message, you need to put in a 0.
+
+sFunction - the function that will be called on TO.
+-- Examples: "add_con", "receive_damage"
+
+axVariables - the args that will get passed to the sFunction.
+-- Examples: ({ -10 }),({10,WEAPON_PIERCE,0,TP})
+
+iNoTick - if set to 1, the function will only be called at the
+-- the start, and not every tick and end. if set to 0, the function
+-- will be called every tick, unless tReverse is also set. if set
+-- to -1, the function will only be called on the last tick, and
+-- not at the start or every tick. if set to 1 or -1, tReverse
+-- should never be set, as they are contradictory.
+
+The room_message for the messages will only use the target object
+for the messages, and not the object instigating the action. That
+is why it doesn't have a start message, that would still be done
+in a guild command, room, object, etc.
+
+The functions that can make use of tReverse are the simple functions
+where you only set and remove single args. For functions that require
+more args, you would make use of iNoTick, and make 2 unique calls
+with opposite values.
+
+Example calls:
+oTarget->set_heartbeat_function("thomas_test",15,1,"$N $vfeel\
+ weaker.","$N $vfeel better.","add_con",({-10}),0);
+oTarget->set_heartbeat_function("thomas_test_dot",15,0,"$N $vare\
+ wracked by pain!","$N $vare no longer wracked by pain.",
+"receive_damage",({100,DAM_MAGIC,0,TP}),0);
+
+Example calls using iNoTick:
+oTarget->set_heartbeat_function("thomas_MR_start",30,0,0,0,
+ "add_natural_resistance",({ DAM_MAGIC, 10 }),1);
+oTarget->set_heartbeat_function("thomas_MR_end",30,0,0,
+ "$N $vare no longer protected against magic!",
+"add_natural_resistance",({ DAM_MAGIC, -10 }),-1);
+
+mapping query_heartbeat_functions() will return the mapping
+so you can check for unique IDs.
+
+int check_heartbeat_function(string sEffectID) will check if
+the "sEffectID" is an active heartbeat function on the living
+object. Returns 0 if it is not present, 1 if it is.
+
+void clear_heartbeat_function(string sEffectID)
+  This function will try and clear the heartbeat function.
+  It will change the ticks to 0, and end the function,
+  doing whatever the function would have done.
+  If you have multiple functions like a _start and _end,
+  you should clear them all at the same time.
+
+If a player logs off while the function is running, it will
+pick up the ticks from where it left off, while applying the args
+again as if it had just started. Therefor, make sure that any
+args you set on a player are ones that clear when a player
+logs off, like add_<stat>, add_natural_resistance, etc.
+If you are not sure, test it :)
+
+To register an effect as a *debuff* (visible in the player's `buffs`
+list but not removable via `clearbuff`), add an entry to
+GLOBAL_DEBUFF_MAPPING in secure/include/buffs.h. Effects not in either
+mapping remain invisible to the `buffs` UI but still tick down normally.

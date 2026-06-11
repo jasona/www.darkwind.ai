@@ -1,0 +1,65 @@
+|GKB-- Sacred Grove -----------------------------------------------|000
+
+A Sacred Grove is a druid's living anchor in the wild.  Plant it
+once, tend it over time, and use it as a place for ritual work,
+recovery, and return.
+
+|GKB-- Commands ---------------------------------------------------|000
+
+  |CKBgrove plant                         |000 Root your grove here.
+  |CKBgrove                               |000 Show grove status in this room.
+  |CKBcommune                             |000 Return to your own grove.
+  |CKBcommune to <name>                   |000 Visit a mature public grove.
+  |CKBgroves                              |000 List mature groves open to guests.
+  |CKBgrove stash                         |000 Legacy stash status.
+  |CKBout                                 |000 Leave your inner sanctum.
+
+|GKB-- Planting ---------------------------------------------------|000
+
+Use |CKBgrove plant|000 in the wild.  City rooms and inside rooms
+cannot hold a Sacred Grove.  The grove token remains in that
+wilderness anchor; nurture and regen pulses begin there.
+
+|GKB-- Growth -----------------------------------------------------|000
+
+  |CKBStage 0-2|000  Young grove.  Anchor only.
+  |CKBStage 3  |000  Mature grove.  Commune enters an inner sanctum.
+  |CKBStage 4  |000  Ancient grove.  Inner sanctum is safe sanctuary.
+
+When the grove becomes mature, |CKBcommune|000 takes you into a
+private spirit-room tied to your grove instead of the shared
+wilderness tile.  Use |CKBout|000 to step back to the wild anchor.
+
+Ancient groves carry full sanctuary law.  Younger mature groves use
+the same kind of spirit-room, but combat is not forbidden there.
+
+|GKB-- Guests -----------------------------------------------------|000
+
+Guests may use |CKBcommune to <name>|000 once the host grove is
+mature.  Use the full player name if it has spaces, for example:
+
+  |CKBcommune to anna marie|000
+
+Guests share the host's inner sanctum.  Guest travel fails if the
+anchor is barred, no-teleport, or otherwise unsafe for grove travel.
+Two PK druids who are not in the same party cannot commune to each
+other's groves.
+
+|GKB-- Profession Materials ---------------------------------------|000
+
+Druid rites now use saved profession materials instead of the old
+Grove stash.  Use |CKBreagents|000 and |CKBreagents search <item>|000
+to inspect what you carry.  Any old stash contents are migrated into
+profession materials when possible.
+
+Leaving the Druid guild removes your grove registration, destroys the
+anchor token, and releases the sanctum.
+
+|GKB-- Limits -----------------------------------------------------|000
+
+You cannot commune while fighting or from a no-teleport room.  Guest
+commune also refuses barred paths such as guild halls, player housing
+paths, and similar protected areas.
+
+|RKBNote:|000 |CKBcommune|000 and |CKBgrove plant|000 use room
+spell-limit cooldowns internally.

@@ -1,0 +1,52 @@
+|WKBThese are the guilds on Darkwind:|XX0
+
+|YKBStandard guilds:|XX0
+|GKBBard|XX0              |WKB[OPEN]|XX0
+|GKBCleric of Mitra|XX0   |WKB[OPEN]|XX0
+|GKBFighter|XX0           |WKB[OPEN]|XX0
+|GKBGarou|XX0             |WKB[OPEN]|XX0
+|GKBLunar|XX0             |RKB[CLOSED]|XX0
+|GKBMage|XX0              |WKB[OPEN]|XX0
+|GKBNinja|XX0             |WKB[OPEN]|XX0
+|GKBPaladin|XX0           |WKB[OPEN]|XX0
+|GKBPriest of Set|XX0     |WKB[OPEN]|XX0
+|GKBPsionicist|XX0        |WKB[OPEN]|XX0
+|GKBSwashbuckler|XX0      |WKB[OPEN]|XX0
+|GKBThief|XX0             |WKB[OPEN]|XX0
+
+|YKBMythic guilds:|XX0
+|GKBBastet/Gurahl|XX0     |RKB[CLOSED]|XX0
+|GKBBattlemage|XX0        |RKB[CLOSED]|XX0
+|GKBBlood Mage|XX0        |RKB[CLOSED]|XX0
+|GKBDeathknights|XX0      |RKB[CLOSED]|XX0
+|GKBDragon|XX0            |WKB[OPEN]|XX0
+|GKBDruid|XX0             |WKB[OPEN]|XX0
+|GKBGlyph|XX0             |RKB[CLOSED]|XX0
+|GKBMonk|XX0              |WKB[OPEN]|XX0
+|GKBMorpher|XX0           |RKB[CLOSED]|XX0
+|GKBNecro|XX0             |WKB[OPEN]|XX0
+|GKBRanger|XX0            |WKB[OPEN]|XX0
+|GKBSamurai|XX0           |RKB[CLOSED]|XX0
+
+
+|YK0| |YKBGuild            |YK0| |YKBArchetype |YK0| |YKBRoles                |YK0||000
+|YK0| ---------------- |YK0| --------- |YK0| -------------------- |YK0||000
+|YK0| |CK0Bard             |YK0| |YKBMelee     |YK0| |CK0Nuker, Specialist    |YK0||000
+|YK0| |CK0Cleric of Mitra  |YK0| |YKBMelee     |YK0| |CK0Healer, Tank         |YK0||000
+|YK0| |CK0Fighter          |YK0| |YKBMelee     |YK0| |CK0Bruiser, Tank        |YK0||000
+|YK0| |CK0Garou - Wolf     |YK0| |YKBMelee     |YK0| |CK0Bruiser, Specialist  |YK0||000
+|YK0| |CK0Garou - Guardian |YK0| |YKBMelee     |YK0| |CK0Bruiser, Tank        |YK0||000
+|YK0| |CK0Garou - Shaman   |YK0| |YKBMelee     |YK0| |CK0Healer, Tank         |YK0||000
+|YK0| |CK0Lunar            |YK0| |BKBCaster    |YK0| |CK0Nuker, Specialist    |YK0||000
+|YK0| |CK0Mage             |YK0| |BKBCaster    |YK0| |CK0Nuker, Specialist    |YK0||000
+|YK0| |CK0Ninja            |YK0| |GKBHybrid    |YK0| |CK0Bruiser, Specialist  |YK0||000
+|YK0| |CK0Paladin          |YK0| |YKBMelee     |YK0| |CK0Specialist, Tank     |YK0||000
+|YK0| |CK0Priest of Set    |YK0| |YKBMelee     |YK0| |CK0Healer, Specialist   |YK0||000
+|YK0| |CK0Psionicist       |YK0| |GKBHybrid    |YK0| |CK0Bruiser, Nuker       |YK0||000
+|YK0| |CK0Swashbuckler     |YK0| |GKBHybrid    |YK0| |CK0Bruiser, Specialist  |YK0||000
+|YK0| |CK0Thief            |YK0| |GKBHybrid    |YK0| |CK0Nuker, Specialist    |YK0||000
+
+|XX0See Also:
+|XX0    |CKB"help list guilds"|XX0
+|XX0    |CKB"help guilds roles"|XX0
+|XX0    |CKB"help guilds archetypes"|XX0

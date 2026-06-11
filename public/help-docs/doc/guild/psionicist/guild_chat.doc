@@ -1,0 +1,10 @@
+_______________________________________________________________________________
+"Guild Chat"
+        This allows guild members to talk on the guild channel and is
+        automatically added to the player's power list when joining the
+        guild.  Note that it does NOT include the high level guild chat.
+        Obviously, this power cannot be forgotten.
+ 
+SP Cost:  none		Guild Level:  1		Potential Points:  0
+ 
+Command:  psi <msg>, epsi <emote>, or psi :<in-game emote>

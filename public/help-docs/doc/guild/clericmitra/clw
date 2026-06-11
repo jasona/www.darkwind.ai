@@ -1,0 +1,5 @@
+SPELL NAME  : Cure Light Wounds    | Ranged Cure Light Wounds
+SPELL SYNTAX: Clw <target>         | RClw <target>
+SPELL COST  : 10 SP                | 20 SP
+DESCRIPTION : When cast normally, this spell heals the recipient
+              a random amount of hit points.

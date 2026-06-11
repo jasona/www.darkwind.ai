@@ -1,0 +1,116 @@
+|BKB***************************************************************************
+                        |CKBArea Building Overview
+|BKB***************************************************************************
+
+|GKOAreas are where players go to kill stuff, do quests etc. Creating an area
+is as much an artistic endeavour as it is a technical one, but the process
+should not be a haphazard and random. Of course builders can us any process
+they want to get the job done, but if they use a shitty process, it's their
+own damned fault, and will get approximately 0 sympathy from me. The
+procedure and guidelines listed here is a good starting point for beginning
+builders.
+
+
+|BKB***************************************************************************
+                              |CKBPlanning
+|BKB***************************************************************************
+
+|GKOBefore writing a single line of code, the area should be planned out.
+First, pick a theme for the area - a one line description of what the whole
+area is about. For example:
+ 
+    |YKOEves and vikings in a perpetual war.
+    Ruined temple to Athena in some swamps.
+    Settlement of desert dwarves.
+    Dwarven mines that produce metals in Mitra's name.
+    
+|GKOKeep in mind that the theme for Darkwind is fantasy.  Your area must fit
+into this theme to be added to the game.  No cyber realms or modern day
+areas will be considered. Next, flesh out the area with some rough details,
+again before coding. For example:
+
+    |YKOArea in the underworld with mineral mines and an attached mining
+    town full of dwarves. Dwarves are mining for metals which are used
+    to make weapons for Mitra's holy armies. Monster levels are 10-25
+    with a few special BS monsters. Are is good/lawful aligned.
+    Astute players will be able to custom make one special exceptional
+    weapon for their own use. Total of about 50 rooms.
+
+|GKONext, make a map of the area. The map can be on paper, but a text file is
+better since you can then include it with your area as supporting
+documentation. Fill in the map with notes on where mobs are, treasures are,
+special questy things etc. Lay out the entire area before writing a single
+line of code.
+
+
+|BKB***************************************************************************
+                              |CKBCoding
+|BKB***************************************************************************
+
+|GKOFirst, lay out your directory structure and headers. Since you've planned
+out what will exist, you can create a directory for the area, and
+subdirectories for things like rooms, monsters etc. Set up a header file
+that contains #defines to the appropriate directory paths. At no time
+should a path be hardcoded into the action objects in your area.
+
+Next lay down the topology. Basically put down all the rooms and
+connections (name the rooms correctly right off the bad) without setting up
+any properties etc. You want to be able to walk around the area even if
+there's nothing there yet. Once the rooms are there, fill them in with all
+the setting they need and the descs, but NOT the objects they contain like
+loot and monsters. Also, don't put in any special code yet - just set up
+the basic rooms. What you have now is a fully laid out, deserted area.
+
+The next step is to populate the area with restocking items (i.e. mobs and
+room contents that respawn). The difficulty here is that mobs carry items
+and you haven't made those yet. So now, go and make all the items that
+exist, but do them in their most basic forms - no add_actions or special
+stuff outside the reset() function. Then make all the mobs, and make sure
+they load up the required items. Finally add the restocking items to each
+of the rooms as appropriate. Now you have a basic, stocked area, but
+lacking features like add_actions, questy things etc. This area should
+stand on its own already as a basic, killing area.
+
+Now add all the special stuff to make your quests and whatnot work. In the
+course of this, you may have to alter descs etc. to give out hints, and do
+other funky stuff. Since you've already filled in the basics of the area
+you should be able to concentrate on just the special code.
+
+The end. Have your mentor check it over, then submit it for review.
+
+
+|BKB***************************************************************************
+                           |CKBSome Dos and Don'ts
+|BKB*************************************************************************
+
+|RKBDo not make deadly traps without hints
+
+    |YKOA player must never die because there was some unforseeable
+    danger in the next room. Of course if there are signs and they
+    ignore them (giant, dragon footprints leading into a cave) it's
+    their own damned fault...
+    
+|RKBDon't make things too good (or bad)
+
+    |YKOThere's a balance between challenge and reward. If your area leans
+    too far one way or the other, it's bad. High challenge should net
+    high rewards and vice versa. Remember that the purpose of the game
+    is for it to be fun and enjoyable both for players and for wizards 
+    - not to have all players converge on your castle just to get that
+    wc 30 sword.
+    
+|RKBDon't submit an area for review that you KNOW has problems
+
+    |YKOReviews are for VERIFYING that an area is OK. It's not a bug-fixing
+    step. 
+    
+|RKBDon't make a HUGE area and submit it all at once
+
+    |YKOBreak it up into smaller, more manageable chunks. It's better that
+    way for both the builder and the reviewer. Each chunk doesn't have
+    to go into play piece by piece - they can get approved and wait for
+    the whole thing to be done.
+    
+|BKB------
+|WKOVersion 1: ??
+Version 2: Bob - May 29, 2004

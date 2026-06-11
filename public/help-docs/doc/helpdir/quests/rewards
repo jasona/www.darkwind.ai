@@ -1,0 +1,43 @@
+|CKB=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+|WKB                          QUEST REWARDS
+|CKB=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+|YKOWhen you complete all objectives for a quest, your rewards are
+granted automatically. You do not need to turn anything in or
+visit a specific NPC - the system handles it for you.
+
+|WKBReward Types:|XX0
+
+  |YKBExperience |YKO- Bonus experience points added directly to your
+  total. The amount is shown in |YKBqinfo|YKO.
+
+  |YKBGold |YKO- Coins deposited into your inventory. The amount is
+  shown in |YKBqinfo|YKO.
+
+  |YKBQuest Points |YKO- Permanent quest progress points used by the
+  wider level progression system. The amount is shown in |YKBqinfo|YKO.
+
+  |YKBItems |YKO- Some quests grant special objects as rewards. These
+  are placed in your inventory when the quest completes.
+
+|WKBDifficulty and Rewards:|XX0
+
+  |YKOHigher-level quests with tougher objectives tend to offer better
+  rewards. The quest list (|YKBqlist|YKO) color-codes quests by difficulty
+  relative to your level:
+
+    |gKB  green   |YKO- Well below your level. Easy, smaller rewards.
+    |GKB  GREEN   |YKO- At or near your level. Moderate challenge.
+    |YKB  YELLOW  |YKO- Slightly above your level. Good rewards.
+    |RKB  RED     |YKO- Significantly above your level. Great rewards,
+                   but dangerous.
+
+|WKBCompletion:|XX0
+
+  |YKOEach quest can only be completed once. Completed quests are
+  tracked permanently on your character. Use |YKBmyquests |YKOto see
+  which quests you have finished.
+
+|CKB=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+|WKBSee also: |YKBhelp quests, help quests objectives
+|CKB=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=

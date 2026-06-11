@@ -1,0 +1,8 @@
+SPELL NAME  : Know Alignment
+SPELL SYNTAX: Know <target>
+SPELL COST  : 5 SP
+DESCRIPTION : This spell enables the caster to determine the alignment
+              of the target creature.  It will not reveal the actual value
+              of the alignment, but will show the general traits of
+              the target in question.
+

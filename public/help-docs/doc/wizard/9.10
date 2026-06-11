@@ -1,0 +1,332 @@
+detect other objects through the use of spectrums and light
+levels. It has several characteristics which can be used to
+finely tune how and when an object can be seen.
+
+
+SPECTRUMS
+
+There are currently 4 spectrums in the new system:
+
+Visible: The visible light spectrum. Acts pretty much as a
+stand-in for the old light system.
+
+Ultraviolet: Short wavelength light. This light is emitted
+by both the sun and stars, and can be used to see at night.
+
+Infrared: Long wavelength light. Emitted by living objects,
+this can be used to see in the dark to a limited extent. The
+living objects will be seen, as well as any exits, due to the
+difference in temperature of air currents.
+
+Sensory: Psionic sensing. Acts much like infrared.
+
+
+ACTIVE/PASSIVE VISION
+
+Most creatures use passive vision, meaning that they are 
+dependent on an exterior source for the light needed to
+see. For example, the sun provides reflected light to see
+in the visible spectrum; living objects and air currents
+provide for difference in ambient temperature to see in
+the infrared spectrum.
+
+Active vision describes sight by emission; in other words,
+the creature that is doing the observing actually has some
+means of emitting light, serving as its own emission source.
+
+Races: Currently races are set up as follows:
+
+Elf, Daemon: active ultraviolet.
+
+Dwarf, gnome, halfing: passive infrared.
+
+All living creatures emit in the infrared and sensory
+spectrums.
+
+Garou are capable of seeing active UV and passive IR when
+in Crinos or Wolf form.
+
+
+
+INVISIBILITY, HIDING, ABSORPTION
+
+Invisibility in a spectrum is either on or off. Invisible 
+items can be seen by an observer in two ways: 
+  1) By being able to observe the object in a spectrum other
+     than that which the object is invisible in.
+  2) By having the ability to see invisible objects in a
+     spectrum by some means other than vision: magic, etc.
+
+Objects may also set a hiding, or camoflage, level. This is
+compared to the observers (int + wis)/2 when deciding if the
+object is visible or not.
+
+Finally, objects may have a level of absorption, meaning that
+they absorb (or fail to reflect) a certain amount of light
+that is cast on them. If there is not sufficient ambient
+light, an object may be invisible by virtue of it simply
+being too dark. Imagine trying to see a brown cloak in a
+dimly lit room.
+
+Note: Objects with shorts of 0, and objects which return
+  a number greater than the level of the observer from the
+  query_invis() function are also considered invisible. This
+  supports the old method of invisibility (wiz invis).
+
+
+MECHANICS
+
+The light system is based on a range of 0 to 100 for all
+light levels.
+
+To determine if an object or its surroundings may be seen,
+several checks are performed for each spectrum.
+
+1) If the object is invisible in the spectrum being checked,
+   and the observer is not capable of seeing invisible
+   objects in that spectrum, the object is considered
+   invisible in that spectrum.
+2) Next, the light level of the environment of the object
+   is calculated for that spectrum.  If the observer has
+   active vision in the spectrum, the active vision level
+   is added to the ambient light. Next, if the object has
+   an absorption level for that spectrum, that level is
+   subtracted from the ambient light. 
+3) If the viewer has passive vision, the spectrum is 
+   infrared, and the object is an emission source, then the
+   ambient light for purposes of viewing the object is
+   considered to be the maximum of the ambient light or the
+   standard emission level (currently defined as 50).
+
+4) If the result is > 0, the object is considered visible in
+   that spectrum.
+
+Seeing environments is a little different in that if the
+spectrum is a detailed spectrum (visible, ultraviolet, and
+sensory), then objects, long descs, and exits can be seen.
+If the spectrum is not detailed, then only objects, short
+descs, and exits may be seen. Detailed means capable of
+distinguishing fine details.
+
+Note: when the code is finished, outside rooms will use the
+ambient light emitted by the sun, moons, and stars as 
+determined by the astronomy daemon and the room's terrain
+type, i.e. a forest will gain less light from the moon
+than will an open road.
+
+
+
+The following attributes can be set by level for each
+spectrum (see add_visibility_level() for details) :
+
+Interior light: The ambient light inside a container. This
+  is how rooms can have light inside them. This light is
+  added to the light of any objects within the container
+  which are also emanating light.
+
+Emanating light: The light given off by an object, like a
+  torch or the like. The difference between this and interior
+  light is subtle: interior light is cast into an object, 
+  emanated light is cast into the environment of the object.
+  An object can emit light into itself, its environment, or
+  both at the same time.
+
+Absorption: The amount of light NOT reflected by an object.
+  The higher the absorption, the brighter the ambient (or
+  interior) light of the environment needed to see the
+  object.
+
+Camoflage: The amount of hiding being performed by an object.
+  This really isn't a light level property, but refers more
+  to the ability of the object to blend into its surroundings.
+  This can be done by spectrum as well, as an object might
+  have a great camoflage in the visible spectrum that looks
+  like a riotous combination of bright orange and purple in
+  the ultraviolet spectrum.
+
+Active vision: The amount of light emitted by an observer to
+  see its surroundings. This light does NOT benefit any other
+  observers in the same environment. Liken it to attempting
+  to see via someone elses tight-beamed flashlight: they will
+  never seem to hold the light where you want to look.
+
+
+The following attributes can be set either on or off only by
+spectrum (see set_visibility_flag() for details):
+
+Opacity: Whether or not a container passes exterior light to
+  its interior, and vice versa.
+
+Passive/active vision: Whether an observer is capable of seeing
+  in a particular spectrum, either actively or passively.
+
+Emitter: Whether or not the object emits in the spectrum, for
+  purposes of detection with passive vision.
+
+Invisible: The invisibility of an object in the spectrum.
+
+See invisible: Whether or not an observer is capable of
+  detecting invisible objects in the spectrum.
+
+
+
+NITTY-GRITTY
+
+All constants are defined in /secure/include/spectrum.h.
+
+Objects must inherit INH_VISIBILITY (defined in mudlib.h) in
+order to be either light sources, observers, or hidden/invisible.
+
+The functions used to test for visibility are defined in simul_efun,
+and are available to all objects:
+
+--------------------------------------------------------------------
+varargs int visible_to(object oItem, object oObserver, object oEnv);
+
+Tests if an object (oItem) is visible to an observer (oObserver) in
+a particular environment(oEnv). oEnv is optional, and if not
+provided it defaults to the environment of oItem.
+
+Returns an integer containing the following bits:
+  VIS_IS_ACTIVE - observer used active vision to see the object.
+  VIS_IS_PASSIVE - observer used passive vision to see the object.
+  VIS_IS_DETAILED - observer saw the object in a detailed spectrum.
+  VIS_IS_AURA - observer saw the object in a non-detailed spectrum.
+  VIS_IS_INVISIBLE - object was invisible in the spectrum, but was
+                     seen anyways.
+
+
+
+--------------------------------------------------------------------
+varargs int environment_visible(object oObserver, object oEnv);
+
+Tests if an environment is visible to an observer. If oEnv is 
+not provided, it defaults to the environment of the observer.
+
+Returns an integer containing the following bits:
+  VIS_IS_ACTIVE - observer used active vision to see.
+  VIS_IS_PASSIVE - observer used passive vision to see.
+  VIS_IS_DETAILED - observer saw in a detailed spectrum.
+  VIS_IS_AURA - observer saw in a non-detailed spectrum.
+
+
+
+--------------------------------------------------------------------
+varargs mixed *visible(string sItem, object oEnv);
+
+Tests for the existence of a visible object matching the
+string, much as present() works.
+
+Returns a two-element array consisting of:
+  1) the object, if found. 0 otherwise.
+  2) the bits from visible_to().
+
+Example: ({ object_that_was_found, VIS_ACTIVE })
+
+
+
+--------------------------------------------------------------------
+object *visible_inventory(object oContainer, object oObserver);
+
+Returns a list of the objects within a container that
+are visible to an observer.
+
+Returns an array of 2 element arrays as defined for 
+visible().
+
+
+
+--------------------------------------------------------------------
+varargs void show_object_list(mixed *axTuples, object oObserver);
+
+Prints a nice inventory listing, taking into account color,
+numbers of items, etc.
+
+This is called by show_inventory, but may be used if needed.
+axTuples is an array of object/bit pairs as defined by visible().
+
+
+
+--------------------------------------------------------------------
+varargs void show_inventory(object oEnv, object oObserver);
+
+Prints an inventory listing for an environment for an observer.
+
+This should be used for all inventory lists.
+
+
+--------------------------------------------------------------------
+
+
+
+
+The functions defined on objects which implement light are in
+/inherits/visibility.c (INH_VISIBILITY):
+
+--------------------------------------------------------------------
+int query_visibility_level(int iType, int iSpec);
+
+Returns the level for a particular category by spectrum.
+
+Categories (iType) as defined in spectrum.h are:
+  VIS_INTERIOR: interior light for the object
+  VIS_ABSORPTION: amount of light the object absorbs
+  VIS_EMANATION: amount of light the object emits
+  VIS_HIDDEN: camoflage level of the object
+  VIS_ACTIVE: active light ability of the object
+
+Spectrums as defined in spectrum.h are:
+  SPCT_VISIBLE
+  SPCT_INFRARED
+  SPCT_SENSORY
+  SPCT_ULTRAVIOLET
+  SPCT_SONIC (not used currently)
+
+Returns an int.
+
+
+--------------------------------------------------------------------
+varargs mixed *query_visibility_levels();
+
+Returns all the visibility levels in an array.
+
+
+--------------------------------------------------------------------
+int query_visibility_flag();
+
+Returns the visibility flags in a single int. The individual bits
+should be queried using the following macros as defined in spectrum.h:
+  VIS_GET_FLAG(flags, spectrum, flag);
+
+
+--------------------------------------------------------------------
+void set_visibility_flag(int iSpectrum, int iFlag);
+
+Sets a visibility flag on an object.
+
+Ex. this_object()->set_visibility_flag(SPCT_INFRARED, VIS_PASSIVE_VISION);
+
+
+--------------------------------------------------------------------
+void clear_visibility_flag(int iSpectrum, int iFlag);
+
+Clears a visibility flag on an object.
+
+
+
+--------------------------------------------------------------------
+int add_visibility_level(int iType, int iSpectrum, int iAdd);
+
+Adds to a visibility level for an object.
+
+Ex. this_object()->add_visibility_level(VIS_EMANATION, SPCT_VISIBLE, 1);
+    is the equivalent of set_light(1) for an object.
+
+Ex. this_object()->add_visibility_level(VIS_INTERIOR, SPCT_VISIBLE, 1);
+    is the equivalent of set_light(1) for a room.
+
+
+--------------------------------------------------------------------
+int recursive_interior_light(int iSpec);
+
+Calculates the total interior light for a container for a spectrum.

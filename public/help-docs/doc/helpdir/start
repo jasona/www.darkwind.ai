@@ -1,0 +1,125 @@
+                      |CKBWelcome to Darkwind!
+
+|WKOMost of the basic information about Darkwind can be found in the newbie tome.
+You can obtain one if you head southwest from the adventurers guild, which is
+the room you started your adventure in. Alternatively you can obtain one at
+the center of town (Cot) [Use the command 'ncot' to transport you there].
+Do not forget to look at the machine in these two locations!
+
+Following will be some basic directions to help you start off your adventuring
+career, do note this information can also be obtained from the newbie tome.
+
+|WKO==============================================================================
+|CKBEquipment, Stores and Bank
+|WKO==============================================================================
+
+|YKBErga's newbie store.
+|YKOErga hands out free equipment that is perfectedly suited for anyone under
+level 5. Don't waste your time looking elsewhere, he has some good quality
+stuff!
+
+|WKBFrom Cot: |YKBw,w,w,w,s |BKB[4w,s]
+
+|MKBDon't forget to read the sign.
+|WKO______________________________________________________________________________
+
+|YKBDonation room.
+|YKOThe mighty heroes and legendary adventurers that inhabit the realms of
+Darkwind may be so inclined to donate equipment to the more inexperienced
+adventurers.
+
+You can visit the Donation room to see what they may have to offer you.
+
+|WKBFrom Cot: |YKBn,n,n,n,n,e |BKB[5n,e]
+|WKO______________________________________________________________________________
+
+|YKBBank.
+|YKOYou are able to keep your money safe at the bank. That way, if you die, you
+won't loose your hard earned cash.
+
+|WKBFrom Cot: |YKBw,w,w,w,w,s,s,s,e |BKB[5w,3s,e]
+|WKO______________________________________________________________________________
+
+|YKBTaylors.
+|YKOTaylors is the general store in town, he will be happy to buy your goods
+off you. A great way to earn a pretty penny selling the treasures you may
+find on your adventures.
+
+|WKBFrom Cot: |YKBw,w,w,w,w,s,s,w |BKB[5w,2s,w]
+
+|WKO==============================================================================
+|CKBNewbie area's
+|WKO==============================================================================
+
+|YKOAll directions from Cot:
+
+|CKOAbandoned Village |BKB- |YKB6w, exit, 4w, 2n, w, s, w, enter, n, w
+
+|CKOAshkenazy's hunting grounds |BKB- |YKB5s, exit, s, 4w, s
+
+|CKOCemetery |BKB- |YKB5w, 2n
+
+|CKOFarmland|BKB - |YKB6w, exit, 4w, 3n, 2e, n
+
+|CKOGlaverton Forest |BKB- |YKB6w, exit, 4w, 2n, e, 3n, e, n, e, n, 5e, 2ne, nw, n
+
+|CKOHaunted Keep |BKB- |YKB5s, exit, 11s, w
+
+|CKONorth Forest path |BKB- |YKB6n, exit ,9n, 9nw , w
+
+|CKOPegasi |BKB- |YKB6n, exit, 8n, 2e, n
+
+|CKOPirate Ship |BKB- |YKB5e, 4n, climb rope
+
+|YKOFor a more comprehensive listing and descriptions of newbie area's read
+chapter 5 of the newbie tome.
+
+|WKO==============================================================================
+|CKBFurther helpfiles of interest
+|WKO==============================================================================
+
+|MKBhelp newbie
+|YKO[The newbie command allows you to talk on the newbie channel]
+
+|MKBhelp set
+|YKO[The set command allows you to customize several different features]
+
+|MKBhelp wimpy
+|YKO[Wimpy allows you to automatically flee combat when your HP drop too low]
+
+|MKBhelp mon
+|YKO[The monitor allows you to set a HP/ SP monitor]
+
+|MKBhelp ncot - help npunch - help nkick - help nheal
+|YKO[These are your newbie skills]
+
+|MKBhelp recall
+|YKO[Once you have left newbie status, recall lets you teleport back to COT on a 15-minute cooldown]
+
+|MKBhelp combatbrief
+|YKO[This setting allows you to filter your combat messages]
+
+|MKBhelp score - help sc
+|YKO[Information on your score tables]
+
+|MKBhelp int - wis - dex - con - str - chr
+|YKO[Information about your stats]
+
+|MKBhelp races
+|YKO[Information on how to become one of the races that inhabit the world of DW]
+
+|MKBhelp guildlist
+|YKO[A list of existing guilds on DW, specific info can be obtained from the tome]
+
+|MKBhelp rules
+|YKO[The rules for Darkwind, read them, know them, live them, be them!]
+
+|MKBhelp pk
+|YKO[Information on Darkwind's player killing system.]
+
+|WKO==============================================================================
+|CKBAddendum
+|WKO==============================================================================
+
+|YKOAny extra info you feel needs to be added to this file? Use the idea command
+to suggest! (help idea)

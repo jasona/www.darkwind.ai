@@ -1,0 +1,7 @@
+SPELL NAME  : Cloud of Shining Sparks
+SPELL SYNTAX: Cloud <target>
+SPELL COST  : 20+2*Guild Level
+DESCRIPTION : The Cleric may summon the essence of good spirits from another
+	      plane to aid the Cleric by distracting his foe and even by
+	      causing minor pain to his foe. The distraction will end when
+	      all the sparks have been destroyed.

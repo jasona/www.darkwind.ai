@@ -1,0 +1,322 @@
+|YKODarkwind offers many ways to customize your character, including
+races, guilds, alignment, equipment, and many others. This document
+serves to document those items.
+
+|WKB--<< STANDARD RACES >>--
+
+|YKOThe following races are available at the Darkwind Hall of Races:
+
+|CKBDarkwinder- |WKOThe humans that live around Darkwind City are collectively
+known as Darkwinders. Darkwinders are about average among the civilized races 
+in terms of physical and mental powers, but are well accepted by most other 
+cultures due to the importance of the city in world affairs.|WKB
+    - |GKBThis race can join any guild.|WKB
+    - |YKB+EXP  +RACE CHANGE|000
+
+|BCBBarbarian- |WKOThe Barbarians are an offshoot of modern human society that
+settled south of Darkwind City in a settlement known as Canith. Their rugged 
+lifestyle tends towards the development of stronger, healthier bodies than 
+most humans. Canith society values order, and pursuit of the common good. 
+Barbarians are generally friendly to strangers and always eager to learn about 
+exotic people and places.|WKB
+    - |YKO This race cannot join: |RKBNECRO, PRIEST, SWASH|WKB
+    - |YKB+CHR +CON +STR +EXP  +GOOD|000
+
+|CK0Glavian- |WKOGlavians are humans that hail from the mountain kingdom of
+Glavia. Glavians are a generally good-aligned people used to opposing 
+demonic forces. Their society is otherwise peaceful and pastoral. Glavians 
+are an inoffensive, likeable lot, with an open mind to new experiences.|WKB
+    - |YKO This race cannot join: |RKBNECRO, PRIEST|WKB
+    - |YKB+CHR +EXP +GOOD|000
+
+|MCBFaerie- |WKOFaeries are a race of woodland sprites, usually diminutive in
+stature. This group encompasses brownies, dryads, atomies, sylphs and
+pixies, as well as sprites themselves.  They are known to be
+extremely agile as well as friendly and typically good-looking, but
+due to their generally small size they are not very strong or sturdy.  
+They have a reputation, deserved or not, for being pranksters, and 
+tend to be a bit flighty at times.|WKB
+    - |YKO This race cannot join: |RKBFIGHTER|WKB
+    - |YKB+WIS +PSION +WINGS +FLIGHT -SIZE|000
+
+|GYBHalfling- |WKOHalflings are a race of short people much given to
+the simpler pleasures in life, including good food, a warm bed, a 
+window overlooking a pleasant little garden, a shady tree to lie 
+under in the afternoon, and a full pipe after dinner.  They do not 
+often become adventurers, but those that do are quite good at it.  
+They are not too strong, because of their small size, and their 
+homebody nature means they tend to be not as wary.  But halflings 
+have truly incredible reflexes and are remarkably nimble and quick 
+with their hands.  Halflings are most interested in having fun in life, 
+and they take this attitude with them wherever they go.|WKB
+    - |GKBThis race can join any guild.|WKB
+    - |YKB+CHR +DEX -STR -WIS +DRINK +EAT -SIZE|000
+
+|GKBHigh elf- |WKOThe elven kingdom south of Darkwind City is the home of the
+High Elves. High Elf culture as a whole tends towards goodness in the context
+of harmony with nature. High Elves have keen senses and are generally
+superior mentally to most civilized races. Physically however, they can
+be somewhat fragile and lack the robustness of other races.|000
+    - |YKO This race cannot join: |RKBNECRO, PRIEST|WKB
+    - |YKB+DEX +INT +WIS +CHR -CON +DAM_LIGHT +VISION|000
+
+|YBBKender- |WKOThe Kender have always been hidden somewhere around the realms of
+Darkwind. They are small jovial creatures with a love of adventure
+and no fear. They are extremely agile, but are not known for a 
+high level of common sense.|WKB
+    - |GKBThis race can join any guild.|WKB
+    - |YKB+STR +DEX -WIS +PSION -DAM_EVIL +VISION -SIZE|000
+
+|MK0Rift duergar- |WKOThe Rift Duergar are a race of evil subterranean dwarves 
+who have been twisted by dark forces into hateful caricatures of surface dwarves
+They are short, stout and have hardy constitutions, enabling them to hold their
+liquor and resist small amounts of magic and mental influence. Despite
+being quite strong, Rift Duergar have problems balancing larger weapons
+due to their stature.|WKB
+    - |YKO This race cannot join:
+          |RKBBARD, CLERIC, GAROU, LUNAR, MAGE, NINJA, PALADIN, SWASH|WKB
+    - |YKB+STR +CON -INT -CHR +MAGIC +PSION -DAM_LIGHT +EVIL +VISION
+      +DRINK -SIZE|000
+
+|MKBShel-zaranite- |WKOThe Shel-zaranites are an ancient offshoot of the elves 
+that live deep underground. In their secluded city, they worship forgotten gods 
+of evil. Dark Elves are quite agile and mentally superior to most
+races, but are often sickly and lack constitution. Being an underground
+race however, they are well adapted to lightless conditions.|WKB
+    - |YKO This race cannot join: |RKBCLERIC, GAROU, LUNAR, MAGE, PALADIN|WKB
+    - |YKB+DEX +INT +WIS -CON -DAM_LIGHT +EVIL +VISION|000
+
+|WWBSilver Elf- |WKOThe elven kingdom located on the highway between Darwind 
+City and the frozen tundra is the home of the Silver Elves. Silver elves are 
+also known as Moon Elves. Silver elf culture tends towards goodness and
+as to please Luna, the moon Godess. Silver Elves have keen night vision, exude 
+charisma, and are typically more intelligent, though less wise, than other races. 
+Pyshically they are more nimble than what is typical, though they are rather 
+fragile of constitution.|WKB
+    - |YKO This race cannot join: |RKBFIGHTER, NECRO|WKB
+    - |YKB+DEX +INT +CHR -WIS -CON +GOOD +VISION|000
+
+|BKBStone dwarf- |WKOStone Dwarves are a society of surface dwarves who long 
+ago dedicated their lives to working in the underworld in the service of Mitra. 
+Like most dwarves, they are short and stout and can hold their liquor, but 
+Stone Dwarves also have a high degree of goodness ingrained into them at an 
+early age. Their small size makes it difficult for them to wield larger 
+weapons, and working in cramped mines have a detrimental effect on their joints,
+limiting their agility.|WKB
+    - |YKO This race cannot join: |RKBGAROU, NECRO, NINJA, PSION, PRIEST, THIEF|WKB
+    - |YKB+STR +CON -DEX +PSION +GOOD +VISION +DRINK -SIZE|000
+
+|RKBUruk- |WKOThe Uruk are a loose tribe of marauding orcs which live in the 
+Darkwind area, looting and pillaging small settlements. The Uruk value strength
+and stamina over useless thought or a pretty face. They are a warlike race
+that trains for battle from birth to death, acquiring a degree of proficiency
+in the use of all weapons. They are particularly adapted to living in
+marginal areas like shallow caves, or fetid swamps.|WKB
+    - |YKO This race cannot join:
+          |RKBBARD, CLERIC, GAROU, LUNAR, MAGE, NECRO, NINJA, PALADIN,
+          PSION, SWASH|WKB
+    - |YKO This race CAN join:
+          |GKBDRAGON, FIGHTER, MORPHER, THIEF|WKB
+    - |YKB+STR +CON -INT -WIS -CHR +DAM_DISEASE +DAM_POISON +EVIL +VISION
+      +WEAPON SPEC|000
+
+The following races are available at the Hyperborea Hall of Races:
+
+|WKOArctic elf- |WKOThe Arctic Elves are a subrace of the elves that have 
+adapted to living in the far north of Hyperborea. Like all elves, they are 
+bright and agile, but suffer from fragile bodies. Arctic elves are often at 
+odds with the humans of northern Hyperborea, constantly fighting over territory 
+and ancient artifacts of power in order to expand their evil society.|WKB
+    - |YKOThis race cannot join: |RKBCLERIC, LUNAR, MAGE, PALADIN|WKB
+    - |YKB+DEX +INT +WIS -CON -DAM_FIRE +EVIL|000
+
+|BK0Hyperborean gnome- |WKOHyperborean gnomes are a race of small humanoids 
+that inhabit the more habitable rural areas of Hyperborea. They are bright and 
+nimble, with a natural resistance to variations in the environment. They have a 
+slight tendency to work towards the causes of good, if only because they are
+subject to attack by the forces of evil. Like all gnomes, they are quite
+small compared to other races, and have difficulty managing larger weapons.|WKB
+    - |YKOThis race cannot join: |RKBFIGHTER, NECRO, PRIEST|WKB
+    - |YKB+DEX +INT +WIS +DAM_FIRE +DAM_ACID +DAM_POISON +GOOD +DRINK -SIZE|000
+
+|RWOIce gnoll- |WKOIce Gnolls are an evil warrior race that appears to be a 
+cross of some humanoid and a hyena. They are physically powerful but are 
+lacking somewhat in intellect. Ice gnolls live to kill and eat; who their 
+victims are is largely irrelevant.|WKB
+    - |YKOThis race cannot join:
+          |RKBBARD, CLERIC, LUNAR, MAGE, PALADIN, PSION, SWASH, THIEF|WKB
+    - |YKB+STR +CON +DEX -INT -CHR +EVIL +EAT|000
+
+|RWBIce ogre- |WKOIce Ogres are large brutish humanoids that live in the 
+cold wastes of Hyperborea. Large numbers of them are regularly hired as 
+mercenaries by the giants to wage war against more civilized races. They 
+are immensely strong and rugged, but dimwitted and clumsy as well. They 
+have no real culture to speak of except a penchant for violence. While not 
+quite giant sized, ice ogres are large enough that they can wield large 
+weapons much more easily than most other races.|WKB
+    - |YKOThis race cannot join:
+          |RKBBARD, CLERIC, LUNAR, MAGE, NECRO, NINJA, PALADIN, PSION
+          SWASH, THIEF|WKB
+    - |YKB+STR +CON -DEX -INT -WIS -CHR +DAM_DISEASE -DAM_PSION +EVIL
+      +EAT +DRINK +SIZE|000
+
+|WKBNorthman- |WKONorthmen are humans who settled in the frigid north. 
+Northmen are widespread throughout Hyperborea, although most live in 
+the city of Grimsfjord. Northmen are expert traders and hagglers, due 
+to the need to trade with the southern cities for various goods not
+produced in Hyperborea.|WKB
+    - |GKBThis race can join any guild.|WKB
+    - |YKB+CHR +EXP|000
+
+|YKOThe following races are available at the Souvrael Hall of Races:
+
+|YKODesert nomad- |WKOThe Desert Nomads are the wanderers of Souvrael. They 
+are a deeply religious people who follow the teachings of their prophet. 
+The are quick learners who have adapted to living in the open desert. Desert 
+Nomads are known for their great hospitality, despite the harshness of 
+their habitat.|WKB
+    - |YKOThis race cannot join: |RKBNECRO, PRIEST|WKB
+    - |YKB+CHR +CON +EXP +DAM_FIRE -DAM_WATER +GOOD|000
+
+|YBBDesert dwarf- |WKOThe Desert Dwarves live in a small settlement in 
+the deserts of Souvrael. The Dwarves live in a peaceful society, generally 
+unaffected by outside influences. Physically, they are a short, hardy race. 
+In addition to an innate resistance to magic and psionics, they tend to be 
+quite healthy and strong, but suffer somewhat from a stubbiness in their 
+limbs. Despite their strength, their small size often also creates difficulties
+in wielding larger weapons.|WKB
+    - |YKOThis race cannot join: |RKBGAROU, NECRO, NINJA, PRIEST, SWASH, THIEF|WKB
+    - |YKB+STR +CON +WIS -DEX  +MAGIC +PSION +GOOD +DRINK +VISION -SIZE
+
+|YKBSouvraeli- |WKOSouvraelis are the native humans of Souvrael who choose 
+to live in cities instead of leading a nomadic existence. Their culture has 
+evolved over time towards a more cosmopolitan lifestyle based on trade and 
+education. As such, they are cunning negotiators, and have a thirst for 
+knowledge.|WKB
+    - |GKBThis race can join any guild.|WKB
+    - |YKB+INT +CHR +EXP -DAM_WATER|000
+
+|YKOThe following races are available at the Talamh Darag Hall of Races:
+
+|GW0Crannian gnome- |WKOA race of small, misshapen, dwarf-like creatures that
+dwell in the earth. The name 'gnome' was given to them by the medieval scholar 
+Paracelcus, in an attempt to describe the most important of the earth spirits. 
+Gnomes live under the earth, where they guard treasures. According to Paracelcus,
+they move as easily through the earth as humans walk upon the ground.
+They cannot stand the light of the sun, for even one ray would turn them
+to stone. Some sources claim they spend the hours during daylight as a
+toad. They are in some way related to goblins and dwarfs.
+They have been known to steal neglected human babies to raise as their own.|WKB
+    - |YKOThis race cannot join: |RKBGAROU, THIEF|WKB
+    - |YKB+DEX +INT +CHR -CON +EXP +VISION -DRINK -EAT -SIZE|000
+
+|MBBPixie- |WKOThe pixies are a race of small mischievous little fae. These 
+smart little critters excel at finding ways to scare and trick their unsuspecting 
+victims. They have beautiful silk-like wings that enable them to explore the 
+skies and are naturally protected from the magical abilities of those who would 
+hunt them. This sadistic little fae folk cares little about goodness.
+    - |YKO This race cannot join: |RKBCLERIC, GAROU, FIGHTER, MAGE, LUNAR, PALADIN|WKB
+    - |YKB+INT +MAGIC +EVIL +WINGS +FLIGHT -SIZE|000
+
+|RB0Sidhe- |WKOThe Sidhe are a race of vile demonic creatures originating from 
+the influential fae population of Talamh Darag. These Sidhe were infected
+by a vampiric condition affecting their society on a large level.
+The now unseelie Sidhe are known for their evil acts, magical abilities
+and the moth-like wings that enable them to ascend from the ground.
+The magical nature of the Sidhe fae allows them to regenerate their
+abilities with greater ease then any other race would be able to.
+Their weak body is able to purge toxics from their bloodstream at an 
+increased rate, but suffers greatly where raw physical power is concerned.|WKB
+    - |YKOThis race cannot join:
+          |RKBCLERIC, FIGHTER, GAROU, LUNAR, MAGE, PALADIN|WKB
+    - |YKB+DEX +INT -CON -STR +EVIL +WINGS +FLIGHT +DRINK +SPREGEN -SIZE|000
+
+|YCBWayfarian- |WKOThe wayfarians are a race of elves that have been oppressed 
+by forces of evil for as long as they have been around. A powerful Paladin heroine
+'Enelya Ar-Feiniel' who is now revered as their patron of adventurers sought
+out Mitra's blessing to empower and protect her proud folk. This blessing
+resulted in a holy and virtuous aura surrounding each member of the Wayfarian
+race. This aura formed a defense against the evil acts of their foes and 
+enabled them to strike out with a holy fury. Finally the Wayfarians were able 
+to beat off their oppressors and build a new city. Their combined auras
+helped form a powerful holy dome to protect this city against those who 
+would seek to destroy it.|WKB
+    - |YKOThis race cannot join: |RKBGAROU, NECRO, PRIEST, THIEF|WKB
+    - |YKB+DAM_EVIL +DAM_CHAOS +GOOD +DAM TYPE GOOD|000
+
+
+|WKB--<< EXOTIC RACES >>--
+
+|CBBGypsy- |WKOThe Gypsy people are a skilled, artful traveling people.  They 
+are very smart, charismatic and light fingered.  Singing, dancing, telling 
+stories, fortune telling and lifting money from the rubes are the everyday 
+events in the life of the Gyspy.  They prefer to wear bright colors, and usually 
+speak freely, looking to make the next big score.
+    - |YKOThis race cannot join:|RKBCLERIC, FIGHTER, NECRO|000
+
+|RKBScro- |WKOThe Scro are an advanced form of orc that is well adapted to 
+the rigors of travelling in wildspace. While they are not quite as strong 
+nor robust as their more primitive cousins, they make up for this by possessing 
+greater mental faculties and resistances to forces encountered in their more
+exotic travels.|WKB
+    - |YKOThis race cannot join:|RKBBARD, CLERIC, MAGE, PALADIN|000
+
+|CKBSylph- |WKOThe sky, mountains, and high places such as the tops of very 
+tall trees are the favorite home of the Sylphs. Members of the Faerie race,
+Sylph are roughly human in appearance with the exception of the almost
+transparent wings on their backs. The Sylph are a culture that tends
+towards goodness and lawfulness, but also one known for being able to
+hold their own when it comes to the hearty consumption of the strong
+libations served at the various festivals they hold. The Sylph are an
+attractive race with looks to match their mental powers and quickness,
+though they tend to be weaker and less robust than other races.|WKB
+    - |YKOThis race cannot join:|RKBNINJA, SWASH, NECRO|000
+
+|MGBThraxian- |WKOThraxian draconians hail from the village of Thrax in 
+eastern Hyperborea. While roughly humanoid in shape, they bear a striking 
+similarity to their dragon cousins, including vestigial wings and a fiery 
+breath weapon. They maintain some of the dragons' raw physical power and 
+intellect as well. Their alien natures are not well received by other races, 
+and their clawed hands are not well adapted to using most tools.|WKB
+    - |YKOThis race cannot join:|RKBBARD, CLERIC, SWASH, THIEF|000
+
+|YKOExotic races are those races found in areas throughout the game. Exotic
+races are only available for player HERO+. Racial attributes for exotic races
+are available in their respective race room.
+
+|YKOEach race has a unique set of abilities and penalties due to their physical
+and mental characteristics, as well as cultural aspects of their societies,
+some of which will be explained in more detail:
+
+|CKBSTATS
+|WKO-----
+|YKORacial modifications to stats are made to the base stat, before other
+modifications such as from magical equipment. Racial modifications are also
+based on a percentage of the base stat. Thus even with an extremely strong
+race, if you never raise your strength, your strength will be only one.
+Because stats are always whole numbers, sometimes when you advance a stat
+you have a penalty in, you may not see the effect of that stat raise.
+Conversely, if you raise a stat you have a bonus in, you may see a rise of
+two points instead of one.
+
+|CKBALIGNMENT
+|WKO---------
+|YKOAdventurers are made, not born. By the time they choose the adventuring life,
+adventurers have a lot of silly notions ingrained into their minds, especially
+opinions about the role of alignment in society. Having been indoctrinated
+from an early age, they will always have a tendency towards the predominant
+attitudes of their culture. If you have a tendency towards one alignment,
+you will be less affected by changes away from that alignment. You will also
+be more affected by changes towards it.
+
+|CKBLANGUAGE
+|WKO--------
+|YKOFor help on languages, see |YKB"help language".
+
+|CKBGENERAL
+|WKO-------
+|YKOFor help on each race, try help |YKB<darkwinder>|WKO, |YKB<glavian>|WKO, |YKB<barbarian>|WKO,
+|YKB<high_elf>|WKO, |YKB<shel-zaranite>|WKO, |YKB<rift_duergar>|WKO, |YKB<stone_dwarf>|WKO, |YKB<uruk>|WKO, |YKB<northman>|WKO,
+|YKB<arctic_elf>, |YKB<hyperborean_gnome>, |YKB<ice_ogre>, |YKB<ice_gnoll>|WKO,
+|YKB<souvraeli>|WKO, |YKB<desert_nomad>|WKO, |YKB<desert_dwarf>|WKO, <|YKBkender>|WKO,
+|YKB<pixie>|WKO, |YKB<crannian_gnome>|WKO, or |YKB<wayfarian>

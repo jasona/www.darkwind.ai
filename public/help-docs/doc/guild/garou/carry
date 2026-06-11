@@ -1,0 +1,14 @@
+|GKO================================================================
+                         |CKOCarry
+|GKO================================================================
+
+|YKOCarry allows a wolf to carry one item in his mouth.
+The wolf will be unable to engage in combat while
+holding an item in his mouth. Use |YKB'spit' |YKOto spit out
+the item so you can transform or fight. Coins are
+an exception. You can carry as many coins as you want,
+regardless of form, and will not be penalized even
+if the inventory listing says you have a pile of coins
+in your mouth.
+
+|RKOSyntax: |YKBcarry <target>

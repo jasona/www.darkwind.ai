@@ -1,0 +1,6 @@
+Skill: make <shield|torch> Timer: Support GL:  2 Cost: VARIES
+
+Makes a shield or torch. See 'fhelp shield' or 'fhelp torch' for more
+specific details.
+
+Syntax is: make <shield|torch>

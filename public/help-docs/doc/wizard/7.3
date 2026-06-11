@@ -1,0 +1,110 @@
+Malraux says: ok, well, integers are stored as 32 bit pieces of memory
+Dragoon says: have been considering taking it though
+Malraux says: binary, and all that
+Dragoon nods solemnly.
+Malraux is assuming you know binary :)
+Dragoon says: yes
+Dragoon says: 0001001000101010000
+Malraux says: ok, well a bit field is nothing more than an integer
+Dragoon falls down laughing.
+Dragoon nods solemnly.
+Malraux says: but instead of using the integer as a value
+Malraux says: you use each of the 32 bits in the integer as a separate on/off flag
+Malraux says: since each bit can only be 0 or 1
+Dragoon nods solemnly.
+Malraux says: and the binary conversion of the bits is the value of the integer
+Dragoon says: ok still following ya
+Malraux says: 00 == 0, 01 == 1, 10 == 2, 11 == 3, etc.
+Dragoon says: right
+Malraux says: let's work with a 4 bit int for simplicity
+Malraux says: 0000
+Dragoon says: ko
+Malraux says: and let's assign 4 flags to it... SLASH, BLUNT, MISSILE, POLE
+Dragoon says: ok
+Malraux says: from left to right, letssay
+Malraux says: so to set POLE on, the integer must have a 1 in the last position
+Malraux says: 0001
+Dragoon nods solemnly.
+Malraux says: and 0001 == 1 in decimal
+Malraux says: so we set POLE == 1
+Malraux says: now, to set missile on, we need the 2nd position
+Malraux says: 0010
+Malraux says: which is 2 in decimal
+Malraux says: MISSILE == 2
+Malraux says: for BLUNT and SLASH, respectively, we therefor have 0100 (4 decimal) and 1000 (8 decimal)
+Dragoon nods solemnly.
+Malraux says: notice that the easy way to determine the bit positions then is (previous position * 2)
+Malraux says: ok, now the neat things about bit fields is that you can have more than one flag on at once, since the bits don't affect each other
+Malraux says: 1001 means that SLASH and POLE are set on
+Dragoon says: line cut off at morr
+Dragoon says: remember no line wrap
+Malraux says: than one flag on at once, since the bits don't affect each other
+Malraux says: 1001 means that SLASH and POLE are set on
+Malraux says: now, to manipulate these bits, we need to use logical operations
+Malraux says: | == bitwise ORE
+Malraux says: | == bitwise OR
+Malraux says: & == bitwise AND
+Malraux says: ~ == bitwise NOT
+Dragoon nods solemnly.
+Malraux says: so bitwise means that it compares each bit individually, 
+Malraux says: not the whole integer at once
+Malraux says: 0001 | 0100 == 0101
+Malraux says: 0001 & 0100 == 0000
+Malraux says: OR means that either bit can be true
+Autosave.
+Malraux says: AND means that both have to be true
+Malraux says: so, to set a bit (finally :)
+Dragoon nods solemnly.
+Malraux says: value = value | BIT_TO_SET
+Malraux says: letsMalraux says: value is 0100, and the bit to set is POLE (0001)
+Malraux says: value = 0100 | 0001
+Malraux says: so value = 0101
+Malraux says: which is the same as BLUNT | POLE
+Malraux says: to test a bit, use &
+Dragoon says: ok
+Malraux says: if (value & POLE)
+Malraux says: which in this example would be
+Malraux says: if (0101 & 0001)
+Malraux says: which is true
+Dragoon says: yes....
+Malraux says: now, you can test multiple bits at once too
+Malraux says: if (value & (POLE|SLASH))
+Malraux says: which is 'if (0101 & (0001 | 1000))'
+Malraux says: which is 'if (0101 & (1001))'
+Malraux says: which is true
+Dragoon nods solemnly.
+Malraux says: since both values have the POLE bit set on
+Malraux says: now, to clear a bit
+Malraux says: you AND the value with the bitwise NOT of the bit to clear
+Malraux says: i.e. to clear the POLE bit
+Malraux says: value = value & ~(POLE)
+Malraux says: which is value = 0101 & ~(0001)
+Malraux says: which is value = 0101 & (1110)   (bitwise NOT reverses each bit)
+Malraux says: which is 0100
+Malraux says: since 0101 and 1110 only have the second bit in common
+Malraux says: that's about all there is
+Malraux says: well, i guess i could explain masks
+Malraux says: letsMalraux says: you want to check for either MISSILE or POLE
+Malraux says: set up a mask, MASK, which is MISSILE|POLE
+Malraux says: so in our example, MASK == 0011
+Malraux says: you can then test for either missile or pole on a value
+Malraux says: just by using MASK as the test
+Malraux says: if (value & MASK) 
+Malraux says: is equivalent to 
+Malraux says: if (value & (POLE | MISSILE))
+Malraux says: and finally, there are shorthand notations
+Malraux says: value = value | BIT can be written as
+Dragoon says: is it somethime && though
+Malraux says: value |= BIT
+Dragoon says: if & means = in bit mapping?
+Malraux says: not precisely
+Malraux says: && compares the whole set of bits at once
+Malraux says: that is, 0100 && 0001 is the same as
+Malraux says: 1100 && 1110
+Malraux says: but NOT the same as 0100 & 0001
+Malraux says: a single & means that the two values being compared
+Dragoon says: ok
+Malraux says: share a particular bit
+Malraux says: a double && means that both values are nonzero
+Malraux says: any other questions?
+ 

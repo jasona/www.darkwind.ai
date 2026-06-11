@@ -1,0 +1,49 @@
+
+|GKO================================================================
+               |WKOGarou Guild Abilities : Shaman Path
+|GKO================================================================
+|YKOThe various abilities granted to Gaea's shamans are listed
+below. See |RKB'ghelp <ability name>" |YKOfor specific information
+concerning a given ability, and 'ghelp stance' for general
+info about stances.
+
+|BKB[Note: Shaman only abilities are denoted with a *]
+
+|GKOSpiritual                 GL         LEVEL      EURUS      FORM
+|WKB---------                -----      --------   --------   ------
+|MKBIntensify                 |GKO 1           -          -         MCW
+|MKBJudge Alignment           |GKO 2           -          1         MCW
+|MKBSummon Wolf               |GKO 3           -          1         MCW
+|MKB*Rejuvenate               |GKO 3           -          3         M--
+|MKBSpirit Claws              |GKO 4           -          -         MC-
+|MKBSanctify Corpse           |GKO 5           -          1         MCW
+|MKBCommand Wind Spirits      |GKO 6           -          2         MCW
+|MKB*Transfer                 |GKO 6           -          4         M--
+|MKBLuna's Armor              |GKO 7           -          3         MCW
+|MKB*Mend                     |GKO 8           -          8         M--
+|MKBSummon Fog                |GKO 9           -          5         MCW
+|MKB*Empower                  |GKO 9           -          8         M--
+|MKBCreate Charm Fetish      |GKO 10           -          3         MCW
+|MKB*Tradeoff                |GKO 10           -         10         M--
+|MKBReturn                   |GKO 11           -          5         MCW
+|MKBWinter                   |GKO 12           -         10         M--
+|MKBVision                   |GKO 13           -          5         MC-
+|MKB*Umbral Key              |GKO 14           -         30         M--
+|MKB*Earthbond               |GKO 15          45         35         M--
+|MKBGreater Create Charm     |GKO 15           -          6         MCW
+|MKB*Gate                    |GKO **          **         15         M--
+
+|BKB[**: Gate is only available to GL 15, level 25 pack shamans]
+
+|GKOPhysical                  GL         LEVEL      EURUS      FORM
+|WKB--------                 -----      --------   --------   ------
+|RKBHarry                     |GKO -           -          -         --W
+|RKBLunge                     |GKO -           -          -         --W
+|RKBLeap                      |GKO -           -          -         --W
+|RKBBurst                     |GKO -           -          -         -C-
+|RKBRage                      |GKO 10          20         -         -CW
+|RKBDirected Rage             |GKO 15          65         -         -CW
+
+|GKOStance                    GL         LEVEL      EURUS      FORM
+|WKB------                   -----      -------    -------    ------
+|KKBNormal                    |GKO -           -          -         --W

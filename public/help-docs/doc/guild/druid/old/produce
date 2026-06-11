@@ -1,0 +1,14 @@
+Produce Flame
+
+With this spell, the druid can conjure into existence
+a small globe of pure elemental flame.  The flame will
+serve as a light source, and can also be commanded to
+burn an enemy for a small amount of damage, although
+doing this will reduce the flame's lifespan.
+
+Command: produce
+Base Cost: 35 SP plus 10 SP per 'burn'
+Base Recovery: medium
+Base Effect: light, damage (low)
+Base Duration: very long
+Guild Level: 2

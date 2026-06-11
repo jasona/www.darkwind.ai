@@ -1,0 +1,10 @@
+|GKO================================================================
+                            |RKBLunge
+|GKO================================================================
+
+|YKOLunge is the basic attack power of the wolf form. When lunging,
+the wolf has the potential to do more damage than normal for
+a short time. However, this comes at the price of a penalty
+to dodge incoming blows.
+
+|RKOSyntax: |YKBlunge [<target>]     |WKOCost: |CKO10 sp

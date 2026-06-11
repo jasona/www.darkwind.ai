@@ -1,0 +1,17 @@
+Ranger Help for: adapt
+======================
+
+SYNTAX:      adapt <arctic/desert>
+USAGE:       Any terrain
+SLOT COST:   6
+BASE SP:     30
+SKILL TYPE:  defensive
+
+SUMMARY:
+This skill allows a Ranger to adapt their body to extreme climates,
+reducing the environmental damage caused by harsh arctic cold or
+scorching desert heat. The Ranger must specify which climate to adapt
+to. The adaptation lasts for a duration that depends on the Ranger's
+constitution and skill level. Only one adaptation can be active at a
+time. This skill is essential for Rangers who venture into the most
+extreme terrains of Darkwind.

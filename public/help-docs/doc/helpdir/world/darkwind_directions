@@ -1,0 +1,201 @@
+|YKB<<-- |CKBDarkwind Area Directions |YKB-->>
+
+|WKOAll directions are from the Center of Town in DarkWind City.
+All entries are in the form of:
+|WKBArea Description : |YKBLevel Ranges
+    |MKBDirections  |YKONotes, if needed
+
+|WKBAn old farm : |YKB1-5
+    |MKB6:w, exit, 4:w, 3:n, 2:e, n
+
+|WKBThe newbie meadow : |YKB1-5
+    |MKB6:n, exit, 8:n, 2:e, n
+
+|WKBThe forest in Darkwind : |YKB1-5
+    |MKB6:w, exit, w, 6:s, sw
+
+|WKBThe Church of Mitra in Darkwind City : |YKB1-5
+    |MKB5:w, 2:n     |YKO*this requires a key*
+
+|WKBThe Property of Ezekiel Milquetoast : |YKB1-9 only
+    |MKB6:n, exit, 8:n, 3:w, n
+
+|WKBThe Haunted Keep : |YKB1-10
+    |MKB5:s, exit, 11:s, w
+
+|WKBA demon infested forest : |YKB1-10
+    |MKB6:w, exit, 4:w, 2:n, e, 3:n, e, n, e, n, 5:e, 2:ne, nw, n
+
+|WKBThe sewers under Darkwind City : |YKB1-15
+    |MKB2:w, s, d, down
+
+|WKBThe Realm of Ashkenazy : |YKB1-25
+    |MKB5:s, exit, s, 4:w
+
+|WKBThe Four Dragon Temple : |YKB1-45
+    |MKB2:w, s, down, e, 2:n, w, 4:n
+
+|WKBThe Haxton Province : |YKB1-50
+    |MKB6:w, exit, 4:w, 2:n, w, s, w, enter
+
+|WKBThe Faerie Mound : |YKB1-50
+    |MKB6:w, exit, 4:w, s, portal, s
+
+|WKBThe realm of Qazaash : |YKB1-90
+   |MKB5:s, exit, 5:s, e
+    |YKO*use your consider abilities*
+
+|WKBThe Four Dragon Shrine : |YKB2+
+    |MKB5:s, exit, 8:s, 3:e, n
+
+|WKBEndive's Garden : |YKB3-80|000
+    |MKB6:n, exit, 3:e, n|000
+
+|WKBThe pirate ship Albion : |YKB3+
+    |MKB5:e, 4:n, climb rope
+
+|WKBA valley near the Hermit's house : |YKB3-30
+    |MKB6:w, exit 2:w, n
+
+|WKBThe hillside near the Hermit's house : |YKB3-30
+    |MKB6:w, exit, 2:w, 4:n
+
+|WKBA valley road : |YKB5-10
+    |MKB5:s, exit, 8:s, 15:e, 4:s, 4:e, 2:s
+
+|WKBA ditch near the castle : |YKB5-15
+    |MKB5:s, exit, 8:s, 15:e, 4:s, 4:e, 3:s, e
+
+|WKBThe village of Glavia : |YKB5-25
+    |MKB6:w, exit, 4:w, 2:n, e, 3:n, e, n, e, n, 5:e, 5:ne
+
+|WKBThe castle of Glavia : |YKB5-30
+     |MKB6:w, exit, 4:w, 2:n, e, 3:n, e, n, e, n, 5:e, 5:ne, 10:n
+
+|WKBThe Bandit Fortress : |YKB5-35
+    |MKB6:w, exit, 3:w, n
+
+|WKBDarkWind City Orphanage : |YKB8-12
+    |MKB4:n, 3:w, n
+
+|WKBA dismal swamp in Glavia : |YKB10+
+    |MKB6:w, exit, 4:w, 2:n, e, 3:n, e, n, e, n, 5:e, 5:ne, n, 6:e, 2:se, e,
+    3:s
+
+|WKBThe Ant Hive : |YKB10+
+    |MKB5:s, exit, 15:s, sw, s, hole
+
+|WKBThe Azure Forest : |YKB10+
+    |MKB6:n, exit, 8:n, 3:w, pool, enter, n
+
+|WKBThe skeleton caves : |YKB10+
+    |MKB6:w, exit, 4:w, 13:n
+
+|WKBA clearing near the castle : |YKB10-15
+    |MKB5:s, exit, 8:s, 15:e, 4:s, 4:e, 3:s, w
+
+|WKBA small elven village : |YKB10-25
+    |MKB6:w, exit, 4:w, 6:n, climb, up, n, 3:e, 4:n, 4:e, 2:s, 2:e, n, w
+
+|WKBThe northwestern mountain range : |YKB10-25
+    |MKB6:w, exit, 4:w, 6:n, climb, up, n
+
+|WKBA monestary in Glavia : |YKB15+
+    |MKB6:w, exit, 4:w, 2:n, e, 3:n, e, n, e, n, 5:e, 5:ne, n, 4:w, 2:n
+
+|WKBThe Forest of Terror : |YKB15+
+    |MKB6:w, exit, 4:w, 6:n, climb, up, n, e, n, n, n, n, 5:e, 3:n, nw,
+    n, 3:w, 3:n, d
+
+|WKBA small corner of Hell : |YKB15+
+    |MKB6:n, exit, 8:n, 5:, ne, e, enter, door1, kiss ananda
+
+|WKBPirate Town : |YKB15+
+    |MKB6:n, exit, 10:n
+
+|WKBThe town of Stoker : |YKB15+
+    |MKB6:w, exit, 4:w , 2:n, e, 3:n, e, n, e, n, w, up
+
+|WKBThe forest near Stoker : |YKB15+
+    |MKB6:w, exit, 4:w , 2:n, e, 3:n, e, n, e, n, w, up ,n, 2:w, nw, 7:w
+
+|WKBThe tunnel between DarkWind and Hyperborea : |YKB15+
+    |MKB6:n, exit, 9:n, nw
+
+|WKBThe Valley of Winter : |YKB15-25
+    |MKB6:w, exit, 4:w, s, portal, 3:s, 2:w, u, 3:w, n
+
+|WKBThe realm of Hades : |YKB15-30
+    |MKB6:n, exit, 8:n, 2:e
+
+|WKBA country farm in the Faerie Mound : |YKB15-50
+    |MKB6:w, exit, 4:w, s, portal, s, w
+
+|WKBThe caverns under the Faerie Mound : |YKB15-50
+    |MKB6:w, exit, 4:w, s, portal, s, hole
+
+|WKBThe Abbey of Saint Dominic : |YKB20+
+    |MKB5:s, exit, 19:s, 2:e, ne, se, e
+
+|WKBThe Convent of the Holy Sisterhood of St. Lyra : |YKB20+
+    |MKB5:s, exit, 19:s, e, 2:s
+
+|WKBThe path to the Underworld : |YKB20+
+    |MKB6:n, exit, 8:n, 2:e, 4:s
+
+|WKBA mercenary camp in Glavia : |YKB20+
+    |MKB6:w, exit, 4:w, 2:n, e, 3:n, e, n, e, n, 5:e, 3:ne, e
+
+|WKBA mountain in Glavia : |YKB20+
+    |MKB6:w, exit, 4:w, 2:n, e, 3:n, e, n, e, n, 5:e, 5:ne, 12:n, w, 6:n,
+    2:nw, 3:n, 2:w, n
+
+|WKBThe Orange Hill : |YKB20+
+    |MKB6:n, exit, 8:n, 3:w, pool, enter, 2:w, nw, n
+
+|WKBThe Shrine to Eamonn the Ebullient : |YKB20+
+    |MKB6:n , exit, 8:n, 3:w, pool, enter, 2:w
+
+|WKBThe ancient forest of Syldenith : |YKB20+
+    |MKB6:w, exit, 6:w
+
+|WKBThe forest of the Fianna : |YKB20+
+    |MKB5:s, exit, 10:s, e
+
+|WKBThe forest of the Endrael : |YKB20+
+    |MKB6:w, exit, 8:w, nw
+
+|WKBThe Faerie Queen's Garden : |YKB20-50
+    |MKB6:w, exit, 4:w, s, portal, 3:s, e, 3:s, 2:e, pool, w
+
+|WKBThe settlement of Canith : |YKB20-60
+    |MKB5:s, exit, 19:s, sw
+
+|WKBThe Master's Mansion : |YKB20-70
+    |MKB6:n, exit, 5:n, w, knock door
+    |YKO*level is set per boot cycle*
+
+|WKBThe Gypsy encampment : |YKB25+
+    |MKB6:w, exit, 5:w, 3:s, 2:w
+
+|WKBThe Pirate Cave : |YKB25+
+    |MKB6:n, exit, 12:n, 2:e, s, 2:e, climb wall, ne, e, climb into grave
+
+|WKBThe tunnels near the forest of Syldenith : |YKB25+
+    |MKB6:w, exit, 8:w,  3:sw, 3:s   |YKO*this requires a key*
+
+|WKBThe Gamewarden's home : |YKB30+
+    |MKB6:w, exit, 4:w, 2:n, e, 3:n, e, n, e, n, 5:e, 5:ne, 5:n, 2:w, enter
+
+|WKBThe Realm of Araakas : |YKB35-50
+    |MKB5:s, exit, 6:s, w
+
+|WKBAn Orky settlement : |YKB50+
+    |MKB6:w, exit, 4:w, 5:n, 4:w
+
+|WKBBeneath the roots : |YKB50+
+    |MKB6:w, exit, 4:w, 5:n, 2:e, n, e, n, 5:e, 5:ne, n, 6:e, 2:se, e, 2:s, 
+    enter space
+
+|WKBThe ancient city of Sheritym : |YKB65-75
+    |MKB6:w, exit, 4:w, 2:n, 6:w, sw, 2:w, n, w, n

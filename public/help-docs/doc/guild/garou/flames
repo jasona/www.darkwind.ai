@@ -1,0 +1,20 @@
+|GKO================================================================
+                       |MKBKiss of Helios
+|GKO================================================================
+
+|YKOIt was in the middle of the great warrior's visionquest that Helios,
+the God of the Sun, came to Refa. He explained to the Garou how to invoke
+the spirit of the sun. With this skill, a Garou can invoke the sun's 
+power to ignite a portion of his body and keep it burning for extended 
+periods. Most commonly the Garou will light his mane during the ritual,
+without suffering ill effect.  The blessing conferred is short-term,
+and is only useful in a Garou's wolven form. A fire elemental or a 
+sun-spirit teaches this Gift currently.
+
+|WKOUsable in Form: |GKOCrinos and Wolf only
+|WKORestricted to: |GKBGuardian
+|RKOSyntax: |YKBflames      |WKOCost: |CKOvaried
+
+|WKBNOTE: This ability shows in the 'buffs' command. It can be ended
+early with 'clearbuff'. This ability cannot be used in conjunction with 
+the skill 'quills'.

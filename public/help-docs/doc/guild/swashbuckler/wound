@@ -1,0 +1,11 @@
+Wound - offensive trick
+------------------------------------------------------------
+A sufficiently experienced swashbuckler knows how to strike
+so as to cause a serious wound.  The initial damage is quite
+low, but the wound will continue to bleed for some time,
+causing additional damage.
+
+GL: 12
+SP: 100
+command:  wound <target> (defaults to opponent if in combat)
+duration: instant

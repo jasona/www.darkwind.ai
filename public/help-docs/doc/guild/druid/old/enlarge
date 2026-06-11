@@ -1,0 +1,19 @@
+Enlarge Animal or Plant
+
+As the druid continues to develop his rapport with
+nature, he becomes capable of infusing animals and
+plants with life force, causing them to grow to
+incredible size and strength.  This spell will make
+an animal or plant-like creature much stronger.  Be
+warned, however: it cannot be cast on a befriended
+creature, or it would break the charm, so it must be
+cast prior to befriend, making the charm more
+difficult.  On the other hand, the more dangerous
+creature will be worth more experience...
+
+Command: enlarge <target> (defaults to attacker)
+Base Cost: 35 SP
+Base Recovery: medium
+Base Effect: boost (all stats)
+Base Duration: permanent
+Guild Level: 1

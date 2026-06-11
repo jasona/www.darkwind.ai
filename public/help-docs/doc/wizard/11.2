@@ -1,0 +1,160 @@
+
+To use the new guild soul inherit, you'll of course need to #include <mudlib.h>
+The #define for the guild soul inherit is, predictably enough, GUILD_SOUL
+Note that GUILD_SOUL inherits nothing else, so it can be used in multiple
+inheritance situations with anything on the OBJECT tree (and usually will be).
+
+-------------------------------------------------------------------------------
+The following functions should be called from reset() of the guild_soul:
+
+void set_guild(string sName)
+  This function sets the name of the guild, which must be registered with the
+  Guild Daemon. Proper captalization is necessary.
+  
+  Example: set_guild("Paladin");
+
+void set_main_channel(string sChannel) 
+  This function tells the guild soul what the name of the main channel is
+  which ALL guild members receive. This channel must be a real, static
+  channel registered in the USER_D, and is usually simply the name of the
+  guild rendered to lower case.
+  
+  Example: set_main_channel("paladin");
+
+void set_guild_path(string sPath  OR   string *  asPaths) 
+  This function tells the guild soul what command paths (/cmds/..) the 
+  guild deals with. A single string or an array of strings can be
+  passed to this function, and the function can be called several times
+  to add additional paths if the single-string format is preferred.
+  
+  Example: set_guild_path("/cmds/guilds/paladin");
+           set_guild_path(({"/cmds/guilds/ranger",
+               "/cmds/guilds/ranger/emotes"}));
+
+void add_extra_channel(string sChannel, string sDescription, string sColor)
+  This function tells the guild soul to create a dynamic channel for use by
+  this guild, with the given name, description, and color. Whether or not
+  a specific player is added to the channel or not is controlled by
+  overloading can_join_channel(). See the section on overloads.
+  
+  Example: add_extra_channel("mitra","Followers of Mitra discussion","|MK0");
+           add_extra_channel("lord","Lord Paladin Discussion","|GKB");
+
+** Note for those unfamiliar with multiple inheritance in LPC. It is necessary
+    to call BOTH reset() functions in the parent inherits explicitly by use
+    of the scope resolution operator. A similar process must be followed for
+    init().
+    
+  Example:   armour::reset(arg);
+             guild_soul::reset(arg);
+
+-------------------------------------------------------------------------------
+The following functions exist in the guild soul inherit but should be
+  overloaded in any individual guild soul. Failure to overload these properly
+  will usually result in generic defaults.
+
+string query_msg_in()
+string query_msg_out()
+string query_mmsg_in()
+string query_mmsg_out()
+  These should return the relavent msg to be applied to members of this guild.
+   
+   Example: string query_msg_in() { return "$N enters proudly from the $D."; }
+            string query_mmsg_in() { return "$N appears out of nowhere."; }
+
+string query_guild_header()
+  This should return the header used to mark messages on the main guild
+    channel.
+    
+  Example: string query_guild_header() { return "[PALADIN]"; }
+
+string query_death_message() 
+string query_death_general() 
+  These functions should return the message to be broadcast on the main guild
+    channel when an individual in the guild dies. $N represents the name of
+    the person killed, and $T represents the living object that killed him.
+    Note that use of $T in query_death_general() is not allowed.
+    
+    Example: string query_death_message() {
+       return query_guild_header() + " Mitra's Paladin $N falls to $T."; }
+
+string query_login_message()
+string query_logout_message() 
+  These functions should return the message to be broadcast on the main
+    guild channel when a non-applicant individual in the guild logs in or
+    out. Note that most guild souls should already support this.
+   
+   Example: string query_login_message() { 
+     return "\<>Mitra smiles as " + CAP(REAL) + " enters Darkwind. <>"; }
+
+int can_join_channel(string sChannelName) 
+  This function controls whether or not a player may join a guild's dynamic
+    channel (see add_extra_channel() for how to create such channels).
+    This function is called for every dynamic channel in the guild and
+    a return result of 1 indicates that the channel will be added, 
+    while a return of 0 indicates that the channel should be skipped.
+    Since this is done AFTER reloading/move of the guild soul to the
+    player, it may refer to individual player data.
+
+  Example:
+    int can_join_channel(string sChannelName) {
+      if(sChannelName == "mitra") return 1;
+      return (GLEVEL == 15);
+    }
+
+--------------------------------------------------------------------------------
+Other function information
+
+void save_soul()
+  This function causes the soul data to be saved, if the possessor is a PC.
+
+void set_default_variables() 
+  This function is called when a player enters a guild for the first time
+  (or otherwise lacks a savefile for the guild). It can be overloaded to
+  set up defaults for guild-specific variables. If so, be sure to call
+  the inherited version.
+
+void set_timer(int iNumSeconds, string sTimerName) 
+  This function sets an individual or group timer that is stored and
+    checked independently of the general power timer.
+
+status check_timer(string sType)
+  This function checks an individual or group timer. Return value is
+  0 if the timer is set and not expired (i.e. attempts to use this
+  category should fail), 1 otherwise.
+
+status query_timer(string sType) 
+  This function returns the time at which an individual or group
+  timer expires.
+  
+To include guild-specific code in the setup and guild removal functions,
+  overload void init() and status remove_guild(int iSilently)
+  respectively. Remember to call the inherited version!
+  Do not use init_arg() - monsters do not get init_arg() called when
+  guild souls are created for them!
+------------------------------------------------------------------------------
+Notes on converting existing guild souls:
+
+The following code should be removed and/or replaced with standard inherit
+   calls:
+   
+Death messages
+Login/out messages
+Changes to msgin/out
+Setting/removal of command paths
+Adding/removal of channels
+Creation of dynamic channels
+Setting of attributes on the player
+Incorrect calls to save
+Add_actions that force guild soul to save
+Code that restores the soul from a savefile
+Code that backs up the guild savefile
+
+Basically, all that should be left in individual guild souls is information
+  that is specific to that guild only, and functions to carry out tasks
+  specific to that guild only.
+-----------------------------------------------------------------------------
+Doc created by: Kanan           Date: 3/29/2003
+
+
+

@@ -1,0 +1,8 @@
+Skill: Winspect    Timer: None         GL:  5    Cost: 20
+
+As a fighter, you begin to understand the weapons you use. You will be able to
+learn much about the weapon, but it's subject to your personal interpretation.
+
+You must wield the weapon in order to inspect it.
+
+Syntax is: winspect <weapon>

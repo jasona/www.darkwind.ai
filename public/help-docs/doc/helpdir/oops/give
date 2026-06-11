@@ -1,0 +1,26 @@
+/doc/helpdir/give
+=================
+ 
+SYNTAX
+======
+ 
+give <object> to <player>
+give all <object> to <player>
+ 
+DESCRIPTION
+===========
+ 
+Give an item to a living object.
+
+Give all of one particular thing to a living object.
+
+       give all swords to <player>
+ 
+SEE ALSO
+========
+ 
+drop
+get
+put
+
+

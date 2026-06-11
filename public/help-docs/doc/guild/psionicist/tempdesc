@@ -1,0 +1,373 @@
+"Guild Chat"
+        This allows guild members to talk on the guild channel and is
+        automatically added to the player's power list when joining the
+        guild.  Note that it does NOT include the high level guild chat.
+"Dual Mind"                4       4
+        This splits the psionicist's mind into two separate, working
+        halves allowing him to collect his thoughts faster.  It is a
+        global power modifier that reduces concentration time of all
+        powers automatically.
+"Detonate"          :       1       1
+        This allows the psionicist to telekinetically break the pattern
+        holding matter together.  It destructs any droppable, stealable
+        object the player is carrying (so it must have been gettable
+        too).
+"Psionic Blast"     :       5       3
+        The workhorse psionicist attack power.  It does damabe based on
+        guild level with a mental blast and costs 5 * guild level in
+        SP.
+"Suggestion"        :       2       2
+        This is an annoyance power for psionicists to use for fun.  What
+        it does is place a suggestion in the mind of the target for a
+        couple of minutes depending on guild level.  The suggestion
+        is a piece of text set by the psionicist.  Whenever the target
+        types something OTHER than the suggested command, the target
+        sees 'For some reason you feel like  doing <whatever> instead'.
+        It does not prevent the original command from being performed,
+        though.  It's just for fun.
+"Precognition"      :       2       2
+        This allows a psionicist to fortell the future.  "What will I
+        find if I enter the next room?".  It will tell them the number
+        of inanimate objects, the number of living objects, and how many
+        of those living objects are hostile to them (ie aggressive
+        npcs).
+"Clairvoyance"      :       2       1
+        This allows the psionicist to see the location of a target within
+        his mind.  It displays the room description (including contents)
+        of the target's location.
+"Clairaudience"     :       2       2
+        This places a "presence" in a room.  The presence is like a
+        monster which can neither attack nor be attacked and it will
+        whatever it "hears"  to the psionicist.  Note  the presence IS
+        visible so it is not a means of invading privacy.
+"Enhance"           :       3       2
+        This is a global power modifier. Casting it before another power
+        costs 10 sp and focuses the psionicist's mental energy, giving a
+        guild level increase for purposes of damage, duration, etc of the
+        next power used.
+"Limit"             :       3       2
+        This is the opposite of Enhance.  Its cost is free and it
+        reduces the psionicist's guild level for his next power.
+        Useful for reducing the cost of glevel dependent powers when you
+        don't need the full effect.
+"Probe"             :      11       4
+        This allows the psionicist to invade a monster's mind for any
+        useful experiences or information it contains.  The monster is
+        left permanently mentally scarred.  It works once per monster,
+        lowering the monster's experience and raising the psionicist's
+        experience.  You will gain less experience when killing a monster
+        that has been probed, but the great advantage is being able to
+        learn something without having to kill the target first.  The cost
+        of a probe depends on how tough the opponent is you are trying to
+        probe.
+"Ultrablast"        :      18       7
+        This is the ultimate psionic attack.  It hurls a blast of mental
+        energy every couple seconds for a length of time dependent on
+        guild level.  The power of each individual blast is also dependent
+        on guild level.  The power is taxing on the mind, costing 15 * glevel.
+"Brainwave"         :       8       3
+        This sends a mental wave through the room hitting everyone in
+        its wake.  It has a low efficiency, costing 5 * guild level like
+        a psionic blast but doing less damage to each individual target but
+        it will hit every monster (and player, except the psionicist) in the
+        room.  Does less damage to pc's and pets.
+"Mindlink"          :       1       1
+        This allows the psionicist to use his telepathic powers to send
+        messages to others.  Effectively a 2 sp tell.  A nice guild perk
+        (once it has been bought) in keeping with the psionicist theme.
+"Teleport"          :       5       4
+        This power has 2 uses.  First, for a flat 75 sp, the psionicist
+        can teleport back to the guild hall.  Second, for 10 sp per room,
+        the psionicist can set up a movement path of no more than his
+        glevel worth in rooms, and will appear at the end of the chain
+        without passing through each one.  If at any point the path is
+        blocked, the entire power fails.  Can be used to escape, to move
+        about quickly, to bypass aggressive monsters, to go somewhere without
+        other players knowing where you are going, etc.
+"Animate Weapon"    :      15       4
+        This allows a psionicist to cause a weapon to pick itself up and
+        wield itself in battle!  One of the most useful combat spells in
+        the guild. It has a duration and hit points of the weapon dependent
+        on the psionicist's guild level.  The psionicist must stay in the
+        same room but may perform other powers, attack the monster
+        himself, or whatever.  Another great advantage of this power is
+        that it is not subject to weapon restrictions.  A weapon not
+        normally usable by the guild MAY be animated.  The spell costs 1
+        sp per second it will be in effect, and if the animated weapon
+        "dies", it will be permanently broken.
+"Inertial Barrier"  :       6       3
+        A simple protective power.  For a length of time dependent on
+        the psionicist's guild level, the target receives a shielding of
+        mental energy which will increase armor.  Costs 4 per guild level.
+"Rejuvenation"      :       2       4
+        This is a healing ability that costs time rather than power
+        points.  It is cast with a number of minutes, which will be
+        spent concentrating.  At the end of that time, the psionicist
+        will heal an amount of hit points GREATLY influenced by the
+        amount of time spent rejuvenating.  Rejuvenating once for 6
+        minutes will restore an exponentially greater amount than doing
+        it 3 times for 2 minutes each.  Of course, any commands given
+        during the conentration period will cancel the power completely
+        and no healing will take place at all.  The rejuvenation cost in
+        sp is approximately what would be regenerated normally in the
+        same amount of time.
+"Adrenaline Control"        :       5       2
+        The psionicist alters the flow of adrenaline in hos own body to
+        provide himself with short boosts of speed or strength.  For
+        twice glevel in sp, the psionicist gets a temporary increase in
+        either strength or dexterity based on guild level.
+"Damage Absorption"        :       3       3
+        The idea of this power is it allows the psionicist to alter his
+        own aura to absorb kinetic energy.  The power costs 5 * guild
+        level and adds about 100 hit points which will fade over time,
+        very quickly at low guild levels but slower and slower as guild
+        level rises.
+"Displace"          :      13       4
+        This power allows the psionicist to create an image of himself
+        in people's minds while he himself is actually a short distance
+        away!  The effect of the power is to create a 'dummy' of the
+        psionicist that does not attack but draws the attacks of any
+        opponents, who believe it to be the original psionicist.  This
+        is a very powerful ability.  After a length of time dependent on
+        guild level, the opponents will realize their mistake and begin
+        attacking the real psionicist again.  It costs a flat 50 sp.
+"Double Pain"       :       9       2
+        This power allows the psionicist to temporarily alter the pain
+        sense in a target.  It does no damage in and of itself, but it
+        makes the target so sensitive to pain that NO amount of armor
+        will protect it from damage at all.  It costs a flat 60 SP and
+        lasts a variable amount of time according to the psionicist's guild
+        level.  This is a powerful addition to a psionicists' arsenal
+        and players are urged not to overlook it simply because it
+        doesn't blast anything by itself.
+"Lend Health"       :       2       2
+        This allows the psionicist to lend some of his life energy
+        over to another person.  It's not healing, it is rather a
+        transfer of wounds.  It restores 10 hp to the target while
+        subtracting 10 hp and 15 sp from the psionicist.
+"Banish"            :      17       6
+        An expensive but powerful effect, the target of the power will be
+        teleported away to otherdimensial space unless it resists the
+        spell.  Such strenous mental efforts cannot be maintained long,
+        howeve, and the target will soon return to Darkwind.  Make good
+        use of the time provided to search, move on, or escape!
+"Timeshift"         :      15       4
+        It allows the psionicist to alter his own flow of time to speed
+        it up.  It allows the psionicist to make several melee attacks
+        immediately (the number of extra attacks depending on guild
+        level) , but does not give any bonuses to any of these attacks.
+        It costs 4 * glevel.
+"Awe"               :       2       1
+        This temporarily increases the psionicist's personal magnetism by a
+        large margin.  Adds an amount of charima dependent on guild
+        level for a short length of time.  It is mostly useful for
+        obtaining better prices when selling treasure, but with some
+        planning it is possible to immediately regenerate the cost of
+        the spell before the effects wear off, thus increasing your
+        spell points for a short while.  You'll have to be fast and have
+        a good plan to accomplish this, however.  It takes guild level * 2 sp.
+"Alter Aura"        :       3       1
+        This allows the psionicist to do just what it says.  The
+        psionicist is displayed the alignment choices of demonic, evil,
+        nasty, neutral, nice, good, and saintly and can pick which one
+        to become.  Of course future actions  will immediately begin to
+        alter this.  As the psionicist guild  does not depend on
+        alignments at all this is largely a roleplaying power.  However,
+        it can be used to simultaneously wield magic items requiring
+        wildly different alingments.  Such is the power of the mind.
+        It takes a flat 15 sp.
+"Psychic Reserve"   :       7       1
+        This gives the Psionicist a 7th stat representing his inner
+        mind.  The stat maxes at 25 points.  Each point provides a
+        psychic reserve of 12 SP.  These points can be
+        withdrawn into regular sp for power casting purposes, but not
+        over the psionicist's normal sp limit.  The reserve does not
+        regenerate over time, and must be replenished at a cost of 2
+        SP per 1 reserve point replaced.  Each and every
+        increase of the psychic reserve takes 1 purchase point.
+"Judge"             :       3       2
+        This allows the psionicist to "look deep into another person's
+        eyes and see their soul".  It will tell you how far they have
+        advanced within their guild and compare their stats to yours if
+        the target is a player character, and it will estimate how you
+        would fare in combat against the target if it is a monster.
+        Note that it judges purely from a one on one physical
+        confrontation.  The psionicist has access to a host of powers
+        the opponent does not and the ability to retreat and heal which
+        most monster do not have.  On the other hand, some monsters
+        possess special attacks or abilities which judge will also not
+        factor into things.  However, it is a good way to get a general
+        feeling for how tough a monster is, or how far advanced another
+        player is compared to you.  It costs 15 sp.
+"Obscure"           :      13       3
+        This allows the psionicist to mentally obscure his image in
+        others' minds.  It is not complete invisibility, it simply
+         changes changes the psionicist's description to "something
+         in the corner of your eye" for a short time.  It costs 10 +
+         glevel * 3 SP.  They may know someone's there but they won't
+         know who it is unless your own description gives it away.
+"Teleport Object"   :       3       3
+        The psionicist can teleport an object from his location to the
+        location of another player, like the ups service in the post
+        office.  It costs 20 sp.
+"Ballistic Attack"  :       1       1
+        This allows the psionicist to hurl a small object at superhigh
+        speeds into a target.  The object must contain within it a
+        spark of mental energy implanted for the psionicist to contact.
+        The guild shop sells rocks with this special modification made
+        to them for 5 coins apiece.  The power is the newbie psionicist
+        attack power, doing a small amount of damage but being extremely
+        cheap in SP and having a very low concentration time.
+"Mental Blow"       :       3       2
+        This sends a hammering blow of force directly into the mind of
+        the target.  It does a base amount of damage slightly dependent
+        upon regular level and does a further random amount based on
+        guild level.  It is an all around attack power cheaper and faster
+        than psionic blast.
+"Pyrokinesis"       :       1       2
+        This is the guild level 1 attack power recommended for those who
+        have switched guilds into the Psionicists rather than joined
+        as a newbie.  It has a longer concentration time and much higher
+        cost than Ballistic Attack so it requires a character who can stand
+        up to some punishment and fuel a spell costing 3 * their character
+        level.  Unlike any other power in the guild, its effects are based
+        SOLELY upon regular level and not dependent upon guild level
+        at all.  It achieves its damage by attempting to psionically set
+        the target afire.
+"Crystalize"        :       2       2
+        A psionicist with this power can create the crystals the Crystal
+        shop sells himself from the life energy remaining a corpse.  This is
+        difficult, however, and doesn't always work.  The quality of the
+        crystal created depends on a random chance dependent on guild
+        level.  A successful attempt, no matter what the quality of the
+        crystal resulting, costs 40 sp.  If the attempt fails outright
+        the corpse is still destroyed and the failed attempt costs 5 sp.
+"Power Mastery"     :      12       3
+        This is a global power modifier allowing psionicists to become
+        masters of X, where X is one of the other powers.  The power
+        mastery ability itself must first be bought, then each
+        individual power must be individually mastered.  There are 3
+        levels of mastery.  The first causes all uses of the power to be
+        automatically under the influence of enhance and costs 1
+        purchase point.  The second causes all uses of the power to
+        additionally be under the influence of dual mind and costs 2
+        more purchase points.  The last reduces the sp cost of the power
+        by a percentage of its normal cost and costs an additional 3
+        purchase points.  Note that these benefits are in ADDITION to any
+        enhance or dual mind which might might already be in effect!
+"Reduce Weight"     :       4       2
+        This power allows the psionicist to alter the pattern of an
+        object as in destruct, but in this case to condense and compact
+        it.  It works once per item and reduces the item's weight
+        permanently by a random amount influenced, but not determined,
+        by guild level.  It has a flat cost of 75 sp.
+"Psychic Crush"     :       6       5          
+        This is the randomized equivalent to psionic blast, for those
+        who are feeling lucky.  It costs the same but whereas psionic
+        blast does a flat amount damage, psychic crush does a random
+        amount.  So the psionicist could get lucky and do extra damage
+        for the same amount of sp.
+"Telekinetic Storm" :       7       3
+        This is an impressive attack based on the concepts behind the
+        Ballistic Attack power.  The damage it causes is based solely
+        on what you are carrying at the time.  It will take everything
+        in your inventory that you aren't wearing or wielding and hurl
+        it at the target in a single, giant telekinetic attack.  It
+        costs a flat 25 sp, which can make it either very expensive or
+        very cheap, depending on how much you are carrying at the time.
+"Inflict Pain"      :      12       2
+        This allows the psionicist to generate artificial feelings of
+        pain in the target.  It does no actual damage, but the target
+        will act as if his str and dex were much lower due to the intense
+        crippling effects of the power.  It has a variable duration based
+        on guild level and costs a flat 40 points.
+"Repulsion Field"   :      13       4
+        This power is not yet available.  To give a preview, for 50 spell
+        points it will create a forcefield behind which the psionicst
+        can stand completely separated from others in the area.  The
+        psionicist will be able to look and talk in the room, but cannot
+        pick anything up, attack, or be attacked.  Any items or conversation
+        WITHIN the forcefield can be completely separated from those
+        outside.
+"Project Thought"   :       2       2
+        This is basically an 'area tell'.  It projects a thought not
+        to a specific target, but to an entire room full of people.
+        Combined with clairaudience, it allows the psionicist to have
+        conversations from afar with groups of people while he or she
+        is at an entirely different location of Darkwind.  It costs 5
+        SP per use.
+"Thought Shield"    :       8       2
+        This protects the psionicist from energy attacks.  The shield
+        may also be cast on an adventuring compainion.  It offers good
+        psi resistance and some, but not a lot, of magic resistance for
+        a length of time based on guild level.  The amount of protection
+        also goes up with guild level.  Costs 4 * guild level.
+"Recall"            :       5       2
+        If a psionicist purchases this ability and uses it while dead
+        they will be transported back to the guild and the "Psionic
+        Convergence of Minds" will merge them back into a physical body.
+        It costs nothing to use.  <this power is currently not through
+        testing yet>
+"Enlighten"         :       1       2
+        This allows the psionicist to have sudden enlightening psychic
+        realizations.  It allows the psionicist to perform the cost and
+        advance functions of the guild hall from other locations on the
+        mud.
+"Grand Master Chat" :      18       1
+        This allows the person to join the elite of the psionicists,
+        being able to participate on the Hipsi chat line and enter the
+        Grand Masters' bulletin board room.  As of this writing, no
+        psionicist has achieved Grand Master status.
+"Psychometry"       :       3       2
+        This is the famous "object reading" ability of psychics.  It's
+        an identify type power on the mud, displaying any magical info
+        of an object and giving some vague impressions about whether it
+        is a special item or not.  It sometimes provides less specific
+        information than a more objective appraisal or mages' identify
+        would, but will often give more overall information than either
+        of them will.  You must interpret the messages it gives you
+        well.  It takes 30 SP.
+"Emotion Control"   :      10       3
+        This allows the psionicist to telepathically alter the emotions
+        of creatures.  For a short time, it will make a peaceful monster
+        aggressive, or an aggressive monster peaceful.  The monster's
+        original attitude then returns.  Note that this is a GENERAL
+        attitude change.  If the monster is already fighting someone, it
+        won't stop fighting that particular character.  This is an
+        unusual power that has many creative uses.  It costs 15 SP.
+"Telepathic Strike" :       8       3
+        This is, as the name implies, a telepathic attack.  The
+        psionicist must first 'aquire a target' by meeting the
+        monster face to face (ie you must be 'hunting' it.).  Like
+        brainwave, the power is an inefficient attack, costing the
+        same as psionic blast but doing less damage.  It substitutes
+        pure damage for being able to strike from any distance!
+"Psionic Prodigy"   :       1       3
+        This is a global power modifier allowing the psionicist to learn
+        new powers more rapidly.  It requires planning ahead to use this
+        power effectively. From the point it is learned onwards the
+        psionicist will gain 1 extra purchase point per level.  Since
+"Imprint"           :       1       1
+        This imprints an object with the psionicist's "psychic
+        signature".  If cast in most places on the mud it will last a
+        temporary amount of time dependent on guild level. If cast in
+        the storage  room of the Psionicist Guild it has a permanent
+        duration (until the item is next picked up).  What it is not
+        allow anybody but the psionicist to pick up the item.
+"Channel"           :       3       2
+        The channelling power allows a psionicist to send his own mental
+        energy to others.  Each use of the power will restore 10 spell
+        points (but no hp) to another player, but will cost the
+        psionicist 15 himself.
+"Psionic Profile"   :       3       1
+        A psionicist with psionic profile can alter his "psychic
+        signature" to other psionicists.  It simply allows him to change
+        his guild level title displayed in the guild who list.  Much
+        more interesting than simply being known as "a Psionicist."
+"Psychic Splice"    :      10       4
+        Psychic splice is a global power modifier.  This allows the
+        psionicist to splice powers together to perform them as a
+        single action.  The splice itself takes 10 spell points
+        charged between each power usage, but in exchange for those sp,
+        the concentration time is completely eliminated!  The psionicist
+        prepares the entire sequence in his mind beforehand.

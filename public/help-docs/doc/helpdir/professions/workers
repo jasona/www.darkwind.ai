@@ -1,0 +1,42 @@
+                     DarkWind Profession Workers
+
+    Workers allow players to concentrate on their adventures while still
+bringing in materials to work on later. In the profession building, 4e, n
+from Center of Town, you can '|GKBhire|000' or '|GKBfire|000' workers, as well as
+type '|GKBworkers|000' for a list of your workers.
+
+    Syntax:
+      hire <profession> <target> <amount> <repeat?>
+      fire <profession> <#>
+      workers
+
+    Worker professions:
+      herbalism - hires a worker for herb terrain
+      mining    - hires a worker for ore terrain
+      skinning  - hires a worker for hides by creature race
+      fishing   - hires a worker for fish-part reagents by fishing terrain
+      reagent   - hires a scavenger for saved reagents by creature race
+
+    The workers cost between 1000 and 5000 coins. The more you pay, the
+more materials they're likely to bring back. It's no guarantee however,
+and there's always the chance they'll pocket some and just claim that's
+all there was to be found. If you hire them to repeat the job, they'll
+go back out over and over as long as you have the funds to pay them,
+unless it's close to reboot time, then they'll take a break. They will
+repeat every 15 minutes. They will take funds directly from your bank
+account, so you will have to make sure you can fund them as long as you
+want them to go out.
+
+    If you want them to stop working for you, you can fire them. You can
+type '|GKBworkers|000' to get a list of your workers, then fire the # of worker
+|000you wish to fire. The # of the worker will increment over the course of
+|000the boot, and is not an indication of your personal worker count.
+
+    Currently, every player can get 1 worker for each profession. At HERO
+you can hire another worker, then another at LEGEND, and finally one more
+at EPIC. You also get 1 worker when you reach 500 in the profession, then
+1 more when you reach 1000. That is a max of 6 workers per profession.
+Reagent scavengers use your level-based worker count because they are not
+tied to a single profession skill. You can't double up the same worker
+target for the same profession. If you're a ghost, linkdead, or relogged
+while your worker was out, you will not receive any materials.

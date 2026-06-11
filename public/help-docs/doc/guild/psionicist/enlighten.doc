@@ -1,0 +1,10 @@
+_______________________________________________________________________________
+"Enlighten"      
+        This allows the psionicist to have sudden enlightening psychic
+        realizations.  It allows the psionicist to perform the cost and
+        advance functions of the guild hall from other locations on the
+        mud.
+ 
+SP Cost:  3		Guild Level:  1		Potential Points:  2
+ 
+Command:  enlighten <command>

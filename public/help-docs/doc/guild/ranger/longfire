@@ -1,0 +1,16 @@
+Ranger Help for: longfire
+=========================
+
+SYNTAX:      longfire <direction> at <target>
+USAGE:       Any terrain
+SLOT COST:   NA
+BASE SP:     60
+SKILL TYPE:  archery
+
+SUMMARY:
+This skill allows a Ranger to fire a longbow shot into an adjacent room,
+striking a target from a distance without entering the room. The Ranger
+must specify the direction and the target. A longbow must be wielded
+with an arrow readied. This is a powerful tactical skill that lets the
+Ranger engage enemies before they can close to melee range. Damage is
+based on archery skill and dexterity.

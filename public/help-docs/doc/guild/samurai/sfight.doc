@@ -1,0 +1,12 @@
+Skill name: Surrounded Fighting
+Cost: 140
+Guild level: 13
+Syntax: sfight
+
+Description:
+Calm, cool and collected - That's what Samurai were known for.
+Using this skill, you center yourself within a crowded room of 
+enemies and begin to hack your way out, methodically.
+
+NOTE: A flat 140 sps is taken despite the number of monsters
+      in the room.

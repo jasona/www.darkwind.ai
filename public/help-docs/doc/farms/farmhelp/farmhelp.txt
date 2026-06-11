@@ -1,0 +1,7 @@
+There is currently help availible on the following topics:
+
+darkhops
+serpenteye
+
+Use farmhelp <topic> to view the help.
+

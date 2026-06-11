@@ -1,0 +1,16 @@
+varargs make_and_equip(string sFile, int iHowMany)
+
+  An lfun defined for monsters. Clones iHowMany objects into the monster
+  using make_obj and then proceeds to have the monster equip each object.
+  iHowMany is optional and defaults to 1 when not specified.
+
+  Keep in mind that most monsters cannot equip two of the same type of
+  item, so iHowMany is typically unneeded most of the time. Dual-wielding
+  monsters, however, are one case when such would be useful.
+
+  Example: 
+           make_and_equip("/obj/sword");
+           make_and_equip("/obj/helm");
+           make_and_equip("/obj/plate");
+
+See also: make_obj, make_limited_and_equip, make_unique_and_equip

@@ -1,0 +1,16 @@
+Ranger Help for: trail signs
+=============================
+
+SYNTAX:      signs
+             trailsigns
+USAGE:       Wilderness
+SLOT COST:   NA
+BASE SP:     5
+SKILL TYPE:  cartography
+
+SUMMARY:
+This skill allows a Ranger to read trail markers that have been left
+in the current room by other Rangers. Trail markers contain short
+messages left by fellow Rangers as directions, warnings, or notes.
+Only Rangers can see and read these markers. If no markers are present
+in the room, the skill will report that no signs have been found.

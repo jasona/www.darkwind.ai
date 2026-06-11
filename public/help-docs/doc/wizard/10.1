@@ -1,0 +1,198 @@
+
+                                                               Rev. 2
+
+                      NPC Behavior General Description
+                      ================================
+
+
+Introduction:
+------------
+
+NPC behaviors are a generalized system for imparting intelligence and
+flexibility to the actions of NPCs. These behaviors range from the 
+benign, such as chatting, to specialized guild-based combat skill
+techniques.
+
+
+Concepts
+--------
+
+Each NPC now has a state, which describes the current situation of
+the NPC. These states are defined in <npcstate.h>, and include:
+
+NS_RESTING:  basic inactive state
+NS_FIGHTING: currently engaged in combat
+NS_HUNTING:  not fighting, but chasing down a previous attacker
+NS_HEALING:  damaged, and not at maximum hit points
+
+Each behavior can register itself as active during a particular
+state or set of states. States are bitfields, and as such can be
+ORed together. A behavior will only be queried for interest if
+the NPC is currently in a state for which the behavior is
+registered. Because a behavior can be registered for more than
+one state, we can make behaviors that span more than just simple
+situations.
+
+There are also corresponding "anti-states", which are set to allow
+behaviors based on the lack of a state:
+
+NS_NOT_RESTING, NS_NOT_FIGHTING, NS_NOT_HUNTING, NS_NOT_HEALING
+
+Behaviors are pluggable actions. They can be queried to decide if
+they should be performed. They can also be given priorities, in order
+to give the NPC a semblance of decision making capability.
+
+Behaviors can be added and removed at any point in the lifetime of
+the NPC. During each tick of the heartbeat, the list of behaviors
+is first queried for "interest" using the query_interested function.
+This function (in the inheritable) first checks to see if the state
+of the NPC is one for which the behavior is registered. This function
+can be overridden to add more complex decision functionality.
+
+Once the list of interested behaviors has been created, the list
+is sorted by query_priority. Priorities allow the behaviors to be
+performed in order of most important. For example, an NPC that is
+down to 10% of its hit points would place a very high priority on
+casting a healing spell (if it has one), versus chasing its attackers
+down.
+
+The behaviors are executed in order of priority. Any commands that the
+behaviors execute will subtract from the NPCs command points, and as
+such the priority ensures that the most important actions are carried
+out each heartbeat.
+
+
+Basic Functionality
+-------------------
+
+Behaviors should inherit from the BEHAVIOR inheritable, as defined
+in mudlib.h. This inheritable provides the basic functions necessary
+for a pluggable behavior:
+
+void set_state(int state);
+int query_state();
+- Sets and gets the states for which the behavior should be executed.
+
+int query_interested(int state);
+- Returns 1 if the behavior is interested in being performed this
+  heartbeat, 0 if not. The parent BEHAVIOR will perform the state
+  check, so doing so in children isn't necessary. Nor is it
+  necessary to call ::query_interested(), as the actual test in
+  BEHAVIOR is _query_interested. query_interested is just a hook
+  that is called by _query_interested in the parent.
+
+void set_priority(int priority)
+- Behaviors define a basic integer priority which may be used if
+  more complex behavior is not necessary.
+
+int query_priority();
+- Returns a priority from 0 to 100, with 100 being the highest. The
+  priority is used to sort the behaviors before execution. NOTE: this
+  function will NOT be called if there is only one interestd behavior
+  in the queue!
+
+int perform_behavior();
+- Actually performs the actions associated with the behavior. Should
+  return 1 if successful, 0 if not.
+
+object query_local_npc()
+- Returns the NPC for which this behavior is registered.
+
+void set_local_npc(object npc) - SYSTEM FUNCTION
+- Sets the NPC at behavior registration. Should not be used by wizards.
+
+void activate()
+- Turn the behavior on. A behavior can be registered but inactive, 
+  allowing behaviors to turn themselves (and others!) on and off.
+  activate() is called automatically when the behavior is registered
+  by add_behavior().
+
+void deactivate()
+- Turn the behavior off.
+
+int query_keep_awake()
+- Return a 1 if the behavior wishes the NPC to stay awake even if
+  there are no players in the same room. Used by the tracking
+  behavior to continue tracking an aggressor, for example.
+
+void set_keep_awake(int keep_awake)
+- Set the keep awake of this behavior. 1 means the NPC won't go to sleep;
+  0 means that it will.
+
+void notify_awake()
+- Notifies the behavior that the NPC is awake and receiving heart 
+  beats. The NPC will go to sleep if there are no players in the
+  same room, and if no behaviors return 1 from query_keep_awake().
+
+void notify_asleep()
+- Notifies the behavior that the NPC is asleep and not receiving
+  heart beats. The NPC will go to sleep if there are no players in
+  the same room, and if no behaviors return 1 from query_keep_awake().
+
+
+NPCs define the following functions (from the NPCBEHAVE inheritable):
+
+void set_behavior_state(int state)
+- Sets the current NPC state.
+
+int query_behavior_state()
+- Returns the current NPC state.
+
+void add_behavior(object behavior)
+- Registers a new pluggable behavior for the NPC. Calls activate()
+  on the behavior.
+
+object *query_behaviors(string name)
+- Returns all behaviors registered under the name. Behaviors can
+  use the same name for grouping purposes; eg. several differnt
+  "healing" behaviors utilizing different priorities and commands.
+
+object query_behavior(string name)
+- Returns the first behavior answering to the name. Typically this
+  is sufficient, as there is usually only on behavior registerd
+  for a particular name.
+
+void reset_behaviors()
+- Can be called by a behavior in the perform loop to cause the 
+  entire query_interested/prioritization/perform process to start
+  over. Useful if a behavior changes the NPC's state so drastically
+  as to necessitate a recheck.
+
+void remove_behavior(string name)
+- Removes all behaviors registered under a particular name.
+
+void behave()
+- Loop through and perform all applicable behaviors.
+
+Files
+-----
+/inherits/npcbehave.c
+- Inherited into monster.c. Holds the code for the main behavior loop.
+
+/inherits/behavior.c
+- Inherited by all NPC behaviors. Has basic behavior functionality as
+  described above.
+           
+/secure/include/npcstates.h
+- #defines for the allowable NPC states.
+
+/secure/include/behaviors.h
+- Includes #defines for standard behaviors.
+
+/objects/monsters/behaviors/*
+- Standard NPC behaviors, such as chatting, wandering, and tracking.             
+
+
+Revision History:
+-----------------
+
+Rev. 2 - Malraux: Added note to query_priority
+
+Rev. 1 - Malraux: Added reset_behaviors functionality
+                  Added awake/asleep functionality
+                  Added activate/deactivate functionality
+                  Modified query_interested functionality to be a hook
+                  instead of an overridden method.
+
+Rev. 0 - Malraux: Initial release
+

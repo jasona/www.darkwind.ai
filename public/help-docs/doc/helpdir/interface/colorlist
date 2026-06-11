@@ -1,0 +1,83 @@
+|YKOThe colorlist command displays the compact legacy color combinations
+on DarkWind, plus a few expanded examples.  Here is how the color system
+works:
+
+Color codes are used by typing |<code> where you want the color to
+begin and |000 where it should stop.  The spaces shown in examples like
+"| XX0" are only there so the help text can show the code without
+triggering it.
+
+Legacy compact codes use three characters after the pipe: |XYZ.
+
+The first character, X, is the foreground color.  Acceptable colors are:
+  |RKBR   red|XX0
+  |GKBG   green|XX0
+  |BKBB   blue|XX0
+  |KKBK   black|XX0
+  |YKBY   yellow|XX0
+  |CKBC   cyan|XX0
+  |WKBW   white|XX0
+  |MKBM   magenta|XX0
+
+|YKOThe second character, Y, is the background color.  The acceptable
+colors are the same as the foreground list.  X means no foreground or
+background change.
+
+The third character, Z, is the effect.
+Acceptable options are:
+  |YKBB   bold|XX0
+  |YKUU   underscore|XX0
+  |YKKK   blinking|XX0
+  |YKO0   no affect
+
+A few examples:
+The code | XR0 produces |XR0This|XX0.
+|YKOThe code | BYK produces |BYKThis|XX0.
+|YKOThe code | GKB produces |GKBThis|XX0
+
+Expanded color codes use bracketed markup:
+
+  | [fg=<color>,bg=<color>,<effect>]text| 000
+
+Remove the spaces after | when you use these codes.  They are included
+here only so the help file can show the syntax.
+
+Supported color values are:
+
+  red, green, blue, black, yellow, cyan, white, magenta
+  bright-red, bright-green, bright-blue, bright-black, bright-yellow,
+  bright-cyan, bright-white, bright-magenta
+  gray or grey
+  ansi-0 through ansi-255
+  xterm-0 through xterm-255
+  #rrggbb truecolor hex values, such as #ff8800
+
+Supported effects are:
+
+  bold, italic, underline, underscore, blink, inverse, hidden,
+  strikethrough, fraktur, double-underline, overline, reset, normal
+
+Effects are comma-separated standalone tokens. For example, use blink as
+an effect token, not as a background color:
+
+  | [fg=#ff8800,bg=black,blink]blinking orange| 000
+
+Expanded examples:
+
+  | [fg=bright-cyan,bg=black,bold]bright cyan bold| 000
+  | [fg=ansi-202,bg=black]xterm orange| 000
+  | [fg=#ff8800,bg=black,underline]truecolor orange| 000
+  | [fg=white,bg=black,bold,italic,overline]combined effects| 000
+
+The color command accepts the same expanded color values for channel
+foreground and background colors:
+
+  color gossip bright-cyan black bold
+  color gossip ansi-202 black none
+  color gossip #ff8800 black underline
+  color gossip white black italic
+  color gossip bright-red black bold,italic
+
+Darkflow and players using "set term modern" receive the richer colors.
+Older ANSI terminals fall back to the nearest basic color.  Players with
+color off see the text without the color markup.

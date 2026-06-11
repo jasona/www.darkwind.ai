@@ -1,0 +1,55 @@
+|MKB--------------------------------------------------------------------------------|000
+|BKBCommand                  |YKBAge |WKUCost|000     |GKBDescription|000
+|MKB--------------------------------------------------------------------------------|000
+
+|BKBdfly <higher/lower/land>  |YKB17  |WKU50|000      |GKBFly in the sky.|000
+|BKBdragonfear/dfear          |YKB17  |WKU25|000      |GKBToggle between allowing your dragon fear|000
+                                      |GKBaura, or to suppress it.|000
+|BKBdtransform                |YKB17  |WKU50|000      |GKBTransform into your dragon form and back.|000
+|BKBlair                      |YKB17  |WKU50|000      |GKBInstantly return to your lair.|000
+|BKBswipe <victim>            |YKB17  |WKU5%|000      |GKBSimple claw attack.|000
+|MKB--------------------------------------------------------------------------------|000
+|BKBbreathe <victim>          |YKB18  |WKU10%|000     |GKBUse your breath as a weapon.|000
+|BKBdwill or dragonwill       |YKB18  |WKU10%|000     |GKBBecome immune to breaks in your|000
+                                      |GKBconcentration.|000
+|MKB--------------------------------------------------------------------------------|000
+|BKBairdrop <victim>          |YKB19  |WKU20%|000     |GKBPick someone up, fly into the air,|000
+                                      |GKBthen drop them.|000
+|BKBbuffet <victim>           |YKB19  |WKU15%|000     |GKBBuffet your victim with wind from|000
+                                      |GKByour wings.|000
+|BKBdslam <victim>            |YKB19  |WKU20%|000     |GKBSlam your victim!|000
+|BKBfetch <item> or ferry     |YKB19  |WKU25|000      |GKBFetch <item> from your lair, or ferry|000
+                                      |GKBwhat's in your clutches to your lair.|000
+|MKB--------------------------------------------------------------------------------|000
+|BKBbellow                    |YKB20  |WKU10%|000     |GKBUse your breath weapon on everything
+                                      in your environment.|000
+|BKBbind <victim>             |YKB25% |WKU40|000      |GKBBind your victim to the ground.|000
+|BKBcrush <victim>            |YKB20  |WKU30%|000     |GKBPin someone to the ground and crush them.|000
+|BKBdfind <victim>            |YKB20  |WKU40|000      |GKBFind your victim.|000
+|MKB--------------------------------------------------------------------------------|000
+|BKBdclaws                    |YKB21  |WKUVAR|000     |GKBMagically imbue your claws.|000
+|BKBdloot                     |YKB21  |WKU25|000      |GKBSummon your familiar to loot for you.|000
+|BKBdscales                   |YKB21  |WKU50+|000     |GKBMagically harden your scales.|000
+|MKB--------------------------------------------------------------------------------|000
+|BKBpeace [off]               |YKB22  |WKU100|000     |GKBMake everyone feel at peace.|000
+|MKB--------------------------------------------------------------------------------|000
+|BKBddfear                    |YKB23  |WKU50|000      |GKBDirect your fear at one target.|000
+|MKB--------------------------------------------------------------------------------|000
+|BKBdhole                     |YKB24  |WKU50|000      |GKBCreate a Dragon's pouch.|000
+|MKB--------------------------------------------------------------------------------|000
+|BKBdpox <victim>             |YKB25  |WKU25%|000     |GKBPlace a pox on your victim.|000
+|MKB--------------------------------------------------------------------------------|000
+|BKBdsell                     |YKB26  |WKU50|000      |GKBHave your familiar sell all for you.|000
+|MKB--------------------------------------------------------------------------------|000
+|BKBdcommune                  |YKB30  |WKU0|000       |GKBCommune with the Oracle.|000
+|MKB--------------------------------------------------------------------------------|000
+|BKBdspikes                   |YKB33  |WKUVAR|000     |GKBCover your scales with spikes.|000
+|MKB--------------------------------------------------------------------------------|000
+|BKBbombard                   |YKB35  |WKU80%|000     |GKBBombard your victims!|000
+|MKB--------------------------------------------------------------------------------|000
+|BKBdstomp <victim>           |YKB40  |WKUVARIES|000  |GKBYour stomp paralyzes your victim.|000
+|MKB--------------------------------------------------------------------------------|000
+|BKBinferno <victim>          |YKB50  |WKU80%|000     |GKBYour victim feels like hell.|000
+|MKB--------------------------------------------------------------------------------|000
+|GKBFor more info on a power, 'help <power>'|000
+|MKB--------------------------------------------------------------------------------|000

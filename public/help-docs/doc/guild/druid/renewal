@@ -1,0 +1,16 @@
+|GKB-- Renewal ---------------------------------------------------|000
+
+While not as skilled in the healing arts as a cleric,
+a druid does have a fair amount of knowledge of those
+arts.  This Marken invocation, representing the renewal of all
+things in the natural cycle, is their most potent
+magical tool to that end.  It will rejuvenate a
+target, completely healing all but the greatest
+wounds.
+
+|CKBCommand:      |000 renewal <target> (defaults to caster)
+|CKBBase Cost:    |000 140 Marken nwyfre
+|CKBBase Recovery:|000 short
+|CKBBase Effect:  |000 heal (high)
+|CKBBase Duration:|000 instant
+|CKBGuild Level:  |000 23

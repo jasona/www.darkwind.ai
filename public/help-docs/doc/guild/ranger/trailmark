@@ -1,0 +1,16 @@
+Ranger Help for: trailmark
+===========================
+
+SYNTAX:      trailmark <message>
+USAGE:       Wilderness
+SLOT COST:   NA
+BASE SP:     15
+SKILL TYPE:  cartography
+
+SUMMARY:
+This skill allows a Ranger to leave a trail marker in the current room
+with a short message attached. Only other Rangers can see trail markers.
+These markers are useful for leaving directions, warnings, or notes for
+fellow Rangers who pass through the area. Trail markers persist for a
+limited time before fading. Use 'signs' or 'trailsigns' to read any
+markers left in the current room.

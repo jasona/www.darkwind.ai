@@ -1,0 +1,58 @@
+Magic Resistance and Psionic Resistance.
+
+Magic and Psionic Resistance are very potent abilities
+that allow a player or monster to become somewhat immune
+to the effects of spells and/or certain types of attacks.
+Because of this, much care must be used when adding an
+object to the game that has these properties.  As a general
+rule, any object that is not unique, should have at MOST
+a 1% or 2% magic resistance(MR) OR Psionic resistance(PR), not
+both.  Any object that gives both automatically becomes
+a unique item.  Also, any object that gives more than a
+one or two percent bonus qualifies as a unique item.
+There should really be no objects in the game that give over
+a 15% bonus total.  This means that if you have an object
+that gives both a MR and PR bonus, when you total the bonus's
+together, they should add up to at most 15%.  Also, and object
+with a bonus higher than 10% should be carried by some sort of
+legendary creature on the mud (like level 70 to 100 with special
+abilities).  Objects that give bonuses in the 3% to 10% range
+while unique and hopefully hard to obtain, should be within
+the grasp of players other than the super high leveled ones.
+
+From the perspective of the players, a player that has achieved
+a MR or PR of 50% should be considered to have an awesome
+defense.  Resistances higher than this should really be unattainable
+by players.
+
+The only real exception to the rule above, would be an object
+that bestows a higher than normal MR or PR for a short duration.
+These objects would still be considered unique as far as coding
+rules go, but would allow for a higher than 15% bonus as long
+as the duration was short-lived (few minutes or so) or there
+was some other sort of high cost involved for the user to be able
+to activate the resistance bonus (like a cost of 5 SP per second or
+similar).  Either way, any object that gives over a 10% or 15% percent
+bonus can only be temporary items with one or two uses maximum.
+
+To use the the above commands, you would need to give the folloing
+commands:
+
+  this_player()->add_magic_resistance(1);
+or
+  this_player()->add_psi_resistance(1);
+
+and to remove the bonus:
+
+  this_player()->add_magic_resistance(-1);
+or
+  this_player()->add_psi_resistance(-1);
+
+
+
+*************************IMPORTANT*********************************
+IF YOU GIVE A BONUS TO A PLAYER FOR SAY "WEARING" AN ITEM, YOU MUST
+ENSURE THAT WHEN THE ITEM IS REMOVED, THE BONUS IS ALSO REMOVED!!!!
+*******************************************************************
+
+

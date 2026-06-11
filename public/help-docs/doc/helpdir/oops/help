@@ -1,0 +1,12 @@
+/doc/helpdir/help
+=================
+ 
+SYNTAX
+======
+ 
+help <any command>
+ 
+DESCRIPTION
+===========
+ 
+Show verbose information about any command.

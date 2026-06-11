@@ -1,0 +1,59 @@
+Divine Patronage
+
+Patronage lets a player pledge to Mitra, Gaea, or Set. A pledge affects the
+rate at which heroes build Wrathful Avatar charge.
+
+Use:
+
+  patron
+  patron gods
+  patron pledge <mitra|gaea|set>
+  patron renounce
+  patron favor
+  patron pilgrimage start
+  patron pilgrimage status
+
+Your patron rank rises as you earn favor. Favor comes from patron activity such
+as tithes, shrines, pilgrimages, marked enemies, and deeds whose reputation
+matches your patron. The exact favor numbers are hidden, but patron favor
+describes your broad standing.
+
+Each rank grants an avatar charge-rate bonus. If your patron is ascendant, the
+bonus is stronger. During your patron's Holy Hour it is stronger again.
+
+Mitra rewards fellowship. Mitra followers gain a small extra charge-rate bonus
+for nearby Mitra followers in the same room.
+
+Gaea rewards endurance. Gaea's blessing is weaker at full health and becomes
+strongest when your health is low.
+
+Set rewards shadow and pressure. When Set is ascendant, good-aligned non-Set
+followers may suffer a charge-rate penalty unless protected by special events
+or shrine actions.
+
+Renouncing a patron leaves a temporary debt that slows Wrathful Avatar charge.
+Use score or meter to see your current charge rate.
+
+The patron command also shows Signs. Signs describe whether your recent
+reputation fits your pledge or strains it. A strained vow can briefly slow
+Wrathful Avatar charge, but it does not remove your patron.
+
+Patron activity:
+
+  Tithes       Offer coins with tithe <amount> to <god>, or tithe at shrine.
+  Shrines      Pray or tithe at a divine shrine.
+  Pilgrimage   Start with patron pilgrimage start after pledging.
+  Combat       Marked enemies may appear as the divine cycle stirs.
+
+Shrines can currently be found at:
+
+  Mitra  The Temple of Mitra in DarkWind City.
+  Gaea   The rose garden near the chapel.
+  Set    The black altar in the temple of Qazaash.
+
+Related help:
+
+  help divine
+  help omens
+  help shrine
+  help pilgrimage

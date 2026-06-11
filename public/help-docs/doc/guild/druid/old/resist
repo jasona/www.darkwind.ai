@@ -1,0 +1,19 @@
+Resist Poison, Resist Cold, Resist Lightning, Resist Fire
+
+An experienced druid often grows resistant to elemental
+attacks and to creatures' poisons.  Each of these
+powers, which must be separately acquired, grants the
+druid a resistance to the specified attack form.  If
+fully mastered, the druid is all but immune to such
+attacks, and (for cold and fire) may travel with
+impunity in Hyperborea or Souvrael.  These powers do
+nothing about other types of damage, however -- a
+druid bitten by a snake may be resistant to poison,
+but he will still be injured by the teeth.
+
+Command: none necessary
+Base Cost: none
+Base Recovery: none
+Base Effect: protection (moderate)
+Base Duration: permanent
+Guild Level: 14-17

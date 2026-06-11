@@ -1,0 +1,15 @@
+Nature Step
+
+Through this ancient ritual, the druid may become
+one with his immediate surroundings, gaining the
+ability to sink into the ground and reappear a
+short distance away at will.  That effect makes
+it nearly impossible to melee with the affected
+druid.
+
+Command: naturestep
+Base Cost: 25 SP
+Base Recovery: medium
+Base Effect: protection (high)
+Base Duration: short
+Guild Level: 13

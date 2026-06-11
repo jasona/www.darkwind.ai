@@ -1,0 +1,18 @@
+
+Ranger Help for: enemy amphibian
+================================
+
+SUMMARY:
+Choosing amphibian means your Ranger has studied and learned to hate
+frogfolk, toads, salamanders, and similar wet-skinned creatures that live
+between water and land.
+
+This is usually a strong thematic choice for swamp, beach, and other damp
+territories. Expect it to matter most where marshes, pools, mud, or old
+waterways are common.
+
+COMMAND:
+  setenemy amphibian
+
+=============================================================================
+SEE ALSO: enemy, setenemy and terrains

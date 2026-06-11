@@ -1,0 +1,7 @@
+Fgrunt is just a version of the guild chat line that only goes out to
+fighters currently in the room with you. Non-fighters in the room will 
+only see you grunting in that oh-so-intelligent fighter manner. Fgrunt
+is also an emote when done with no arguments, or with a player's name
+as an argument. Also see "fhelp fchat" and "fhelp efchat."
+
+Syntax is: fgrunt or fgrunt <target> or fgrunt <text>

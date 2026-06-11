@@ -1,0 +1,8 @@
+Skill: fkick       Timer: Damage       GL:  4    Cost: 25
+
+A fighter often finds himself in the throngs of anger during combat,
+and the best he can do is attempt to wildly kick out at his target.
+
+Sometimes you can kick your target so hard it sends him sprawling.
+
+Syntax is: fkick <target>

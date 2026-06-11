@@ -1,0 +1,10 @@
+_______________________________________________________________________________
+"Limit"            
+        This is the opposite of Enhance. It reduces the psionicist's
+        guild level for his next power. It is useful for reducing the
+        cost of glevel dependent powers when you don't need the full 
+	effect.
+ 
+SP Cost:  none		Guild Level:  2		Potential Points:  1
+ 
+Command:  limit [#]

@@ -1,0 +1,9 @@
+                       |BKB-= |CKBSilent |BKB=-
+               
+|MKOThe silent command enables you to leave a room without showing
+which direction you left.  Available directions are all 
+standard compass directions plus up and down.
+
+
+|CKOGLVL required: |GKB5
+|CKOSyntax: |YKOsilent <direction>            |CKOCost: |WKO5

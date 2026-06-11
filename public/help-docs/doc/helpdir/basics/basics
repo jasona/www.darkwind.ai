@@ -1,0 +1,39 @@
+|CKB=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+|WKBThis is DarkWind's basic help screen. Listed below are help files for some
+of the most commonly asked questions. You can view a list of help sections
+by doing |YKB'help list'|WKB, get general information about a section with
+|YKB'help <section>'|WKB, or specific information of a topic by doing
+|YKB'help <section> <topic>'|WKB. You can get a full list of all topics by
+doing |YKB'help all'|WKB.
+
+Please note that the ' is not part of the command.
+|CKB=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+|RKB[ New Players: Please type |YKBhelp new |RKBto get you started. ]|XX0
+
+|YK0We encourage you to read all help, but these are great start points:
+
+  - 'help list communication' to check out ways you can talk to others
+  - 'help list guilds' to check out the guild system
+  - 'help list interface' for ways to customize what and how you
+    play the game
+  - 'help list mechanics' for overviews of the game systems
+  - 'help list rules' to read our rules
+
+|CKB=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+|YKOFor a list of general commands, type |YKB'commands' |YKOor |YKB'help commands'
+|CKB=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+|YKOFormat for help is: 
+
+    |YKBhelp <topic>|YK0  - help on an individual topic|XX0
+    |YKBhelp <section>|YK0  - help on a general subject matter|XX0
+    |YKBhelp <section> <topic>|YK0  - help on a specific topic of a subject|XX0
+    |YKBhelp list|YK0  - show a brief summary of all sections|XX0
+    |YKBhelp list <section>|YK0  - get all topics associated with a subject|XX0
+    |YKBhelp all|YK0  - show all topics, by section|XX0
+
+|YK0Sections include: race, rules, basics, world, interface,
+communication, economy, leveling, professions, stats, clans, mechanics,
+avengement, feedback, new or guilds
+
+|CKB=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=

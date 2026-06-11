@@ -1,0 +1,16 @@
+Locust Swarm
+
+Through this potent charm, the druid summons a
+ravenous swarm of locusts to the area.  The insects
+will bite and torment creatures, slipping into the
+gaps in armor; at the same time, they will eat all
+of the food they can find.  Only druids and their
+summoned or charmed followers are protected against
+their rampage.
+
+Command: lswarm
+Base Cost: 120 SP
+Base Recovery: long
+Base Effect: damage (moderate, area)
+Base Duration: instant
+Guild Level: 17

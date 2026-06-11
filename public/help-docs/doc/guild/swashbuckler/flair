@@ -1,0 +1,21 @@
+Flair - combat resource
+------------------------------------------------------------
+Flair is a Swashbuckler's combat momentum: style, nerve,
+timing, and the room's attention turning toward the blade.
+
+Flair starts at zero and cannot be stored between logins. It
+builds while fighting and decays while out of combat. Maximum
+Flair is 10 plus one tenth of the Swashbuckler's charisma.
+
+During each combat round, a Swashbuckler has a chance to
+gain one Flair. Wielding a weapon personalized with
+nameweapon gives an additional chance. Flourish improves
+both opportunities.
+
+A critical hit grants one Flair, at most once per combat
+round.
+
+Flair is spent by certain guild skills, including slip and
+press.
+
+see also: slip, press, flourish, nameweapon, challenge

@@ -1,0 +1,162 @@
+                               -= Gems =-
+ 
+Want fast and simple treasure for your mobs?  Something that doesn't
+LOOK like it's the same stuff, over and over again?  Have we got the
+answer for you!
+ 
+The basic gem object would look like this:
+ 
+#include <mudlib.h>
+inherit STD_GEM;
+ 
+void reset(int iArg) {
+  if(!is_clone(this_object())) return;
+  ::reset(iArg);
+  if (iArg) return;
+  set_gem_type("something");
+}
+ 
+ 
+Woo!  TEN LINES!  That's it!  If you put that literal code in, you would
+get one of over fifty random gems (more than 200 counting all the color
+variations, etc.) every time you cloned it.  Let's get into some specifics,
+now.
+ 
+Listed below are the 6 gem catagories (and average selling prices) and the
+gem varieties in each.
+ 
+Jewel     (1125)
+-----
+        diamond                 emerald
+        ruby                    star ruby
+ 
+Gemstone   (900)
+--------
+        fire opal               jacinth
+        opal                    sapphire
+        star sapphire
+ 
+Precious   (600)
+--------
+        amethyst                aquamarine
+        garnet                  pearl
+        peridont                spinel
+        topaz
+ 
+Fancy      (300)
+-----
+        alexandrite             amber
+        beryl                   cat's eye
+        chrysoberyl             coral
+        hawk's eye              jade
+        jet                     tourmaline
+ 
+Semiprecious   (120)
+------------
+        bloodstone              carnelian
+        carnelian onyx          chalcedony
+        chrysoprase             citrine
+        hyacinth                jasper
+        moonstone               onyx
+        sardonyx                star rose quartz
+        sunstone                zircon
+ 
+Ornamental      (40)
+----------
+        azurite                 banded agate
+        hematite                lapis lazuli
+        malachite               moss agate
+        obsidian                quartz crystal
+        rhodochrosite           serpentine
+        tiger eye agate         turquoise
+ 
+Each of these also have associated random values: colors, markings, and the
+like, and will be randomly assigned.
+ 
+So, instead of "something" in the above example, you can put a SPECIFIC stone
+(IE, "lapis lazuli"), and get a fine specimen of that stone.  Or, you can put
+the catagory (IE, "jewel") and get a random stone from that catagory.
+ 
+ 
+Functions for this object:
+ 
+set_gem_type("string");
+  As listed above, you can put an actual gem name (refer to the lists), or a
+  gem catagory.  Anything else will generate a random gem from the entire
+  pool. THIS FUNCTION MUST BE SET FIRST!!!!  (otherwise, it will overwrite
+  anything you try to set.)
+ 
+  Valid gem types are:
+  "jewel", "gemstone", "precious", "fancy", "semiprecious", "ornamental"
+  or, an individual gem name.  Anything else will give you a random gem,
+  rather than returning an error.  Nice, huh?
+ 
+  This function doesn't recognize multiple arguments.  If you want (for
+  example) either a jewel OR a gemstone, use a switch in your code. :)
+ 
+add_value(amt);
+  This will allow you to set an added amount (positive or negative integer
+  value) to the generated value.
+ 
+set_flawless(int);
+  This an integer value; a positive value will guarantee an above average
+  gem, a negative value will guarantee a below average gem, and 0 will
+  restrict the gem to a value in the average range.
+ 
+ 
+These are all you need, but if you need to personalize a particular gem, the
+standard functions as follows are all still available.  Defaults are shown
+below.
+ 
+set_short("Description here");
+  If you don't set this, it will show as: A <color> <name of gem>.
+ 
+set_long("Set the long description here.\n");
+  If you don't set this, it will show as:
+      A <description> <gem name> <still more description!>.
+  Basically, you'll have a real description, rather than "you see nothing
+  unusual."
+ 
+set_name("name");
+  This is set to the name of the gem.
+ 
+set_alt_name("name");
+  This is set to a single word for the gem, in most cases the name of the gem
+  is used here.  In others, such as 'tiger eye agate', part of the name
+  is used, ie: 'agate'.
+ 
+set_alias("name");
+  This is set to "gem" in all cases.
+ 
+set_weight(int);
+  This is set to 1.
+ 
+set_treasure_type(TYP_GEM);
+  You PROBABLY don't need to change this.  If you do want to add another
+  type, be sure to include (TYP_GEM|whatever).
+ 
+set_material(MAT_GEM);
+  Ditto, you PROBABLY don't need to change this.
+ 
+set_value(int);
+  DON'T use this function, except in rare cases; use add_value() or
+  set_flawless() to adjust the value. This is calculated automatically based
+  on the catagory of gem, with a randomly generated modifier for quality
+  (heavily weighted towards the middle, but allowing for WIDE variations).
+ 
+set_info("string.\n")
+  Based on the previously-mentioned quality modifier, this will be set to one
+  of the following strings (from worst to best):
+    This gem is horribly flawed!
+    This gem is somewhat flawed.
+    This gem has no apparent flaws.
+    This gem is flawless.
+    This gem is absolutely flawless!
+ 
+ 
+If you have any problems, questions or suggestions refer them to Hern or
+Tyarra.
+ 
+Last updated: 1/21/96
+Updated: 6/8/96
+Updated: 27/08/98

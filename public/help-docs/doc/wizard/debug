@@ -1,0 +1,8 @@
+
+To see the debug log, tail the file /<machinename>.debug.log.
+This is currently /rocksteady.debug.log.
+
+It is advisable to have an alias to do this.
+
+If the machine name changes, the name of the log changes as well.
+

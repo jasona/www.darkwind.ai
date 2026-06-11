@@ -1,0 +1,16 @@
+Befriend Animal or Plant
+
+This spell, in combination with a druid's animal empathy,
+may allow him to befriend a wild animal.  If successfully
+befriended, the animal will serve the druid willingly to
+the best of its ability, even fighting to the death if
+the druid requests it.  Plant-like monsters may also be
+charmed with this spell, but not humanoids or other
+creatures.
+
+Command: befriend <target>
+Base Cost: 125 SP
+Base Recovery: slow
+Base Effect: follower
+Base Duration: permanent (until logoff)
+Guild Level: 13

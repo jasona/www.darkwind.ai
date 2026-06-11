@@ -1,0 +1,54 @@
+
+                          |CKBChapter 1 - How do I MUD?
+                      |BKB-----------------------------------
+
+     |WKBA MUD is a virtual world. Sometimes called Multi User Dungeon
+     or Multi User Domain. The purpose of this chapter is to explain    
+     some very basic principles of the game. Often we assume that a      
+     new user already knows what a MUD is or how to MUD.  The remainder   
+     of this book is written with this assumption. So, if you have mudded 
+     before, you might want to skip on to Chapter 2. 
+     
+     It is made up of both player characters (PCs) and non player 
+     characters (NPCs). Some of the NPCs will be interactive, in so
+     much as they will respond to your says or they will speak to you 
+     and almost all will fight back if you try to kill them. You can 
+     determine if the character speaking in the room with you is a 
+     player or a NPC by checking the who list (|CKOtype who|WKB) or by checking
+     the finger information (|CKOfinger name|WKB).
+     
+     The environment you are in is generally referred to as a room. The
+     room that you are in will have a description that tells you
+     something about where you are. Often there will be nouns in the
+     description that you can look at to get more information about 
+     your surroundings. Rooms can also contain objects that you can
+     get or NPCs that you can interact with (or kill). The commands to
+     pick up an object in a room are 'get' and 'take'. You must give an
+     argument to the command (for example 'get all').
+                                                                          
+     |YKBGetting around: |WKBFirst you will want to look where you are. Type
+     'look'. You will notice that there are exits listed in the room.
+     You move through the mud using direction commands that match the    
+     exits in a room (e.g.. n s e w). You will note that you don't have   
+     to type 'north', just 'n'. You didn't have to type 'look' either
+     'l' would work. These are built in aliases. As you go through the
+     game you will find yourself using some commands over and over. You
+     can create your own aliases for these commands. (|CKOSee |RKBhelp alias|WKB).
+                                                                        
+     |YKBCommunicating:|WKB Asking is the best way to receive help, but how do
+     you ask? Darkwind has a number of channels for communication. You 
+     can use 'say' to speak to people in the same room. Or 'tell' to      
+     talk to a person from a distance. And you have a Newbie line
+     which you can use by typing 'newbie <message>'.  When you use
+     say you may find that not everyone understands you. This is           
+     because Darkwind has a language system. Type 'set language common'     
+     to allow all to understand you. (|CKOSee |RKBhelp say|CKO, |RKBtell|CKO, |RKBchannels|WKB)
+                                                                          
+     |YKBHelp Files - |WKBBeyond this book there are files to assist you in
+     game. Reading these while you heal will not only pass the time but  
+     is sure to make your time here more interesting. Type |CKO'help' |WKBfor a
+     list of topics you can get help on.
+
+     |GKBNEWBIE SALES PITCH ALERT!!! |WKBPlease take a moment to vote for Darkwind
+     as an excellent mud when you're reminded periodically. Please read the
+     help file on vote (|RKB"help vote"|WKB).

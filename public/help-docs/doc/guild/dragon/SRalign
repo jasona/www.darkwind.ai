@@ -1,0 +1,32 @@
+Chromatic dragons are of an evil alignment.
+Evil dragons receive a STR and DEX bonus, and an INT and WIS penalty. 
+They gain an advantage in melee combat to make up for their weaker damage
+from SP.
+Black dragons have a damage type of acid.
+Red dragons have a damage type of fire.
+White dragons have a damage type of cold.
+Blue dragons have a damage type of lightning.
+Green dragons have a damage type of disease.
+
+Gem dragons are of a neutral alignment.
+Neutral dragons do not get any stat bonuses or penalties. They gain a much
+higher HP and SP regen however. They have the advantage of being able to pick
+melee or sp damage as their main choice.
+Crystal dragons have a damage type of light.
+Topaz dragons have a damage type of cold.
+Amethyst dragons have a damage type of poison.
+Emerald dragons have a damage type of disease.
+Sapphire dragons have a damage type of sound.
+
+Metal dragons are of a good alignment.
+Good dragons receive a STR and DEX penalty, and an INT and WIS bonus.
+They gain an advantage in damage from SP to make up for their weaker damage
+from combat.
+Brass dragons have a damage type of disease.
+Copper dragons have a damage type of acid.
+Bronze dragons have a damage type of lightning.
+Silver dragons have a damage type of cold.
+Gold dragons have a damage type of fire.
+
+Except for transforming, you will need to stay in your declared alignment  
+to perform your Dragon abilities.

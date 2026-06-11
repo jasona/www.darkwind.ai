@@ -1,0 +1,34 @@
+                          Profession Inlays
+
+    Profession-crafted gear can be improved after it is made by adding a
+saved shard as an inlay. Inlays are done in the profession building, 4e, n
+from Center of Town.
+
+Command:
+  inlay <crafted item> with <shard>
+
+Example:
+  inlay breastplate with mithril
+  inlay robe with amber
+
+    Inlaying consumes one saved shard from your reagent/material storage and
+adds a small stat or resistance bonus to a profession-crafted item. Each item
+can only hold one profession inlay.
+
+    The item must be profession-crafted gear. Ordinary loot, quest gear, and
+items that already have a profession inlay cannot be inlaid again.
+
+    Shards can come from profession work orders and other profession systems.
+Use 'reagents' to check the shards you have saved, and
+'reagents search <shard>' to look for source hints.
+
+    Metal, leather, and gem shards grant different bonuses. Smithing,
+leatherworking, and tailoring help files list the common material and shard
+bonus themes used by profession-crafted gear.
+
+Related help:
+  help professions
+  help workorders
+  help smithing
+  help leatherworking
+  help tailoring

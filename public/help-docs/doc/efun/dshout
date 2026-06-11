@@ -1,0 +1,8 @@
+SYNOPSIS
+        varargs void dshout(string sDomain, string sArg, status tNoWiz, 
+          string sChan)
+
+DESCRIPTION
+        Sends the message sArg to anyone in domain sDomain across
+        channel sChan. If tNoWiz is 1, it will not send to message
+        to immortals.

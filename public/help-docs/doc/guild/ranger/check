@@ -1,0 +1,17 @@
+Ranger Help for: check
+======================
+
+SYNTAX:      check <terrain>
+USAGE:       Anywhere.
+
+SUMMARY:
+Shows all Ranger skills that can be used in the specified terrain,
+along with their slot costs. Useful for planning which skills to
+learn based on where you like to adventure.
+
+Example: check forest
+         check mountain
+         check underground
+
+=============================================================================
+SEE ALSO: terrains, survey, skills

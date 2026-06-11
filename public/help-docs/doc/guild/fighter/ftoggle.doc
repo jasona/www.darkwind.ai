@@ -1,0 +1,14 @@
+Skill: ftoggle                    GL: Varies       Cost: None
+This skill allows you to toggle on|off your various defensive techniques.
+The skills you can toggle are: counter, feint, guts, and shieldblock (you
+can also use block).
+You can also ftoggle the endurance bar on, off, or bar.
+
+The defensive skills use endurance, so you can toggle which you
+want running to help you conserve your endurance.
+
+Syntax is: ftoggle <skill> <on|off>
+Syntax is: ftoggle endurancebar <on|off|bar>
+Syntax is: ftoggle techbar <on|off>
+
+See also: fhelp counter, fhelp feint, fhelp guts, fhelp shieldblock

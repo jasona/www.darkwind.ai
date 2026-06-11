@@ -1,0 +1,13 @@
+Ranger Help for: rdefend
+========================
+
+SYNTAX:      rdefend
+USAGE:       Any terrain
+
+SUMMARY:
+This skill allows a Ranger to adopt a defensive combat stance. While
+in defensive stance, the Ranger prioritizes evasion and blocking over
+attacking, gaining improved damage reduction and dodge chance at the
+cost of reduced offensive output. This stance is useful when facing
+overwhelming odds or when the Ranger needs to survive long enough for
+help to arrive. Use 'rdefend' again to return to normal stance.

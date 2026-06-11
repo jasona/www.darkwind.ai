@@ -1,0 +1,11 @@
+|GKB-- Call Ravens ----------------------------------------------|000
+
+Current: |CKBTekali|000
+Command: |CKBravens <target>|000
+Guild Level: 14
+
+Call Ravens sends raven-shadows around a target, blinding and
+disrupting it.
+
+Mastery extends the blindness.  This is a control invocation, not a raw
+damage tool.

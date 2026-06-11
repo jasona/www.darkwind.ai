@@ -1,0 +1,47 @@
+             |BKB-= |CKBThief Powers |BKB=-
+|RKOGLVL:     |CKBSkill:         |YKOCOST:       |GKOCommand:
+|MKO-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+  |RKO1      |GKORoll Corpse      |YKOFree        |GKOroll
+  |RKO1      |RKBQuick Strike     |YKOVaried      |GKOqstrike
+  |RKO2      |MKOSteal           |YKO~20          |GKOsteal
+  |RKO2      |GKOMoney            |YKO5           |GKOmoney
+  |RKO3      |KKBScout            |YKO10          |GKOscout
+  |RKO3      |RKBShadowstep       |YKOVaried      |GKOshadowstep
+  |RKO3      |MKOTripwire         |YKO20          |GKOtripwire
+  |RKO4      |MKOPalm             |YKO10          |GKOpalm
+  |RKO4      |WKBSquint           |YKO15          |GKOsquint
+  |RKO5      |KKBSilent           |YKO5           |GKOsilent
+  |RKO5      |GKOContacts        |YKO~50          |GKOcontacts
+  |RKO5      |MKOTrick           |YKO~40          |GKOtrick
+  |RKO6      |GKOCase             |YKO10          |GKOcase
+  |RKO6      |WKBCritical Hit    |YKO~45          |GKOcrit
+  |RKO7      |KKBConceal         |YKO~30          |GKOconceal
+  |RKO7      |GKOUnhide           |YKO5           |GKOunhide
+  |RKO8      |GKOPlant           |YKO~35          |GKOplant
+  |RKO8      |MKOSucker Punch     |YKOVaried      |GKOspunch
+  |RKO8      |RKBClever Strike    |YKOVaried      |GKOcstrike
+  |RKO9      |KKBPick            |YKO~30          |GKOpick
+  |RKO10     |MKOTrap Room       |YKO~35          |GKOtrap
+  |RKO10     |KKBShadow          |YKO~35          |GKOshadow
+  |RKO11     |GKOHide             |YKO20+         |GKOhide
+  |RKO12     |KKBPeek             |YKO35          |GKOpeek
+  |RKO12     |RKBCircle           |YKOVaried      |GKOcircle
+  |RKO13     |WKBFast Talk       |YKO~50          |GKOfasttalk
+  |RKO15     |MKOBreak In         |YKO40          |GKObreakin
+  |RKO16     |BKODisembowel       |YKOVaried      |GKOdisem
+  |RKO18     |MKOTendon Strike    |YKOVaried      |GKOtstrike
+  |RKO20     |RKBBack Stab        |YKOVaried      |GKOstab
+  
+            |BKB-= |CKBRank Powers |BKB=-
+|RKORANK:     |CKBSkill:         |YKOCOST:       |GKOCommand:
+|MKO-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+  |RKOGM     |WKBTactics          |YKO10          |GKOtactics
+  |RKOQM     |WKBSuccor           |YKO10          |GKOsuccor
+  |RKOASN    |RKBAssassin Strike  |YKOVaried      |GKOastrike
+  |RKOMKY    |MKOThieves Monkey   |YKO35          |GKOtmonk
+
+|WKBLegend:
+
+|WKB~ |YKOSP starts at that static cost but gets cheaper later.|000
+
+|GKOStandard   |RKBDamage   |MKOTrick   |KKBStealth   |WKBSupport   |BKODoT

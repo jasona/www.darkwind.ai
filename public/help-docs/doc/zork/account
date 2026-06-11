@@ -1,0 +1,8 @@
+Zork-Only Accounts
+
+In Zork-only mode, new character creation asks only for a name and password.
+The account is still saved as a Darkwind player so the same authentication
+system can be used, but normal Darkwind character setup is skipped on the
+Zork-only listener.
+
+Use the regular Darkwind port for full Darkwind gameplay and administration.

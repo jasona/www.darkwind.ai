@@ -1,0 +1,14 @@
+Ranger Help for: recruit
+========================
+
+SYNTAX:      recruit <player name> (or: solicit)
+USAGE:       Anywhere.
+
+SUMMARY:
+Offers to recruit another player into the Rangers guild. The target
+player must be in the same room as you. You must be at least guild
+level 5 to recruit. The target player will receive an invitation
+they can accept or ignore.
+
+=============================================================================
+SEE ALSO: rangers

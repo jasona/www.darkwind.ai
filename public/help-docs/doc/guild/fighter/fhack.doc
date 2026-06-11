@@ -1,0 +1,8 @@
+Skill: fhack       Timer: Damage       GL:  8    Cost: 10%
+
+A basic fighter attack skill. You gather up your strength and use it to hack
+into your enemy without mercy.
+
+You must be wielding an edged weapon to use this skill.
+
+Syntax is: fhack <target>

@@ -1,0 +1,13 @@
+Sunray
+
+This powerful ritual focuses the light of the sun
+into a searing beam of power.  Among the most
+powerful of druidic attacks, it is also especially
+effective against undead creatures.
+
+Command: sunray <target> (defaults to attacker)
+Base Cost: 75 SP
+Base Recovery: medium
+Base Effect: damage (high)
+Base Duration: instant
+Guild Level: 18

@@ -1,0 +1,5 @@
+This shows a history of all communications on the Fighter channel.
+You can also specify the number of history lines to display.
+The max is 300. Default is 36.
+
+Syntax is: fhist <number>

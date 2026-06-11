@@ -1,0 +1,16 @@
+
+Ranger Help for: check
+======================
+
+SYNTAX:      check <weapon>/check <weapon1> against <weapon2>
+USAGE:       Any terrain
+SLOT COST:   2
+BASE SP:     25 sp
+SKILL TYPE:  knowledge
+
+SUMMARY:    
+This skills lets a Ranger check how good a weapon is. It will show various
+ratings on certain aspects of the weapon. You can also check a weapon
+against another weapon, in which case it will show information for both
+weapons and then give you an idea of which one might be better.
+

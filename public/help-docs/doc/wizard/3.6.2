@@ -1,0 +1,42 @@
+Some basic commands for handling files:
+
+ls <dir> 
+Lists the files directory 'dir'. If no argument is given it
+lists the files in the current directory.
+cd <dir>
+Changes the current directory to 'dir'. If no argument is 
+given it changes to the builder's home directory.
+
+rm <filename>   - remove a file
+ed <filename>   - edit a file using LPmud's online editor
+cat <filename>  - print the contents of a file on the screen
+more <filename> - print the contents of a file, one screen at a time
+tail <filename> - print the last few lines of a file
+
+Loading, cloning and updating
+-----------------------------
+ 
+"Loading an object" means the process of taking a class description
+file, for example "/obj/weapon.c", and reading it into the game.
+This is done as soon as that object is used in any way, for example
+if a function in the object is called from LPC, or if another object
+tries to enter it (as when a player walks into a room).
+ 
+When the object is loaded, one instance of the object class is created.
+
+If there should be only one instance, as for example for (most) rooms,
+this is enough.
+ 
+If you need to create several instances of a class of objects, you
+clone it.  Objects can be cloned using the wizard command "clone",
+as in "clone /obj/torch", and with the LPC function clone_object(),
+as in
+        this_torch = clone_object("obj/torch");
+ 
+Cloning an object will cause it to be loaded, if it wasn't already.
+ 
+When you have changed the description of an object by editing the file,
+and want to load the new version of the object, you can use the wizard
+command "update". Then load (or clone) the new version. If the object
+in question is a room, a "goto ROOMNAME" will load the room as well.
+ 

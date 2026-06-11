@@ -1,0 +1,17 @@
+
+Ranger Help for: enemy crustacean
+=================================
+
+SUMMARY:
+Choosing crustacean means your Ranger knows how to fight hard-shelled
+shore and water creatures: crabs, lobsters, crawfish, and stranger things
+with claws and chitin.
+
+This is mostly a coastal or swamp choice. It is best for Rangers who spend
+time near beaches, marshes, pools, and tidal places.
+
+COMMAND:
+  setenemy crustacean
+
+=============================================================================
+SEE ALSO: enemy, setenemy and terrains

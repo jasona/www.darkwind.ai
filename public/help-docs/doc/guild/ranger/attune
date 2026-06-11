@@ -1,0 +1,15 @@
+Ranger Help for: attune
+=======================
+
+SYNTAX:      attune <target>
+USAGE:       Any terrain
+SLOT COST:   NA
+BASE SP:     43
+SKILL TYPE:  religious
+
+SUMMARY:
+This skill allows a Ranger to attune to a target's elemental weakness
+through a brief communion with Gaia. Once attuned, the Ranger's attacks
+will exploit that weakness for increased damage. Attunement lasts for a
+limited duration and can only be active on one target at a time. This is
+a religious skill, requiring devotion to Gaia to use effectively.

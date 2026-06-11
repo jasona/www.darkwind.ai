@@ -1,0 +1,20 @@
+Ranger Help for: sharpen
+========================
+
+SYNTAX:      sharpen <weapon>
+             edge <weapon>
+USAGE:       Any terrain
+SLOT COST:   NA
+BASE SP:     35
+SKILL TYPE:  survival
+
+SUMMARY:
+This skill allows a Ranger to sharpen a bladed weapon using a rock,
+improving its damage temporarily. The Ranger must have a rock in their
+inventory. Only slash and pierce weapons can be sharpened. The
+effectiveness depends on the Ranger's training, and the keen edge
+persists for a meaningful stretch of time before it dulls again.
+The 'edge' command is an alias for 'sharpen'.
+
+If you are in hills, mountains, or underground terrain, you can use
+'quarry' to gather a suitable rock first.

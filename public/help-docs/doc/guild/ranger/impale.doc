@@ -1,0 +1,16 @@
+
+Ranger Help for: impale
+=======================
+
+SYNTAX:      impale <target>
+USAGE:       Any terrain
+SLOT COST:   11
+BASE SP:     90 sp
+SKILL TYPE:  attack
+
+SUMMARY:
+This skill allows a Ranger to punish an opponent by impaling his or
+her weapon through their opponent's armour into their body, causing 
+good damage. The Ranger must use a pierce type weapon in order to 
+perform this attack.
+

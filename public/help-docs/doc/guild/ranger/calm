@@ -1,0 +1,16 @@
+Ranger Help for: calm animal
+=============================
+
+SYNTAX:      calm <target>
+USAGE:       Any terrain
+SLOT COST:   9
+BASE SP:     45
+SKILL TYPE:  defensive
+
+SUMMARY:
+This skill allows a Ranger to use a nature-like demeanor to overcome
+an animal's aggression and calm it. A calmed animal stops attacking,
+and anything attacking the animal also stops. There is a chance the
+animal may become frightened and resume attacking. A Ranger cannot
+calm an animal that belongs to their enemy species. The success rate
+depends on the Ranger's charisma and skill level.

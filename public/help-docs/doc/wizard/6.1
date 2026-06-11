@@ -1,0 +1,613 @@
+                 -=[ LPC Basics ]=-
+ 
+Introduction:
+ 
+The purpose of this document is to introduce to the new wizard
+the basic concepts of LPC coding. My experience has shown that
+there is a large number of wizards who are able to use
+configurable object files (room, armour, weapon, etc), but
+have little idea on why, or what they are coding.
+ 
+The examples shown are in my coding style, which is one of a
+number I have seen. I will also be coding using strict types,
+as this is more correct. I hope I don't make too many typo's
+in the lpc examples.
+ 
+LPC mud structure:
+ 
+LPC is object orientated. A sword is a complete "object",
+entirely separate from all other code. Actions are an
+interaction between one object and another. A player is
+interactive action between the object player and other
+objects. A room is an object, A player is an object placed in
+the room object, A sword is an object in the player object in
+the room object. You might already summise that you need
+particular functions that allow you to find the position of an
+object, and interaction between objects.
+ 
+Though not strictly true I will I will call the source file,
+the object. This is more convenience then anything else.
+ 
+ 
+ 
+Objects:
+ 
+The most basic object is created from a source file which is
+empty (0 bytes). This of course would do nothing. There are a
+number of "standard" functions, if placed in an object will
+allow it to interact with the "player" object. But before we
+can look at this you must understand some basic LPC language.
+I am going to work on the assumption that you have only very
+basic concepts of programming, programming algorithims, and
+the language C.
+ 
+ 
+ 
+Language:
+ 
+LPC is a 'block-structured' language, and like
+Kernighan/Ritchie C, was developed for the UNIX. The game
+parser is usually compiled on FSF's GNU g++. That is why
+LPCMuds use a unix style file, and directory system. Though
+there are those trying to port it to other platforms with a
+minimum of success.
+ 
+ 
+ 
+Debugging at home:
+ 
+Most clients have buffers that allow you to edit files at home
+and cut and paste into the online file editor (ed).
+
+ 
+ 
+ 
+Loading source files:
+ 
+ 
+update <object>
+ 
+if object loaded in memory, remove it. You should update an
+object if you make any changes to a source file. Then try to
+load it.
+ 
+ 
+load <file>
+ 
+load object into memory. Failure to do so will produce an
+error that is logged into /log/lower_case_your_name. I
+personally make an alias on my quicktyper, "error". (alias
+error tail /log/your_lower_case_name).
+ 
+ 
+clone <filename>    make a clone of an object
+ 
+dest <object>       destruct a clone object
+ 
+ 
+             -=[ LPC language basics ]=-
+ 
+Comments:
+ 
+Comments are made the same way as in C, /* Comment */. It does
+accept the c++ commenter of '//' for one line comments.
+ 
+ 
+ 
+Type Declarations:
+ 
+ 
+LPC has six data types. These types are: status, int, string,
+object, mixed, and void. All variables MUST be declared, and
+functions SHOULD be declared. There are three basic places
+variables can be declared: inside functions, inside a code
+block (both of these constitute 'local' variables); and
+outside functions ('global' variables).
+ 
+ 
+Example:
+ 
+int miLast_integer;
+ 
+void example(int iInteger) {
+  int iI;
+ 
+  iI = 2 * iInteger;
+  if(miLast_integer < iInteger) {
+    string my_name;
+    my_name = (string)this_player()->query_name();
+    say(my_name+" says: Hi.\n");
+  }
+  else
+    iInteger = iI;
+  miLast_integer = iInteger;
+}
+ 
+Example is quite an innane program but is an example of type
+declaration. 'miLast_integer' is a global variable of type
+'int'. Its value is known throughout the program, and can be
+used and manipulated by any piece of code. 'void' declares
+that the function 'example' does not return any value.
+'iInteger' is a 'formal argument' of the function example(). It
+has been declared as an 'int' and is treated as a local
+variable throughout 'example'. 'iI' is a variable declared as
+'int', which can be used throughout example(). 'my_name' is
+declared as a 'string'. However, it can only be used within
+the if(){ } code block. Of note is '(string)this_player()...',
+the '(string)' is known as a 'cast'.
+ 
+Call_other and casting:
+ 
+Call_other allows you to call a function in another object.
+However, the compiler treats the return value of such a call
+as "unknown". So you must declare the type of a call_other by
+using a cast. Call_other(object|string,function,arg1,arg2,..)
+is equivalant to object->function(arg1,arg2,..).
+ 
+ 
+MAIN POINTS: Declaration of a variable MUST be done at the
+             head of the file, function, or code block. You
+             should declare all variables and functions. This
+             allows you to find errors in compile time, rather
+             then in run time. Run time errors are always
+             harder to find. The valid declarations are:
+             status, int, string, object, mixed, and void.
+ 
+ 
+ 
+Declaring Variables:
+ 
+ -=[ Type ]=-             -=[ Example of Type ]=-
+ 
+ status example; /* example is off|on, (1|0), example = 1 */
+ int example;    /* example = 5 */
+ string example; /* example = "Hi!\n"; */
+ object example; /* example = this_player() */
+ mixed example;  /* a mixture of int, string, or object */
+ 
+ 
+Declaring Array Variables:
+ 
+It is important to declare variables that are arrays, as
+pointers(*).
+ 
+ -=[ Type ]=-             -=[ Example of Type ]=-
+ 
+ int *aiExample;    /* aiExample = ({ 1, 3, 5, 7, }); */
+ string *asExample; /* asExample = ({ "Bob", "Eric", "Tom", }); */
+ object *aoExample; /* aoExample = ({ obj1, obj2, obj3, }); */
+ mixed *axExample;  /* axExample = ({ 1, "Bob", ({ obj2, }), });
+ 
+ 
+ 
+Declaring Functions:
+ 
+All functions should be declared. They can be declared in the
+same way as variables. The type of function declaration
+depends upon what the function returns.
+ 
+  void   /* returns nothing */
+  status /* returns 0|1 */
+  int    /* returns an int */
+  string /* returns a string */
+  object /* returns an object */
+  mixed  /* returns an int, a string, or an object */
+ 
+eg. A simple monster.
+ 
+inherit "inherit/monster";
+ 
+void reset(status iArg) {
+  if(iArg) return;
+  set_name("bob");
+  set_level(1);
+  set_short("Bob the Dwarf");
+}
+ 
+ 
+ 
+Declaring Array functions:
+ 
+Note: If the function returns an array the function should be
+      declared as a pointer.
+ 
+eg. get an array of weapons that are on a player
+ 
+ 
+object *get_weaoPon(object player) {
+  int iI;
+  object *aoInv, *aoWeapons;
+ 
+  aoWeapons = ({});
+  if(!oPlayer) oPlayer = this_player();
+  inv = all_inventory(oPlayer);
+  for(iI = 0; iI < sizeof(iInv); iI++) {
+     if(iInv[iI] -> query_weapon_class()) {
+     /* this may be invalid on some muds - see alternative */
+      aoWeapons = aoWeapons + ({ iInv[iI], });
+    }
+  }
+  return aoWeapons;
+}
+ 
+ 
+/* an alternative to added to arrays - this would have limits
+   adding arrays with a total of less then 50 elements */
+ 
+mixed *add_array(mixed *axArr1, mixed *axArr2) {
+  mixed *axTemp;
+  int iI, iSize1, iSize2;
+ 
+  if(!(iSize1=sizeof(axArr1))) {
+    if(!sizeof(axArr2)) return ({});
+    return axArr2;
+  }
+  if(!(iSize2=sizeof(axArr2))) return axArr1;
+  axTemp = allocate(iSize1 + iSize2);
+  for(iI = 0; iI < sizeof(axTemp); iI++) {
+     axTemp[iI] = (iI < iSize1) ? axArr1[iI]
+                          : axArr2[i - iSize1];
+  }
+  return axTemp;
+}
+ 
+               -=[ LPC Basics ]=-
+ 
+ 
+Control statements:
+ 
+     LPC has control statements the same as C. These include;
+     if-else, switch, for-loop, while-loop, and the loop
+     controls break, and continue; and the function control
+     return.
+ 
+ 
+ 
+               -=[ Selection statements ]=-
+ 
+ 
+     LPC supports two selection statements: if, and switch.
+ 
+if:
+ 
+     if(expression) {
+       statement1;
+     }
+     else {
+       statement2;
+     }
+ 
+     The conditional expression can be anything. C only
+evaluates 'expression' as false if it is 0. LPC allows an
+if-else-if ladder.
+ 
+     if(expression1) {
+       statement1;
+     }
+     else if(expression2) {
+       statement2;
+     }
+     else {
+       statement3;
+     }
+ 
+ 
+ 
+Example:
+ 
+     /* write the players inventory, if this_player() is a
+        wiz, then show invisible objects */
+ 
+     #define WIZ 21
+ 
+     void inventory(object oPlayer) {
+       object *aoInv;
+       int iI;
+ 
+       aoInv = all_inventory(player);
+       for(iI = 0; iI < sizeof(aoInv); iI++) {
+         if(aoInv[iI]->short()) {
+           write((string)aoInv[iI]->short()+"\n");
+         }
+         else if(this_player()->query_level() >= WIZ) {
+            write("*"+file_name(aoInv[iI])+"\n");
+         }
+       }
+     }
+ 
+ 
+ 
+'Switch' used for selection:
+ 
+     switch(expression) {
+       case constant1:
+         statement1;
+       break;
+       case constant2:
+         statement2;
+       break;
+       case constant3:
+         statement3;
+       break;
+       default:
+         statementdefault;
+     }
+ 
+     Switch is a multi-branch selection statement. If there is
+     a match between the expression and 'constant'. It will
+     execute the statement. If there is a default it will do
+     the default statement if there are no other matches.
+ 
+ 
+ 
+ 
+               -=[  Iteration statements ]=-
+ 
+     The main iteration statements used are the while, and for
+     loops.
+ 
+for:
+ 
+     for(initalization;condition;increment) {
+       statement;
+     }
+ 
+while:
+ 
+     while(expression) {
+       statement;
+     }
+ 
+     Note: Unlike programmes compiled on your own machine, LPC
+     will only allow evaluations of about 50 loops. After this
+     you will get Too Long Evaluation errors. I think this was
+     design so that you didn't get infinite loops, or long
+     evaluations that lag, or crash the mud.
+ 
+ 
+ 
+Jump statements:
+ 
+return:
+ 
+     return expression;
+ 
+     return causes the function to jump out of the current
+function (routine). It may or may not have an expression.
+ 
+break:
+ 
+     break;
+ 
+     terminates the loop that the break is currently in.
+ 
+continue:
+ 
+     continue;
+ 
+     continue forces the next iteration of a loop skipping
+code that follows it.
+ 
+Operators:
+ 
+     Operators allow processing of variables, and functions.
+ 
+     Operator       Action
+ 
+assignment:
+ 
+       =         assign to rvalue, lvalue
+ 
+arithmatic:
+ 
+       -         subtraction, unary minus
+       +         addition, add strings
+       *         multiplication
+       /         (integer) division
+       %         modulus division
+       --        decrement
+       ++        increment
+       -=        x -= 5; is equivelant to x = x - 5;
+       +=        x += 5; is equivalent to x = x + 5;
+ 
+relational:
+ 
+       >         greater than
+       >=        greater than or equal to
+       <         less than
+       <=        less than or equal to
+       ==        equal to
+       !=        not equal to
+ 
+logical:
+ 
+       &&        AND
+       ||        OR
+       !         NOT
+ 
+ternary:
+ 
+      variable = (expr1) ? expr2 : expr3;
+ 
+      is equivalent to,
+        if(expr1)
+          variable = expr2;
+        else
+          variable = expr3;
+ 
+     Example:
+        void set_msgin(string sArg) { msgin = (sArg) ? sArg
+                                                  : "arrives";
+       }
+ 
+Misc:
+ 
+     ->    arrow, "object -> fn()" is equivalent to
+                  "call_other(object,"fn")"
+     []    square bracket, s[4], 5th element of array s
+ 
+     ::    scope symbol, call the function directly from the
+           inherited object.
+ 
+           Example:
+ 
+           void init() {
+             ::init();
+             add_action("jump","jump");
+           }
+ 
+               -=[ LPC Basics ]=-
+ 
+ 
+directives (preprocessors):
+ 
+ 
+     LPC allows most of the ANSI preprocessor controls. Since
+     this is only a light brush of LPC, I will deal only with
+     the directives, #define, #undef, and #include. I will
+     leave an explanation of conditional directives later.
+ 
+ 
+ 
+#define:
+ 
+     The #define directive allows you to do a macro
+     substitution. The directive defines an identifier, that
+     substitutes  a string when encountered in the source
+     file.
+ 
+ 
+     Example:
+ 
+     #define query_name() QN
+ 
+     will substitute 'query_name()' whenever 'QN' is found in
+     your code. #define can used more powerfully as a psuedo-
+     function,
+ 
+     #define PAY(XXX)  this_player()->add_money(-XXX)
+ 
+     if PAY(20) was called then, 20 coins would be deducted
+     from this_player().
+ 
+     The macro does not have to be only one line,
+ 
+     #define MOVE_OBJ(NN,FF) if(!present(NN,this_object())) {\
+                 move_object(clone_object(FF),this_object());\
+             }
+ 
+     However, you must be careful using pseudo-functions. They
+     are not very leanient.
+ 
+     For example,
+ 
+          MOVE_OBJ("bob","players/zilanthius/monsters/bob");
+ 
+     would work fine. But,
+ 
+          MOVE_OBJ( "bob", path+"/monsters/bob");
+ 
+     would not work. One because of the spaces, and two
+     because of the 'path+'.
+ 
+ 
+ 
+#undef:
+ 
+     #undef un-defines a macro. Why have this? There are times
+     when you do not want a particular macro defined, that was
+     carried through with an #include "file".
+ 
+     example: cloning a bag into a room using room.h
+ 
+     #include "/include/room.h"
+ 
+     #undef EXTRA_RESET
+     #define EXTRA_RESET if(!present("bag,this_object())) {\
+     move_object(clone_object("objects/bag"),this_object());\
+     }
+ 
+ 
+ 
+#include:
+ 
+     The #include directive instructs the compiler to read
+     another file for 'library' routines. In effect it adds
+     the file to the 'head' file to the top of your
+     object.'file.h' files are known as "header" files for
+     this reason.
+ 
+     #include "/include/array.h"
+ 
+     Will instruct the compiler to put /include/array.h at the
+     head of the file. For example the function,
+ 
+    write_file_array(filename,your_array);
+ 
+     can be used if array.h is included. (write_file_array()
+     writes an array of strings, or ints line by line into
+     filename).
+ 
+     Some wizards make a "path.h" header file for directory
+     paths.
+ 
+     Eg. "path.h"
+ 
+     #define PATH    "/players/zilanthius/"
+     #define OBJ     "/players/zilanthius/obj/"
+     #define MONSTER "/players/zilanthius/monsters/"
+     #define WEAPON "/players/zilanthius/weapons/"
+     etc.
+ 
+ 
+ 
+inherit:
+     
+     Inheritance incorporates code from one object into another
+     thus supporting the concept of classification.
+     Mud objects are classified into groups (such as rooms, monsters,
+     players, etc).  All of the code in the inherited file now
+     becomes a part of the file you are writing.  Therefore,
+     you need only set the paramaters that will individualize 
+     this file.  Basically this allows for a hierarchial 
+     classification system.  The main files used in the 
+     creation of the mud are inherited into your files.
+     This determines the classification of the object you
+     are creating.  Thus, to create a room you would
+        inherit "/inherit/room.c";
+     The file room.c in the directory inherit has all of
+     paramaters that make an object a room.  Since this
+     line is used in almost every room file in the mud,
+     it is effective planning to have a header file which
+     defines the path and file name for the room inheritable.
+     So that if, for some reason, the path or filename is
+     changed only one file need be updated to reflect the
+     change.  The file that defines all of the inheritables
+     for the mud is <mudlib.h>.  You must include this file
+     before using the defines in it.  Therefore now you
+     would:
+          #include <mudlib.h>
+         inherit ROOM;
+     at the start of a room file.
+
+
+     You can create your own inheritables.  If you have a
+     monster that will have basically the same functions,
+     but will have different longs, shorts, etc. you can
+     create a file for that monster, and then inherit that
+     file into each classification of that file.
+
+     For example a file dwarf_guard.c might inherit MONSTER;
+     and define all the dwarf_guards as wandering, talking,
+     aggressive dwarves.  Then red_dwarf, black_dwarf,
+     young_dwarf, etc would inherit dwarf_guard.c and 
+     in these files you would set the paramaters that make
+     them individual.
+
+// This is based on the original basics file, with some changes
+// and corrections added.  The examples given in this file
+// include hungarian notation.  All files must now use hungarian
+// notation.  For examples that use hungarian notation look in
+//  /open/X where X is the classification you wish an example of.
+//---Xnedra 21/08/98---
+ 

@@ -1,0 +1,17 @@
+
+Ranger Help for: slots
+======================
+
+SYNTAX:      slots/slots #
+USAGE:       Any wilderness terrain.
+
+SUMMARY:    
+Shows a Ranger how many slots he/she has available. It also shows which
+skills are available to be learned by the Ranger. Slots are used to buy
+skills with. Additional slots are gained as a Ranger's guild level
+goes up. You may also type slots with a number between 1-15 as an argument
+to see a list of skills in that slot level.
+
+=============================================================================
+SEE ALSO: glevels, myskills, learn and myinfo
+

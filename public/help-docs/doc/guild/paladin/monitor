@@ -1,0 +1,44 @@
++-------------------------------------------------------------------+
+                        The Paladin Monitor
++-------------------------------------------------------------------+
+
+One thing you probably noticed (if you have your monitor turned on; 
+if not, type "mon") is that Paladin's have their own monitor that
+helps you keep track of things.
+
+If used correctly, this bar is very important. During battle you 
+will be juggling various buffs, de-buffs and spells, and this gives
+you an at-a-glance view of what's going on.
+
+For example:
+
+[Javelin: 97% [D] [C] [G] [H] [R] [W] ]
+
+Legend:
+       ^  (1) (2) (3) (4) (5) (6) (7)
+
+  (1) = This is the current charge of your javelin, if you have one
+        on you. The greater the charge, the greater the power. 
+
+  (2) = Indicator telling you if Divine Favor is active.
+
+  (3) = Indicator telling you if Courage is active.
+
+  (4) = Indicator telling you if Gift is active.
+
+  (5) = Indicator telling you if Holy Presence is active.
+
+  (6) = Indicator telling you if Retribution is active.
+
+  (7) = Indicator telling you if Seal of Warding is active.
+
+
+Now, if any of these are inactive, you will instead get a red "X"
+as a visual indicator.
+
+Also note that Courage, Gift and Divine Favor can all be viewed
+and managed via the "buffs" command.
+
++-------------------------------------------------------------------+
++-------------------------------------------------------------------+
+

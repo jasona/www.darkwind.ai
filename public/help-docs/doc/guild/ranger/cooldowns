@@ -1,0 +1,27 @@
+Ranger Help for: cooldowns
+==========================
+
+SUMMARY:
+Ranger abilities use several different recovery timers. This keeps one
+kind of work from blocking every other part of the guild.
+
+TIMER TYPES:
+  Combat      Attacks, combat defense, bow shots, and combat magic.
+  Crafting    Making gear, arrows, traps, mixtures, and item prep.
+  Fieldwork   Foraging, scouting, terrain study, hunting, and stealth.
+  Travel      Running, trailblazing, guiding, locating, and messages.
+  Companion   Attracting, calming, training, calling, and commanding.
+  Camp        Camp stock, cooking, brewing, wards, and camp building.
+  Recovery    Rest, meditation, ceremonies, Gaia's touch, and camp tend.
+
+Recovery skills are stronger pauses. While recovering from one of those,
+you need to wait before using another major Ranger ability.
+
+EXAMPLES:
+  A strike delays another combat maneuver, but not make arrow.
+  Forage delays another fieldwork action, but not quickshot.
+  Camp cook delays other camp work, but not attract.
+  Rest and camp tend delay most Ranger abilities until recovery passes.
+
+=============================================================================
+SEE ALSO: skills, camp, rest, make, forage, attract

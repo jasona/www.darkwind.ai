@@ -1,0 +1,66 @@
+BARD COMBAT
+
+Bard combat is about tempo. You are strongest when you keep a song field active,
+vary song forms, build Performance, and choose the right Finale when the fight
+turns in your favor.
+
+Basic combat rhythm:
+
+  1. Start with a field.
+     pulsebeat, emberaria, silververse, echochord, dirgeash, or ashlullaby.
+
+  2. Vary your form.
+     Repeating one song over and over builds less Performance than moving
+     between Rhythm, Melody, Harmony, and Dissonance. These forms use separate
+     cooldowns, so changing forms is also much faster than repeating one form.
+
+  3. Watch Performance.
+     Use bscore or bmon. High Performance opens stronger moments. Charisma
+     improves Performance gain, field force, field duration, and hidden harmony
+     payoff.
+
+  4. Use Crescendo and Finale.
+     apexchord can help push toward a finishing moment. echoburst,
+     battlefieldsilence, and Wail spend that moment in different ways. When
+     bscore or bmon says Finale is ready, spend it quickly.
+
+  5. Study the fight.
+     study can show emotional resonance. soothe, otto, and morale pressure can
+     change the shape of the room without being simple damage.
+
+  6. Match the moment.
+     Archetype, instrument, active fields, hidden patterns, Performance, and
+     Charisma now all feed into Bard command strength. A Doom Singer with a
+     violin and Dissonance already hanging in the room should feel different
+     from a War Conductor with drums and Harmony carrying the party.
+
+Core battle commands:
+
+  pulsebeat          Rhythm timing support.
+  emberaria          Melody steadiness support.
+  silververse        Melody healing support.
+  echochord          Harmony timing support.
+  dirgeash           Dissonance enemy pressure.
+  ashlullaby         Dissonance mesmerize pressure.
+  soothe             Calm combat in the room.
+  hero               Heroic role song.
+  villain            Villainous role song.
+  whispercanticle    Flute song that clouds enemy focus.
+  mirrorrefrain      Chimes song that disrupts enemy timing.
+  apexchord          Crescendo for high Performance.
+  echoburst          Finale that bursts active fields.
+  muse               Harmony inspiration field.
+  battlefieldsilence Finale that disrupts enemies.
+  otto               Force a target to dance.
+  rally              Courage and mental resilience.
+  ssing              Create a singing sword.
+  Wail               Banshee Finale.
+
+Tips:
+
+  Keep bmon on while learning.
+  Use bcmds to see cooldown time and cooldown family.
+  Use bardhelp songs to understand forms and hidden harmonies.
+  Use bardhelp instruments before deciding which instrument to carry.
+  Use bardhelp archetypes before choosing specialize at guild level 10.
+  Raise Charisma if you want your performances to matter more.

@@ -1,0 +1,25 @@
+Inventory.
+
+Use inventory to review what you are carrying and wearing.
+
+Common forms:
+
+inventory
+  Show your inventory.
+
+i
+  Short alias for inventory.
+
+look <item>
+  Look more closely at something you are carrying.
+
+wear <item>
+  Wear armor or clothing, if the item can be worn.
+
+wield <item>
+  Wield a weapon, if the item can be wielded.
+
+drop <item>
+  Drop an item, if the item can be dropped.
+
+Some special objects cannot be dropped, sold, or put into containers.

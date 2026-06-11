@@ -1,0 +1,17 @@
+Ranger Help for: build shelter
+================================
+
+SYNTAX:      build
+USAGE:       forest,plains,swamp,desert,jungle,hills,road,beach,
+             mountain,arctic,barren
+SLOT COST:   4
+BASE SP:     25
+SKILL TYPE:  creation
+
+SUMMARY:
+This skill allows a Ranger to construct a camp shelter for resting in
+the wilderness. The Ranger must have the necessary materials, including
+rope and wood or other tent components. A shelter provides a safe place
+to rest and recover. The quality of the shelter depends on the Ranger's
+skill level and the materials available. Shelters are temporary and
+will eventually deteriorate.

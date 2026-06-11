@@ -1,0 +1,11 @@
+Ranger Help for: rangers
+========================
+
+SYNTAX:      rangers
+USAGE:       Anywhere
+
+SUMMARY:
+This command displays a list of all Rangers currently online. The list
+shows each Ranger's name and their guild level. This is useful for
+finding other Rangers to group with or to see who is available for
+assistance. Only members of the Ranger guild appear in this list.

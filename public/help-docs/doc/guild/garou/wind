@@ -1,0 +1,12 @@
+|GKO================================================================
+                       |MKBWind
+|GKO================================================================
+
+|YKOThe Wind spirits will assist a shaman learned enough to
+command their power. They will either blow loose objects
+out of a room, or distract an opponent, allowing the Garou
+to better combat him. A shaman cannot summon the wind
+spirits in the midst of combat.
+
+|WKOUsable in Form: |GKOMan, Crinos & Wolf
+|RKOSyntax: |YKBwind <target> |WKOor |YKBwind <direction>  |WKOCost: 20 sp

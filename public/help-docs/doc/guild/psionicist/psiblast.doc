@@ -1,0 +1,8 @@
+_______________________________________________________________________________
+"Psionic Blast"     
+        The workhorse psionicist attack power.  It does damage based on
+        guild level with a mental blast. 
+ 
+SP Cost:  Variable	Guild Level:  7		Potential Points:  3
+ 
+Command:  pblast <target>

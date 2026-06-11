@@ -1,0 +1,8 @@
+Runes
+A Necromancer's amulet has two runes carved into it. These runes are the
+rune of death, and the rune of blight. These runes contain the same
+ancient magic ~>Alarian<~ used a millenium ago. Some Necromantic spells
+dervive their power from death or blight. These spells (indicated by a 
+'D' or 'B', respectively, in ~>necspells<~) can drain a rune of its power
+momentarily, adding an extra effect to the spell. Over time, these runes
+will recharge.

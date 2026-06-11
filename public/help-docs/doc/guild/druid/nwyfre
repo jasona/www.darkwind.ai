@@ -1,0 +1,57 @@
+|GKB-- Nwyfre -----------------------------------------------------|000
+
+Nwyfre is the living current druids use for rituals and
+invocations.  It replaces spell points for active druid
+invocations.
+
+There are four vessels:
+
+  |CKBTellurian|000 - Darkwind, earth, roots, body, grove
+  |CKBDaloan   |000 - Dailos, turmoil, flame, savagery
+  |CKBMarken   |000 - Markas, healing, renewal, stability
+  |CKBTekali   |000 - Tekal, knowledge, frost, sight, wind
+
+Use |CKBnwyfre|000 to see all four vessels.  Each line shows a bar,
+regen rate, cost modifier, and source world.
+The Planet line shows where you are standing for nwyfre purposes.
+Darkwind favors the Tellurian current; each moon favors its own
+current and weakens the others.
+
+|GKB-- Useful Commands -------------------------------------------|000
+
+  |CKBnwyfre                |000 Show all vessels.
+  |CKBnwyfre <current>      |000 Inspect one vessel.
+  |CKBnwyfre active         |000 Show active rites, timers, and toggles.
+  |CKBnwyfre moons          |000 Show current moon phases.
+  |CKBnwyfre rituals        |000 List learned rituals.
+  |CKBnwyfre learnable      |000 List rituals you can learn.
+  |CKBnwyfre ritual <name>  |000 Inspect one ritual.
+
+Rituals and celestial conditions change regen and cost.  Long-running
+rituals also appear here when active.  These are toggle rites, such as
+Verdant Refrain, that remain active until you end them with
+|CKBritual stop <name>|000.
+
+The moon currents are strongest when their moon is visible and weakest
+during the new moon.  Tellurian is strongest in living earth and your
+Sacred Grove.
+
+When Dailos, Markas, and Tekal are all new at once, all three lunar
+currents are starved together.  Use |CKBmoonless drawing|000 during
+that rare dark to restore enough Daloan, Marken, and Tekali nwyfre to
+keep working.
+
+|GKB-- Conjunctions ----------------------------------------------|000
+
+When two or more moons are full in the night sky, nwyfre enters a
+rare conjunction.  'nwyfre' shows the current conjunction line.
+Most nights this says 'none'.  During a two-moon conjunction,
+Twin-Moon Pact can bind the aligned lunar currents together.
+
+When Dailos, Markas, and Tekal are all full at once, an ancient
+Sacred Grove can work Triple Confluence Calling.  This is an
+endgame ritual window, not a daily tool.
+
+New druids should read |CKBdhelp beginner|000 for the first useful
+sequence: check nwyfre, learn an invocation, gather profession
+materials, plant a grove, learn a ritual, perform it, then cast.

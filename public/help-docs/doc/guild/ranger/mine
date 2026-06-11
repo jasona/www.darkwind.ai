@@ -1,0 +1,19 @@
+Ranger Help for: mine
+=====================
+
+SYNTAX:      mine
+             mine stone
+USAGE:       Underground, hills, or mountains
+SLOT COST:   NA
+BASE SP:     25
+SKILL TYPE:  cartography
+
+SUMMARY:
+This skill allows a Ranger to gather useful stone from rough terrain.
+The Ranger must have a field kit prepared with 'make tools'. Mining
+stores fieldstone and flint in the Ranger's wildcraft pouch instead
+of creating loose rocks in inventory.
+
+Fieldstone and flint are used by survival crafts such as make tools
+and mix weapon paste. Mining depletes a room for a while, so Rangers
+need to move through the wild instead of stripping one place forever.

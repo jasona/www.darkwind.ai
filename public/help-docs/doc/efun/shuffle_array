@@ -1,0 +1,11 @@
+SYNOPSIS
+        mixed *shuffle_array(mixed *array)
+
+DESCRIPTION
+        Passing in an array of any kind, this method shuffles the
+        elements in the array randomly and returns it.
+
+        Currently, this function will only handle arrays of up to 
+        1 million elements consistently. If you want it to handle
+        larger, adjust the efun code itself to use max int.
+

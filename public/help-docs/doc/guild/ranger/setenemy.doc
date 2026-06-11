@@ -1,0 +1,27 @@
+
+Ranger Help for: setenemy
+=========================
+
+SYNTAX:      setenemy/setenemy <race here>
+USAGE:       Any wilderness terrain.
+
+SUMMARY:    
+Setenemy allows a Ranger to set his or her enemy species. What races a
+Ranger can set is based on his or her primary terrain, so it must be set
+first. You can type just setenemy with no argument to see a list of
+allowable races. Keep in mind that your follower cannot be of the same race
+as your enemy species. So if you like horses, don't choose horse as your
+enemy species.
+
+Use 'rhelp <species>' or 'rhelp enemy <species>' before choosing. For
+example: 'rhelp bear', 'rhelp enemy dragon', or 'rhelp lycanthrope'.
+
+Against the chosen enemy species, Rangers gain meaningful combat bonuses.
+At present this means a large increase to critical chance during combat
+(currently +30 crit), plus a sizable damage bonus on Ranger attacks and
+attack skills against that species (currently about +33% damage). Enemy
+choice also affects certain follower and animal
+interactions, so it is both a combat and role identity decision.
+
+=============================================================================
+SEE ALSO: enemy, followers, setprime and reattune

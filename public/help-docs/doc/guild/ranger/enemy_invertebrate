@@ -1,0 +1,17 @@
+
+Ranger Help for: enemy invertebrate
+===================================
+
+SUMMARY:
+Choosing invertebrate means your Ranger hunts soft-bodied and many-limbed
+creatures without backbones: worms, slugs, leeches, mollusks, and stranger
+things from wet earth or deep places.
+
+This can overlap with insect or crustacean in feel, but it usually points
+at crawling, boneless, burrowing, or aquatic threats.
+
+COMMAND:
+  setenemy invertebrate
+
+=============================================================================
+SEE ALSO: enemy, setenemy and terrains

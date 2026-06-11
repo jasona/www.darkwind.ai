@@ -1,0 +1,17 @@
+
+Ranger Help for: carve torch
+============================
+
+SYNTAX:      carve torch
+USAGE:       forest,jungle,swamp,plains
+SLOT COST:   2
+BASE SP:     10 sp
+SKILL TYPE:  creation
+
+SUMMARY:    
+This skill allows a Ranger to carve of a torch from any wooded area.
+The Ranger must have a slash type weapon in order to carve the torch,
+and how long the torch lasts depends on how wise a Ranger is. Whether
+or not the Ranger knows whats kinds of woods are better than others,
+things like what shape makes a good torch.
+

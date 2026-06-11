@@ -1,0 +1,12 @@
+Offensive Spin - blade technique
+------------------------------------------------------------
+The offensive spin is the third blade technique to be
+learned. The swashbuckler uses his manual dexterity to spin
+his weapons around his body, striking unpredictably. As a
+result, his swings become difficult to defend against, and
+will land more often upon his opponent.
+
+GL:  3
+SP:  3 / attack
+command:  ospin
+duration: technique mode

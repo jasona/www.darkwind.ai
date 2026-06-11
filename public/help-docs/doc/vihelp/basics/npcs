@@ -1,0 +1,21 @@
+NPCs.
+
+Use npcs to list visible non-player characters in your current room.
+
+This command is useful when look gives too much information or when you want to
+quickly know what creatures, shopkeepers, guards, quest givers, or monsters are
+nearby.
+
+Common forms:
+
+npcs
+  List visible NPCs in the room.
+
+look <npc>
+  Look more closely at one NPC from the list.
+
+kill <npc>
+  Start combat with an NPC, if combat is allowed.
+
+If several visible NPCs have the same name, the command condenses them and gives
+a count.

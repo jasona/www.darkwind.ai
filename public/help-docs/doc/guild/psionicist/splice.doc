@@ -1,0 +1,16 @@
+_______________________________________________________________________________
+"Psychic Splice"   
+        Psychic splice is a global power modifier. This allows the
+        psionicist to splice powers together to perform them as a
+        single action. The splice itself takes 10 spell points
+        per power used inside of it, but in exchange for those sp,
+        the concentration time is completely eliminated! The psionicist
+        prepares the entire sequence in his mind beforehand. Powers
+        within a splice will be less powerful as the Psionicist
+        needs to divide his concentration among the different parts
+        of the splice. The number of powers you can splice at one
+        time is dependant upon your guild level.
+
+SP Cost:  10		Guild Level:   7	Potential Points:  4
+ 
+Command:  splice power#power#power

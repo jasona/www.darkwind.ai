@@ -1,0 +1,29 @@
+Achievement titles are special public titles earned by unlocking
+achievement tiers.
+
+They are separate from your normal player title. Equipping an
+achievement title does not overwrite your regular title text.
+
+Use:
+
+  achievements titles
+      Lists your unlocked titles and shows the exact command for each one.
+
+  atitle <title-id>
+      Equips a title you have unlocked.
+
+  atitle clear
+      Removes your equipped achievement title.
+
+Examples:
+
+  atitle slayer:bronze
+  atitle locksmith:silver
+
+If you are not sure what the id is, do not guess. Run:
+
+  achievements titles
+
+That output shows the exact command to use.
+
+See also: help achievements, help atitle, help leaderboard

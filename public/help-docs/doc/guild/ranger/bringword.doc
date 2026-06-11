@@ -1,0 +1,18 @@
+
+Ranger Help for: bringword
+==========================
+
+SYNTAX:      bringword on <player>
+USAGE:       forest,plains,swamp,desert,jungle,hills,sea,lake,river,road,
+             beach,underground,mountain,arctic,barren,outside,port
+SLOT COST:   13
+BASE SP:     60 sp
+SKILL TYPE:  knowledge
+
+SUMMARY:
+This skill allows a Ranger to call upon his friends of the wild to
+go out and search for a target player and return with a report
+of his or her whereabouts. You will never know exactly where the
+target is relative to you other than if he or she is close to you,
+on the continent, or not.
+

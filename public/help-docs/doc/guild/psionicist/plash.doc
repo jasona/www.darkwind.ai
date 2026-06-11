@@ -1,0 +1,13 @@
+_______________________________________________________________________________
+"Psychic Lash"     
+        A psionicist can use this ability to blast an opponent
+        with raw telepathic power, directly assaulting its mind.
+        Though very fast and easy, this attack is unskilled,
+        relying purely on its raw force, and therefore has less
+        effect than a Psionic Blast or Mental Blow.  The exact
+        effect varies slightly with each use, but is not dependent
+        on guild level, regular level, or any outside factor.
+ 
+SP Cost:  15            Guild Level:  1         Potential Points:  1
+ 
+Command:  plash <target>

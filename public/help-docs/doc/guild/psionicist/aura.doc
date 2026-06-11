@@ -1,0 +1,16 @@
+_______________________________________________________________________________
+"Alter Aura"        
+ 
+        This allows the psionicist to do just what it says.  The
+        psionicist is displayed the alignment choices of demonic, evil,
+        nasty, neutral, nice, good, and saintly and can pick which one
+        to become.  Of course future actions  will immediately begin to
+        alter this.  As the psionicist guild  does not depend on
+        alignments at all this is largely a roleplaying power.  However,
+        it can be used to simultaneously wield magic items requiring
+        wildly different alingments.  Such is the power of the mind.
+        It takes a flat 15 sp.
+ 
+SP Cost:  15		Guild Level:  3		Potential Points:  1
+ 
+Command:  paura <saintly/good/nice/neutral/nasty/evil/demonic>

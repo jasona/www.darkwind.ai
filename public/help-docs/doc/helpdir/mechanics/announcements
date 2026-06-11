@@ -1,0 +1,22 @@
+Darkwind announcements are the game's official bulletin-board style
+messages for important news, updates, and notices.
+
+The current announcement system keeps track of read and unread messages
+for each player separately.
+
+Useful commands:
+
+  checkannounce
+      Shows how many announcement posts you have not read yet.
+
+  announcehist
+      Shows recent announcement history.
+
+If you use the web client, announcements also appear in the dedicated
+Announcements interface with read and unread status.
+
+Announcements are staff-managed. Reading one marks it as read for you,
+but it does not change whether the announcement itself is globally active
+or archived.
+
+See also: help checkannounce

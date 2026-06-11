@@ -1,0 +1,17 @@
+
+Ranger Help for: forage
+=======================
+
+SYNTAX:      forage
+USAGE:       Any terrain
+SLOT COST:   NA
+BASE EXP:    NA
+BASE SP:     variable
+
+SUMMARY:    
+This task allows a follower to go find the nearest wilderness area
+and forage for food and bring it back to you to eat. How nourishing
+the food is that the follower brings back depends on how smart the
+follower is. This is a hard task to teach, so only the smartest
+followers will be able to learn it.
+

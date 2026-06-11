@@ -1,0 +1,16 @@
+
+Ranger Help for: treat
+======================
+
+SYNTAX:      treat/treat <target>
+USAGE:       forest,plains,jungle,swamp,desert
+SLOT COST:   10
+BASE SP:     variable
+SKILL TYPE:  defensive
+
+SUMMARY:    
+With this skill, in certain terrains, a Ranger can use native ingredients
+to make heals and treat the wounds of a friend or him or herself. Too treat
+oneself, just type 'treat' with no argument. As a Ranger's knowledge of
+the environment increases, so does the effectiveness of his or her heals.
+

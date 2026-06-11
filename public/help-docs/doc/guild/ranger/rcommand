@@ -1,0 +1,14 @@
+Ranger Help for: rcommand
+=========================
+
+SYNTAX:      rcommand <follower> <action>
+USAGE:       Any terrain
+
+SUMMARY:
+This skill allows a Ranger to issue a command to their bonded animal
+follower. The follower will attempt to carry out the action to the
+best of its ability. Common commands include attacking a target,
+staying in place, following the Ranger, or performing trained tricks.
+The follower must be in the same room as the Ranger to receive
+commands. Not all animals can perform all actions - the available
+commands depend on the follower's species and training.

@@ -1,0 +1,16 @@
+Ranger Help for: make torch
+============================
+
+SYNTAX:      torch
+USAGE:       Any terrain
+SLOT COST:   2
+BASE SP:     10
+SKILL TYPE:  creation
+
+SUMMARY:
+This skill allows a Ranger to create a torch from harvested wood. The
+torch provides light in dark areas, which is essential when exploring
+caves, underground passages, or traveling at night. The Ranger must
+have wood in their inventory to create the torch. How long the torch
+lasts depends on the quality of the wood and the Ranger's crafting
+skill.

@@ -1,0 +1,18 @@
+
+Ranger Help for: edge
+=====================
+
+SYNTAX:      edge <slash or pierce type weapon>
+USAGE:       Any terrain
+SLOT COST:   6
+BASE SP:     35 sp
+SKILL TYPE:  aid
+
+SUMMARY:    
+This skill allows a Ranger to take a slash or pierce type weapon
+and sharpen it to razor sharpness, significantly enhancing its
+weapon class for a while. It requires a carried rock or stone rather
+than just nearby terrain.
+
+If you are in hills, mountains, or underground terrain, use 'quarry'
+to gather a rock first.

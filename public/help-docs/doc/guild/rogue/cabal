@@ -1,0 +1,26 @@
+Rogue Cabal Doc
+
+Rogues are split up into 3 seperate Cabals: Assassin, Basher,
+and Thieves. All Cabals can practice every power, but only
+the Cabal that power was designed for can practice it more
+then once. Until a Rogue chooses a Cabal with "setrogue"
+(help setrogue for more info), that Rogue can only practice
+a power once.
+
+|WKUAssassin|000
+The Assassin Cabal is the hitmen of the Rogues. Their purpose
+is to get in without being seen, do as much damage as they
+can to their target, hopefully killing it, and then get out.
+
+|WKUBasher|000
+The Basher Cabal is more of a bouncer, brute force type of
+Rogue. He isn't subtle about what he's trying to do, and
+would rather take someone on head-on. He has spent enough
+time around the other Cabals though to make him tricky,
+and not just some mindless Fighter.
+
+|WKUThieves|000
+As the name implies, the Thief Cabal's purpose is to rob, cheat,
+and steal whatever the Rogues need. The Thieves may not make
+the best fighters, but when cornered, they do have a few
+options available to them.

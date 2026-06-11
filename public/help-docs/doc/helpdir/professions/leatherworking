@@ -1,0 +1,74 @@
+                            Leatherworking
+
+    Leatherworking allows you to create armour from various hides
+you've skinned from various monsters around the world. The hides are
+processed into leathers, which you then use to make the armour. It
+takes 5 hides to make 1 leather.
+
+Getting started:
+  1. Buy profession tools in the profession building, 4e, n from Center of
+     Town.
+  2. Use 'skin corpse' after killing a skinnable creature, or hire a
+     skinning worker.
+  3. Convert hides into leathers in the leatherworking room.
+  4. Use 'quickcraft <type> <slot> <main leather> <secondary>'.
+
+    Druids can use their silver sickle instead of a skinning knife.
+
+    Leatherworkers can make two types of armour - hide and studded.
+They can make boots, chests, legs, and helmets of either kind. The
+four main leather types are cow, bear, reptile, and dragon. All
+crafted cow armour starts with no level restriction, bear
+starts at level 20, reptile at 45, and dragon at level 65.
+
+    Cow armour can be made by anyone, but your skill will max at 100
+crafting them. Bear armour needs a skill of 60, and will max at 200.
+Reptile armour requires a skill of 100, and will max at 500. Dragon
+armour needs a skill of 200 to craft, and will max at 1000.
+
+    When making hide armour, you can add other leathers for extra
+bindings to strengthen the armour. When making studded armour, you 
+can add metal studs to the armour to strengthen the armour. The 
+added bindings and studs add extra effects to the armour.
+
+    All armour uses 6 Cow Leather as the base, even if you are
+making a piece of Dragon Leather armour. Bear, Reptile and Dragon
+armour each require 6 leathers of their type. If you are adding 
+bindings or studs, each piece uses 4 leathers/studs.
+
+    When making cow hide, your secondary has to be none, as cow hide
+cannot be enhanced with bindings. When making cow studded armour, the
+secondary metal can only be copper. Neither the cow hide nor cow 
+studded armour will have extra enhancements however.
+
+    All Bear, Reptile and Dragon armours have an innate of bonus of 1 hp.
+Bear armours will have special enhancements of 1. Reptile armours will
+have special enhancements of 3. Dragon armours will have special
+enhancements of 5. The enhancements are based off the bindings or studs
+of the armour, or the base hide if you don't add a binding to hide.
+
+    In the leatherworking room in the profession building, you can convert
+hides into leathers. It takes 5 hides to make 1 leather, regardless of the
+type of hide.
+
+    Leatherworking also supports utility recipe outputs such as crafted
+bags and repair kits. Recipe cards can be read, then used with
+'manufacture card' while the card is in your inventory. Leather goods and
+materials may also be requested by profession work orders.
+
+    Crafted profession gear can be improved with
+'inlay <crafted item> with <shard>' in the profession building.
+
+    Bear - Intelligence          Horse - Poison Resistance
+    Cow - Fire Resistance        Mammal - Lightning Resistance
+    Deer - Wisdom                Reptile - Constitution
+    Dragon - Strength            Wolf - Dexterity
+    Elephant - Charisma          Yeti - Cold Resistance
+    Goat - Disease Resistance
+
+    Adamantite - Strength        Mithril - Wisdom
+    Bronze - Fire Resistance     Platinum - Intelligence
+    Copper - Disease Resistance  Silver - Dexterity
+    Gold - Charisma              Steel - Constitution
+    Iron - Poison Resistance     Tin - Lightning Resistance
+    Lead - Cold Resistance

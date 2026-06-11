@@ -1,0 +1,20 @@
+Swash Who - information skill
+------------------------------------------------------------
+The swho comand will list all active Swashbucklers on
+Darkwind, along with a status report for each.  The status
+is noted by one or more letters:
+
+D - dead
+E - wiz+ editing a file
+F - fighting
+I - input mode (reading, writing, listing 'who', etc.)
+M - muffed
+[Idle] - idle
+
+Swashbucklers can change the guild title displayed under
+swho by using the stitle command.
+
+GL:  1
+SP:  0
+command:  swho
+duration: N/A

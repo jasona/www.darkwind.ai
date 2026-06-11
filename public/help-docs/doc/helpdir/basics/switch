@@ -1,0 +1,18 @@
+|WKBSyntax: |YKBswitch|WKB, |YKBswitch <character>|WKB
+|WKO===========
+
+|YKOUse |YKBswitch|YKO to list the other characters on your account that can
+be selected from your current connection. Use |YKBswitch <character>|YKO to
+move to one of those characters without disconnecting.
+
+Switching preserves your connection and parks your current body in the
+linkdead room. Inventory and equipment stay with each character's body, so
+switching does not move gear between characters.
+
+Parked characters idle out normally after roughly 45 to 60 minutes.
+
+You cannot switch while in combat. The same attack-quit cooldown that blocks
+quitting after combat also blocks switching.
+
+Aliases, triggers, highlights, chat history, and scrollback in your client
+persist because they are scoped to the same server and port.

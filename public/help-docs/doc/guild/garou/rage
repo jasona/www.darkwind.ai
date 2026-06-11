@@ -1,0 +1,17 @@
+|GKO================================================================
+                             |RKBRage
+|GKO================================================================
+
+|YKORage is one of the most potent combat abilities possessed by the 
+Garou. Building up her inner anger, a Garou howls terribly at her 
+foes, inspiring great fear in them and preventing them from taking 
+action. It affects all monsters in the room with the Garou. Time of 
+paralyzation is variable.
+
+|WKOUsable in Form: |GKOWolf & Crinos       |WKOCost:  |CKO30% MAX SP
+|WKORestricted to:  |RKBWarrior |WKOand |GKBGuardian
+|WKOLvl Required:   |BKB20                  |WKOTimer: |CKOHuge
+|WKOGL Required:    |BKB7  |GKO(|RKBWarrior|GKO)        |WKOType:  |CKOStun
+                |BKB10 |GKO(|GKBGuardian|GKO)
+             
+|RKOSyntax: |YKBrage

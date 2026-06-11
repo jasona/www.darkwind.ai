@@ -1,0 +1,16 @@
+Ranger Help for: disarm
+=======================
+
+SYNTAX:      disarm <target>
+USAGE:       Any terrain
+SLOT COST:   NA
+BASE SP:     50
+SKILL TYPE:  attack
+
+SUMMARY:
+This skill allows a Ranger to attempt to strip the weapon from an
+opponent's hands during combat. A successful disarm forces the target
+to drop their wielded weapon to the ground. The Ranger must have at
+least one free hand to perform this maneuver. The chance of success
+depends on the Ranger's strength, dexterity, and the target's weapon
+skill. Larger or heavier weapons are harder to disarm.

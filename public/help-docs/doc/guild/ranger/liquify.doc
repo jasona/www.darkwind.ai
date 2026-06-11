@@ -1,0 +1,36 @@
+
+Ranger Help for: liquify
+========================
+
+SYNTAX:      liquify <item>
+USAGE:       Any terrain
+SLOT COST:   5
+BASE SP:     15 sp
+SKILL TYPE:  arrow
+
+SUMMARY:    
+This skill allows a Ranger to stoke up a searing hot fire and melt
+items in it. The Ranger is looking for items with gold or silver in
+them, other materials won't melt or just burn up. The soft gold and
+silvers easily melt and also make good metals to tip arrows and bolts
+with. Gold tipped arrows and bolts are extremely accurate, increasing
+chances for hitting critical areas of the body. Silver tipped arrows
+and bolts are accurate, but not as accurate as gold tipped arrows and
+bolts, but they are less costly. Once you melt down an item, a nugget
+of gold or silver will be left. The size of the nugget will be
+dependent on how big the original item was. How big the nugget is also
+determines how many arrows or bolts can be tipped with it. You can only
+liquify items if there is a stove or furnace nearby. A campfire wouldn't
+get hot enough. 
+
+        Once you get the nugget, you can "goldtip <arrow/bolt>" or
+        "silvertip <arrow/bolt>" depending on which type of nugget
+        you have. You can liquify any object with gold or silver in
+        it, but weapons and objects will generally leave smaller 
+        nuggets than will armours...meaning less tippings per
+        nugget. Also, if the liquified object has multiple materials
+        in it, the resulting nugget will be smaller.
+
+NOTE: I have to manually add furnace rooms, so if one you think you should
+      be supported isn't, lemme know. The more the better..:)
+

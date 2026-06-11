@@ -1,0 +1,12 @@
+|GKO================================================================
+                             |MKBMend
+|GKO================================================================
+
+|YKOGaea's gift known as mend allows a worthy shaman to request additional
+healing from the winds themselves. While under the effect of this
+additional healing, one's wounds will mend themselves at random during
+combat. 
+
+|WKOUsable in Form: |GKOMan                             |WKOCost: |CKOVaried
+|WKORestricted to: |MKBShaman
+|RKOSyntax: |YKBmend [<person>]

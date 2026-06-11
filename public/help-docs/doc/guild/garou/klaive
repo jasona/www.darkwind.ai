@@ -1,0 +1,52 @@
+|GKO================================================================
+                      |GKBUmbral Klaive
+|GKO================================================================
+
+|YKOThe Umbral Klaive is a Guardian's most powerful weapon. Forged
+through manifesting a Guardian's eurus, via the Umbra, and binding
+a bane into the blade.
+
+By default, an Umbral Klaive will be bound by an Earth bane. This
+will cause the Klaive to be (chaotic), like Spirit Claws. If you
+want to bind a different bane, here are the following banes to 
+choose from and their syntax:
+
+ |YKBklaive|YKO:             |WKOAn Earth Elemental is bound to the
+                     klaive, causing vines to lash out
+                     from it.
+ 
+ |YKBklaive huge|YKO:        |WKOAn Earth Elemental is bound to the
+                     klaive, causing vines to lash out
+                     from it. This is a Grand Klaive.
+
+ |YKBklaive living|YKO:      |WKOA Wyld Spirit is bound to the
+                     klaive, causing the klaive to appear
+                     to be living.
+
+ |YKBklaive flaming|YKO:     |WKOA Fire Elemental is bound to the
+                     klaive, causing the klaive to have
+                     flames consuming it.
+
+ |YKBklaive frozen|YKO:      |WKOAn Ice Elemental is bound to the
+                     klaive, causing ice crystals to form
+                     along the length of the blade.
+
+ |YKBklaive humming|YKO:     |WKOAn Umbral Bane is bound to the
+                     klaive, cause it to vibrate endlessly.
+
+ |YKBklaive shocking|YKO:    |WKOA Lightning Elemental is bound to
+                     the klaive, causing the blade to course
+                     with electricity.
+
+ |YKBklaive wildrage|YKO:    |WKOA Rage Spirit is bound to the
+                     klaive, causing the blade itself to
+                     sear it's enemies flesh.
+
+ |YKBklaive poisoned|YKO:    |WKOA Toxin Bane is bound to the
+                     klaive, causing the blade to be
+                     coated in various posions.
+
+
+|WKOUsable in form: |GKOMan & Crinos        |WKOCost:  |CKO150 sp
+|WKORestricted to: |GKBGuardian             |WKOTimer: |CKOMedium
+|RKOSyntax: |YKBklaive <type>               |WKOType:  |CKOSupport

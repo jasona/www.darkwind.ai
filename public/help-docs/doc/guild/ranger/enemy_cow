@@ -1,0 +1,16 @@
+
+Ranger Help for: enemy cow
+==========================
+
+SUMMARY:
+Choosing cow means your Ranger specializes against cattle, aurochs, oxen,
+and similar herd animals.
+
+This is a narrower enemy choice, but it can matter in plains, underground
+areas, farms, and places where large horned herd creatures are common.
+
+COMMAND:
+  setenemy cow
+
+=============================================================================
+SEE ALSO: enemy, setenemy and terrains

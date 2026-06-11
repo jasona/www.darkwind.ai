@@ -1,0 +1,102 @@
+|CKB===========================================================
+|GKB*****|YKBWriting Guild Emotes That Work On Dynamic Channels|GKB****
+|CKB===========================================================
+|GKB*                                                         *
+|GKB* |WK0Guild emotes, almost every guild is doing them in such  |GKB*
+|GKB* |WK0a way that they only work within the current room that  |GKB*
+|GKB* |WK0a player is in.                                         |GKB*
+|GKB*                                                         *
+|GKB* |WK0It simply makes sense to have the guild emotes work on  |GKB*
+|GKB* |WK0channels the same as any other emote does.              |GKB*
+|GKB*                                                         *
+|GKB* |WK0The good news is that our current emote daemon -does-   |GKB*
+|GKB* |WK0support this with just a slight extra work on the our   |GKB*
+|GKB* |WK0parts as guild coders.                                  |GKB*
+|GKB*                                                         *
+|GKB* |WK0Many of the older guilds use the emote structure of     |GKB*
+|GKB* |WK0making them a command via "_emote.c" in the guild local |GKB*
+|GKB* |WK0command dir (e.g. /cmds/guilds/mage/emotes/_emote.c)    |GKB*
+|GKB* |WK0and doing int do_command(string sStr) { ... } this will |GKB*
+|GKB* |WK0work for complex emotes such as Garou's "revel" or any  |GKB*
+|GKB* |WK0emote that requires more than a couple lines or a       |GKB*
+|GKB* |WK0movement of some kind, etc., however it will not work   |GKB*
+|GKB* |WK0on communication channels, as they are not meant to.    |GKB*
+|GKB*                                                         *
+|GKB* |WK0Getting guild emotes to work on channels is actually    |GKB*
+|GKB* |WK0surprisingly easy. Lets use the Magi emote "motion" as  |GKB*
+|GKB* |WK0an example. The old code:                               |GKB*
+|CKB===========|RKB/cmds/guilds/mage/emotes/_motion.c|CKB==============
+|WK0#include "/cmds/soul/defs.c"
+ 
+int do_command(string str) {
+  if (!str) {
+    write("Motion to whom?\n");
+    return 1;
+  }
+  return RETURN->specific("\
+  You motion to " + them + " to stand still -- toys are coming!",
+  "motions to " + them + " to stand still -- toys are coming!", 
+  str,"motions to you to stand still -- toys are coming!");
+}
+|CKB===========================================================
+|GKB* |WK0The new code:                                           |GKB*
+|CKB=================|RKB/cmds/soul/mage/motion.c|CKB==================
+|WK0
+string get_emote(string sArg,object *aoWho) {
+    if (sArg == "LIV") {
+        return "$N $vmotion to $t to stand still -- toys are coming!\n";
+    }
+    return "";
+}
+
+|CKB===========================================================
+|GKB* |WK0If you have any experience making regular emotes you    |GKB*
+|GKB* |WK0should be able to see the connection to regular emotes. |GKB*
+|GKB* |WK0You have the same rule possibilities as a regular emote |GKB*
+|GKB* |WK0and use the same grammar variables that are defined in  |GKB*
+|GKB* |WK0"help addemote".                                        |GKB*
+|GKB*                                                         *
+|GKB* |WK0Once the file is created, you then need to register the |GKB*
+|GKB* |WK0emote with the emote daemon. To do this you simply do   |GKB*
+|GKB* |WK0(again using the Magi emote "motion"):                  |GKB*
+|GKB* |WK0My_Prompt>addemote motion                               |GKB*
+|GKB* |WK0No such emote exists. Adding new emote. (blah blah blah)|GKB*
+|GKB* |WK0Rule:                                                   |GKB*
+|GKB* |WK0My_Prompt>LIV                                           |GKB*
+|GKB* |WK0Adding new emote.                                       |GKB*
+|GKB* |WK0New message:                                            |GKB*
+|GKB* |WK0My_Prompt>->Guild_Mage_motion                           |GKB*
+|GKB* |WK0New Emote will look like:                               |GKB*
+|GKB* |WK0motion :                                                |GKB*
+|GKB*     |WK0You'll see:                                         |GKB*
+|GKB* |WK0You motion to Somebody to stand still -- toys are coming!
+|GKB*                                                         *
+|GKB* |WK0Target will see:                                        |GKB*
+|GKB* |WK0Klaughihin motions to you to stand still -- toys are coming!
+|GKB*                                                         *
+|GKB* |WK0Others will see:                                        |GKB*
+|GKB* |WK0Klaughihin motions to Somebody to stand still -- toys are coming!
+|GKB*                                                         *
+|GKB* |WK0Ok?  [yes] :                                            |GKB*
+|GKB*                                                         *
+|GKB* |WK0Repeat this process for each rule associated with your  |GKB*
+|GKB* |WK0emote that you are creating.                            |GKB*
+|GKB* |RKB***NOTE*** Capitalization is extremely important for    |GKB*
+|GKB* |RKBthe addemote message. The guild name MUST match the     |GKB*
+|GKB* |RKBoutput from oTarget->query_guild() And the "_emote" must|GKB*
+|GKB* |RKBmatch case for the emote in the directory WITHOUT the   |GKB*
+|GKB* |RKB"_"                                                     |GKB*
+|GKB*                                                         *
+|GKB* |WK0Colors -can- be used within these emotes.               *
+|GKB*                                                         *
+|GKB*                                                         *
+|GKB*                                                         *
+|GKB* |WK0Note that the emote deamon does not sync between DEV    |GKB*
+|GKB* |WK0and PROD so the addemote commands will need to be done  |GKB*
+|GKB* |WK0on both DEV and PROD in order to get them to work.      |GKB*
+|GKB*                                                         *
+|GKB*                                                         *
+|CKB===========================================================
+|GKB* |RKB5-March-2014 - Klaughihin - Initial write up.           |GKB*
+|CKB===========================================================
+|CKB===========================================================

@@ -1,0 +1,32 @@
+                                 Herbalism
+
+    Herbalism lets you gather herbs from terrain across the world. Herbs
+are saved as profession materials and are used by Alchemy, work orders,
+guildcraft preparations, and some recipe cards.
+
+Getting started:
+  1. Buy profession tools in the profession building, 4e, n from Center of
+     Town.
+  2. Travel to a natural area.
+  3. Use 'gather herbs'.
+  4. Use 'reagents' or 'reagents herb' to review saved herbs.
+
+    Terrain matters. Different herbs are associated with different outdoor
+areas, and some are more useful for certain potion or guildcraft recipes.
+Use 'reagents search <herb>' when you want hints about where something
+comes from, and 'professions gathering' for a command overview.
+
+    Herbalism can also be worked indirectly. In the profession building,
+you can hire herbalism workers for a terrain target. Workers bring back
+materials over time and take their payment from your bank account.
+
+Useful commands:
+  gather herbs
+  reagents herb
+  reagents search Rose Hip
+  professions gathering
+  professions check potion str1
+  help alchemy
+  help workers
+
+    Druids can use their silver sickle instead of a gardening spade.

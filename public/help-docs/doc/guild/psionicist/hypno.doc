@@ -1,0 +1,11 @@
+_______________________________________________________________________________
+"Hypnotize"        
+ 
+        This allows the psionicist to hypnotize a target into
+        believing that he sees something that is not actually there.
+        The target will see a message to the effect of, 'You
+        think you see <message>'
+ 
+SP Cost:  5		Guild Level:  1		Potential Points:  1
+ 
+Command: hypnotize <target> <message>

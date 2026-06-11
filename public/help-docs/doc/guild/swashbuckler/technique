@@ -1,0 +1,38 @@
+|MKB                   @}--- Swashbuckler Blade Styles ---{@                 |XX0
+
+    Style   |GK0||WK0*GL|GK0||WK0*F|GK0||WK0Cost|GK0||WK0                   Description|XX0
+|GK0--------------------------------------------------------------------------|XX0
+|YKBParry       |GK0||WK0 1 |GK0||WK0 1|GK0||WK0 0  |GK0||WK0 Gives you a chance to negate incoming blows.|XX0
+|YKBSlash       |GK0||WK0 2 |GK0||WK0 1|GK0||WK0 3  |GK0||WK0 An unrefined style emphasing power.|XX0
+|YKBDodge       |GK0||WK0 3 |GK0||WK0 3|GK0||WK0 5  |GK0||WK0 Increased dodging.|XX0
+|YKBOspin       |GK0||WK0 3 |GK0||WK0 2|GK0||WK0 3  |GK0||WK0 Hides your true attacks behind a series of blade|XX0
+|YKB            |GK0||WK0   |GK0||WK0  |GK0||WK0    |GK0||WK0  spins, increasing your chance of hitting.|XX0
+|YKBCalledshot  |GK0||WK0 5 |GK0||WK0 3|GK0||WK0 2  |GK0||WK0 Increases damage done by hitting weak areas of|XX0
+|YKB            |GK0||WK0   |GK0||WK0  |GK0||WK0    |GK0||WK0  your opponents armour.|XX0
+|YKBRiposte     |GK0||WK0 7 |GK0||WK0 3|GK0||WK0 3  |GK0||WK0 Responds to incoming blows by striking back|XX0
+|YKB            |GK0||WK0   |GK0||WK0  |GK0||WK0    |GK0||WK0  with a single swing.|XX0
+|YKBCritical    |GK0||WK0 9 |GK0||WK0 5|GK0||WK0 8  |GK0||WK0 Focus on strong attacks that improve your|XX0
+|YKB            |GK0||WK0   |GK0||WK0  |GK0||WK0    |GK0||WK0  chance to hit with critical force.|XX0
+|YKBPhantom     |GK0||WK0 10|GK0||WK0 4|GK0||WK0 9  |GK0||WK0 Spirits of fallen swashbucklers will strike out|XX0
+|YKB            |GK0||WK0   |GK0||WK0  |GK0||WK0    |GK0||WK0  as you attack, increasing damage while|XX0
+|YKB            |GK0||WK0   |GK0||WK0  |GK0||WK0    |GK0||WK0  tormenting enemies.|XX0
+|YKBImpale      |GK0||WK0 11|GK0||WK0 4|GK0||WK0 9  |GK0||WK0 Attempts to strike your opponents deeply.|XX0
+|YKBFlurry      |GK0||WK0 12|GK0||WK0 5|GK0||WK0 17 |GK0||WK0 Launches extra flurries of attacks.|XX0
+|YKBFlourish    |GK0||WK0 13|GK0||WK0 5|GK0||WK0 7  |GK0||WK0 Uses a highly stylized attack pattern of blade|XX0
+|YKB            |GK0||WK0   |GK0||WK0  |GK0||WK0    |GK0||WK0  flourishes to increase both hitting and damage.|XX0
+|YKBThousand    |GK0||WK0 14|GK0||WK0 5|GK0||WK0 7  |GK0||WK0 By launching a series of false attacks, improve|XX0
+|YKB  Blades    |GK0||WK0   |GK0||WK0  |GK0||WK0    |GK0||WK0  the chances of your real ones to land.|XX0
+|YKBSdance      |GK0||WK0 15|GK0||WK011|GK0||WK0 Var|GK0||WK0 A combination of techniques that improves all|XX0
+|YKB            |GK0||WK0   |GK0||WK0  |GK0||WK0    |GK0||WK0  aspects of combat.|XX0
+    *GL = Guild Level Required      *F = Finesse weight
+
+A young Swashbuckler may use only one technique at a time. With guild
+levels, a Swashbuckler will have more '|YKBfinesse|XX0', and may increase the
+depth and number of styles usable at one time.
+
+Using multiple defensive styles together will cause additional strain on
+the Swashbuckler, as will multiple offensive styles together.
+
+|RKBNote|XX0:  You can check what styles you are using by typing '|GK0scheck|XX0',
+       and you can finish using all styles by typing '|GK0endtech|XX0'.
+

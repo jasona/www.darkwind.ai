@@ -1,0 +1,90 @@
+|GKB-- New Druid Flow ---------------------------------------------|000
+
+The modern druid guild is built around two related ideas:
+
+  Invocations are your fast active powers.
+  Rituals prepare and shape the nwyfre that fuels them.
+
+Your first useful path is:
+
+|CKB1. Check nwyfre.|000
+
+     |CKBnwyfre|000
+
+   This shows your four vessels: Tellurian, Daloan, Marken, and
+   Tekali.  The bars show how much power you have.  Regen and cost
+   change with terrain, moon phase, current planet, groves, and
+   active rituals.
+
+|CKB2. Check your druid status.|000
+
+     |CKBdscore|000
+
+   This shows study points, learned invocations, grove status, and
+   a reminder that Druid rites use profession materials.
+
+|CKB3. Learn a first invocation.|000
+
+     |CKBlearn spirit aura|000
+
+   Study invocations in the Druids' Meditation Grove inside the
+   guild hall.  Use |CKBdhelp spells|000 to see every active invocation.
+
+|CKB4. Gather profession materials.|000
+
+     |CKBgather herbs|000
+     |CKBmine ore|000
+     |CKBskin corpse|000
+     |CKBreagents|000
+
+   Druid rituals and companions use the profession material stores:
+   herbs, creature reagents, skins and leathers, ores and bars, bolts,
+   and special shards.  Use |CKBreagents search <item>|000 to check
+   exact balances.  Your silver sickle serves as a gardening spade,
+   mining pick, and skinning knife, so you do not need to buy those
+   three profession tools.  At Druid level 7, Verdant Refrain can also
+   help by casually storing herbs and saved reagents as you travel
+   through natural places.
+
+|CKB5. Plant your Sacred Grove.|000
+
+     |CKBgrove plant|000
+
+   Plant it in a wild place you want to return to.  Later,
+   |CKBcommune|000 returns you to your grove.  |CKBdhelp grove|000
+   explains grove growth, return, and the inner sanctum.
+
+|CKB6. Learn and perform a first ritual.|000
+
+     |CKBlearn ritual drawing of the tide|000
+     |CKBritual drawing of the tide marken|000
+
+   Drawing of the Tide consumes profession materials matching the
+   current you name and restores that current.  Use
+   |CKBnwyfre ritual <name>|000 before learning or performing a ritual
+   to see its requirements.
+
+   Long-running rituals use the same ritual command, but toggle on and
+   off.  For example:
+
+     |CKBlearn ritual verdant refrain|000
+     |CKBritual verdant refrain|000
+     |CKBritual stop verdant refrain|000
+
+|CKB7. Cast your first invocation.|000
+
+     |CKBspirit aura|000
+
+   Invocations spend nwyfre instead of spell points.  If an
+   invocation says you lack nwyfre, use |CKBnwyfre|000 to see which current
+   is low, then use rituals, time, terrain, or a grove to recover it.
+
+|GKB-- Useful Commands --------------------------------------------|000
+
+  |CKBnwyfre                |000 Show currents, active rites, and next steps.
+  |CKBnwyfre learnable      |000 Show rituals you have not learned yet.
+  |CKBnwyfre ritual <name>  |000 Inspect a ritual.
+  |CKBdscore                |000 Show study, grove, and material guidance.
+  |CKBdhelp spells          |000 List active invocations.
+  |CKBdhelp ritual          |000 Learn the ritual system.
+  |CKBdhelp grove           |000 Learn Sacred Groves.

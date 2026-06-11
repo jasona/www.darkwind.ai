@@ -1,0 +1,14 @@
+_______________________________________________________________________________
+"Psychometry"     
+        This is the famous "object reading" ability of psychics.  It's
+        an identify type power on the mud, displaying any magical info
+        of an object and giving some vague impressions about whether it
+        is a special item or not.  It sometimes provides less specific
+        information than a more objective appraisal or mages' identify
+        would, but will often give more overall information than either
+        of them will.  You must interpret the messages it gives you
+        well.  
+ 
+SP Cost:  30		Guild Level:  3		Potential Points:  2
+
+Command:  objectread <object>

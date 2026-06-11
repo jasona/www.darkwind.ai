@@ -1,0 +1,25 @@
+Wrathful Avatar
+
+Level 45+ players build Wrathful Avatar charge over real time while
+they are alive and active. Charge normally reaches full after 30 minutes, though
+potions and other influences can quicken or slow the gathering wrath. When the
+charge reaches full, use:
+
+  avatar
+  avatar end
+
+Wrathful Avatar spends the full charge and grants 30 minutes of heightened
+combat power. While active, you gain +10 strength, dexterity, and constitution,
+better accuracy and criticals, harder hits, faster attacks, sharper dodges, and
+a chance to absorb incoming blows in avatar fire.
+
+The power also grants all weapon-specialization, weapon, armor, and dual-wield
+permissions while it lasts. It does not stack with itself or with another
+Wrathful Avatar. Use score or meter to check your current charge and charge
+rate.
+
+Use avatar end while Wrathful Avatar is active to end it immediately. This uses
+the normal Avatar cleanup and leaves your avatar charge at 0%.
+
+Divine patronage can change your charge rate. Use patron for your current
+patron modifier and omens for the current world state.

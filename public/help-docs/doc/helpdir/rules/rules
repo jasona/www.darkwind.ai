@@ -1,0 +1,152 @@
+|YKOFollowing is a list of what is not allowed on Darkwind.  Failure
+to observe these rules will result in punishment.  Lack of knowledge
+of these rules is not an excuse for not following them.
+
+This document will be broken down into two sections: players, and
+wizards.  Everyone will know what is illegal for all to do.  Players
+are expected not to ask wizards to break wizard rules, and wizards
+are expected not to break rules that bind players.
+
+
+
+|YKBPlayers
+|WKB-------
+
+|WKB1. |CKBPlayers must obey all requests from wizards. If a player feels
+   that a request is out of line, the player should notify a higher
+   level wizard AFTER complying with the request.
+
+|WKB2. |CKBPlayers may not abuse (or use once it's been determined as a bug)
+   any bug.  Failing to report a known bug is also illegal.  Players
+   who abuse bugs will see their characters wiped.  Future abuse
+   by the same player may result in site bans.  On the flip side,
+   reporting large bugs might be rewarded.
+   
+   If something is 'too good to be true', it probably is. Always
+   report it. If found to be intended, hey great!
+
+   |WKBSee also: |YKBhelp bug.
+
+|WKB3. |CKBPersonal attacks, racial and ethnic slurs, sexual harassment,
+   and other forms of attack will not be tolerated.  Threatening
+   other players or wizards with violence will not be tolerated.
+   If someone is ignoring you, do not try to get around the
+   ignore by using alternate means. They're ignoring you for a
+   reason, respect that. The Golden Rule applies here.
+
+   |WKB3a. |CKONo bulletin board (including the PK board and private
+       clan boards) may be used to flame, ridicule or otherwise
+       denigrate other players or wizards. They may also not be
+       used to accuse others of cheating/bug abuse, nor threaten
+       them in any matter (whether in or out of game).
+
+   |WKB3b. |CKOPK issues may only be discussed on the PK board, clan
+       boards, and guild boards(where appropriate to the guild).
+
+   |WKB3c. |CKOThe DarkWind forums are considered an extension of the
+       bulletin boards on the mud.
+
+   |WKB3d. |CKOChannels are also governed by the same rules as bulletin
+       boards (rule 3a and 3b) with the exception that IN-GAME
+       threats may be made on the PK channel ONLY.
+
+   |WKBSee also: |YKBhelp profanity, help virginears, help ignore, help pk
+
+|WKB4. |CKBHaving multiple (second, third, etc) non-registered
+main characters will not be tolerated.  Darkwind's current rule
+is to allow one main character per person.  If we find that one
+person has more than one main character, then ALL characters will
+be removed. Further offenses may result in a siteban.
+
+     |WKB4a. |CKODarkwind does allow for the registration of secondary
+     characters. Players that have attained the level of 20 on their
+     main character may register a secondary character through the
+     Multiple Character Registration Room. (2:w,s,w of COT)Additional 
+     secondary characters are availble depending on level.
+
+     Please see |YKBhelp multichars|CKO for further information.
+
+|WKB5. |CKBBotting is not allowed.  This is defined as creating client- or
+   server-side scripts that will perform an unlimited number of
+   actions without requiring a live person to be sitting at the
+   keyboard of the computer.  Use of robots will result in removal
+   of the character.
+
+   |WKB5a. |CKOsee "help triggers" for information regarding their usage
+       and further clarification.
+
+   |WKB5b. |CKONote that use of the Darkwind-provided "script" command
+       is excluded from this rule.  However, using a client to
+       string together multiple "script" commands is still illegal as
+       is using a trigger to activate the script.
+   
+   |WKB5c. |CKOThe use of client side 'aliases' is allowed.
+
+   |WKB5d. |CKOThe use of anything to keep your character from idling, ie
+        triggers, events, scripts, etc is illegal.
+        
+   |WKB5e. |CKOThe use of anything that automates killing without a
+        live person at the keyboard is also illegal. This includes
+        sitting, unattended in aggro rooms. If you aren't at your
+        keyboard, you're character shouldn't end up in combat. 
+
+
+|WKB6. |CKBKill stealing is not allowed. If someone is actively killing
+   a mob, the mob is 'theirs' as is the equipment/money in the
+   room. If the player leaves the room, it's fair game, though
+   common courtesy would suggest you leave the mob alone. This
+   does also apply to Garou who are fighting in a room. The
+   items and gold on the ground they are in are not open, just
+   because they can't pick them up. If the Garou leaves the room,
+   again, it's fair game.
+   
+   |WKB6a. |CKOCamping a mob. -- If a player is ACTIVE in the room, then
+       everything in that room is theirs, as is any equipment/
+       money in the room. If the player is IDLE, then the items
+       are fair game.
+
+   |RKB[NOTE: If everyone involved is PK, these rules do not apply
+            as you have recourse through PK]
+
+
+
+|YKBWizards
+|WKB-------
+
+|WKB1. |GKOWizards may not provide access to their character to any other
+   person.
+
+|WKB2. |GKOWizards may not erase or otherwise edit other wizards' files.  The
+   same applies to system files.  Access to these files is generally
+   protected, but it's conceivable that some things may be overlooked.
+   If the wizard discovers that s/he has greater access than they
+   should, it should be reported to an IMP+.
+
+|WKB3. |GKOWizards may not copy another wizard's work without prior consent.
+
+|WKB3. |GKOWizards may not interfere with players in any way. this includes
+   healing players; providing additional stats, XP, money, levels,
+   alignment, etc. through patching; and giving players objects.
+   This is not a comprehensive list by any means.  In general: if
+   the character isn't  your test character, don't mess with 'em.
+   Period.
+
+   |WKB3a. |GKBThe occasional boon or similar global blessing given by an IMP+ is
+       not considered interference.
+
+|WKB4. |GKOWizards may not abuse wizard powers.
+
+|WKB5. |GKOWizards may not disobey higher-up wizards.
+
+
+|YKBPunishments
+|WKB-----------
+
+|YKOIf you are found to have violated one of the above rules, your character
+may be:
+
+|WKB1. |RKBWarned
+|WKB2. |RKBDemoted |YKO(wiz or player)
+|WKB3. |RKBJailed
+|WKB3. |RKBRemoved
+|WKB4. |RKBSitebanned

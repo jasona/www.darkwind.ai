@@ -1,0 +1,18 @@
+Doubloon - lucky charm
+------------------------------------------------------------
+Lore is filled with stories surrounding charms, trinkets,
+and jewelry that Swashbucklers would carry into battle.
+Though these varied, one repeated motif is the "lucky"
+doubloon. Though no one could ever prove these coins
+provided any real protection, Swashbucklers continue to
+carry them when possible. 
+
+With this ability, a Swashbuckler can offer up some of their
+own booty to temporarily receive the buff of the golden
+doubloon. While active, a Swashbuckler may find they get
+the most out of their armour.
+
+GL: 11
+SP: 25
+command:  doubloon
+duration: medium

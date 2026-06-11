@@ -1,0 +1,24 @@
+The atitle command equips or clears an achievement title that you have
+already unlocked.
+
+Syntax:
+
+  atitle
+  atitle <title-id>
+  atitle clear
+
+Examples:
+
+  atitle slayer:bronze
+  atitle resurrectionist:gold
+  atitle clear
+
+To see the exact ids you can use, run:
+
+  achievements titles
+
+To see the overall achievement rankings, run:
+
+  leaderboard
+
+See also: help achievements, help achievement_titles

@@ -1,0 +1,53 @@
+Ranger Help for: make
+=====================
+
+SUMMARY:
+The unified crafting command. Rangers can craft all their gear from
+natural materials found in the wild.
+
+USAGE:
+  make                  Show all available items
+  make rope             Twist grasses into rope
+  make torch            Carve a wooden torch
+  make fish trap        Weave a trap for catching camp fish
+  make tent             Build a tent from rope and wood
+  make tools            Prepare a reusable field kit
+  make satchel          Expand your wildcraft forage pouch
+  make arrow            Carve arrows from wood
+  make bolt             Carve crossbow bolts from wood
+  make bow              Carve a shortbow from wood
+  make crossbow         Carve a crossbow from wood
+  make longbow          Carve a longbow from wood
+  make trophy           Mount a trophy from a corpse
+  make snare <dir>      Set a snare trap in a direction
+
+REQUIREMENTS:
+All crafting requires a slash weapon (knife/sword) equipped. Most
+items need specific terrain or materials:
+
+  rope         Grass terrain (forest, plains, swamp)
+  torch        Wood terrain (forest, jungle, swamp, mountain)
+  fish trap    2 binding fiber + 1 kindling
+  tent         Wood terrain + rope in inventory
+  tools        2 fieldstone + 1 flint + 1 binding fiber
+  satchel      3 hide scraps + 2 sinew + 2 binding fiber
+  arrow/bolt   Wood terrain (quantity based on skill)
+  bow types    Wood terrain + 2 wood (10 sec delay)
+  trophy       Corpse in the room
+  snare        Rope in inventory + valid exit direction
+
+CRAFTING CHAINS:
+  make rope -> make tent -> camp (set up a wilderness camp)
+  mine/quarry + forage -> make tools -> mine more reliably
+  skin corpse + forage -> make satchel
+  forage + make fish trap -> set fish trap -> camp cook
+  make arrow + make bow -> archery combat
+  make bolt + make crossbow -> heartshot
+
+If your wildcraft pouch fills with the wrong supplies, use
+'forage stores' to review it and 'forage discard <component> [amount]'
+to free room. Camp stock, camp cook, and camp brew also consume
+wildcraft supplies.
+
+=============================================================================
+SEE ALSO: skills, camp, forage, skin, mine

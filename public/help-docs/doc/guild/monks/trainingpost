@@ -1,0 +1,28 @@
+|GKB~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+|YKB                     WOODEN MAN POST
+|GKB~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+|CK0  The Brotherhood keeps a Wooden Man Post northeast of the main
+|CK0  training hall. It is built for repetition: striking, checking,
+|CK0  trapping, stance changes, and full combo chains.
+
+|CK0  From the main training room, go "northeast". Once there, use:
+
+|CK0      kill post
+|CK0      attack post
+|CK0      stop practice
+|CK0      mswitch <style>
+|CK0      <monk skill> post
+
+|CK0  The post is safe. It does not attack, deal damage, die, leave a
+|CK0  corpse, grant experience, count as a kill, or advance quests. It
+|CK0  exists only to let monks practice form and rhythm.
+
+|CK0  When you are done, "stop practice" steps back from the post and
+|CK0  ends the practice fight immediately.
+
+|CK0  Practice is still real practice. Monk skills used on the post spend
+|CK0  normal chi, spell points, and cooldowns, and your combo state and
+|CK0  monk monitor update as they would in combat.
+
+|GKB~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~

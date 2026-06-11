@@ -1,0 +1,56 @@
+     OK, now we're going to start you out on this quest.  This first
+thing to know about a quest is its name.  In fact, sometimes all you
+need to know about a quest is its name because it's fairly obvious
+what should be done, e.g. Kill Bueferd.  You can get a list of
+all the quests anywhere by using the command 'quest list'.  This
+will also tell you the Brawn/Brain ratings of the quest, how many
+quest points it is worth, and whether or not you have done it.
+This quest is entitled 'Amber Fly' and if you look on the list
+you will see that it has a 50% Brain and 50% Brawn rating, as stated
+before, and that it is only worth a few quest points.  The number
+of quest points a given quest is worth is directly propotional to
+its difficulty, i.e. the harder a quest is to complete, the more
+it is worth to you.  One way in which difficulty is measured is
+by the frequency with which a quest is completed.  That is, if
+a quest is done often, its value tends to be lower because it
+is assumed that this means it is easier than something which is
+only completed occasionally.  So, as these quest point values
+are constantly changing, it would be in your best interest not
+to share quest info as this would drive down the value of quests
+to you, slowing your own advancement.
+     The next thing to note, since the title of a quest rarely
+gives you enough information to get started, is the quest description.
+This tells you a little more about the quest so you can make
+an attempt at solving it.  Normally the only way to get such
+a description is by going to your guild (or the adventurer's
+guild) and typing 'list <quest_name>'.  This will yield an
+output something like this:
+
+Quest Name: Amber Fly
+Description/Hint:
+
+Ezekiel Milquetoast, sage of Darkwind and renowned abjurer, is
+terribly distraught over the loss of an item.  Seek him out
+north of the city and rectify the situation.
+Completed:  NO  Value:    11
+Brawn %:    50  Brain %:  50
+
+     Now you at least have an idea what the goal of the quest is:
+to help out Ezekiel.  You could probably also guess that this will
+involve finding the item he lost and returning it to him, since
+that is the most logical way to fix the problem he is having.
+The only thing you don't really know is _where_ to get started.
+That is one of the biggest parts of a quest -- finding the quest
+area.  Once you do that, you've overcome one of the larger
+hurdles in the way of your completion of the quest.  But guess
+what, you're already in the quest area!  Now all you have
+to do is find Ezekiel and you'll be on your way to acquiring
+some real quest points!  Note that, in general, it is usually
+a little more difficult to reach this stage, especially if
+the quest description gives you very little clue as to where
+to look.  The only way you will know where to go is if you have
+found it before, and the only way to find it is to explore.
+Therefore, if you want to be good at quests, explore a lot.
+You'll just stumble upon places that turn out to be quest areas
+which you can go back to later when you are ready to tackle
+the quest.  Now, find Ezekiel and let's get this show on the road!

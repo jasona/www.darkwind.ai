@@ -1,0 +1,48 @@
+BARD INSTRUMENTS
+
+Bards begin with their familiar guild lute. Alternate instruments can be
+carried and selected with:
+
+  instrument
+  instrument <name>
+  instrument off
+
+The selected instrument shapes your newer battle songs. It does not replace
+your guild soul, and you can return to the base lute at any time.
+
+Alternate instruments are sold at the Bard Shoppe in the Darkwind Bard
+guildhall.
+
+Current instruments:
+
+  drums        Rhythm songs, Rally, follower songs, and support timing hit
+               harder and force pulse-style propagation.
+  flute        Slightly improves Melody and Dissonance, and unlocks
+               Whisper Canticle. Especially good for Soothe and Otto.
+  violin       Greatly improves Dissonance morale pressure, social reputation
+               songs, and damage-oriented dread.
+  horn         Pushes songs into echo-style propagation and strengthens
+               room-wide support, follower songs, and Finales.
+  chimes       Improves Harmony, lore reads, control precision, and unlocks
+               Mirror Refrain.
+  concert lute Extends song field duration and helps social, lore, and craft
+               performances linger.
+  war harp     Improves Harmony and Crescendo battle support and helps hold
+               enemy attention. Strong with support and damage pressure.
+
+Archetypes have favored instruments. When your archetype, instrument, active
+song fields, and command all point in the same direction, the command can gain
+more force, longer duration, stronger morale pressure, better success odds, or
+special flavor.
+
+Use bscore or bmon to see your currently selected instrument.
+
+New Bards should not panic about instruments immediately. Your lute works, and
+fix lute can restore it. Instruments become more important as you learn more
+song forms, unlock instrument-specific songs, and choose an archetype.
+
+Recommended next topics:
+
+  bardhelp songs
+  bardhelp archetypes
+  bardhelp commands

@@ -1,0 +1,5 @@
+mixed query_race_data(string)
+
+Defined in players. The player's race data is queried for the
+racial attribute mapping entry. If that entry does not exist
+(or the player has an invalid race) the function returns 0.

@@ -1,0 +1,29 @@
+Command: funhelp
+Argument: function name
+
+Functions:
+----------
+ 
+There exists two types of functions in LPC, called LOCAL and EXTERNAL
+functions.  A local function is defined in LPC code in an LPC file, and
+is contained in an object. A local function can be called from LPC code
+inside the object or from LPC code in another object.
+ 
+Objects communicate with each other by calling functions in each other.
+ 
+A local function can be declared STATIC, meaning that it can only be called
+from LPC code within the same object.  External function are "built in" in
+LPC, so it has no definition in LPC code.
+ 
+Examples of local functions are the functions set_value and query_value
+in "/obj/treasure.c". Examples of external functions are write(), time()
+and add_action().
+ 
+All external functions are documented in "/doc/efun/FUNCTION", where
+
+FUNCTION
+is the name of the function. Many local functions are documented in
+"/doc/lfun/FUNCTION". Not all can be documented, as they are unlimited.
+
+You can get information on most of these functions by typing:
+funhelp <function>

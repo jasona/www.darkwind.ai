@@ -1,0 +1,10 @@
+
+void room_message(object *aoPeople, object oRoom, string sMessage)
+
+Similar to tell_room(), but allows variable text depending on who is receiving
+the message. The message string is in the same format as general emotes,
+although this usage cannot handle passing non-living objects, and does not allow
+special cases separated by ||. The composed message sMessage is spammed to
+the room oRoom, with the array aoPeople being the array of people involved in
+the message.
+

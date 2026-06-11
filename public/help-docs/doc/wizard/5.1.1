@@ -1,0 +1,71 @@
+/doc/wizard/questob
+-------------------
+ 
+Hmmm...So you want to know how to make a generic quest object, eh?  Well,
+this is going to be one of the harder undertakings of your career here on
+Darkwind.  As a matter of fact, I think that it'll probably be harder than
+coding your quest, even.  Yeah, I'm pretty sure of that part.
+ 
+--------------------
+ 
+The first few lines in any quest object should be:
+ 
+#include <mudlib.h>
+#include <darkwind.h>
+#define DESTINATION WIZROOMS+"quest_ro"
+inherit GEN_QUEST;
+ 
+  The define is the pathname of the quest room underneath the
+  adventurer's guild.  When you have your quest approved and
+  ready to be put in the game, tell an Imp+ to have it added
+  to the mud's autoload file, and this will take care of moving
+  it there automatically when the mud reboots.
+  The inherit line sets up the object to be a quest object and will
+  allow calls to the quest master object as defined below.
+ 
+--------------------
+ 
+set_name("name");
+ 
+  string name.  Supply the quest object a name.
+ 
+set_hint("hint");
+  string hint.  This is what is printed out when a player does a
+  "list <quest-name>" in the Adventurer's Guild.
+ 
+--------------------
+ 
+Wow.  Pretty darn hard, eh?
+ 
+I'll supply you with an example, just in case you didn't get it from what's
+been in the doc so far:
+Oh, another good idea is to include a long detailed comment giving
+specifics on how to solve your quest.  Then if some wiz needs to
+know, the pathname of this file can be found from the object in
+the quest room and the file looked at.
+ 
+--------------------
+ 
+#include <mudlib.h>
+#include <darkwind.h>
+#define DESTINATION WIZROOMS+"quest_ro"
+inherit GEN_QUEST;
+ 
+void reset(int iArg) {
+// NOTE: There is no ::reset(iArg); because the quest master object doesn't
+// have a reset() function.
+  if (iArg)
+    return;
+  set_name("Pharaohs Curse");
+  set_hint("\
+Rid Egypt of the Curse of the Pharaoh.\n\
+A medium level quest - takes more brains than brawn.\n");
+  move_object(this_object(),DESTINATION);
+// this line moves it to the quest room when the object is reset,
+// which should happen when the mud reboots if this file is in
+// the mud's autoload file
+}
+ 
+/* EOF - Rodney - 11/13/95
+ */
+// mods by AC - 11/13/95

@@ -1,0 +1,38 @@
+|GKO================================================================
+                   |WKOGarou Guild : General Commands
+|GKO================================================================
+|YKOIn addition to the combat abilities and spiritual powers
+listed in |RKO'ghelp shaman'|YKO, |RKO'ghelp guardian'|YKO, and |RKO'ghelp warrior'|YKO,
+all Garou have access to the following commands regardless of
+dedication.
+
+|WKO[Usable in all forms]
+|CKOgsc         |WKO- Display your stats and other information
+|CKObalance     |WKO- Display your spiritual state
+|CKOws          |WKO- Communicate with other Garou
+|CKOgaea        |WKO- Communicate with both Garou and Druids
+|CKOpt          |WKO- Communicate with your fellow pack members
+|CKOtransform   |WKO- Shift between physical forms
+|CKOconsider    |WKO- Size up an opponent
+|CKOwsmell      |WKO- Sniff around for nearby opponents
+|CKOsense       |WKO- Sense who or what a person or wolf really is
+|CKOscent       |WKO- Find a particular foe, or path to guildhall
+|CKOremember    |WKO- Display the locations of your buried items
+|CKOforget      |WKO- Forget about your buried items
+|CKOwolflong    |WKO- Set your wolf long description
+|CKOcrinoslong  |WKO- Set your crinos long description
+|CKOgupdatehist |WKO- Display a list recent guild updates
+|CKOhowl        |WKO- Communicate with a great howl
+|CKOdig         |WKO- Dig up loot you have already buried
+
+
+|WKO[Usable in wolf/crinos]
+|CKOchase       |WKO- Toggle off/on chasing of foes
+|CKOeat         |WKO- Eat a corpse to restore health
+|CKObury        |WKO- Bury an item in the ground
+
+|WKO[Usable only in wolf]
+|CKOcarry       |WKO- Pickup an item in your mouth
+|CKOspit        |WKO- Spit out an item that you are carrying
+|CKOblend       |WKO- Blend into the scenery hiding from foes
+|CKOemergency   |WKO- Send out an emergency message to all Immortals

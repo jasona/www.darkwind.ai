@@ -1,0 +1,46 @@
+                           |CKBChapter 11 - Rules
+                  |BKB-----------------------------------
+
+     |WKBNo game can operate without rules. Darkwind is no exception. The
+     rules are made to create an even playing field and to make the
+     game more enjoyable for all. They are strictly enforced and there
+     is no reason for not knowing them. If you are uncertain as to
+     whether or not something is within the rules of the game, ask.
+
+     |YKBClients |BKB- |WKBA client is program that is used to access a mud. The use
+     of clients is fine in almost all respects, the exceptions being large
+     client side scripts and using any sort of keep-alive timer. Darkwind
+     provides for scripts using the "script" command (|CKOsee |RKB"help script"|WKB).
+     Use of a timer to keep your character logged in isn't allowed. If you
+     need to go idle for an extended period, stow your gear in case you
+     idle out. One note about triggers, please be careful. Having a trigger
+     to burn a corpse or get everything from a corpse should be made specific
+     enough that it acts only on your kills unless you want to make people
+     upset. (|CKOsee |RKB"help scripts" |CKOand |RKB"help triggers"|WKB).
+     
+     |YKBMulti-characters |BKB- |WKBEach player is allowed one character
+     online at a time. If you are found to have more than one character
+     online at once, one or both will be deleted and you may be banned. 
+     It is possible to have more than one character registered to you at
+     a time. |CKOSee |RKB"help multichars"|WKB for more information.
+
+     |YKBQuests |BKB- |WKBWhile quests are personal challenges. Everyone gets stuck from
+     time to time. Need help? Ask a friend.
+
+     |YKBBugs |BKB- |WKBSometimes things do not work the way they're intended to. 
+     This is generally obvious when it happens. If you find something that you 
+     think is a bug, you are obligated to report it. Sometimes you will get a 
+     message that says 'Your sensitive mind notices a wrongness in the 
+     fabric of space'.
+         This is a bug. (|CKOsee |RKB"help bugs"|WKB).
+     
+     |YKBProfanity |BKB- |WKBIf you do not wish to see profanity, you can type
+     'virginears' and swear words will be filtered.  
+
+     |YKBPK |BKB- |WKBDarkwind has a fairly complicated PK system which allows for
+     player-killers and those not wanting to participate in player-killing
+     to coexist. However, if you've chosen not to become a player killer then
+     it's your responsibility not to become involved in the affairs of
+     player-killers. This includes things like locating, healing, or otherwise
+     becoming involved in player-killing activities. |CKBPlease be sure to read
+     the help file on pk.

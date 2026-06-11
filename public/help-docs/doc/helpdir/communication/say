@@ -1,0 +1,16 @@
+
+|WKBSyntax:
+==================|YKB
+
+       say [in <language>] [to <whom>] <text>
+       rsay [to <whom>] <text>
+
+   |CKB[language] |YKOis which language you wish to use, and |CKB<text> |YKOis what
+   you want to say. If you provide |CKB[to <whom>]|YKO, what you are saying
+   will be directed to that specific person.
+
+   Using |YKBrsay|YKO always speaks in your own racial language.
+
+   |WKONote: if your default is common, you cannot use the "say in
+   language <text>" syntax to change your language, although
+   rsay will work correctly.

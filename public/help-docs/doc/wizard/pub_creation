@@ -1,0 +1,77 @@
+ 
+ 
+This is documentation to explain creating a pub or an inn, using the pub
+inheritable.
+ 
+Always:
+ 
+#include <mudlib.h>
+inherit NEWPUB;
+ 
+Do not inherit ROOM.  
+ 
+There are a few functions which you have to define:
+                          
+set_type(string sArg);
+  sArg = the type of store this is.  This is written to player, for example:
+        "You cannot rob the " + type + ".\n"
+  set_type("inn");
+ 
+set_save_file(string sArg);
+  sArg = filename of the save file for your pub/inn.  (Used with restore and save
+        object.)
+  set_storeroom("/players/myname/save_file");
+ 
+set_bartender(string sArg, string sFilename);
+  sArg = the name of the bartender, sFilename is the filename of it (with path.)
+  set_bartender("bartender","players/myname/bartender_guy");
+ 
+set_guard(string sArg);
+  sArg = filename of the guard for that pub, that's called if the pub/inn
+        is robbed.
+  set_guard("/players/myname/guard");
+ 
+add_item(string sArg, string sFilename, int iLimit);
+  This is just like make_object, however, it accepts no 3rd argument for the
+    number of that object.  It will make these drinks available, and they can 
+    be bought buy the 1st arguement that you pass.  If you pass integer limit,
+    then only that number will be sold, per reset.
+  add_drink("beer","players/myname/neato_beer",10);
+ 
+add_food(string sArg, int iLimit, int iCost, int iStrength);
+  This is similar to add_item.  sArg is the name of the food.  iLimit is the 
+    maximum number to be sold.  iCost is how puch to pay for it.  iStrength is 
+    how many hit_points to heal them, and how satiated they get.
+  add_food("bread",5,25,4); /* 5 breads, cost 25, heals 4 */
+ 
+add_drink(string sArg, int iLimit, int iCost, int iStrength);
+  This is similar to add_food.  All of the arguements are the same.  If you 
+    want the drink to be unlimied, pass 0 for iLimit.
+  add_drink("beer",0,2,2); /* unlimited beers, cost 2, heal 2 */
+ 
+set_menu_color(string sArg);
+  str = the color string, that you want the shop menu to display in.
+        If you are unfamiliar with color strings, wizhelp 1.7 (ansi).
+  set_menu_color("|RKB"); /* Red on Black, Bold */
+ 
+Note:  At then end of your reset function, add the line restore();
+       Change your if(iArg) return, to this:
+         if(iArg) {
+           restock();
+           return;
+         }
+ 
+There are a few functions already in the init of NEWPUB:
+  Buy/Order, Rob, and Read.  Read is setup, as you add items, or food to your
+    pub or inn, the menu us modified.  Do *not* add_read or menu or sign.
+    You do not need to add_action these.
+  There is an 'exit_hook' function, please dir_hook the exits out of your pub
+    and make them call exit_hook();  If this is a room with no alcohol served,
+    then you do not have to do this.
+ 
+The drinks for your pub, *must* return true for id("alcohol");  IE, set_alt_name
+or set_alias to alcohol.
+ 
+-Hayden
+woo woo!
+ 

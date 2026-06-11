@@ -1,0 +1,12 @@
+|GKO================================================================
+                            |CKOSlam
+|GKO================================================================
+
+|YKOSlam strikes a foe with an incredibly powerful blow, sending
+the enemy flying into the next room. The blow is not intended
+to cause massive damage so much as pushing the enemy back,
+thus it causes minimal damage. Some monsters cannot be
+slammed.
+
+|RKOSyntax: |YKBslam <target>          |WKOCost: |CKO20 sp
+|BKBThis power is only usable by Garou of level 20 and higher.

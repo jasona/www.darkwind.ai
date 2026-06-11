@@ -1,0 +1,38 @@
+|GKB================================= Potion =================================
+|GKB=|XX0   Syntax: cpotion |YKB<chr|con|dex|int|str|wis>|XX0     cpotion |YKBheal|XX0           |GKB=
+|GKB=|XX0           cpotion |YKB<regensp|regenhp>|XX0             cpotion |YKBdetox|XX0          |GKB=
+|GKB=|XX0           cpotion |YKB<fire|ice|lightning>|XX0          cpotion |YKBacid|XX0           |GKB=
+|GKB=|XX0           cpotion |YKBflying|XX0                                               |GKB=
+|GKB=|XX0                                                                        |GKB=
+|GKB=|XX0   All potion brewing requires that a charlatan bottle be present in    |GKB=
+|GKB=|XX0   either your inventory or your cloak. Once the potion has been        |GKB=
+|GKB=|XX0   brewed, simply drink it to gain some temporary bonuses. Most         |GKB=
+|GKB=|XX0   potions are drinkable by anyone, so you should be able to drum up    |GKB=
+|GKB=|XX0   some good business...                                                |GKB=
+|GKB=|XX0                                                                        |GKB=
+|GKB=|XX0   Using your knowledge of alchemy, you can brew up a healing potion    |GKB=
+|GKB=|XX0   to take care of those aches and pains.                               |GKB=
+|GKB=|XX0                                                                        |GKB=
+|GKB=|XX0   A stat potion (chr|con|dex|int|str|wis) will temporarily boost       |GKB=
+|GKB=|XX0   the consumer's level in the respective stat. These things have       |GKB=
+|GKB=|XX0   varying potency based on your training, and will degrade over        |GKB=
+|GKB=|XX0   time.                                                                |GKB=
+|GKB=|XX0                                                                        |GKB=
+|GKB=|XX0   The regenerative potions will increase the ability to regenerate     |GKB=
+|GKB=|XX0   hitpoints or spellpoints respectively. These, like most potions,     |GKB=
+|GKB=|XX0   will vary with training.                                             |GKB=
+|GKB=|XX0                                                                        |GKB=
+|GKB=|XX0   Detox potions contain a secret blend of vitamins, roots and just     |GKB=
+|GKB=|XX0   the right amount of alcohol to cure the hangover blues.              |GKB=
+|GKB=|XX0                                                                        |GKB=
+|GKB=|XX0   The acid and elemental varieties are not meant to be drunk, but      |GKB=
+|GKB=|XX0   rather flung at a target to cause some damage. If you can find       |GKB=
+|GKB=|XX0   a mark dumb enough to drink one, by all means sit back and watch     |GKB=
+|GKB=|XX0   the fireworks.                                                       |GKB=
+|GKB=|XX0                                                                        |GKB=
+|GKB=|XX0   Lastly, there are flight potions. These suckers will give you        |GKB=
+|GKB=|XX0   (or your mark if you're trained enough) some oomph and allow         |GKB=
+|GKB=|XX0   you to fly for a short time. These require a crushed pegasus         |GKB=
+|GKB=|XX0   wing, but Yakko will let you have one for the right price.           |GKB=
+|GKB==========================================================================
+

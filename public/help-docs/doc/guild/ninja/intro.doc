@@ -1,0 +1,26 @@
+The Ninja Guild
+The Ninja are trained assassins that specialize in stealth,
+information and combat prowess. Ninja have an indepth knowledge
+of combat that they may leverage to bring down a target. Dexterity
+and intelligence are especially important to the guild. Dexterity
+supports the precision and speed expected of a Ninja, while intelligence
+supports study, technique and control.
+
+A list of abilities can be shown with the <nskills> command. The
+<practice> command trains abilities, and <master> can remove the
+remaining failure chance from a fully practiced ability. Ninja earn
+one mastery slot at guild level 15 and a second mastery slot at guild
+level 20.
+
+Several combat abilities add pieces to the Ninja combo system. Recent
+pieces can combine into special combat bursts; see <ninhelp combo>.
+The <ninhelp> command can also be used to find information on the
+following subjects: <abilities>, <marks>, <training master>.
+
+From the shadow-covered room where you joined, you can reach the
+main guild hall in Kerei by going: u,w,n,n,e,e,d,sw,s,s. From that
+guard room, you can then "slide down" to enter the guild hall.
+
+There is also a Ninja presence hidden in Darkwind. The Darkwind guild
+rooms connect back into the same order, but Yagyu the training master
+keeps his formal training hall in Kerei.

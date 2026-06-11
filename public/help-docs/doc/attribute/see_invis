@@ -1,0 +1,8 @@
+/doc/attribute/see_invis
+
+Format: (Living_Object)->set_attribute("see_invis", iValue);
+
+Description:
+  See invis will allow the Living_Object to see invisible
+  objects that are invis to iValue and below. iValue maxes at
+  the value of APPLICANT-1.

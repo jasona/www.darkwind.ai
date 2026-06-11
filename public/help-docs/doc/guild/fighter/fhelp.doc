@@ -1,0 +1,15 @@
+---------------------------------------------------------------------------
+                        Welcome to the Fighter Guild!
+---------------------------------------------------------------------------
+To learn more about a subject, use "fhelp <subject/skill>":
+
+"commands" : This shows general Fighter commands available to you.
+             These are typically non-combat commands, but are quite useful
+             to you during your career as a Fighter.
+
+"extras"   : This screen shows you extra little "goodies" about Fighters.
+             Such as directions to your guild halls on the other
+             continents and any other useful insights.
+
+"emote"    : This will show all the Fighter guild emotes.
+---------------------------------------------------------------------------

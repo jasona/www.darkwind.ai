@@ -1,0 +1,16 @@
+|GKB-- Earthquake -----------------------------------------------|000
+
+Exerting control through the Tellurian current, the druid
+causes a massive upheaval of the earth, similar to
+an earthquake.  While this invocation will not harm the
+druids or their followers, others will take a
+certain amount of damage, regardless of armor, and
+will be unable to move or fight effectively for
+some time.
+
+|CKBCommand:      |000 earthquake
+|CKBBase Cost:    |000 160 Tellurian nwyfre
+|CKBBase Recovery:|000 long
+|CKBBase Effect:  |000 damage (moderate, area), stun (area)
+|CKBBase Duration:|000 instant (damage), medium (stun)
+|CKBGuild Level:  |000 22

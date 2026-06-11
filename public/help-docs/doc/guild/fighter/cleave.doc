@@ -1,0 +1,6 @@
+Skill: Cleave      Timer: Damage       GL: 13    Cost: 20%
+A Master Swordsman gains the ability to strike a mighty blow onto
+his enemy. Such a maneuver isn't easy, however, requiring a
+large, slashing, or cleaving type weapon.
+
+Syntax is: cleave <target>

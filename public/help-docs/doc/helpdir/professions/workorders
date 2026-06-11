@@ -1,0 +1,35 @@
+                         Profession Work Orders
+
+    Profession work orders are posted in the profession building, 4e, n
+from Center of Town. The board rotates every DarkWind day with requests
+for saved materials and crafted items.
+
+Commands:
+  workorders
+  workorder <#>
+  workorder complete <#>
+
+    Work orders may ask for herbs, ores, bars, skins, leathers, reagents,
+potions, bags, tailored clothing, bandages, or other profession-crafted
+goods. Saved-material orders pull directly from your reagent/material
+storage. Crafted-item orders require the item in your inventory and consume
+it when completed.
+
+    Rewards include coins, experience, profession practice, and sometimes
+bonus shards or recipe cards. Some rare utility recipes, such as masterwork
+polish, are available through work orders.
+
+    Profession-crafted gear can also be improved in the profession building:
+
+  inlay <crafted item> with <shard>
+
+    Inlaying consumes one saved shard and adds a small stat or resistance
+bonus to a profession-crafted item. Each item can only hold one inlay.
+See 'help inlays' for more detail.
+
+Getting started:
+  1. Go to the profession building, 4e, n from Center of Town.
+  2. Use 'workorders' at the board.
+  3. Use 'workorder <#>' to inspect the material or item needed.
+  4. Gather, craft, or manufacture the requested turn-in.
+  5. Use 'workorder complete <#>' to claim the reward.

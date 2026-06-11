@@ -1,0 +1,25 @@
+ 
+To make an autoloading object, you need to use the following code:
+  this_player()->register_auto_obj("/my/crazy/path:parameter");
+ 
+To remove an autoloading object from the player's autoload mapping:
+  this_player()->remove_auto_obj("/my/crazy/path:parameter");
+ 
+If you setup an autoloading object more than once, (for example in a guild
+it would be setup in the join function and the guild object refresh function),
+that would be ok, because the code in player.c makes sure that you don't add
+the same object twice.
+ 
+If you pass the optional parameter, when the object is loaded, the function
+init_arg(parameter) will be called, passing the parameter to it.
+ 
+The ":" that follows the pathname is optional.  In other words, if you have
+no optional parameter, you don't need to pass the ":" when you register the
+object with the player.
+ 
+Make sure that this code doesn't exist in the object's init() function.  The
+reason for this, is that if I enter a player's inventory it'll then try to add
+all of his autoloading objects to me.  This code should exist in places
+where the player first gets the object only.
+ 
+-Hayden, 06/22/95

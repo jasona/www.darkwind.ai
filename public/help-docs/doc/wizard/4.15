@@ -1,0 +1,36 @@
+                                 TERRAIN
+                                 =======
+
+Terrain is a REQUIRED setting for all rooms. Every room MUST:
+
+    #include <terrain.h>
+    
+and
+
+    set_terrain(<terrain bit field>);
+
+as part of the room settings. Terrain settings MUST be ORed bit field
+settings defined in terrain.h. For example:
+
+    set_terrain(TER_OUTSIDE|TER_PATH|TER_FOREST);
+
+Don't even THINK about using string values like:
+
+    set_terrain("path");
+
+Every room MUST set ALL applicable terrain types. That means that for a
+path in the forest,
+
+    set_terrain(TER_PATH|TER_FOREST);
+
+is WRONG because it doesn't have TER_OUTSIDE.
+
+See /open/INCLUDE/terrain.h for currently available terrain settings.
+
+-------
+Revision: 05/17/96 by Sparhawk
+Revision: 20/08/98 by Xnedra
+Revision: 13/05/02 Canopy Terrain added by Acer.
+Revision: 19/05/02 Doc updated.
+Revision: 15/05/04 Completely redone by Bob.
+

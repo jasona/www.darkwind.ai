@@ -1,0 +1,12 @@
+Warp Wood
+
+This spell targets a victim's possessions, causing
+wooden items to bend, twist, warp, and otherwise render
+themselves useless.
+
+Command: warpwood <target> (defaults to attacker)
+Base Cost: 50 SP
+Base Recovery: medium
+Base Effect: destroy items (wood)
+Base Duration: instant
+Guild Level: 2

@@ -1,0 +1,15 @@
+|YKOThe Darkwind Party System allows players to join groups of 2-6
+players in order to combine their efforts battling against the
+dangers of Darkwind. No longer is this ability contained in a
+simple object that can be lost or misplaced, but is now part
+of the essence of every adventurer. While in a party, you may
+communicate easily with your fellows, gain a share of experience
+from each others' kills, and, at your option, split any
+earned gold. The following commands relate to the party system:|YKB
+
+epsay           partyhist       pauto        pautosplit
+pboot           pemote          pfollow      pleader
+pleave          pname           poffer       psay
+psplit          pstatus         preset
+
+|YKOTo get more information on a command, use |YKB"help <command>"

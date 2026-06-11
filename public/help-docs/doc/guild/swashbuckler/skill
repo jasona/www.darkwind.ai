@@ -1,0 +1,47 @@
+|MKB                   @}--- Swashbuckler Skills ---{@                 |XX0
+
+Command          |GK0||WK0GLVL|GK0||WK0 Cost|GK0||WK0           Description
+|GK0---------------------------------------------------------------------|XX0
+|YKBcandle           |GK0||WK0  1 |GK0||WK0  20 |GK0||WK0   Light a candle.|XX0
+|YKBendtech          |GK0||WK0  1 |GK0||WK0   0 |GK0||WK0   Stop using a technique.|XX0
+|YKBnameweapon |XX0<|CK0wpn|XX0> |GK0||WK0  1 |GK0||WK0   0 |GK0||WK0   Personalize a generic weapon.|XX0
+|YKBparry            |GK0||WK0  1 |GK0||WK0  *0 |GK0||WK0   Blocks some incoming attacks.|XX0
+|YKBsb/esb           |GK0||WK0  1 |GK0||WK0   0 |GK0||WK0   Guild line.|XX0
+|YKBscheck           |GK0||WK0  1 |GK0||WK0   0 |GK0||WK0   List active techniques.|XX0
+|YKBsconsider |XX0<|RK0who|XX0>  |GK0||WK0  1 |GK0||WK0   5 |GK0||WK0   Consider a monster.|XX0
+|YKBsevaluate |XX0<|CK0wpn|XX0>  |GK0||WK0  1 |GK0||WK0   5 |GK0||WK0   Get information about a weapon.|XX0
+|YKBskulk <dir>      |GK0||WK0  1 |GK0||WK0  10 |GK0||WK0   Sneak from room to room.|XX0
+|YKBsslice |XX0<|RK0who|XX0>     |GK0||WK0  1 |GK0||WK0  10 |GK0||WK0   Minor attack skill.|XX0
+|YKBsbkiss |XX0<|RK0who|XX0>     |GK0||WK0  2 |GK0||WK0  30 |GK0||WK0   Mutual minor healing.|XX0
+|YKBslash            |GK0||WK0  2 |GK0||WK0  *3 |GK0||WK0   Increases damage.|XX0
+|YKBssharpen |XX0<|CK0wpn|XX0>   |GK0||WK0  2 |GK0||WK0  40 |GK0||WK0   Improve a weapon a bit.|XX0
+|YKBsdodge           |GK0||WK0  3 |GK0||WK0  *5 |GK0||WK0   Improved dodging ability.|XX0
+|YKBospin            |GK0||WK0  3 |GK0||WK0  *3 |GK0||WK0   Increases hitting.|XX0
+|YKBchallenge |XX0<|RK0who|XX0>  |GK0||WK0  4 |GK0||WK0  50 |GK0||WK0   Stop your opponent from running.|XX0
+|YKBcharm            |GK0||WK0  4 |GK0||WK0  15 |GK0||WK0   Temporary chr increase.|XX0
+|YKBcalledshot       |GK0||WK0  5 |GK0||WK0  *2 |GK0||WK0   Increases damage.|XX0
+|YKBscall            |GK0||WK0  5 |GK0||WK0  30 |GK0||WK0   Boost abilities with teamwork.|XX0
+|YKBinsult |XX0<|RK0who|XX0>     |GK0||WK0  6 |GK0||WK0  40 |GK0||WK0   Reduce enemy's combat skill.|XX0
+|YKBsdisarm |XX0<|RK0who|XX0>    |GK0||WK0  6 |GK0||WK0  40 |GK0||WK0   Disarm the opponent.|XX0
+|YKBslocate |XX0<|RK0who|XX0>    |GK0||WK0  6 |GK0||WK0  10 |GK0||WK0   Locate other Swashbucklers.|XX0
+|YKBriposte          |GK0||WK0  7 |GK0||WK0  *3 |GK0||WK0   Counters a single swing.|XX0
+|YKBspants |XX0<|RK0who|XX0>     |GK0||WK0  7 |GK0||WK0  25 |GK0||WK0   Cut off your opponent's trousers.|XX0
+|YKBparley           |GK0||WK0  8 |GK0||WK0  30 |GK0||WK0   Attempts to stop the fight.|XX0
+|YKBsthrust          |GK0||WK0  8 |GK0||WK0  40 |GK0||WK0   Medium attack skill.|XX0
+|YKBcstrike          |GK0||WK0  9 |GK0||WK0  *8 |GK0||WK0   Improved critical damage.|XX0
+|YKBweaponbreak |XX0<|RK0who|XX0>|GK0||WK0  9 |GK0||WK0  40 |GK0||WK0   Destroy the enemy's weapon.|XX0
+|YKBphantom          |GK0||WK0 10 |GK0||WK0  *9 |GK0||WK0   Harness the power of fallen brethren.|XX0
+|YKBimpale           |GK0||WK0 11 |GK0||WK0  *9 |GK0||WK0   Increases damage.|XX0
+|YKBchoose |XX0<|CK0wpn|XX0>     |GK0||WK0 12 |GK0||WK0   0 |GK0||WK0   Select a weapon of choice.|XX0
+|YKBflurry           |GK0||WK0 12 |GK0||WK0 *17 |GK0||WK0   Extra swings.|XX0
+|YKBwound |XX0<|RK0who|XX0>      |GK0||WK0 12 |GK0||WK0 100 |GK0||WK0   Does continuous damage over time.|XX0
+|YKBflourish         |GK0||WK0 13 |GK0||WK0  *7 |GK0||WK0   Impressive offensive technique.|XX0
+|YKBtblades          |GK0||WK0 14 |GK0||WK0  *7 |GK0||WK0   Improved hitting.|XX0
+|YKBsinspire         |GK0||WK0 14 |GK0||WK0  60 |GK0||WK0   All PCs in the room get a bonus.|XX0
+|YKBssap |XX0<|RK0who|XX0>       |GK0||WK0 14 |GK0||WK0  25 |GK0||WK0   Sap dexterity from an opponent.|XX0
+|YKBsbm/esbm         |GK0||WK0 15 |GK0||WK0   0 |GK0||WK0   Blademaster line.|XX0
+|YKBsdance           |GK0||WK0 15 |GK0||WK0 Var |GK0||WK0   The ultimate technique.|XX0
+|GK0---------------------------------------------------------------------|XX0
+
+    * Indicates the costs associated with the '|YKBstyles|XX0'.
+

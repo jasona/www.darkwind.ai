@@ -1,0 +1,10 @@
+_______________________________________________________________________________
+"Ultrablast"       
+        This is the ultimate psionic attack.  It hurls a blast of mental
+        energy every couple seconds for a length of time dependent on
+        guild level.  The power of each individual blast is also dependent
+        on guild level.  This power is taxing on the mind.
+ 
+SP Cost:  Variable	Guild Level:  15	Potential Points:  7
+ 
+Command:  ultrablast <target>

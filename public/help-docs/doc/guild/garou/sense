@@ -1,0 +1,12 @@
+|GKO================================================================
+                             |CKOSense
+|GKO================================================================
+
+|YKOSense allows you to detect the real player name of a particular
+player, which may be different from the name that is displayed.
+As this power cannot affect invisible people, it is only
+really useful to tell who a particular Garou in crinos or
+wolf form is.
+
+|RKOSyntax: |YKBsense <target>      |WKOCost: |CKO10 sp
+|BKBOnly Garou level 10 and over may use this power.

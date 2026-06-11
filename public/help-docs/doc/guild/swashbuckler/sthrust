@@ -1,0 +1,17 @@
+Thrust - attack skill
+------------------------------------------------------------
+Like slice, a thrust is a single direct attack, aiming to
+dispatch an opponent who is already at death's door. Rather
+than making a crude swing at an enemy, a thrusting attack
+is precise and requires greater concentration. By using
+finesse instead of brute force, the swashbuckler will find
+that larger opponents will fall to his blade. Opponents
+that are not near death will still be able to twist away
+from a thrusting attack though, taking much less damage than
+intended, and will be very wary of any future moved by any
+swashbuckler.
+
+GL:  8
+SP: 40
+command: sthrust <target> (defaults to opponent if in combat)
+duration: instant

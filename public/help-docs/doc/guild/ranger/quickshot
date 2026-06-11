@@ -1,0 +1,16 @@
+Ranger Help for: quickshot
+==========================
+
+SYNTAX:      quickshot <target>
+USAGE:       Any terrain
+SLOT COST:   NA
+BASE SP:     variable
+SKILL TYPE:  archery
+
+SUMMARY:
+This skill allows a Ranger to snap off a rapid bow shot at a target.
+Quickshot trades damage for speed, allowing faster attacks than longshot.
+The SP cost varies based on the Ranger's archery level. The Ranger must
+have a bow wielded and an arrow readied. Quickshot is ideal for weaker
+opponents or situations where sustained damage output is more important
+than single-shot power. It has a shorter cooldown than other bow skills.

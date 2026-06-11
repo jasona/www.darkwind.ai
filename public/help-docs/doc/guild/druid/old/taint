@@ -1,0 +1,16 @@
+Taint Blood
+
+An evil ritual which calls upon the dark totemic
+spirits of nature.  After casting this spell, a
+druid need only touch his target to send a
+virulent poison through its blood.  Armor is no
+help, and the poison will continue to do damage
+beyond its initial amount, should the victim
+survive.
+
+Command: taint <target> (defaults to attacker)
+Base Cost: 90 SP
+Base Recovery: medium
+Base Effect: damage (moderate, continuing)
+Base Duration: long
+Guild Level: 11

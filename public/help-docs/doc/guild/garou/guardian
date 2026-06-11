@@ -1,0 +1,45 @@
+
+|GKO=================================================================
+              |WKOGarou Guild Abilities : Guardian Path
+|GKO=================================================================
+|YKOThe various abilities granted to Gaea's guardians are listed
+below. See |RKB'ghelp <ability name>" |YKOfor specific information
+concerning a given ability, and |RKB'ghelp stance' |YKOfor general
+info about stances.
+
+|BKB[Note: Guardian only abilities are denoted with a *]
+
+|GKOSpiritual               GL    LVL   EURUS     FORM     GHELP
+|WKB---------              ---    ---   -----     ----     ------
+|MKBIntensify               |GKO 1     -      -       MCW      intensify
+|MKBJudge Alignment         |GKO 2     -      1       MCW      judge
+|MKBSummon Wolf             |GKO 3     -      1       MCW      summon
+|BKB*|MKBUmbral Klaive          |GKO 4     -      -       -C-      klaive
+|MKBSanctify Corpse         |GKO 5     -      1       MCW      sanctify
+|MKBCommand Wind Spirits    |GKO 6     -      2       MCW      wind
+|MKBLuna's Armor            |GKO 7     -      3       MCW      gluna
+|BKB*|MKBQuills of the Porcupine|GKO 8     -      5       -CW      quills
+|MKBSummon Fog              |GKO 9     -      5       MCW      fog
+|MKBCreate Charm Fetish    |GKO 10     -      3       MCW      create
+|MKBReturn                 |GKO 11     -      5       MCW      return
+|BKB*|MKBUmbral Armour        |GKO  12     -     15       -C-      uarmour
+|MKBVision                 |GKO 13     -      5       MC-      vision
+|BKB*|MKBFlames of Helios     |GKO  14     -     10       -CW      flames
+|BKB*|MKBUmbral Step          |GKO  14     -     20       -CW      ustep
+|MKBGreater Create Charm   |GKO 15    45      6       MCW      gcreate
+|MKBMaster Create Charm    |GKO 15    90      6       MCW      mcreate
+
+|GKOPhysical               GL    LVL   EURUS     FORM     SYNTAX
+|WKB--------              ---    ---   -----     ----     ------
+|RKBHarry                 |GKO -      -      -       --W      harry
+|RKBLunge                 |GKO -      -      -       --W      lunge
+|RKBLeap                  |GKO -      -      -       --W      leap
+|RKBBurst                 |GKO -      -      -       -C-      burst
+|RKBSlam                  |GKO -     20      -       -CW      slam
+|RKBRage                  |GKO 10    20      -       -CW      rage
+|RKBDirected Rage         |GKO 15    65      -       -CW      drage
+
+|GKOStance                 GL    LVL   EURUS     FORM     SYNTAX
+|WKB------                ---    ---   -----     ----     ------
+|KKBNormal                |GKO -      -      -       --W      stance
+|BKB*|KKBDefensive            |GKO  2     -      -       -C-      stance

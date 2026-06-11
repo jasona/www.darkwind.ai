@@ -1,0 +1,54 @@
+                                 |CKBCOLOR
+                                 |BKB=======
+
+|WKOThis documentation is meant to teach an easy way to add ansi to your current
+code on Darkwind.  There are a few methods.  
+
+|CKBAdding color to items:
+
+     |WKOYou can add color to items very easily. Simple use:
+     
+     |WKOset_color(|(colorcode);
+     
+|BKBExample: |XXOset_color(|XX0||XX0B|XX0K|XX00);
+|WKOThis would return the set_short in the item as |BKOblue|WKO
+
+|CKBAdding color to a write/say:
+
+|WKOIf you are trying to write the
+color of a certain object (that should already have a color), then you can
+do something like this:
+ 
+  |XXOwrite(this_object()->query_color() + this_object()->short() + "\n");
+ 
+|WKOHowever, if you want to specify a color, you should do this:
+ 
+  |XXOwrite("|XX0||XX0B|XX0K|XX00" + this_object()->short() + "\n");|XX0
+ 
+|WKOWhen you use the second method, you must always use the format |XYZ.
+The color change must also be at the beginning of the string.  You may
+have only 1 color change per write/say/whatever.  If you wish to have
+part of a line a different color than the rest of the line, break up the
+string into two writes/says without a \n in the first one (see second
+Butthead example below).  Color changes don't work well with sprintf.
+Use write("|XYZ" + sprintf(whatever)) instead.  |RKBDon't attempt to colorize
+monsters.|WKO
+
+ 
+X == Foreground color.  Y == Background color. 
+Valid Colors:  Red = |RKBR|WKO, Green = |GKBG|WKO, Blue = |BKBB|WKO, Black = |KKBK|WKO, Yellow = |YKBY|WKO,
+               Cyan = |CKBC|WKO, White = |WKBW|WKO, Magenta = |MKBM|WKO.
+Z == Effect.  (Bold = B, Underscore = U, None = 0)
+
+You can see the full list of colors via |MKO'colorlist'|WKO
+ 
+|BKBExamples:|WKO
+  
+  write("|XX0||XX0C|XX0Y|XX0BButthead.\n");|XX0
+ 
+  write("|XX0||XX0G|XX0B|XX0U" + "    " + this_object->short() + "\n");|XX0
+ 
+  write("|XX0||XX0C|XX0K|XX0BButt");|XX0
+  write("|XX0||XX0G|XX0K|XX0Bhead.\n");|XX0
+ 
+|YKOThe spaces after the color, before the short, will not be affected by the color.

@@ -1,0 +1,5 @@
+Restore is a basic fighter command that allows you to update your tabard if
+you already have one. If you don't have one, you have to go to the guild
+and type "fix tabard" in the room with the old knight.
+
+Syntax is: restore tabard

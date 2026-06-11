@@ -1,0 +1,16 @@
+Ranger Help for: nature's protection
+======================================
+
+SYNTAX:      rprotect
+USAGE:       Any terrain
+SLOT COST:   7
+BASE SP:     variable
+SKILL TYPE:  religious
+
+SUMMARY:
+This skill allows a Ranger to call upon Gaia for a protective aura
+that surrounds the Ranger and reduces incoming damage for a duration.
+The strength and duration of the protection depend on the Ranger's
+wisdom and guild level. This aura is a gift from Gaia and works in
+any terrain, though it is strongest in the Ranger's primary terrain.
+The protection fades over time and must be renewed.

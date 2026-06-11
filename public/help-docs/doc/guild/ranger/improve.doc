@@ -1,0 +1,15 @@
+Ranger Help for: improve
+========================
+
+SYNTAX:      improve <str/dex/con/wis/int/chr/level>
+USAGE:       Any wilderness terrain.
+
+SUMMARY:    
+Allows a Ranger to advance stats and levels. You can advance the following:
+str/dex/con/wis/int/chr/level. Costs can be determined by using the 'tally'
+command. Guild level increase with player level, so you cannot raise it.
+However, wise Rangers will rise in guild level faster than others. 
+
+=============================================================================
+SEE ALSO: stats, tally, journal, repair and glevels
+

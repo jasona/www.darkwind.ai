@@ -1,0 +1,73 @@
+|YKOThere are many civilized and not so civilized races available on DarkWind.
+Players can learn about and become many of these races at the Hall of Races
+in Darkwind City. Race may be changed without penalty until level 5. After
+level 5, changing race will cost the same as one death. As you explore 
+the lands, you may come across other Halls of Races where you may learn
+about and become other races.
+
+The following races are available at the Darkwind Hall of Races:
+
+|CKBDarkwinder
+|CK0Glavian
+|BCBBarbarian
+|MCBFaerie
+|GYBHalfling
+|GKBHigh elf
+|MK0Rift duergar
+|MKBShel-zaranite
+|WWBSilver Elf
+|BKBStone dwarf
+|RKBUruk|YKO
+
+The following races are available at the Hyperborea Hall of Races:
+|WKBNorthman
+|WKOArctic elf
+|BK0Hyperborean gnome
+|RWBIce ogre
+|RWOIce gnoll|YKO
+
+The following races are available at the Souvrael Hall of Races:
+|YKBSouvraeli
+|YKODesert nomad
+|YBBDesert dwarf|YKO
+
+The following races are available at the Talamh Darag Hall of Races:
+|YCBWayfarian
+|MBBpixie
+|RB0Sidhe|YKO
+
+Each race has a unique set of abilities and penalties due to their physical
+and mental characteristics, as well as cultural aspects of their societies,
+some of which will be explained in more detail:
+
+|CKBSTATS
+|WKO-----
+|YKORacial modifications to stats are made to the base stat, before other
+modifications such as from magical equipment. Racial modifications are also
+based on a percentage of the base stat. Thus even with an extremely strong
+race, if you never raise your strength, your strength will be only one.
+Because stats are always whole numbers, sometimes when you advance a stat
+you have a penalty in, you may not see the effect of that stat raise.
+Conversely, if you raise a stat you have a bonus in, you may see a rise of
+two points instead of one.
+
+|CKBALIGNMENT
+|WKO---------
+|YKOAdventurers are made, not born. By the time they choose the adventuring life,
+adventurers have a lot of silly notions ingrained into their minds, especially
+opinions about the role of alignment in society. Having been indoctrinated
+from an early age, they will always have a tendency towards the predominant
+attitudes of their culture. If you have a tendency towards one alignment,
+you will be less affected by changes away from that alignment. You will also
+be more affected by changes towards it.
+
+|CKBLANGUAGE
+|WKO--------
+|YKOFor help on languages, see |YKB"help language".
+
+|CKBGENERAL
+|WKO-------
+|YKOFor help on each race, try help |YKB<darkwinder>|WKO, |YKB<glavian>|WKO, |YKB<barbarian>|WKO,
+|YKB<high_elf>|WKO, |YKB<shel-zaranite>|WKO, |YKB<rift_duergar>|WKO, |YKB<stone_dwarf>|WKO, |YKB<uruk>|WKO, |YKB<northman>|WKO,
+|YKB<arctic_elf>, |YKB<hyperborean_gnome>, |YKB<ice_ogre>, |YKB<ice_gnoll>,
+|YKB<souvraeli>|WKO, |YKB<desert_nomad>|WKO, |YKB<desert_dwarf>|WKO, or |YKB<wayfarian>

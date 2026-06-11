@@ -32,8 +32,9 @@ import {
   type GuildRole,
   type Region,
 } from "../data/darkwindSnapshot";
+import HelpPage from "./HelpPage";
 
-type PageKey = "home" | "about" | "world" | "guilds" | "systems" | "races" | "start";
+type PageKey = "home" | "about" | "world" | "guilds" | "systems" | "races" | "start" | "help";
 
 const pagePaths: Record<PageKey, string> = {
   home: "/",
@@ -43,6 +44,7 @@ const pagePaths: Record<PageKey, string> = {
   systems: "/systems",
   races: "/races",
   start: "/start",
+  help: "/help",
 };
 
 const navItems: Array<[string, PageKey]> = [
@@ -52,6 +54,7 @@ const navItems: Array<[string, PageKey]> = [
   ["Systems", "systems"],
   ["Races", "races"],
   ["Start", "start"],
+  ["Help", "help"],
 ];
 
 const roles: Array<"All" | GuildRole> = [
@@ -302,6 +305,7 @@ function HomePage({ setPage }: { setPage: (page: PageKey) => void }) {
               ["Systems", "systems", "Professions, reputation, waypoints, Eternal Dungeons, dailies, achievements, and Darkflow.", Hammer],
               ["Races", "races", "Playable heritages with origin flavor and identity hooks.", Globe2],
               ["Getting Started", "start", "A practical first-session route through city services, commands, guilds, and survival habits.", Compass],
+              ["Help Files", "help", "Search in-game help, guild notes, wizard docs, LPC references, and copied source manuals.", BookOpen],
             ].map(([title, key, copy, Icon]) => {
               const LucideIcon = Icon as typeof Map;
               return (
@@ -950,6 +954,8 @@ function PageBody({ page, setPage }: { page: PageKey; setPage: (page: PageKey) =
       return <RacesPage />;
     case "start":
       return <StartPage />;
+    case "help":
+      return <HelpPage />;
     default:
       return <HomePage setPage={setPage} />;
   }

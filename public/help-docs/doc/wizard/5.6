@@ -1,0 +1,164 @@
+        An NPC is much like a MONSTER.  It can do everything that a 
+MONSTER can do, and more.  An npc has the ability to hold conversations,
+and also allows its builders to speak through it.  An NPC is
+created just like an ordinary monster, except that instead of
+inheriting MONSTER, you would inherit MONSTER_RP.
+ 
+Therefore, the first few lines of your file would look something 
+like this:
+ 
+#include <mudlib.h>
+inherit MONSTER_RP;
+ 
+-----------------------------------------------------------------------
+ 
+MONSTER_RP has a couple of functions that MONSTER does not.  These functions
+have to do with telling your NPC how you want it to react to
+certain stimuli.  For example, you could tell your NPC to wave
+whenever someone says hi.
+ 
+void add_response(arg1, arg2);
+ 
+arg1 and arg2 can be strings or arrays of strings.  You can use
+add_response multiple times, even with the same arguments.
+  
+Arg1 represents the stimuli which you want the NPC to respond to.
+A caution: if the word that the NPC is looking for can be 
+contained in another word, such as "hi" in "nothing", you should
+make use of spacing to differentiate.  The function uses catch_tell
+to search through everything the NPC sees on its screen, 
+including emotes, combat spam, and even direction names.  So, you can
+have the NPC respond to someone entering a room, getting an item,
+or even a particular person.  
+ 
+Arg2 contains the responses.  You can have the NPC respond in a 
+variety of ways:  with a command, an emote, an echo, or a say.  If
+the argument is an array, it will randomly pick an element of that
+array to perform.  
+ 
+In arg2, you can optionally precede the string with $C, $E, or $H.
+If the function does not detect one of these codes, it automatically
+does the entire string with a say.  NPCs automatically use
+csay, and they understand all racial languages.  Including $N anywhere
+in the response will cause $N to be replaced with the name of the person
+it is responding to.
+ 
+$C tells the NPC to perform the string as a command.  For example,
+you could pass in "$Ckill $N" and the NPC would perform the
+kill command on the person it was triggered by.  All NPCs automatically
+have player commands enabled.  
+ 
+$E causes the NPC to perform an emote, like the wizard emote, using
+the string.  It automatically puts the NPC's name in front of
+the string.  Therefore, if arg2 = "$Elooks out the window.", the 
+NPC would emote "<monstername> looks out the window."
+ 
+$H causes the NPC to perform an echo.  Therefore, if second 
+argument was "$HYou suddenly wish you lived in Northampton.", the 
+player would see "You suddenly wish you lived in Northampton."  The
+function uses tell_room to accomplish this.
+ 
+Here is a code example of the uses of add_response:
+ 
+/*omitted NPC code*/
+add_response(" hi", "Hello there!");
+add_response(({"death", "died", "killed"}), "$Csob");
+add_response("Greetings", ({"$Ceast", "$Esniffs quietly.", "$Eblah"}));
+/*omitted NPC code*/
+ 
+What if you want the NPC to do a series of commands?  You would
+use two add_responses with the same first argument.  The add_responses
+are executed in order, so the first add_response happen before the 
+second add_response.
+ 
+For example, let's say your NPC is protecting an object in the 
+room, and whenever someone takes that object, it says "Don't touch
+that" and attacks.  Here is how you set up the sequence.
+ 
+add_response("gets axe", "Don't touch that!");
+add_response("gets axe", "$Ckill $n");
+ 
+-----------------------------------------------------------------------
+ 
+Another function of the NPC inheritable is builder-controlled
+roleplaying.  A wizard can take control of an NPC's actions.  To
+do this, one would type 'roleplay <NPCname>'.  A "wand of
+control" object is cloned to your inventory.  It shows you
+all that your NPC sees, and allows you to send command to the
+NPC.  To send a command, you precede the command with the word
+'NPC'.  As with the add_response, an NPC can do anything
+a player can do, since enable_player_commands() is automatic.
+While an NPC is being roleplayed all of its normal chat messages
+from add_response,load_chat,load_cmd,etc will be temporarily
+disabled.
+ 
+For example, you can type 'npc east' or 'npc say hello'.  You 
+will recieve feedback that you have caused the NPC to do something,
+and you will see the result of what the NPC has done.  
+ 
+Ordinarily, only the creator of a particular NPC can roleplay it.
+Because some builders might want to allow other builders to roleplay 
+their NPCs, there is a function to allow this.
+ 
+To add a roleplayer to your NPC, you should include this line.
+ 
+add_roleplayer("buildername");
+ 
+add_roleplayer can only take a string, and it is important that the
+builder's name is in all lowercase.  For each of the builders
+you wish to enable, you will have to have a separate add_roleplayer line.
+For example, if I wanted to allow Rampage and Souldancer to roleplay
+my NPC, I would add the lines:
+ 
+add_roleplayer("rampage");
+add_roleplayer("souldancer");
+ 
+-----------------------------------------------------------------------
+ 
+Since there is obviously so much you can do with the builder-roleplaying,
+there are some guidelines as to how the NPC should and should not be
+roleplayed.
+ 
+1.) 'NPC kill' IS allowed.  It is no different to instruct
+    the NPC to attack than it is to set the monster aggressive.
+    Don't use an NPC to 'hunt' players you don't like, though.
+ 
+2.) Shouting is not allowed.  It is too disruptive.
+ 
+3.) Joining guilds, marrying, killing monsters outside your area, and
+    partying are NOT allowed.  
+ 
+4.) Helping players is not allowed.  Your NPC shouldn't help the
+    players in any way.  For example, having a "guard" move out
+    of the room to allow the players to pass through would be
+    illegal.  Also, having your NPCs kill other monsters for
+    the players' benefit would be illegal.
+ 
+5.) As for anything else, the rules will be added as they come up.  
+    Don't do anything with a NPC that you aren't allowed to
+    do as a wizard.  Your NPCs can't tell a player the weapon
+    class of a weapon.  Also, if you are roleplaying someone else's
+    NPC, please don't do things that the creator may not want 
+    you to do.
+ 
+6.) If you use an NPC as part of a quest, actual roleplaying of that NPC should
+     not be required for the quest.  Make sure any quest information  
+     you provide through roleplaying is ALSO available through
+     add_responses.
+
+For your convenience, here is an example of an init function which
+would tell the builder whenever a player enters the same room as said
+NPC.  Init is called every time an object encounters another one.
+ 
+ 
+void init () {
+ ::init();
+ if (!controller_ob)  //if not being roleplayed
+   tell_object("persephone", "Someone is in the same room as Ananda.\n");
+}
+ 
+Of course, this could get spammy if you have a lot of npcs.
+ 
+And that concludes the NPC documentation.
+written by Persephone
+Modifications by AC, 10-aug-97.  NPC now defined as MONSTER_RP

@@ -1,0 +1,14 @@
+Ranger Help for: rangerbug
+===========================
+
+SYNTAX:      rangerbug <message>
+             rbug <message>
+USAGE:       Anywhere
+
+SUMMARY:
+This command reports a bug in the Ranger guild system to the guild
+maintainers. Describe the issue as clearly as possible, including
+what you were doing when the bug occurred. Reports are logged for
+review by the guild coders. The 'rbug' command is a shorter alias
+for 'rangerbug'. Please use this for guild-specific bugs only; for
+general game bugs, use the standard 'bug' command.

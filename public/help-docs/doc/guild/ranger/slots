@@ -1,0 +1,16 @@
+Ranger Help for: slots
+======================
+
+SYNTAX:      slots
+USAGE:       Anywhere.
+
+SUMMARY:
+Shows how many skill slots you have available and which skills
+you can currently learn with their slot costs.
+
+Slots are earned by advancing your guild level. Each guild level
+grants between 4 and 20 slots (higher levels give more). You
+spend slots plus experience to learn skills.
+
+=============================================================================
+SEE ALSO: glevels, learn, skilltree

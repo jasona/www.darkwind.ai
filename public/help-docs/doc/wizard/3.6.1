@@ -1,0 +1,23 @@
+The file structure is a tree
+----------------------------
+
+LPmud mimics the file system hierarchy and file handling commands of UNIX.
+A directory is a set of files, where those "files" can be both normal
+files and other directories. Everything starts with the so-called root
+directory, the name of which is "/" (at least from inside Darkwind!).
+
+As in UNIX, a file or a directory is referred to by its file name or its
+path name, i. e. for example "thing.c" and "/players/alarian/thing.c".
+The rooms in the "core" domain of Darkwind are in the directory "/room",
+and the objects (like the weapon and monster objects) are in "/obj".
+Each wizard has his own home directory for example: "/players/alarian".
+
+Each area should have its own directory structure, with a separate directory
+for each of: inherit, room, monster, weapon, armour, and object. The
+directory structure for an area would look like this:
+ls /players/alarian/area/island
+
+armour/ inherit/ monster/ object/ room/ weapon/
+
+The inherit directory inclues all inheritable files and all header files
+for the area 'island'

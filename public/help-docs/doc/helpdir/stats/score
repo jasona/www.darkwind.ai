@@ -1,0 +1,13 @@
+|CKODESCRIPTION
+|WKO===========
+|YKOThere are two different verions of this command, although both
+do basically the same function.  That being to show you your
+current level, XP, GP, how much gold you have in the
+bank, your HP (and max HP), SP (and max SP), your stats, and your
+age.
+ 
+If you type |YKB'score' |YKOyou will get a more abbreviated version of
+your score, while typing 'sc' will give you more more detailed,
+and if you have it, |KKBa|RKBn|YKBs|GKBi |MKBc|CKBo|BKBlo|WKBr|YKO, version of your score.
+
+|WKBSyntax: |YKBscore |WKOor |YKBsc

@@ -1,0 +1,21 @@
+Tutorial
+
+Darkwind starts a short tutorial for new characters. It teaches the basics
+without locking you into a separate training area.
+
+Commands:
+  tutorial          Show your current tutorial step.
+  tutorial status   Show whether the tutorial is active, skipped, or finished.
+  tutorial hint     Repeat a concrete command suggestion.
+  tutorial skip     Stop the tutorial for this character.
+  tutorial restart  Start over if you skipped or did not finish.
+
+The tutorial covers looking, examining, movement, inventory, the newbie
+channel, getting starter equipment from Erga, wearing and wielding gear,
+traveling to the newbie farm, basic combat safety, newbie combat commands,
+score, and accepting a first newbie quest.
+
+Erga's Newbie Shop gives level 1-5 characters free starter gear with the
+equipment command. The tutorial shows how to wear the leather and shield,
+wield the dagger, find the newbie farm, and practice kill, wimpy, mon, nheal,
+nkick, npunch, and ncot.

@@ -1,0 +1,9 @@
+_______________________________________________________________________________
+"Lend Health"      
+        This allows the psionicist to lend some of his life energy
+        over to another person.  It's not healing, it is rather a
+        transfer of wounds.  It restores 10 hp to the target.
+ 
+SP Cost:  15 / 10 HPs	Guild Level:  2		Potential Points:  2
+ 
+Command:  lendh <target>

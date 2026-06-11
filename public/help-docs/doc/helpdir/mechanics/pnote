@@ -1,0 +1,18 @@
+|CKODESCRIPTION
+|WKO===========
+
+|YKOThe pnote command allows you to read your personal notebook.  All
+adventurers carry scrolls, on which they may store important
+information.
+
+|CKBpnote a- <text>
+|YKOThis will add the note <text> to your personal scroll.  The new
+note will appear at the end of the scroll.
+
+|CKBpnote d- <number of message>
+|YKOThis will delete a message from the information scroll.  Any
+message 'beneath' the deleted message will be bumped up one
+number.  (If you have 3 messages and delete number 2, then
+number 3 will become the new number 2.)
+
+|WKBSyntax: |YKBpnote

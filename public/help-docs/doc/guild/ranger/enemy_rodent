@@ -1,0 +1,16 @@
+
+Ranger Help for: enemy rodent
+=============================
+
+SUMMARY:
+Choosing rodent means your Ranger specializes against rats, mice, beavers,
+porcupines, giant rodents, and other gnawing creatures.
+
+This is a practical choice in forests, plains, swamps, deserts, caves,
+beaches, and cold lands where small pests become real threats.
+
+COMMAND:
+  setenemy rodent
+
+=============================================================================
+SEE ALSO: enemy, setenemy and terrains

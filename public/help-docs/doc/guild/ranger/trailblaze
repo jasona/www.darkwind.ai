@@ -1,0 +1,33 @@
+Ranger Help for: trailblaze
+============================
+
+SYNTAX:      trailblaze to <player>
+             trailblaze to camp <ranger>
+             backtrack
+USAGE:       Wilderness
+SLOT COST:   10
+BASE SP:     65
+SKILL TYPE:  Cartography
+
+SUMMARY:
+Trailblaze allows a Ranger to travel quickly through the wilderness.
+
+TRAILBLAZE TO <PLAYER>:
+  Teleport to another player in the same domain. Uses your deep
+  knowledge of the terrain to find a shortcut. The target must be a
+  visible mortal, and neither of you can be fighting, warded against
+  travel, or inside an Eternal Dungeon run.
+
+TRAILBLAZE TO CAMP <RANGER>:
+  Visit another Ranger's camp, regardless of domain. Use 'camps'
+  to see all registered camps. This is how Rangers visit each
+  other's wilderness bases. You cannot trailblaze from or into places
+  warded against travel.
+
+BACKTRACK:
+  Return to where you trailblazed from. Your origin is remembered
+  until you backtrack or trailblaze again. You cannot backtrack while
+  fighting, from a warded location, or into a warded location.
+
+=============================================================================
+SEE ALSO: camp, camps, rest, guide

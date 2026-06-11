@@ -1,0 +1,4 @@
+Fs is a basic fighter command. It will show you the current list of skills
+that you know. Same as the 'fskills' command.
+
+Syntax is: fs

@@ -1,0 +1,17 @@
+
+Ranger Help for: enemy bird
+===========================
+
+SUMMARY:
+Choosing bird means your Ranger specializes against avian creatures:
+hawks, ravens, eagles, vultures, giant birds, and other winged hunters.
+
+This choice fits Rangers who watch the sky as much as the ground. It can
+be useful across many terrains because birds migrate, nest, scavenge, and
+hunt almost everywhere.
+
+COMMAND:
+  setenemy bird
+
+=============================================================================
+SEE ALSO: enemy, setenemy and terrains

@@ -1,0 +1,15 @@
+|WKBSYNTAX
+======
+
+|CKBlook
+look <string>|WKB
+
+DESCRIPTION
+===========
+
+|YKOLook at the room you are in, or look at <string>.|WKB
+
+SEE ALSO
+========|CKB
+
+gl , l

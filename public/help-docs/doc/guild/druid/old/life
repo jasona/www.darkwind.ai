@@ -1,0 +1,14 @@
+Water of Life
+
+While not as skilled in the healing arts as a cleric,
+a druid does have a fair amount of knowledge of the
+healing arts.  This spell is their simplest magical
+tool to that end:  a spray of enchanted water to
+literally wash wounds away.
+
+Command: life <target> (defaults to caster)
+Base Cost: 10 + 2 X guild level SP
+Base Recovery: short
+Base Effect: heal (moderate)
+Base Duration: instant
+Guild Level: 2

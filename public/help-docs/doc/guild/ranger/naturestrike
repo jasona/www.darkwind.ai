@@ -1,0 +1,17 @@
+Ranger Help for: naturestrike
+==============================
+
+SYNTAX:      naturestrike <target>
+USAGE:       Wilderness only
+SLOT COST:   NA
+BASE SP:     150
+SKILL TYPE:  attack
+
+SUMMARY:
+This skill is the ultimate melee attack available to Rangers, channeling
+the raw power of nature through the Ranger's weapon. Naturestrike deals
+the highest melee damage of any Ranger skill, combining physical force
+with elemental energy from the surrounding terrain. The Ranger must be
+in wilderness terrain to draw upon Gaia's power. The damage type and
+visual effect vary by terrain. This skill has a significant cooldown
+and SP cost, making it best reserved for the most dangerous foes.

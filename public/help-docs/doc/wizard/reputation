@@ -1,0 +1,34 @@
+Reputation Hook Notes
+=====================
+
+Use SOCIETY_D->record_reputation_event() for new reputation changes.
+
+Signature:
+  record_reputation_event(player, heroism_delta, reason, source,
+    hidden_dimensions, metadata)
+
+Guidelines:
+  * Guild membership alone should not move reputation.
+  * Use actions: quests, rites, services, crimes, mercy, desecration,
+    public praise, public harm, and other notable deeds.
+  * Keep public heroism simple: positive trends Hero, negative trends
+    Villain, zero stays Adventurer.
+  * Put the "why" in hidden dimensions such as mercy, terror, honor,
+    faith_mitra, faith_gaea, faith_set, nature, crime, secrecy, blood,
+    service, community, and notoriety.
+  * Use metadata["key"] plus metadata["repeat_cap"] for anything that
+    must not be farmed repeatedly.
+
+Quest objects may opt in with:
+  mapping query_reputation_event(object player)
+
+or:
+  mixed *query_reputation_events(object player)
+
+Each returned event mapping can contain:
+  "heroism"    signed public heroism delta
+  "reason"     short admin-facing reason
+  "dimensions" hidden dimension deltas
+  "metadata"   optional event metadata
+
+The new quest daemon records quest reputation once per quest event.

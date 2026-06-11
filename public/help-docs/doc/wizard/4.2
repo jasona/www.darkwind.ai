@@ -1,0 +1,638 @@
+                        |BKB--=|CKBCoding a Room|BKB=--
+
+   |WK0Before I start the actual document, I would first like to make a
+few comments on rooms. First are the types of rooms we are looking
+for here at Darkwind. We do NOT want 500 room areas where every room
+is a description of one line or less. These types of rooms can be
+coded by anyone and can be found on any mud. We want rooms with good,
+quality descriptions where everything that is mention in the desc has
+an associated, add_look, add_read, or an actual object in the room.
+|RKORooms that do NOT follow this guideline will NOT be approved.
+
+   |WK0The next point is when objects should be created. There are several
+different views on this. No one is better than the other, but since I'm
+writing this doc, I'm going to use the way I do it and give my reasoning
+for doing it that way. Basically, you can create your objects that
+are going to go in the room either before the reset function or after
+it. I feel it is better to do it after mainly for one reason:
+if an error occurs in the object that is being loaded and it fails
+to load, the room will still load properly and function normally, but the
+object causing the problem in it will not be present in the room. If
+the object being created has a problem when you create your objects
+before you make the room itself, it will not only not create the object,
+but the room will also not be created as well. This means that you will
+be creating a '0' room: A room with no descriptions, exits, etc. If
+a player stumbles into one of these rooms, they will either have to quit
+to get out or find a wizard to get them out. It also means that now the
+room is impassable to what is beyond. Also, in creating a monster
+that has the ability to move, if you create it before you create the exits
+of the room it is being moved into, it will never move. If you create the
+monster after the room is created, then the monster will move about normally.
+ 
+   Now on to the creation part of the doc itself.
+ 
+   The first part of this file is enough to make a basic room with some
+interesting features. The second part details more functions that can
+be called to expand your room.
+|BKB------------------------------------------------------------------------
+   |WK0The first lines of every room file should always be:
+ 
+|YKB#include <mudlib.h>
+#include <terrain.h>
+inherit ROOM;
+ 
+void reset(int iArg) {
+  ::reset(iArg);
+  if(iArg) return;
+ 
+ Alternately, you may use:
+void reset(int iArg){
+  ::reset(iArg);
+  if(!iArg) {
+
+|WK0The basic difference between these versions is that the "if(iArg) return;"
+statement is kinder for the game to process. If your room will have
+wandering monsters, however, you can clone them in your room after
+the exits are created (so they actually CAN wander) by placing the
+monster creations after the "if(!iArg){ }" statement.
+
+   With these lines in place, you are ready to add the actual properties
+ of the room itself to the file. To customize your room, you call the
+ following routines:
+|BKB------------------------------------------------------------------------
+|GKBset_light(n);
+  |WK0This will set the light level of the room. This line needs to be in
+  every room you code. 0 is dark, 1 is normal light. A number lower
+  than 0 is normally a magically darkend room. And will require either
+  a stronger light source or multiple light sources to illiuminate the
+  room. The same is true with room with high than 1 for a light value.
+  it will take more powerful darkness type magic to get a room like
+  this to go dark. In 99% of most rooms you code up, 0 or 1 should be
+  the light levels of the room.
+ 
+ |BKBEXAMPLE: |YKBset_light(1);
+|BKB------------------------------------------------------------------------
+|GKBset_terrain(TER_type);
+  |WK0This line sets the terrain type of the room, is this room a inside
+  a structure, underground, a forest, etc. This line is also required
+  in every room you code. For valid terrain types, look at the file
+  |MKB'wizhelp 4.15 |WK0(terrain)' to get a listing. One room can be set with multiple
+  types of terrain if necessary, for example an underwater area in the
+  artic would be set as shown below. 
+ 
+ |BKBEXAMPLE: |YKB#include <terrain.h>
+              set_terrain(TER_UNDERWATER|TER_ARCTIC);
+ 
+  |WK0This adds a terrain type after you have already set one with set_terrain.
+
+  |WK0set_terrain(TER_UNDERGROUND);
+  add_terrain(TER_RIVER);
+  add_terrain(TER_INSIDE);
+ 
+  |WK0This would be identical to initially setting the terrain of the room to:
+
+ |YKOset_terrain(TER_UNDERGROUND|TER_RIVER|TER_INSIDE);
+
+|WK0Use of add_terrain should be limited to when you are using a customized
+room inheritable in which all the rooms already have a primary terrain
+set.
+|BKB------------------------------------------------------------------------
+|GKBset_no_clean_up(1);
+  |WK0This command is only needed if you have a room that you don't want the
+  driver ever to clean up. By this I mean that periodically the driver
+  will remove all the files that are not being used currently to reduce
+  the memory and cpu usage of the mud. Some rooms NEED to be around at
+  times because they are controlling other functions. You would use this
+  command to ensure that the room wasn't removed from memory during the
+  cleanup phase. This line is only required in the file when you don't
+  want the room cleaned up. If it isn't present it defaults to cleanupable.
+  For example, if you had a room used for storage, you would want it to be
+  no_clean_up so that items stored in it would not be desctucted.
+  Rooms which have the function "make_unique_object" are automatically
+  set to no_clean_up to keep track of the unique, and do not need to 
+  be set in addition to that.
+|BKB------------------------------------------------------------------------
+
+|GKBset_short("str");
+  |WK0String str sets the short description of the room to str plus a
+  carriage return. It automatically includes the obvious exits after the 
+  description. Please capitalize the beginning of your rooms' short descs.
+ 
+ |BKBEXAMPLE: |YKBset_short("A small demo room.");
+ 
+|BKB------------------------------------------------------------------------
+|GKBset_long("str");
+  |WK0String str. The format ofsets the long description of the room to str.
+  this line is very important and MUST be done as follows in the example.
+  There are other less efficient ways to do it which will work, but they are
+  not approved for use here. The last line of the long description becomes the
+  obvious exits.
+  The \n and the \n\ tell the compiler that the line ends there and that any
+  more text needs to be started on a new line. After your description, the
+  compiler will automatically add any obvious exits to the room.
+ 
+ |BKBEXAMPLE: |YKBset_long("\
+              This is the long description for a\n\
+              test room here in the doc. You should\n\
+              always use this format whenever you\n\
+              set the long description in a room!\n");
+ 
+  |CKOUsing the wrap() function will format your line lengths to 79 characters.
+
+ |BKBEXAMPLE: |YKBset_long(wrap("\
+This is also a room description. This room description will automatically\
+be formatted to the correct size by the game."));
+
+  |WK0You need not put a \n at the end of a wrap() statment. Any \n's that are
+  placed within the wrap() will cause a line break if you need it for the effect
+  (i.e., a multiple paragraph description). It should also be noted that we only
+  want good, quality descriptions in all our rooms here on Darkwind. One or
+  two-line descriptions in most cases are not going to be acceptable.
+  When writing your long descriptions, please try to NOT put two spaces
+  after each sentence. Since Darkwind is an on-line text-based service,
+  we have no way to determine what font the text will be read in. So,
+  since different fonts have different effects, text should only have
+  one space between all characters (again, unless having a space is
+  required for some visual effect). NB If you put multi-line text inside
+  a wrap(), you must put a \ at the end of each line.
+|BKB------------------------------------------------------------------------
+|GKBset_night("str");
+  |WK0String str.  This optional function sets an alternate long description
+  of the room which will appear only at night. This allows you to have
+  "the sun beats down on you," during the day and "the moon casts a
+  peacful glow," during the night.  If set_night() is not used, then the
+  description set by set_long is used at night as well as in the daytime.
+|CKBIf using this command, your room needs to inherit SEASON_ROOM rather that inheriting ROOM.
+
+|GKBset_dusk("str");
+  |WK0String str.  As set_night(), above, but only appears during the hours
+  of the setting sun.
+|CKBIf using this command, your room needs to inherit SEASON_ROOM instead of inheriting ROOM.
+
+|GKBset_dawn("str");
+  |WK0String str.  As set_night(), above, but only appears during the hours
+  of the rising sun.
+|CKBIf using this command, your room needs to inherit SEASON_ROOM instead of inheriting ROOM.
+|BKB------------------------------------------------------------------------
+|GKBadd_exit("dir","/path/file");
+  |WK0This will add 1 exit to the room. If you wish to have more than one
+  exit, you just add an add_exit for each exit in the room. The first
+  variable in the command is the exit direction, and the second variable
+  is the path to the file you wish the the exit to lead to.
+  There is no need to include the ".c" after the filename.
+ 
+ |BKBEXAMPLE: |YKBadd_exit("west","/players/alarian/rooms/room2");
+              add_exit("east","/players/alarian/rooms/room3");
+ 
+|RKBDO not hardcode exits. Use the definition in your header file.
+|BKB------------------------------------------------------------------------
+|GKBadd_look("what","desc");
+  |WK0This adds something to the room that can be looked at by the player.
+  EVERY object that is mentioned in the room's description MUST have
+  either an object in the room or an associated add_look to go
+  along with it. If an item has both a look and a read, look shows
+  both of them. Multiple items are supported the same way add_exit
+  worked, with a separate add_look for each item. To do a simple one
+  item looks, the following syntax is used:
+ 
+ |BKBEXAMPLE: |YKBadd_look("picture","A fancy picture is on the wall.");
+              |YKBadd_look("cricket","There is a small cricket in the corner chirping");
+ 
+ |WK0If you wish to have one description for multiple different looks, you
+ can do them as following:
+ 
+ EXAMPLE: |YKBadd_look(({"wall","walls","floor"}),"It looks to be very smooth.");
+ |BKB
+  
+  |CKBIf your descriptions are more than one 79 characters long, you MUST
+  either wrap() them, or include \n's at the end of each line to add
+  the carrage returns to the description.
+|BKB------------------------------------------------------------------------
+ 
+|GKBquery_look("what");
+  |WK0If there is an add_look for "what" this will return what you would see if
+  you typed "look at what". If "what" is not supplied, it will return the
+  entire add_look array.
+  The array is structured so that the first element is the first item you
+  can look at, the second element is what you see when you look at it, the
+  third element is the second thing you can look at, and the fourth is
+  what you see when you look at the third element, etc.
+|BKB------------------------------------------------------------------------
+
+|GKBadd_read("what","desc");
+  |WK0Adds the command/action "read" to the room for the item "what". Read
+  returns the description immediately following the "what".
+
+|CKBNOTE: This would be a good way to have a sign listed in your long desc,
+and its description would be entered in this command instead of another object
+for the sign. Also, an add_read can be seen by "look"ing at the "what".
+ To do a simple one item looks, the following syntax is used:
+ 
+ |BKBEXAMPLE: |YKBadd_read("menu","A normal lousy menu.\n");
+              |YKBadd_read("sign","A fancy sign with swirly things on the corners!\n");
+ 
+ |WK0If you wish more than one word to be able to call the same description,
+ you can use the following format to achieve this:
+ 
+ |BKBEXAMPLE: |YKBadd_read(({"sign","message"}),"It reads: Sell your stuff here.\n");
+ 
+|WK0The same rules in add_look are applied to add_read.
+|BKB------------------------------------------------------------------------
+ 
+|GKBadd_trigger("trig","desc");
+  |WK0Adds a command so that when the 'trig' is entered by itself at the
+  prompt it returns the desc. It just writes the string desc to the
+  calling player.
+ 
+ |BKBEXAMPLE: |YKBadd_trigger("ithnar", "You say the command word and a bell gongs.\n");
+ 
+ |YKOprompt>ithnar <----you type
+ prompt>You say the command word and a bell gongs. <----room writes
+ 
+|WK0The room writes follow the same rules are add_look and add_read descriptions.
+Multiple triggers, for example:
+
+ |BKBEXAMPLE: |YKBadd_trigger(({"sneeze","cough"}),"Yuck, don't do that!\n");
+
+|WK0is possible, following the same rules as add_look and add_read.
+ 
+
+|GKBremove_trigger("trig");
+  |WK0Removes a trigger that has been added with add_trigger. The argument to
+  remove_trigger must be a string exactly matching the 1st argument
+  given to the add_trigger you wish to remove.
+
+|BKB------------------------------------------------------------------------
+|GKBmake_object("name","file_path", howmany);
+  |WK0Clones and moves objects or monsters into the room. Name is the name
+  of the object. You must name the object here what it is called in
+  the object itself. If you do not do this, it will not find the object
+  each time it checks for it and will then clone a new one. File_path is
+  the pathname of the object you want to put in the room. Howmany is
+  the number of objects that you want in the room, if howmany isn't
+  set the default is one.
+ 
+ |BKBEXAMPLE: |YKBmake_object("orc","/players/alarian/monsters/orc",3);
+
+|RKBDO not hardcode items. Use the definition in your header file.
+
+  |WK0This will put three orc from the file players/alarian/monsters/orc
+  into the room. It should also be noted that if this function is called
+  from inside the reset function, it will only be called with the
+  room is first created. If you want the object to be recloned each
+  reset, you need to put the make_object function outside the reset.
+  This means, either place it BEFORE the:
+
+ |WK0if(iArg) return; |WK0statement
+or either before or after the:
+
+ |WK0if(!iArg)|WK0{ ...stuff... } statement.
+
+This command will clone "howmany" objects into the room, provided
+there are _NO_ objects with the same ID as the "name" in the function.
+If you want the room to clone enough objects each reset, regardless
+of how many are left over from the previous reset, to equal "howmany",
+use the add_clone function explained later in this doc.
+|BKB------------------------------------------------------------------------
+ 
+|GKBmake_unique_object("id","file_path");
+ |WK0This function is almost identical to make_object, except it will allow
+ only one of the object in the game at a time. This is used for powerful
+ items, wandering monsters, or just items that you don't want a lot of 
+ in the game.
+ 
+|BKBEXAMPLE:  |YKBmake_unique_object("widowmaker","/players/alarian/weapons/widowmaker");
+|RKBDO not hardcode items. Use the definition in your header file.
+
+|BKB------------------------------------------------------------------------
+|GKBmake_room_unique("id","file_path");|WK0
+ |WK0This function is almost identical to make_unique_object, except
+ it is only to be used for wandering mobs. The information is
+ saved in the room, and does not use the unique daemon.
+
+|BKB------------------------------------------------------------------------
+|GKBadd_clone("file_path", num);
+ |WK0Once again, this is very similar to make_object except for one main
+ difference. With add_clone, if you have it creating 3 objects and
+ when reset comes around and only one is currenty in the room, it will
+ create to more to bring the total back upto three.
+ 
+ |BKBEXAMPLE: |YKBadd_clone("/players/alarian/monsters/orc",3);
+|RKBDO not hardcode items. Use the definition in your header file.
+
+ |WK0This will create three orcs in the room and maintain it at that amount
+ each reset.
+ 
+|BKB--------------------------------------------------------------------------
+|BKB--------------------------------------------------------------------------
+|BKB--------------------------------------------------------------------------
+|BKB--------------------------------------------------------------------------
+
+|WK0Here ends the basic section of the doc. The functions above are enough to
+make a decent room with things to look at and monsters and items to find.
+Next comes some more esoteric functions that can add spice and enjoyment
+to the rooms.
+ 
+|GKBstatus dir_hook() {what to do}
+  |WK0Takes direction "dir" and calls this function anytime somebody tries
+  to use that direction. dir is any of the exits defined in add_exit().
+  If the function returns 1, the exit fails and the player can't go that way.
+  A return value of 0 allows the player to pass.
+ 
+|BKBEXAMPLE:
+ |YKBstatus west_hook() {
+ if(present("my_unique_orc",this_object())){
+ write("The orc blocks you from going that way.\n");
+ say(this_player()->query_name()+" tried to go west.\n");
+ return 1; /* the player can't go through */
+ }
+ return 0; /* the player can go through */
+ }
+
+|WK0This is a good way to keep wandering NPC's within your own area, or
+in a certain range within your area.
+
+|BKBEXAMPLE: 
+ |YKBstatus out_hook(){
+   return this_player()->query_npc();
+ }
+
+|WK0Remember, you pretty much never want to block wizards using dir_hooks.
+The appropriate check to make sure you do not block wizards is to
+#include <perms.h> at the head of your room, and put the check:
+
+ |YKOif(IS_APPLICANT(this_player())) return 0;
+
+|WK0at the beginning of your dir_hook().
+ 
+ It should also be noted that this function is placed OUTSIDE the
+ room creation function entirely. It is its own function. See the
+ example that follows for more details.
+|BKB--------------------------------------------------------------------------
+
+|GKBset_exit_blocker(sDirection, sName, sFile, sMess);
+  |WK0This is a simpler version of the dir_hooks when you have
+  a simple hook. It will check for a sName that matches sFile,
+  and give sMess+"\n" if the player can't go that way. This
+  allows you to make sure that the sName present in the room
+  is the actual file you wish to block sDirection, and not
+  any stray object. sMess has a default message if not set
+  of "Something blocks you from going that way."
+  It also innately has the IS_APPLICANT check, so you don't
+  need a seperate check. Unlike dir_hooks, this is in the
+  room code.
+  If you want more than one object to block the same direction,
+  you will need to use a regular dir_hook. If you need more
+  checks or versatility, again you'll need to use a regular
+  dir_hook.
+|BKB  Example:
+    |YKBset_exit_blocker("north","orc",MYNPC+"orc","You no get by me!");
+
+|BKB--------------------------------------------------------------------------
+|GKBset_property(sAttribute,sXarg);
+ |WK0This funtion sets attributes within rooms.  Attributes currently
+ used are : 
+ no_dirs - hides the visible exits from the players
+ no_castle - deprecated, we no longer drop wizard castles
+ no_teleport - don't allow teleportation skills
+ no_kill - don't allow any combat
+ no_wimpy - dont allow any livings to wimpy from the room
+ no_tell - don't allow tells to be sent from the room
+ no_shout - don't allow shouts to be sent from the room
+ open_pk - combat in the room ignores PK restrictions
+ no_mining - don't allow 'mine ore'
+ no_herbalism - don't allow 'gather herbs'
+ sXarg will be returned when query_property is called using sAttribute. 
+ (see below)
+ squeeze_block - "direction" - Block Morpher Squeeze in a single direction
+               - "all" - Block Morpher Squeeze in ALL directions
+               - "monster_id" - Block Morpher Squeeze if monster_id is present
+
+|GKBquery_property(sAttribute);
+ |WK0With an arg it returns the property given as arg. Without an arg,
+ it returns all the properties defines by the following functions.
+ For example, set_property("no_tell","cave"), will return "cave"
+ when query_property("no_tell") is called in the environment()
+ of the player.  This is used to block tells from certain rooms
+ today.  The tell function looks for the "no_tell" property, just
+ as shout looks for "no_shout".
+ 
+|BKB--------------------------------------------------------------------------
+|GKBset_no_show_exit();
+  |WK0Prevents the exits from a room from being included in the long desc.
+  It sets the no_dirs property.
+ 
+ |BKBEXAMPLE: |YKBset_no_show_exit();
+ 
+|GKBset_no_dirs();
+  |WK0This is the same as setno_show_exit();
+|BKB--------------------------------------------------------------------------
+
+|GKBset_no_kill();
+  |WK0Sets the property no_kill. Rooms with this property will not allow combat.
+ 
+ |BKBEXAMPLE: |YKBset_no_kill();
+|BKB--------------------------------------------------------------------------
+
+|GKBset_no_teleport();
+  |WK0Sets the no_teleport flag for querying from outside objects. This
+  adds the no_teleport property. Set this is you have a room that you 
+  don't want players to be able to teleport into or out of.
+ 
+|BKBEXAMPLE: |YKBset_no_teleport();
+|BKB--------------------------------------------------------------------------
+
+|GKBset_no_short();
+  |WK0This command will make the 'exits' or 'autoexit' return the short
+  of "Unknown" instead of the rooms actual short description. This
+  can be used in rooms where you don't want players to know whats
+  in a given room until they have actually entered it.
+
+|GKBquery_no_short();
+  |WK0Returns 1 if set_no_short(); has been set, 0 if not. Currently
+  only used by the 'exits' and 'autoexits' function.
+
+|BKB--------------------------------------------------------------------------
+|GKBset_room_open_pk(status tVal);
+  |WK0This command will make the room open_pk if tVal is 1, or return
+  the room to normal if tVal is 0. Combat will be allowed as if
+  everyone was PK. All normal checks apply, like no_kill, etc.
+
+|GKBquery_room_open_pk();
+  |WK0Returns 1 if set_room_open_pk(1), 0 otherwise.
+
+|BKB--------------------------------------------------------------------------
+|GKBremove_exit("str");
+  |WK0Lets you remove an exit from a room depending on circumstances.
+ 
+ |BKBEXAMPLE: |YKBremove_exit("west");
+ 
+ 
+|GKBremove_look("str");
+  |WK0Same usage as remove_trigger and remove_exit.
+
+|BKB--------------------------------------------------------------------------
+|GKBquery_exit("str");
+  |WK0Str is the exit direction, west, north, etc. With an arg, it returns
+  the file that the exit goes to. Without and arg it returns the whole
+  list of exits defined by add_exit().
+ 
+ |BKBEXAMPLE: |YKBquery_exit("west");
+ |WK0or
+ |WKBquery_exit();
+ 
+|BKB--------------------------------------------------------------------------
+|GKBquery_triggers(str);
+  |WK0Str is the trigger command, ie. foof. With an arg it returns the string
+  that the trigger returns. Without an arg it returns the whole list of
+  triggers defined by add_trigger();
+  The str can be a variable <sFoof> that ids to a string or it can be the
+  string <"foof"> itself.
+ 
+ |BKBEXAMPLE: |YKBquery_triggers(sFoof);
+          query_triggers("foof");
+ |WK0or
+ |YKBquery_triggers();
+ 
+|BKB--------------------------------------------------------------------------
+|GKBquery_no_kill();
+  |WK0Returns the value of no_kill;
+ 
+ |BKBEXAMPLE: |YKBquery_no_kill();
+ 
+|BKB--------------------------------------------------------------------------
+|GKBquery_no_teleport();
+  |WK0Returns the value of no_teleport;
+ 
+ |BKBEXAMPLE: |YKBquery_no_teleport();
+|BKB--------------------------------------------------------------------------
+
+  |WK0The following functions are for use in setting room chats that are
+  sent like echos to a room. They are nice for adding flavor text to the
+  rooms without having to create invisible mobs doing the chatting. The
+  chats only run when there are players in the room.
+
+|GKBset_chat_chance(n);
+  |WK0This will set the chance of the chat being spammed. If random(100)
+  is less than n, the message is skipped that time.
+
+|GKBset_chat_delay(int iDelay, int iRandomDelay);
+  |WK0This will set the delay between when messages will be spammed
+  to the room. The delay will be iDelay + random(iRandomDelay). The
+  default is 2 seconds if no delay is set, so please set one.
+ 
+ |BKBEXAMPLE: |YKBset_chat_delay(20,30);
+
+|GKBadd_room_chat(string sMsg);
+  |WK0This will add a message that will be told to the room. You must
+  include the "\n" at the end of the string. You would have to use
+  add_room_chat multiple times to add more than one message, and the
+  messages are a random from the total chats added.
+
+  |BKBEXAMPLE:  |YKBadd_room_chat("The floorboards creak underfoot.\n");
+
+|GKBremove_room_chat(string sMsg);
+  |WK0This will remove sMsg from the possible strings being sent to
+  the room. It must match exactly to the string added with
+  add_room_chat.
+
+|GKBset_room_chat_check(string sFunc);
+  |WK0Allows you to set a function the room will check before spamming
+  the message to the room. If the function returns 0, no message will
+  spam, and all the room chats will stop. The chats will resume if
+  someone enters the room, and the function returns 1.
+
+|BKB------------------------------------------------------------------------
+|WK0If you plan on having a door in your room, you need to be first familiar
+with this file and how to create rooms, then you need to read through the
+doc 'wizhelp 4.8 (doors)' and it will go through the step by step process for
+adding a door to your room.
+ 
+Also, if you are going to be adding additional functions to a room that
+you wish to define yourself, you need to enable the commands in the
+following manner. NOTE: This all goes after all the room creation code
+is completely finished.
+ 
+|YKOvoid init() {
+ ::init();
+ add_action("yourfunction","name_of_function");
+ add_action("your2ndfunction","name_of_2nd_function");
+ etc
+}
+ 
+|WK0More on adding your own functions can be found elsewhere. (or ask an ARCH+
+for assistance).
+|BKB--------------------------------------------------------------------------
+|BKB---------------------------------------------------------------------------
+|WK0Following now is an example that uses most of the more commonly used
+functions of ROOM.
+ 
+
+|CKB#include <mudlib.h>
+#include <terrain.h>
+#include <perms.h>
+inherit ROOM;
+ 
+void reset(int iArg) {
+  ::reset(iArg);
+  make_unique_object("greatsword","/players/alarian/weapons/hellspawn");
+  add_clone("/players/alarian/monsters/demon",6);
+  if(iArg) return;
+  set_light(0); /* Light level of room (dark here) */
+  set_terrain(TER_UNDERGROUND|TER_ARCTIC); /* An underground room in
+                                                   the tundra. */
+  set_short("A frozen cavern"); /* what is seen by players in
+                                          brief mode. */
+  set_long("\
+This room is deep underground. There are pools of frozen water\n\
+scattered about in most of the depressions in the floor,\n\
+and strange writings can be seen on the west wall. There\n\
+is a small opening leading out of the cavern to the west.\n");
+  add_exit("west","/players/alarian/rooms/cave2");
+  add_look(({"pool","pools"}),"A thin film of ice covers cold pools of water.");
+  add_look(({"depression","depressions"}),"A low spot in the floor.");
+  add_look("walls","They are stone walls. There is writing on the west wall.");
+  add_look( ({"wall","west wall","western wall"}), "\
+There is a small opening in the western wall, and some writing you\n\
+could read.");
+  add_read("writings","\
+It seems to be written in a strange tongue and\n\
+you can't decipher what is says. Although if you\n\
+had to make a guess, you would say that whatever\n\
+is written is written in elvish.\n");
+  set_no_teleport();
+}
+
+status west_hook() {
+  if(IS_APPLICANT(this_player())) return 0;
+  if(present("demon",this_object())) {
+    write("The demon prevents you from leaving!\n");
+    say(this_player()->query_name()+" was blocked by the demons!\n");
+    return 1; /* the player can't go through */
+  }
+  return 0; /* the player can go through */
+}
+ 
+|RKBDO not hardcode items. Use the definition in your header file.
+
+|WK0The above example created a room with a good description, that has add_looks
+or add_reads for everything in the description. It also has a unique object
+and several demons that prevents anyone from leaving once they have entered
+the room until all the demons are killed.
+ 
+Good luck, if you find any problems or confusing sections in this
+article use typo/idea/bug to report them. If you have any questions
+as another BUILDER+, use the Builder line, or post on the Main
+Wiz board.
+
+|BKB--------
+
+|WK0 * Created by Alarian@Darkwind and Hayden@Darkwind.
+ * Last update: 3-28-97 (By Sexy Lexi)
+ * Translated into English: 3/29/97 (Laisha, The Grammarian.)
+ * newroom.c build doc 
+ * Added instructions for night/dusk/dawn room descriptions:
+ *   5/9/98 - Hern
+ * Added Hungarian Notation 27/08/98 - Xnedra
+ * Added references to inheriting SEASON_ROOM 7/04/02
+

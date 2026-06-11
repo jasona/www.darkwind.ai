@@ -1,0 +1,16 @@
+Ranger Help for: nature lore
+=============================
+
+SYNTAX:      lore [target]
+USAGE:       Any terrain
+SLOT COST:   NA
+BASE SP:     10
+SKILL TYPE:  survival
+
+SUMMARY:
+This skill allows a Ranger to identify creatures, plants, and terrain
+features using their knowledge of the natural world. When used on a
+creature, it reveals information about the creature's type, habitat,
+and notable traits. When used without a target, it provides information
+about the current terrain and its properties. The detail of information
+revealed depends on the Ranger's experience and skill level.

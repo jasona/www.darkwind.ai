@@ -1,0 +1,8 @@
+
+|WKBCommand: |YKBaway [message]
+
+|YKOThis command allows you to set yourself as AFK. The message that
+you give is also auto-responded to if anyone attempts to send you
+a tell during that time.
+
+To remove your away message and return to the MUD, simply type |YKB"away".

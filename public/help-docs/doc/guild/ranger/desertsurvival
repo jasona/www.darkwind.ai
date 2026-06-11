@@ -1,0 +1,21 @@
+Ranger Help for: desertsurvival
+================================
+
+SYNTAX:      desertsurvival
+             desert survival
+USAGE:       Souvrael desert and other extreme desert terrain
+SLOT COST:   14
+BASE SP:     10
+SKILL TYPE:  cartography
+
+SUMMARY:
+This skill toggles desert survival instincts on or off. When active,
+the Ranger reads the heat, wind, shade, and pace of the desert well
+enough to avoid the punishing Souvrael desert heat that normally drains
+water or damages travelers caught without water.
+
+Use this before crossing the Segovia Desert, the Rub' al Khali, or other
+Souvrael desert rooms that punish unprepared travelers. Toggle it again
+to relax those instincts.
+
+SEE ALSO: arctic survival, rest, guide, terrains

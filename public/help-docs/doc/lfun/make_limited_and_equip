@@ -1,0 +1,19 @@
+make_limited_and_equip(string sFile, int iLimit)
+
+  An lfun defined for monsters. Clones an object into the monster
+  using make_limited_obj with the limit iLimit and then proceeds
+  to have the monster equip the object. See make_limited_obj for 
+  more details about limited objects.
+
+  Note: Like make_limited_obj, this lfun returns 0 when it cannot
+        create a new clone. Useful for cloning non-limited items
+        on failure.
+
+  Example: 
+           make_limited_and_equip("/obj/sword",4);
+
+           if(!make_limited_and_equip("/obj/platemail", 5))
+             make_and_equip("/obj/leather");
+
+
+See also: make_limited_obj, make_and_equip, make_unique_and_equip

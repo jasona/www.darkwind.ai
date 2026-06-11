@@ -1,0 +1,5 @@
+SPELL NAME  : Cure Serious Wounds  | Ranged Cure Serious Wounds
+SPELL SYNTAX: Csw <target>         | RCsw <target>
+SPELL COST  : 20 SP                | 40 SP
+DESCRIPTION : When cast normally, this spell heals the recipient
+              a random amount of hit points.

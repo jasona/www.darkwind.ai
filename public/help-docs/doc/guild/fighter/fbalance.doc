@@ -1,0 +1,9 @@
+Skill: fbalance			GL: 4		Cost: 50
+A fighter develops a keen sense for how weapons feel. They learn how to
+balance it to make it more effective in combat.
+
+Some weapons are already too balanced to balance any further, have
+magic that would be ruined if you attempted to balance it, or is simply
+too special to be balanced.
+
+Syntax is: fbalance <weapon>

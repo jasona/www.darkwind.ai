@@ -1,0 +1,9 @@
+Skill: thrust      Timer: Damage       GL:  6    Cost: 5%
+
+A skilled warrior can perform this maneuver. The fighter finds a weak
+spot in the victim's physical protection and thrusts his weapon in.
+
+You must be using a piercing weapon to perform this maneuver, and even then,
+success is not guaranteed.
+
+Syntax is: thrust <target>

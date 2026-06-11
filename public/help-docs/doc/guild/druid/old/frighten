@@ -1,0 +1,16 @@
+Frighten
+
+With this spell, the druid can cause a primal,
+unreasoning fear to arise in any natural creature
+native to this world.  Unlike most of a druid's
+emotion-influencing powers, this spell works on
+humanoids as well as animals and plants.  However,
+elementals, demons, undead, and other unnatural
+creatures are immune.
+
+Command: frighten <target> (defaults to attacker)
+Base Cost: 25 SP
+Base Recovery: fast
+Base Effect: target flees
+Base Duration: instant
+Guild Level: 5

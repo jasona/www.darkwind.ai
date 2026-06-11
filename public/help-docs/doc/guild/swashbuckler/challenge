@@ -1,0 +1,15 @@
+Challenge - offensive trick
+------------------------------------------------------------
+A swashbuckler can deliver a challenge in an insulting
+manner. If the foe accepts, he will refuse to run away until
+he feels his honor is satisfied. Generally this happens at
+the end of the fight, or after a short time regardless.
+
+A challenged foe can also be pressed with the press skill
+while they remain your current opponent.
+
+GL:  4
+SP: 40
+command:  challenge <target> (defaults to opponent if in combat)
+duration: short
+see also: press, flair

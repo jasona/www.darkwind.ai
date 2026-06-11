@@ -1,0 +1,95 @@
+                            Profession Drops
+
+    With professions come profession materials. If you'd like to have
+rooms or npcs have any of the materials as loot, you can.
+
+For Example:
+#include <professions.h>
+inherit PROFESSION_MATERIAL;
+
+void reset(int iArg)
+{
+  if(!is_clone(this_object())) return;
+  ::reset(iArg);
+  if(iArg) return;
+
+  set_short("a bundle of Topaz Shards");
+  set_long("\
+A small bundle of Topaz Shards used for professions.\n");
+  set_aliases(({"bundle","shard","shards","Topaz Shard","Topaz Shards"}));
+  set_profession_type("special");
+  set_profession_item("Topaz Shard");
+  set_profession_quantity(5);
+}
+
+    set_profession_type("<type>") must be: bolt, herb, ore, reagent,
+skin or special. Lower case, and if not one of those, it will do nothing.
+
+    set_profession_item("<item>") is the profession material. They are case
+sensitive to match what you'd see in the reagents command. If it doesn't
+match a known item, it will do nothing.
+
+    set_profession_quantity(int) is the quantity to add/subtract from the
+player's total when they pick up the item.
+
+    Just like standard reagent drops, the code for applying the count is done
+when the player picks up the item using init(). It also gives them random(100)
+coins for the item, unless you override it with your own set_value.
+
+    If you want your own special item added to the special list for an area
+specific quest or item, please contact an admin to get it added for you.
+
+                         Profession Recipe
+
+    Along with profession drops, you can create recipe cards. The
+cards allow the players to create objects with the items they have
+gathered.
+
+For Example:
+#include <professions.h>
+#include "ExampleHeaderFile.h"
+inherit PROF_RECIPE;
+
+void reset(int iArg)
+{
+  if(!is_clone(this_object())) return;
+  ::reset(iArg);
+  if(iArg) return;
+
+  set_short("Fly Potion Recipe Card");
+  set_object_file(PROF_DIR+"potions/fly");
+  set_required_items ( ([
+    "Hashish":"herb";3,
+    "Mistletoe":"herb";3,
+   ]) );
+  set_other_items ( ([
+    "Cow Horn":MYAREAOBJS+"cowhorn";3,
+    "The King's favorite beer":MYAREAOBJS+"budlight";3
+   ]) );
+  set_prof_level_required("Alchemy",1,1);
+  set_read_info("\
+This recipe creates a Hashish Potion for flight.");
+  set_uses(5);
+  set_value(50);
+}
+
+  set_object_file(filepath) is the path to the object that will be created.
+
+  set_required_items(mapping) is the mapping of the profession materials
+needed to create the item. It should be:
+([ case-sensitive material short: profession type ; quantity ])
+
+  set_other_itmes(mapping) is the mapping for any other non-profession
+materials required to create the item. It should be:
+([ string description of the item : object path ; quantity ])
+The description could be the short of the item, or a hint to what it is
+if it's part of a quest combine, or whatever you want them to see when
+they read the card.
+
+  set_prof_level_required("<Profession>", min skill to craft, tNoSkillup).
+Profession should be any of the 8 professions. Min skill is the minimum
+skill they need in the profession to craft the item. tNoSkillup means
+that they can't gain a skillup using the card. If the minimum skill is <= 500,
+the max skill they can gain is minimum skill + 100, otherwise 1000.
+
+  set_uses(int) is the amount of times the players can use the card.

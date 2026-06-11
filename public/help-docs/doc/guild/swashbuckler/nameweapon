@@ -1,0 +1,19 @@
+Name Weapon - thematic skill
+------------------------------------------------------------
+This command will 'name' most generic weapons.  This is only
+a cosmetic change; in order to prevent possible abuse, the
+weapon will NOT ID to its name, except for the purposes of
+the 'wield' and 'unwield' commands, where the weapon may be
+referred to by the capitalized version of its name.
+
+Wielding a weapon named with this skill gives a swashbuckler
+an additional chance to gain Flair during combat.
+
+Please use discretion with this ability, just as with selecting
+a title after level 20.  Abuses will not be tolerated.
+
+GL:  1 (It's essentially an emote.)
+SP:  0
+command:  nameweapon <weapon> to <name>
+duration: permanent
+see also: flair

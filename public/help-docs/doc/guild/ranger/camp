@@ -1,0 +1,79 @@
+Ranger Help for: camp
+=====================
+
+SUMMARY:
+Set up a persistent camp at your current location. Your camp becomes
+your login point - when you log back in, you'll appear at your camp
+instead of the guild lodge. Other Rangers can see where your camp is
+and can visit using 'trailblaze to camp <name>'. Your tent will show
+your name so others know whose camp it is.
+
+USAGE:
+  camp                  Set up camp (requires unpacked tent)
+  camp break            Break camp and return login to the lodge
+  camp stores           Review wildcraft supplies and camp stores
+  camp stock            Turn field supplies into camp supplies
+  camp cook <food>      Cook a temporary meal for the road
+  camp brew <drink>     Brew a temporary drink for the road
+  camp tend             Recover hit points and spell points at camp
+  camp ward             Raise a temporary defensive camp ward
+
+TRAVEL:
+  rest camp             Return to your own camp from anywhere
+  trailblaze to camp <name>  Visit another ranger's camp
+  camps                 List all registered ranger camps
+
+REQUIREMENTS:
+- Must be in the wilderness (not city, indoors, or dock)
+- An unpacked tent must be in the room
+- You can only have one camp at a time
+- Stocking, cooking, tending, and warding require being at your own camp
+
+HOW TO SET UP CAMP:
+  1. Learn the 'make rope' and 'make tent' skills
+  2. Go to a grassy area: make rope
+  3. Go to a wooded area: make tent
+  4. Drop your packed tent: drop tent
+  5. Set it up: unpack tent
+  6. Establish camp: camp
+
+Your tent will update to show "A makeshift tent (owned by <Name>)"
+so other Rangers know whose camp this is.
+
+RANGER NOMAD LIFE:
+Rangers are wilderness nomads. Your camp is your home base in the
+wild. Other Rangers can visit your camp, and you can visit theirs.
+Use 'camps' to see all active camps, and 'rscore' to see your own.
+
+SURVIVAL USE:
+Use forage, mine, quarry, and skin to gather wildcraft supplies.
+Camp stock turns kindling, clean water, and binding fiber into camp
+supplies.
+
+If your forage pouch fills with supplies you do not need, use
+'forage stores' to review it and 'forage discard <component> [amount]'
+to free room. Cooking, brewing, tending, and stocking camp also consume
+wildcraft supplies.
+
+Fish traps add fish catch to your camp stores. Fish catch is used by
+fish stew and hunter feast.
+
+Cooked foods:
+  camp cook trail cakes
+  camp cook smoked meat
+  camp cook fish stew
+  camp cook hunter feast
+
+Brewed drinks:
+  camp brew spring tea
+  camp brew bark tonic
+  camp brew smokeleaf infusion
+  camp brew ranger draught
+
+Cooked and brewed supplies scale with Ranger wilderness skill and level,
+but they are field provisions: they do not save over logout or reboot.
+Camp tend consumes fresh camp supplies, clean water, and medicinal scraps
+for recovery while you are at your own camp.
+
+=============================================================================
+SEE ALSO: camps, rest, trailblaze, make, rscore

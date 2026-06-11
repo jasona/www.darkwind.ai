@@ -1,0 +1,15 @@
+_______________________________________________________________________________
+"Probe"       
+        This allows the psionicist to invade a monster's mind for any
+        useful experiences or information it contains.  The monster is
+        left permanently mentally scarred.  It works once per monster,
+        lowering the monster's experience and raising the psionicist's
+        experience.  You will gain less experience when killing a monster
+        that has been probed, but the great advantage is being able to
+        learn something without having to kill the target first.  The cost
+        of a probe depends on how tough the opponent is you are trying to
+        probe.
+ 
+SP Cost:  Variable	Guild Level:  8	Potential Points:  4
+ 
+Command:  probe <target>

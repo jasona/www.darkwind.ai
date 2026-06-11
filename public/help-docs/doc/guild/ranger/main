@@ -1,0 +1,47 @@
+                          RANGER'S GUILD HELP
+----------------------------------------------------------------------------
+GETTING STARTED:
+  setprime <terrain>   Set your primary terrain (one-time, do first!)
+  setsecond <terrain>  Set your secondary terrain (one-time)
+  setenemy <race>      Set your enemy species (one-time)
+
+SKILLS & ADVANCEMENT:
+  skilltree / tree     View the full skill tree and your progress.
+  learn                See skills available to learn.
+  learn <skill>        Learn a new skill (costs slots + experience).
+  learn cost <skill>   See the cost and details of a skill.
+  skills / myskills    Show your learned skills.
+  slots                Show your available skill slots.
+  improve <what>       Advance stats or guild level.
+  cost / tally         Show advancement costs.
+  check <terrain>      See what skills work in a terrain.
+
+INFORMATION:
+  ranhelp / rh         Show this screen. 'rh <topic>' for details.
+  rscore / rsc         Your Ranger status report.
+  rangers              Show Rangers currently online.
+  bio / myinfo         View or set your Ranger bio.
+  motto / declare      Set your motto (shown on 'rangers' list).
+  survey / id          Identify the terrain you are in.
+  inspect <target>     Analyze an opponent's strengths.
+
+COMMUNICATION:
+  ran <message>        Chat on the Ranger guild line.
+  eran <message>       Emote on the Ranger guild line.
+  signal <who> <msg>   Send a nature-carried message to a player.
+
+GUILD MANAGEMENT:
+  recruit <name>       Recruit another player into the guild.
+  rebuild quiver       Get a new quiver if yours is lost.
+  repair quiver        Refresh your quiver if having problems.
+  rangerbug <message>  Report a Ranger bug.
+  journal              List available tasks and quests.
+
+ADDITIONAL TOPICS:   general guildhall advancement skills glevels
+                     terrains stats archery weapons armour emotes
+                     followers enemy alignment history philosophy
+                     conduct equipment powerlist
+
+TERRAINS:            forest plains swamp desert jungle city hills sea
+                     lake river road inside beach underground
+                     mountain arctic barren underwater

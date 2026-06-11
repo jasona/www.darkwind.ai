@@ -1,0 +1,7 @@
+SPELL NAME  : Cure Affliction
+SPELL SYNTAX: Cure <target>
+SPELL COST  : 25 + 30 sp/affliction cured
+DESCRIPTION : When cast normally, this spell will relieve the target
+              of any infections disease, poison, or deleritous
+              condition acquired around the world of Darkwind.
+

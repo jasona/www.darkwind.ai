@@ -1,0 +1,11 @@
+_______________________________________________________________________________
+"Blindness"   
+        Using this power, the psionicist can scramble a target's
+        mind in such a way as to prevent the signals from the
+        optic nerve from being interpreted.  Effectively, this
+        blinds the target.  The duration is based on guild level.
+        This ability is PK checked, as with any other attack.
+ 
+SP Cost:  20	Guild Level:  3	  Potential Points:  1
+ 
+Command:  blind <targetname>

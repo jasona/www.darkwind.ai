@@ -1,0 +1,98 @@
+Submission Commands
+===============================
+
+NOTE: These commands work on DEV ONLY!
+
+
+==========================================================
+BUILDER Commands
+==========================================================
+
+Command: listtable
+------------------------
+Description: List of the areas that you currently have in the review process
+And produce a table outling who is doing what reviews. 
+Syntax: listtable area <builders name>
+
+Command:  listreview, listrev, listresponse, listresp
+--------------------------------------------------------------
+Description:  List all the reviews for a specific submission.
+              This works for open and closed submissions.
+Syntax: listreview area <request number> <review type>
+  request number is the number specific to this submission.
+  review type is optional, and is code, content or balance.
+
+Command:  respondrev, resprev
+--------------------------------------
+Description:  Respond to a review. Should be done when actions are 
+complete.
+Syntax: respondrev area <request number> <review type>
+  request number is the number specific to this submission.
+  review type is code, content or balance
+
+Command:  submit area
+-----------------------------
+Description:  This command is used to submit things for review and for the
+balance group to put their review comments in a central location.  Its the
+way submissions are handled, when they are approved, and who approved the
+code, content and balance of the submission.
+
+==========================================================
+MENTOR Commands
+==========================================================
+
+Command:  closesub
+-------------------------
+Description:  This command will finalise the whole area review process. The
+area should not be promoted until this has been done by the mentor..
+Syntax: closesub area <request number>
+request number is the number specific to this submission.
+
+
+==========================================================
+ARCH+ Commands
+==========================================================
+
+Command:  gotosub
+------------------------
+Description:  Goto the location of a Submission.
+Syntax: gotosub area <request number>
+request number is the number specific to this submission.
+
+Command:  listreviews, listrevs
+--------------------------------------
+Description:  This command is used to list submissions in table format,
+              that are being reviewed by a specified balance member.
+Syntax: listreviews area <reviewer>
+ reviewer is the person reviewing the submisson.
+
+Command: listtable area
+------------------------------
+Description: Provides a table outline all current area submissions
+and assosciated area reviewers.
+
+Command:  lst
+----------------
+Description:  List a Submission.
+Syntax: lst area <request number>
+  request number is the number specific to this submission.
+
+Command:  reviewsub, revsub
+-------------------------------------
+Description:  Review a submission for a certain review type.
+Syntax: reviewsub area <request number> <review type>
+  request number is the number specific to this submission.
+  review type is code, content or balance.
+ 
+==========================================================
+IMP+ Commands
+==========================================================
+
+Command:  assignrev, arev
+Description:  Assign a review to a specified person. Reviews MUST be at least
+ARCH + 
+Syntax: assignreview area <request number> <review type> <name>
+  review type is code, content or balance.
+  request number is the number specific to this submission.
+  name is who the review will be assigned to.
+  NOTE:  To assign a review to Noone use 'none'

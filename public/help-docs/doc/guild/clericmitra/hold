@@ -1,0 +1,9 @@
+SPELL NAME  : Hold Person
+SPELL SYNTAX: Hold <target>
+SPELL COST  : 40 SP
+DESCRIPTION : This spell binds the target creature in a powerful
+              energy field, rendering all of their commands useless
+              for a time depending on the level and guild level of the
+              caster.
+ 
+

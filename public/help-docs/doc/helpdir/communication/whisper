@@ -1,0 +1,12 @@
+
+|WKBSYNTAX
+======
+ 
+|YKBwhisper <player> <message>
+ 
+|WKBDESCRIPTION
+===========
+ 
+|WKOThe |YKB'whisper' |YKOcommand sends a message to the specified player in the
+room.  The other players in the room will see that you are whispering
+to that person, but will not hear what is said.

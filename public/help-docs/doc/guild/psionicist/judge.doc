@@ -1,0 +1,19 @@
+_______________________________________________________________________________
+"Judge"           
+        This allows the psionicist to "look deep into another person's
+        eyes and see their soul".  It will tell you how far they have
+        advanced within their guild and compare their stats to yours if
+        the target is a player character, and it will estimate how you
+        would fare in combat against the target if it is a monster.
+        Note that it judges purely from a one on one physical
+        confrontation.  The psionicist has access to a host of powers
+        the opponent does not and the ability to retreat and heal which
+        most monster do not have.  On the other hand, some monsters
+        possess special attacks or abilities which judge will also not
+        factor into things.  However, it is a good way to get a general
+        feeling for how tough a monster is, or how far advanced another
+        player is compared to you.  
+ 
+SP Cost:  15		Guild Level:  2		Potential Points:  2
+ 
+Command:  pjudge <target>

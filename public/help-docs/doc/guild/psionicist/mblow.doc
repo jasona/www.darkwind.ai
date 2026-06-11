@@ -1,0 +1,11 @@
+_______________________________________________________________________________
+"Mental Blow"     
+        This sends a hammering blow of force directly into the mind of
+        the target.  It does a base amount of damage slightly dependent
+        upon regular level and does a further random amount based on
+        guild level.  It is an all around attack power cheaper and faster
+        than psionic blast.
+ 
+SP Cost:  Variable	Guild Level:  3		Potential Points:  2
+ 
+Command:  mblow <target>

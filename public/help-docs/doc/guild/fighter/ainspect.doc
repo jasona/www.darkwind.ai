@@ -1,0 +1,11 @@
+Skill: Ainspect    Timer: None         GL:  7    Cost: 20
+This is the Fighter's ability to take his/her knowledge of armor and inspect
+a piece of armor to learn the details of it.
+
+This allows the Fighter to judge the quality of the armor on many fronts.
+
+It is said that some armor is well known throughout the lands, and often
+Fighters remember from whence it came.
+
+
+Syntax is: ainspect <armor>

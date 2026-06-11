@@ -1,0 +1,13 @@
+Slash - blade technique
+------------------------------------------------------------
+Slashing can often be an effective, if somewhat crude way
+of attacking an opponent. Using brute strength alone, a
+swashbuckler attempts to make direct, powerful attacks
+against his opponent. While the attacks are no more
+likely to hit than usual, blows that land cause greater
+damage.
+
+GL:  2
+SP:  3 / attack
+command:  slash
+duration: technique mode

@@ -1,0 +1,12 @@
+Gust
+
+This spell calls a biting wind against the target.  The
+gust harms the creature and leaves dust and grit swirling
+around it for a short time.
+
+Command: gust <target> (defaults to attacker)
+Base Cost: 22 SP
+Base Recovery: short
+Base Effect: damage, minor hindrance
+Base Duration: short
+Guild Level: 2

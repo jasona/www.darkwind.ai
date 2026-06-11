@@ -1,0 +1,40 @@
+Achievements track long-term progress across the game using stats you
+already build naturally while playing.
+
+They cover areas such as:
+
+  combat
+  quests and progression
+  economy and donations
+  exploration-flavored world activity
+  guild-specific milestones
+
+Each achievement line has five tiers:
+
+  Bronze
+  Silver
+  Gold
+  Platinum
+  Mythic
+
+Useful commands:
+
+  achievements
+      Opens your achievement journal and shows your current progress.
+
+  achievements titles
+      Shows every unlocked achievement title and the exact command to equip it.
+
+  atitle <title-id>
+      Equips an achievement title.
+
+  atitle clear
+      Clears your equipped achievement title.
+
+  leaderboard
+      Opens the top 50 achievement leaderboard.
+
+Achievements are meant to reward depth and consistency over time rather
+than a single burst of damage or one lucky fight.
+
+See also: help achievement_titles, help atitle, help leaderboard

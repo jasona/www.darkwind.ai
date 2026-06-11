@@ -1,0 +1,10 @@
+|YKODarkWind reboots periodically to clear out the junk from memory, catch
+global code updates, reset once-per-boot areas and whatnot. When the
+mud reboots, all equipment stored in guilds, shops, boats etc. will
+disappear, as will ponies and similar helpers. Boats will not disappear,
+nor will money on or your person or in the bank.
+
+The |WKB"uptime" |YKOcommand shows how long DarkWind has been up since the last
+reboot, and when the next scheduled reboot is. Unfortunately, sometimes
+unscheduled reboots are necessary for a variety of reasons. Players will
+not be compensated for any losses incurred due to reboots.

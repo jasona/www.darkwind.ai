@@ -1,0 +1,8 @@
+Skill: feint       Timer: None         GL:  1    Cost: NONE
+
+The simplest of all fighter techniques. You feint, causing your
+opponent to have a harder time landing big hits.
+
+Feint uses up your endurance while you're feinting.
+
+Syntax is ftoggle feint <on/off>

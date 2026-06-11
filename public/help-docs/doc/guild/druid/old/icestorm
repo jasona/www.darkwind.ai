@@ -1,0 +1,19 @@
+Ice Storm
+
+Control of the weather provides much of a druid's
+destructive power, and this spell demonstrates that.
+With but a word, the druid conjures a hailstorm to
+pelt everything in the area.  This spell is often
+used against numbers of magic-resistant creatures,
+since the hail is not itself magical; however, the
+damage is not great, and heavily armored creatures
+may escape unscathed.  You need not fear harming
+another druid or their charmed or summoned creatures
+with this spell.
+
+Command: icestorm
+Base Cost: 90 SP
+Base Recovery: medium-long
+Base Effect: damage (low, area)
+Base Duration: instant
+Guild Level: 9

@@ -1,0 +1,25 @@
+Ranger Help for: rest
+=====================
+
+SYNTAX:      rest
+             rest camp (or: rest home)
+USAGE:       Wilderness
+SLOT COST:   10
+BASE SP:     35 (rest) / 50 (rest camp)
+SKILL TYPE:  Cartography
+
+SUMMARY:
+Rest has two modes:
+
+REST (heal):
+  Find a sheltered spot and rest briefly, recovering HP and SP.
+  Must be in the wilderness and not in combat. Healing scales with
+  your constitution and wisdom. You will sit down while resting.
+
+REST CAMP / REST HOME (travel):
+  Return to your own camp from anywhere. Costs 50 SP. You must
+  have a camp established (see 'camp' for setup instructions).
+  This is the fastest way to get back to your base.
+
+=============================================================================
+SEE ALSO: camp, camps, trailblaze, advancement

@@ -1,0 +1,15 @@
+                         |BKB-= |CKBPoison Edge |BKB=-
+
+|MKOThieves can purchase poison packets from the guild and
+use them to taint the weapon in their main hand. Applying a
+poison costs both gold and spell points, so the effect is
+meant to last through a real hunt rather than a single quick
+fight.
+
+|MKOA poisoned weapon is not guaranteed to trigger on every
+hit. Instead, it uses the weapon's normal poisoned-hit proc.
+The toxic poison currently sold by the guild lasts for about
+one hour once applied.
+
+|CKOGLVL required: |GKB3
+|CKOSyntax: |YKOpoison <poison type>          |CKOCost: |WKOVaried

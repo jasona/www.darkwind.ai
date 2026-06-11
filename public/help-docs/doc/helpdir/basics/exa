@@ -1,0 +1,9 @@
+
+|WKBSyntax: |YKB"exa" |WKBor |YKB"exa <string>"
+
+|WKBDESCRIPTION
+|WKO===========
+|YKOWith no string, examine the room you are currently standing it.
+With a string, you can 'exa <string>'.
+ 
+|WKBSee also: |YKBexamine, l, gl

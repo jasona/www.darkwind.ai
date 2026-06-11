@@ -1,0 +1,61 @@
+|CKBDefinition
+|WKB----------
+
+|YKOA trigger is defined as using a client or some other program to
+scan the incoming text from a terminal session and issue a 
+particular command when the incoming text matches a particular 
+string set by the user.
+
+|CKBRegulations
+|WKO-----------
+
+|BKB1. |CKBThe use of triggers (both directed and automated) is legal 
+provided that at |RKBno time is your character left unattended and
+that they do not activate upon merely walking into a room.|000
+
+    |BKB1a. |CKOExample: Bodach, Dink and Klaughihin are in a party.
+        Bodach is the leader and says "heal me". Dink could then
+        have a trigger set up to "heal bodach".
+   
+    |BKB1b. |CKOExample: The use of an 'assist' trigger in a party
+        setting is allowed, provided your character is attended at
+        all times.
+  
+    |BKB1c. |CKOExample: The use of a 'burn corpse' trigger is allowed,
+        provided it activates ONLY upon your kill. Not your pet's, etc.
+        This includes all forms of corpse skills. Eating them, burning
+        them, turning them into scorching piles of ash, etc. If you
+        didn't kill it, don't trigger it.
+        
+    |BKB1d. |CKOExample: The use of a 'kill <mob>' trigger is allowed,
+        provided it does not attack a mob as soon as you walk into a 
+        room, or as soon as a mob spawns. If it does, that is considered
+        botting.
+
+
+|BKB2. |CKBAny trigger (automated or directed) which allows your character
+to move is illegal. Movement by use of the in-game scripting ability is allowed,
+however, this does NOT exclude using a script to kill. Please do NOT script
+kill an entire area. This is considered botting.
+
+This does NOT mean you can trigger the usage of the in-game scripting.
+|RKBDO NOT TRIGGER (or otherwise) AUTOMATE MOVEMENT.|000
+
+|BKB3. |CKBAny trigger (automated or directed) which keeps your character logged
+into the game, and active, without attendance (ie, anti-idle for dragons, 
+autokill on room spawns, etc) is prohibited. 
+|RKBDO NOT TRIGGER (or otherwise) AUTOMATE KILLING.|000
+
+|BKB4. |CKBAny trigger that is an open variable which allows another player to
+control your character without you being at your computer is prohibited.
+
+|CKBPenalties
+|WKO-----------
+
+|BKBFailure to adhere to our trigger policy is punishable by up to the
+loss of half your levels, all your gold, half your stats, mythic character
+creation bans, and possible banishment. Other penalities may occur in lieu
+of the afformentioned punishments.
+
+Just don't do it. Sit at the keyboard, have a good time. If you get up, 
+turn everything off. This will make DarkWind enjoyable for everyone.

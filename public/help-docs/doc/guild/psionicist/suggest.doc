@@ -1,0 +1,14 @@
+_______________________________________________________________________________
+"Suggestion"       
+        This is an annoyance power for psionicists to use for fun.  What
+        it does is place a suggestion in the mind of the target for a
+        couple of minutes depending on guild level.  The suggestion
+        is a piece of text set by the psionicist.  Whenever the target
+        types something OTHER than the suggested command, the target
+        sees 'For some reason you feel like  doing <whatever> instead'.
+        It does not prevent the original command from being performed,
+        though.  It's just for fun.
+ 
+SP Cost:  15		Guild Level:  1		Potential Points:  2
+ 
+Command:  suggestion <target> <message/command>

@@ -1,0 +1,17 @@
+A small help file that lists all the current vampire commands and thier
+syntax.
+
+vamp line:
+vchat <string>
+evchat <string>
+
+misc:
+vhelp
+vguild			{temp power to take you to the vamp join room}
+
+powers:
+fly
+sshield
+
+emotes:
+rat, bat, sweat, grin, mgrin, sgrin, vgreet, sob, vbite, mutter <string>

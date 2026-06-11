@@ -1,0 +1,11 @@
+_______________________________________________________________________________
+"Reduce Weight"    
+        This power allows the psionicist to alter the pattern of an
+        object in such a way as to condense and compact it.  It
+        works once per item and reduces the item's weight
+        permanently by a random amount influenced, but not determined,
+        by guild level. 
+ 
+SP Cost:  75		Guild Level:  7		Potential Points:  2
+ 
+Command:  reduce <object>

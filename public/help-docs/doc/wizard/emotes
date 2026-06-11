@@ -1,0 +1,22 @@
+Emote Management System
+==========================
+
+This system allows for the addition, removal and suspension of
+emotes on the "fly". Allowing you to manage emotes much easier
+then manually manipulating files, rehashing, etc..
+
+
+Commands of this system:
+    eadd <emote>
+    epromote <emote>
+    edemote <emote>
+    esuspend <emote>
+    eupdate
+
+    elist <pending/active/removed/all>
+
+
+See also
+  (eadd) (epromote) (edemote) (esuspend) (eupdate) (elist)
+
+Note this system is used by ARCH+

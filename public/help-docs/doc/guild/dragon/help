@@ -1,0 +1,25 @@
+|MKB-------------------------------------------------------------------------------|000
+                             |YKBDragon Commands|000
+|MKB-------------------------------------------------------------------------------|000
+|BKBCommand                         |GKBDescription|000
+|MKB-------------------------------------------------------------------------------|000
+|BKBclutch <item>                   |GKBCarry something in your clutches.|000
+|BKBdchat                           |GKBVersion of tell that lets you talk to|000
+                                |GKBall your guild members.|000
+|BKBedchat                          |GKBGuild channel emote.|000
+|BKBdcmds                           |GKBA list of dragon commands.|000
+|BKBdeclare <form>                  |GKBThis command sets your dragon form.|000
+|BKBredeclare <form>                |GKBAt age 19, you can change your dragon form.|000
+                                |GKBThe magics involved will regenerate 2 years|000
+                                |GKBof life.|000
+|BKBdemotes                         |GKBA list of dragon emotes.|000
+|BKBdhist                           |GKBThis shows a history of all communi-|000
+                                |GKBcations on the Dragon channel.|000
+|BKBdragonhelp <command>            |GKBYou can get more info on 'align' and 'powers'.|000
+|BKBdragonlong <string>             |GKBSets what people see when they look at you.|000
+|BKBdtimers                         |GKBLists out your spell timers.|000
+|BKBdwho                            |GKBVersion of "who" that only shows your |000
+                                |GKBguild members.|000
+|MKB-------------------------------------------------------------------------------|000
+|GKBFor more info, you can dhelp 'basics', 'align', or 'powers'|000
+|MKB-------------------------------------------------------------------------------|000

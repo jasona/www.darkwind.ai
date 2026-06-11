@@ -1,0 +1,40 @@
+
+                                                               Rev. 0
+
+                      NPC Behavior: Callout Inheritable
+                      =================================
+
+Description
+-----------
+
+The callout inheritable is a generic behavior for use in behaviors that
+wish to continue their behaviors while the NPC has no heart_beat; ie. 
+no players are in the room with it. The callout inheritable uses the
+heartbeat while it is running, and a callout while it is not.
+
+It provides delay and chance settings. This behavior in inherited by the
+wander behavior, so wandering NPCs can continue to do so while their
+heartbeats are turned off.
+
+The callout behavior inheritable is defined as CALLOUT_BEHAVIOR in
+mudlib.h.
+
+Callout Inheritable API
+-----------------------
+
+The callout inheritable requires that perform_behavior and reset both
+call their respective parent functions. Look in the wander behavior
+object for an example.
+
+void set_chance(int chance)
+- Set the % chance for the behavior to fire.
+
+void set_delay(int delay)
+- Sets the time in seconds between % chance checks.
+
+
+Revision History:
+-----------------
+
+Rev. 0 - Malraux: Initial release
+

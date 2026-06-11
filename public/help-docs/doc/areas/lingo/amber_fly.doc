@@ -1,0 +1,60 @@
+Amber Fly Synopsis:
+
+This is what I like to call a newbie quest tutor.  It is not designed
+to be difficult at all, in fact, just the opposite.  It was made
+for players of level 4 or less that have no clue when
+it comes to questing -- not the slightest idea what exactly a
+quest is or why anyone would bother to do one.  I was this
+type of newbie and learned how to quest the hard way, by doing
+them -- both by myself and with others.  This learning process was
+painfully slow, so I felt it would be a good thing to design what
+I have here in order to simplify the process.
+
+Note: Newbies are not told explicitly what to do in each situation.
+At the beginning they are led by the hand, given quite obvious hints
+about what to do, but as the quest progresses, the hints tend more
+towards the vague side.  To help out, at various stages, they are
+referred to a primer which tells them about some aspect of questing,
+which just happens to be the one which is relevant to their current
+situation.  I tried to be as complete as possible with the primer
+docs without being utterly boring.
+
+Starting out, newbies will enter a building where they will acquire
+the primer.  This primer directs them down a hall into a den where
+they find Ezekiel Milquetoast, the sage.  Comforting him, or
+hugging him, as is blatantly hinted at in his description will
+reveal the situation: goblins have stolen his little trinket, an
+amber fly.  He then directs the player to the courtyard.
+
+In the courtyard, the players will find a hut which houses a blacksmith.
+He will ask the player to fill the bucket therein with water so
+that he might cool what he is working on.  Doing this is trivial,
+as there is a lake nearby, and gains the player a rope with a
+grappling hook attached.
+
+From there, the player can climb the willow tree in the orchard
+whose branches droop over the courtyard wall, follow the path around
+the front of a dark goblin cave to a hole in the ground, and
+climb down into a cavern.  After bumping into the wall a few
+times, the player will eventually find his way into the
+central chamber wherein is found the goblin chieftain and
+his assistant the witch doctor.  The latter has the fly in question,
+but attacking him is impossible as the chieftain jumps in the way.
+Now the chieftain is kind of tough for newbies so the primer has
+been equipped with a special function so that it can
+burst into a flash of bright light wounding the chieftain and making
+him easier to kill; this is to simulate guild powers for the newbie
+who will have none.  After the chieftain dies, the witch doctor
+flees, leaving the fly behind for the player to take.
+
+Once the fly is returned to Ezekiel, he rewards the player with
+a protective aura (AC 20), and the quest is complete with the
+newbie a wiser player.
+
+I have placed all the docs for the primer in /open/wizards/lingo/nq_docs
+for perusal by all the builders, imps, and supers.  If anyone
+feels something important has been omitted or misrepresented,
+Please let me know so that I may make the appropriate changes.
+
+---------
+This doc brought to you by Lingo@Darkwind.

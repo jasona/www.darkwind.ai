@@ -1,0 +1,120 @@
+The virtual room is a means of creating large areas consisting of many
+similar looking rooms, without coding a separate .c file for each room.
+
+To do this, the grid needs a daemon to control it and a set of files that
+describe the rooms. You may have a different description for each room
+in the grid, or share descriptions amongst the rooms. You may also use
+the 8 major directions to link the rooms in the grid, as well as make
+links to 'real' rooms from any point in the grid.
+
+To show you how to do this, it's easiest to use an example. In the
+directory ~malraux/vrtest there is a rather silly one to look over.
+
+
+THE GRID DAEMON
+---------------
+The first item you need for a virtual room grid is a directory to place
+the files in. Each grid needs a separate directory. Once you have that,
+create a daemon.c in that directory that inherits VRDAEMON (you will 
+have to #include <new_virtual.h> as well). The example daemon.c should
+serve you well as a template. Set the variables in the file as needed:
+  width - the east-west width of the area
+  height - the north-south width of the area
+  coord_dir - the directory where the daemon and its files are kept
+  terrain - set this to set the terrain of all the rooms
+  light - set this to 0 if you want all of your rooms to be lit. if
+          it is set to 1, the daemon will expect you to map out the
+          light values for the rooms (see below)
+  numdescs - the number of descriptions your rooms will be using
+
+  In daemon.c, you MUST call ::reset() after setting these values.
+  ::reset() will load the database that you create for the rooms.
+  Look at the example daemon, or just copy it, to do this right.
+
+
+THE COORD.DESCS FILE
+--------------------
+Next, you need to create a file holding the descriptions of the rooms
+in the grid. This file consists of a short and long description for
+each separate description you want to have. Each must be one line long.
+If you want to have a long desc longer than one line, put the desc in
+a file with the extension .lf in the grid's directory. Then, on the
+long desc line put #<filename without the .lf extension>#. For example,
+look in the coord.descs file in the example directory. On line 2, you
+see the reference to goomba.lf (I told you it was silly).
+
+THE COORD.MAPPINGS FILE
+-----------------------
+After you have written the descriptions to use, you need to map them
+onto the grid. That is, each grid point will reference a particular
+description. If you have enough descriptions in your coord.descs file,
+you can put one description per grid point.
+
+The first section of coord.mappings consists of the description
+mappings. For each grid point, you need to put the number of the
+description that goes in that room. The descriptions are numbered
+0 to numdescs-1, like an array (gee, I wonder where they're kept?).
+I could have made it so you could number them 1 to numdescs, but
+this makes it faster in execution. Woo, woo. The grid is oriented
+with north at the top, and east to the right, like on a map. The 
+numbering, however, is like pixels on a computer screen: 0,0 is in
+the top lefthand corner, and x increases to the right while y
+increases towards the bottom. The numbers must have one, and *only*
+one space between them.
+
+To take an example from the example rooms, the first line in the
+coord.mappings file is 3 0 1. This means that room 0,0 will have
+the 4th description in the coord.descs file, room 1,0 will have
+the 1st desc, and room 2,0 will have the 2nd desc.
+
+The next section of coord.mappings describes the exits of each point
+on the grid. The exits are described in binary format, where each
+of the exit directions has it's own bit in the number. To get the
+exit descriptor for a room, add up the values of each exit direction.
+The exit direction values are listed in /include/new_virtual.h, as
+well as here:
+North     -  1   South     -  2   East      -  4   West      -   8
+Northeast - 16   Northwest - 32   Southeast - 64   Southwest - 128
+So if you wanted a particular grid point to have north, south, and
+northeast exits, you would add up 1, 2, and 16 to get an exit
+descriptor of 19.
+
+Taking the first line of exits from the coord.mappings file in the
+example directory: 6 14 10, we find that room 0,0 has south and
+east exits (2 + 4 = 6), room 1,0 has east, west, and south exits
+(4 + 8 + 2 = 14), and room 2,0 has west and south exits (8 + 2 = 10).
+
+To connect a virtual room to a real room, make a real room that
+replaces one of the coordinates of the vr room.  In your daemon,
+set up the 'rooms' var at that coordinate to point to the real
+room's filename.  Look in the example daemon.c to see how this is
+done.
+
+The third section of the coord.mappings file is optional. If you 
+decide that you want some of your rooms to be lit, and others not
+lit, you need to use it. It consists merely of a grid, like the
+desc and exit grids, with 1s and 0s to mark whether the grid point
+is lit or not.
+
+
+THE ENTRY POINT
+---------------
+Your grid area will need at least one entry point that is a normal room.
+It needs to inherit VRROOM to interface with the grid. The entry room for
+the example is, surprisingly enough, /u/m/malraux/ctest/entry.c. It 
+inherits VRROOM and sets up a few necessary variables. The first is the
+daemon that controls the grid room. Any exit to a normal room is done the
+same as always, but an exit to a grid room should be a number. To get
+this number, take the x coordinate of the destination grid room and
+multiply by 100, then add the y coordinate to this. In other words,
+make the grid coordinate into a number that looks like the coordinate
+with the comma removed: 2,2 -> 02,02 -> 0202. You should note that
+this implies that you may not have a grid area that is more than 100
+rooms wide or deep.
+
+NOTE: The above has changed. If your vrroom has a width or size greater
+      than 100, the vrdaemon will instead use a size modulo of 1000.
+      This means that your coordinates become 002002 in the above example.
+
+Malraux, 1-18-94
+Malraux, 2001-10-02: updated size modulo

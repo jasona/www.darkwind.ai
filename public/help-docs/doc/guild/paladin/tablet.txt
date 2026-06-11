@@ -1,0 +1,32 @@
+
+|YK0                Paladin code of conduct
+
+|YK01:  Obey the knights of higher station in all things.
+
+|YK02:  Value the honour of our order above our personal honour,
+|YK0    value our order above our lives.
+
+|YK03:  Render aid to those in need as you would a fellow knight.
+|YK0    Indulge the ignorant or witless even unto fault, but
+|YK0    suffer no slur or insult to our honour from those who
+|YK0    lack such excuse.
+
+|YK04:  Never violate an oath you swear. Never swear an oath
+|YK0    you can not keep.
+
+|YK05:  Engage the enemy forthrightly that he may know the
+|YK0    origin of his doom, set no ambush nor indulge in 
+|YK0    trickery to overcome a foe.
+
+|YK06:  Give quarter to those who yield honorably.
+ 
+|YK07:  Show great courage and bravery, but value your wisdom
+|YK0    above all else.
+
+|YK08:  Refuse no honourable truce or parley.
+
+|YK09:  Do not break the laws of the realm thus to bring about
+|YK0    the wrath of those who make this place run.
+
+|YK010: Suffer not to shelter among us any who would violate, 
+|YK0    ignore, or dishonour our Code.

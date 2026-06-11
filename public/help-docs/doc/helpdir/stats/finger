@@ -1,0 +1,8 @@
+|WKBSyntax: |YKBfinger <player>|XX0
+|WKBSyntax: |YKBfinger -text <player>|XX0
+==========
+
+|YK0Give some detailed information about a player.  They do not have to be
+logged in at the time when you finger them.
+
+Darkflow clients open a GUI modal by default; use finger -text for text.

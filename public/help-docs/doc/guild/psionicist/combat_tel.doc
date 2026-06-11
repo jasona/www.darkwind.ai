@@ -1,0 +1,16 @@
+_______________________________________________________________________________
+"Combat Teleport"
+        This allows the psionicist to teleport an object he is
+        carrying into an enemy, resulting in damage from system
+        shock.  The weight of the object, and the skill of the
+        psionicist determine the amount of damage inflicted.
+        The item that is used in this attack will probably be
+        destroyed, but there is a chance that it will survive
+        and can be recovered when the target is killed.
+        Note:  The psionicist must be in combat with the
+        intended target.
+ 
+SP Cost:  Variable	Guild Level:  5		Potential Points:  2
+ 
+Command:  ctel <object> OR
+          tctel <object> at <target>

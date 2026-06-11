@@ -1,0 +1,15 @@
+|GKB-- Reincarnate ----------------------------------------------|000
+
+Very powerful druids sometimes draw deeply from the Marken current to pierce the
+veil of death and draw on Gaea's power to create
+a new living body for themselves.  By returning
+from death in this manner, a druid can avoid much
+of the physical and mental damage associated with
+death.
+
+|CKBCommand:      |000 reincarnate
+|CKBBase Cost:    |000 600 Marken nwyfre
+|CKBBase Recovery:|000 long
+|CKBBase Effect:  |000 resurrect
+|CKBBase Duration:|000 permanent
+|CKBGuild Level:  |000 26

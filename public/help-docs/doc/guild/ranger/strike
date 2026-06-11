@@ -1,0 +1,16 @@
+Ranger Help for: strike
+=======================
+
+SYNTAX:      strike <target>
+USAGE:       Any terrain
+SLOT COST:   NA
+BASE SP:     25
+SKILL TYPE:  attack
+
+SUMMARY:
+This skill allows a Ranger to deliver an enhanced melee hit against a
+target. Strike is the basic combat attack skill for Rangers, dealing
+more damage than a standard attack. It works with any wielded weapon
+and in any terrain. Strike is often the first attack skill a Ranger
+learns and serves as the foundation for more advanced techniques like
+gash, impale, and naturestrike.

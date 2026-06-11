@@ -1,0 +1,15 @@
+Thorns
+
+One of the most basic druidic spells, this charm allows
+the druid to strike a target with a barrage of sharp
+thorns.  Though its damage is limited, especially against
+armored targets, its low cost and rapid recovery time
+mean that even some heirophant druids consider it a
+useful part of their arsenal.
+
+Command: thorns <target> (defaults to attacker)
+Base Cost: 25 SP
+Base Recovery: fast
+Base Effect: damage (low)
+Base Duration: instant
+Guild Level: 1

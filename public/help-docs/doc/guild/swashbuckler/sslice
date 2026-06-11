@@ -1,0 +1,17 @@
+Slice - attack skill
+------------------------------------------------------------
+Slice is the most basic of attack skills learned by a
+budding, young swashbuckler. Using a slashing main blade,
+the swashbuckler slices at his opponent in an attempt to
+inflict a fatal wound. While not a particularly elegant
+attack, a well-timed slice can be effective at dispatching
+a weakened enemy. This attack can only be attemped once
+per opponent though, as they will quickly catch on to
+the swashbuckler's tricks. Note that this attack is much
+more effective as a final, killing stroke on an enemy near
+death.
+
+GL:  1
+SP: 10
+command: sslice <target> (defaults to opponent if in combat)
+duration: instant

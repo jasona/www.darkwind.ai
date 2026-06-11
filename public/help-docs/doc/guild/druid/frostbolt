@@ -1,0 +1,13 @@
+|GKB-- Frost Bolt -----------------------------------------------|000
+
+This potent Tekali invocation draws upon the chill of winter
+to damage the target with a ray of frost.  The wiser
+the druid, the more power he may focus.  This invocation
+also has a chance to stun the target for a short time.
+
+|CKBCommand:      |000 frostbolt <target> (defaults to attacker)
+|CKBBase Cost:    |000 min(level + 30, wisdom) Tekali nwyfre
+|CKBBase Recovery:|000 medium
+|CKBBase Effect:  |000 damage (high)
+|CKBBase Duration:|000 instant
+|CKBGuild Level:  |000 7

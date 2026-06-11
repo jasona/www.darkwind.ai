@@ -1,0 +1,17 @@
+|GKO================================================================
+                        |RKBDirected Rage
+|GKO================================================================
+
+|YKODirected rage is one of the most potent combat abilities
+possessed by the Garou. Building up her inner anger,
+a Garou howls terribly at her foe, inspiring great
+fear in him and preventing him from taking action.
+Time of paralyzation is variable.
+
+|WKOUsable in Form: |GKOWolf & Crinos       |WKOCost:  |CKO20% MAX SP
+|WKORestricted to:  |RKBWarrior |WKOand |GKBGuardian
+|WKOLvl Required:   |BKB65                  |WKOTimer: |CKOHuge
+|WKOGL Required:    |BKB12 |GKO(|RKBWarrior|GKO)        |WKOType:  |CKOStun
+                |BKB15 |GKO(|GKBGuardian|GKO)
+             
+|RKOSyntax: |YKBdrage <target>

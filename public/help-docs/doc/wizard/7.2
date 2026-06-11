@@ -1,0 +1,47 @@
+ 
+This document will attempt to explain the system of bins.  If you can think
+of some command line type of operating system, that will help.  What we
+are attempting to do here, is set up commands, individually.  In other words
+each command is its own separate file.  This is very similar to that operating
+system you have envisioned.  For example, the system will have different files
+you run.  For example, in DOS:  Copy, Del, Move, etc. are a type of bins. 
+In Unix: Cp, Mkdir, Rmdir, etc. are types of bins. 
+ 
+What we are creating is a command path, which is a directory of commands that
+a player can use, and then each command is its own file.  On Darkwind, you
+could find the bins for all the emotions in /cmds/soul.  There each file has
+a '_' prepended to it.  So, the smile command will be _smile.c  Any bins you
+code will have the same syntax.
+ 
+To add the command path to the player, in your guild object, add the following
+code:  (Assuming this is for a guild.)
+ 
+#include <daemons.h>
+#define GCMDS "/cmds/guilds/my_special_guild"
+ 
+  CMD_D->add_path(GCMDS, this_player());
+  CMD_D->rehash(GCMDS);
+ 
+Next, in the actual bin file, its code would look something like this:
+ 
+int do_command(string sArg) {
+  if(!sArg) {
+    write("do what to who?\n");
+    return 1;
+  }
+  Do your command code here.
+  return 1;
+}
+ 
+The 'do_command' will always be the name of the core function.  The filename 
+will always be what you want the player to type to execute that command.
+However, you can specify other things to type for that command:
+  
+string *command_aliases() { return ( ({"protct","prtect"}) ); }
+ 
+In place of the protct or prtect (for protect) you can do others.  Note, that
+you don't have to alias the filename (_protect.c in this case.)
+ 
+As far as any other specifics, there aren't any.  Bins should go in the /cmds
+dir and you'll need to get a Demi to create that dir, and give you access to
+it.  The command code should be like the code to any other LPC function.

@@ -1,0 +1,8 @@
+SPELL NAME  : Guardian Angel
+SPELL SYNTAX: Guard <target>
+SPELL COST  : 60 SP
+DESCRIPTION : Through the love of Mitra, the Cleric has the power to call a
+	      guardian angel for protection. The angel will try its best to 
+	      resist all magical attacks on its charge. The ability to retain
+	      the angel's service and the power of the angel summoned both
+	      are dependent on the devotion of the Cleric.

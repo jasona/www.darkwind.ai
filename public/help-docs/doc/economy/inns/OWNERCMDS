@@ -1,0 +1,34 @@
+                          add item - Adds to your menu 
+            associate <playername> - Grants or removes associate privileges
+                                     for that player
+                 automail <number> - Activates the automailer to send an expense
+                                     report to the owner every <number> days
+                           balance - Shows current balance of the inn's account
+                          checkash - Shows the current level of ash stocked
+                                     at the Ash Bank
+                             close - Close the inn
+                       clrexpenses - Clears all accounting info [Irrevocable]
+                      clrmenu menu - Clears your menu. This is irrevocable.
+                   delete <number> - Removes the specified menu item
+                  deposit <amount> - Adds to the inn's account
+                          expenses - Shows a detailed list of accounting
+                                     information
+                              hire - Allows you to change the innkeeper in
+                                     your inn
+                   insert <number> - Inserts an item before the specified item
+list <serving|snack|meal> <number> - Shows all information for the
+                                     specified menu item
+                      mailexpenses - Mails a copy of the expense report to your
+                                     e-mail address
+                              open - Opens the inn
+                            owners - Shows the command list for the inn
+                             sales - Shows sales report for items in your inn
+                 setinnname <name> - Sets a new name for the inn
+                           setdesc - Lets you to edit the description of the inn
+                  setname <number> - Sets the name of the menu item
+               setmessage <number> - Sets the eating message of the menu item
+              setstrength <number> - Sets the strength of the menu item
+                    sethp <number> - Sets the hp healing of the menu item
+                    setsp <number> - Sets the sp healing of the menu item
+                setmargin <number> - Sets the margin of the menu item
+                 withdraw <amount> - Withdraws money from the inn's account

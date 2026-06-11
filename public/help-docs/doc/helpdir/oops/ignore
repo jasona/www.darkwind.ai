@@ -1,0 +1,21 @@
+SYNTAX
+======
+ 
+ignore <name>
+ignore list
+unignore <name>
+ 
+ 
+DESCRIPTION
+===========
+ 
+This command allows you to ignore certain players' tells and emotes.
+This is handy when a player (Or wizard) is bothering you and won't
+leave you alone.  This command will allow you to ignore more than
+one person as well.  If you decide at a later time that you want
+to start talking to that person again, just 'unignore <name>',
+where name is the person you want to quit ignoring. You can also
+'ignore list' to see who you are ignoring.
+ 
+ 
+ 

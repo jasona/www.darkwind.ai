@@ -1,0 +1,12 @@
+|GKO================================================================
+                         |MKBRejuvenate
+|GKO================================================================
+
+|YKORejuvenate provides a shaman the ability to heal her fellow
+brethren, Garou and Druids. This ability only works in a
+party, but will heal a small amount of HP of all Garou and 
+Druid members of said party.
+
+|WKOUsable in Form: |GKOMan                          |WKOCost: |CKO35 SP
+|WKORestricted to: |MKBShaman
+|RKOSyntax: |YKBrejuvenate

@@ -1,0 +1,13 @@
+_______________________________________________________________________________
+"Pyrokinesis"    
+        This is the staple attack power for most psionicists in the guild.
+        Unlike most other powers in the guild, it is affected by the
+        regular level of the psionicist using it. It achieves its damage
+        by attempting to psionically set the target afire. A psionicist who
+        has learned this power can also use the reverse effect, Cryokinesis,
+        which does freezing damage.
+ 
+SP Cost:  Variable      Guild Level: 14         Potential Points:  3
+ 
+Command:  pyro <target> for fire damage
+          cryo <target> for cold damage

@@ -1,0 +1,13 @@
+|CKODESCRIPTION
+|WKO===========
+ 
+|YKOQuits the game.  Immediately drops all objects in your inventory,
+saves your character, and logs you out of reality, returning you
+back to an altered form of reality which some people will try to
+fool you into thinking is the real reality.  Don't believe them.
+They are wrong.  This is reality.
+
+
+|WKBSyntax: |YKBquit
+
+|WKBSee also: |YKBsave

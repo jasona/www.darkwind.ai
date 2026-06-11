@@ -1,0 +1,11 @@
+_______________________________________________________________________________
+"Psychic Crush"            
+        This is the randomized equivalent to psionic blast, for those
+        who are feeling lucky.  It costs the same but whereas psionic
+        blast does a flat amount damage, psychic crush does a random
+        amount.  So the psionicist could get lucky and do extra damage
+        for the same amount of sp.
+ 
+SP Cost:  Variable	Guild Level:  6		Potential Points:  5
+ 
+Command:  pcrush <object>

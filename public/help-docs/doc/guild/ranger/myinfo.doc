@@ -1,0 +1,18 @@
+
+Ranger Help for: myinfo
+=======================
+
+SYNTAX: myinfo
+USAGE:  Any terrain.
+
+SUMMARY:    
+Myinfo shows a Ranger a number of important pieces of information about 
+him or herself. It shows game information, such as level, guild level, 
+experience and gold...but it also shows a Ranger information about his or
+her standing as a Ranger, such as primary and secondary terrains, the
+Ranger's current follower, and enemy species, as well as a list of skills
+learned to that point.
+
+=============================================================================
+SEE ALSO: myskills, slots and learn
+

@@ -1,0 +1,13 @@
+Ranger Help for: rcost
+======================
+
+SYNTAX:      rcost
+USAGE:       Any wilderness area.
+
+SUMMARY:
+Check the cost to advance your stats, game level, and guild level
+from anywhere in the wilderness. Shows experience and gold required
+for each advancement option.
+
+=============================================================================
+SEE ALSO: radvance, advancement, glevels

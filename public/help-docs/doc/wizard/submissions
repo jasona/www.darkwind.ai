@@ -1,0 +1,149 @@
+
+Submission Documentation for Builders
+
+The submit code handles submissions for:
+  Bugs
+  Typos
+  Ideas
+  Emotes
+  Areas
+  Unique Objects
+  Mudlib Changes
+  Guild Changes
+
+
+
+BUG/TYPO/IDEA
+
+  Bug/Typo/Idea submissions are done via the existing commands.  Bugs
+  will no longer report to a log file.  They will exist in the
+  submission daemon.  To look at the list of bugs, you will have to 
+  do the following:
+
+    listtable <bug|typo|idea> [name]
+
+  If a bug, typo, or idea has been assigned to you for coding, you may
+  be interested to list all of them assigned to you:
+
+    listassigned <bug|typo|idea>
+
+  This will list the bugs, ideas and typos for your area.  You can also
+  leave off the name arguement and see a list of these for the entire
+  mud.  Optional arguements will be the area subdirectory name:
+
+    listtable bug darkwind
+    listtable bug necro
+
+  These will list bugs for the domain of darkwind, and those reported
+  in the necro guild rooms.
+
+  To list a specific bug, you will have to note the request number of
+  the submission and then do:
+
+    lst bug <request number>
+
+  You will notice room for code, content and balance reviews for all
+  submissions.  This won't be necessary for normal bug and typo
+  submissions.  If they're in your area, you have permission to fix 
+  the issue, and then get a balance member to close the submission for
+  you.
+
+  If you want to implement a new idea for your area, you will have to 
+  resubmit the code that has changed.  This is discussed in detail,
+  later.  The idea submissions are just meant to give you ideas about
+  your area.
+
+  Lots of times players submit things that are really mudlib issues, 
+  and the bug will automatically be reported as a bug in an area.  If
+  you notice a submission that isn't meant to be in regards to your
+  area, you should mudmail a balance member, and we'll be happy to
+  change the submission as appropriate.
+
+  You also have the ability to respond to a bug, typo and idea
+  submission (only these three.)  You can enter some information that 
+  may help the player understand why something is coded in a particular
+  fashion, or you may ask for more information.
+
+    respond <bug|typo|idea> <request number>
+
+  When you do close one of these submissions, a mudmail is sent to
+  the submitter, saying:
+
+    Thanks for your <bug|typo|idea> submission.  The submission has been
+    closed, and the issue has been resolved.
+
+    -<Name of Person who closed the submission>
+
+  Note:  If you need more information about a submission, you can use 
+  the respond command to mail the player.  They can then, in turn use
+  the editbug, edittypo, editidea, or editemote commands to add more
+  information.  If the submission is assigned to anyone, when the player
+  updates it, then person to whom its assigned, will receive mudmail.
+
+
+
+How do I submit things for approval?
+
+  You use the submit command:
+
+    submit <area|unique|lib|guild|emote> <Subject>
+
+
+
+Oops!  I meant to say something else in my submission.  Can I edit it?
+
+  Sure.  Use the command:
+
+    editsub <area|unique|lib|guild|emote> <Subject>
+
+
+
+How long does this take?
+
+  The submission itself is obviously very quick.
+  Depending on the load of the balance team, usually submissions are at
+  least looked at, within a week.  By the time the submission is reviewed
+  and the appropriate fixes are made, the entire process can take up
+  to a month, for an area submission.
+
+
+
+How can I see the status of my submisson?
+
+  You can see your submission in table format:
+
+    listtable <area|unique|lib|guild|emote> <your name>
+
+  If a review has been posted, or if you want to check if there are 
+  reviews pending that you haven't read, then notice the status in
+  the output.  If the status says "Respond" then your response is
+  more current than the review.  If it says "Reviewed" then the review
+  is most current.
+
+
+
+How do I see the review of my submission?
+
+  listreview <area|unique|lib|guild|emote> <request number> [review type]
+  
+  To list just a specific review, add the review type to that command.
+
+  You can also list your responses with the listresponse command.
+
+
+
+A review has been posted, and I've made the changes.  Now what?
+
+  You should add a response to the review, indicating what changes you
+  have made:
+
+    respondrev <area|unique|lib|guild|emote> <request number>
+               <code|content|balance>
+
+
+
+What happens when my submission is approved?
+
+  An implementor can help you get your submission put into the game, as
+  appropriate.
+

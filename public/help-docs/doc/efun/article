@@ -1,0 +1,9 @@
+SYNOPSIS
+        string article(string sItem)
+
+DESCRIPTION
+        Return the string "an" if sItem begins with a vowel,
+        otherwise returns "a".
+
+SEE ALSO
+        remove_article(E)

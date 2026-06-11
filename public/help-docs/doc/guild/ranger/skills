@@ -1,0 +1,66 @@
+Ranger Help for: skills
+=======================
+
+SUMMARY:
+Rangers learn skills by spending slots and experience. Each skill has
+a slot cost (fixed) and an experience cost (varies by intelligence
+and number of guilds).
+
+HOW SKILLS WORK:
+- Skills are organized in a TREE. Learning one skill unlocks others.
+- Type 'skilltree' to see the full tree with your progress.
+- Type 'learn' to see what you can learn right now.
+- Type 'learn cost <skill>' to see exact costs and requirements.
+- Type 'learn <skill>' to learn it.
+
+SKILL BRANCHES:
+  Survival     Crafting, gathering, camping, herb mixing
+  Cartography  Navigation, scouting, terrain knowledge, mining
+  Hunting      Tracking, stealth, skinning, snares
+  Husbandry    Animal companions, calming, training
+  Attack       Melee combat techniques
+  Archery      Bow crafting, arrow enhancement, ranged specials
+
+TERRAIN BONUSES:
+Many skills work differently based on terrain. Skills used in your
+primary terrain cost less SP, have shorter cooldowns, and deal more
+damage. Your secondary terrain provides smaller bonuses. Some skills
+only work in specific terrains - use 'check <terrain>' to see what
+works where.
+
+COOLDOWN CATEGORIES:
+Ranger skills recover by category rather than all sharing one timer.
+For example, a combat maneuver will delay another combat maneuver,
+but it will not stop you from doing fieldwork or crafting. Recovery
+skills such as rest and camp tend are broader pauses.
+
+CRAFTING:
+Rangers are self-sufficient. Use 'make' to craft items:
+  make rope           Twist grasses into rope (grass terrain)
+  make torch          Carve a wooden torch (wood terrain)
+  make fish trap      Weave a trap for catching camp fish
+  make tent           Build a tent from rope + wood
+  make tools          Craft tools from rope + rock + wood
+  make satchel        Expand your wildcraft forage pouch
+  make arrow          Carve arrows from wood
+  make bolt           Carve crossbow bolts from wood
+  make bow            Carve a shortbow from wood
+  make crossbow       Carve a crossbow from wood
+  make longbow        Carve a longbow from wood
+  make trophy         Mount a trophy from a corpse
+  make snare <dir>    Set a snare trap in a direction
+
+Basic crafting flow:
+  forage -> make rope -> make tent -> camp
+  forage -> make torch (for light)
+  forage + mine -> make tools -> mine
+  skin corpse + forage -> make satchel
+  make arrow/bolt + make bow/crossbow -> archery combat
+
+STARTING OUT:
+Your first available skill is 'forage'. Learn it, then learn the
+skills it unlocks (make rope, make torch, survey). From there the
+tree branches into all six categories.
+
+=============================================================================
+SEE ALSO: skilltree, learn, slots, glevels, advancement, make, cooldowns

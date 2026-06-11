@@ -1,0 +1,13 @@
+
+|WKBSyntax: |YKBgive <object> to <player>
+        |YKBgive all <object> to <player>
+ 
+|WKBDESCRIPTION
+|WKO===========
+ 
+|YKOGive an item to a living object.
+Give all of one particular thing to a living object.
+
+       |CKBgive all swords to <player>
+ 
+|WKBSee Also: |YKBdrop, get, put

@@ -1,0 +1,16 @@
+Ranger Help for: seasonal flux
+================================
+
+SYNTAX:      flux <target>
+USAGE:       Any terrain
+SLOT COST:   9
+BASE SP:     variable
+SKILL TYPE:  religious
+
+SUMMARY:
+This skill allows a Ranger to channel the energy of the current season
+into an attack against a target. The damage type and power vary
+depending on the time of year. Spring brings poison, summer brings
+fire, autumn brings decay, and winter brings frost. A skilled Ranger
+learns to read the seasons and use their power to maximum effect.
+The damage scales with the Ranger's wisdom and guild level.

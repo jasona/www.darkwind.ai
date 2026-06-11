@@ -1,0 +1,42 @@
+|GKO================================================================
+                   |WKOGarou Guild : Pack Creation
+|GKO================================================================
+|YKOTo create a pack, you must be level 20 or higher. Additionally,
+the pack must be approved by the Garou Council. The Council
+is run by the current Garou pack leadership, with each pack 
+getting one vote on the issue of new pack creation.
+
+The first step in creating a new pack is to submit a request
+using the the |YKB'requestpack' |YKOcommand. As part of your request,
+you will have to enter a description of your pack's philosophy.
+Think carefully on this issue. This is the only place you get
+to enter your pack's philosophy. After the pack is approved and
+created, you cannot change its philosophy. Your only option
+would be to disband your pack and request/create a completely
+new one.
+
+Once a request has been completed, it is sent to the Council.
+The Council has 3 weeks to vote on the issue. At the end of
+the 3 weeks, the pack is automatically approved if it has not
+received 4 or more 'no' votes. If at any time during those
+3 weeks it becomes impossible to get 4 'no' votes, the pack
+is automatically approved. For example, if there are only 4
+packs and one has already voted 'yes', then it is impossible
+to get 4 'no' votes and the request would immediately be
+approved.
+
+Only packs which have atleast 2 members, one being a leader,
+keeper, or shaman, login within the past 45 days are eligible
+to vote. Ineligible packs can become eligible if enough members
+login before the deadline. Ineligible packs do not count as
+pending votes; thus if there are less than 4 active packs,
+any request for a new pack would automatically be approved
+since there would be no way to receive 4 eligible 'no' votes.
+The same holds true if there is simply less than 4 actual
+packs, active or not. 
+
+Once a request has been approved or rejected, a mudmail
+confirmation of the decision is automatically sent to the
+prospective leader. If the pack is approved, the Garou will
+now be able to create his/her pack by using the 'createpack'
+command.

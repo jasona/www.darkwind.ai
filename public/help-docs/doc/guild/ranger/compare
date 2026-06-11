@@ -1,0 +1,15 @@
+Ranger Help for: compare equipment
+===================================
+
+SYNTAX:      compare <item1> to <item2>
+USAGE:       Any terrain
+SLOT COST:   2
+BASE SP:     5
+SKILL TYPE:  assessment
+
+SUMMARY:
+This skill allows a Ranger to compare two pieces of equipment, either
+weapons or armor, and determine which is of higher quality. The accuracy
+of the comparison depends on the Ranger's guild level. Higher ranked
+Rangers can discern finer differences between items. Both items must
+be in the Ranger's inventory to be compared.

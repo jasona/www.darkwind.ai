@@ -1,0 +1,20 @@
+SYNOPSIS
+        string progress_meter(int iLength, int iHowMany, int iValue,
+                     int iMaxValue, string sSymbol, string *asColors)
+
+DESCRIPTION
+        This will create a bar, of max length iLength, divided into
+        iHowMany *equal* sections. Each section will be color-coded using
+        asColors for each section, in the order provided. If a color is
+        not provided for each section, it will cycle back to the first
+        color provided. The returned string will only represent the
+        percentage (iValue/iMaxValue) of the max length bar.
+
+EXAMPLES
+        progress_meter(20,4,75,100,"%",({ <C1>, <C2>, <C3> }))
+           returns: "<C1>%%%%%<C2>%%%%%<C3>%%%%%"
+
+        progress_meter(40,4,40,100,"%",({ <C1>, <C2>, <C3> }))
+           returns: "<C1>%%%%%%%%%%<C2>%%%%%%"
+
+        <Cn> being a color_code such as found in colorlist

@@ -1,0 +1,70 @@
+Player stats are fun stats that you can add and display for relatively 
+any event on DarkWind. 
+
+One rule of thumb: keep the player stats fun and light hearted. Don't
+use pstats to expose some underlying bit of information that may
+give other players tactical advantages against that player in PK.
+
+Adding player stats are really easy to do, also! 
+
+Here's how:
+
+1. Update /secure/include/playerstats.h to add your new stat. For
+   example, let's say we want to track every time a user uses the
+   spell "entangle". 
+
+   First, we'd add this to the playerstats.h file:
+
+
+#define CAST_ENTANGLE       "cast_entangle"
+
+
+   The important thing here is to make sure that "cast_entangle" is
+   unique, and not used by any other stats in this header file.
+
+   NOTE: If you are adding a guild stat, please group it under the
+   appropriate area with that guild's other stats!
+
+
+2. Update the PLAYER_STATS_STRING mapping at the bottom of the header 
+   file.
+
+
+
+
+CAST_ENTANGLE : "Entangle Spell Cast"; "Druid", \
+
+
+
+
+   This defines the label for this stat to be "Entangle Spell Cast",
+   and for it to be grouped within "Druid Stats" when displayed on
+   pstats.
+
+
+3. Now update your code where that actual event happens, and put in 
+   the hook:
+
+#include <daemons.h>
+#include <playerstats.h>
+
+
+
+
+PLAYER_STATS_D->increment_stat(this_player()->query_real_name(), 
+        CAST_ENTANGLE);
+
+
+
+
+
+4. And, finally, assuming your code from step 3 updates, update the
+   /cmds/std/_pstats.c command for it to pick up the newly added
+   stat!
+
+
+You're good to go! Your new stat is now implemented!
+
+
+See also: 9.15.1
+

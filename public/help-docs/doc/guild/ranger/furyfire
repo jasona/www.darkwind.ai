@@ -1,0 +1,16 @@
+Ranger Help for: furyfire
+=========================
+
+SYNTAX:      furyfire <target>
+USAGE:       Any terrain
+SLOT COST:   NA
+BASE SP:     80
+SKILL TYPE:  archery
+
+SUMMARY:
+This skill allows a Ranger to unleash a rapid volley of arrows from a
+shortbow, firing 3 to 4 arrows in quick succession at the target. The
+Ranger must have a shortbow wielded and at least 4 arrows in inventory.
+Each arrow is rolled individually for hit and damage. Furyfire is one
+of the most devastating ranged attacks available, but its high SP cost
+and ammunition requirements make it best saved for tough opponents.

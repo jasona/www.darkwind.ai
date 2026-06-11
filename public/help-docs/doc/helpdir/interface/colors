@@ -1,0 +1,64 @@
+|YK0SYNTAX
+======
+|YKBhelp colors|YK0
+
+|YK0DESCRIPTION
+===========
+Darkwind supports several ways to color text in places where player
+customization allows it, such as channel colors and some display settings.
+
+The traditional Darkwind color code is three characters after a | symbol.
+In the examples below, remove the space after | when using the code:
+
+  |YKB| YKB|YK0  yellow text, black background, bold
+  |YKB| RK0|YK0  red text, black background, normal
+  |YKB| XX0|YK0  reset to normal
+
+The three positions mean:
+
+  1. foreground color
+  2. background color
+  3. effect
+
+Common foreground and background letters are:
+
+  |YK0K|XX0 black     |YK0R|XX0 red       |YK0G|XX0 green
+  |YK0Y|XX0 yellow    |YK0B|XX0 blue      |YK0M|XX0 magenta
+  |YK0C|XX0 cyan      |YK0W|XX0 white     |YK0X|XX0 unchanged
+
+Common effect letters are:
+
+  |YK0B|XX0 bold      |YK0U|XX0 underline |YK0K|XX0 blink
+  |YK00|XX0 normal    |YK0O|XX0 normal
+
+Modern clients, including Darkflow, also support expanded color markup:
+
+  |YKB| [fg=#ff8800,bg=black,bold]orange bold text| 000|YK0
+  |YKB| [fg=bright-cyan,bg=black,italic]italic cyan text| 000|YK0
+
+Expanded markup allows truecolor hex values like |YKB#ff8800|YK0 and text
+effects such as italic, strikethrough, fraktur, double-underline, hidden,
+and overline when the client can display them.
+
+|YK0USEFUL COMMANDS
+===============
+  |YKBtruecolor|YK0
+    Shows gradients of common truecolor hex values from dark to bright.
+    Use this when you want to pick a specific color.
+
+  |YKBansieffects|YK0
+    Shows the ANSI text effects supported by modern terminals and Darkflow.
+    Use this when you want to test italics, hidden text, strikethrough,
+    fraktur, double underline, overline, and related effects.
+
+  |YKBcolor|YK0
+    Sets channel colors. See |YKBhelp color|YK0 for syntax.
+
+  |YKBset term|YK0
+    Sets your terminal type. See |YKBhelp set|YK0 for more settings.
+
+|YK0NOTES
+=====
+Not every telnet client displays every color or text effect the same way.
+If something looks strange, try |YKBtruecolor|YK0 and |YKBansieffects|YK0 from
+your current client to see what it supports.

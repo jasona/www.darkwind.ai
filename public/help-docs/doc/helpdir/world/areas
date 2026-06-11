@@ -1,0 +1,17 @@
+|YKOUsage: |YKBareas|YKO
+       |YKBareas <world or region>|YKO
+       |YKBareas level <number>|YKO
+       |YKBareas search <word>|YKO
+       |YKBareas info <number>|YKO
+
+The areas command lists public cataloged places to explore. Areas are grouped
+by world and region, such as |WKOGeshtai / Darkwind|YKO, |WKOGeshtai / Hyperborea|YKO,
+or |WKODailos / Dailos|YKO.
+
+Use |YKBareas search <word>|YKO to find places by name, tag, note, world, or
+region. After any list or search, use |YKBareas info <number>|YKO to see more
+detail about that area.
+
+The level range is a rough guide based on cataloged monster levels. Some
+places contain unusual monsters, bosses, puzzles, or variable-level creatures,
+so explore carefully.

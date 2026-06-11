@@ -1,0 +1,20 @@
+Ranger Help for: tip arrow
+===========================
+
+SYNTAX:      goldtip arrow
+             goldtip bolt
+             silvertip arrow
+             silvertip bolt
+             tip arrow gold
+             tip bolt silver
+USAGE:       Any terrain
+SLOT COST:   NA
+BASE SP:     15
+SKILL TYPE:  archery
+
+SUMMARY:
+This skill allows a Ranger to tip an arrow or bolt with a gold or
+silver nugget, creating precious metal-tipped ammunition. The Ranger
+needs ammo and a nugget, usually obtained from mining. Gold-tipped ammo
+is especially accurate, while silver-tipped ammo is useful against
+creatures vulnerable to silver.

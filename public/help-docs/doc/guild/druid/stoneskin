@@ -1,0 +1,15 @@
+|GKB-- Stoneskin -------------------------------------------------|000
+
+This Tellurian invocation will make the subject's skin
+as hard as granite, granting him increased protection
+in combat.
+
+(Note: You do not have to wear the stoneskin object.
+It protects you automatically.)
+
+|CKBCommand:      |000 stoneskin <target> (defaults to caster)
+|CKBBase Cost:    |000 60 Tellurian nwyfre
+|CKBBase Recovery:|000 medium
+|CKBBase Effect:  |000 protection (moderate)
+|CKBBase Duration:|000 long
+|CKBGuild Level:  |000 3

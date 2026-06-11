@@ -1,0 +1,53 @@
+Okay, here's a listing of the Samurai skills:
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+Guild Level 1 = Soul Focus     'sfocus'
+
+Guild Level 2 = Meditation     'meditate'
+
+Guild Level 3 = Soul Stare     'sstare <target>'
+
+Guild Level 4 = Size Up       'size <target>'
+
+Guild Level 5 = Sword Whirl   'whirl <target>'
+
+Guild Level 6 = Charge        'charge <target>'
+
+Guild Level 7 = Harden Ki     'harden'
+
+Guild Level 8 = Mind's Eye    'eye <target>'
+
+Guild Level 9 = Slice         'slice <target>'
+
+Guild Level 10 = Compromise    'compromise'
+
+Guild Level 11 = Slash        'slash <target>'
+
+Guild Level 12 = Quick draw (ikiado)  'qdraw <target>'
+
+Guild Level 13 = Surrounded Fighting  'sfight'
+
+Guild Level 14 = Hamstring    'hstring <target>'
+
+Guild Level 15 = Tsunami      'tsunami <target> <SP's to spend>'
+
+
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+Guild Level 50 (Lord) = 'addhonor <target>'
+                        'takehonor <target>'
+                        'checkhonor <target>'
+                        'adopt <target>'
+                        'Kick <target>'
+
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+
+Guild Level 100 (High Lord) = 'promote <target>'
+                      'demote <target>'
+                      ...and all Lord commands as well...
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-

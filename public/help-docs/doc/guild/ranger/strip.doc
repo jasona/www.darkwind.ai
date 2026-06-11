@@ -1,0 +1,17 @@
+
+Ranger Help for: strip
+======================
+
+SYNTAX:      strip <target>
+USAGE:       Any terrain
+SLOT COST:   10
+BASE SP:     50 sp
+SKILL TYPE:  defensive
+
+SUMMARY:    
+This skill allows a Ranger to attempt to strip an opponent's weapon from
+them. Both of the Ranger's hands must be free in order to strip the 
+weapon away. If the target is wielding two weapons, only one will be
+stripped and which one you strip is random, depending on which one the
+Ranger gets his or her hands on first.
+

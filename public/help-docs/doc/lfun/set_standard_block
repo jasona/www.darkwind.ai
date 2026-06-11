@@ -1,0 +1,25 @@
+void set_standard_block(int ibBlock, int iTicks, string sEffectId,
+  string sStart, string sStop)
+
+  An lfun that will set the standard blocks we use on the mud.
+  See /open/INCLUDE/blocks.h for the list. You must #include <blocks.h>
+  when using set_standard_block.
+
+  ibBlock is the block or blocks you are setting (eg BLK_BLIND|BLK_PARALYZE).
+  iTicks is the number of seconds the block will be set (the function
+    will round up to the next multiple of 2).
+  sEffectId is the unique name of your effect. Without a unique name,
+    you run the risk of the default id being overwritten by other
+    effects without names as well.
+  sStart and sStop are messages relayed to the object having the block
+    set, and to the room. If the string doesn't end with \n, the function
+    will add it. If either/both are not set, the function will use the
+    default messages (eg. You have been blinded. / You are no longer blind.).
+
+  Example:
+    oTarget->set_standard_block(BLK_PARALYZE|BLK_BLIND, 2,
+      "test_block_id","$N $vpoke $no in the eye, before throwing \
+out $p back.","$N $vrecover from $p self-inflicted ordeal.");
+
+** Note: if you have more than one block set, sStop will be
+         used for each block.

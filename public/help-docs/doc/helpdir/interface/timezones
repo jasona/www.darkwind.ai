@@ -1,0 +1,17 @@
+|YKOTime zones are based on GMT (Greenwich Mean Time)
+
+|WKOHST       Hawaiian Standard Time             Honolulu      GMT - 10
+AKST      Alaska Standard Time               Anchorage     GMT - 9
+PST       Pacific Standard Time              Los Angeles   GMT - 8
+MST       Mountain Standard Time             Phoenix       GMT - 7
+CST       Central Standard Time              Dallas        GMT - 6
+EST       Eastern Standard Time              Detroit       GMT - 5
+NST       Newfoundland Standard Time         St. John's    GMT - 3.5
+GMT       Greenwich Mean Time                London        GMT
+CET       Central Europe Time                Paris         GMT + 1
+EET       Eastern Europe Time                Helsinki      GMT + 2
+AWST      Australian Western Standard Time   Perth         GMT + 8
+ACST      Australian Central Standard Time   Darwin        GMT + 9.5
+AEST      Australian Eastern Standard Time   Brisbane      GMT + 10
+
+|YKOThe machine hosting Darkwind is in the Eastern Standard timezone (GMT - 5)

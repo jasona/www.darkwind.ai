@@ -1,0 +1,8 @@
+SYNOPSIS
+        string format_time(int iTime)
+
+DESCRIPTION
+        Converts iTime into Wdays Xhours Yminutes Zseconds format.
+EXAMPLES
+        format_time(4332432564) ->
+         "433 day(s), 15 hour(s), 1 minute(s) and 8 second(s)"

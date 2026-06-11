@@ -1,0 +1,8 @@
+/doc/attribute/see_invis
+
+Format: (Living_Object)->set_attribute("see_terrain", tValue);
+
+Description:
+  See terrain will allow the Living_Object to see a list of
+  terrains after the query_short of the room. tValue would be
+  1 or 0.

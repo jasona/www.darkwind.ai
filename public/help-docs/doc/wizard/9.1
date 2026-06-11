@@ -1,0 +1,217 @@
+                                                               Rev. 0
+
+                        Populations General Description
+                      ===================================
+
+
+Introduction:
+------------
+
+Populations are a means for keeping track of groups of objects,
+usually NPCs, and refreshing the population via a generic 
+generation facility. With a population, you can have a group of
+wandering monsters in your area keep its numbers up without
+having to make them all unique objects.
+
+
+
+Concepts
+--------
+
+A population is a group of objects, and is held by a POPULATION
+object as defined in <mudlib.h>. The population has a key that
+should be unique on the mud, a set of filenames to clone when
+the population needs refreshing, a set of generators for creating
+the clones when necessary, and a number of parameters governing
+refresh time and so forth.
+
+The population should be created by a single room or object that
+will persist. That object doesn't need to keep track of the 
+population; it just needs to create it. The POPULATION_D is 
+tasked with tracking population objects.
+
+A generator is an object that places a newly created member of
+the population somewhere, like in a room or other object. There
+is a generic generator (ROOM_GENERATOR) that places new objects
+in a particular room and prints a message to everyone in the 
+room.
+
+Files creating and configuring population objects should include
+<population.h>.
+
+Basic Functionality
+-------------------
+
+POPULATION:
+void set_key_name(string name)
+- Set the name that the population daemon will use to track 
+  the population.
+
+string query_key_name()
+- Queries the name.
+
+void add_object_file(string filename)
+- Adds an object file to the list of files that can be cloned
+  when refreshing the population. A population can be configured
+  to pick one object file randomly when refreshing, or sequence
+  through the object files one by one.
+
+void remove_object_file(string filename)
+- Removes the filename from the object file list.
+
+void add_generator(object generator)
+- Adds a generator to the list of generators to use when 
+  refreshing the population. A population can be configured
+  to pick one generator randomly when refreshing, or sequence
+  through the generators one by one.
+
+void remove_generator(object generator)
+- Removes the generator from the generator list.
+
+void set_clone_type(int type)
+- POP_CLONE_RANDOM or POP_CLONE_SEQ. RANDOM will choose one
+  of the object files randomly when it needs to clone an
+  object. SEQ will sequence through the object files in
+  order, and start over at the beginning, as objects are
+  cloned.
+
+void set_generate_type(int type)
+- GEN_CHOOSE_RANDOM or GEN_CHOOSE_SEQ. RANDOM will choose one
+  of the generators randomly when it needs to generate an
+  object. SEQ will sequence through the generators in order,
+  and start over at the beginning, as objects are cloned.
+
+void set_auto_check(int auto)
+- If auto check is on, the population object will check its
+  list of objects that it has created, determining if the
+  object has been destructed or not. Without auto check,
+  the objects must alert the population object manually
+  with remove_population_object.
+
+void set_min_number(int min)
+- Set the minimum number of objects that should be in 
+  the population. When the number falls below the minimum,
+  the population will use the generators to create new
+  population members.
+
+void set_update_interval(int secs)
+- Sets how long between checks for population refreshes.
+
+int query_update_interval()
+- Query how long between checks for population refreshes.
+
+int query_generate_seq()
+- Queries the index of the last generation sequence. Only
+  useful if GEN_CHOOSE_SEQ was used.
+
+int query_clone_seq()
+- Queries the index of the last cloning sequence. Only
+  useful if POP_CLONE_SEQ was used.
+
+void add_population_object(object obj)
+- Add an object to the population for tracking. Necessary
+  only if you wish to add objects manually.
+
+void remove_population_object(object obj)
+- Remove an object from the population. Necessary only if
+  you are not using auto check.
+
+object *query_object_clones()
+- Returns a list of the current objects in the population.
+
+Generators:
+Basically, any object that has a "void generate(object obj)"
+function can be a generator. It should take the object and
+do whatever is necessary to enter the object into the game,
+like place it in a room or something similar. The generator
+can also perform additional setup of the generated object,
+if desired.
+
+There is a generic room generator (ROOM_GENERATOR) that
+will place generated objects in a given room, and print
+a defined message to all occupants of the room. It has
+the following interface:
+
+void set_room(string filename)
+- Sets the filename of the room where the objects will be
+  placed.
+
+void set_room_message(string msg)
+- Sets the message that will be printed to the room when
+  the newly generated object is moved there.
+
+Population daemon:
+The population daemon (POPULATION_D) tracks all of the
+populations on the mud. If a population is added of the
+same key as an existing population, the current population
+members will be moved to the new population, and the old
+population object will be destructed.
+
+If the population daemon is updated, all current populations
+will be destructed and lost.
+
+void add_population(object pop)
+- Adds the population to the tracking system, and calls
+  startup() on it to initiate the refreshing call_out.
+
+void remove_population(string key)
+- Removes the population of that key and destructs it.
+
+
+Example
+-------
+The following code will create a population that randomly 
+selects between two types of baby demons when a population
+of baby demons falls below 12. The refresh check is made
+every 2 minutes. The two rooms, forest6 and forest8, will
+be selected between in order when a new baby demon is
+created.
+
+  object pop, gen;
+  string str;
+
+  pop = clone_object(POPULATION);
+  pop->set_key_name("malraux.newbie.demon");
+  pop->set_clone_type(POP_CLONE_RANDOM);
+  pop->set_generate_type(GEN_CHOOSE_SEQ);
+  pop->set_auto_check(1);
+  pop->set_min_number(12);
+  pop->add_object_file(MALNEWBIE + "obj/babydemon1");
+  pop->add_object_file(MALNEWBIE + "obj/babydemon2");
+  pop->set_update_interval(120);
+
+  str = "\
+The obscene flesh quivers suddenly. A quivering slit opens in the side\n\
+of the mound, showing a purplish interior. A small figure is pushed out,\n\
+and a new demon is born.\n";
+
+  gen = clone_object(ROOM_GENERATOR);
+  gen->set_room(MALNEWBIE + "forest6");
+  gen->set_room_message(str);
+  pop->add_generator(gen);
+
+  gen = clone_object(ROOM_GENERATOR);
+  gen->set_room(MALNEWBIE + "forest8");
+  gen->set_room_message(str);
+  pop->add_generator(gen);
+
+  POPULATION_D->add_population(pop);
+
+
+Files
+-----
+/objects/population/population.c
+- Population object.
+
+/objects/population/room_generator.c
+- Generic room generator object.
+
+/secure/daemons/population_d.c
+- Tracks all populations.
+
+
+Revision History:
+-----------------
+
+Rev. 0 - Malraux: Initial release
+

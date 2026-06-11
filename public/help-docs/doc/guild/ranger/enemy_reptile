@@ -1,0 +1,16 @@
+
+Ranger Help for: enemy reptile
+==============================
+
+SUMMARY:
+Choosing reptile means your Ranger specializes against snakes, lizards,
+crocodiles, turtles, and other cold-blooded scaled creatures.
+
+This is useful across swamps, deserts, jungles, beaches, plains,
+mountains, and underground areas.
+
+COMMAND:
+  setenemy reptile
+
+=============================================================================
+SEE ALSO: enemy, setenemy and terrains

@@ -1,0 +1,83 @@
+|WKBSYNTAX
+======
+|YKBalias list
+alias <alias>
+alias <alias> <command>
+talias list
+talias <talias>
+talias <talias> <player>
+
+|WKBHELP - ALIAS
+============
+|WKOThe |YKB"alias" |WKOcommmand allows you to abbreviate commonly used commands
+to make them quicker and simplier to use. The commands usable with
+alias are as follows:
+
+|YKBalias list      |WKOsimply shows you all the aliases you currently have
+                saved. You may have up to 200 different
+                aliases at any given time.
+
+|YKBalias <alias>   |WKOThis displays the setting for alias <alias> from your list
+                of valid aliases.
+
+|YKBalias remove <alias>
+                |WKOThis removes the alias <alias> from your list of valid
+                aliases.
+
+|YKBalias <alias> <command>
+                |WKOThis command is how you actually set your alias. Instead
+                of trying to give you some fancy explanation, I think it
+                would be much easier to just give you some examples.
+
+examples:       |YKB"alias ga get all" |WKOenables you to type in |YKB"ga" (without
+                the quotes), and pick up everything that you can hold in
+                the room.
+
+                |YKB"alias la look at" |WKOenables you to type in
+                |YKB"la <something>" (|WKOagain, without the quotes and the
+                <>'s), and you will then look at that object.
+
+                You can set an alias to do multiple things by using the
+                |YKB'script' |WKOcommand.  |YKB"alias twon script n,n" |WKOwould move
+                you two spaces north. |YKB'help script' |WKOfor more info.
+HELP - TALIAS
+=============
+The |YKB"talias" |WKOcommand stands for 'tell alias.'  It is used to shorten
+players names which you use frequently. The syntax is similar to that of
+the |YKB"alias" |WKOcommand. This can be used when you are talking to people via
+the tell command, and also when you are performing an emotion at someone.
+An explanation of the different talias commands follows:
+
+|YKBtalias list     |WKOSimply shows all the taliases you currently have saved.
+                You may have up to 200 different taliases
+                at any given time.
+
+|YKBtalias <talias> |WKOThis displays the setting for talias <talias> from your list
+                of valid taliases.
+
+|YKBtalias remove <talias>
+                |WKOThis removes the talias <talias> from your list of valid
+                taliases.
+
+|YKBtalias <talias> <person>
+                |WKOThis command is how use actually set your talias. Instead
+                of trying to give you some fancy explanation, I think it
+                would be much easier to just give you some examples.
+
+examples:       |YKB"talias nf nightflyer" |WKOadds a talias for 'nf' to be
+                Nightflyer. You may now type |YKB"gwave nf" |WKOinstead of
+                |YKB"gwave nightflyer"|WKO, and you will wave in greeting to
+                Nightflyer.
+
+                This also works in combination with regular aliases.
+                Assume that you have an |YKB"alias t tell" |WKOand a
+                |YKB"talias nf nightflyer"|WKO.  Now you can |YKB"t nf Hi."|WKO and
+                Nightflyer (assuming he's logged on, of course!) will see
+                you say "Hi." to him!
+
+See Also
+--------
+|YKBclearaliases
+
+|WKOCommands you can not alias:
+|YKBdrop, get, equip, unequip, wear, keep, take |WKOor |YKBunwield

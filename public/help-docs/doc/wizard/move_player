@@ -1,0 +1,51 @@
+This function is messed up enough that it needs its own documentation.
+
+nomask varargs void move_player(string sDirDest, string sDest, string sArrive)
+
+OK, sDirDest can be one of several things:
+
+1) direction#destinationFileName
+2) direction only, if sDest has the filename
+3) !msgout#destinationFileName
+4) !msgout only, if sDest has the filename
+
+But, it gets better.
+
+If 1) or 2), then the message printed to the room being left
+is query_msgout... UNLESS 'direction' is 'X', in which case it
+uses query_mmsgout. If 3) or 4), the the message is the msgout
+portion of sDirDest. In any case, if the direction isn't X and
+doesn't begin with !, it is substituted for $D in the entrance
+message.
+
+Now, on to sArrive.
+
+1) direction
+2) !msgin
+
+If the direction portion of sDirDest is 'X', then query_mmsgin
+is used as the entrance message to print to the room the person
+is arriving in. Otherwise, if sArrive is a direction, then the
+query_msgin message is used with sArrive being substituted into
+$D. If sArrive is missing, then the code figures out which exit
+in the current room leads back to the previous room, and that is
+substituted for $D. If sArrive begins with !, then all of the above
+is scrapped and sArrive is used for the incoming message.
+
+Does your head hurt now? Good. Just be glad you didn't have to 
+rewrite the damned thing like I did, while still maintaining
+backwards compatibility.
+
+-mal 2002-03-26
+
+
+The following is an example using messages for leaving and arriving
+in the new room.  The ! strip out all min and mout messages that
+would have been included, so only the specified strings get sent
+to the room.
+
+this_player()->move_player("!"+this_player()->query_cap_name()+ \
+" leaves through the 'Dionysus' door.", AREA_MYTHOS_ROOM_DIR+ \
+"temple_1", "!"+this_player()->query_cap_name()+" steps out \
+ of the shadows.");
+

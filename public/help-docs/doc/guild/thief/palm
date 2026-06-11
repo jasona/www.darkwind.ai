@@ -1,0 +1,11 @@
+                       |BKB-= |CKBPalm |BKB=-
+               
+|MKOThis command allows you to pick up items without anyone else
+knowing you picked them up.  It costs a mere 20sp, and works
+exactly like "get" or "take". Also can use the "palm all". 
+A Thief must always be the master of deception, so quickly 
+palm that item and don't let others see you've picked it up. 
+
+
+|CKOGLVL required: |GKB4
+|CKOSyntax: |YKOpalm <item/all>               |CKOCost: |WKO10

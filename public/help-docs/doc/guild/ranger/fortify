@@ -1,0 +1,18 @@
+Ranger Help for: fortify
+========================
+
+SYNTAX:      fortify <direction>
+USAGE:       forest,plains,swamp,desert,jungle,hills,road,beach,
+             underground,mountain,arctic,barren
+SLOT COST:   5
+BASE SP:     30
+SKILL TYPE:  defensive
+
+SUMMARY:
+This skill allows a Ranger to gather materials from the surrounding
+terrain and build a blockade or barricade in one direction, providing
+defensive advantages. The blockade can be circumvented by trashing it,
+allowing passage. How strong the blockade is and how much of a beating
+it can take depends on how proficient the Ranger is at building them.
+Other Rangers can pass through blockades freely, since they understand
+the nature of such constructions.

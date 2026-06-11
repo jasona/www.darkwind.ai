@@ -1,0 +1,17 @@
+Ranger Help for: call follower
+================================
+
+SYNTAX:      call
+USAGE:       Any terrain
+SLOT COST:   5
+BASE SP:     20
+SKILL TYPE:  husbandry
+
+SUMMARY:
+This skill allows a Ranger to summon their bonded animal follower to
+their side, regardless of where the follower currently is. The follower
+will make its way to the Ranger as quickly as it can. The Ranger must
+have previously bonded with a follower for this skill to work. If the
+follower has died and the Ranger has not yet called a new one, this
+skill will attempt to attract a new companion based on the Ranger's
+primary terrain.

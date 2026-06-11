@@ -1,0 +1,13 @@
+Consider - information skill
+------------------------------------------------------------
+Swashbucklers are able to consider an opponent with a fair
+degree of accuracy.  Relative experience, weapon strength,
+and physical ability will be determined, as well as relative
+armor strength.  At higher guild level, ethical behavior may
+be determined, and there is a chance that the monster's
+weaknesses will be found.
+
+GL:  1
+SP:  5
+command:  sconsider <target>
+duration: instant

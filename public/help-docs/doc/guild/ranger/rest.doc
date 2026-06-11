@@ -1,0 +1,17 @@
+
+Ranger Help for: rest
+=====================
+
+SYNTAX:      rest
+USAGE:       forest,plains,swamp,desert,jungle,hills,inside,beach,
+             underground,mountain,arctic,barren,outside
+SLOT COST:   7
+BASE SP:     35 sp
+SKILL TYPE:  aid
+
+SUMMARY:    
+When a Ranger rests, he or she finds a cozy spot in the wilderness and
+lies down for a good nap. While resting, the Ranger heals at an
+increased rate, but he or she can't do or see anything. Length of resting
+periods is variable and theres is no way to break it.
+

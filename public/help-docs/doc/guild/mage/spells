@@ -1,0 +1,81 @@
+This is a list of all the spells/commands for the Guild of the Magi listed
+by Guild Level.
+ 
+General Powers
+==============
+mage/m/ma <msg>
+emage/em/ema <emotion>
+magi/mages
+magehelp [<topic>]/mh [<topic>]/helpmage [<topic>]
+magebug <bug>
+gtitle
+titleme
+ 
+Guild Level 1
+=============
+blaze <direction>
+detect
+analyze <object>
+missile [<target>]
+ 
+Guild Level 2
+=============
+find <target>
+illuminate
+ 
+Guild Level 3
+=============
+fireball [<target>]
+ 
+Guild Level 4
+=============
+icestorm
+insane [<target>]
+ 
+Guild Level 5
+=============
+tport [<remember><list><forget><#>]
+mbarrage [<lightning><fireball><icestorm><off>]
+ 
+Guild Level 6
+=============
+meye <direction>
+armor
+ 
+Guild Level 7
+=============
+bolt [<target>]
+ 
+Guild Level 8
+=============
+levitate
+ 
+Guild Level 9
+=============
+munlock <direction>
+ 
+Guild Level 10
+==============
+phase [<target>]
+
+Guild Level 11
+==============
+gate <<item> to <person>>
+
+Guild Level 12
+==============
+inferno
+ 
+Guild Level 13
+==============
+powerup
+
+Guild Level 14
+==============
+wrath [<target>]
+ 
+Guild Level 15
+==============
+gmage <msg>/gm <msg>
+gmage <emotion>/egm <emotion>
+touch [<target>]

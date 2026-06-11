@@ -1,0 +1,16 @@
+Ranger Help for: bio
+====================
+
+SYNTAX:      bio
+             bio <text>
+USAGE:       Anywhere.
+
+SUMMARY:
+View or set your personal Ranger biography. Your bio is a short
+description of your character's background. Without an argument,
+shows your current bio. With text, sets a new bio (max 500 chars).
+
+Also accessible as 'myinfo'.
+
+=============================================================================
+SEE ALSO: motto, rangers

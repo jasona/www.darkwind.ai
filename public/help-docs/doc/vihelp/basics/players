@@ -1,0 +1,22 @@
+Players.
+
+Use players to list other visible players in your current room.
+
+The command does not include you in the list. It only reports other player
+characters that you can currently see.
+
+Common forms:
+
+players
+  List other visible players in the room.
+
+look <player>
+  Look more closely at a player from the list.
+
+say <message>
+  Speak to everyone in the room.
+
+tell <player> <message>
+  Send a private message to a player.
+
+Invisible players or players hidden from you may not appear.

@@ -1,0 +1,40 @@
+|WKBClans: Warfare
+|WKO---------------
+
+|YKOThe clan system allows two clans to agree to go to war with each other.
+This decision is made by the leader of each clan. All wars are set
+in duration, with the smallest war allowed being 3 days. Please read
+the information in |YKB"help clan_cmds" |YKOfor details about starting a war.
+
+Once a war starts, it is impossible to initiate new members into the
+clan and current members of the clan aren't allowed to leave. There
+are no exceptions to this rule.
+
+During a war, clans gain points. The points are gained by killing
+members of the opposing clan.
+
+The number of points awarded per kill is largely based by the level
+difference between the killer and the victim. Members who kill
+enemies of greater or equal level than themselves receive more points
+than members who kill enemies at lower levels. A clan is much more
+likely to win a war if everyone goes after the hardest opponent they
+can successfully kill, rather than going after the weakest opponent
+over and over.
+
+During a war clan members can look at ongoing war statistics via
+the |YKB'cstat' |YKOcommand. After a war, a variety of details are saved
+and can be accessed via the |YKB'cwar' |YKOcommand.
+
+There is no way to stop a war early. Once a war starts, the clans
+involved must deal with it. As mentioned in |YKB'help clans'|YKO, normal
+PK status is ignored during a war. Non-PKers can, and will, be
+killed during a clan war. Of course, Non-PKers can kill as well. During
+a low-risk clanwar, you will not lose level, stats, etc. During a 
+high-risk clanwar, deaths will be treated as if you were actually
+PK.
+
+Enjoy, and may the best clan win.
+
+Please see |YKB"help clans" |YKOfor a basic overview.
+Please see |YKB"help clans basics" |YKOfor a more detailed intro to clans.
+Please see |YKB"help clans cmds" |YKOfor clan command information

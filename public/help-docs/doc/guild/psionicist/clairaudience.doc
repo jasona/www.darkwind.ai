@@ -1,0 +1,10 @@
+_______________________________________________________________________________
+"Clairaudience"    
+        This places a "presence" in a room.  The presence is like a
+        monster which can neither attack nor be attacked and it will tell
+        whatever it "hears"  to the psionicist.  Note:  the presence IS
+        visible so it is not a means of invading privacy.
+ 
+SP Cost:  30        Guild Level:  2     Potential Points:  1
+ 
+Command:  clairaudience <target>  |  endaudience  (To end early)

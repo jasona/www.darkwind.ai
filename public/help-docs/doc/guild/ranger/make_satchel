@@ -1,0 +1,21 @@
+Ranger Help for: make satchel
+==============================
+
+SYNTAX:      make satchel
+USAGE:       Wilderness
+SLOT COST:   NA
+BASE SP:     30
+SKILL TYPE:  survival
+
+SUMMARY:
+This skill allows a Ranger to expand their wildcraft forage pouch.
+The Ranger needs 3 hide scraps, 2 sinew, and 2 binding fiber. Hide
+scraps and sinew come from skinning corpses, while binding fiber comes
+from forage.
+
+If your pouch is full before you have the right materials, use
+'forage stores' to see what is taking space and
+'forage discard <component> [amount]' to throw away spare supplies.
+
+Each successful upgrade increases wildcraft capacity, up to the
+maximum a Ranger can maintain in the field.

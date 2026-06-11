@@ -1,0 +1,14 @@
+
+|WKBUsage: |YKB'buffs'|YKO or |YKB'clearbuff'
+
+    buffs     |WKB- |YKOLists your active buffs.
+                * Not all buffs are visible to the system.
+
+    |YKBclearbuff |WKB- |YKOAllows you to remove one of your current buffs.
+                The |YKB' clearbuff all' |YKOoption removes all buffs.
+
+    Debuffs, such as curses, hexes, or lingering poisons, appear under
+    their own header in |YKB'buffs'|YKO. They cannot be removed with
+    |YKB'clearbuff'|YKO. Debuffs expire on their own, or via cures and
+    dispels designed for them. Wizards may use |YKB'dispelall'|YKO for
+    stuck debuffs.

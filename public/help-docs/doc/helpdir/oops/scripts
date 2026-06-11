@@ -1,0 +1,72 @@
+After many warning shouts and messages I am going to formally
+post about the use of clients for scripting.
+
+Definition
+----------
+
+In the eyes of the admin a script is the use of some sort of
+terminal assistance program/code that will allow the user
+of DW to execute multiple mud commands that require multiple
+<enter>'s with just one command and <enter> by the user of the
+terminal program.  Scripts do not include guild abilities or
+the built in scripting ability of the mud.
+
+Built-in Scripting
+------------------
+
+The built in script command may be used to run short, comma-separated
+command lists. It also supports pacing a command with
+delay <seconds> <command> or delay <seconds>s <command>, such as:
+
+  script look,delay 5s north,look
+
+Each delayed step may wait up to 60 seconds, and a single script may
+contain up to 300 total seconds of delay.
+
+Examples
+--------
+
+The following are examples of what we consider scripting.  This
+is in no way an all inclusive list.
+
+ - Using a command such as 5e in a client program to move you
+   5 square east.
+
+ - A single command that will burn a corpse and take everything that
+   was on the corpse.
+
+ - A single command that will take you from for example COT to
+   hyper.
+
+Justification
+-------------
+
+Everyone here hates lag.  Scripts are the major causes of LAG here
+on DW.  Some may ask how a script causes lag.  Remember that the
+mud can execute only one command at a time.  When a player has a 
+computer enter multiple commands as fast as the computer can these
+commands get queued up in the driver until they are executed.  These
+commands get issued faster than the mud can process them.  When 
+multiple people use scripts the queue grows larger and larger until
+the mud's driver can catch up with it.  To the normal user, this
+person must wait until his turn in the queue get issued.  Hence, 
+to this person is a sense of lag.
+
+Punishment
+----------
+
+Currently the punishment for the first offense in the the use of
+scripting as determined by nthe admin of DW is loss of 1 lvl, 1 
+of each stat, and twice as much exp has the player has on hand.  
+This may change to half the players levels, half the stats, and
+twice the EXP on hand.  Repeated offenses will be dealt with
+by banishment.  Such punishment can be dealt as deemed necessary
+by the admin of DW.
+
+Conclusion
+----------
+
+Please do not ruin the fun of all on DW with scripting.  All it
+does is ruin the fun for us all.  The administration of Darkwind
+also frowns upon the use of clients which are capable of executing
+scripts, for obvious reasons.

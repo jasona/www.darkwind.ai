@@ -1,0 +1,665 @@
+
+                                                                          Rev. 2
+
+                         |CKBCoding Monsters
+                        |BKB ===============
+
+Purpose
+|BKB=======
+
+|WKOThe purpose of this doc is to explain how to properly code monsters in
+Dakrwind.
+
+
+|CKBInstructions
+|BKB============
+
+|WKOThe first three lines in any monster object should be:
+
+|YKO#include <mudlib.h>
+#include <types.h>
+inherit MONSTER;
+
+  |WKOThese lines set up the object to be a monster object and will allow
+  calls to the monster master object as defined below.
+  Additionally, in the reset() function, before calling ::reset(iArg),
+  you should enter the following line:
+
+|YKOif(!is_clone(this_object())) return;
+
+  |WKOThis is a memory-saving measure.  The only time this line should
+  not be entered is when the monster needs to refer to the master
+  object for some reason.
+
+|BKB-----------------------------------------------------------------
+
+
+|GKBset_name("name");
+
+  |WKOstring name.  This is a name for the object.
+  Also sets the alignment to 0, capitalizes the string you pass
+  into set_name and sets the cap_name and short_desc to that, and
+  the long description to "You see nothing special.\n"
+
+|BKB-----------------------------------------------------------------
+|GKBset_level(level);
+
+  |WKOint level.  This function serves many purposes:
+
+  |BKB- |GKOSets the monster's level according to level.
+  |BKB- |GKOSets the monster's intrinsic AC to 10/3 of level.
+        Intrinsic AC is defined as that of the monster's "skin"
+        (or scales, or hide, or whatever).  This number will be
+        added to any armour which you may clone onto the monster
+        and make it wear.
+  |BKB- |GKOSets the monster's hit points to the max of the result of the
+        following equations:
+            42 + (Con * 8)
+                or
+            (Con + 5) * (Con + 5).
+  |BKB- |GKOSets the monster's spell points to the result obtained from the
+        hit points calculation.
+  |BKB- |GKOSets the monster's experience points by getting the number from
+        "/domains/darkwind/maincity/adv_guild"
+
+
+|MKBNOTE: |GKBIt is important to call these two functions first.  Since these
+      functions set up many of the monster's stats, if you call these
+      functions after you call the ones below, then these functions
+      will override those explained below (only if you call them
+      afterwards.)
+
+      |WKOI should also note that because these two functions set all of
+      the monster's necessary stats, the remaining functions are all
+      optional.
+
+|BKB-----------------------------------------------------------------
+|GKBset_alias("alias");
+
+  |WKOstring alias.  This is another name for the monster.  It doesn't
+  appear anywhere, but it can be used by the player.
+
+|BKB-----------------------------------------------------------------
+|GKBset_alt_name("alt_name");
+
+  |WKOstring alt_name.  This is another name for the monster.  It doesn't
+  appear anywhere, but it can be used by the player.
+
+|BKB-----------------------------------------------------------------
+|GKBset_aliases(aliases);
+
+  |WKOstring array aliases.  Causes the monster to identify to any of
+  the strings in the argument array.
+
+|GKBadd_alias("alias");
+
+  |WKOstring alias.  Adds alias to the array of strings which the monster
+  identifies to.
+|BKB-----------------------------------------------------------------
+|GKBset_race("race");
+
+  |WKOstring race.  This is another name for the monster.  It doesn't
+  appear anywhere, but it can be used by the player.  The race
+  is also often used in dir_hooks in rooms as an identifier for
+  the monster. See |MKO/open/INCLUDE/monster_race.h |WKOfor currently
+  available races.
+|BKB-----------------------------------------------------------------
+|GKBset_short("short");
+
+  |WKOstring short.  This is the description seen when the player
+  walks into the room, looks at the room, or glances.
+  Sets the short description of the monster to short and the long
+  description to the short description + ".\n"
+|BKB-----------------------------------------------------------------
+|GKBset_long("long.\n");
+
+  |WKOstring long.  Sets the long description of the object to long.
+  I added the ".\n" in the LPC line above to remind you that you
+  should add the period and newline in the long description
+  because LPC doesn't add it in for you.  This is what the player
+  will see when they look at the monster.
+|BKB-----------------------------------------------------------------
+|GKBset_size(SIZE);
+
+  |WKOThis sets the size of the monster and is mandatory.  For backwards
+  compatablility reasons though, if the line is not in the monster,
+  it will default to a size of SIZ_MEDIUM.  Legal sizes are:
+
+  |YKOSIZ_NONE   SIZ_TINY   SIZ_SMALL   SIZ_MEDIUM  SIZ_LARGE  SIZ_HUGE
+
+  |WKOExamples of sizes are:
+
+  |YKOSIZ_NONE: |WKOUsed for monsters that don't leave corpses when they die.
+            E.g. Ghosts, Air Elementals, etc.
+  |YKOSIZ_TINY: |WKOButterflys, Goldfish, Mice, Rats, etc.
+  |YKOSIZ_SMALL: |WKORacoons, Dogs, Cats, Kobolds, etc.
+  |YKOSIZ_MEDIUM: |WKOHumanoids (Dwarves, Humans, Elves, etc.), Wolves, etc.
+  |YKOSIZ_LARGE: |WKOBears, Lions, Trolls, Ettins, etc.
+  |YKOSIZ_HUGE: |WKODragons, Elephants, Whales, Titans, etc.
+
+  It should be noted that if you use SIZ_NONE, no corpse will be left when
+  the monster dies.  Anything they are carrying will fall to the ground.
+  Also, when a SIZ_NONE monster dies, it will give you a different death
+  message than just <You Killed X>.  However, if you set a different
+  death message on your monster, that will be used in place of the standard
+  one, as usual.
+
+|GKBquery_size();
+
+  |WKOreturns the bit value of the size of the monster.
+
+                    SIZ_NONE   = 1
+                    SIZ_TINY   = 2
+                    SIZE_SMALL = 4
+                    SIZ_MEDIUM = 8
+                    SIZ_LARGE  = 16
+                    SIZ_HUGE   = 32
+|BKB-----------------------------------------------------------------
+|GKBset_hp(hp);
+
+  |WKOint hp.  Sets the monster's hit points and max hit points to hp.
+  |RKBUsing set_con is preferable, so that in case the hit point formulae
+  are changed your monsters won't be wildly out of whack.
+|BKB-----------------------------------------------------------------
+|GKBset_ep(ep);
+
+  |WKOint ep.  If ep is less than the number of experience points gotten
+  from "/domains/darkwind/maincity/adv_guild"
+  then it sets the monster's experience points to ep.  Otherwise, it
+  stays at the value received from "/room/adv_guild.c." |RKOTypically
+  this function is only used when you want to make a monster not worth
+  anything on death.
+|BKB-----------------------------------------------------------------
+|GKBadd_dodge_bonus(bonus);
+
+ |WKOThis number can be positive or negative.  It will make the monster either
+ easier or harder to hit in combat.  A monster with dodge bonus 20 would be
+ 20% harder to hit in combat than another monster with the same stats and level.
+  Use this to make the monster better or worse at dodging attacks in
+  combat.  It works as a percentage.  Small, quick monsters can be given
+  a positive number, while large or clumsy ones can be given a negative
+  number.
+|BKB-----------------------------------------------------------------
+|GKBset_al(al,et);
+
+  |WKOint al.  Sets the alignment of the monster to al.  Remember that
+  to make a monster evil, you must use a negative number.
+  int et.  Sets the ethics of the monster to et.  Remember that to
+  make a monster chaotic, you must use a negative number.  If
+  you don't set this, 0 will be assumed (ie, setting ethics is not
+  required when you use set_al).
+  A note with both types of alignment--  The range between -299 and
+  299 is neutral, more than 1000 or less than -1000 is very extreme
+  (see |MKO'wizhelp 11.1 (alignment and ethics)' |WKOfor more details).
+|BKB-----------------------------------------------------------------
+|GKBset_ac(ac);
+
+  |WKOint ac.  Sets the monster's intrinsic AC to ac.
+|RKODo not use this to just arbitrarily set the monster's ac. If you
+don't know when it should be used or not, ask.
+|BKB-----------------------------------------------------------------
+|GKBset_str(str);
+
+  |WKOint str.  Sets strength to str.
+
+|GKBset_int(int);
+
+  |WKOint int.  Sets intelligence to int.
+
+|GKBset_dex(dex);
+
+  |WKOint dex.  Sets dexterity to dex.
+
+|GKBset_con(con);
+
+  |WKOint con.  Sets constitution to con.
+
+|GKBset_wis(wis);
+
+  |WKOint wis.  Sets wisdom to wis.
+
+|GKBset_chr(chr);
+
+  |WKOint chr.  Sets charisma to chr.
+  
+|RKOThe above functions do not need to be set as the monster's level
+will set them up automatically. You will override those numbers with 
+these funtions. If you don't know when they should be used, ask.
+|BKB-----------------------------------------------------------------
+|GKBset_move_at_reset();
+
+  |WKOno arg.  Sets move_at_reset (a local int monster variable) to 1,
+  which makes the monster pick an exit in its present location at
+  random each reset and move in that direction.
+
+  When using this function in a monster, make sure to clone it in the
+  room via make_room_unique (see |MKOwizhelp 4.2, coding a room)
+|BKB-----------------------------------------------------------------
+|GKBset_aggressive(a);
+
+  |WKOint a.  If a is 0, the monster is peaceful.  If a is 1, the monster
+  will attack any player that enters the room.  If a is greater than
+  1, then a is used as a percentage to determine if the monster will
+  attack.  For example, if a is 70 then the monster has a 70% chance
+  of attacking a player entering the room, and a 30% chance of leaving
+  the player alone.
+
+|GKBint query_aggressive();
+
+  |WKOThis returns the base chance of being aggressive.  It is an integer
+  from 0-100 representing the % of attacking on sight.  The value 1
+  is never returned, because that is a special value for backwards
+  compatibility, and is automatically registered as 100 instead.
+  
+|GKBset_aggressive_level(a);
+
+  |WKOint a. The variable "a" is a number that represents the player level
+  after which the monster will attack. If you set it to 29, the monster
+  will only be agressive on players level 30 and above. This function
+  is used in conjuction with set_agressive.
+|BKB-----------------------------------------------------------------
+|GKBset_steal(a);
+
+  |WKOint a.  If a is 0, then the monster can be stolen from.  If a is
+  1, then the monster cannot be stolen from.  If a is greater than
+  1, then the chance of stealing from the monster will be reduced
+  by a% (so a thief would have only a 20% chance of stealing from
+  a monster which set_steal(80)).
+
+|GKBint query_steal();
+
+  |WKOReturns the value of set_steal.  Note that this function will
+  never return 1, because set_steal(1) and set_steal(100) are
+  equivalent, and this function automatically returns 100 when
+  the monster uses set_steal(1).
+
+|BKB-----------------------------------------------------------------
+|GKBset_viking();
+
+  |WKOno arg.  Gives the monster the viking curse.
+|BKB-----------------------------------------------------------------
+|GKBset_whimpy();
+
+  |WKOno arg.  Will make the monster run away when its hit points get low.
+
+|GKBset_wimpy_cmd(s);
+
+  |WKOstring s.  If set, this will cause the monster to always perform the
+  command 's' first when trying to wimpy.  You can use this to control
+  which direction a monster attempts to run away.
+|BKB-----------------------------------------------------------------
+|GKBload_chat(chance, strs);
+
+  |WKOint chance, string *strs.  Sets the chance that a monster will talk
+  each heartbeat to chance, and sets the things the monster can say
+  to the array passed into load_chat().
+
+|GKBload_a_chat(chance, strs);
+
+  |WKOint chance, string *strs.  Same as load_chat, but these messages are
+  said only during battle.
+|BKB-----------------------------------------------------------------
+
+|GKBload_cmd(chance, strs);
+
+  |WKOint chance, string *strs.  This works exactly like load_chat, except it
+  is a list of commands the monster will perform.  You can have an array 
+  which includes something like:
+  ({"say who are you?","say I'm Bob!","sing"}) rather than having to do
+  ({"Monstername asks: who are you?\n","Monstername exclaims: I'm Bob!\n",
+  "Monstername sings a song.\n"}) for fairly obvious reasons.  Anywhere
+  you place a $N, it will be replaced with the name of a random player
+  character in the room, allowing the monster to do directed emotes.
+  "kick $N" would cause the monster to kick a random player, for instance.
+
+|GKBload_a_cmd(chance, strs);
+
+  |WKOSame as load_cmd, except works in combat.
+|BKB-----------------------------------------------------------------
+|GKBset_random_pick(r);
+
+  |WKOint r.  Determines if the monster will randomly pick an object from
+  the room's inventory.  If the item it picks up is a weapon which has
+  a better WC than its current wielded weapon, then it wields the weapon.
+  If the item is an armour, and it is not already wearing an armour of
+  that type, it will wear the armour.
+|BKB-----------------------------------------------------------------
+|GKBset_dead_ob(ob);
+
+  |WKOobject ob.  Usually this_object() is the object passed to set_dead_ob.
+  Use this function in conjunction with monster_died() when you want
+  something done when the monster dies.  This function is useful for
+  destructing corpses (Like on Stone Golems...)
+|BKB-----------------------------------------------------------------
+|GKBset_hit_ob(ob);
+
+  |WKOobject ob.  Usually this_object() is the object passed to
+  set_hit_ob.  Use this function in conjunction with monster_hit()
+  when you want the monster to have a special combat ability.  The
+  monster_hit() function should be an integer function which
+  returns an amount of extra damage to be done by the monster that
+  attack.  The monster will pass its attacker to monster_hit() as
+  and argument.  Monster_hit() can be used for many things other
+  than simply doing damage.  It can be used to have the monster
+  talk, run away, heal itself, summon more monsters, steal from
+  the player, etc - what's inside monster_hit is up to the coder.
+|BKB-----------------------------------------------------------------
+|GKBset_init_ob(ob);
+
+  |WKOobject ob.  Usually this_object() is the object passed to set_init_ob.
+  If this is defined, the function monster_init will be called by the
+  monster whenever it has its init called.  Essentially, this allows you
+  to write a function that is executed whenever your monster meets another
+  monster or player.  Monster_init should return 0 or else it will
+  interrupt the normal init process making aggressive monsters not attack
+  and other things.
+|BKB-----------------------------------------------------------------
+|GKBcan_put_and_get(n);
+
+  |WKOoptional string n.  If n exists, the monster can put and get things.
+  If n does not exist, the monster cannot pick up and drop things.
+  Further examples:
+
+       |YKOcan_put_and_get(1);   |WKO// The monster can pick up and drop things
+       |YKOcan_put_and_get(yes); |WKO// The monster can pick up and drop things
+       |YKOcan_put_and_get(no);  |WKO// The monster can pick up and drop things
+       |YKOcan_put_and_get(); |WKO// The monster canNOT pick up and drop things
+|BKB-----------------------------------------------------------------
+|GKBset_keep_alive(keep_alive);
+
+  |WKOint keep_alive.  This function should be used VERY INFREQUENTLY on
+  UNIQUE monsters.  This will not turn off the heart_beat in monsters.
+  |RKBDO NOT use this unless the object you are creating REQUIRES it.
+  If you are not sure of why you would use this, then DON'T USE IT.
+|BKB-----------------------------------------------------------------
+|GKBset_death_messages(i_died,you_killed);
+
+  |WKOWhen the monster dies it will display the you_killed string to the object
+  which killed it and it will display the i_died message to everyone in the
+  room.  If these are not set, the default messages will be used.
+|BKB-----------------------------------------------------------------
+|GKBcommand("cmd");
+
+  |WKOstring cmd.  Forces the monster to perform the command "cmd".
+  The force_us() function isn't always good, because it checks the level
+  of the caller, and this function can be called by a room.
+|BKB-----------------------------------------------------------------
+|GKBset_wander(int chance, int time);
+
+  |WKOThis is similar to the move_at_reset function.  It gives the monster
+  a percentage chance equal to 'chance' to move.  This chance will be checked
+  every 'time' seconds.  For example, set_wander(50,20); would cause
+  the monster to have a 50% to make a random move every 20 seconds.
+  This allows greater flexibility than the move_at_reset does.
+  
+  When using this function in a monster, make sure to clone it in the
+  room via make_room_unique (see |MKOwizhelp 4.2, coding a room)
+|BKB-----------------------------------------------------------------
+|GKBset_match(object,functions,types,matches);
+
+  |WKOYou use this to allow your monster to react to what it sees.  Object is
+  the object where your functions will be located.  Functions, types, and      |
+  matches are all string arrays.  Each must be exactly the same size as the
+  others, so you should use allocate() and leave the appropriate elements
+  empty.  The following example is Fornay's set_match:
+
+      function = allocate(12);
+      type = allocate(12);
+      match = allocate(12);
+
+      function[0] = "why_did";
+      type[0] = "sells";
+      type[1] = "attack";
+      type[2] = "left";
+      match[2] = "the game";
+      type[3] = "takes";
+      type[4] = "drops";
+      function[5] = "must_be_nice";
+      type[5] = "is now level";
+      function[6] = "smiles";
+      type[6] = "smiles";
+      match[6] = " happily.";
+      function[7] = "say_hello";
+      type[7] = "arrives";
+      function[8] = "test_say";
+      type[8] = "says:";
+      type[9] = "tells you:";
+      function[10] = "follow";
+      type[10] = "leaves";
+      function[11] = "gives";
+      type[11] = "gives";
+
+      set_match(this_object(),function,type,match);
+
+      This doesn't make much sense on first glance, but it is fairly
+clear if a table is made out of it:
+Array       FUNCTION                    TYPE            MATCH
+position: Execute this function:   If monster sees:   followed by:
+
+ 0          why_did                     sells
+ 1                                      attack
+ 2                                      left            the game
+ 3                                      takes
+ 4                                      drops
+ 5          must_be_nice                is now level
+ 6          smiles                      smiles          happily
+ 7          say_hello                   arrives
+ 8          test_say                    says:
+ 9                                      tells you:
+10          follow                      leaves
+11          gives                       gives
+
+        Anywhere there is a blank spot, the array has a 0 in it, done
+  automatically by allocate().  Every time the monster sees a message it
+  will look through the TYPE array, and scan the message to see if it
+  contains the TYPE.  It then sees if the rest of the message contains
+  the MATCH of the same number.  If the MATCH string is present in the
+  message, OR if there is no MATCH at all, then the last FUNCTION that it
+  found is executed with the original message as an argument.  For example,
+  if Fornay sees the text:
+    "Bill takes our taxes"
+  First, it will find the FUNCTION 'why_did' at position 0 and save it, but
+  won't do anything else because "Bill takes our taxes" does not contain the
+  text "sells".  Next, it will go through TYPE until it gets to position 3,
+  where it finds the word "takes".  It then looks for a MATCH.  Since MATCH
+  position 3 is empty, the MATCH is an "automatic" success.  The last function
+  it found was 'why_did' from position 0, so it now does a
+  this_object()->why_did("Bill takes our taxes";
+|BKB-----------------------------------------------------------------
+|GKBset_friends(names);
+
+  |WKOnames can be either a single string or a string array.  Every heartbeat a
+  npc checks for any npc in its friends list that is being attacked
+  and initiates combat with it.
+|BKB-----------------------------------------------------------------
+|GKBcatch_tell(string sStr);|WKO                                                       |
+                                                                               |
+  |WKOThis function allows you to create responses to your monsters when a specific|
+  string is displayed in the environment that the monster is in.  You can hash |
+  up the string anyway you like to check for matches and then call functions as|
+  appropriate.                                                                 |
+                                                                               |
+  ***NOTE***                                                                   |
+                                                                               |
+  It _IS_ possible for a monster's load_chat to get caught and matched in it's |
+  catch_tell.  If this happens the mud can crash depending on what you do with |
+  the catch_tell.  So unless you specifically desire to simulate NPC's         |
+  interacting with each other put an NPC check in the catch_tell before you do |
+  anything with it.                                                            |
+                                                                               |
+  ***NOTE2***                                                                  |
+                                                                               |
+  One thing to remember is that a catch_tell is only looking for a string match|
+  in the environment that the monster is in.  It _IS_ possible to fool a catch |
+  tell with an emote or something else along that line.  So you will have to   |
+  put in the appropriate object checks as necessary.                           |
+|BKB-----------------------------------------------------------------
+|GKBfollow(str,i,ob);
+
+  |WKOUsing this function allows your monsters to follow other players or monsters
+  around the mud.  Str should be the exit message the monster receives.  If any
+  positive integer i is passed, then wizards in nohassle mode will be exempted
+  from being followed.  Ob is an optional object which, if present, will be
+  the only object the monster will follow.  This function is not used in
+  reset, but should instead be called through the use of catch_tell as in the
+  following example:
+  catch_tell(string str) {
+        follow(str,1,this_object()->query_attack());
+  }
+  In this example, the monster is told to follow its attacker if the attacker
+  leaves the room, but to ignore any other players/npcs or wizards with
+  nohassle mode enabled.
+
+*Important Note*  Additionally, monsters cloned through the reset() of a room
+will NOT follow properly.  To avoid this, if you wish to add following monsters
+to a room through reset, use a call_out.  For example:
+void reset(int iArg) {
+::reset(iArg);
+call_out("make_monsters",2);
+etc
+}
+
+void make_monsters() {
+   make_object("monster","/players/johndoe/monster",2);
+}
+|BKB-----------------------------------------------------------------
+|GKBrandom_clone("filepath",howmany,%);
+
+  |WKOthis function allows you to only clone up equipment for the
+  monster a random % of the time. it is important to always
+  include how many of that object you want to be cloned, and
+  to only use this function inside the reset function in your
+  monster. The max % is 50, anything higher than 50 gets set
+  to 50.
+|BKB-----------------------------------------------------------------
+|GKBmake_random_object("name","filepath",howmany,%);
+
+  |WKOsame as for random_clone, just in the make_object format.
+  again, always include how many, and use only inside the reset
+  function of your monster.
+|BKB-----------------------------------------------------------------
+
+|GKBmake_unique_and_equip("filepath");
+   
+   |WKOThis is used when you want your monster to wear or wield your
+   unique item the first time it loads. Only use this inside the 
+   reset function of your monster.
+|BKB-----------------------------------------------------------------
+|GKBset_switch_chance(d);
+
+  |WKOinteger d.  When fighting 2 or more opponents, this is the % chance
+  the monster will decide to switch the target of its attack for that
+  battle round.  It causes the monster's attacker_ob and alt_attacker_ob
+  to switch places.  If this is not set, it will default to 2%.
+|BKB-----------------------------------------------------------------
+|GKBadd_resistance(TYPE1|TYPE2|etc);
+
+  |WKOUse this to add resistances to a monster.  When getting hit by attacks of
+  the appropriate type, the monster will take less damage.  A firebreathing
+  dragon would probably resist DAM_FIRE, for example.  Use the types from
+ |MKO'wizhelp 4.17 (damage types)' |WKOfor a complete list. Please
+ also see |MKO/open/INCLUDE/monster_type.h |WKOto see if your monster's race
+ already has a resistance by default.
+|BKB-----------------------------------------------------------------
+|GKBadd_weakness(TYPE1|TYPE2|etc);
+
+  |WKOAs add_resistance, but it makes the monster vulnerable to that type of
+  attack instead of resistant.  As an example, all monster lycanthropes
+  are vulnerable to DAM_SILVER.
+  
+ |MKO'wizhelp 4.17 (damage types)' |WKOfor a complete list. Please
+ also see |MKO/open/INCLUDE/monster_type.h |WKOto see if your monster's race
+ already has a weakness by default.
+|BKB-----------------------------------------------------------------
+
+|GKBset_no_block(int blocks)
+
+    |WKOIf you wish to make it so that your monster is immune to a given
+    set of blocks, use the set_no_block() call passing the blocks you
+    wish to have the monster ignore. For example, to have your monster
+    be immune to blindness and paralyzation, you would use this call:
+      |YKOset_no_block(BLK_BLIND|BLK_PARALYZE); |RKOYour monster must include
+      <blocks.h> to use this.
+
+|GKBquery_no_block(int blocks)
+
+    |WKOUse the query_no_block() call to determine which blocks a monster
+    is immune to. If you pass 0 or no argument, you'll get back the
+    complete set of blocks. If you pass a bitmap, you'll get back whether
+    any of those blocks are in place.
+
+|GKBreset_no_block(int blocks)
+
+    |WKOUse this call to reallow a block to work against your monster.
+|BKB-----------------------------------------------------------------
+|GKBset_no_charm()
+|GKBquery_no_charm()
+|GKBset_charm()
+|GKBquery_charm()
+
+    |WKOUse these as you wish to specify whether your monster can be
+    effected by charms type powers like fasttalk, parlay, soothe,
+    and anything else in that family of powers.
+|BKB-----------------------------------------------------------------
+|GKBset_death_clone(string sFilePath, status tCloneToEnv, int iQuantity);|WK0
+
+  |WKOAt death, the monster will clone sFilePath. If tCloneToEnv is 1
+  or the monster is SIZ_NONE, the object will clone to the environment.
+  If iQuantity is not set, it will default to 1. To have any other
+  quantity, you must also set tCloneToEnv. If tCloneToEnv and iQuanity
+  are not set, it defaults to loading on the corpse, and 1 item.
+|BKB-----------------------------------------------------------------
+|GKBvarargs void set_monster_destruct_timer(int iTime, mixed xFunc);|WK0
+
+  |WKOThis function will destruct the monster in iTime seconds. If
+  xFunc is defined and is a closure, it will apply the function
+  before destructing it. If it's a string, it will tell_room
+  or tell_object before destructing it. The monster will be moved
+  to the quitroom before destruction, so anything the monster
+  has will NOT be dropped in the room. If the monster is in combat,
+  the call_out will be called again 30 seconds later.
+|BKB-----------------------------------------------------------------
+|GKBvarargs set_variable_level(int iBaseLevel, int iResetTime,
+ string sMess, status tCanGoLow);|WK0
+  |WK0This function will change the level of the monster to the level
+  of the first player that it encounters. After iResetTime if not
+  in combat, it will reset to iBaseLevel. If iBaseLevel isn't set,
+  it will revert to whatever level you set_level the monster. If
+  iResetTime isn't set, it will default to 300 seconds. sMess will
+  default to "$N $vlook different." and is a room_message that
+  only uses the monster, not the player when setting the string.
+  If you set tCanGoLow to 1, then the monster can go lower than the
+  level you set_level, otherwise it won't.
+  |YK0Eg. set_variable_level(); |000// Will set everything to the default.
+  |YK0Eg. set_variable_level(0,60,"$N $vlook BEEFY!"); |000// Will set
+    the base level to what was set, reset time of 60 seconds,
+    message to looks BEEFY, and won't allow the monster to go under
+    the set_level of the monster.
+|BKB-----------------------------------------------------------------
+|GKBvoid set_npc_elite(status tElite);|WK0
+  |WK0This function will change a regular monster into a slightly
+  more elite one. It will add 25% more stats and 5% exp if set. It will
+  also add [ELITE] to the short of the monster.
+  |YK0Eg. set_npc_elite(1); |000// Makes the monster elite.
+
+|CKBRANDOM NOTES
+|BKB------------
+
+|BKB- |CKBMonsters heal at a rate of 6 HP and 6 SP every 2 minutes when they
+       are not in battle.
+|BKB- |CKBAdd_clone and make_object both work on monsters.
+|BKB- |CKBExamples of monsters can be found in the /open/MONSTER directory.
+
+
+|CKBREVISION HISTORY
+|BKB================
+
+|WKORev. 2 - Moved a few functions to 4.3b (Advanced Monsters).
+
+
+Rev. 1 - Corrected a couple typos and added revision level.  Also added in
+         use of the catch_tell function and notes warning about the possible
+         interaction with a monster's load_chat.  Parts revised have a "|" in 
+         the right hand column.  Revision made by Olgar - 10/08/04.
+
+Rev. 0 - ???

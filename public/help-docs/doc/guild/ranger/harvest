@@ -1,0 +1,15 @@
+Ranger Help for: harvest wood
+===============================
+
+SYNTAX:      harvest
+USAGE:       forest,jungle
+SLOT COST:   2
+BASE SP:     10
+SKILL TYPE:  creation
+
+SUMMARY:
+This skill allows a Ranger to gather wood from the surrounding trees
+for use in crafting. The wood can be used to carve bows, arrows,
+torches, fish traps, and other useful items. The amount and quality
+of wood gathered depends on the Ranger's skill level and the terrain.
+Forests and jungles provide the best sources of usable wood.

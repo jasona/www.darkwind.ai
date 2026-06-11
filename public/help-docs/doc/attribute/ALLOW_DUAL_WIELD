@@ -1,0 +1,10 @@
+/doc/attribute/ALLOW_DUAL_WIELD
+
+Format: (Living_Object)->set_attribute("ALLOW_DUAL_WIELD", iValue);
+
+Description:
+  The ALLOW_DUAL_WIELD will allow the Living_Object to
+  dual wield weapons. It won't change any other restrictions
+  beyond letting those that normally can't dual wield to
+  be able to dual wield. The iValue is only used to turn
+  the attribute on or off.

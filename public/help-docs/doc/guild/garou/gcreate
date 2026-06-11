@@ -1,0 +1,31 @@
+|GKO================================================================
+                   |MKBGreater Create Charm
+|GKO================================================================
+
+|YKOA very experienced Garou can create a charm fetish to aid
+and protect himself or one of his friends. The charm
+will last for a short duration, or until the owner breaks
+it or logs off. The charm types are listed below. A player
+may only have one charm fetish at a time. This power is usable 
+on the caster in both forms, but may only be bestowed  
+upon another when the Garou is in man form.
+
+|WKOBear      - |BKB+25 STR
+|WKODragonfly - |BKB+25 DEX
+|WKOMoose     - |BKB+25 CON
+|WKODolphin   - |BKB+25 INT
+|WKORaven     - |BKB+25 WIS
+|WKOPeacock   - |BKB+25 CHR
+
+|WKOOwl       - |BKB+12 INT, +13 WIS
+|WKOMonkey    - |BKB+12 DEX, +13 INT
+|WKOElephant  - |BKB+12 WIS, +13 CON
+
+|WKOWolf      - |BKB+15 DEX, +10 STR
+
+|WKOWoad      - |BKB+20% Magic Resist
+
+|WKOUsable in Form: |GKOMan only on others, all forms when self-targeted
+|WKOLvl Required:   |BKB45                     |WKOCost:  |CKO200 sp
+|RKOSyntax: |YKBgcreate <type> [for <target>]  |WKOTimer: |CKOMedium
+                                       |WKOType:  |CKOSupport

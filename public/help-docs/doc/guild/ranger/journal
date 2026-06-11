@@ -1,0 +1,13 @@
+Ranger Help for: journal
+========================
+
+SYNTAX:      journal
+USAGE:       Anywhere
+
+SUMMARY:
+This command displays your current list of available ranger tasks and
+quests. The journal tracks your progress through the Ranger guild's
+various challenges and objectives. Each entry shows the task name,
+its current status, and any relevant details. Tasks are updated
+automatically as you complete objectives. Check your journal regularly
+to see what challenges await you.

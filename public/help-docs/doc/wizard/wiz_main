@@ -1,0 +1,25 @@
+                        |BKB--=|CKBHelp for New Builders|BKB=--|WK0
+
+This file contains a listing of the help files available for you to look
+at.  You are expected to use all the commands listed, so please make
+sure you are familiar with their use.  If you are unsure, please ask
+another wizard for help.
+
+Categories:
+
+   |YK01|WK0.  Wizard Rules and Responsibilities
+   |YK02|WK0.  Darkwind Specific Coding Guidelines
+   |YK03|WK0.  Builder Commands
+   |YK04|WK0.  Basic Building
+   |YK05|WK0.  Advanced Building
+   |YK06|WK0.  Basic LPC
+   |YK07|WK0.  Advanced LPC
+   |YK08|WK0.  Area Reviews
+   |YK09|WK0.  Minor Daemons and Systems
+  |YK010|WK0.  NPC Behaviors
+  |YK011|WK0.  Guild and Race related help
+  |YK012|WK0.  Special events
+
+
+|WK0To get a list of topics in any category type |GKBwizhelp|WK0 |YK0<|WK0number|YK0>|WK0
+

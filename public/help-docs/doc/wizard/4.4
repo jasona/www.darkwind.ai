@@ -1,0 +1,281 @@
+
+***************************************************************************
+                              Making Armours
+***************************************************************************
+Note: All literal code in this help document is separated by a bunch of =
+signs. The = signs are NOT part of the code. For example:
+
+====================
+#include <mudlib.h>
+#include <types.h>
+#include <material.h>
+====================
+
+refers to the three include lines, literally.
+
+
+***************************************************************************
+                              Basic Armours
+***************************************************************************
+A basic acceptable armour inherits GEN_ARMOUR and sets a few parameters.
+Your armour file MUST have the following lines of code at the top:
+
+====================
+#include <mudlib.h>
+#include <types.h>
+#include <material.h>
+inherit GEN_ARMOUR;
+====================
+
+If you want to put in comments before these lines, that's fine, but
+these MUST precede any active code in the file.
+
+Your armour MUST haved a reset function, with appropriate checks for
+clones. That is, it must have the code:
+
+====================
+void reset(int iArg) {
+    if (!is_clone(this_object())) return;
+    ::reset(iArg);
+    if (iArg) return;
+====================
+
+Even a basic armour has to have a few settings to make it interesting.
+You should have the following settings for your armour:
+
+set_short("short");
+        Replace "short" with the quoted short description of your armour.
+        The short description is the one a player sees when an object
+        is just lying on the ground, in a shop, in someone's inventory etc.
+
+set_long("long.\n");
+        Replace "long" with the quoted long description of your armour.
+        The long description is the one a player sees when he actually
+        does a 'look' or 'examine' on an object. Remember to add both a
+        period and a newline (\n) at the end of your description since
+        LPC won't do that for you.
+
+set_name("name");
+        Replace "name" with the quoted name of your armour. This name
+        should be the main name by which your armour is called, since it
+        may show up on occasion in spam to players. It should never be
+        a secret id key used to uniquely identify it for coding purposes.
+        For example, "bobs_magic_plate_key" is a terrible name for an
+        armour. It is often a good idea to use the short description of
+        the armour as its name as well, but always use all lowercase
+        letters and no articles. (e.g. "silver platemail" is good, but
+        "a silver platemail" or "Silver Platemail" are bad).
+
+set_alias("alias");
+        Replace "alias" with the quoted alias of your armour. This alias
+        can be any other way to refer to an armour. For example, if you
+        had a silver platemail with the name "silver platemail" you would
+        also want to have the aliases "silver plate", "platemail" and
+        "mail" as aliases. If you want to use a secret id key to uniquely
+        identify your armour, you can use set it as an alias. You can add
+        multiple aliases by using this setting over and over again. This
+        setting is optional.
+
+set_new_type(TYPE1|TYPE2|etc.);
+        Replace TYPE1|TYPE2|etc. with an ORed set of armour type values.
+        That is, something that looks like:  MEDIUM|HIDE|TORSO
+        Exactly one of the values must be a size (SMALL, MEDIUM, LARGE,
+        or HUGE) and exactly one of the values must be an armor type
+        (e.g. CLOTHES, PADDED, SCALE, CHAINMAIL etc.) Finally, at least
+        one value must be a location (LEGS, TORSO, RING, SHOULDERS,
+        AURA etc). RING and AMULET each allow two worn items. Other
+        locations normally allow one worn item.
+
+set_material(TYPE1|TYPE2|etc.);
+        Replace TYPE1|TYPE2|etc. with an ORed set of material values.
+        That is, something that looks like:  MAT_STEEL|MAT_WOOD
+        Valid material types are listed in the material documentation,
+        wizhelp 4.16 'materials'.
+
+set_quality(quality);
+        Replace quality with an integer quality value from -100 to 100.
+        Quality is how good your armour is, compared to other armours
+        of the given composition. A quality of 0 is average, and a quality
+        of 100 is the best of the best. A -100 quality would be something
+        laughably bad (like old, broken down rusty platemail that impedes
+        more than it protects.) Any armour with a quality of greater than
+        40 is considered at least exceptional. Any with a quality greater
+        than 60 is unique. (see also wizhelp 4.14 'uniques'). Typical
+        factors that should affect quality are: craftsmanship, wear/damage,
+        rust, poor fit, odd shape, balance, extra thick/thin etc.
+
+set_weight(weight);
+        Replace weight with an integer weight value. This is the weight
+        of the object. Weight on Darkwind also represents bulk and
+        awkwardness of carrying.
+        |CKBIf you want to have the game set a standard weight, you can
+        set_weight(query_equipment_weight()); You need to use that after
+        you have set_new_type() and set_material().|000
+
+set_warmth(warmth);
+        Replace warmth with an integer warmth value. This is how warm the
+        piece is when worn. Warmth is used in rooms that use the inherit
+        ARCTIC instead of room.
+        |CKBOnly set this to override the default warmth.|XX0
+
+set_value(-1);
+        Armour values are automatically determined by the characteristics
+        of the armour. Do not set a value for basic armours. (The -1
+        means to use the automatically generated value). NB this should
+        be the LAST function called in your reset routine.
+
+That's it! An example basic armour is given in
+/open/EXAMPLES/ARMOURS/basic_armour.c
+
+If all you want is to make a basic armour, copy that file to directory
+where your area's armours are, and replace all the content values (e.g.
+the quoted text used for set_long(), set_short() etc.) with your own
+stuff.
+
+
+***************************************************************************
+                              Extra Settings
+***************************************************************************
+The following extra settings can be used in your armour as well, but are
+not required:
+
+set_read("text.\n");
+        Replace "text.\n" with the quoted string to be seen when the
+        armour is read. It there is writing on a helmet or ring, for
+        example, you may wish to use this. Remember to add both a period
+        and a newline (\n) at the end of your description since LPC won't
+        do that for you.
+
+set_info("info.\n");
+        Replace "info.\n" with the quoted string to be seen when a mage
+        or such identifies the armour. It should NEVER give specific
+        numbers but it should give enough information for a person to get
+        a fair idea of a armours strengths or powers.
+
+set_no_buy();
+        Put this in if this armour cannot be bought from the shop. (After
+        someone has sold it as loot.)
+
+set_no_sell(sell_setting);
+        Replace sell_setting with an integer. If sell_setting is 1, the
+        item will be marked as unsellable. If it is 0, it will clear
+        a previously set sell_setting of 1. If you use a sell_setting
+        greater than 1, then it will take that many calls of
+        set_sell(0); to make it sellable again.
+
+set_steal(1 or 0);
+        If set_steal(1); is used, the armour is not stealable. If you
+        set_steal(0); the armour will be stealable by thieves. Yes, it
+        seems backwards and very stupid, which it is, but it is correct.
+
+set_cursed(curse_chance);
+        Replace curse_chance by an integer percentage indicating the
+        likelihood of any clone of this armour being cursed. If this line
+        is not used, objects will default to a 1% chance of being cursed.
+
+set_no_curse();
+        Put this line in if you want the armour to never be cursed. This
+        should be used very sparingly. It will prevent the 1% chance that
+        any given armour or armour in the game will be cursed.  It should
+        be stressed that this should only be set on items that under no
+        circumstances should be cursed. I.e. quest items etc.
+
+set_value(-1, ##);
+        Replace ## by an integer value to INCREASE the value of this armour
+        above the default value. Use this instead of the normal call to
+        set_value(-1); if you want your armour to be extra valuable.
+
+set_dodge_bonus(bonus)
+        Replace bonus with an integer value. The armour's dodge bonus
+        increases the wielder's dodging stat (average of dex, wis) while
+        using this armour. A negative value will reduce the wielder's
+        dodging stat. This is a very powerful ability and should be used
+        sparingly. (A 6 point increase is roughly equivalent to a level's
+        increase in stats) armours with a dodge_bonus are considered
+        exceptional or unique; see wizhelp 4.14 'uniques' for details.
+
+set_arm_light(light);
+        Replace light with an integer value. This setting allows you to
+        make armour that gives off light. The parameter passed is how
+        powerful the light is. 0 = none, 1 is normal day/sun light, and
+        higher would mean very bright light. Setting this to a negative
+        number would make the armour absorb that much light.
+
+set_guild_allow(GUILD|GUILD|...);
+        Replace GUILD|GUILD|... with an ORed set of guild defines (from
+        guildd.h) which indicate which guilds are allowed to use this
+        armour, armour restrictions notwithstanding. In order to use this
+        setting, you must include guildd.h at the beginning of your file.
+
+set_guild_restrict(GUILD|GUILD|...);
+        This function is the same as set_guild_allow() except it will
+        disallow the use of that particular armour by the guilds you have
+        listed.
+
+set_weakness(TYPE|TYPE|..., amount);
+        Replace TYPE|TYPE|... with an ORed set of damage defines (from
+        types.h) which indicate what damage types the wearer of this armour
+        becomes extra weak to. Replace amount with the percentage increase
+        in vulnerability to the given types.
+
+set_resistance(TYPE|TYPE|..., amount);
+        Replace TYPE|TYPE|... with an ORed set of damage defines (from
+        types.h) which indicate what damage types the wearer of this armour
+        becomes more resistant to. Replace amount with the percentage
+        increase resistance to the given types.
+
+***************************************************************************
+                              Wear/Remove Functions
+***************************************************************************
+Wear/remove functions cause things to happen when the armour is worn or
+removed. This is useful for example, if you want to give some spam when
+the item is worn, or give some stat boosts to the player etc.
+
+set_wear_func(oFuncObject);
+        Pass the object that defines wear_func() and remove_func()
+        (explained below) as oFuncObject. In most cases, oFuncObject
+        this_object(). Whenever the armour is worn oFuncObject->
+        wield_func(this_object()) will be called, and whenever removed,
+        oFuncObject->remove_func(this_object()) will be called.
+
+int wear_func(oArmour);
+        This function is defined in the oFuncObject passed to
+        set_wear_func(). Usually both functions are in the armour anyway.
+        This function gets called if the set_wear_func() was set, and
+        a player/monster tries to wear this armour. It is the builder's
+        job to fill out the this function with whatever special things
+        that are to happen. If this function returns 0, then the wear
+        will fail. Thus you can use this to block a armour being worn
+        by certain people.
+
+int remove_func(oArmour);
+        This function is defined in the oFuncObject passed to
+        set_wear_func(). Usually both functions are in the armour anyway.
+        This function gets called if the set_wear_func() was set, and
+        a player/monster tries to remove this armour. It is the builder's
+        job to fill out the this function with whatever special things
+        that are to happen. If this function returns 0, then the remove
+        will fail.
+
+|CKBvoid add_equipment_stat(string sStat, int iValue, string sStart, string sSto
+p);|XX0
+        This function will handle adding the stat sStat to the
+        player when they wear the item, and remove the stat when
+        the player removes the item. It eliminates the need of
+        creating start_wearing/stop_wearing functions in the item.
+        sStat can be "con","dex","int","wis","str","chr","hp","sp",
+      |RK0    "tmp_to_hit_stat","tmp_to_dam_stat","tmp_to_dodge_stat",|XX0
+      |RK0    "tmp_to_absorb_stat","tmp_to_crit_stat","tmp_to_swings",|XX0
+      |RK0    "tmp_to_hit","tmp_to_dam","tmp_to_dodge","tmp_to_absorb",|XX0
+      |RK0    "tmp_to_crit","tmp_to_type"|XX0
+      |RK0    tmp_to_* should only be used with permission.|XX0
+        sStart is the message when the player wears the armor.
+        sStop is the message when the player stops wearing the armor.
+        The message is in the same format as room_message.
+      |RK0  The messages should only be used once per item, not stat.|XX0
+    |GKBExample:|XX0add_equipment_stat("con",5,"$N $vseem hardier.",
+        "$N $vseem less robust.");
+
+------
+Version 1: ?
+Version 2: Bob - Jan 25, 2004

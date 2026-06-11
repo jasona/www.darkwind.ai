@@ -1,0 +1,20 @@
+|GKB-- Moonwell Draught ------------------------------------------|000
+
+Current: |CKBChosen when cast|000
+Command: |CKBmoonwell <current>|000
+Guild Level: 27
+
+Moonwell Draught binds one current of nwyfre into three short-lived
+draughts.  Each draught restores that current when you drink it.
+
+The draughts are bound to the druid who made them, cannot be sold, and
+fade after a short time.  This is the high-level Druid answer to long
+hunting sessions: prepare with profession materials, then keep moving.
+
+Use |CKBreagents search <item>|000 to check the needed profession
+materials.  The exact materials depend on the current you name.
+
+Example:
+
+  |CKBmoonwell daloan|000
+  |CKBdrink draught|000

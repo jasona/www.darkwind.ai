@@ -1,0 +1,18 @@
+Ranger Help for: set snare
+===========================
+
+SYNTAX:      snare
+USAGE:       forest,plains,swamp,desert,jungle,hills,road,beach,
+             underground,mountain,arctic,barren
+SLOT COST:   9
+BASE SP:     35
+SKILL TYPE:  defensive
+
+SUMMARY:
+This skill allows a Ranger to set up a hidden snare trap in the
+surrounding terrain. Players or NPCs that are in the room when the
+snare is set cannot be caught in it, since they are aware of its
+presence. The first creature that wanders into the room will be
+caught. Rangers, being adept at reading the wild, can spot and avoid
+snare traps set by other Rangers. How long a victim remains snared
+depends on how proficient the Ranger is at making them.

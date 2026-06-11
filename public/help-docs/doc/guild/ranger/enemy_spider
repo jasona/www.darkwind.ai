@@ -1,0 +1,16 @@
+
+Ranger Help for: enemy spider
+=============================
+
+SUMMARY:
+Choosing spider means your Ranger hunts spiders, web-spinners, venomous
+arachnids, and similar ambush predators.
+
+This is a strong choice for forests, swamps, deserts, jungles, hills,
+mountains, beaches, and underground areas.
+
+COMMAND:
+  setenemy spider
+
+=============================================================================
+SEE ALSO: enemy, setenemy and terrains

@@ -1,0 +1,17 @@
+
+Ranger Help for: stalk
+======================
+
+SYNTAX:      stalk <target>
+USAGE:       Any terrain
+SLOT COST:   11
+BASE SP:     20 initially, 10 sp per move
+SKILL TYPE:  tracking
+
+SUMMARY:    
+This skill allows a Ranger to trail close behind or follow a query through
+any area the query can go. Several things can cause a Ranger to lose his
+or her query, such as the query is wiser than the Ranger, or just by
+chance, or if the Ranger runs out of stamina points. Rangers can only trail
+less wise Rangers than themselves.
+

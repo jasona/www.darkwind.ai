@@ -1,0 +1,18 @@
+
+Ranger Help for: skin
+=====================
+
+SYNTAX:      skin corpse
+USAGE:       Any terrain
+SLOT COST:   3
+BASE SP:     Variable(5-50)
+SKILL TYPE:  creation
+
+SUMMARY:    
+This skill allows a Ranger to skin the corpse of a slain foe, and create
+a leather pouch from it. Usually there is some amount of meat left over
+from the process that a resourceful Ranger might be able to use. The
+amount of stuff that can fit in the pouch is dependent on how big of a
+corpse the skin came from. The Ranger must be using a slash type weapon
+in order to skin the corpse.
+

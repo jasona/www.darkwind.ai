@@ -1,0 +1,23 @@
+Ranger Help for: forage
+=======================
+
+SYNTAX:      forage
+USAGE:       Any terrain
+SLOT COST:   NA
+BASE SP:     variable
+
+SUMMARY:
+This skill allows a Ranger to search the surrounding wilderness for
+wildcraft supplies instead of loose inventory junk. What the Ranger
+finds depends heavily on terrain. Forests and jungles are good for
+binding fiber, resin, kindling, medicinal scraps, and tannin bark.
+Wet terrain is better for clean water, and plains can provide
+smokeleaf and useful fiber.
+
+Use 'forage stores' to review your wildcraft pouch. If the pouch fills
+with materials you do not need, use 'forage discard <component> [amount]'
+to make room. For example, 'forage discard kindling 2' throws away two
+kindling, and 'forage discard all confirm' empties the pouch.
+
+These supplies feed Ranger survival skills such as mix, make tools,
+make satchel, make fish trap, camp stock, camp cook, and camp brew.

@@ -1,0 +1,15 @@
+_______________________________________________________________________________
+"Awe"
+ 
+        This temporarily increases the psionicist's personal magnetism by a
+        large margin.  Adds an amount of charisma dependent on guild
+        level for a short length of time.  It is mostly useful for
+        obtaining better prices when selling treasure, but with some
+        planning it is possible to immediately regenerate the cost of
+        the spell before the effects wear off, thus increasing your
+        spell points for a short while.  You'll have to be fast and have
+        a good plan to accomplish this, however. 
+ 
+SP Cost:  Variable	Guild Level:  1		Potential Points:  1
+ 
+Command:  awe

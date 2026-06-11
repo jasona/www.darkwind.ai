@@ -1,0 +1,6 @@
+This command will allow you to quickly construct a lethal
+trap that can be placed in a room.  Anybody, except thieves,
+that attempt to leave the room, or pick up the trap will
+set it off, causing damage to that person.  This ability
+costs 40 spell points and is available to players of rank
+6 or greater.

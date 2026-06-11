@@ -1,0 +1,15 @@
+|GKB-- Living Wellspring -----------------------------------------|000
+
+Current: |CKBChosen when cast|000
+Command: |CKBwellspring <current>|000
+Guild Level: 28
+
+Living Wellspring opens a temporary spring of nwyfre inside your body.
+While it lasts, it restores the chosen current every nwyfre tick.
+
+Only one living wellspring can be open at a time.  Use it before or
+during a difficult fight when you know which current you will rely on.
+
+Example:
+
+  |CKBwellspring marken|000

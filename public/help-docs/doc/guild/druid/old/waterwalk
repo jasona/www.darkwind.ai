@@ -1,0 +1,14 @@
+Water Walk
+
+An experienced druid may use this spell to gain the
+protection of the ocean spirits, allowing him to
+walk on the surface of water without drowning.  At
+higher levels of mastery, the druid can impart this
+ability to others.
+
+Command: waterwalk <target> (defaults to caster)
+Base Cost: 40 SP
+Base Recovery: long
+Base Effect: travel (over oceans)
+Base Duration: long
+Guild Level: 7

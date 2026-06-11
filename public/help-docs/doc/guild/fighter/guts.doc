@@ -1,0 +1,8 @@
+Skill: guts        Timer: None         GL:  3    Cost: NONE
+
+This is the Fighter's ability to withstand, and literally absorb, pain.
+If no argument is given, it will tell you if you have fguts on or off.
+
+Guts uses endurance when you absorb a blow.
+
+Syntax is: ftoggle guts <on|off>

@@ -1,0 +1,14 @@
+Calm Animal or Plant
+
+The most basic manifestation of a druid's connection with
+Nature is the animal empathy many develop.  This ability
+enables the druid to use that empathy to attempt to calm
+an attacking animal.  It also works on plant-like
+creatures, but not on humanoids or other beings.
+
+Command: calm <target> (defaults to attacker)
+Base Cost: 25 SP
+Base Recovery: fast
+Base Effect: stop fight
+Base Duration: instant
+Guild Level: 1

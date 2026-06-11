@@ -1,0 +1,15 @@
+
+Ranger Help for: learn
+======================
+
+SYNTAX:      learn <skill name here>/learn cost for <skill name here>
+USAGE:       Any wilderness terrain.
+
+SUMMARY:    
+Allows a Ranger to learn a skill from the slots list providing the Ranger
+has enough slots available and enough experience. If you type 'learn cost
+for <skill>', you will see the cost of learning that skill in slots and
+experience points and how many you have of each currently.
+
+============================================================================
+SEE ALSO: slots, myinfo and myskills

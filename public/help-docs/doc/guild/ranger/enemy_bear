@@ -1,0 +1,17 @@
+
+Ranger Help for: enemy bear
+===========================
+
+SUMMARY:
+Choosing bear means your Ranger is trained to bring down bears and
+bear-like predators: heavy, clawed, territorial beasts that rely on bulk,
+strength, and endurance.
+
+This is a practical wilderness choice for forests, hills, mountains, arctic
+lands, and caves where large predators roam.
+
+COMMAND:
+  setenemy bear
+
+=============================================================================
+SEE ALSO: enemy, setenemy and terrains

@@ -1,0 +1,15 @@
+Rainbow Aura
+
+The rainbow aura is a construction of druidic power
+which protects the subject against elemental attacks:
+fire, cold, lightning, and water.
+
+(Note: You do not have to wear the rainbow object.
+It protects you automatically.)
+
+Command: rainbow <target> (defaults to caster)
+Base Cost: 40 SP
+Base Recovery: medium
+Base Effect: protection (moderate)
+Base Duration: medium-long
+Guild Level: 4

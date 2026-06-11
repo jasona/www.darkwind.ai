@@ -1,0 +1,20 @@
+
+Ranger Help for: camp
+=====================
+
+SYNTAX:      camp
+USAGE:       forest,plains,swamp,desert,jungle,hills,road,beach,
+             underground,mountain,arctic,barren,outside
+SLOT COST:   1
+BASE SP:     1/4 max sp
+SKILL TYPE:  aid 
+
+SUMMARY:    
+Rangers do not have a guild hall. All of the wilderness is their guild hall.
+As a result, Rangers do not have a place that they can take their stuff and
+store while they are away. But being the masters of the wild that they are,
+Rangers have learned how to rough it in the outdoors. When a Ranger 'camps',
+they create a small campsite and makeshift tent. In it they store their
+stuff so when they come back, its all redy for them to explore. Camping
+also saves a Rangers position. Campsites won't last over reboots.
+

@@ -1,0 +1,9 @@
+SYNOPSIS
+        varargs void subdomain_shout(string sRoomPrefix, string sArg, 
+          status tNoWiz, object * oExclude)
+
+DESCRIPTION
+        Does a "shout" to the subdomain sRoomPrefix. The message sArg
+        will be in seen in their shout color, unless overriden. If
+        tNoWiz is 1, it won't show to immortals. oExclude is an array
+        of objects you don't want to see the shout.

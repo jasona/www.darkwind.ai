@@ -1,0 +1,13 @@
+Parley - defensive trick
+------------------------------------------------------------
+The swashbuckler can attempt to halt combat in a room by
+negotiating a truce.  Success depends on the intelligence
+and charisma of the swashbuckler, and the charisma and
+wisdom of the people in the room.  The swashbuckler need
+not be in combat himself; he can attempt to stop any combat
+in the room.
+
+GL:  8
+SP: 30
+command:  parley
+duration: permanent (until attacked again)

@@ -1,0 +1,10 @@
+_______________________________________________________________________________
+"Teleport Object" 
+        The psionicist can teleport an object from his location to the
+        location of another player, like the UPS service in the post
+        office.  For a slightly higher SP cost, the psionicist can
+        teleport an object to the guild storage room.
+ 
+SP Cost:  20 (40 to guild)    Guild Level:  10    Potential Points:  3
+ 
+Command:  telobj <object> to <target>

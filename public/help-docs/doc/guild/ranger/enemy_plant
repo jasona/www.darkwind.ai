@@ -1,0 +1,17 @@
+
+Ranger Help for: enemy plant
+============================
+
+SUMMARY:
+Choosing plant means your Ranger has learned to fight living plants:
+animated vines, carnivorous flowers, treants, fungus growths, and other
+rooted or creeping vegetation.
+
+This is a good choice for forests, jungles, swamps, plains, and strange
+beaches where the land itself may bite back.
+
+COMMAND:
+  setenemy plant
+
+=============================================================================
+SEE ALSO: enemy, setenemy and terrains

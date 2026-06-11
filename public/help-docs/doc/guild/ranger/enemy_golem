@@ -1,0 +1,17 @@
+
+Ranger Help for: enemy golem
+============================
+
+SUMMARY:
+Choosing golem means your Ranger is trained to fight constructed bodies:
+stone guardians, clay servants, animated statues, and other artificial
+creatures.
+
+This is a rare and specialized choice. It is less about animal lore and
+more about knowing where joints, cores, seams, and bindings fail.
+
+COMMAND:
+  setenemy golem
+
+=============================================================================
+SEE ALSO: enemy, setenemy and terrains

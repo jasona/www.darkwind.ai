@@ -1,0 +1,23 @@
+SYNOPSIS
+	void remove_auto_obj(mixed xObj)
+
+DEFINED IN
+	player.c
+
+DESCRIPTION
+	Removes an object from a players autoload list. '<xObj>' may be either
+	the string entry in the autoload list in the form 'path:load parameters'
+	or the object itself that is to be removed.
+
+EXAMPLE
+	// This first example will remove an autoload by using a string path
+	// with an initial starting parameter of "justloading"
+	this_player()->remove_auto_obj("/objects/hat:justloading");
+
+	// This second example will remove an autoload by using an object
+	object oHat = clone_object("/objects/hat");
+	this_player()->remove_auto_obj(oHat);
+
+SEE ALSO
+	init_arg, register_auto_obj, query_auto_obj, query_auto_load,
+	set_auto_load

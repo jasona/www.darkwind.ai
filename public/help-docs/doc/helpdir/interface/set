@@ -1,0 +1,58 @@
+|YK0SYNTAX
+======
+|YKBset <option> <value>|YK0
+
+DESCRIPTION
+===========
+The set command allows you to customize several different features
+as described below:
+Option may be one of the following:
+  |YKBmail <e-mail address>|YK0   
+    Sets your current e-mail address.
+  |YKBforwarding <on/off>|YK0
+    Forward your mudmail to your e-mail?
+  |YKBvismail <off|on>|YK0
+    Allows your e-mail address to be seen by others.
+  |YKBweb <valid URL>|YK0
+    Adds your web page address to your 'finger' info.
+  |YKBprompt <string>|YK0
+    Sets the string used as your prompt.
+    As a wiz, you can add the following vars:
+        %d = current working directory
+        %i = current invis level
+        %wi = whoinvis indicator
+        %f = fakeidle indicator
+        %e = environment (D/P for dev/prod)
+  |YKBmonitor <off|on|bar>|YK0
+    Sets how your remaining HP/SP are shown.
+  |YKBautoexits <off|on>|YK0
+    Sets whether detailed exit information is shown.
+  |YKBanonymous <off|on>|YK0
+    Sets how anonymous you are to the other players.
+  |YKBterm <ansi|vt100|vt52|none>|YK0
+    Sets which terminal type you're using to connect.
+  |YKBtimestamps <off|on>|YK0
+    Sets timestamps on|off when viewing channel histories.
+  |YKBbrief <off|on>|YK0
+    Sets the amount of room descriptions that are shown.
+  |YKBlanguage <race>|YK0
+    Set your default language to speak with.
+  |YKBcolorblock <off|on>|YK0
+    Setting this |YKBon|YK0 locks the color of your channels
+    to the value you set in 'color'. Leaving it |YKBoff|YK0
+    allows you to see when players use color codes
+    in their channel messages.
+  |YKBshowmulties [off|main|on]|YK0
+    Setting this to |YKBON|YK0 allows other players to see
+    a list of your Main character and registered
+    multies at the bottom of your finger info. This
+    allows players to learn your other characters if
+    you choose.
+    Setting this to |YKBMAIN|YK0 allows other players to see
+    only your |YKBMAIN|YK0 character at the bottom of your
+    finger info, unless the 'finger' is targeting
+    your main character already.
+    Setting this to |YKBOFF|YK0 does not show your multies
+    to other players.
+    Default setting is |YKBOFF|YK0.
+

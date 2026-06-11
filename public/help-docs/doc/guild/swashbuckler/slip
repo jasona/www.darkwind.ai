@@ -1,0 +1,13 @@
+Slip - attack skill
+------------------------------------------------------------
+A Swashbuckler can spend a little Flair to slip inside an
+opponent's guard and land a quick weapon strike.
+
+Slip costs no spell points. It requires a slashing or
+piercing weapon in the main hand.
+
+GL:  3
+Cost: 2 Flair
+command: slip <target> (defaults to opponent if in combat)
+duration: instant, micro damage timer
+see also: flair

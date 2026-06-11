@@ -1,0 +1,30 @@
+|WKOCommands
+|WKO========================================
+
+|YKBmail |BKB- |CKBloads your mail reader
+|YKBcheckmail |BKB- |CKBchecks to see if you have mail
+|YKBreadmail |BKB- |CKBputs you into the mail system (see arguments below)
+|YKBclosemail |BKB- |CKBremoves your reader
+
+|YKBmail <person> (only works if you have a mail reader loaded) |BKB-|CKB
+        sends mail to another character.
+
+|YKOUsing the |YKB"set" |YKOcommand, you can set your mud mail to be forwarded
+to your internet email address.  See |YKB"help set"|YKO for more information.
+
+The following commands are issued from the mail prompt.
+|YKB(1-max_num)   |BKB-- |CKBShow that message number
+|YKB.             |BKB-- |CKBShow the current message again
+|YKB+             |BKB-- |CKBShow the next message
+|YKB+<number>     |BKB-- |CKBShow the message <number> ahead of this one
+|YKB-             |BKB-- |CKBShow the previous message
+|YKB-<number>     |BKB-- |CKBShow the message <number> before this one
+|YKBd <number>    |BKB-- |CKBDelete message <number> from your mail.
+|YKBh             |BKB-- |CKBShow message headers
+|YKBl             |BKB-- |CKBSave the current message to /log/<you>.mbox
+|YKBn             |BKB-- |CKBGoto and show next message
+|YKBR             |BKB-- |CKBReply to the current message's sender
+|YKBr             |BKB-- |CKBReply to the current message's sender and Cc's
+|YKBq             |BKB-- |CKBQuit mail
+|YKBx             |BKB-- |CKBQuit mail without erasing any messages
+|YKB?             |BKB-- |CKBShow this help information

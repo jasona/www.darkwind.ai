@@ -1,0 +1,180 @@
+/doc/wizard/treasure
+====================
+ 
+/* Updated by Rodney - 9/20/94 */
+ 
+**************************************************************************
+IMPORTANT!  THIS RULE IS LAW!!!
+**************************************************************************
+If you make a magic item that does ANYTHING except for very minor things
+THIS COUNTS AS YOUR 1 ITEM PER 100 ROOMS LIMIT!!!!!  You are only allowed
+1 item per 100 QUALITY coded rooms.  I.E.,  this means only one exceptional
+OBJECT per 100 rooms, not 1 weapon + 1 armour + 1 whatever per 100 rooms.
+Also items like this MUST use make_unique_object to ensure that only 1 of
+these items will be in the game at any one time.
+***************************************************************************
+    VERY IMPORTANT ADDITION!!  DATE : 9/20/94  THIS TAKES EFFECT NOW!!
+***************************************************************************
+ 
+The shops in town are all in the process of changing.  We now have an
+inheritable shop, and they are type-specific, and they will soon be
+material-specific as well.  These accept bitfield arguments, just like the
+set_new_type() on weapons.  For example:
+ 
+set_treasure_type(TYP_MAP|TYP_MAGIC);
+ 
+The following are the legal treasure types (yes, you must include the "TYP_"):
+ 
+TYP_BOOK     TYP_FURNITURE  TYP_GEM     TYP_JEWELRY   TYP_STATUE  TYP_GLASS
+TYP_MEAT     TYP_DRINK      TYP_FOOD    TYP_CLOTHING  TYP_ART     TYP_CONTAINER
+TYP_SCROLL   TYP_TABLET     TYP_MAP     TYP_BONES     TYP_TRASH   TYP_MAGIC
+TYP_TRINKET  TYP_LIGHT      TYP_POTION  TYP_INSTRUMENT
+ 
+TYP_ALLTREASURES
+ 
+This last sets your treasure object to all treasure types.
+ 
+Now...On with the other functions...
+ 
+I never saw the point of making doc files that did not use all of the
+possible functions callable in stuff like armour/weapons in the doc file
+itself.  If it's a doc file, then it's supposed to help you, right?
+Not to mention that LPmud 2.4.5's docs are not the greatest in explaining
+things.  So, I took the time to re-write them.  Here is the documentation
+for treasure.
+ 
+--------------------
+ 
+The first lines in any treasure object should be:
+ 
+#include <mudlib.h>
+#include <treasure.h>
+#include <material.h>
+inherit TREASURE;
+ 
+    These lines set up the object to be a treasure object and will
+    allow calls to the treasure master object as defined below.
+    Also, in the reset function, you should include the following
+    line:
+if(!is_clone(this_object())) return;
+    before calling ::reset(arg).  This is a memory-saving measure.
+    The only time when you should not include this line is when
+    the treasure needs to reference the master object for some
+    reason.
+ 
+--------------------
+ 
+set_name("name");
+ 
+    string name.  Adds the name passed in to the id list.
+ 
+set_alias("alias");
+ 
+    string alias.  This is another name for the object.  It doesn't
+    appear anywhere, but it can be used by the player.
+ 
+set_alt_name("alt_name");
+ 
+    string alt_name.  This is yet another name for the object.  It doesn't
+    appear anywhere, but it can be used by the player.
+ 
+set_short("short");
+ 
+    string short.  This is the description seen in the player's
+    inventory plus a ".\n"
+    Sets the short description of the object to short and the long
+    description to "You see nothing special.\n"
+ 
+set_long("long.\n");
+ 
+    string long.  Sets the long description of the object to long.
+    I added the ".\n" in the LPC line above to remind you that you
+    should add the period and newline in the long description
+    because LPC doesn't add it in for you.  This is what the player
+    will see when they look at the object.
+ 
+set_weight(weight);
+ 
+    integer weight.  This is the weight of the object.
+ 
+set_value(value);
+ 
+    integer value.  This is the selling value of the object.  The
+    buyback value is twice this value.
+ 
+set_treasure_type(TYPE1|TYPE2|...);
+ 
+    bitfield TYPE1, TYPE2, ....
+ 
+set_material(TYPE1|TYPE2|...);
+ 
+    bitfield TYPE1, TYPE2, ....
+ 
+set_read("read.\n");
+ 
+    string read.  This is what the player will see if they read the
+    object.  I added the ".\n" in the LPC line above to remind you
+    that you should add the period and newline in the long description
+    because LPC doesn't add it in for you.
+ 
+set_info("info.\n");
+ 
+    string info.  This will be displayed to the owner of the
+    treasure if he identifies the it.  I believe there are plans
+    here for something like an identify scroll or possibly an
+    identify spell for one of the guilds, and this info would be
+    displayed to the player at that time.  This is a good place
+    to put special information about the treasure.  Usually, a
+    hint of the weight is given, as well as if the treasure
+    has any special uses.
+ 
+set_no_buy(n);
+ 
+    status n.  Set this to 0 if you want people to be able to
+    buy and sell this to and from the store.  Set to 1 if you
+    don't.  If you dont set this command, it will default to
+    buyable.
+ 
+void set_no_sell(int iX);
+
+Pass a 1 as the parameter to have it be refused in stores. Note that this
+works a bit differently from no_buy, in that the more times you call
+set_no_sell(1), the more times you then have to call set_no_sell(0) to
+get it to a sellable state again. This is done so that the creator can
+set it no_sell, and if a guild uses no_sell to prohibit players from selling
+checked-out/borrowed items, when the guild calls set_no_sell(0) when the
+object is done being borrowed, the item will still not be sellable.
+
+int query_no_sell(); 
+
+Returns sellable status.
+
+set_steal(n)
+ 
+    status n. Set to 1 if you want to make the item unstealable
+    by thieves.  Don't abuse this command!  It is meant only for
+    things like quest items or objects great importance.  If you
+    don't add this command, item defaults to stealable
+ 
+------------------
+ 
+Here is a sample treasure for you to look at:
+ 
+#include <mudlib.h>
+#include <treasure.h>
+inherit TREASURE;
+ 
+void reset(int iArg) {
+  if(!is_clone(this_object())) return;
+  ::reset(iArg);
+  if(iArg) return;
+  set_id("rodney-hayden");
+  set_alias("key");
+  set_short("glowing key");
+  set_long("\
+This key is completely black.  However, it also emits a strange blue glow.\n");
+  set_value(565);
+  set_weight(1);
+  set_light(1);
+  set_treasure_type(TYP_GEM);
+}

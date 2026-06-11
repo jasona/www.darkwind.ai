@@ -1,0 +1,67 @@
+                          DarkWind Professions
+
+    DarkWind has eight professions. Herbalism, Mining, Skinning, and
+Fishing gather resources from the world. Alchemy, Leatherworking,
+Smithing, Tailoring, and Refining turn saved materials, reagents, and
+equipment into useful outputs.
+
+Where to go:
+  The profession building is 4e, n from Center of Town. It contains tools,
+  craft rooms, workers, the work order board, and profession services.
+
+Getting started:
+  1. Go to the profession building and buy the tools you need.
+  2. Use 'professions guide' for a practical first route.
+  3. Gather materials with 'gather herbs', 'mine ore', 'skin corpse',
+     'bait hook', and 'fish'.
+  4. Check saved materials with 'reagents' and source hints with
+     'reagents search <item>'.
+  5. Use 'professions craftable' or 'professions check ...' before
+     crafting so you know what you are missing.
+
+    Herbalism gathers herbs for potions, guildcraft, work orders, and
+recipe cards. Mining gathers ore for bars, smithing, work orders, and
+some guild preparations. Skinning gathers hides that become leather for
+armor, bags, recipes, and guild preparations. Fishing catches food and
+fish-part reagents used by recipes, guildcraft, and orders.
+
+    Alchemy creates potions and recipe-card outputs. Leatherworking
+creates hide and studded armor, converts hides to leather, and supports
+crafted bags and utility recipes. Smithing creates metal armor and bars.
+Tailoring creates padded armor and light clothing. Refining breaks old
+equipment back into saved profession materials.
+
+Useful commands:
+  professions
+  professions guide
+  professions gathering
+  professions crafting
+  professions craftable
+  professions check <type> <target>
+  reagents
+  reagents search <item>
+  workorders
+  guildcraft list
+
+    Work orders are posted in the profession building. They ask for saved
+materials or crafted goods and reward coins, experience, profession
+practice, shards, or recipe cards. See 'help workorders'.
+
+    Profession-crafted gear can be improved with saved shards using
+'inlay <crafted item> with <shard>'. See 'help inlays'.
+
+    Guild members can use 'guildcraft' to spend saved profession materials
+on guild-themed preparations. See 'help guildcraft'.
+
+    Workers can be hired in the profession building for herbalism, mining,
+skinning, fishing, and reagent scavenging. See 'help workers'.
+
+    Skillups are determined by your skill and the tier of what you make.
+Gathering professions always have a chance to improve, though the chance
+gets lower at higher skill. Gathering skill also improves yield. When
+manufacturing, lower-tier items stop giving skill once you outgrow them,
+until you reach final-tier crafting.
+
+|GKBNote: Druids can use their silver sickle as a gardening spade, mining
+pick, and skinning knife. Garou in wolf form and dragons in dragon form do
+not need those tools.|000

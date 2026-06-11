@@ -1,0 +1,31 @@
+
+Ranger Help for: setsecond
+==========================
+
+SYNTAX:      setsecond/setsecond <your secondary terrain name here>
+USAGE:       Any wilderness terrain/one time use.
+
+SUMMARY:    
+Allows the Ranger to set his or her secondary terrain. THIS COMMAND MAY
+ONLY BE USED ONCE. Available terrains are: 
+
+         forest  plains  swamp  desert  jungle  hills
+         beach   arctic  barren underground  mountain 
+
+A Ranger's secondary terrain is the terrain in which the he/she spent some
+time in growing up. But the Ranger doesn't know it as well as they're
+primary terrain. A Ranger's secondary terrain will affecT the same kinds
+of things as their primary terrain, just not as much. 
+
+In combat, secondary terrain still matters. A Ranger fighting there
+currently receives +10 dodge and roughly +10% damage. It is not as strong
+as primary terrain, but it is still a meaningful edge over unfavored
+ground.
+
+Choose your secondary terrain carefully, for it is a one time command. Use
+'rhelp <terrain>' to read about each terrain before choosing.
+
+NOTE: Primary and secondary terrains can be the same.
+
+=============================================================================
+SEE ALSO: setprime, setenemy, terrains, survey and followers

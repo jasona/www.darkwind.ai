@@ -1,0 +1,13 @@
+Skill: Counter     Timer: None         GL:  9    Cost: NONE
+
+After a certain amount of combat experience, a fighter gains 
+the knowledge of how to turn an attack back on its attacker.
+
+This is not something that can be done often during the course
+of a battle but is something that a fighter with the proper
+skill level can do without thinking occasionally in the course
+of battle.
+
+Counter uses endurance when you counter-attack.
+
+Syntax is: ftoggle counter <on|off>

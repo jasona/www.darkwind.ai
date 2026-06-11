@@ -1,0 +1,7 @@
+SPELL NAME  : ctitle
+SPELL SYNTAX: ctitle <title>
+SPELL COST  : NONE
+DESCRIPTION : This command allows the cleric to set his/her guild title
+              on the members list.  Although you can set it to anything,
+              keep in mind that your guild coder (and God) won't
+              appreciate crude or vulgar titles.

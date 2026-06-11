@@ -1,0 +1,15 @@
+Eagle Eye
+
+The eagle is famed for its eyesight.  Through this
+spell, the druid may confer that eyesight upon
+himself or another, increasing their chance of
+scoring a hit in combat by noting openings in
+their opponents' defenses.  The chance of scoring
+a critical hit is also increased.
+
+Command: eagleeye <target> (defaults to caster)
+Base Cost: 50 SP
+Base Recovery: medium-long
+Base Effect: boost (hit and critical chances, moderate)
+Base Duration: medium-long
+Guild Level: 16

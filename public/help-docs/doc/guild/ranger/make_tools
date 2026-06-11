@@ -1,0 +1,18 @@
+Ranger Help for: make tools
+============================
+
+SYNTAX:      make tools
+USAGE:       Wilderness
+SLOT COST:   NA
+BASE SP:     25
+SKILL TYPE:  survival
+
+SUMMARY:
+This skill allows a Ranger to prepare a reusable field kit from
+wildcraft supplies. The Ranger needs 2 fieldstone, 1 flint, and
+1 binding fiber. Fieldstone and flint come from mine or quarry, and
+binding fiber comes from forage.
+
+The field kit is stored in the Ranger's wildcraft pouch instead of
+being carried as a fragile inventory item. It supports field survival
+and mining work.

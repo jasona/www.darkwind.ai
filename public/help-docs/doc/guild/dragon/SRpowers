@@ -1,0 +1,31 @@
+dfly <higher/lower/land> age 17 cost 50. Fly in the sky.
+dragonfear or dfear age 17 cost 25. Toggle between allowing your dragon fear
+aura, or to suppress it.
+dtransform age 17 cost 50. Transform into your dragon form and back.
+lair age 17 cost 50. Instantly return to your lair.
+swipe <victim> age 17 cost 5%. Simple claw attack.
+breathe <victim> age 18 cost 10%. Use your breath as a weapon.
+dwill or dragonwill age 18 cost 10%. Become immune to breaks in your concentration.
+airdrop <victim> age 19 cost 20%. Pick someone up, fly into the air, then drop them.
+buffet <victim> age 19 cost 15%. Buffet your victim with wind from your wings.
+dslam <victim> age 19 cost 20%. Slam your victim!
+fetch <item> or ferry age 19 cost 25. Fetch <item> from your lair, or ferry
+what's in your clutches to your lair.
+bellow age 20 cost 10%. Use your breath weapon on everything in your environment.
+bind <victim> age 20 cost 25%. Bind your victim to the ground.
+crush <victim> age 20 cost 30%. Pin someone to the ground and crush them.
+dfind <victim> age 20 cost 40. Find your victim.
+dclaws age 21 cost varies. Magically imbue your claws.
+dloot age 21 cost 25. Summon your familiar to loot for you.
+dscales age 21 cost 50+. Magically harden your scales.
+peace [off] age 22 cost 100. Make everyone feel at peace.
+ddfear <victim> age 23 cost 50. Direct your fear at one target.
+dhole age 24 cost 50. Create a Dragon's pouch.
+dpox <victim> age 25 cost 25%. Place a pox on your victim.
+dsell age 26 cost 50. Have your familiar sell all for you.
+dcommune age 30 cost 0. Commune with the Oracle to fix your alignment.
+dspikes age 33 cost varies. Cover your scales with spikes.
+bombard age 35 cost 80%. Bombard your victims!
+dstomp <victim> age 40 cost varies. Your stomp paralyzes your victim.
+inferno <victim> age 50 cost 80%. Your victim feels like hell.
+For more complete info on a power, 'help <power>'

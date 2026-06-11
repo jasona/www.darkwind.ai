@@ -1,0 +1,10 @@
+SPELL NAME  : Mitra's Hand
+SPELL SYNTAX: Mhand [<target>]
+SPELL COST  : 50 SP
+DESCRIPTION : Calls the hand of Mitra upon the target, or the cleric
+              himself if no target is specified. Mitra rewards those
+              who follow the path of good with protection and ability
+              in combat. Evil creatures and people, however, experience
+              condemnation and shame when Mitra's righteous hand is
+              upon them, and become less able. Either way, the target
+              is only affected for a short time.

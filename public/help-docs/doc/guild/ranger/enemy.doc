@@ -1,0 +1,21 @@
+
+Ranger Help for: enemy
+======================
+
+SUMMARY:    
+Each Ranger has a special species that he or she just loaths. Use the
+'setenemy' command to set your enemy species. A Ranger's primary terrain
+determines what races are allowed. Once set, the Ranger will get fighting
+bonuses and stronger Ranger attack-skill damage against it. In combat this
+currently means a major boost to critical chance (currently +30 crit) and
+a sizable damage increase when striking that species (currently about
++33% damage). There are also some hinderances,
+such as you probably won't be able to sooth an orc, if an orc is your
+enemy race. Your enemy species will never be the race of your follower.
+
+Use 'setenemy' with no argument to see the choices available to your
+primary terrain. Use 'rhelp <species>' or 'rhelp enemy <species>' to read
+what that species usually covers before choosing.
+
+=============================================================================
+SEE ALSO: setenemy, setprime and followers

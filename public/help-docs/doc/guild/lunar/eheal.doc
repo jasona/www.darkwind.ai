@@ -1,0 +1,11 @@
+EHEAL
+
+   By means of this spell, low to mid ranked Lunar Magi
+   are able to call upon the Green moon for solace. The
+   Lunar Mage will heal at a highly accelerated rate, 
+   but this is truly expensive and taxing in energy. Once
+   the healing has started, the mage may use 'endheal'
+   to halt it at anytime.  The spell automatically ends
+   if the caster has no more energy.
+
+ GL: 5  COST: 25 + average 10 per interval

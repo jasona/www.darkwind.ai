@@ -1,0 +1,20 @@
+
+Ranger Help for: furyfire
+=========================
+
+SYNTAX:      furyfire <target>
+USAGE:       Any terrain
+SLOT COST:   14
+BASE SP:     variable
+SKILL TYPE:  bow
+
+SUMMARY:
+This skill allows a Ranger to make full use os the easy loading
+ability of the shortbow. Several factors go into how well a furyfire
+goes, such as dexterity. When a ranger furyfires, he or she lets go
+a volley of arrows all in the span of mere seconds. Whatever the Ranger
+has set as the shortbow's loader will be used in furyfire. The best
+arrows in the loader will automatically be used in the volley. There
+must be at least 4 arrows in the loader in order for a Ranger to
+furyfire.
+

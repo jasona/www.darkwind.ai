@@ -1,0 +1,49 @@
+Ranger Help for: advancement
+============================
+
+SUMMARY:
+Rangers advance through guild levels 1 to 15. Each guild level grants
+slots that you spend to learn new skills. Higher guild levels give
+more slots per level (4 at level 1, up to 20 at level 15).
+
+BEFORE YOU CAN ADVANCE:
+You must set all three of these first (one-time choices):
+  setprime <terrain>    Your primary terrain
+  setsecond <terrain>   Your secondary terrain
+  setenemy <race>       Your enemy species
+
+HOW TO ADVANCE:
+You can advance from the guild lodge or anywhere in the wilderness
+using remote commands on your quiver:
+
+  rcost                 See what it costs to advance
+  radvance level        Advance your game level (costs exp + gold)
+  radvance guild        Advance your guild level (costs exp only)
+  radvance <stat>       Raise str, dex, con, int, wis, or chr
+
+These commands require you to be in the wilderness (not a city,
+indoors, or at a dock). You can also use 'advance' and 'cost'
+when visiting the lodge.
+
+Your guild level cannot exceed your game level. So to reach guild
+level 5, you need to be at least game level 5.
+
+LEARNING SKILLS:
+Once you have slots, spend them on skills:
+  skilltree             See the full skill tree
+  learn                 See what skills you can learn right now
+  learn <skill>         Learn a skill (costs slots + experience)
+  learn cost <skill>    Check the cost before committing
+
+Skills have prerequisites - learning one skill unlocks others. Start
+with 'forage' (your first available skill) and branch out from there.
+Use 'skilltree' to plan your path.
+
+COST FACTORS:
+- Intelligence reduces the experience cost of learning skills.
+- Being in multiple guilds increases skill learning costs.
+- Skills cost more SP to use outside your primary/secondary terrain.
+- Alignment far from neutral increases SP costs for all skills.
+
+=============================================================================
+SEE ALSO: glevels, slots, skills, skilltree

@@ -1,0 +1,44 @@
+                             |CKBChapter 3 - Combat
+                     |BKB----------------------------------------
+
+     |WKBExperience is gained by fighting and killing monsters. The command
+     to initiate combat is 'kill'. Some monsters will be aggressive. That
+     means that they will initiate combat as soon as you enter the room.
+     When you are exploring new areas it is always a good idea to set 
+     your wimpy (See help wimpy) higher than normal, then reset it to the
+     percentage that you deem appropriate once you determine the strength
+     of your opponent. When you've found your victim and begin your
+     attack, watch the damage done. The best ways of doing this are by
+     typing '.' (period) or 'mon' (|CKOSee help mon|WKB). '.' gives you a quick
+     show of your health while 'mon' shows it to you as it changes.
+
+     Using wimpy will cause you to run from a battle when your hitpoints
+     drop below the level to which you have wimpy set. You can set the
+     direction in which you run by using 'wimpycmd'.  The direction you set must
+     be a valid room exit (for example 'wimpycmd south') and it may not be
+     abbreviated.  If your wimpycmd is not set to a valid exit you will still
+     wimpy when your hitpoints reach the preset amount, but you risk wimpying
+     Into aggressive monsters.  Many areas are designed specifically for
+     newbies. It is best to stick to the areas detailed in this book until you
+     reach level six (|CKOsee Chapter 5|WKB).
+ 
+     As a newbie, you have access to the 'scry' command. You can visit Erga's 
+     Newbie Emporium (|CKOSee Chapter 7|WKB) and receive an orb of scrying to give
+     you a rough idea of how you would fare against your chosen opponent.
+     
+     After engaging in battle you will need to find a method of healing your 
+     hitpoints and spellpoints. Darkwind has several different ways to heal. 
+     The cheapest and slowest of which is sitting. While sitting you cannot 
+     engage in combat, but you will regen hp faster. Being intoxicated also 
+     speeds the rate at which you regen hp and sp. Food gives a one time 
+     boost to hp/sp. There are also potions and magical heals available. Some 
+     guilds have the powers which heal. As a newbie you will not be able to 
+     afford many of the meals and kegs in the player run pubs and inns (|CKOSee
+     chapter 6|WKB). There is a special Inn, provided for newbies only, where you
+     can purchase food and ale (4w,n,e).
+
+     As a newbie, you have a few commands to assist you in combat.  
+     They are:
+     |BKB* |YKBnheal|GKO, which restores a bit of hp.
+     |BKB* |YKBncot|GKO, which will transfer you back to cot.
+     |BKB* |YKBnpunch |GKOand |YKBnkick|GKO, which will help you fight against monsters.

@@ -1,0 +1,12 @@
+_______________________________________________________________________________
+"Imprint"         
+        This imprints an object with the psionicist's "psychic
+        signature".  If cast in most places on the mud it will last a
+        temporary amount of time dependent on guild level. If cast in
+        the storage  room of the Psionicist Guild it has a permanent
+        duration (until the item is next picked up).  It will not
+        allow anybody but the psionicist to pick up the item.
+ 
+SP Cost:  3		Guild Level:  2		Potential Points:  1
+ 
+Command:  imprint <object>

@@ -1,0 +1,8 @@
+/doc/attribute/resist_cold
+
+Format: (Living_Ojbect)->set_attribute("resist_cold", tValue);
+
+Description:
+  Resist cold will warm the Living_Object in Hyperborea as if
+  the Living_Object were in a warm room. tValue simply turns it
+  on with 1, off with 0.

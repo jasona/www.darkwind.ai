@@ -1,0 +1,12 @@
+|GKO================================================================
+                           |MKBTransfer
+|GKO================================================================
+
+|YKOUsing Transfer, a skilled shaman can channel her energy through
+the will of nature and energize her fellow Garou, healing their
+SP. The Rite of Transfer, however, is slightly taxing and thus
+a small amount of spirit energy is lost during the transfer.
+
+|WKOUsable in Form: |GKOMan                          |WKOCost: |CKO40 SP
+|WKORestricted to: |MKBShaman               |WKOSP Transfered: |CKO30 SP
+|RKOSyntax: |YKBtransfer <person>

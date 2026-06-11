@@ -1,0 +1,258 @@
+This is the Documentation for creating a door using the newdoor file
+ 
+	NOTE: Major revisions were made to this code on or about
+	5/23/97. It should be backwards compatible with the
+	exception that some of the messages were changed and block
+	checks were added. The extra three arguments (mix1, mix2, and
+	str7) are all optional but remember that you'll need
+	place holders for any of them which precede ones you do
+	want to use.
+
+So you want to put a door in your castle, eh?  Well, this is how you do it.
+ 
+Create a room or edit one already created.
+ 
+Change the inheritance to: inherit DOORROOM;
+ 
+Somewhere in the reset(), (if you want it to reset every time, put it
+before your if (arg) return; line(s)), you must add the following
+function:
+ 
+        MAKE_DOOR(str1, str2, str3, str4, str5, int1, 
+		int2, int3, str6, int4, mix1, mix2, str7);
+ 
+I wrote it like this so you understand what types of values to use:
+  string for str#, integer for int#, mixed for mix#.
+ 
+		       ********************
+
+str1: This is the door_type to which the door will respond.  Usually,
+      a door is a door.  In this case, however, a door can be a window,
+      a rockpile, a trapdoor, a casket, a closet, etc.  The door_type
+      must be a ONE WORD string.  Else, your door may not work.
+      Lets assume you want a "door".  The line should look like this
+      now:
+ 
+      MAKE_DOOR("door",
+ 
+		       ********************
+
+str2: This is the direction that the door exits this room in.  Let's
+      choose northeast.
+ 
+      MAKE_DOOR("door","northeast",
+ 
+		       ********************
+
+str3: Now this string is required to make sure the door actually goes
+      somewhere.  You may have guessed it already.  Yes, this is the
+      pathname for the room on the other side of the door.  If you have
+      a room in mind,  then thats what you should insert here.  If you
+      hadn't thought that far ahead, dont worry, just make up a file
+      name for the next room and make a whole new room.  You'll have to
+      do the same to that door as you do here, so be forewarned.  I call
+      this value the partner_door string.
+ 
+      MAKE_DOOR("door","northeast","players/you/room2",
+ 
+		       ********************
+
+str4: Next comes the door itself.  What does it look like?  What should
+      players see if they look at it?  By the way, you should have mentioned
+      that there is a door here in the room's description (unless you
+      want it to be a secret, of course)!  How about a big blue door with
+      a bronze bolt?  I always did like aliteration! Oh, if you pass 0
+      for this argument, you'll get a default description. The default
+      isn't exciting but rather just a basic description.
+ 
+      MAKE_DOOR("door","northeast","players/you/room2",
+                 "\
+This door is big, blue, and on the left, there is a bronze bolt,\n\
+with a padlock!",
+ 
+*NOTE*: No, you do NOT have to put a carriage return (\n) at the end
+        of your door description.  You are certainly welcome to, if you
+        so chose.
+ 
+		       ********************
+ 
+str5: We said the door had a padlock?  then which key will work in it?
+      Here's where you can set that.  I call this the key_code string.
+      It can be pretty much any strange code you like, so have fun!  I
+      do suggest you stick to one word, and no funny characters.  Please
+      remember to use this same code when you make a key!  If you dont
+      want to have a door that can be locked, then just set this string
+      to " ".  (actually, it still doesn't matter what the code is.  More
+      on that later).  Code, code,...  what should be the code?   I know!...
+ 
+      MAKE_DOOR("door","northeast","players/you/room2",
+                "\
+This door is big, blue and on the left, there is a bronze bolt,\n\
+with a padlock!",
+                "test1",
+ 
+		       ********************
+ 
+int1: Now were're into the integers needed.  Those of you familiar with
+      the old door-object might recognize these.  The first is the trigger
+      for opening and closing the door.  I call it is_closed.  If
+      is_closed = 1, then this statement is true, and the door is actually
+      closed.  If is_closed = 0, then its a false statement, meaning that
+      the door is open. Make sense?  I like starting with a nice,
+      inviting, open door:
+ 
+       MAKE_DOOR("door","northeast","players/you/room2",
+                 "\
+This door is big, blue and on the left, there is a bronze bolt,\n\
+with a padlock!",
+                 "test1", 0,
+ 
+    You can use the defined values OPEN and CLOSED here, as well.
+
+		       ********************
+ 
+int2: Related to the is_closed integer is the is_locked integer.  Means
+      about the same thing, except this one controls whether the door is
+      locked or not.  Use 1 for true, 0 for false.   Oh, btw, These
+      values (int1 and int2) will be true for the door every time there
+      is a reset or shutdown. Thats why this whole thing has to go into
+      the reset function in your room.  Why lock the door if its open?
+      (actually i set things so that you can't lock an open door.  Please
+      don't be contrary and set it anyway. Unforseen errors will probably
+      occur, erasing all your files and crashing the mud! (Well, they
+      could!)
+ 
+      MAKE_DOOR("door","northeast","players/you/room2",
+                "\
+This door is big, blue and on the left, there is a bronze bolt,\n\
+with a padlock!",
+                "test1", 1, 0
+ 
+    You can also use the defined values UNLOCKED and LOCKED here.
+
+		       ********************
+ 
+int3: What's left?  Why, the bit i was talking about earlier, the
+      ability to lock the door!  I called it the can_lock integer.
+      Again, 1 is true, the door can be locked and unlocked.  0 means
+      false, not able to lock the door.  By setting this variable to 0,
+      the key_code and is_lock items become unnecessary (except it'll
+      mess up if you skip them).  I like having a lock... keeps out the
+      unsavory types. :)
+ 
+      MAKE_DOOR("door","northeast","players/you/room2",
+                "\
+This door is big, blue and on the left, there is a bronze bolt,\n\
+with a padlock!", "test1", 1, 0, 1,
+ 
+    You can also use the defined values NONLOCKABLE and LOCKABLE here.
+
+		       ********************
+ 
+str6: You will need to also pass the direction of the door from the
+      _other_ room.  So in this example, the door in this room went
+      northeast, so the door in the other room will go southwest.
+      Simple eh?  Here is what your MAKE_DOOR command will look like:
+ 
+       MAKE_DOOR("door","northeast","players/you/room2",
+                 "\
+This door is big, blue and on the left, there is a bronze bolt,\n\
+with a padlock!", "test", 1, 0, 1, "southwest",
+ 
+		       ********************
+ 
+int4: You should set the percentage on a 1 to 100 scale of how hard it
+      should be to pick this door.  If you do not want to worry about that
+      set it to 0 and a default value will be set (currently 40%).
+ 
+       MAKE_DOOR("door","northeast","players/you/room2",
+                 "\
+This door is big, blue and on the left, there is a bronze bolt,\n\
+with a padlock!", "test", 1, 0, 1, "southwest", 65,
+ 
+		       ********************
+ 
+mix1: You can specify either a string or an array of strings which will
+      act as alternate ids for this door. For example, you could refer to
+      the door as the 'northeast door' or as 'glowing portal' or whatever
+      you desire. Whatever you specify will be used to create the add_look()
+      for the door and can be used by a player wishing to open, close, etc.
+      the door. Let's create a couple of alternate names.
+
+       MAKE_DOOR("door","northeast","players/you/room2",
+                 "\
+This door is big, blue and on the left, there is a bronze bolt,\n\
+with a padlock!", "test", 1, 0, 1, "southwest", 65,
+                 ({"glowing portal", "shining door"}),
+ 
+		       ********************
+
+mix2: You can also specify a string or an array of strings from which
+      one will be given when ever someone listens to the door! I'll
+      give a few mysterious noises to be heard by nosy players. Note
+      that you can define your own query_door_sound() function as
+      long as it accepts a string (what you specified for str2) and
+      returns a string representing the sound that is heard.
+
+       MAKE_DOOR("door","northeast","players/you/room2",
+                 "\
+This door is big, blue and on the left, there is a bronze bolt,\n\
+with a padlock!", "test", 1, 0, 1, "southwest", 65,
+                 ({"glowing portal", "shining door"}),
+		 ({"moaning", "wailing" "screams"}),
+ 
+		       ********************
+
+str7: Lastly, if you want to be able to do some special processing of
+      your own depending on what is done to the door, you can provide
+      a function name to be called whenever your door is actually touched.
+      The function will be passed whatever you specified as str2 as
+      well as an integer corresponding to what happened to the door as
+      a result of the action:
+	-1 : Nothing done, door not touched.
+	 0 : Nothing done, door was touched.
+	 1 : Door changed state.
+      You can used query_verb() to find out which function was actually 
+      called. So, if you wanted to give someone a nasty electric shock
+      when they opened a door, you could specify a function which checks
+      for a positive return from the open() function on your door and
+      let the player have it.
+
+       MAKE_DOOR("door","northeast","players/you/room2",
+                 "\
+This door is big, blue and on the left, there is a bronze bolt,\n\
+with a padlock!", "test", 1, 0, 1, "southwest", 65,
+                 ({"glowing portal", "shining door"}),
+		 ({"moaning", "wailing" "screams"}),
+		 "zap_player");
+ 
+		       ********************
+
+     That's it for this room.  Now go edit the other room:
+     "players/you/room2" and repeat this whole operation.  Hey, don't
+     forget to change the partner_door and direction so that the player
+     goes back to the correct room!   (you can have wierd jumps where
+     you enter the door by going east, and have to go north to get back
+     or something.  Do as Ye Will!).
+
+     Also, don't forget to change the inherit line to DOORROOM!
+
+General Functions:  (Not needed if you only want to *create* a door.)
+ 
+status query_door_closed(string direction);
+  Returns a 1 if the door is closed, 0 otherwise.
+
+status query_door_locked(string direction);
+  Returns a 1 if the door is locked, 0 otherwise.
+ 
+int query_pick_chance(string direction);
+  Returns the percentage required to pick the lock.
+ 
+void force_unlock(string direction);
+  Call this to force the door to unlock.
+ 
+string query_code(string direction);
+  Returns the key id which will unlock this door.
+
+Good Luck!
+

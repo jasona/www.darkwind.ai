@@ -1,0 +1,10 @@
+_______________________________________________________________________________
+"Adrenaline Control"    
+        The psionicist alters the flow of adrenaline in his own body to
+        provide himself with short boosts of speed or strength.  The 
+        psionicist gets a temporary increase in either strength or 
+  	dexterity based on guild level.
+ 
+SP Cost:  Variable	Guild Level:  5		Potential Points:  2
+ 
+Command:  adrenalize <str/dex>

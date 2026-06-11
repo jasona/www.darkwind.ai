@@ -1,0 +1,196 @@
+|GKB~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+|YKB                         MONK COMBOS
+|GKB~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+|CK0  Monk combat is built around chains. A chain is the short history of
+|CK0  techniques you have used recently. Good chains build tempo, create
+|CK0  openings, move between stances, and then spend that setup on a hard
+|CK0  finisher.
+
+|CKB  The short version:
+
+|CK0    1. Use a starter in your current stance.
+|CK0    2. Add pressure, control, or a bridge before the chain expires.
+|CK0    3. Build tempo and stance diversity.
+|CK0    4. Spend the chain on a finisher or Dragon capstone.
+
+|CKB  The combo window
+
+|CK0  Every combo step gives you a short window to continue the chain. If
+|CK0  you wait too long, the chain falls back to Stillness. Bridge moves
+|CK0  usually refresh the window. Stabilizing moves preserve the chain but
+|CK0  give a shorter window. Finishers cash out the chain and leave only a
+|CK0  brief follow-up window.
+
+|CKB  Stances
+
+|CK0  Most combo techniques belong to a stance. You normally must be in that
+|CK0  stance to use the technique. The main stances are:
+
+|CK0    Crane   - balance, redirection, and controlled openings.
+|CK0    Monkey  - flow, trips, and weapon disruption.
+|CK0    Snake   - precision, breath control, and pressure.
+|CK0    Tiger   - aggression, burst setup, and finishers.
+|CK0    Dragon  - advanced capstone routing.
+
+|CK0  Normal `mswitch` changes style but resets the chain. Bridge techniques
+|CK0  are the special way to move between styles while keeping the chain.
+
+|CKB  Roles
+
+|CK0  Every combo move has a role. `mskills` shows the role column.
+
+|CK0    Starter   - begins a clean chain in a stance.
+|CK0    Bridge    - changes stance while preserving combo flow.
+|CK0    Pressure  - builds offensive setup for later moves.
+|CK0    Control   - creates control setup and improves control effects.
+|CK0    Utility   - stabilizes or recovers without fully cashing out.
+|CK0    Finisher  - spends tempo and setup for a stronger payoff.
+|CK0    Burst     - heavier payoff, usually with stricter requirements.
+
+|CKB  Tempo
+
+|CK0  Tempo is the chain's stored momentum. Starters and bridges usually add
+|CK0  tempo. Finishers and burst moves spend it. Many stronger moves require
+|CK0  a minimum tempo before they can be used.
+
+|CK0  If a move says the chain has not built enough tempo, keep chaining
+|CK0  legal starters, bridges, pressure, or control steps before trying that
+|CK0  finisher again.
+
+|CKB  Step and stance diversity
+
+|CK0  Step is how deep the current chain is. Some moves require at least a
+|CK0  certain step before they unlock. Stance diversity is how many different
+|CK0  stances are represented in the recent chain. Advanced Tiger and Dragon
+|CK0  routes care about this, especially `tpunch`, `tdeath`, and `drebind`.
+
+|CKB  Tags and openings
+
+|CK0  Many moves place short-lived tags on you or on the target. These tags
+|CK0  are the real "openings" in the system. Some examples:
+
+|CK0    crane_balance      - Crane has established balance.
+|CK0    monkey_flow        - Monkey flow is active.
+|CK0    serpent_focus      - Snake pressure is active.
+|CK0    tiger_drive        - Tiger drive is active.
+|CK0    off_balance        - The target has been knocked off balance.
+|CK0    compressed_breath  - The target's breath has been compressed.
+|CK0    opened_guard       - The target's guard has been opened.
+|CK0    shaken             - The target has been shaken.
+|CK0    locked_down        - The target has been controlled.
+|CK0    death_mark         - The target has been marked for death routes.
+|CK0    tempo_window       - Some cooldowns and bridges become easier.
+
+|CK0  If a move complains that you need a tag, you are missing part of the
+|CK0  setup. Use `mcombo <skill>` to see what that skill needs and which
+|CK0  moves commonly lead into it.
+
+|CKB  What the monk monitor means
+
+|CK0  Turn the monk monitor on or off with `mmon`. The line looks like this:
+
+|CK0    [S: Tiger       Chi: 18 (24)  [F] [S] [C: Tiger 2/5 | step 3 |
+|CK0     tempo 5 -> Thousand Punch {tiger_drive,death_mark}]]
+
+|CK0  Read it as:
+
+|CK0    S:             Your current fighting style.
+|CK0    Chi:           Your current chi and maximum chi.
+|CK0    [F] or [X]:    Chi focus is active, or not active.
+|CK0    [S/C/D/A/X]:   Active power word, or none.
+|CK0    C:             Current combo summary.
+
+|CK0  The combo summary is:
+
+|CK0    <style> <resonance>/5 | step <step> | tempo <tempo> ->
+|CK0    <best legal follow-up> {active tags}
+
+|CK0  `Stillness` means you do not currently have a live chain.
+
+|CKB  Resonance
+
+|CK0  Resonance rises as you keep working in the same style or bridge cleanly
+|CK0  through the chain. It improves combo damage and control. Finishers,
+|CK0  burst moves, and control moves reduce resonance because they commit the
+|CK0  chain's pressure.
+
+|CKB  Common route families
+
+|CK0    Crane Kick -> Drifting Reed -> Monkey follow-up
+|CK0      Start in Crane, then bridge into Monkey while keeping the chain.
+
+|CK0    Crane Kick -> Wind Thread -> Snake pressure
+|CK0      Start in Crane, then bridge into Snake for precision routes.
+
+|CK0    Leg Sweep -> Coiled Rise -> Snake pressure/control
+|CK0      Start in Monkey, create off-balance, then move into Snake.
+
+|CK0    Leg Sweep -> Grapple Weapon
+|CK0      Monkey control route. Stronger when the target is off-balance or
+|CK0      isolated.
+
+|CK0    Snake Hand Strike -> One-Inch Punch -> Pressure Point
+|CK0      Snake pressure into a finisher, then deeper control if the guard
+|CK0      has opened and tempo is high enough.
+
+|CK0    Roar -> Thousand Punch
+|CK0      Tiger starter into Tiger finisher. Works best after the chain has
+|CK0      enough tempo, setup, and stance diversity.
+
+|CK0    Tiger route -> Falling Plume -> Crane
+|CK0      Use Tiger pressure, then bridge back into Crane instead of letting
+|CK0      the chain die.
+
+|CK0    Multi-stance chain -> Dragon Rebind
+|CK0      Advanced Dragon route. You need several stances, a bridge, tempo,
+|CK0      and the right pressure or control setup.
+
+|CKB  Why a move may fail
+
+|CK0    Wrong stance:
+|CK0      Switch or bridge into the stance that owns the move.
+
+|CK0    Not enough tempo:
+|CK0      Add more legal combo steps before using the finisher.
+
+|CK0    Need more stance diversity:
+|CK0      Bridge through another stance before trying the payoff.
+
+|CK0    Missing bridge:
+|CK0      Use a bridge move somewhere in the chain.
+
+|CK0    Missing pressure or control:
+|CK0      Add a pressure or control role before the payoff.
+
+|CK0    Missing target opening:
+|CK0      Use the setup move that applies the required target tag.
+
+|CKB  Useful commands
+
+|CK0    mskills
+|CK0      Lists your monk skills, guild level, stance, and combo role.
+
+|CK0    mcombo
+|CK0      Shows current style, combo state, window, step, tempo, resonance,
+|CK0      active tags, and legal follow-ups.
+
+|CK0    mcombo <skill>
+|CK0      Explains one skill's stance, role, requirements, tags, bridge
+|CK0      behavior, and strong next steps.
+
+|CK0    mmon
+|CK0      Toggles the monk monitor line.
+
+|CKB  Practice advice
+
+|CK0  Start by learning one route at a time. Watch `mcombo` after each move.
+|CK0  When a follow-up appears in Legal Followups, try it immediately. If the
+|CK0  monitor returns to Stillness, your window expired or the chain was reset.
+
+|CK0  The most important habit is this: do not manually `mswitch` in the
+|CK0  middle of a combo unless you mean to reset it. Use bridge moves to carry
+|CK0  momentum from one stance into another.
+
+|GKB~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+|GKB~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~

@@ -1,0 +1,14 @@
+_______________________________________________________________________________
+"Double Pain"     
+        This power allows the psionicist to temporarily alter the pain
+        sense in a target.  It does no damage in and of itself, but it
+        makes the target so sensitive to pain that NO amount of armor
+        will protect it from damage at all.  It lasts a variable amount
+ 	of time according to the psionicist's guild level.  This is a 
+	powerful addition to a psionicists' arsenal and players are 
+ 	urged not to overlook it simply because it doesn't blast 
+        anything by itself.
+ 
+SP Cost:  60		Guild Level:  7		Potential Points:  4
+ 
+Command:  dpain <target>

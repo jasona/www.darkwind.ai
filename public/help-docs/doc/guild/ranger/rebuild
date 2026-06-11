@@ -1,0 +1,16 @@
+Ranger Help for: rebuild
+========================
+
+SYNTAX:      rebuild quiver
+USAGE:       Anywhere.
+
+SUMMARY:
+Creates a brand new quiver if you have lost yours. Your quiver is
+the physical manifestation of your bond with the Rangers guild and
+is required for most guild commands to work.
+
+If your quiver exists but is malfunctioning, use 'repair quiver'
+instead.
+
+=============================================================================
+SEE ALSO: repair

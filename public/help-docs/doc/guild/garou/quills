@@ -1,0 +1,17 @@
+|GKO================================================================
+                  |MKB Quills of the Porcupine
+|GKO================================================================
+
+|YKOBy focusing upon the spirit of the porcupine and concentrating upon
+the structure of its quills, a Garou is able to undergo a startling 
+transformation. Her fur becomes elongated, bristly and sharp like 
+the quills of a porcupine, inflicting aggravated damage on anyone 
+that attempts to hit her.
+
+|WKOUsable in form: |GKOcrinos and wolf
+|WKORestricted to: |GKBGuardian
+|RKOSyntax: |YKBquills      |WKOCost: |CKOvaried
+
+|WKBNOTE: This ability shows in the 'buffs' command. It can be ended
+early with 'clearbuff'. This ability cannot be used in conjunction with the 
+skill "flames".

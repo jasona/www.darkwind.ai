@@ -1,0 +1,8 @@
+The convert command allows you to make a player a guild member.
+The syntax for the command is 'Convert <player_name>'.
+The player has to be present, and meet all the requirements of
+the guild, including the 5th level requirement and the alignment
+requirement.  Mitra is very generous to members who perform
+a conversion.  Caution if you convert unwilling players, Mitra
+can also be very harsh!
+ 

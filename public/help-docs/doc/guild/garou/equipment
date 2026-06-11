@@ -1,0 +1,47 @@
+|GKO====================================================================
+                         |WKOGarou Guild : Equipment
+|GKO====================================================================
+|YKOWhile a wolf has no need for sword or shirt, a Garou who decides
+to hunt in man or crinos form will naturally desire equipment to
+make the hunt easier. As a creature of Gaea, however, a Garou
+must take great care to stay away from equipment that the beloved
+goddess hates and abhors. A Garou using such equipment will lose
+all touch with Gaea and thus be unable to utilize any abilities.
+
+|CKBWeapon Restrictions:
+|WKO--------------------
+|RKOA Garou may not use magical weapons of any kind.
+A Garou may not use missile weapons of any kind.
+A Garou may not use silver weapons of any kind.
+A Garou may not use metallic weapons of any kind.
+
+|BKOException: A Garou may use metallic polearm weapons provided they
+           are not magical or composed of silver.
+
+|CKBArmor Restrictions:
+|WKO-------------------
+|RKOA Garou may not wear magical armor of any kind.
+A Garou may not wear silver armor of any kind.
+A Garou may not wear metallic armor of any kind.
+A Garou may not wear plate-type armor of any kind.
+
+|BKOException: A Garou may use plate and/or metallic finger and amulet
+           class armor provided such is not magical or silver.
+
+|CKBCrinos Restrictions:
+|WKO--------------------
+|YKOSince crinos are massive and powerful beasts, there are additional
+restrictions to what a crinos can wear. All of these restrictions
+are in addition to those listed above.
+
+|RKOCrinos may not use shields.
+Crinos may only wear greaves as leg armor.
+Crinos may only wear armguards, bracelets, and bracers as arm armor.
+
+Crinos may not wear helmets of any kind.
+Crinos may not wear torso armor of any kind.
+Crinos may not wear boots of any kind.
+
+|BKOExceptions: There are exceptional/special armors throughout the MUD
+            that are specifically allowed for crinos use despite
+            being restricted normally.

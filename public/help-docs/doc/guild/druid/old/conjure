@@ -1,0 +1,18 @@
+Conjure Elemental
+
+This spell allows the druid to request aid from Gaea, in
+the form of an elemental servant.  The elemental will
+freely serve for one hour, and is capable of assisting
+in combat.  These elementals are also empowered to
+fly through the skies, following the druid.  An air or
+earth elemental may be summoned at mastery level one,
+water at level two, and fire at level three; further
+levels of mastery also increase the power of the
+elemental.  See 'dhelp elemental' for more information.
+
+Command: conjure <air|earth|fire|water>
+Base Cost: 150 SP
+Base Recovery: slow
+Base Effect: follower
+Base Duration: one hour (or until logoff)
+Guild Level: 26

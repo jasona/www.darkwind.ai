@@ -1,0 +1,71 @@
+               -=[ ED - Unix Style Line Editor ]=-
+ 
+The online editor is a clone of the Unix ed.  This is a rehash
+of the original ed docs.  Only creators have access to the
+online editor.
+ 
+Ed has two modes, command mode and insert mode.  Command mode
+has the prompt ':',  insert mode displasy a * prompt.
+ 
+ 
+<Insert Mode Commands>
+ 
+Insert mode has only one command.  By typing a single '.' at
+the beginning of the line you exit insert mode, and enter
+command mode.  Otherwise, each line of text is added to the
+document.
+ 
+ 
+Commands
+--------
+/       search forward for pattern
+?       search backward for a pattern
+=       show current line number
+a       append text starting after this line
+A       like 'a' but with inverse autoindent mode
+c       change, delete line and enter input mode
+d       delete line(s)
+e       replace this file with another file
+E       same as 'e' but works if file has been modified
+f       show/change current file name
+g       Search and execute command on any matching line.
+h       help file (display this message)
+i       insert text starting before this line
+I       indent the entire file (from DGD ed v0.1)
+j       join lines together
+k       mark this line with a character - later referenced as 'a
+l       line line(s) with control characters displayed
+m       move line(s) to specified line
+n       toggle line numbering
+p       print line(s) in range
+q       quit editor
+Q       quit editor even if file modified and not saved
+r       read file into editor at end of file or behind the given line
+s       search and replace
+set     query, change or save option settings
+t       move copy of line(s) to specified line
+v       Search and execute command on any non-matching line.
+x       save file and quit
+w       write to current file (or specified file)
+W       like the 'w' command but appends instead
+z       display 20 lines, possible args are . + -
+Z       display 40 lines, possible args are . + -
+ 
+Most commands in command mode will accept the following format,
+ 
+<line1,line2>command    - apply command from line1 to line2
+<line1>command          - apply command to line1
+command                 - apply command to current line
+ 
+ 
+For example:
+ 
+:1,5d                   - delete from line 1 to line 5
+:2d                     - delete line 2
+:d                      - delete current line
+ 
+If any numbers are out of range the command will fail.
+
+For help on ed commands type 'hc' where is the name of the
+command at the command prompt in ed.
+

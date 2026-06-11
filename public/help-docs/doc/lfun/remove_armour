@@ -1,0 +1,16 @@
+SYNOPSIS
+        status remove_armour(int ibFlags)
+
+DEFINED IN
+        armour.c
+
+DESCRIPTION
+        Attempts to remove a piece of armour from a living. Returns 1
+        on success and 0 on failure. The passed flags can be used to
+        bypass failure checks and otherwise modify removal behavior.
+        See armour.h for macros to use as flags.
+
+EXAMPLE
+        remove_armour(A_REMOVE_IGNORE_COMMAND_COSTS|A_REMOVE_SILENT)
+        will silently remove armour without checking to see if the
+        wearer has enough command points remaining.

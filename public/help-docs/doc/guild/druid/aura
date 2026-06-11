@@ -1,0 +1,17 @@
+|GKB-- Spirit Aura -----------------------------------------------|000
+
+This simple Marken invocation allows a druid a glimpse of the
+target creature's aura.  By reading the spiritual
+aura, the druid can tell whether or not a creature
+is in balance.  At higher levels of mastery, the
+reading becomes more precise, and the druid begins
+to gain more information.  At the highest level of
+mastery, the druid has enough skill to judge the
+creature's strength in comparison to his own.
+
+|CKBCommand:      |000 aura <target> (defaults to attacker)
+|CKBBase Cost:    |000 10 Marken nwyfre
+|CKBBase Recovery:|000 fast
+|CKBBase Effect:  |000 information (creature)
+|CKBBase Duration:|000 instant
+|CKBGuild Level:  |000 1

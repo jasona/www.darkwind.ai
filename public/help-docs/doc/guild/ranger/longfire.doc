@@ -1,0 +1,18 @@
+
+Ranger Help for: longfire
+=========================
+
+SYNTAX:      longfire <direction> at <target>
+USAGE:       Any terrain
+SLOT COST:   14
+BASE SP:     variable
+SKILL TYPE:  bow
+
+SUMMARY:
+This skill allows a Ranger to take advantage of the extra power
+provided by the longbow. It allows a Ranger to shoot at targets
+adjacent rooms. Being a long shot, its harder to hit, but the
+arrows comes as a surprise to the target. Whatever the Ranger has
+set as the longbow's loader will be used in longshot. The best arrow
+in the loader will automatically be used in the shot.
+

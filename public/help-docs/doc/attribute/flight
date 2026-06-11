@@ -1,0 +1,10 @@
+/doc/attribute/flight
+
+Format: (Living_Object)->set_attribute("flight", iValue);
+
+Description:
+  Flight will allow the Living_Object to fly in the skies of DarkWind.
+  A value of 1 is standard, and allows flight, and combat will make
+  them land. A value of 2 or more will cause the Living_Object to
+  not land from combat. Those with a value of 2 or more will have to
+  manually be forced to land and the attribute cleared.

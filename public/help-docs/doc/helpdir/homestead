@@ -1,0 +1,93 @@
+Syntax: homestead [return|status|survey|help]
+
+Homesteads are the foundation for future player-built homes, crafted rooms,
+and shared kingdom spaces. The kingdom commons is meant to be explored in
+character: speak aloud near the surveyor, clerk, and foreman, and they will
+answer what they understand.
+
+Current commands:
+
+  homestead          Travel to the kingdom commons.
+  homestead return   Return to the room remembered when you entered.
+  homestead status   Show your current homestead state.
+  homestead survey   Review what is currently available.
+  homestead resources
+                     Show the rough resource nodes on your plot.
+  homestead storage  Show construction materials saved with your plot.
+  homestead tools    Show primitive tools saved with your plot.
+  homestead gather <material>
+                     Gather branch, stone, clay, or grass while standing
+                     on your plot.
+  homestead make <tool>
+                     Make a stone axe, stone mallet, digging stick, or
+                     woven basket on your plot.
+  homestead visit <player>
+                     Visit another player's public or invited plot.
+  homestead public   Let anyone visit your plot.
+  homestead private  Restrict visits to yourself and invited players.
+  homestead invite <player>
+                     Invite a player to visit your private plot.
+  homestead uninvite <player>
+                     Remove a plot invitation.
+
+Useful things to try in the commons:
+
+  say I want land
+  say how much does a plot cost
+  say I accept the charter
+  say take me to my plot
+  say what should I build first
+  read charter
+  study map
+  read ledger
+
+A frontier charter costs 1,000,000 coins and grants one tiny staked plot.
+The clerk draws from clear bank funds first, then coin on hand. Professions
+will help with later work, but they are not required to begin.
+
+Brant explains starter work, but construction happens on your own plot:
+
+  build camp marker    25,000 coins, about 1 minute
+  build lean-to        75,000 coins, about 5 minutes
+  build foundation    250,000 coins, about 15 minutes
+
+Build timers are saved by the homestead daemon. They continue across logout,
+reboot, or crash because the completion time is stored with your plot. More
+material-heavy construction will arrive as the system grows.
+
+Once you are standing on your plot, use 'commons' or 'return to commons' to
+walk the survey road back.
+
+Rough plot materials:
+
+  gather branch
+  gather stone
+  gather clay
+  gather grass
+
+These materials are saved with your plot instead of carried in inventory.
+Each resource node is briefly depleted after gathering, then recovers. Use
+'homestead resources' to see which nodes are ready and 'homestead storage'
+to see the construction materials available for future work.
+
+Primitive plot tools:
+
+  make stone axe
+  make stone mallet
+  make digging stick
+  make woven basket
+
+Primitive tools are also saved with your plot. They are the first layer of
+the construction chain and will feed later workstation and recipe work.
+
+Shaping your plot:
+
+  homestead title <room title>
+  homestead describe <room description>
+  homestead look add <noun> = <description>
+  homestead look remove <noun>
+
+These commands work while you are standing on your own plot. Text is bounded
+and saved by the homestead daemon. This first version is descriptive only:
+it lets you shape what visitors read and inspect, but it does not run custom
+scripts or create arbitrary commands.

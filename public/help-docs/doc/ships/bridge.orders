@@ -1,0 +1,14 @@
+Demote         - Demotes a captain to a passenger
+Dock           - Orders the crew to dock the ship.
+Forbid         - Repeals a passenger's boarding privilges
+Furl           - Orders the crew to pull down the sails.
+Hoist          - Orders the crew to raise the sails.
+List           - Gives you a current list of the ship's passengers
+                  or captains.
+Peer           - To look overboard and see what's around.
+Permit         - Grants a player permission to board your ship
+Promote        - Promotes a passenger to captain
+Push off       - Orders the crew to pull away from the dock.
+Sail <dir>     - To move the ship.
+Yell           - Yells a message to the area outside your ship
+

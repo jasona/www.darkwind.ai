@@ -1,0 +1,14 @@
+|GKO================================================================
+                        |CKOTransform
+|GKO================================================================
+
+|YKOTransform is one of the most important commands
+for a Garou, as it allows you to shift between
+the physically powerful wolf, the hulking crinos,
+and the spiritual man. The cost in spiritual
+energy is quite high for most transformations,
+save for when your auspice is matched by the
+moons of the night sky. See the help files on
+each form for more information on their powers.
+
+|RKOSyntax: |YKBtransform <form>    |WKOCost: |CKOVariable

@@ -1,0 +1,69 @@
+                            HOW TO CHEATPROOF QUESTS
+     _________________________________________________________________
+   
+   
+   
+USE LOGS
+Log the time and date when a player first enters your quest area and the
+time and date the player solves the quest.  This will tell you if a player
+solves the quest unusually fast.  It will also tell you the average amount
+of time it takes a player to solve the quest.
+
+DEST QUEST ITEMS
+Make quest items dest on sell.  Clean the players inventory of quest items
+upon completion.  If your area is a closed quest zone, have the quest items
+dest upon leaving the area. If the quest isn't a party quest, dest items on
+give.
+  
+MAKE THE WARNINGS CLEAR
+This statement is in quest design, because it is fair to players to do so. 
+It is here because players will cheat without meaning to, in an attempt to
+keep their friends from dying to an "unfair" death.  If you don't want one
+player warning another about a death trap in your questzone.  Give the
+warning in the quest area.
+
+   
+THE PLAYER SHOULD BE ABLE TO FINISH WITHOUT KNOWLEDGE OF FUTURE EVENTS
+Another repeat.  Don't make players want to warn their friends about some
+minor thing they have to do at the beginning in order to avoid something
+going wrong later.   
+
+ 
+MAKE FORGIVING SYNTAX
+I hate syntax!  Having to come up with some obscure syntax that isn't an
+intuitive reaction in the room:
+The brick looks loose --- syntax: loosen brick  Now why would I do that it
+is already loose?  Don't use obscure syntax to make a quest more difficult.
+
+INDIVIDUALIZE THINGS
+Making items id to the player who found them makes it much more difficult
+fore players to go get them for others and give them away.  There is a good
+example of an individualized quest item /open/OBJ/genqob.c
+
+MAKE QUESTS RANDOM
+Making the items load randomly in different locations depending on the
+player makes it more difficult for players to share quest info. Look
+in /open/QUEST/random for an example of how to do this.
+
+MAKE MULTIPLE SOLUTIONS
+If the quest is to end the war between the elves and vikings in hyper, give
+the players a choice.  Let them choose who wins.  Have more than one quest
+running through the same area, but only one first hint.  Set the first hint to
+randomly send the player on one of a number of quests and have the solution 
+dependant on which hint the player got.  Cheaters will get information from 
+more than one source and are likely to follow the wrong leads (and therefore 
+give themselves away).
+
+CHANGE YOUR QUEST WITHOUT WARNING
+Here's where those logs come in handy.  If you know a player is working on the
+quest, don't change it.  But if no one has entered the area recently then
+change the quest slightly without notifying players.
+
+
+//Personally I don't think most players want to cheat.  I think they get 
+//stuck and frustrated by poorly coded quests and they go looking for "one 
+//smallhint".  It gets easier to ask for a hint everytime you do it.  Make 
+//yourself available to players who are seriously stuck and see if you can 
+//find what they are missing. It is better that the hint comes from the 
+//coder than from another player.
+//--Xnedra 21/08/98--

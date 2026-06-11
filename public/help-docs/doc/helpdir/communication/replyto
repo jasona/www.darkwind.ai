@@ -1,0 +1,23 @@
+
+|WKBSYNTAX
+======|YKB
+tell <player> <message>
+tell <player1,player2,player3> <message>
+
+|WKBDESCRIPTION
+===========
+
+|YKOThe |YKB'tell' |YKOcommand sends a message to the specified player, if that
+player is currently logged on the mud.  Additionally, that player's
+reply-to will be set to your name.
+
+|YKBreply <message>|YKO
+
+The |YKB'reply' |YKOcommand sends a message to the last player who sent you
+a message via |YKB'tell'|YKO, if that player is currently logged on the mud.
+
+|YKBreplyto <player>|YKO
+
+The |YKB'replyto' |YKOcommand sets the name of the player to which the |YKB'reply'|YKO
+command will send a message. The |YKB'tell' |YKOand |YKB'reply' |YKOcommands automatically
+set this for you, so use |YKB'replyto' |YKOonly if you wish to manually set it.

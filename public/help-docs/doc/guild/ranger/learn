@@ -1,0 +1,25 @@
+Ranger Help for: learn
+======================
+
+SYNTAX:      learn
+             learn <skill>
+             learn cost <skill>
+USAGE:       Any wilderness terrain.
+
+SUMMARY:
+The learn command is how Rangers acquire new skills.
+
+  learn              Shows all skills you know about, marking which
+                     are learned and which are available to learn.
+  learn <skill>      Learn a skill. Costs slots and experience.
+  learn cost <skill> Shows the exact cost, prerequisites, terrains,
+                     and what the skill unlocks.
+
+Skills have prerequisites - you must learn earlier skills to unlock
+later ones. When you learn a skill, any new skills it unlocks will
+automatically appear in your available list.
+
+Your first available skill is 'forage'. Start there.
+
+=============================================================================
+SEE ALSO: skilltree, slots, skills, glevels

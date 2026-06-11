@@ -1,0 +1,4 @@
+SPELL NAME  : Cleric tell               | Emote Cleric tell
+SPELL SYNTAX: ctell <message>           | Ectell <emoted message>
+SPELL COST  : NONE                      | NONE
+DESCRIPTION : This ability sends out the <message> to all on-line clerics.

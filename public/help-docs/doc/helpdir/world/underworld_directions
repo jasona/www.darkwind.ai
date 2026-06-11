@@ -1,0 +1,42 @@
+|YKB<<-- |CKBUnderworld Area Directions |YKB-->>
+
+|WKOAll directions are from the base of the pit in the Underworld:
+    |MKBFrom CoT: script 2:w,s,d,e,2:n,3:w,hole|000
+
+All entries are in the form of:
+|WKBArea Description : |YKBLevel Ranges
+    |MKBDirections  |YKONotes, if needed
+
+|WKBAn Orc squig farm : |YKBUnder level 15|000
+    |MKBscript n,e|000
+
+|WKBArathia Caves : |YKB45-65|000
+    |MKBscript 4:n,2:nw,3:w,2:nw,2:n,e,27:n,w,3:n|000
+
+|WKBDemon Plain : |YKB50+|000
+    |MKBscript 7:n,3:sw,s |YK0 rift to enter, aggro mobs|000
+
+|WKBGiant City : |YKB90|000
+    |MKBscript 4:n,2:nw,7:w,2:nw,7:w,5:n,3:w,n,w,2:n,5:w,2:n,3:w,n,u|000
+
+|WKBThe Dwarven Caves : |YKB25-40|000
+    |MKBscript 4:n,2:nw,3:w,2:nw,4:n,2:w,2:s,3:w,n,speak friend,enter crack|000
+
+|WKBThe Goblin Stronghold : |YKB25-40|000
+    |MKBscript 4:n,2:nw,3:w,2:nw,4:n,2:w,2:s,3:w,n,speak friend|000
+
+|WKBThe Mitran Mines : |YKB5-50|000
+    |MKBscript n,2:w|000
+
+|WKBThe Realm of Arakaas : |YKB5-50|000
+    |MKBscript 5:n,2:ne,e,10:s,2:w,s,8:w,2:s,2:sw,2:s,2:e,n,u|000
+    |YK0Not an Underworld Area, but an entrance to a DarkWind one.|000
+
+|WKBThe Underdark : |YKB90|000
+    |MKBscript 4:n,2:nw,7:w,2:nw,7:w,4:s,3:e,2:s,2:w,5:s|000
+
+|WKBThe town of Rhuddlan : |YKB10-40|000
+    |MKBscript 5:n,2:ne,4:e,2:n,3:e,19:n,6:e,s,e,ne|000
+
+|WKBThe worm tunnels : |YKB20-70|000
+    |MKBscript 4:n,2:nw,2:ne,2:n,3:w,3:n,w|000

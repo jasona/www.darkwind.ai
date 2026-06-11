@@ -1,0 +1,154 @@
+***************************************************************************
+                              Naming and Descriptions
+***************************************************************************
+Note: All literal code in this help document is separated by a bunch of =
+signs. The = signs are NOT part of the code. For example:
+
+====================
+#include <mudlib.h>
+#include <types.h>
+#include <material.h>
+====================
+
+refers to the three include lines, literally.
+
+
+***************************************************************************
+                              Naming/Desc Basics
+***************************************************************************
+
+All monster, weapons, armors, and other objects have names. These names
+are how players and the mudlib refer to the items. Visible objects also
+have descriptions. These descriptions are how players see these objects.
+(NOTE: rooms also have descriptions, but not names) The reason for this
+document is to spell out exactly how to use names in a consistent manner.
+
+The following function calls can be used to set the name(s) of an object:
+
+====================
+set_name(string sName);
+set_alias(string sAlias);
+set_aliases(string* asAliases);
+====================
+
+set_name() is used to set the primary name of an object. The primary
+name of an object may occasionally be shown to a player under certain
+circumstance. Each object can only have one primary name, and the
+object can be referred to by that name, by players (for looking etc).
+
+set_alias() is used to set an alias name of an object. The alias name
+never appears to the player, but can be used by the player to refer to
+an object. Multiple calls to set_alias() can be used to set multiple
+aliases.
+
+set_aliases() is used to set multiple aliases at once. Note that this
+will clear all previously set aliases.
+
+
+The following function calls can be used to set the desc(s) of an object:
+
+====================
+set_long(string sLong);
+set_short(string sShort);
+set_short_modifier(string sMod);
+set_short_modifiers(string* asMod);
+====================
+
+set_long() is used to set the long desc of an object. This desc is what
+is seen when the object is looked at. The long desc in a room is what is
+seen when a player enters a room with brief mode off.
+
+set_short() is used to set the short desc of an object. This desc is what
+is seen when the player doesn't actually look specifically at the object
+(for example, a player's inventory lists things by short desc). In rooms,
+the short desc is what is seen when the player is in brief mode.
+
+set_short_modifier() and set_short_modifiers() work in the same was as
+aliases. Short modifiers alter the short desc line of an object by adding
+the modifier string in brackets.
+
+
+***************************************************************************
+                              Deprecated Functions
+***************************************************************************
+
+The following functions are deprecated and should no longer be used. Older
+code may contain them, and they will still work, but they should not be
+used in new code:
+
+====================
+set_id(string sId);                // same as set_name
+reset_short(string sShort);        // same as set_short
+add_alias(string sAlias);          // same as set_alias
+set_alt_name(string sAltName);     // same as set_alias
+====================
+
+
+
+***************************************************************************
+                              Names
+***************************************************************************
+
+The name is the main name of an object, and should be something obvious
+for that item. It should be all-lowercase, except for proper names, and
+not contain any articles such as 'the' or 'a'.
+
+Alias names are other names that may refer to the object. They should
+always be all lowercase, with no articles. Try to include aliases for
+all reasonable combinations of an object's short desc, or obvious
+characteristics. (E.g. a rapier should have a 'sword' alias)
+
+In some cases, it is useful for an object to have special aliases so that
+other code can recognize that that particular object from other, similar
+ones (Like a special quest sword). In these cases, add a unique alias
+(not used anywhere else on the mud) that starts with double underscores
+and the coder's name. E.g. __bob_dwarf_mines_key.
+
+
+***************************************************************************
+                              Descriptions
+***************************************************************************
+
+Short descs should be short (one line) descriptions of the object. This
+can be considered a first impression upon seeing it, but it can also
+be used to give extra implied information. For example:
+
+    gleaming longsword
+    large goblin
+    Ed the horse
+
+are all good short descs. Note that all short descs should be entirely
+in lowercase letters except for proper names which start with a capital.
+Do not use articles like 'the' or 'a' in the short desc. (Exception:
+the short desc for rooms may use articles, and are always first letter
+capped). N.B. The ENTIRE short desc can be used to refer to an object
+as well. There is no need to make a separate alias for it.
+
+Long descs are a detailed description seen when a player looks at an
+object/room in detail. Long descs should be in complete English
+sentences, with appropriate punctuation and capitalization.
+
+Short modifiers should be words/short phrases that briefly denote how
+an object has been modified. For example:
+
+    hardened
+    chipped
+    broken
+    poisoned
+
+are all good modifiers.
+
+
+***************************************************************************
+                              Using Names/Descs
+***************************************************************************
+
+Sometimes, the name/descs are are used in spam and for other uses in the
+course of building. There are appropriate queries for each kind of name
+and desc, and some extras as well. If you need this functionality, this
+is all encapsulated in the alias.c inherit. If you do not have permissions
+to read this file, ask an ARCH+.
+
+
+------
+Version 1: Bob - May 29, 2004

@@ -1,0 +1,16 @@
+Ranger Help for: assess
+=======================
+
+SYNTAX:      assess <target>
+USAGE:       Any terrain.
+SLOT COST:   2
+BASE SP:     10
+
+SUMMARY:
+Evaluate a target creature, sizing up its strength, weapons, and
+defenses. Information revealed depends on your guild level: higher
+ranked Rangers glean more detail. This is a prerequisite for the
+calm and strike skill branches.
+
+=============================================================================
+SEE ALSO: inspect, calm, strike

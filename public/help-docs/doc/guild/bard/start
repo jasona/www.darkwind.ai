@@ -1,0 +1,74 @@
+BARD QUICK START
+
+This is the practical path for a new Bard.
+
+1. Check yourself.
+
+   bscore
+   bmon on
+   bcmds
+
+   bscore shows your Bard state. bmon keeps important Bard updates visible.
+   bcmds shows what you can use now and what unlocks later.
+
+2. Fix your lute.
+
+   fix lute
+
+   Your guild lute is your fallback instrument. If it is missing or damaged,
+   this restores it without needing to return to Adaon.
+
+3. Learn your first combat song.
+
+   pulsebeat
+
+   Pulsebeat March is your first song field. It follows you, pulses while it
+   lasts, helps nearby allies, and teaches you the rhythm of the Bard system.
+
+4. Watch Performance.
+
+   Performance is Bard momentum. It rises when you keep songs moving, especially
+   when you vary forms instead of repeating the same thing. Charisma improves
+   that momentum, makes songs stronger, and helps song fields linger. Stronger
+   Bard powers and Finales care about Performance. Song forms have separate
+   cooldowns, so pulsebeat into emberaria into echochord feels much faster than
+   repeating the same song form.
+
+5. Practice simple music.
+
+   play lute <note>
+   bardhelp songs
+
+   Simple note practice is separate from battle songs. It is useful for flavor,
+   roleplay, and learning note names. Battle songs are full commands such as
+   pulsebeat, emberaria, echochord, and dirgeash.
+
+6. Earn and explore.
+
+   perform
+   legend <item>
+   lore <monster>
+
+   Bards are social explorers. perform can earn coins, legend reads objects,
+   and lore helps you judge creatures.
+
+7. Buy instruments when you can.
+
+   Alternate instruments are sold in the Bard Shoppe in the Darkwind Bard
+   guildhall. Use instrument to choose one. Instruments change newer battle
+   songs and unlock a few songs.
+
+8. Choose an archetype at guild level 10.
+
+   specialize
+   specialize <archetype>
+
+   Archetypes are not just labels. They change momentum, field strength,
+   instrument affinity, hidden harmonies, and message flavor.
+
+Next topics:
+
+   bardhelp songs
+   bardhelp instruments
+   bardhelp combat
+   bardhelp commands

@@ -1,0 +1,132 @@
+Emote System
+============
+
+To begin with, all emotes are handled through the emote daemon, EMOTE_D,
+which handles all of the visibility checks, parsing, room messaging, etc.
+Any emote consists of two basic parts, the 'RULE' and the 'Message String'.
+
+The RULE is a sequence of 0 or more tokens representing variable arguments
+passed to the emote. Valid tokens for a RULE are 'LIV', 'OBJ', and 'STR'.
+Any arguments given with the emote, will be compared to the known RULEs for
+that emote, and if a match is found, the corresponding Message String will
+be used.
+
+  ex. (Emote: wave  RULE: LIV) will match if a player types 'wave bozo'
+      and Bozo is a living object the player has access too.
+
+The Message String is the text that is displayed with the emote, with
+variables in place for the words that change depending upon who is seeing
+the message. Note that if the variables do not match the rules, the emote
+may be buggy. Where applicable a variable can be modified by a number
+indicating who/what is the first person of referred to by the variable,
+followed by a modifying argument. Targets are numbered by the order they
+are specified in, in the rule,  with the emoter being living target 0.
+Capitalizing the variable will capitalize the output. Valid variables are:
+
+                 $n ...living target - defaults to $n0s.
+                       Arguments are: b: objective [you, him]
+                                      g: nominative [you, Bob]
+                                      o: reflexive [yourself, himself]
+                                      s: subjective [you, he]
+                                      p: name [Bob, Bob]
+                       The b, o and s forms always revert to the g form
+                       when a target appears for the first time in the
+                       message.
+                 $p ...possessive [your, his].
+                       first target appearance is named [your, Bob's].
+                 $r ...reflexive [yourself, himself].
+                 $t ...same as $n but default is $t1o.
+                 $o ...object for OBJ rule or string for STR rule.
+                 $v ...verb forms.
+                       Argument is the verb to be conjugated.
+
+             To make different messages for every viewer, concatenate
+             output strings with '&&' in the form:
+                <emoter msg>&&<room msg>&&<target 1 msg>&&<target 2 msg>...
+
+  ex. (Emote: wave  RULE: LIV  Msg: "$N $vwave at $t.") will give the
+      message "You wave at Bozo." to you, "Clown waves at you." to Bozo,
+      and "Clown waves at Bozo." to everyone else in the room if you were
+      to use the emote 'wave bozo'.
+
+
+All emotes are added to EMOTE_D through the command 'addemote'. This
+information is also available in 'help addemote'.
+
+
+
+Variable Emotes
+===============
+
+Some emotes return variable text depending on certain factors beyond the
+score of EMOTE_D to check. In order for this to work, a small command must
+be coded that tells EMOTE_D what message should be used. Any Variable Emote
+will be in the special emote directory, '/cmds/soul/'.
+
+The main function in this command will be:
+
+  string get_emote(string sArg, object *aoWho) { }
+
+inside of which the emote Message String will be constructed. 'sArg' will
+be the matching RULE used by the player, and 'aoWho' is the array of
+objects involved in the emote. The return string value is the Message
+String EMOTE_D should use to construct the emote messages.
+
+  ex. (From our wave emote, LIV rule example above.)
+
+/cmds/soul/wave.c
+
+string get_emote(string sArg, object *aoWho) {
+  if (sArg != "LIV") return "";			// We only want LIV rules
+
+  if (random(2))
+    return "$N $vwave in crisp military fashion at $t.";
+  else
+    return "$N $vwave parade-style at $t.";
+}
+
+   This will return the first Message String 50% of the time, and the
+   second Message String the other 50% of the time.
+
+
+The last thing needed for a variable emote to work is to link the small
+emote command you made in /cmds/soul/ to EMOTE_D itself. To do this you
+would still use the 'addemote' command to add the emote 'wave', for RULE
+LIV, but instead of giving a Message String, you would re-direct it to
+your emote command with '->wave'. This will cause EMOTE_D to go to the
+emote command for the Message String when the emote 'wave' is called with
+the matching 'LIV' RULE.
+
+
+
+Guild Emotes
+============
+
+Guild emotes are really just variable emotes in a specific directory
+within /cmds/soul/ and a Guild Flag in the re-direct statement. To add a
+guild emote, you need to code a small emote command like you would with a
+variable emote and place it in an appropriate directory in /cmds/soul/.
+Directory names must be all -lowercase-, and be exact matches of the guild
+name as defined in guildd.h
+
+  (ie. "/cmds/soul/cleric_mitra/", "/cmds/soul/psionicist/")
+
+
+The only other thing that is built differently is the re-direct link.
+Instead of '-><emote command>', the re-direct must take the form of
+'->Guild_<guild>_<emote command>' where '<guild>' is the -Correctly
+Capitalized- name of the guild, again as defined in guildd.h
+
+  (ie. "->Guild_Psionicist_spoon" will look at /cmds/soul/psionicist/spoon
+       "->Guild_Ninja_weak" will look at /cmds/soul/ninja/weak)
+
+
+'<guild>' is screened against a proper guild name, and the player that is
+attempting to use/view the emote is checked to verify they are in that
+guild before being allowed to use it.
+
+
+
+
+=============================
+Version 1.0: 12-08-03 Aiken  [Parts ripped from addemote command help]

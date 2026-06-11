@@ -1,0 +1,23 @@
+Ranger Help for: make fish trap
+================================
+
+SYNTAX:      make fish trap
+USAGE:       Any terrain to craft; water terrain to set
+SLOT COST:   4
+BASE SP:     48
+SKILL TYPE:  creation / survival
+
+SUMMARY:
+This skill allows a Ranger to weave a collapsible fish trap from
+wildcraft supplies. The Ranger needs 2 binding fiber and 1 kindling.
+
+Once made, carry the trap to a river, lake, sea, beach, swamp, or
+underwater area and use:
+
+  set fish trap
+  check fish trap
+  retrieve fish trap
+
+Checking a ready trap adds a fish catch to your camp stores. Fish
+catches can be used by 'camp cook fish stew' and 'camp cook hunter
+feast' at your camp.

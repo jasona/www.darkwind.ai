@@ -1,0 +1,16 @@
+
+Ranger Help for: defend
+=======================
+
+SYNTAX:      defend <target>
+USAGE:       Any terrain
+SLOT COST:   5
+BASE SP:     20 sp
+SKILL TYPE:  defensive
+
+SUMMARY:    
+This skill allows a Ranger to step in and defend a fellow explorer
+from attack. There is a small chance that the creature that is fighting
+your friend won't fall for your move and continue fighting them. Also,
+you can't defend your enemy species.
+

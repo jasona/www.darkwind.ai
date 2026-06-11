@@ -1,0 +1,118 @@
+Food and drink contain the standard functions for any object
+(wizhelp 4.6).  Instead of inheriting OBJECT, however, they
+use the following:
+
+DRINK - single serving of alcohol
+FOOD - single serving of food
+GEN_KEG - multiple servings of alcohol
+GEN_MEAL - multiple servings of food
+
+They also have additional functions, as follows:
+
+Drink:
+set_soft_strength(int)
+    Determines how filling a drink is.  The total of soft plus
+    alco strengths should be proportional to the total of hp
+    plus sp healing.  Only single servings currently use this.
+
+set_alco_strength(int)
+set_strength(int)
+    Determines how drunk the drink will make the character.
+
+set_hp_healing(int)
+set_hp_heal(int)
+    Set the amount of hp healed.
+
+set_sp_healing(int)
+set_sp_heal(int)
+    Set the amount of sp healed.
+
+set_healing(int)
+    Set both hp and sp healing to int.
+
+query_full()
+    Returns 1 if the bottle is full, 0 otherwise.
+
+query_drinker_level()
+    Returns the real level necessary to drink the drink.
+    (Remember that bards and halflings will be able to drink
+    it earlier.)
+
+set_drinking_message(string)
+    Sets the message others see when the character drinks.
+    Can be left at the default in most cases.  Not used
+    for jugs and kegs.
+
+set_drinker_message(string)
+set_drinker_mess(string)
+    Sets the message the character sees when he drinks.
+    set_drinker_message is preferred; set_drinker_mess is
+    preserved for backward compatibility, but works only
+    with drinks, not with kegs/jugs.
+
+set_empty_container(string)
+    Determines what the container is.  Defaults to "bottle".
+    Does not apply to jugs or kegs.
+
+set_stopper(string)
+    Sets the string the character sees if his level is
+    too low to drink.
+
+set_drink_name(string)
+    Sets the name of the drink, used in some default
+    messages.
+
+Kegs and jugs also use the following:
+set_kind(<"keg"|"jug">)
+    Determines whether the drink is in a keg or a jug.
+
+set_max_drinks(int)
+    Sets the maximum number of drinks that can be
+    held.  The default should be used, unless the item
+    is a special case for some reason.
+
+set_drinks(int)
+    Sets the number of drinks currently in the
+    container, so you can clone up (for instance) a
+    half-empty keg.
+
+Food:
+set_food_name(string)
+    Sets the name of the food, used in some default
+    messages.
+
+reset_short(string)
+    Use this instead of set_short in food, due to a
+    peculiarity of inn food code.
+
+set_eater_message(string)
+set_eater_mess(string)
+    Sets the message the character sees when he eats the
+    food.  set_eater_message is preferred; set_eater_mess
+    is preserved for backward compatibility but does not
+    work with snacks and meals.
+
+set_hp_heal(int)
+    Sets the amount of hp healed by the food.
+
+set_sp_heal(int)
+    Sets the amount of sp healed by the food.
+
+set_strength(int)
+    Sets how full the food will make the character.  Should
+    normally be about half of the total healing.  If hp_heal
+    and/or sp_heal are not set, this also sets them to int.
+
+Meals and snacks also use the following:
+set_kind(<"snack"|"meal">)
+    Set whether the item is a snack or a meal.
+
+set_max_uses(int)
+    Sets the maximum number of times the food could be
+    eaten.  This should normally default, unless
+    the item is special for some reason.
+
+set_uses(int)
+    Sets the number of times the food can be eaten,
+    so you can clone up (for instance) a half-eaten
+    meal.

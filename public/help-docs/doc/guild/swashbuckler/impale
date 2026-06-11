@@ -1,0 +1,12 @@
+Impale - blade technique
+------------------------------------------------------------
+Using the impale blade technique, a swashbuckler tries
+to inflict deep wounds by following through on each
+impaling attack. A swashbuckler must be light on his feet
+to successfully make such a deep attack without becoming
+excessively vulnerable to counterattack.
+
+GL: 11
+SP:  8 / attack
+command:  impale
+duration: technique mode

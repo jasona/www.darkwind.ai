@@ -1,0 +1,56 @@
+There are currently 5 different 'types' of guilds, although several types
+have more than one guild within it's category.  The different types are:
+DRUIDS, CLERICS, MAGES, THIEVES, and FIGHTERS.
+ 
+Most classes have restrictions on what type of armours and which type of
+weapons they are allowed to use.  When you design a piece of armour or
+weapon, the type of armour or weapon and the material it's made of will
+determine which guilds can use the weapon.  The following is a general
+guildeline as to who can wear and use what:
+ 
+CLASS       WEAPON TYPE
+-----------------------------------------------------------------------------
+MAGES      Daggers and staves.
+
+THIEVES    Daggers, some blunt weapons (like a blackjack), medium size
+            swords. No large weapons.
+
+FIGHTERS   All, except for magic items that are guild specific.
+
+DRUIDS     Daggers, blunt weapons, and most swords (except things like
+           two-handed swords and such).
+
+CLERICS    Blunt weapons only.
+ 
+ 
+CLASS      ARMOUR TYPE
+-----------------------------------------------------------------------------
+MAGES      Only very light armours like robes, rings of protection, bracers
+           of defense, etc.
+
+THIEVES    Similar to mages, but not as strict.  Able to wear leather armour,
+
+FIGHTERS   Anything, unless the item is guild specific.
+
+DRUIDS     Similar to mages, except able to wear armours made from naturally
+           growing materials, i.e. BarkMail.
+
+CLERIC     Almost anything, unless it is a class specific item.
+ 
+If you have any questions on what to set an object ask another wizard!
+There are several examples in the /open/WEAPON and /open/ARMOUR
+directories that show how to set guilds for weapons and armour.
+ 
+Below is a complete listing of ALL guilds currently in the game and their
+proper syntax when using them.
+ 
+FIGHTER, GAROU, BARD, NECRO, DRUID, THIEF, MAGE, CHARLATAN
+CLERIC_MITRA, MORPHER, LUNAR, PSIONICIST, SWASHBUCKLER, NINJA
+ 
+ALL_GUILDS can be used when you wish to have something globally encompass
+all guilds.
+
+// Revised to correct thief restrictions and remove WEREWOLF
+// from list of guilds.  Druid guild exists but is not open.
+// ---Xnedra 23/08/98---
+

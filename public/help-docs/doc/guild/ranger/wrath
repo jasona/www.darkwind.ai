@@ -1,0 +1,17 @@
+Ranger Help for: wrath of gaia
+================================
+
+SYNTAX:      wrath <target>
+USAGE:       Any terrain
+SLOT COST:   10
+BASE SP:     variable
+SKILL TYPE:  religious
+
+SUMMARY:
+This skill allows a Ranger to call upon Gaia's wrath, unleashing a
+powerful nature damage attack against a target. The earth itself
+rises against the Ranger's enemy. The damage is terrain-based and
+deals significantly more damage when the Ranger is fighting in their
+primary terrain. This is one of the most powerful offensive spells
+available to a Ranger and costs a great deal of spell points to use.
+The damage scales with wisdom and guild level.

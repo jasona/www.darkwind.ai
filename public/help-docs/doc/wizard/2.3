@@ -1,0 +1,21 @@
+***************************************************************************
+                              Coding Efficiently
+***************************************************************************
+
+is_clone check:
+        The is_clone check is meant for objects that do not need to refer
+        to their master object. It will prevent the code from setting the
+        various functions, such as the set_long string, on that master
+        object. The check should appear before ::reset(arg) is called,
+        and should be entered as follows:
+
+    if (!is_clone(this_object())) return;
+
+        The is_clone check should appear in all cloned objects and
+        monsters, unless the object's master object needs to actually
+        do something/store information. (99% of objects do not.) It 
+        should not be used in room files.
+
+------
+Version 1: ?
+Version 2: Edited by Bob - July 16, 2004

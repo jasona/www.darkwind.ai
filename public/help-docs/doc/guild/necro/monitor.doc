@@ -1,0 +1,8 @@
+Monitor
+Necromancers can quickly access information concerning their current
+well-being through the use of the 'hp' command. In addition to standard
+information about HP and SP, a Necromancer will see two meters labeled
+"BLIGHT" and "DEATH". These two meters correspond to the two ~>runes<~
+that augment their spells. A Necromancer will also notice a health bar
+for each of their ~>followers<~, and information about current effects
+that are active.

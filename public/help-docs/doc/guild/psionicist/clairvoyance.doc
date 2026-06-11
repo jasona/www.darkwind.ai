@@ -1,0 +1,9 @@
+_______________________________________________________________________________
+"Clairvoyance"      
+        This allows the psionicist to see the location of a target within
+        his mind.  It displays the room description (including contents)
+        of the target's location.
+ 
+SP Cost:  10		Guild Level:  2		Potential Points:  1
+ 
+Command:  clairvoyance <target>

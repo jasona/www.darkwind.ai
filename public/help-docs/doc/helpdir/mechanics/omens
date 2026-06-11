@@ -1,0 +1,32 @@
+Omens
+
+The omens command reads the current divine balance of the world.
+
+  omens
+  portents
+
+Omens never shows raw pressure numbers. It gives broad prophetic language about
+whether Mitra, Gaea, or Set is ascendant. If no god has enough pressure to rule
+the realm, the world is Godless and the omens are silent.
+
+Omens also reports major active divine events, such as Holy Hour or Eclipse.
+Use patron to inspect your personal pledge, rank, debt, and current avatar
+charge modifier.
+
+World states:
+
+  Ascendant  One god has enough pressure to lead the others.
+  Godless    No god has enough pressure to rule the realm.
+  Eclipse    Set has dragged a temporary shadow across the cycle.
+  Holy Hour  A god's hour is active and patron blessings may strengthen.
+
+Omens are affected by tithes, shrine activity, pilgrimages, marked enemies,
+and reputation-bearing deeds with clear divine meaning. The command
+intentionally describes the state in prophetic language instead of showing raw
+pressure numbers.
+
+Related help:
+
+  help divine
+  help patron
+  help shrine

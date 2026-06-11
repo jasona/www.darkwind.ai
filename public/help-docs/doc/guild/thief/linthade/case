@@ -1,0 +1,48 @@
+"Man..check him out...he's loaded..."  Casing targets. 
+
+Syntax: case <target>  
+
+Game wise, you start off with a limited ability of determining
+these things at Glevel 2.  As you progress in Glevel, you will
+find out more information about them, and get better at judging
+values of items.  Here is a short list of what will change.
+
+Glevel 1-4:   Level comparison
+Glevel 5-9:   Strength comparison
+Glevel 10-14: Dexterity comparison
+Glevel 15-19: Constitution comparison
+Glevel 20+:   AC comparison
+
+Items are listed from highest value to lowest value, Stealable
+to Non-stealable. For example, if you saw the following set:
+
+Comparing yourself to Joe you determine: 
+You're more experienced.
+You're stronger.
+You're faster.
+You could handle more damage.
+
+Joe's inventory:
+Value  Stl Description
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+642     Y  The Cape of the Night                                  
+250     Y  A keg of exodus's newbie ale (mostly empty)            
+241     Y  [2] A blackened shortsword                                 
+157     Y  A large sack                                           
+79      Y  A pair of tough boots                                  
+26      Y  Swordsman's fighting gloves                            
+0       N  A fighter's torch                                      
+44      N  A padded leather helm (worn on head)                   
+43      N  A pair of tough leather gloves (worn on hands)         
+183     N  Leather boots (worn on feet)                           
+1009    N  Razor sharp scimitar (sharpened) (main weapon)         
+736     N  Razor sharp scimitar (sharpened) (secondary weapon)    
+1396    N  A golden suit of Platemail (lightweight) (worn on body 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Joe is Registered. Steal away.
+
+You could steal the Cape, the keg, the shortswords, the sack, 
+the boots and the gloves.  Everything down from there is prefaced
+with a "N" indicating that for some reason, it is unstealable.
+
+Glevel: 2	SP Cost: 10

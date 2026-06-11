@@ -1,0 +1,31 @@
+        To make use of the stat testing system, inherit STAT_TEST;
+in any room, object, or monster.  You can perform a test with the
+following syntax test_<stat>(<difficulty>,<subject>);.  It is an integer
+function which will return by how much the test was passed or failed.
+Remember if a player exactly makes the number needed, 0 will be returned,
+not 1.  The difficulty should be a number between 1 and 100, with higher
+numbers meaning harder tests.  If it is not supplied, 50 will be assumed.
+Subject should be the object to perform the test on.  If not supplied,
+this_player() will be assumed.  A few examples:
+ 
+test_str();
+test_int(25);
+test_chr(90,this_player()->query_attack());
+ 
+        The first will perform a default level 50 test on
+this_player()'s strength.  The second will perform an easier level 25
+test on the player's intelligence, and the last will make an extremely
+difficult charisma test on the monster the player is attacking.  For some
+examples of objects using tests, check /open/OBJ/stat_mace and stat_goblin.
+ 
+        The inheritable stat testing system takes a number of things
+into account, including that no test will ALWAYS succeed or ALWAYS fail,
+and that the differences between a stat of 11 and 12 should be more
+dramatic than between 47 and 48.  It can be used to reward players who
+have kept rell rounded characters, and make statistics not vital to
+combat or spell points still important.  You can use charisma tests to
+determine the reactions of NPCs, dexterity tests to perform leaping or
+climbing, wisdom or intelligence tests to read books or successfully
+search, etc.  Consider using appropriate stat tests instead of pure
+random numbers in your code.
+ 

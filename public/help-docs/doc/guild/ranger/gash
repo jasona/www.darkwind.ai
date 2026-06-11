@@ -1,0 +1,16 @@
+Ranger Help for: gash
+=====================
+
+SYNTAX:      gash <target>
+USAGE:       Any terrain
+SLOT COST:   NA
+BASE SP:     75
+SKILL TYPE:  attack
+
+SUMMARY:
+This skill allows a Ranger to deliver a powerful slashing attack that
+tears through the target's defenses. The Ranger must be wielding a
+slash-type weapon (sword, axe, etc.) to perform this skill. Gash deals
+heavy slash damage and has a chance to cause bleeding. The damage scales
+with the Ranger's strength and weapon skill. This is a mid-tier melee
+attack that bridges the gap between strike and naturestrike.

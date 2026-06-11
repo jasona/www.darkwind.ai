@@ -1,0 +1,11 @@
+Engulf
+
+This spell calls up a spiral of flame that wraps around
+the target, burning it with focused natural fire.
+
+Command: engulf <target> (defaults to attacker)
+Base Cost: 28 SP
+Base Recovery: medium
+Base Effect: damage (fire)
+Base Duration: instant
+Guild Level: 4

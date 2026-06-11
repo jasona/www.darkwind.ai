@@ -1,0 +1,41 @@
+The various types of damage a weapon or monster can do is placed into
+a bitfield and as such may be combined and/or masked with the | and &
+bitwise operators.
+
+Please see the armour documentation for specifics about adding weaknesses
+and resistances to your armour, and the weapon documentation for
+specifics about adding damage types to your weapons.  This file only
+lists the types of damage and the bitfield names for each type.
+
+To use the following types, you must #include <types.h> in your file.
+
+** damage types **
+
+WEAPON_PIERCE    Piercing damage (darts, spears, needles)
+WEAPON_SLASH     Slashing damage (razors, swords)
+WEAPON_BLUNT     Blunt damage (clubs, maces, trashcans)
+WEAPON_CLEAVE    Cleaving damage (axes, halberds)
+WEAPON_DAM_MASK  WEAPON_PIERCE|WEAPON_SLASH|WEAPON_BLUNT|WEAPON_CLEAVE
+DAM_SILVER       Silver objects (silver arrows, silver daggers)
+DAM_MAGIC        Generic magic
+DAM_GOOD         "Good" damage (aura bolt, holy fire, holy water, angels)
+DAM_EVIL         "Evil" damage (demons, vampires)
+DAM_CHAOS        Disruptive damage (disintegration, large-scale crushing)
+DAM_LAW          "lawful" damage
+DAM_ALIGN        DAM_GOOD|DAM_EVIL|DAM_LAW|DAM_CHAOS
+DAM_FIRE         Heat and flame damage (fire spells, solar weapons)
+DAM_COLD         Ice and freezing damage (hail, ice spells)
+DAM_LIGHTNING    Electrical damage (lightning, electric eels)
+ELEMENT_DAM_MASK DAM_LIGHTNING|DAM_COLD|DAM_FIRE|DAM_WATER
+DAM_POISON       Poisonous damage (snakes, poisonous plants, swamps)
+DAM_DISEASE      Health-degrading damage (zombies, mummies)
+DAM_LIVING       DAM_POISON|DAM_DISEASE
+DAM_SOUND        Sound damage (banshee, bards)
+DAM_ACID         Acid damage (black dragons)
+DAM_ASTRAL       Etherial and other-worldly (ghosts, shadows)
+DAM_PSIONIC      Mental damage (mind sting)
+DAM_WATER        Liquid damage (drowning)
+DAM_AP           Armor-piercing damage (ultra-sharp weapons).
+DAM_LIGHT        Light damage (sunray)
+ALL_DAM_TYPES    All of the previous types.
+

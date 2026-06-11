@@ -1,0 +1,185 @@
+                                                               Rev. 1
+
+                        Tithe/Tax System Description
+                      ===================================
+
+
+Introduction:
+------------
+
+The tithe/tax (known as the tithe system from now on) is to be
+used by any guild making compulsary donations to a central
+coffer or pool for later use.  This can easily be adopted for 
+use by a city for a taxation system, by simply adding to the
+central coffer when a purchase is made.
+
+
+Concepts
+--------
+
+All functions are held within the TITHE_D system and any
+command written to utilize the system should also include
+the <tithe.h> header.  
+
+Each coffer or pool has an identifier set up by the #define
+TITHE_ID.  This define will be the key for which all 
+transactions are referenced and needs to be defined in
+a seperate header for that guild/city or within the command
+itself.
+
+Once money is donated into a coffer, requests can be made
+to withdraw money from the coffer.  That request has to
+be approved by an IMP+ before the permitted offical can
+then withdraw from the coffers.
+
+Basic Functionality
+-------------------
+
+Adding money:
+
+void add_tithe(string TITHE_ID, int AMOUNT)
+- This puts money into the coffers
+- Also logs an entry into /log/tithes/TITHE_ID.o
+
+Viewing balances:
+
+int query_tithe(string TITHE_ID)
+- Returns the int of the total in TITHE_ID's coffer
+
+Withdraw requests:
+
+int withdraw_tithe_request(string TITHE_ID, int AMOUNT, 
+			string REASON)
+- Adds a request for withdraw, added to the main array
+for TITHE_ID
+
+int query_withdraw_request(string TITHE_ID)
+- Will return a formated listing of current tithe withdraws
+on the books.
+
+Approval/Denial/Removal:
+
+int approve_withdraw_request(string TITHE_ID, int REQUEST_NUM,
+			(string APPROVAL)
+- This function allows an IMP+ to approve/deny/remove the
+request.  APPROVAL must equal either "approve", "deny" or
+"delete".  It is up to the coder to decide how to present
+these options to the user.  A log entry is made to
+/log/tithes/TITHE_ID.approve.o for this transaction.
+ 
+Withdraw:
+
+int withdraw_tithe(string TITHE_ID, int REQUEST_NUM)
+- Providing the request has been approved by an IMP+ the
+appropriate offical can then finally withdraw the amount
+from the coffer to his/her pocket.  A log entry is made
+to /log/tithes/TITHE_ID.withdraw.o on the transaction.
+
+
+EXAMPLES
+-------
+
+These examples will show some basic uses of the above
+functions.  The first example will show how to put
+money into the account, and the next will show a command
+to request a withdraw then we show how to list the open
+withdraw requests and lastly code to show approval.
+
+Adding tithes
+-------------
+#include <mudlib.h>
+#include <tithe.h>
+#define TITHE_ID "myguild"
+
+int do_command(int iAmount) {
+
+  TITHE_D->add_tithe(TITHE_ID,iAmount);
+  write("Thanks for your donation.\n");
+  return 1;
+}
+
+// End Add
+
+Request withdraw
+----------------
+#include <mudlib.h>
+#include <tithe.h>
+#define TITHE_ID "myguild"
+
+int do_command(string sRequest){
+  int iTithes;
+  string sReason;
+  int iAmount, iRequest;
+
+  if(!sRequest) {
+	notify_fail("Please put the amount then the\
+reason in your request.\n")
+	return 0;
+  }
+  if(sscanf(sRequest,"%d %s",iAmount, sReason) == 2) {
+	TITHE_D->withdraw_tithe_request(TITHE_ID,iAmount,sReason);
+	return 1;
+  }
+  notify_fail("Please put the amount then the\
+reason in your request.\n")
+  return 0;
+}
+
+// End Request withdraw
+
+Tithe/Tax listing
+-----------------
+
+#include <mudlib.h>
+#include <tithe.h>
+
+#define TITHE_ID "myguild"
+
+int do_command() {
+  int iTithes;
+
+  write("Pending withdraw requests for "+capitalize(TITHE_ID)+":\n");
+  TITHE_D->query_withdraw_request(TITHE_ID);
+  return 1;
+}
+
+// End Tithe/Tax listing
+
+Request approval
+----------------
+
+#include <mudlib.h>
+#include <tithe.h>
+
+#define TITHE_ID "myguild"
+
+int do_command(string sArg) {
+  string sCommand;
+  int iInt;
+
+    if(sscanf(sArg,"%d",iInt) != 1) {
+        notify_fail("Try tapp <request number>\n");
+        return 0;
+    }
+    if(!iInt) {
+        notify_fail("Try tapp <request number>\n");
+        return 0;
+    }
+    TITHE_D->approve_withdraw_request(TITHE_ID, iInt, "approve");
+    return 1;
+}
+
+// End Request approval
+
+-----
+/secure/daemons/tithe_d.c
+- The tithe/tax daemon itself, defined as TITHE_D
+
+/secure/include/tithe.h
+- Header file containing various defines.
+
+Revision History:
+-----------------
+
+Rev. 1 - Zureal: First release.
+

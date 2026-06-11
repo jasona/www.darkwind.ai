@@ -1,0 +1,19 @@
+Ranger Help for: attract
+========================
+
+SYNTAX:      attract follower
+USAGE:       Primary terrain or claimed Ranger domain
+SLOT COST:   NA
+BASE SP:     50
+SKILL TYPE:  husbandry
+
+SUMMARY:
+This skill allows a Ranger to attract and bond with a wild animal as a
+permanent companion. The Ranger must be in their primary terrain or
+within their claimed Ranger domain for this skill to work. The type of
+animal attracted depends on the Ranger's primary terrain.
+Once bonded, the follower will fight alongside the Ranger, can be
+trained with commands, and will follow the Ranger between rooms. Each
+Ranger has a limited number of followers in their lifetime - if too
+many die, no more will come. Choose your battles wisely to protect
+your companion.

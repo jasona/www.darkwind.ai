@@ -1,0 +1,15 @@
+Ranger Help for: rcompare
+=========================
+
+SYNTAX:      rcompare <item1> to <item2>
+USAGE:       Any terrain.
+SLOT COST:   0
+BASE SP:     25
+
+SUMMARY:
+Compare two weapons or pieces of armor side by side, showing their
+relative qualities. Higher ranked Rangers get more accurate and
+detailed comparisons. Both items must be in your inventory.
+
+=============================================================================
+SEE ALSO: inspect, sharpen, treat

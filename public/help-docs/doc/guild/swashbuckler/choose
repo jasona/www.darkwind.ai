@@ -1,0 +1,18 @@
+Choose Weapon - utility skill
+------------------------------------------------------------
+When a swashbuckler nears the end of his training, he often
+chooses a pair of blades that have served him particularly
+well through his training. He will become so attuned to
+those blades that they almost seem like extensions of
+himself. Thereafter, whenever he uses his chosen blades,
+he will fight with more skill when using swashbuckler
+techniques. The choice may be made only once per boot and
+of course both weapons must be blades. The swashbuckler is
+so attuned to the chosen blades that even other blades of
+the same kind will not be as good in his hands as the
+two specifically chosen by him.
+
+GL: 12
+SP:  0
+command:  choose [main|secondary] <weapon>
+duration: remainder of uptime

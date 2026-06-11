@@ -1,0 +1,18 @@
+
+Ranger Help for: enemy mammal2
+==============================
+
+SUMMARY:
+Some older creatures in Darkwind use the race label 'mammal2'. Choosing
+mammal2 means your Ranger specializes against that second legacy mammal
+category.
+
+This is mostly a mechanical distinction from older area code. If you are
+choosing for theme, mammal is clearer. If you know an area uses mammal2,
+this can be the more exact choice.
+
+COMMAND:
+  setenemy mammal2
+
+=============================================================================
+SEE ALSO: enemy, setenemy and mammal

@@ -1,0 +1,16 @@
+Ranger Help for: falcon eyes
+=============================
+
+SYNTAX:      falcon <direction>
+USAGE:       forest,plains,swamp,desert,jungle,hills,road,beach,
+             mountain,arctic,barren,outside
+SLOT COST:   4
+BASE SP:     20
+SKILL TYPE:  scouting
+
+SUMMARY:
+This skill allows a Ranger to send a falcon to scout in a given
+direction. The falcon flies ahead and reports back what lies in the
+adjacent room, including any creatures or notable features. This is
+useful for scouting dangerous areas before entering them. The detail
+of the falcon's report depends on the Ranger's skill level.

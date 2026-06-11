@@ -1,0 +1,13 @@
+SPELL NAME  : Flamestrike
+SPELL SYNTAX: Flamestrike 
+SPELL COST  : 150 SP
+DESCRIPTION : This spell causes flames to shower down from the heavens
+              and cause massive damage to all the creatures in the
+              room except the caster, his pets and allies.
+
+Note        : Non-PK players will never get hit with this skill and
+              PK players only get hit if the caster is PK too. Due
+              to a recent update of the skill you will now be able
+              to always cast this spell, even if there are players
+              in the room that will not be affected.
+

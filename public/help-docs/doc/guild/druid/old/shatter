@@ -1,0 +1,12 @@
+Shatter
+
+With this spell, the druid attempts to cause metal
+objects possessed by his target to shatter into
+useless shards.
+
+Command: shatter <target> (defaults to attacker)
+Base Cost: 50 SP
+Base Recovery: medium
+Base Effect: destroy items (metal)
+Base Duration: instant
+Guild Level: 12

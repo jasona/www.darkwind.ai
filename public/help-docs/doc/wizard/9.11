@@ -1,0 +1,246 @@
+MENU SYSTEM:
+
+The menu system allows the creation of both menu-style and wizard-
+style question systems, using the same menu option definitions.
+
+Menus should include <menu.h> and inherit MENU.
+
+Menu options types are:
+
+Value entry (MENU_TYPE_ENTRY) - enter an arbitrary value.
+	Can be MENU_TYPE_STRING or MENU_TYPE_INT.
+	Can be MENU_TYPE_MULTI_ENTRY.
+	INT options can have an associated allowed range.
+	Can have default values.
+
+Choice entry (MENU_TYPE_CHOICE) - enter one of a defined list of values.
+	Can be MENU_TYPE_STRING or MENU_TYPE_INT.
+	Can be MENU_TYPE_MULTI_ENTRY.
+	INT options can have an associated allowed range.
+	Can have default values.
+	Can be either list or condensed style.
+
+Separator (MENU_TYPE_SEP) - text only separator value
+
+Sub-menu (MENU_TYPE_SUBMENU) - submenu of options
+
+Exit (MENU_TYPE_EXIT) - exit choice to leave the menu
+	Can either completely exit, or just exit a submenu.
+
+Command (MENU_TYPE_COMMAND) - just calls the callback function as a command.
+
+Edit (MENU_TYPE_EDIT) - Calls the edit daemon like the bboards.
+
+Options can use closures for title, prompt, default value, choices,
+validation function, callback function, hidden, and next option (wizard mode).
+
+
+Regular mode: Starts out with a menu of options with numerical option
+              selection.
+Wizard mode: Runs through a list of options one at a time, as determined
+             by the option's "next" parameter. At end of list, an exit
+             type option can be used to exit the wizard, or the wizard
+             can drop back into normal menu mode.
+
+Menus always have a submenu defined named "default". This is the menu
+that will contain options that are added with no parent. It is displayed
+with start_menu() if no start option name is provided.
+
+NOTE: *ALWAYS* use a clone of your menu object! Otherwise, multiple 
+      people using it at the same time will step on each other.
+
+
+Menu Inheritable:
+
+varargs void add_option(string sName, int iType, mixed xTitle,
+                        mixed xPrompt, string sParent):
+Adds a menu option.
+	sName must be unique amongst all the options defined
+	for the menu. 
+
+	iType is a bitfield of:
+		The following are mutually exclusive:
+		MENU_TYPE_SUBMENU
+		MENU_TYPE_ENTRY
+		MENU_TYPE_CHOICE
+		MENU_TYPE_SEP
+		MENU_TYPE_EXIT
+
+		The following are for ENTRY and CHOICE only:
+		MENU_TYPE_STRING
+		MENU_TYPE_INT
+		MENU_TYPE_MULTI_ENTRY - keep prompting until <enter>
+
+		The following are for CHOICE only:
+		MENU_TYPE_CHOICE_STYLE_LIST - list prompt style
+		MENU_TYPE_CHOICE_STYLE_FLAT - condensed prompt style
+
+		The following is for EXIT options only:
+		MENU_TYPE_EXIT_STYLE_POP - don't exit menu completely
+
+	xTitle is either a string or closure, and is displayed in menu
+	listings and before prompts.
+
+	xPrompt is either a string or closure, and is displayed when
+	entering a value only.
+
+	sParent is the name of the submenu (defaults to "default") to
+	which this option belongs.
+
+void set_option_title(string sOption, mixed xTitle):
+Sets the title for a menu option. May be a closure or a string.	A closure
+will be passed the option info mapping.
+
+void set_option_prompt(string sOption, mixed xPrompt):
+Sets the prompt for a menu option. May be a closure or a string. A closure
+will be passed the option info mapping.
+
+void set_option_default(string sOption, mixed xDefault);
+Sets the default value for a menu option. May be a closure or a string.	
+A closure will be passed the option info mapping.
+
+void set_option_choices(string sOption, string *asChoices);
+Sets the list of allowed values for MENU_TYPE_CHOICE options. May be a
+closure or a list of strings. A closure will be passed the option info mapping.
+
+void set_option_validator(string sOption, mixed xValidator);
+Sets the validation function for an option. Must be a closure.
+	The validation function is passed two arguments: a string value
+	and the option info mapping. It should return 0 if the value
+	is valid, or a string error message if not.
+
+void set_option_integer_range(string sOption, int iMin, int iMax);
+Sets the valid range for an INT type option.
+
+void set_option_callback(string sOption, mixed xCallback);
+Sets the callback function for an option. Must be a closure.
+	The callback function is passed two arguments: a string value
+	and the option info mapping.
+
+void set_option_next(string sOption, mixed xNext);
+Sets the next option in line for wizard mode. Can be a string name or
+a closure that returns a string.
+
+void set_option_hiden(string sOption, mixed xHidden)
+Sets whether the option is visible or not. Can be a closure that returns
+an integer.
+
+varargs void start_menu(object oUser, string sMenu):
+Starts the menu at option sMenu (usually a submenu type option).
+
+varargs void start_wizard(object oUser, string sOption);
+Starts the menu in wizard mode at the specified option.
+
+
+Examples:
+
+/open/testmenu.c is an example of a way to use the menu options. It can be
+started in both normal and wizard mode.
+
+  // Set the title and prompt for the main menu
+  set_option_title("default", "Test Menu Title");
+
+  // The function "test_prompt" in this object will be called for the prompt.
+  set_option_prompt("default", symbol_function("test_prompt", this_object()));
+
+
+  // Add a string entry option
+  add_option("test1", MENU_TYPE_ENTRY|MENU_TYPE_STRING, "Enter Name");
+
+  // The menu will call the "test_callback" function in this object each time
+  // a value is entered for the option.
+  set_option_callback("test1", symbol_function("test_callback", this_object()));
+
+  // In wizard mode, go to option test2 after completing this option.
+  set_option_next("test1", "test2");
+
+
+  // Add a string entry option with a set a allowed values that print in list
+  // style (numbered selections). The title of the option will be returned
+  // from the "test_test2_title" function in this object:
+  // 
+  // <title>
+  //         1) blue
+  //         2) red
+  //         3) green
+  // Enter value: 
+  add_option("test2",
+	     MENU_TYPE_CHOICE|MENU_TYPE_STRING|MENU_TYPE_CHOICE_STYLE_LIST,
+	     symbol_function("test_test2_title", this_object()));
+
+  // The menu will call the "test_callback" function in this object each time
+  // a value is entered for the option.
+  set_option_callback("test2", symbol_function("test_callback", this_object()));
+
+  // The allowed choices are blue, red, and green
+  set_option_choices("test2", ({ "blue", "red", "green" }) );
+
+  // In wizard mode, go to option test3 after completing this option.
+  set_option_next("test2", "test3");
+
+
+  // Add a separator between options test2 and test3
+  add_option("testsep", MENU_TYPE_SEP, "-=-=- This Is A Separator -=-=-");
+
+
+  // Add an integer entry option
+  add_option("test3", MENU_TYPE_ENTRY|MENU_TYPE_INT, "Enter Age");
+  set_option_callback("test3", symbol_function("test_callback", this_object()));
+
+  // Note how this option chains to an option for a different submenu in wizard
+  // mode. This lets you go through ALL of the selections in wizard mode, and
+  // then fallback to a default hierarchical menu when all the entries have been made.
+  set_option_next("test3", "sub1");
+
+
+  // Add a submenu off the main menu.
+  add_option("testsub", MENU_TYPE_SUBMENU, "Do Some Other Stuff", "What do you want to do?");
+
+
+  // Add an exit option. This option will exit the menu completely when selected.
+  add_option("test4", MENU_TYPE_EXIT, "Exit");
+
+
+  // Enter a normal string value entry option.
+  add_option("sub1", MENU_TYPE_ENTRY|MENU_TYPE_STRING, "Enter Spoob", "Spoob value?", "testsub");
+  set_option_callback("sub1", symbol_function("test_callback", this_object()));
+  set_option_next("sub1", "subint");
+  // Set the default value to "spoobalicious"
+  set_option_default("sub1", "spoobalicious");
+
+
+  // Add an integer type option with an allowed range of 9 to 100, with a default
+  // of 42.
+  add_option("subint", MENU_TYPE_ENTRY|MENU_TYPE_INT, "Enter Spork", "Spork value?", "testsub");
+  set_option_integer_range("subint", 9, 100);
+  set_option_default("subint", 42);
+  set_option_callback("subint", symbol_function("test_callback", this_object()));
+  set_option_next("subint", "sub2");
+
+
+  // Add a choice type entry using the flat style:
+  // 
+  // Glorb: [Y/n] 
+  add_option("sub2", MENU_TYPE_CHOICE|MENU_TYPE_STRING|MENU_TYPE_CHOICE_STYLE_FLAT,
+	     "Glorb.", "Glorb:", "testsub");
+  set_option_callback("sub2", symbol_function("test_callback", this_object()));
+  set_option_choices("sub2", ({ "y", "n" }) );
+
+  // Note that the default entry for a flat-style choice option gets capitalized
+  // when displayed to signify that it is the default.
+  set_option_default("sub2", "y");
+
+
+  // Add a multi-entry string option. The prompt will display based on the number
+  // of lines entered.
+  add_option("sub3", MENU_TYPE_ENTRY|MENU_TYPE_STRING|MENU_TYPE_MULTI_ENTRY,
+	     "Multi-Glorb.", symbol_function("count_prompt", this_object()), "testsub");
+
+  // The callback function will be sent a value of "" when the user hits <enter> to
+  // exit the option.
+  set_option_callback("sub3", symbol_function("test_callback_multi", this_object()));
+
+
+  // Add an exit option. This option will exit the submenu and return to the main
+  // menu when selected.
+  add_option("sub4", MENU_TYPE_EXIT|MENU_TYPE_EXIT_STYLE_POP, "Back To Main Menu", 0, "testsub");

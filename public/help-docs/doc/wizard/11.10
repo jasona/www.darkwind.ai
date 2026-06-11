@@ -1,0 +1,40 @@
+Languages
+=========
+
+Player languages are independent of race, although some player races are
+accorded extra languages. Languages are specified in the language.h header.
+
+A living's language knowledge is either fluent, or non-fluent (regular).
+At the moment, the distinction only affects whether the say command shows
+an accent or not. There is also a default language and a native language
+for each living as well. The default language is the languages used with the
+'say' command, and the native language is used by 'rsay'.
+
+Adding new languages
+--------------------
+To add a language, alter language.h to include the new language in the
+ALL_LANGUAGES array, and assign a color to it in LCOLOR.
+
+Giving language knowledge
+-------------------------
+    void add_language(string)
+    void add_fluent_language(string)
+        Both of these functions give appropriate knowledge of a language.
+        They can also be passed arrays of languages as well.
+    void set_default_language(string)
+    void set_native_language(string)
+        These functions set the say and rsay default languages.
+    void remove_language(string)
+        Removes all knowledge of a language.
+
+Checking language knowledge
+---------------------------
+    string query_native_language()
+    string query_default_language()
+        These return the appropriate language setting.
+    status query_language(string)
+    status query_fluent_language(string)
+        These return 1 if the language is known.
+
+------
+Version 1: Bob - April 13, 2003

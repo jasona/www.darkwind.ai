@@ -1,0 +1,59 @@
+
+                                                               Rev. 0
+
+                      NPC Behavior: Chat Behavior
+                      ===========================
+
+Description
+-----------
+
+The load_chat and load_a_chat functionality has been subsumed by the
+generic chat behavior. While load_chat and load_a_chat still function,
+they have been deprecated and it is suggested that you use the new API
+directly. load_chat strings will be active while the NPC is in a 
+resting state, and load_a_chat strings will be active while the NPC is
+in a fighting state.
+
+Chat strings can have a set of states for which they are active. These 
+states correspond to the general behavior states and are defined in 
+<npcstates.h>. A chat string will have the chance to be selected for
+output whenever the NPC is in a state for which the chat string is
+registered.
+
+The NPC will now only have a single chat % chance, as opposed to a 
+separate chance for normal and attack strings.
+
+
+NPC Chat API
+------------
+
+void set_chat_chance(int chance)
+- Set the % chance for a chat string to be output.
+
+void add_chat(string str, int state)
+- Register a chat string for a set of states as in <npcstate.h>.
+
+object query_chat_behavior()
+- Return the chat behavior object for further customization.
+
+
+NPC Chat Behavior API
+---------------------
+
+The chat behavior object can also be manipulated directly:
+
+varargs void add_chat(string msg, int states)
+- Adds a chat string to the behavior for a set of states. 
+
+void set_chance(int chance)
+- Sets the chat chance.
+
+int get_chance()
+- Returns the chat chance.
+
+
+Revision History:
+-----------------
+
+Rev. 0 - Malraux: Initial release
+

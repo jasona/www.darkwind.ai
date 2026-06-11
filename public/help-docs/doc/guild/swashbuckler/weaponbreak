@@ -1,0 +1,13 @@
+Weapon Break - offensive trick
+------------------------------------------------------------
+A practised swashbuckler can catch an enemy's weapon on his
+blade and, with a sharp twist, break it, rendering the enemy
+much weaker. This skill is more intricate and difficult to
+learn than disarm, but can also be more effective at
+weakening your enemy. Weapons broken in this manner are
+considerably reduced in effectiveness.
+
+GL:  9
+SP: 40
+command:  weaponbreak <target> (defaults to opponent if in combat)
+duration: instant

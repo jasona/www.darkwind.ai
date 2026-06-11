@@ -1,0 +1,15 @@
+clutch <item> - Carry something in your clutches.
+dchat - Version of tell that lets you talk to all your guild members.
+edchat - Guild channel emote.
+dcmds - A list of dragon commands.
+declare <form> - This command sets your dragon form.
+redeclare <form> - At age 19, you can change your dragon form.
+The magics involved will regenerate 2 years of life.
+demotes - A list of dragon emotes.
+dhist - This shows a history of all communications on the Dragon channel.
+dragonhelp or dhelp <command> You can get more info on 'align' and 'powers'.
+dragonlong <string> - Sets what people see when they look at you.
+dtimers - Lists out your spell timers.
+dwho - Version of "who" that only shows your guild members.
+
+For more info, you can dhelp 'basics', 'align', or 'powers'

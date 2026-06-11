@@ -1,0 +1,58 @@
+     You are now entering the newbie quest tutorial area.  This place was
+specially designed to teach you about quests, both the idea behind
+them and ways to solve them.  If you are familiar with quests and
+MUDs in general, you'll probably find the approach taken herein to
+be ridiculously pedantic and entirely extraneous, but then again,
+this wasn't designed for you.  This is for the completely clueless,
+those who have no idea what a quest is, let alone how to do one
+or even why anyone would want to do one.  This place is designed
+for people like me (Lingo) when I started.
+     First off, a quest is a task set forth by the builders on Darkwind
+to test your mettle, both the physical stuff of which your character
+here is made and that brain of yours.  Some lean towards more
+of one aspect than the other, but almost all have at least some
+of both.  You can find out which aspect is emphasized in a particular
+quest by going to the adventurer's guild (1 west, 1 south of where
+you logged in) and typing 'list' then selecting one of the quests
+listed and typing 'list <quest_name>'.  This will yield a short
+description of the quest, which I will talk more about later, and
+the quest's Brain/Brawn ratings, in percentages.  A quest with, say
+90% Brawn rating and 10% Brain suggests that it is a quest full
+of combat, or has just a little combat which is exceptionally
+difficult.  A quest with 10% Brawn and 90% Brain ratings, on the
+other hand, encourages you to find solutions other than killing
+in order to get things done, i.e. it requires you
+to use that gray matter between your ears, and I don't mean earwax.
+The quest that you are about to undertake is rated at 50% Brain
+and 50% Brawn, so it will be a nice balance between the two.  Of
+course, the combat part will be scaled down so that you, as a newbie,
+can handle it, so don't let the large Brawn rating scare you off.
+Similarly, though, don't let a quest's small Brawn rating make
+you think that you can easily handle whatever combat that might come
+along in the process of working on it; this is not always the case,
+especially if you are of particularly low level.
+     This leads us to a discussion about the rules behind questing.
+You should type 'help quests' at the earliest opportunity and absorb
+the information there.  Note especially the provision again sharing
+'quest info' that is anything you have learned about a quest, including
+but not limited to its location, the difficulty of the creatures
+there in combat, the workings of a particular device within the
+area, and anything else really that can be associated with the quest.
+The exception, and an important one, is when you are partying
+during a quest.  Then, while the party is questing, the members
+should feel free to exchange information.  In fact, the whole
+questing process becomes much easier if you do.  After all, two
+heads are better than one (unless you're an ettin and both of
+them are unbelievably stupid -- no offense to any ettins reading
+this).  What one person doesn't come up with another might, and
+the quest can be completed much faster.  Once the party breaks
+up, however, this privilege is immediately sacrificed.  Whatever
+you gain on your own, or with others, after that is not to be
+shared with your former quest-mate.  You can be severely punished
+for any such dissemination of quest info, so please, for your own
+sake, don't do it, and similarly, don't prod others into disseminating
+quest info to you as this is just as bad if not worse.
+     Well, enough jabber for the moment, let's proceed.  If you
+haven't done this quest before (in this character if you once
+had another character which has since been wiped) please go
+through the northern archway so we can get you some quest points!

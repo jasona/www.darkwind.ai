@@ -1,0 +1,26 @@
+To use the generic edit object:
+
+#include <daemons.h>
+
+
+To start an edit session:
+
+EDIT_D->start_edit(string sData, object oCallbackObj, string sCallbackFunc);
+
+
+where sData is a string to pre-stuff the edit buffer with, oCallbackObj is
+the object which needs to be notified when the edit is done, and sCallbackFunc
+is a function on that object of prototype:
+
+void func(string sData, object oPlayer);
+
+The edit daemon will call the callback object's callback function with the
+data and the player doing the editing.
+
+sData will be 0 if the player aborts the edit process.
+
+
+Look in /open/OBJ/newsread.c for an example.
+
+-mal
+

@@ -1,0 +1,16 @@
+/doc/helpdir/who
+================
+ 
+SYNTAX
+======
+ 
+who [<sort>]
+ 
+DESCRIPTION
+===========
+ 
+"who"      shows everyone on at that time.
+"who play" shows all players on at that time.
+"who wiz"  shows all Wizards on at that time.
+"who died" shows all ghosts on at that time.
+"who new"  shows all the newbies on at that time.

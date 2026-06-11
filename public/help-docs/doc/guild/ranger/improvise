@@ -1,0 +1,17 @@
+Ranger Help for: improvise
+==========================
+
+SYNTAX:      improvise
+USAGE:       Any terrain
+SLOT COST:   NA
+BASE SP:     110
+SKILL TYPE:  attack
+
+SUMMARY:
+This skill allows a Ranger to use the surrounding environment as a
+weapon, improvising a terrain-based attack against their current combat
+opponent. The type and damage of the attack varies depending on the
+terrain: hurling rocks in mountains, using vines in jungle, kicking
+sand in desert, and so on. The Ranger must be in active combat to use
+this skill. Improvise is powerful but costly, best used when other
+options are exhausted.

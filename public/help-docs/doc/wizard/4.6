@@ -1,0 +1,189 @@
+// ob doc
+// 970114, Antcrusher
+
+This documentation concerns the generic base inheritable ob.c.  Every other
+"object" file inherits it in some fashion.  It sets up the basic functions
+that are common to all of them.  Generally you should not inherit this
+yourself, but inherit the object that is more specific to your application,
+such as treasure, weapon, etc.
+
+void set_id(string sArg);
+void set_name(string sArg);
+
+Both set IDs of the object to sArg, and the cap name to the cap of str.
+
+void set_alias(string sArg);
+void set_alt_name(string sArg);
+
+Both of these also set IDs of the object.  If you want more than three valid
+IDs for an object, you will need to write your own id() function, defined
+below.
+
+string query_name();
+
+This returns the string set by set_name and set_id.  It is the "primary"
+name of the object.
+
+int id(string sArg);
+
+This returns 0 if sArg does not match one of the valid IDs of the object.
+
+void set_short(string sArg);
+
+Sets the short description to sArg.
+
+string short();
+string query_short();
+
+Both return the short_desc string.
+
+void set_long(string sArg);
+
+Sets the long description to sArg.  Include your own newline character.
+
+string long();
+string query_long();
+
+Both return the long description if it was set, else "You see nothing special."
+
+varargs void set_value(int iV);
+
+Sets the value to iV.  Some other inheritables, such as treasure, redefine
+this with more than one argument, hence varargs.
+
+int query_value();
+
+Returns the base value of the object.  Buying and selling prices
+are modified by the shop based on various factors.
+
+void set_weight(int iW);
+
+Sets the weight of the object to iW.
+
+int query_weight();
+
+Returns the weight of the object.
+
+void set_info(string iI);
+
+Sets an informational string.
+
+string query_info();
+
+Returns the information string.
+
+void set_read(string sArg);
+
+Sets a readable string on the object.  The description should make a note
+that something can be read.
+
+int read(string sArg);
+
+If sArg corresponds to the item, this writes the string and returns 1.
+Else it returns 0.
+
+void set_new_type(int iT);
+
+To set the object as an object type defined in types.h.  This is a
+bitfield.  Multiple types can be bitwise-or'd together in the set.
+
+int query_new_type();
+
+Returns the number set above.  Used as a bitfield.
+
+string *query_type_strings(int iNew_type);
+
+Returns an array of strings corresponding to which bits are supplied by
+the argument iNew_type.
+
+void set_material(int iM);
+
+To set the object as being of a material defined in material.h.  This
+is a bitfield.  Multiple materials can be bitwise-or'd together in
+the set.
+Ex.  set_material(MAT_WOOD|MAT_GOLD);
+
+int query_material();
+
+Returns the number set above.  Used as a bitfield.
+
+string *query_material_strings(int iMaterial_type);
+
+Returns an array of strings corresponding to which bits are supplied by
+the argument material_type.
+
+string *query_treasure_strings(int iTreasure_type);
+
+Returns an array of strings corresponding to which bits are supplied by
+the argument iTreasure_type.
+
+void set_no_buy(int iI);
+
+Set to 1 if it's not buyable.
+
+int query_no_buy();
+
+Returns buyable status.
+
+void set_no_sell(int iI);
+
+Pass a 1 as the parameter to have it be refused in stores. Note that this
+works a bit differently from no_buy, in that the more times you call
+set_no_sell(1), the more times you then have to call set_no_sell(0) to
+get it to a sellable state again. This is done so that the creator can
+set it no_sell, and if a guild uses no_sell to prohibit players from selling
+checked-out/borrowed items, when the guild calls set_no_sell(0) when the
+object is done being borrowed, the item will still not be sellable.
+
+int query_no_sell(); 
+
+Returns sellable status.
+
+void set_no_clean_up(int iI);
+
+Set this to avoid having this object, or any rooms/containers
+containing this object, cleaned up.
+
+int query_no_clean_up();
+
+Returns the clean up setting.
+
+void set_steal(int iI);
+
+Set to 1 if it's not stealable.
+
+int query_steal();
+
+Returns nonstealability status.  (Yes, these should have been called
+no_steal, but they weren't.)
+
+void set_cursed(int iI);
+
+Set i from 0-100 as the percent chance the item will be cursed, and
+be stuck with the player.
+
+status query_cursed();
+
+Returns 1 if the item is cursed, else 0.
+
+void set_unique();
+
+Marks an item as unique.
+
+int query_unique();
+
+Returns 1 if the item is unique, else 0.
+
+void set_keep(int iArg);
+
+int query_keep();
+
+Returns the value set by the above.
+
+|GKBvarargs void set_object_destruct_timer(int iTime, mixed xFunc);|WK0
+
+  |WKOThis function will destruct the object in iTime seconds. If
+  xFunc is defined and is a closure, it will apply the function
+  before destructing it. If it's a string, it will tell_room
+  or tell_object of the environment of the object before destructing 
+  it.

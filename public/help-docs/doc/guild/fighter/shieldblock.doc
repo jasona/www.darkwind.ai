@@ -1,0 +1,9 @@
+Skill: shieldblock Timer: None         GL:  1    Cost: NONE
+
+As a Fighter, your skill with a shield will often let you block
+incoming hits totally. You need to be using a large or huge shield
+to make sure you can totally block the hit.
+
+Shieldblock uses your endurance when you block a hit.
+
+Syntax is: ftoggle shieldblock (or block) <on|off>

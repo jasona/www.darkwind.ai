@@ -1,0 +1,7 @@
+The silent command enables you to leave a room without
+showing which direction you left.  Available directions
+are all standard compass directions plus up and down.
+This is a Glevel 5 skill.
+
+Syntax: silent <direction>
+

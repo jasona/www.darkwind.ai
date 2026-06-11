@@ -1,0 +1,14 @@
+_______________________________________________________________________________
+"Damage Absorption"   
+        The idea of this power is it allows the psionicist to alter his
+        own aura to absorb kinetic energy.  The power adds about 100 
+        hit points which will fade over time, very quickly at low guild
+        levels but slower and slower as guild level rises.  Until this
+        power wears off, both wounds and healing will affect these
+        'temporary' hit points first.  However, the gradual loss
+        of hit points will never cause you to go below the number you
+        had when you invoked the power (damage from other sources WILL).
+ 
+SP Cost:  Variable	Guild Level:  3		Potential Points:  3
+ 
+Command:  absorption

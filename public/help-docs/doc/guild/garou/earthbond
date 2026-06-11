@@ -1,0 +1,19 @@
+|GKO================================================================
+                            |MKBEarthbond
+|GKO================================================================
+
+|YKOA shaman who has obtained the title of Hero is able to perform the
+Ceremony of Earthbonding. Summoning the powers of both Gaea and
+Luna, such a shaman is capable of enchanting metallic weapons and
+armor purifying the metallic components and restoring the item's
+harmony with nature. Such items, formerly restricted from use by
+Garou due to the metallic impurity, will then by usable by Garou.
+
+|WKB[NOTE: Earthbond can't make unusable armor types usable by Garou.
+       For example, Garou can't wear platemail (Earthbond'ed or not).
+       Garou can, however, use Earthbond'ed chainmail.]
+
+|WKOUsable in Form: |GKOMan
+|WKORestricted to: |MKBShaman
+|WKOLevel Required: |BKB45
+|RKOSyntax: |YKBearthbond <item>                         |WKOCost: |CKO235 SP

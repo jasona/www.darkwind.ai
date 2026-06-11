@@ -1,0 +1,13 @@
+SYNOPSIS
+        string english_list_or(string *asList)
+
+DESCRIPTION
+        english_list_or will return a string with comma separated
+        list from asList, ending with 'asList[end-1] or asList[end]'
+
+EXAMPLE
+        english_list_or(({ "one", "two", "three", "four" })) returns
+        "one, two, three or four"
+
+SEE ALSO
+        english_list(E)

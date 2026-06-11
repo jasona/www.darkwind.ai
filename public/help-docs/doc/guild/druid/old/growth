@@ -1,0 +1,12 @@
+Growth
+
+This retired spell once produced old Druid-only spirit components.
+Modern Druid rites use saved profession materials instead; see
+|CKBdhelp beginner|000 and |CKBreagents|000.
+
+Command: growth
+Base Cost: 15 SP
+Base Recovery: short
+Base Effect: retired
+Base Duration: instant
+Guild Level: 3

@@ -1,0 +1,23 @@
+			A list of Fighter emotes
+-----------------------------------------------------------------------------
+farena    - You invite another to the arena.
+fbleed    - You don't have time to bleed!
+fcard     - places an ace of spades on a corpse. (corpse required)
+fcot      - you request a player to meet you at COT.
+fdance    - you challenge someone to fight or "dance".
+fdazzle   - you display your fine mastery of your weapon.
+feye      - you eyeball someone.
+fflex     - a fighter's way of flexing.
+fgrin     - a fighter's way of grinning.
+fgrunt    - you grunt.
+fring     - challenge someone to step in the ring.
+fhbutt    - you butt heads. Gets better with higher strength.
+fhug      - a big bear hug.
+fpoint    - to point at someone saying: "this is the one."
+fpoke     - a bone crushing poke.
+fshake    - a painful hand shake.
+fsmooth   - Damn you're smooth...
+fthink    - you think very carefully.
+fwipe     - you wipe the blood off on a corpse. (corpse required)
+
+Syntax is: <emote> or <emote> <target>

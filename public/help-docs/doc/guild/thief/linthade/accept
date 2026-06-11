@@ -1,0 +1,7 @@
+This command allows you to accept a player into the guild.
+Presently, the guidelines for acceptance are as follows:
+Player must be 5th level and registered PK.
+
+syntax: Accept <player>
+
+This is a Guildmaster command.

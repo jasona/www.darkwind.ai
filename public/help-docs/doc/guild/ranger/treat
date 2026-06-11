@@ -1,0 +1,16 @@
+Ranger Help for: treat armor
+=============================
+
+SYNTAX:      treat <armor>
+USAGE:       Any terrain
+SLOT COST:   5
+BASE SP:     variable
+SKILL TYPE:  creation
+
+SUMMARY:
+This skill allows a Ranger to treat a piece of leather armor using
+natural agents, improving its protective qualities. The armor must be
+leather or studded leather for the treatment to work. The effectiveness
+of the treatment depends on the Ranger's skill level and knowledge of
+the terrain. Treating armor is one of the ways Rangers maintain their
+gear without relying on civilization.

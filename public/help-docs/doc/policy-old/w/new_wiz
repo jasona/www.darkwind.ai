@@ -1,0 +1,172 @@
+			***  Congratulations!  ***
+
+		You have now become a Wizard.
+
+	Your repertoire of commands have now been extended with some new
+Wizard commmands. You can get help for those by typing "help lpc", "help build",
+ "help wizhelp" and "help locals". This will list the various wizard
+help files, which can then be read by typing "help <subject>", just like normal
+player helps.  For subdirectories of these, simple type "help <directory>", and
+it will list the contents.  To read this file again, type "help NEW_WIZ".
+	These new powers MUST be used sensibly! From now on you are bound by the
+rules that you will find by typing the command "help RULES". Do this as your
+first action when you stop reading this text.  Following these rules is very 
+important.  If you fail to do so, you could LOSE YOUR WIZARDHOOD.
+	Remember, the mud IS case sensitive, so "help rules" won't work, but
+"help RULES" will.
+
+		Good luck!  Now for useful information you may wish to know:
+
+Being a Wizard on DarkWind
+---------------------------
+
+	Congratulations. The fact that you are reading this probably means 
+	that you have just become a Wizard on DarkWind.
+
+First of all, try to remember this at all times
+-----------------------------------------------
+
+	As a wizard, you have immense powers. But, with those powers comes
+	responsibility - so always think before you do anything. For example,
+	it is possible to move a room's exits, to crash the game, and to kill
+	all the players. And it IS possible to do all these things 
+	accidentally, so PLEASE be careful!
+
+	Remember that as far as the game is concerned you are NO LONGER
+	a part of it. Wizards do not play the game, they are above that
+	and participate only by adding new ideas, like plots and rooms.
+
+	If you don't know what you are doing, then you probably shouldn't
+	do it. If you know what you are doing, but not if you should do it,
+	then you probably shouldn't do that either.
+
+The file structure is a tree
+----------------------------
+
+	DarkWind mimics the file system hierarchy and file handling 
+	commands of UNIX. A directory is a set of files, where those "files"
+	can be both normal files and other directories. Everything starts 
+	with the so-called root directory, the name of which is "/" (at least
+	from inside DarkWind!).
+
+	As in UNIX, a file or a directory is referred to by its file name or
+	its path name, i.e. for example "thing.c" and "/players/alarian/thing.c".
+	The rooms in the "basic" DarkWind world are in the directory "/room",
+	and the objects (like the weapon and monster objects) are in "/obj".
+	Each wizard has his/her own home directory, called, for example,
+	"/players/alarian".
+
+Some commands for handling files:
+---------------------------------
+	ls      - list the files in a directory
+	cd      - change the current directory
+	pwd     - show the present working directory    
+	cat     - print the contents of a file on the screen
+	more    - print the contents of a file, approx. one screenful at a time
+	tail    - print the last few lines of a file
+	ed      - edit a file using DarkWind's built-in, line-oriented, editor
+	cp      - copy a file
+	mv      - move a file
+	rm      - remove a file
+
+Where do I find the documentation?
+----------------------------------
+The following commands will give you info on the documentation:
+
+	help wiz        - list of Wizard commands
+	help lpc        - list of lpc functions
+	help locals     - list of major local functions
+	help build      - documentation on building things
+	help helpdir    - player helps
+
+	By typing "help <str>", you can get info on subject "<str>", where
+"<str>" is any item that appears in the above listings.  For instance,
+"help README.3.0-DR" will give you the info in that file.  Help scans through 
+all the doc directories and tries to find the subject you want.
+
+	It can happen that you won't find what you look for in the
+documentation.  In that case, either ask another wizard, read the code (which
+actually contains some very useful comments sometimes), or find out by testing.
+
+	One of the first things you should do is to read the entire contents of 
+documentation that "help wiz" makes available.  This is not as much work as it 
+seems and it really pays off very soon, since you later will remember where 
+to look for explanations of commands and routines.
+
+	Remember also that the Arch Wizards and Elders have as part of their 
+duties the obligation to help other wizards with their problems.
+
+	I especially want to point out that the information on the editor "ed"
+can be found in "help ed". "ed" is the editor you will be using for most of
+your work. You can get help from inside of "ed" by typing "h".
+	You can read almost any file with the command "more", as in:
+"more /obj/object.c" or just "more object.c" if you have changed into "/obj"
+with "cd /obj". Doing a "?" while in "more" will show you some of its useful
+sub-fuctions, like numbered backpaging.
+
+Object-oriented programming in DarkWind
+----------------------------------------
+
+	When you play DarkWind, everything you encounter (weapons, monsters,
+players, rooms etc.) are OBJECTS. Each object is an INSTANCE of a CLASS of
+objects.  One class can INHERIT part of its design from another class.
+
+	An instance of an object is either created by CLONING or LOADING the
+object class, and each object is described in a file, written in a C-like
+language called LPC.
+
+	These "objects" are the programs that make up the game. All program
+code that you write as a Wizard or encounter as part of the standard world
+will be part of a description of an object or a class of objects that can be
+loaded and cloned.
+	
+	Many of the objects use a feature known as "inheritance", in order to
+save time and resources.  there are many "standard objects" that have special
+functions that allow you to customize them with a minimum of work.
+
+
+Loading, cloning and updating
+-----------------------------
+
+	"Loading an object" means the process of taking an object file, for
+example "/obj/object.c", and reading it into the game.  This is done as soon
+as that object is called for any way.  For example, if a function in the
+object is called from another object, or if another object tries to enter it
+(as when a player walks into a room), then the object is loaded.
+
+	When the object is loaded, one instance of the object class is created.
+If there should be only one instance, as for example for (most) rooms, this is
+enough.
+
+	If you need to create several instances of a class of objects, you
+clone it. Objects can be cloned using the wizard command "clone", as in
+"clone /obj/misc/torch", and with the LPC function clone_object(), as in
+	
+	this_torch = clone_object("obj/misc/torch");
+
+	Cloning an object will cause it to be loaded, if it wasn't already.
+
+	When you have changed the description of an object by editing the file,
+and want to load the new version of the object, you can use the wizard command
+"update". Then load (or clone) the new version. If the object in question is a
+room, a "goto ROOMNAME" will load the room as well.
+
+
+LPC
+---
+
+	LPC is a dialect of C and differs from C mainly in being simplified 
+and in that it allows for handling the objects. It has only four data 
+types (plus arrays of those data types), fewer operators and a simplified
+control structure.
+
+	Note that before the contents of a file is read it is run through
+the standard C pre-processor. This program can be used to insert other
+files into the file being read, and to define constants and macros.
+Lines starting with "#", as the lines (no blanks before the #!):
+
+#include "config.h"
+#define INSURANCE_LIMIT 1000
+#define CLONE(var, file) var = clone_object(file);
+	
+are all commands to the p                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          

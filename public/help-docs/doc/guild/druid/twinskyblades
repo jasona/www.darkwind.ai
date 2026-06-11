@@ -1,0 +1,14 @@
+|GKB-- Twin Sky Blades -------------------------------------------|000
+
+Current: |CKBTekali|000
+Command: |CKBtwinskyblades <type>|000
+Aliases: |CKBtwinskyblade|000, |CKBtwinsky|000
+Guild Level: 10
+
+Twin Sky Blades shapes two Sky Blades at once.  It costs the same
+Tekali nwyfre as invoking Sky Blade twice one at a time, but saves you
+from waiting through the cooldown between the two invocations.
+
+The available blade types follow your normal Sky Blade training and
+alignment restrictions.  If you already have any Sky Blades, release
+them before invoking the twin form.

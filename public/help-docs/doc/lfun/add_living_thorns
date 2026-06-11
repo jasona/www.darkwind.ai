@@ -1,0 +1,29 @@
+varargs void add_living_thorns(int iRatio, string sMessage,int ibDamType)
+
+This function will return damage to the Living's attacker.
+iRatio is the sp:dam ratio, where the cost is dam / ratio in sp.
+    The default ratio is 2.
+sMessage is the message told to the Living. It is in room_message
+    format. "$N1 $v1hurt $r1 on $p thorns." is the default.
+ibDamType is the damage type that is returned. The default is
+    WEAPON_PIERCE. The damage is not reduced by AC, but is reduced
+    by resists.
+
+eg. living->add_living_thorns();
+    That would put everything in as the defaults.
+eg. living->add_living_thorns(4);    
+    That would make it 1 sp for every 4 damage, with the rest
+    being the defaults.
+eg. living->add_living_thorns(0,0,DAM_ACID);
+    That would give the default ratio and message, but use
+    DAM_ACID as the damage type.
+
+Also:
+  status query_living_thorns()
+    returns 0/1 if living_thorns is active
+  int query_living_thorns_ratio()
+    returns the ratio set
+  int query_living_thorns_damtype()
+    returns the damage type set
+  string query_living_thorns_message()
+    returns the message set

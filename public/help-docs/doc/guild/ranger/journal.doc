@@ -1,0 +1,14 @@
+Ranger Help for: journal
+========================
+
+SYNTAX:      journal/journal <quest name>
+USAGE:       Any wilderness terrain.
+
+SUMMARY:    
+This command lets a Ranger flip through his or her journal of quests.
+Just typing 'journal' brings up a quest list, while typing 'journal' and
+a quest name brings up some info about the quest.
+
+=============================================================================
+SEE ALSO: stats, tally, journal, repair and glevels
+

@@ -1,0 +1,30 @@
+An elemental follower is capable of all of the
+commands listed in 'dhelp follower'.  In addition,
+all elementals are magic resistant and capable of
+flight, and they also have specific properties:
+
+Air - These elementals are very fast, but physically
+weak.  Their magical attack is a lightning spell,
+making them useful against water creatures or those
+wearing metal armor.  They are healed by lightning
+and weak against water attacks and weapon blows.
+
+Earth - These are the strongest but slowest of the
+elementals.  Their magical attack, a stone bolt, is
+the weakest of the four types, but their melee attacks
+are quite strong.  They are resistant to weapon blows
+and other forms of physical attack, but weak against
+disintegration effects.
+
+Fire - These tend to be the strongest all-around in
+combat, with no stats standing out as particularly
+strong or weak and a devastating magical firebolt
+attack.  They are healed by fire but weak against
+water and cold attacks.
+
+Water - Another fairly balanced elemental in terms
+of stats, they tend to be stronger but slower than
+fire elementals.  Their magical attack is a rush
+of water, which both batters and drowns opponents.
+They are healed by water attacks and strong against
+cold, but weak against fire and lightning.

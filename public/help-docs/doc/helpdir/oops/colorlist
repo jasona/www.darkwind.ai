@@ -1,0 +1,34 @@
+The colorlist command displays all of the possible color combinations
+on DarkWind.  Here is a short explanation of how to create those
+combinations:
+
+Color codes are used by typing |<code> where you'd like the color to
+begin and | XX0 where it should stop.  Do not include a space between
+the | and the code, it is included in this document so you can see
+the codes.
+
+The first letter of the code denotes the foreground color.  Acceptable
+colors are:
+  R   red
+  G   green
+  B   blue
+  K   black
+  Y   yellow
+  C   cyan
+  W   white
+  M   magenta
+
+The second letter of the code denotes the background.  The acceptable
+colors are the same as the foreground list.
+
+The third letter of the code denotes the affect.
+Acceptable options are:
+  B   bold
+  U   underscore
+  K   blinking
+  0   no affect
+
+A few examples:
+The code | XR0 produces |XR0This|XX0.
+The code | BYK produces |BYKThis|XX0.
+The code | GKB produces |GKBThis|XX0.

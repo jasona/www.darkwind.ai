@@ -1,0 +1,16 @@
+|GKO================================================================
+                         |WKO Garou Guild : Gswitch
+|GKO================================================================
+
+|YKOGarou in wolf form can choose whether their natural attacks focus
+on claws or bite. Use |RKOgswitch |YKOto toggle between those two attack
+focuses.
+
+When your focus is on bite attacks, |RKOgswitch |YKOchanges it back to
+claws. When your focus is on claw attacks, |RKOgswitch |YKOchanges it to
+bite attacks.
+
+|RKOSyntax: |YKBgswitch                    |WKOType:  |CKOSupport
+|RKOCost:   |YKBNone                       |WKOForm:  |CKOWolf
+
+|GKO================================================================

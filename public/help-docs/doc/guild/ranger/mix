@@ -1,0 +1,31 @@
+Ranger Help for: mix
+====================
+
+SYNTAX:      mix salve
+             mix poison
+             mix poultice
+             mix antivenom
+             mix stimulant
+             mix smoke
+             mix weapon paste
+USAGE:       Wilderness
+SLOT COST:   NA
+BASE SP:     20
+SKILL TYPE:  survival
+
+SUMMARY:
+This skill allows a Ranger to turn wildcraft supplies and saved
+profession materials into practical survival consumables.
+
+Poultices heal wounds. Antivenom helps clear poison. Stimulants
+restore stamina. Smoke bundles create a brief defensive screen.
+Weapon paste sharpens a wielded slash or pierce weapon. Poison still
+creates a vial that works with the 'poison arrow' skill.
+
+Poultices, antivenom, stimulants, smoke bundles, and weapon paste scale
+with Ranger wilderness skill and level. They are temporary field
+preparations and do not save over logout or reboot.
+
+Most recipes use components from forage, mine, quarry, or skin. Some
+recipes also consume saved profession herbs or reagents, so Rangers
+can live off what they gather instead of returning to town.

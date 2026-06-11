@@ -1,0 +1,20 @@
+The leaderboard command shows the top 50 players on the achievement
+ladder.
+
+Syntax:
+
+  leaderboard
+
+This leaderboard is based on total achievement tiers unlocked. It also
+shows completed achievement lines and each player's equipped achievement
+title.
+
+If you want the endless dungeon rankings instead, use:
+
+  eternal leaderboard
+
+If you want your personal achievement journal, use:
+
+  achievements
+
+See also: help achievements, help eternal_dungeon

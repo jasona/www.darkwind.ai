@@ -1,0 +1,10 @@
+METEOR SWARM
+
+   Meteor swarm is really a combination of two
+   attacks in one.  The caster may simply call
+   down a meteor swarm, attacking all npcs in
+   a room ('mswarm'), or it can be targeted against
+   a specific foe ('mswarm <target>').  It is a truly
+   deadly spell.
+
+ GL: 10  COST: 100

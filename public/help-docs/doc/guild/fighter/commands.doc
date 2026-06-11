@@ -1,0 +1,41 @@
+-------------------------------------------------------------------------------
+			Fighter Commands
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+Command                                Description
+-------------------------------------------------------------------------------
+fhelp <command>                        Will tell you more about the command.
+frestore tabard                        Fixes your guild object.
+fwho                                   Version of "who" that only shows your 
+                                       guild members.
+declare <text>                         Declares a motto visible on "fwho".
+fchat                                  Version of tell that lets you talk to
+                                       all your guild members. 
+efchat                                 Guild channel emote.
+fhist                                  This shows a history of all communi-
+                                       cations on the Fighter channel.
+fs/fskills                             A current list of skills.
+fstats                                 As a fighter, stats are kept on your
+                                       overall career, and over just your
+                                       login.
+fassist                                This allows you to call for help to      
+                                       your fighter brethren while fighting a
+                                       tough opponent.
+flost                                  This allows you to call for help to
+                                       your fighter brethren when you are
+                                       lost.
+
+fcrush <item>                          This is a fun alternative to the "junk"
+                                       command which allows you to crush a
+                                       given item in your hands.
+fgrunt <text>                          This command allows you to grunt the
+                                       given text out in a series of grunts
+                                       that only a fellow fighter, or your
+                                       squire, could possibly understand.
+fmess <login|logout> <message>         This command allows you to customize the
+                                       message used when you log in and out of
+                                       Darkwind.
+ftimers                                This command shows you when you can use
+                                       abilities that use a specific timer.
+-------------------------------------------------------------------------------

@@ -1,0 +1,17 @@
+_______________________________________________________________________________
+"Mental Beacon"
+        Through the use of this power, the psionicist can temporarily
+        anchor the Convergence to his current location. This will
+        allow him or her to subsequently Teleport to that location.
+        A psionicist may have only one beacon at a time, and may
+        not create a second until the first one disappears. A beacon
+        may be created to be either private or shared, and will last
+        for several minutes - its duration is proportional to guild
+        level.
+        The cost for creating a private beacon is 100sp, and the
+        cost for a shared beacon is 150sp.
+ 
+SP Cost:  100/150       Guild Level:  14        Potential Points:  4
+ 
+Command:  beacon, beacon here (to immediately dismiss an old beacon),
+          or beacon shared [here] (to make a shared beacon)

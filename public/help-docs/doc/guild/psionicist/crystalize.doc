@@ -1,0 +1,13 @@
+_______________________________________________________________________________
+"Crystalize"      
+        A psionicist with this power can use the residual psychic
+        energy left behind when the soul departs a corpse in order
+        to create a crystal which stores psychic power (SP).  The
+        quality of the crystal created depends on a random chance
+        dependent on guild level.  No matter what the quality of
+        the crystal resulting, the power costs 20 sp. To reclaim the
+	power stored in the crystal, you simply 'drain crystal'.
+ 
+SP Cost:  20            Guild Level:  6         Potential Points:  2
+ 
+Command:  crystalize

@@ -1,0 +1,7 @@
+/doc/attribute/resist_heat
+
+Format: (Living_Ojbect)->set_attribute("resist_heat", tValue);
+
+Description:
+  Resist heat will make the Living_Object immune to the heat
+  in Souvrael. tValue simply turns it on with 1, off with 0.

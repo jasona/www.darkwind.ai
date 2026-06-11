@@ -1,0 +1,245 @@
+                                                               Rev. 1
+
+                        Regression/Unit Testing Framework
+                      =====================================
+
+
+QUICKSTART
+----------
+
+If you want to write a test for some new functionality, say in blancmange.c,
+create a new file, blancmange_test.c. It should inherit TEST_CASE.
+
+Now, for each function you wish to test in blancmange.c, create a corresponding
+void testFunc() function in blancmange_test.c. This test should exercise
+the functionality of Func() in blancmange.c. Use the assert functions in
+the TEST_CASE inheritable to test things easily, or you can just use
+raise_error. The assert functions, however, do lots of nice formatting of
+the results. 
+
+Example:
+
+#include <mudlib.h>
+inherit TEST_CASE;
+
+object moMyTestObject;
+
+void setup() { moMyTestObject = clone_object("/players/malraux/blancmange"); }
+void teardown() { destruct(moMyTestObject); }
+
+void testFoo()
+{
+  moMyTestObject->foo();
+  assertTrue("testing query_foo", moMyTestObject->query_foo());
+}
+
+void testBlah()
+{
+  moMyTestObject->blah("garble");
+  assertEquals("testing query_blah", "garble", moMyTestObject->query_blah());
+}  
+
+
+If you have some state that needs to be set up before each test function
+is called, like creating an object, or putting a value into a daemon, then
+put those calls into the void setup() function in blancmange_test.c. Make
+sure that any objects you create (either in setup() or in a testFunc()) are
+explicitly destructed in the void teardown() function, which will get run
+after each test function is called.
+
+When you are ready to run your tests, do 'rtest blancmange_test'.
+
+The basic call sequence of rtest is:
+
+ 1) load the blancmange_test object.
+ 2) for each testFoo() function in blancmange_test, do the following:
+2a) call setup()
+2b) call testFoo()
+2c) call teardown()
+ 3) repeat for each testFoo() function.
+
+
+Introduction:
+------------
+
+Testing frameworks increase the stability and quality of code by ensuring
+two things:
+
+Unit testing ensures that code performs as intended.
+Regression testing ensures that code *still* performs as intended after
+changes are made that could impact the tested code.
+
+In order to make testing easy, Kent Beck designed an object oriented
+testing framework that automated the process of creating and running
+unit and regression tests. This framework has since been ported to
+dozens of languages, including (now, that is) LPC.
+
+Testing enables us not only to make changes without breaking other
+pieces of code (provided the tests are run after the changes), but
+also to develop more quickly. This may seem counter-intuitive at first,
+but consider that you always (or should always) test what you have
+coded to make sure it does wha tyou think it does. This usually 
+involves the creation of adhoc test scripts or programs. Now, by using
+a pre-built testing framework, you can formalize your adhoc testing
+so that it can easily be rerun later.
+
+
+Concepts
+--------
+
+#include <mudlib.h> to get the inheritable #defines referenced.
+
+A "test case" is an object that contains a series of test functions,
+each of which tests a limited piece of the code being tested.
+
+A "test suite" is a group of test cases.
+
+A "test runner" is an object that knows how to run a suite of tests.
+TEST_RUNNER is our implementation of a test runner, and it is 
+invoked by the "rtest" command. To run a test case file, do
+'rtest </path/to/filetest>'.
+
+Test cases should inherit TEST_CASE, which includes both the
+underlying test functionality, as well as a series of assert 
+functions that allow you to make determinations about the results
+of your tests.
+
+A test case can either contain its own test functions, or it can
+merely be a convenience container for a suite of other test case
+objects.
+
+When a test case is run, each function in the object beginning
+with the word "test" will be run in order. If any errors are 
+raised, or any of the calls to assert* functions fail, the test
+function will be considered a failure.
+
+Naming consistency: for unit tests that test a paricular .c file,
+PLEASE name your tests the same name as the object they are testing
+with '_test' appended. This will allow us to write extra functionality
+in the update command to automatically run unit tests if they exist.
+
+Example: /inherits/events_test.c
+
+
+Basic Functionality
+-------------------
+
+The test case inheritable defines a reset(int arg) function that
+must be called with ::reset(arg) if you override it. The reset
+function sets up a number of internal variables.
+
+void setup()
+-- This function will be called before each test function in the
+   object. Use this to set up data/state in the test that needs
+   to be consistent for each test function.
+
+void teardown()
+-- This function will be called after each test function in the
+   object. Use this to destruct any objects that may have been
+   created during the course of the tests.
+
+string *getTests()
+-- The function should return an array of function names to call
+   to run the tests in this object. It defaults to the list of 
+   all non-inherited functions that begin with the word "test".
+
+void setTests(string *tests)
+-- Used to override the default test behavior, in order to use
+   a certain test function order, use functions that do not
+   begin with "test", or use a subset of test functions.
+
+object *suite()
+-- Returns an array of test case objects to call. This defaults
+   to the current object, but this may be overridden to return
+   other cloned test objects in order to collect a number of
+   separate test cases objects into a single convenient test case.
+
+mixed run(string test)
+-- Called by the test runner. Runs a particular test function in
+   the object, and returns either 0 for success, or an error
+   message for failure.
+
+void assertTrue(string msg, mixed bool)
+-- Asserts that the value 'bool' is true. If not, an error is
+   raised, causing the test to fail. The error will contain the
+   text in 'msg'.
+
+void assertFalse(string msg, mixed bool)
+-- Asserts that the value 'bool' is false. If not, an error is
+   raised, causing the test to fail. The error will contain the
+   text in 'msg'.
+
+void assertNull(string msg, mixed thing)
+-- Asserts that the value 'thing' is null. If not, an error is
+   raised, causing the test to fail. The error will contain the
+   text in 'msg'. In LPC, this is the same as assertFalse.
+
+void assertEquals(string msg, mixed expecting, mixed actual)
+-- Asserts that the value 'actual' is the same as 'expecting'. 
+   If not, an error is raised, causing the test to fail. The
+   error will contain the text in 'msg'.
+
+void assertNonEmpty(string msg, mixed thing)
+-- Asserts that the value 'thing' is nonempty. For mappings, this
+   means that the mapping is not ([ ]). For arrays, this means
+   that the array is not ({ }). For strings, this means that the
+   string is not "". For any other value (object, numeric) this
+   means that the value is not 0. If not, an error is raised,
+   causing the test to fail. The error will contain the text in
+   'msg'.
+
+void assertNonEmpty(string msg, mixed thing)
+-- This asserts the opposite of assertNonEmpty; ie. mappings and
+   arrays must have at least one element, strings must be of
+   length >= 1, and objects/numbers must not be 0.
+
+void fail(string msg)
+-- Causes an instant test failure, sending 'msg' in the error
+   message.
+
+
+Examples
+-------
+
+Please see /inherits/events_test.c
+
+You can run the example with "rtest /inherits/events_test".
+
+As an example of the use of suite():
+
+object *suite()
+{
+  object subtest;
+
+  // This sets up a copy of npcbehavetest that only
+  // runs two test functions
+  subtest = clone_object("/inherits/npcbehavetest");
+  subtest->setTests( ({ "test1", "test2" }) );
+
+  return ({ clone_object("/secure/livingtest"),
+            clone_object("/secure/monstertest"),
+            clone_object("/secure/playertest"),
+            clone_object("/inherits/npctest"),
+            subtest });
+}
+
+If you were to run 'rtest' on this test object, it would run
+the livingtest, monstertest, playertest, and subset of npctest.
+
+Note that these tests do not exist as of this writing. :-)
+
+
+Files
+-------
+
+TEST_CASE:    /inherits/testcase.c
+TEST_RUNNER:  /objects/testrunner.c
+Test command: /cmds/builder/_rtest.c
+
+
+
+Revision History:
+-----------------
+
+Rev. 1 - 2002-01-27 Malraux: First release.
+

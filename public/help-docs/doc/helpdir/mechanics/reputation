@@ -1,0 +1,47 @@
+|WKO~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ |CKBDarkwind Reputation
+|WKO~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ |YKOYour reputation is shaped by what you do in the world.
+At higher levels it affects whether you are known as a Hero,
+an Adventurer, or a Villain.
+
+Guild membership alone does not decide your reputation. A paladin
+can fall, a thief can do useful work, and a mage can be feared or
+admired depending on what their magic does. Reputation changes come
+from actions: quests, divine offerings, public praise or slander,
+resurrection, theft, desecration, and other notable deeds.
+
+Some deeds also leave hidden marks that help the world understand
+why you are known the way you are. Mercy, terror, honor, faith,
+nature, crime, secrecy, blood, service, and public notoriety may all
+matter to future reactions.
+
+When a deed affects your reputation, you may feel a small sign of it.
+Those signs are intentionally broad. DarkWind will not show the exact
+weights, thresholds, or every hidden mark, but it will increasingly let
+you know when your actions have begun to matter.
+
+Use |YKBreputation|YKO to reflect on your public renown, common whispers,
+and recent signs. This command describes the shape of your reputation
+without turning it into a ledger.
+
+Deeds with clear divine meaning can also tug the omen cycle. Merciful and
+service-minded acts may carry toward Mitra, nature and restoration toward
+Gaea, and fear or shadowed ambition toward Set. During a god's Holy Hour,
+matching deeds carry farther.
+
+Current public reputation labels:
+  |GKBHero|YKO       A positive heroism reputation.
+  |WKBAdventurer|YKO A neutral heroism reputation.
+  |RKBVillain|YKO    A negative heroism reputation.
+
+As the system grows, reputation may influence rumors, NPC reactions,
+guild rites, shops, services, bounty pressure, safehouses, quest
+branches, and other world responses.
+
+See also:
+  |YKBhelp leveling hero|000
+  |YKBhelp mechanics quests|000
+  |YKBhelp mechanics divine|000
+  |YKBhelp mechanics tithe|000
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

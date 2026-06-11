@@ -1,0 +1,11 @@
+_______________________________________________________________________________
+"Brainwave"      
+        This sends a mental wave through the room hitting everyone in
+        its wake.  It has a low efficiency, costing more than a
+        psionic blast but doing less damage to each individual target but
+        it will hit every monster (and player, except the psionicist) in 
+        the room.  It does less damage to players and pets.
+ 
+SP Cost:  Variable	Guild Level:  9		Potential Points:  3
+ 
+Command:  bwave

@@ -1,0 +1,6 @@
+         checkown - Shows the owner of the pub
+        checkrent - Shows the current rent of the pub
+         managers - Shows this list
+    setrent <amt> - Sets the rent per week for the pub
+setowner <player> - Sets the new owner of the pub. Player must
+                    be on line

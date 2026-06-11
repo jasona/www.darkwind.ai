@@ -1,0 +1,24 @@
+Variables are set using the Cset command. See 'Info Cset' for an
+explanation of its use.
+
+The following variables are available for use by Clerics:
+
+Variable		Usage
+=======================	=====================================
+pie			The default pie type used for the
+			gpie and fpie emotes.
+loginmsg		The message seen by all the guild
+			upon the Cleric's login.  *
+logoutmsg		The message seen by all the guild
+			upon the Cleric's logout. *
+hammerspam		Set to a number from 0 to 100 to
+			control how often your hammer will
+			spam. If set to 100, it will spam
+			all the time. The damage that your
+			hammer does will remain the same
+			whether you hammer spams or not.
+
+* NOTE: There are no filters in place for these but if I see
+	them used inappropriately, sanctions and or filters
+	will be forthcoming.
+

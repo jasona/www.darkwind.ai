@@ -1,0 +1,84 @@
+
+                                                               Rev. 1
+
+                      NPC Behavior: Wander Behavior
+                      =============================
+
+Description
+-----------
+
+The set_wander functionality in monster.c has been subsumed by the
+generic wander behavior.
+
+The NPC can be set with both a wander % chance and a delay between
+wander attempts. Additionally, the NPC can be set to wander only
+in particular terrains (as defined in <terrain.h>) or in rooms with
+filenames that begine with a particular prefix (eg. /players/malraux)
+in order to restrict wandering NPCs to certain areas.
+
+NPC Wander API
+-------------
+
+varargs void set_wander(int move_chance, int move_delay, int state)
+- Enable the NPC for wandering with the specified chance, delay, and
+  state settings. Chance defaults to 5%, and delay defaults to 15
+  seconds. State defaults to NS_RESTING.
+  You must also include <npcstate.h> when using NS_RESTING.
+
+void set_wander_terrains(int terrains)
+- Restrict the NPC to wandering only in rooms of the specified
+  terrains. Default is TER_ALL if this function is never called.
+
+void set_wander_chance(int chance)
+- Set the % chance for the NPC to wander.
+
+void set_wander_delay(int delay)
+- Sets the time in seconds between wander % chance checks.
+
+void set_wander_prefix(string prefix)
+- Sets the prefix to compare potential rooms against. If this is
+  set, the NPC will not enter rooms with filenames that don't
+  begin with the prefix. For example, setting the prefix to
+  /players/malraux/room/village would restrict the NPC to rooms
+  in that area only.
+
+object query_wander_behavior()
+- Return the wander behavior object for further customization.
+
+
+NPC Wander Behavior API
+---------------------
+
+The wander behavior object can also be manipulated directly:
+
+void set_terrains(int terrains)
+- Restrict the NPC to wandering only in rooms of the specified
+  terrains. Default is TER_ALL if this function is never called.
+
+void set_chance(int chance)
+- Set the % chance for the NPC to wander.
+
+void set_delay(int delay)
+- Sets the time in seconds between wander % chance checks.
+
+void set_prefix(string prefix)
+- Sets the prefix to compare potential rooms against. If this is
+  set, the NPC will not enter rooms with filenames that don't
+  begin with the prefix. For example, setting the prefix to
+  /players/malraux/room/village would restrict the NPC to rooms
+  in that area only.
+
+void set_command(string command)
+- Sets a command to prefix to the exit direction when wandering.
+  Example: set_command("step") will make the NPC execute
+  "step east" instead of "east". Useful for riding NPCs, NPCs
+  using movement objects (like the 7 League boots), etc.
+
+
+
+Revision History:
+-----------------
+Rev. 1 - Malraux: Added set_command() function.
+Rev. 0 - Malraux: Initial release
+
+

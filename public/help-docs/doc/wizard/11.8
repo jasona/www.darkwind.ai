@@ -1,0 +1,152 @@
+Building a New Race
+-------------------
+
+These are the technical stages to making a new race.
+
+1) Add an RCOLOR for the specific race being added and an RACE_MAP entry.
+
+2) Assign racial power pts (100 for common races, 125 for exotic) according
+   to the cost guide below. Make sure you add an rbit key linking the race
+   to its major race grouping.
+
+3) Set up guild restrictions in guildd.h
+
+4) Write a description for the race and put it in /doc/race. The name
+   of the file should be the same as your race name, but with underscores
+   replacing the spaces. (e.g. the "ice ogre" race has the description
+   file /doc/race/ice_ogre. For common races, update /doc/helpdir/race
+   and /doc/helpdir/races appropriately. Exotic races should not do this.
+   Copy the race description file to /doc/helpdir as well for common races.
+
+5) If the race is a common race, add it to one of the continent race rooms.
+   (add it to the array passed to set_available_races()), and adjusting
+   the room's long desc slightly. If it's exotic make a race room for it.
+   To do this, inherit RACE_ROOM instead of ROOM and add:
+   
+       set_available_races( ({ "race name" }) );
+       
+   (replacing "race name" with the name of your race).
+
+
+Racial powers
+-------------
+
+Power                        Key            Cost
+
+size - -1/0/+1:              size           -55/0/+30
+exp bonus:                   exp            +3 per 1% (max 25%)
+stat bonus - +5%/10/15/20:   str, dex etc.  +15/+30/+60/+100
+stat penalty - -5%/10/15/20: str, dex etc.  -15/-30/-60/-90
+net stat bonus - +15%/20/25+ ---            +10/20/30
+dark vision:                 vision         +15, +5 per additional level to 6,
+                                            +1 per after
+magic resist:                magic_res      +5 per 1%, +10 per 1% after 10%
+psi resist:                  psi_res        +2 per 1%, +4 per 1% after 10%
+eat/drink:                   eat, drink     +1 per 1%, +2 per 1% after 15
+                                            (max 25)
+damage resistance:           resistances    +1 per 1% per type
+                                            +2 per 1% past 25%(max 50%)
+dam vulnerability:           resistances    -1 per 1% per type
+alignment tendency:          al_good        +1 per +/- 1% (max 25%)
+                             al_law
+weapon mastery:              weapon_spec    +50
+hyperborean:                 hyperborean    +10
+souvraeli:                   souvraeli      +5
+winged:                      winged         +0
+flight:                      flight         +35
+racechange:                  racechange     +15 (darkwinders only)
+languages:                   languages      free
+breath weapon:               breath         +30
+damage type                  damtype        +50
+sp regen rate:               spregen        +15 per +1 regen per tick
+                                            (max 3)
+
+SIZE EFFECTS
+------------
+SMALL  - weapon size effects rise 1 level:
+           - cannot use huge weapons
+           - all large weapons require 2 hands
+           - can only use 1 medium weapon if dual wielding
+           - should affect guild weapon restrictions
+       - armor size effects [if/when armor sizes are implemented]
+LARGE  - weapon size effects drop 1 level:
+           - cannot use small weapons
+           - if dual wielding, can use 2 large weapons, or 1 huge + 1 large
+           - can wield huge weapons in 1 hand unless explicitly 2 handed,
+             polearm, or missiles
+           - should affect guild weapon restrictions
+       - armor size effects [if/when armor sizes are implemented]
+
+STAT ADJUSTMENTS
+----------------
+- increases/decreases based on the base stats of the player.
+- NB extra costs for having high net stat bonuses are in addition to
+  the costs of the stat bonuses themselves.
+
+ALIGNMENT TENDENCY
+------------------
+- increase positive (tendency direction) change by %
+- reduce negative change by %
+- 1% resistance to related damtype
+- -1% resistance to opposite damtype
+- use al_law with a negative value for chaotic
+- use al_good with negative value for evil
+- n.b. tendencies to either direction should be costed positively.
+
+EAT/DRINK
+----------------
+- increased detox/desate by %
+- increased capacity by %
+- no change in food/drink size
+
+DAMAGE RESISTANCE/VULNERABILITY
+-------------------------------
+- the value field of the resistances key is a mapping of the form:
+  TYPE:VALUE, where TYPE is a damage type and VALUE is the amount of
+  resistance. A negative VALUE is a vulnerability to the damage type.
+  
+WEAPON MASTERY
+--------------
+- no penalty for out-of-spec weapon use
+
+HYPERBOREAN
+-----------
+- +10 resist cold
+- -10 resist fire
+- +1 resist environmental cold
+
+SOUVRAELI
+---------
+- +10 resist fire
+- -10 resist cold
+- +2 resist environmental heat dam
+
+WINGED
+------
+- allows wing tattoos
+
+FLIGHT
+------
+- allows flight
+
+RACECHANGE
+----------
+- allows free race changes 
+
+BREATH
+------
+- allows special draconian breath spell
+
+SP REGEN RATE
+-------------
+- increases the base regen rate for sp
+
+LANGUAGES
+---------
+- array of fluent languages
+- first element in array is the native language
+- all others count towards total knowable languages
+
+------
+Version 1:  Bob - April 07, 2003
+

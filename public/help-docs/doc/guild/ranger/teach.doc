@@ -1,0 +1,22 @@
+
+Ranger Help for: teach
+======================
+
+SYNTAX:      teach follower to <task>
+USAGE:       Any terrain
+BASE SP:     10 sp
+
+SUMMARY:    
+This command allows a Ranger to teach his or her follower to do a
+task. Whether or not a Ranger can teach the follower s certain
+task is based on how smart the follower is and how many tasks
+the follower already knows. Teachable tasks are:
+ 
+Easy Tasks:      fight, carry and guard
+Medium Tasks:    hide, fetch and deliver
+Difficult Tasks: spy, scout and forage
+
+============================================================================
+SEE ALSO: seek, fight, carry, guard, hide, fetch, deliver, spy, scout and
+          forage
+

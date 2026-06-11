@@ -1,0 +1,24 @@
+Darkwind supports Giphy integration on supported channels and in the web
+client.
+
+If a channel supports it, placing a semicolon before your phrase shares
+a GIF along with your normal text line.
+
+Example:
+
+  gossip ;hell yeah brother
+
+Useful commands:
+
+  giphy on
+  giphy off
+  giphy status
+  testgiphy <search phrase>
+
+The giphy command controls whether the popup window appears for you. It
+does not suppress the normal text line in the channel.
+
+testgiphy previews a search only for you so you can try phrases without
+posting them publicly.
+
+See also: help giphy

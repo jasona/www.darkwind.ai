@@ -1,0 +1,29 @@
+
+Ranger Help for: terrains
+=========================
+
+SUMMARY:
+Different terrains are found all over the realms of Darkwind. Rangers
+will move through many of them, and Rangers are not penalized just for
+fighting or exploring outside their primary and secondary terrains.
+
+Primary and secondary terrain still matter. They improve a Ranger's
+footing in combat and can influence the cost, cooldown, damage, or feel
+of many Ranger skills. Some skills also require a specific kind of land.
+
+Use 'rhelp <terrain>' to read about a specific terrain.
+
+EXAMPLES:
+  rhelp forest
+  rhelp desert
+  rhelp mountain
+  rhelp dock
+
+TERRAINS:
+  forest       plains       swamp        desert       jungle
+  hills        beach        arctic       barren       underground
+  mountain     city         sea          lake         river
+  road         dock         inside       underwater   outside
+
+=============================================================================
+SEE ALSO: setprime, setsecond, survey and check

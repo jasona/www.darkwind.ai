@@ -1,0 +1,27 @@
+ 
+Events represent a method for functions to be called when a certain action
+takes place.  This action, we call an event.  The way events are represented
+here on Darkwind is in a mapping, stored in each player object.  This mapping
+has the event, the file to call, the function to call, and an optional 
+arguement.  
+ 
+So, to add an event for a particular player, you would do:
+  this_player()->add_event(type, file, function, arguement);
+  Where, type is a possible event type: login, logout, linkdeath and linkresume.
+  File is the file to call and function is what to call in that file.
+  The event handling routine will do:
+    file->function(arguement);
+ 
+To remove an event, use the same syntax:
+  this_player()->remove_event(type, file, function, arguement);
+ 
+You can also query all the events of a certain type:
+  this_player()->query_events(type);
+ 
+The types are listed in <events.h>.  Ask an implementor or supervisor for
+a current list if you need an event that isn't talked about in this document.
+ 
+WARNING: EVENTS ARE NOT STATIC! DO NOT USE CLONED
+FILENAMES UNLESS YOU EXPLICITLY REMOVE THEM
+BEFORE THEY ARE DESTRUCTED!
+-Hayden 06/25/95

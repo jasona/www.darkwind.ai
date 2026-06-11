@@ -1,0 +1,20 @@
+-- ** Thief Guild Help ** --
+ 
+During your membership, you will learn the following talents:
+
+Basic Communications:
+gtell <message>, gmote <message>
+
+Information Commands:
+thelp - this command (duh)
+powers - Gives a list of talents and their costs with Glevel requirements.
+levels - Monetary breakdown of costs for Glevel.
+
+Help files are available for the following skills:
+
+Roll corpse, Steal, Money, Scout, Trick, Palm, Silent, Trap, Shadow, Stab,
+Peek, Pick, Squint, Hide, Circle, Plant, Fasttalk, Conceal, Unhide, Sewers,
+and Breakin.
+ 
+For help on any specific ability, type thelp <ability>
+

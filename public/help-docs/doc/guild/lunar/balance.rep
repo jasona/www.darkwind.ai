@@ -1,0 +1,19 @@
+
+
+
+		--  Lunar Magi --
+Name ---    GL   COST    TIMER   FILENAME   shortdesc of spell
+
+laura       1    10        5       AI	info spell
+mbeam	    2    5*gl     6        AI  		basic attack
+mlight     3     10       6       AI    	light
+mreflect   4     15       8      AI   		view a player
+eheal      5   25+10/tick  15        AI  		minor healing
+
+lift        7   40        12      AI       self flight
+lunacy      8  50        12       AI      annoyance spell
+
+mswarm     10  100      45        AI       area attack
+scourge     11      75    20     AI         give weakness DAM_LIGHTNING
+mtele     12     150     75     AI       tport guild
+awalk      13   300     300       AI            tport to continents

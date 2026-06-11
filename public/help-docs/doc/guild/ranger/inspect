@@ -1,0 +1,16 @@
+Ranger Help for: inspect
+========================
+
+SYNTAX:      inspect <target>
+USAGE:       Any terrain
+SLOT COST:   NA
+BASE SP:     15
+SKILL TYPE:  hunting
+
+SUMMARY:
+This skill allows a Ranger to carefully analyze an opponent, revealing
+information about their stats, strengths, and weaknesses. A successful
+inspection may reveal the target's approximate hit points, damage type
+resistances, elemental vulnerabilities, and combat style. The amount
+of detail revealed depends on the Ranger's skill level and intelligence.
+This is an invaluable scouting tool for preparing to fight tough enemies.

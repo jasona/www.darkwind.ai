@@ -1,0 +1,6 @@
+SPELL NAME  : Remove Paralysis
+SPELL SYNTAX: Unparalyze <target>
+SPELL COST  : 40 SP
+DESCRIPTION : This spell removes the paralysis spell from any held
+              target.
+

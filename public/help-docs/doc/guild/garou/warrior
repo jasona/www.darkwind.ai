@@ -1,0 +1,45 @@
+|GKO=================================================================
+              |WKOGarou Guild Abilities : Warrior Path
+|GKO=================================================================
+|YKOThe various abilities granted to Gaea's warriors are listed
+below. See |RKB'ghelp <ability name>" |YKOfor specific information
+concerning a given ability, and |RKB'ghelp stance' |YKOfor general
+info about stances.
+
+|BKB[Note: Warrior only abilities are denoted with a *]
+
+|GKOSpiritual              GL    LVL   EURUS     FORM     GHELP
+|WKB---------             ---    ---   -----     ----     ------
+|MKBIntensify              |GKO 1     -      -       MCW      intensify
+|MKBJudge Alignment        |GKO 2     -      1       MCW      judge
+|MKBSummon Wolf            |GKO 3     -      1       MCW      summon
+|MKB*Enrage                |GKO 5     -      1       -CW      enrage
+|MKBLuna's Armor           |GKO 7     -      3       MCW      luna
+|MKB*Talons of the Eagle   |GKO 8     -      5       -CW      talons
+|MKBSummon Fog             |GKO 9     -      5       MCW      fog
+|MKBCreate Charm Fetish   |GKO 10     -      3       MCW      create
+|MKB*Tether the Umbra     |GKO 12     -      5       MCW      tether
+|MKB*Aura of Running Water|GKO 13     -      5       -CW      aura
+|MKB*Fangs of the Cobra   |GKO 14     -     10       -CW      fangs
+|MKBGreater Create Charm  |GKO 15    45      6       MCW      gcreate
+|MKBMaster Create Charm   |GKO 15    90      6       MCW      mcreate
+
+|GKOPhysical               GL    LVL   EURUS     FORM     SYNTAX
+|WKB--------              ---    ---   -----     ----     ------
+|RKBHarry                 |GKO -      -      -       --W      harry
+|RKBLunge                 |GKO -      -      -       --W      lunge
+|RKBLeap                  |GKO -      -      -       --W      leap
+|RKBBurst                 |GKO -      -      -       -C-      burst
+|RKBSlam                  |GKO -     20      -       -CW      slam
+|RKB*Fenris' Claw         |GKO 4      -      -       -CW      fclaw
+|RKBRage                  |GKO 7     20      -       -CW      rage
+|RKB*Fenris' Bite        |GKO 11      -      -       -CW      fbite
+|RKBDirected Rage        |GKO 12     65      -       -CW      drage
+
+|GKOStance                 GL    LVL   EURUS     FORM     SYNTAX
+|WKB------                ---    ---   -----     ----     ------
+|KKBNormal                |GKO -      -      -       --W      stance
+|KKB*Offensive            |GKO 2      -      -       --W      stance
+|KKB*Berserker           |GKO 15      -      -       --W      stance
+|KKB*Heroic              |GKO 15     45      -       --W      stance
+|KKB*Legendary           |GKO 15     65      -       --W      stance

@@ -1,0 +1,120 @@
+                      |YKBWelcome to Darkwind!|000
+
+Most of the basic information about Darkwind can be found in the Newbie Tome.
+You can obtain one from the Newbie Tome Dispenser at Center of Town. Use the
+command |YKBncot|000 if you need to return there. Do not forget to look at the
+machine, then |YKBpull lever|000 and |YKBread tome|000.
+
+The following are basic directions to help you start your adventuring career.
+This information can also be found in the Newbie Tome.
+
+==============================================================================
+Equipment, Stores and Bank
+==============================================================================
+
+Erga's newbie store.
+Erga hands out free equipment that is perfectly suited for anyone under level
+5. Do not waste your time looking elsewhere. He has some good quality stuff.
+
+From Cot: w,w,w,w,s [4w,s]
+
+Do not forget to read the sign.
+______________________________________________________________________________
+
+Donation room.
+The mighty heroes and legendary adventurers that inhabit the realms of Darkwind
+may be inclined to donate equipment to the more inexperienced adventurers.
+
+You can visit the Donation room to see what they may have to offer you.
+
+From Cot: n,n,n,n,n,e [5n,e]
+______________________________________________________________________________
+
+Bank.
+You are able to keep your money safe at the bank. That way, if you die, you
+will not lose your hard-earned cash.
+
+From Cot: w,w,w,w,w,s,s,s,e [5w,3s,e]
+______________________________________________________________________________
+
+Taylors.
+Taylors is the general store in town. He will be happy to buy your goods from
+you. Selling treasures you find on your adventures is a great way to earn a
+pretty penny.
+
+From Cot: w,w,w,w,w,s,s,w [5w,2s,w]
+
+==============================================================================
+Newbie Areas
+==============================================================================
+
+All directions from Cot:
+
+Abandoned Village - 6w, exit, 4w, 2n, w, s, w, enter, n, w
+
+Ashkenazy's hunting grounds - 5s, exit, s, 4w, s
+
+Cemetery - 5w, 2n
+
+Farmland - 6w, exit, 4w, 3n, 2e, n
+
+Glaverton Forest - 6w, exit, 4w, 2n, e, 3n, e, n, e, n, 5e, 2ne, nw, n
+
+Haunted Keep - 5s, exit, 11s, w
+
+North Forest path - 6n, exit, 9n, 9nw, w
+
+Pegasi - 6n, exit, 8n, 2e, n
+
+Pirate Ship - 5e, 4n, climb rope
+
+For a more comprehensive listing and descriptions of newbie areas, read chapter
+5 of the Newbie Tome.
+
+==============================================================================
+Further Helpfiles of Interest
+==============================================================================
+
+help newbie
+  The newbie command allows you to talk on the newbie channel.
+
+help set
+  The set command allows you to customize several different features.
+
+help wimpy
+  Wimpy allows you to automatically flee combat when your HP drop too low.
+
+help mon
+  The monitor allows you to set an HP/SP monitor.
+
+help ncot - help npunch - help nkick - help nheal
+  These are your newbie skills.
+
+help combatbrief
+  This setting allows you to filter your combat messages.
+
+help score - help sc
+  Information on your score tables.
+
+help int - help wis - help dex - help con - help str - help chr
+  Information about your stats.
+
+help races
+  Information on how to become one of the races that inhabit Darkwind.
+
+help guilds
+  A list of existing guilds on Darkwind. Specific info can be obtained from the
+  tome.
+
+help rules
+  The rules for Darkwind. Read them, know them, live them.
+
+help pk
+  Information on Darkwind's player killing system.
+
+==============================================================================
+Addendum
+==============================================================================
+
+Any extra info you feel needs to be added to this file? Use the idea command to
+suggest it. See |YKBhelp idea|000.

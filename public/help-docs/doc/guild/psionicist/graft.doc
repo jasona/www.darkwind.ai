@@ -1,0 +1,15 @@
+_______________________________________________________________________________
+"Graft Weapon"     
+        Through a combination of meditation on the arts of war and
+        psychometabolic enhancements, a psionicist is able to act
+        as if a weapon were a part of his body.  This ability, Graft
+        Weapon, will increase the combat effectiveness of a single
+        weapon for a moderate length of time.  The weapon must be
+        unwielded when the power is initiated, and will automatically
+        be wielded.  The weapon will be unwielded again when the
+        power ends.  If the weapon is unwielded before then, the power
+        will end prematurely.
+ 
+SP Cost:  variable            Guild Level:  4         Potential Points:  2
+ 
+Command:  graftw <weapon>

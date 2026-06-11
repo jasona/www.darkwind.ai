@@ -1,0 +1,16 @@
+Ranger Help for: whirl
+======================
+
+SYNTAX:      whirl <target>
+USAGE:       Any terrain
+SLOT COST:   NA
+BASE SP:     30
+SKILL TYPE:  attack
+
+SUMMARY:
+This skill allows a Ranger to execute a spinning melee attack against
+a target, dealing a combination of slash and blunt damage. The whirling
+motion uses both the blade and the momentum of the swing to inflict
+dual damage types. Whirl is effective against opponents with resistance
+to a single damage type. The Ranger must be in combat and wielding a
+melee weapon to use this skill.

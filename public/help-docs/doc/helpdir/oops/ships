@@ -1,0 +1,106 @@
+                        How to purchase a new Ship
+------------------------------------------------------------------------------
+     We are currently offering two different types of ships. The Cog and the
+Galleon. The cog is a 2 deck ship with 4 rooms below deck.
+The Galleon is a 4 deck ship with 12 rooms below deck.
+
+     There are several different types of rooms available to configure the
+lower decks of your ship.  There are 2 weapon rooms, and a cargo room.  It
+is neccessary to balance properly your cargo and weapon rooms, so you can
+carry the supplies you need, to properly defend yourself.  The two weapon
+rooms are Ballistas and Catapults.  They fire different ammunition and are
+better at different ranges within combat.  It would be wise to try to have
+both on your ship.  If you have a cog, you will be forced to choose to have
+one or the other type of weapon, or sacrifice cargo space for your weapons.
+Remember, you MUST have cargo rooms, this will decide how far you can sail
+before you need to restock on provisions.
+
+     Your first step is to "purchase" one of the ship types.
+A cog costs 120,000 gold and includes the minimum crew to run the ship.
+A galleon cost 180,000 gold and includes the minimum crew to run the ship.
+
+     Then you must name your fleet, this will be the fleet name that all of
+your ships will be under. This is only done when buying your first ship.
+Then you will be asked to name this ship. From here you decide on what the
+lower decks of the ship will have in them. Your choices are clearly marked
+and it starts from the lowest deck to the highest deck below the maindeck.
+Then you own a new ship, which we will place in our port for you.
+
+
+                       How to run a tight ship
+------------------------------------------------------------------------------
+     Depending on where you purchase your ship, it can be found in the port
+of the town. This is important because this port is where you will need to be
+when you recruit sailors and purchase supplies for your ship. First order of
+bussiness will be for you to buy supplies and to recruit sailors if you want
+to have more then the minimum crew.
+     You will buy the needed supplies at the local ship pub. You can also
+find sailors to recruit. The ship has a few different items it requires to
+be in full operation. Most important it that you always have enough 
+provisions onboard for any journey. This is what your crew eat's, and they
+won't do anything if they don't get feed.
+     Your ship also requires that you purchase wood and rope to repair any
+unfortinate damage that you may sustain during a battle. These aren't
+required to run the ship, but if you take damage at sea, you will need them
+to fix any of the damage.
+     You may also want to purchase ammo for your weapon's, if you have any.
+You will need to purchase bolts for your ballistas and rocks for your
+catapult's. Your ship doesn't come with any of these, so be sure to get some
+before leaving port.
+     Your crew is also an important part of ship operations. If you fall below
+the minimum crew at any time, you won't be able to do anything with your ship
+and it will become stranded. To avoid this, we suggest you recruit more 
+sailors as soon as possible. The crew has two different skills, they are
+rated in sailing and fighting. You also need to have at least the minimum
+crew plus 3 for each ballista and 4 for each catapult if you want them to
+be ready for battle.
+
+     A small list of orders you can give while onboard ship.
+
+     Captains Quarters
+----------------------
+The captain can create his own room description by typing "rename description"
+where the description is one continous line with a return at the end.
+Also, anyone one in the room can emote by typing "em stuff".
+
+     Cargo Hold
+----------------------
+This is where you will find the ship's "manifest". It will give you a
+current list of what is onboard ship. Wood, rope, provisions and ammo.
+
+     Crewroom
+----------------------
+From here you can find out how the "crew" and "ship" are doing. You can also
+order the crew to "repair" the ship when it is damaged. This is also the room
+where you can "train" your crew. They start out at the lowest skill level and
+progress as you train them.
+
+     Bridge
+----------------------
+This is where the captain can do the most. The ship has sail's in which you
+must order the crew to "furl" or "hoist". To move the ship the sails must be
+hoisted. You must "sail DIR" to move the ship. If the ship is in dock, you
+must first "push off" before you sail. When your in a port, you must "dock"
+for people to enter and leave the ship.
+     The ship can also "engage" another, to battle it. Before you engage a
+ship you must order the ship to "battlestations", in which orders the crew to
+man the ship's weapon's. Once you engage the enemy, you can order the crew to
+"fire" your weapons. At anytime during a battle you can try to get into a
+advantagous position by trying to "maneuver". If you aren't doing too good or
+decide not to attack the other ship, you can try to "disengage". If all is 
+sure to be lost, you can "strikecolors", and hope the other captain will
+accept your surrender.
+     As an admiral of a fleet, you can "accept name" a player outside of your
+ship in a port, as a captain of that ship. You can also "deny name" any
+captain you previously accepted.
+     The ship also flies a flag at all times, you can look at the flag from
+here and it is also seen when someone looks at your ship. The flag shows the
+current standing of the ship. A green flag is normal ship operations. A blue
+flag means the ship is at battlestations. A red flag means the ship is engaged
+with another and can be battling. And a white flag means the ship is attempting
+to surrender to another.
+     From the deck and the bridge, you can "peer" to see the area surrounding
+the ship and everything in it. You can also "disembark" from the deck.
+
+While onboard, you can type "orders" in any room to see the list of orders
+you may give while in that room.

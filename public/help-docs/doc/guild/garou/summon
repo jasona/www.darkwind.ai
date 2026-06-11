@@ -1,0 +1,14 @@
+|GKO================================================================
+                         |MKBSummon Wolves
+|GKO================================================================
+
+|YKOSummon Wolves is used to summon assistance for combat
+situations. You will always summon a single wolf, but
+its strength will be increased as the garou gains
+experience. The wolves will remain with you regardless
+of form, and are immune to rage. Any experience
+gained from hits by the wolves is lost to you.
+
+
+|WKOUsable in form: |GKOAll
+|RKOSyntax: |YKBsummon wolves          |WKOCost:|CKO35 sp

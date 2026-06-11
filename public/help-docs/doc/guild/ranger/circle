@@ -1,0 +1,22 @@
+Ranger Help for: circle
+=======================
+
+SYNTAX:      circle <target>
+USAGE:       Wilderness
+SLOT COST:   NA
+BASE SP:     30
+SKILL TYPE:  attack
+
+SUMMARY:
+This skill allows a Ranger to circle around an opponent, gaining a
+positional advantage in combat. A successful circle grants +15 to dodge
+and +20 to hit for a limited duration. The Ranger must be in combat
+with the target. This skill works best in wilderness terrain where
+there is room to maneuver.
+
+While circling is active, the Ranger also works for position behind the
+target. When the circling rhythm slips into the target's blind side,
+Ranger melee damage gains a major bonus. The effect lasts longer for
+more dexterous Rangers, but the positional advantage comes and goes as
+the target turns to face the attack. At present, getting behind the target
+grants a very large melee damage bonus while that position holds.

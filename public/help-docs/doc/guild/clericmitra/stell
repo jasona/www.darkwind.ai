@@ -1,0 +1,5 @@
+SPELL NAME  : Savior tell               | Emote Savior tell
+SPELL SYNTAX: Stell <message>           | Estell <emoted message>
+SPELL COST  : NONE                      | NONE
+DESCRIPTION : This ability sends out the <message> to all on-line Saviour
+	      clerics. Saviour clerics are the guild level 15 clerics.

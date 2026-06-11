@@ -1,0 +1,16 @@
+Ranger Help for: diversion
+==========================
+
+SYNTAX:      diversion <target>
+USAGE:       Any terrain
+SLOT COST:   NA
+BASE SP:     35
+SKILL TYPE:  attack
+
+SUMMARY:
+This skill allows a Ranger to create a combat distraction, confusing
+and disorienting the target. A successful diversion debuffs the target,
+reducing their combat effectiveness for a short duration. This can
+include penalties to hit chance, dodge, and awareness. The distraction
+draws on the Ranger's cunning and knowledge of the surrounding terrain
+to exploit the environment.

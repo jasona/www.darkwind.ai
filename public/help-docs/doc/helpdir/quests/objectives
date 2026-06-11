@@ -1,0 +1,45 @@
+|CKB=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+|WKB                         QUEST OBJECTIVES
+|CKB=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+|YKOEach quest has one or more objectives that must be completed. There
+are several types of objectives you may encounter:
+
+|WKBKill|XX0
+  |YKODefeat a specific creature, or a number of creatures. Progress
+  is tracked automatically as you fight once you have accepted the quest.
+
+  |WKBExample: |YKO"Slay 3 wolves in the Endrael Forest"
+
+|WKBRetrieve|XX0
+  |YKOFind and collect one or more items and deliver them to a quest
+  master NPC. When you give the item to the NPC, your progress
+  is updated.
+
+  |WKBExample: |YKO"Collect 5 alligator teeth from the Hyndor swamp"
+
+|WKBRescue|XX0
+  |YKOLocate a captured or stranded NPC and free them. When you find
+  the NPC, use the appropriate command (such as |YKBrescue |YKOor
+  |YKBfree|YKO) to complete the objective.
+
+  |WKBExample: |YKO"Find and rescue the priest from the mines"
+
+|WKBEscort|XX0
+  |YKOGuide an NPC safely from one location to another. Use the
+  |YKBescort |YKOcommand to start the journey. The NPC will move on
+  their own - stay in the same room and protect them from enemies.
+  If the NPC dies or you wander too far away, the objective resets
+  and you will need to try again.
+
+  |WKBExample: |YKO"Escort the elf child safely through the forest"
+
+|WKBTracking Progress:|XX0
+  |YKOUse |YKBqstatus |YKOat any time to see how many objectives you have
+  completed and how much remains across your accepted quests. When all
+  objectives for a quest are finished, the quest completes automatically
+  and you receive your rewards.
+
+|CKB=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+|WKBSee also: |YKBhelp quests, help quests commands, help quests rewards
+|CKB=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=

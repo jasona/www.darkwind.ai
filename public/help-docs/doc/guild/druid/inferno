@@ -1,0 +1,16 @@
+|GKB-- Inferno ---------------------------------------------------|000
+
+The ultimate violent expression of the Daloan current,
+this invocation creates flame and heat of an intensity not
+far removed from that inside of an active volcano.  All
+living creatures except druids and their followers will
+be badly burnt, and inanimate objects, whether on the
+ground or carried by affected creatures, have a chance
+of burning to ash.
+
+|CKBCommand:      |000 inferno
+|CKBBase Cost:    |000 200 Daloan nwyfre
+|CKBBase Recovery:|000 long
+|CKBBase Effect:  |000 damage (high, area)
+|CKBBase Duration:|000 instant
+|CKBGuild Level:  |000 24

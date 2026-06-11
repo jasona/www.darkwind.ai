@@ -1,0 +1,15 @@
+|GKO================================================================
+                            |CKOBury
+|GKO================================================================
+
+|YKOBury allows you to hide an item under the ground for later
+use (or later sale). Only you can retrieve the buried item,
+by using the dig command. The maximum number of items you
+can have buried at any one time is 15. After that, you must
+use the forget command, or dig up a few items before you
+can bury any more. Items will carry over between logins,
+but not between reboots. You cannot bury items inside
+buildings.
+
+|RKOSyntax: |YKBbury <target>              |WKOCost: |CKO5 sp
+

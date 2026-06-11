@@ -1,0 +1,6 @@
+
+status query_no_increase()
+
+This function will disallow the Psionicist spell 'increase density' to be used
+on whatever object returns 1 for this function call. Usually used on very high
+AC items to keep it from getting out of hand when hardened.

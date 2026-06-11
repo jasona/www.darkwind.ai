@@ -1,0 +1,6 @@
+SPELL NAME  : Locate Player
+SPELL SYNTAX: Locate <player_name>
+SPELL COST  : 30 SP
+DESCRIPTION : This spell will enable you to see the environment of
+              any player.
+

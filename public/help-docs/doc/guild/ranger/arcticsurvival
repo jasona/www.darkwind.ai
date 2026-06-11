@@ -1,0 +1,20 @@
+Ranger Help for: arcticsurvival
+================================
+
+SYNTAX:      arcticsurvival
+             arctic survival
+USAGE:       Hyperborea and other extreme arctic terrain
+SLOT COST:   14
+BASE SP:     10
+SKILL TYPE:  cartography
+
+SUMMARY:
+This skill toggles arctic survival instincts on or off. When active,
+the Ranger reads snow, wind, exposure, and shelter well enough to avoid
+the punishing Hyperborean cold that normally forces travelers to rely on
+warmth protection.
+
+Use this before crossing Hyperborea's frozen roads, tunnels, icefields,
+and wilderness. Toggle it again to relax those instincts.
+
+SEE ALSO: desert survival, rest, guide, terrains

@@ -1,0 +1,31 @@
+SYNOPSIS
+        varargs mixed *visible(mixed xItem, object oEnv)
+
+DESCRIPTION
+	Checks if an object IDing to string '<xItem>' or object '<xItem>' is
+	visible to the calling_object in optional environment '<oEnv>'. If
+	'<oEnv>' is not supplied it defaults to 'this_object()'.
+
+	This function first checks if '<xItem>' is present in '<oEnv>' and if
+	so passes it on to the function 'visible_to' and returns an array like
+	'({ <object>, <visibility flags> })'. If an object is found and visible
+	then index [0] will be the object itself and index [1] will be the
+	visibility flags used to see the object. If an object is not found, or
+	is not visible then the result will be a NULL_ARRAY or '({ 0, 0 })'
+
+EXAMPLE
+	// This first example will look for an object that id's to the word
+	// 'torch' and if not visible to the player will tell them so.
+	if (!visible("torch", environment(this_player()))[0])
+	  write("You don't see a torch anywhere!\n");
+
+	// This second example will take the object the player is currently
+	// attacking and if not present or visible, tell them so.
+	object oTarget;
+
+	oTarget = this_player()->query_attacking();
+	if (!visible(oTarget, environment(this_player()))[0])
+	  write("You don't see your target here anywhere!\n");
+
+SEE ALSO
+	visible_to, environment_visible, tell_visible, visible_inventory

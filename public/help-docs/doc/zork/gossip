@@ -1,0 +1,10 @@
+Gossip
+
+The Zork-only listener allows the normal gossip channel.
+
+  gossip <message>
+  egossip <action>
+  gossiphist [lines]
+
+Gossip is shared with the main Darkwind game unless the server is later
+configured to isolate it.

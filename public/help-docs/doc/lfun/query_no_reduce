@@ -1,0 +1,6 @@
+
+status query_no_reduce()
+
+This function will disallow the Psionicist spell 'reduce weight' to be used
+on whatever object returns 1 for this function call. Usually used on items that
+you don't want the weight to be reduced for any reason.

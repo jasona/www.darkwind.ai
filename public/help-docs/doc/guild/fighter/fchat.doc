@@ -1,0 +1,4 @@
+Fchat is a basic fighter command that allows you to talk to other fighters
+on the guild line. Also see "fhelp tog", "fhelp efchat", and "fhelp fgrunt."
+
+Syntax is: fchat <text>

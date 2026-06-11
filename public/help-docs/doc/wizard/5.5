@@ -1,0 +1,94 @@
+Written by Alarian@Darkwind
+  last revision 09/15/95
+
+The following is a doc on how to use all the various calendar functions
+provided by the astronomy and events daemons.  To use ANY of these
+functions, you must first:
+
+#include <daemons.h>
+
+in any file that is going to be calling a function.  Next, depending
+on what information you want, you can call the following functions.
+Note, to use many of these functions, you must call them in the format
+shown. I.e. for many, you must pass the current time as part of the query.
+To get the actual names of the days of the week and months of the year,
+look at the help file called "calendar". I.e. "help calendar".
+
+
+To determine the numerical minute of the hour:
+  minute = EVENTS_D->query_minutes(time());
+
+
+To determine the numerical hour of the day:
+  hour = EVENTS_D->query_hour(time());
+ Note: This will return a result on a scale of 0 to 19 hours.
+       if you want to have it on a am, pm type of scale, you
+       will need to add something like the following to your code:
+
+          if (hour == 0) {
+            hour = 12;
+            tod = " Fore High-Sun";
+          }
+          else if (hour > 11) {
+            hour = hour - 12;
+            if (hour == 0) hour = 12;
+            tod = " Nights Watch";
+          }
+          else tod = " Fore High-Sun";
+          write("|CK0    and the time is: "+hour+":");
+          if (mmnt < 10)
+            write("|CK00"+mmnt+tod+".\n");
+          else
+            write("|CK0"+mmnt+tod+".\n");
+         return 1;
+        }
+
+  There are probobly better ways to do this, so if you think of one
+  go ahead and use it.  This is just here as an example.
+
+
+
+To get the Name of the day:
+  day_name = EVENTS_D->query_day_name(time());
+
+
+To get the numerical day of the month:
+  day_number = EVENTS_D->query_day(time());
+
+
+To get the Name of the month:
+  month = EVENTS_D->query_month_name(time());
+ Note: There are 10 months in a year.
+
+
+To determine what week of the month it is:
+    week_num = EVENTS_D->query_week(time());
+ Note: There are 3 weeks to a month.
+
+To get the numeric year:
+  year = EVENTS_D->query_year(time());
+
+
+To get the time of day in string format:
+  what = EVENTS_D->query_time_of_day();
+ This will return one of the following strings depending on the
+        time of day:  dawn, day twilight, night.
+
+
+If, for some reason, you want the exact second since the the calendar
+        system started:
+  now = EVENTS_D->query_now();
+
+
+To get the numeric phase of a given moon, (where str = the name of the moon you
+     want to see):
+  phase = ASTRONOMY_D->query_phase(str);
+ The moon names are: "dailos" "markas" and "tekal".
+
+
+To get the string name of the phase of a given moon:
+  phase = ASTRONOMY_D->query_phase_name(ASTRONOMY_D->query_phase(str));
+ where 'str' is the name of the moon you want to get the phase for.
+ The moon names are: "dailos" "markas" and "tekal".
+
+

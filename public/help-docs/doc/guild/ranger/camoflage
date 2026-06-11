@@ -1,0 +1,17 @@
+Ranger Help for: camoflage
+==========================
+
+SYNTAX:      camo
+             camoflage
+USAGE:       Wilderness
+SLOT COST:   NA
+BASE SP:     55
+SKILL TYPE:  stealth
+
+SUMMARY:
+This skill allows a Ranger to use advanced natural camouflage to become
+nearly invisible in wilderness terrain. Camoflage provides a higher
+level of concealment than the basic conceal skill, making the Ranger
+much harder to detect. The Ranger must not be in combat to activate
+this skill. Moving or attacking will break the camouflage. This skill
+is ideal for setting up ambushes or bypassing dangerous areas unseen.

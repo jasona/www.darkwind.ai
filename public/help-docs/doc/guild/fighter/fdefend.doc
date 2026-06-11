@@ -1,0 +1,6 @@
+Skill: fdefend     Timer: Support      GL:  2    Cost: 10
+
+This skill allows you to jump in front of another person and defend them
+from their current attackers! Incredibly heroic (if painful!)
+
+Syntax is: fdefend <target>

@@ -1,0 +1,27 @@
+Ranger Help for: radvance
+=========================
+
+SYNTAX:      radvance <level|guild|str|dex|con|int|wis|chr>
+USAGE:       Any wilderness area.
+
+SUMMARY:
+Advance your stats, game level, or guild level from anywhere in
+the wilderness. You do not need to return to the guild lodge.
+
+  radvance level     Advance your game level (costs exp + gold)
+  radvance guild     Advance your guild level (costs exp only)
+  radvance str       Raise your strength
+  radvance dex       Raise your dexterity
+  radvance con       Raise your constitution
+  radvance int       Raise your intelligence
+  radvance wis       Raise your wisdom
+  radvance chr       Raise your charisma
+
+REQUIREMENTS:
+- Must be in the wilderness (not city, indoors, or dock)
+- Must have terrains and enemy species set before advancing
+- Guild level cannot exceed your game level
+- Use 'rcost' to check what it costs
+
+=============================================================================
+SEE ALSO: rcost, advancement, glevels

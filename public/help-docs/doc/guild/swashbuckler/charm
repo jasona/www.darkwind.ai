@@ -1,0 +1,11 @@
+Charm - utility skill
+------------------------------------------------------------
+Swashbucklers tend to be charming or impressive by nature,
+but when they actually exert effort, their poise and
+presence increases even further. The swashbuckler can boost
+his charisma by a few points for a short time.
+
+GL:  4
+SP: 15
+command:  charm
+duration: short

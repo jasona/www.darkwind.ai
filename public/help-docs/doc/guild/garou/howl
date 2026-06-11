@@ -1,0 +1,22 @@
+|GKO================================================================
+                   |WKOGarou Guild : Howls
+|GKO================================================================
+
+|YKOHowl allows the wolf to communicate particular emotions to other
+players around Darkwind. This is the primary means of communication
+in wolf form. It is also possible to howl to all Garou, by leaving
+off the intended target. Current howls include:
+
+|WKBAppreciation   Anger          Agreement      Admiration
+Bloodlust      Beckoning      Confusion      Danger
+Distress       Disagreement   Farewell       Fear
+Fondness       Fatigue        Frustration    Greed
+Greetings      Happiness      Home           Hunger
+Joy            Lust           Loneliness     Loathing
+Laaggg         Laughter       Moonlust       Patience
+Passion        Revenge        Reluctance     Suspicion
+Sorrow         Sickness       Success        Sadness
+Surprise       Suffering      Triumph        Understanding
+Warning        Weakness       
+
+|RKOSyntax: |YKBhowl <type> [to <target>]      |WKOCost: |CKO5 sp

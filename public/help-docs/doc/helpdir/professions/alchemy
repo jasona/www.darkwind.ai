@@ -1,0 +1,39 @@
+                                  Alchemy
+
+    Alchemists turn gathered herbs and saved reagents into potions, field
+supplies, and profession recipe outputs. The core alchemy room is in the
+profession building, 4e, n from Center of Town.
+
+Getting started:
+  1. Buy profession tools in the profession building.
+  2. Gather herbs with 'gather herbs' or buy/hire workers for materials.
+  3. Go to the alchemy room and use 'potions' to see potion names.
+  4. Use 'quickcraft <potion>' to brew a potion.
+
+    Each potion has 4 strengths, matching the level requirement to quaff
+it. Level 1 potions can be quaffed by anyone. Level 2 potions require
+level 20. Level 3 potions require level 45. Level 4 potions require
+level 65.
+
+    Level 1 potions can be made by anyone and can raise your skill to 100.
+Level 2 potions need Alchemy 60 and can raise your skill to 200. Level 3
+potions need Alchemy 100 and can raise your skill to 500. Level 4 potions
+need Alchemy 200 and can raise your skill to 1000.
+
+    Alchemy also uses recipe cards. Read a recipe card to see its saved
+material requirements, then use 'manufacture card' while carrying the card.
+Recipe cards may come from work orders and other profession rewards.
+
+    Weapon oil is one such recipe output. Use 'oil <weapon>' while carrying
+crafted weapon oil to give the weapon a modest temporary hit bonus and make
+it less likely to break while the oil lasts. Better Alchemy skill improves
+the bonus and duration.
+
+Useful commands:
+  help potions
+  help herbalism
+  help workorders
+  professions crafting
+  professions check potion str1
+  quickcraft str1
+  manufacture card

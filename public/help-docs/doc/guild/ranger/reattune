@@ -1,0 +1,29 @@
+Ranger Help for: reattune
+=========================
+
+SYNTAX:      reattune
+             reattune primary <terrain>
+             reattune secondary <terrain>
+             reattune enemy <species>
+
+USAGE:       Ranger lodge or Warden Thorn's meadow.
+
+SUMMARY:
+Warden Thorn can perform a reattunement ritual for Rangers who need to
+change their primary terrain, secondary terrain, or enemy species after
+their first choice.
+
+The ritual requires experience, cannot be performed while fighting, and
+cannot be performed while you have an active follower with you. After a
+successful reattunement, your bond must settle for seven days before the
+ritual can be performed again.
+
+If you change your primary terrain and your current enemy species is not
+valid for the new terrain, your enemy species will be cleared. Use 'setenemy'
+to choose a new one.
+
+Use 'reattune' with no arguments to see your current affinities, ritual
+cost, and cooldown.
+
+=============================================================================
+SEE ALSO: setprime, setsecond, setenemy, rscore and survey

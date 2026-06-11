@@ -1,0 +1,17 @@
+Ranger Help for: stalk
+======================
+
+SYNTAX:      stalk <target>
+USAGE:       Any terrain
+SLOT COST:   NA
+BASE SP:     20
+SKILL TYPE:  stealth
+
+SUMMARY:
+This skill allows a Ranger to shadow a target, following them with
+partial concealment. While stalking, the Ranger gains a bonus to hit
+on their next attack against the stalked target. The Ranger remains
+partially hidden from other creatures but is not fully invisible.
+Stalking is broken if the Ranger attacks a different target or is
+detected. This skill combines elements of stealth and combat
+preparation, making it useful for setting up an opening strike.

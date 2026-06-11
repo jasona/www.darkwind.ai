@@ -1,0 +1,3 @@
+Usage: feelings [<prefix>]
+       This command lists all the standard feelings on
+       Darkwind [beginning with the prefix if supplied].

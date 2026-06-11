@@ -1,0 +1,13 @@
+SYNOPSIS
+        varargs int invalid_name(string sName)
+        
+DESCRIPTION
+        The efun returns 1 for an invalid name sent to the efun.
+        The efun returns -1 if the name is less then 3 characters
+          long, or more then 11 characters long.
+        The efun returns -2 if the name contains a special character
+          like '?!~<>+_'
+        The efun returns -3 if the name is already in use or banished.
+        The efun returns -4 if the profanity filter catches it.
+        The efun returns 0 otherwise, and the name is acceptable.
+

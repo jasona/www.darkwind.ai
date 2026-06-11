@@ -1,0 +1,18 @@
+|GKO================================================================
+                      |KKBStance: Heroic
+|GKO================================================================
+
+|YKOThe heroic stance is usable only by great Garou warriors who
+have claimed the title of Hero. This stance represents the
+skill obtained through countless battles and struggles along
+the path to becoming a great Garou Hero. This stance increases
+both one's offensive abilities as well as one's defensive abilities.
+Even a great Hero, however, can only maintain this stance for
+a short period of time, and must recover before he can use it
+again.
+
+|WKOUsable in Form: |GKOWolf                           |WKOCost: |CKO20 SP
+|WKORestricted to: |RKBWarrior                         |WKODuration: |CKOLimited
+|WKOLevel Required: |BKB45
+|RKOSyntax: |YKBstance heroic
+

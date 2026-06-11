@@ -1,0 +1,8 @@
+Spells
+Necromancers can access a list of their spells with the ~>necspells<~
+command. Additionally, they may list only those spells which are
+available to them by using the 'avail' argument. In addition to these
+abilities, they have access to the ~>necro<~, ~>necros<~, ~>nechist<~,
+and ~>nritual<~ commands. Help for these commands can be accessed through
+using: help <command>, where <command> is the ability's syntax, such as
+'help nspray'.

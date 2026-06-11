@@ -1,0 +1,19 @@
+Ranger Help for: quarry
+=======================
+
+SYNTAX:      quarry
+             quarry rock
+USAGE:       Hills, mountain, underground
+SLOT COST:   NA
+BASE SP:     10 sp
+SKILL TYPE:  utility
+
+SUMMARY:
+This command lets a Ranger gather a few useful rocks from rocky terrain
+for crafting and sharpening. It stores fieldstone and flint in the
+Ranger's wildcraft pouch instead of creating loose rocks in inventory.
+It is meant to support skills like 'sharpen', 'make tools', and
+'mix weapon paste' without pretending that every room's exposed stone
+can be used directly as inventory.
+
+You must already know how to sharpen a weapon before you can use quarry.

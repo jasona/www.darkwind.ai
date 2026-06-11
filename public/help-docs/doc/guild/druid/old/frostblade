@@ -1,0 +1,15 @@
+Frost Blade
+
+The druid may temporarily enchant a weapon with the
+power of elemental ice, causing frost to coat its
+striking surface.  This causes the weapon to deliver
+additional damage.  It does not grant the bonus to
+hit that Flame Blade does; however, the damage is
+greater.
+
+Command: frostblade <weapon>
+Base Cost: 60 SP
+Base Recovery: long
+Base Effect: enhance (moderate)
+Base Duration: long
+Guild Level: 8

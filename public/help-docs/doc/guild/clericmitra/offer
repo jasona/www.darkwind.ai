@@ -1,0 +1,7 @@
+SPELL NAME  : Offer
+SPELL SYNTAX: Offer corpse
+SPELL COST  : 5
+DESCRIPTION : This command will offer up a corpse to Mitra to gain her
+              favour.  Offering up corpses to Mitra will help to bring
+              your alignment more towards good, although after a point
+              it no longer affects it that much.

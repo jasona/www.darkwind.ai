@@ -1,0 +1,7 @@
+SPELL NAME  : Create Food or Drink
+SPELL SYNTAX: Create food || Create drink
+SPELL COST  : 40 SP (food) || 50 SP (drink)
+DESCRIPTION : This spell enables the caster to bring forth nutritious
+              food or drink from the planes of goodness.  Imbibing
+              the food or drink will heal the consumer.
+

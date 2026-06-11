@@ -1,0 +1,48 @@
+STAT ENHANCEMENT
+
+Darkwind has the capability of temporarily increasing a player's 
+abilities without actually changing the character.  The functions to do 
+this are  add_<stat>(int)  where <stat> is the ability you want to 
+increase and int is the amount to boost it.
+This document contains Darkwind's policy on stat-enhancing items.
+
+
+ALL stat-enhancing items are EXCEPTIONAL.  (See wizhelp 4.14 (uniques).)
+
+No permanent item may increase a stat more than 4 points.  A permanent 
+item that increases a stat more than 2 points must be created unique.  Those
+that increase a stat by 4 are to be considered very powerful, and should
+only be found guarded by some of the most powerful, legendary creatures
+of the land.
+
+No temporary item may increase a stat more than 8 points.  A temporary 
+item that increases a stat more than 5 points must be created unique.  
+(Once it is used up, the item can be created again, but this will prevent 
+guild stockpiles and such.)  NOTE:  anything with a duration longer than
+five minutes will not be considered temporary.
+
+Multiple stat-enhancing items may be used concurrently, even if they 
+affect the same stat.  The old Ogre Gaunlets and Giant Girdle combination 
+is an example.  (But see next paragraph.)
+
+Players must NOT be able to use multiple copies of an item to stack their 
+bonuses.  You cannot have two Amulets Of Beauty worn at the same time to 
+get a larger CHR bonus, for example.  If you have a temporary item that 
+enhances a stat, you must put a marker on the player so that they cannot 
+use that item again until it wears off.  (There is an example of this 
+type of item in /open/wizards/antcrusher/tome_l_i.c.)
+
+Bonus stats may NEVER carry over from one login to the next.
+
+Any weapon that enhances stats must be created unique.  Period.
+
+An armor that enhances stats may not also be exceptional for high armor
+class or resistance.  Enhancing stats is enough.
+
+*************************IMPORTANT*********************************
+IF YOU GIVE A BONUS TO A PLAYER FOR SAY "WEARING" AN ITEM, YOU MUST
+ENSURE THAT WHEN THE ITEM IS REMOVED, THE BONUS IS ALSO REMOVED!!!!
+*******************************************************************
+
+
+Antcrusher - Feb 7, 1996

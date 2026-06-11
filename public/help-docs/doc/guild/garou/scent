@@ -1,0 +1,19 @@
+|GKO================================================================
+                           |CKOScent
+|GKO================================================================
+
+|YKOScent allows you to determine the direction you need
+to travel to reach a particular foe. The range is
+short, so you must be near the target for it to be
+of any use. You must also know the name of the
+foe you are seeking. You cannot simply find the
+nearest enemy. The range increases slightly
+with higher levels.
+
+You can also |YKB'scent guild' |YKOto find a path back to
+the Darkwind guild hall. The range is quite long
+when seeking out the guild hall, regardless of
+level. This form of scent can only be used while
+in the Darkwind mainland.
+
+|RKOSyntax: |YKBscent <target>      |WKOCost: |CKO15 sp

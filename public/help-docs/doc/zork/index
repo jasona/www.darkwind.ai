@@ -1,0 +1,15 @@
+Zork Help
+
+This is a MUD that only does one thing: play the original Zork game.  Use
+"enter portal" to start or resume your Zork session.
+
+Useful topics:
+  help commands
+  help playing
+  help gossip
+  help account
+  help version
+
+Inside Zork, use "zork help" or "zork help <topic>" for the same files.
+
+Brought to you by Darkwind (https://play.darkwind.ai) - Enjoy!

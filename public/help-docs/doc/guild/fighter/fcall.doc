@@ -1,0 +1,17 @@
+Skill: fcall       Timer: Support      GL:  5    Cost: 100
+This skill will call your Armsman to your side. You will have to RECRUIT an
+Armsman, first, though. This is done at the pub north of the room with the
+guild board. You will name your Armsman at this time. Be sure it is something
+easy to type, as you need to address your Armsman by name to command it.
+Additionally, you won't be able to name your Armsman the same as an existing
+player, or something offensive.
+
+If for some reason your Armsman stops following you, typing fcall again
+should restart the poor git's heart. Remember, after you log out, you
+will have to go and track your Armsman down to fcall it again. They love
+to hang out at the pub.
+
+If you decide to dual-guild, you will no longer be able to call your
+Armsman to help you.
+
+Syntax is: fcall

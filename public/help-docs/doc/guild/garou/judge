@@ -1,0 +1,11 @@
+|GKO================================================================
+                    |CKOJudge Aligment
+|GKO================================================================
+
+|YKOJudge compares another creature's alignment. This can be useful 
+to Garou wishing to keep their Eurus high, and therefore their 
+alignment near neutral. It will show both alignment and ethics.
+
+|WKOUsable in form: |GKOAll                  |WKOCost:  |CKO100 sp
+|RKOSyntax: |YKBjudge <target>               |WKOTimer: |CKOSmall
+                                     |WKOType:  |CKOTrick

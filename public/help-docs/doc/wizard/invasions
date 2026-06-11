@@ -1,0 +1,156 @@
+Basic Invasion Documentation
+by: Malcolm @ Darkwind  (updated by Aeolus - 8/10/94)
+
+The basics of putting together an invasion are simple.  You need two basic
+things.
+   1) An event that triggers the invasion.
+   2) The invaders.
+
+Let's start with the trigger.
+
+The trigger can be anything important.  Let's try to be reasonable here.  A
+large, important event can be the slaying of a level 25 monster, the stealing
+of dragon eggs, or any other large *rare* event.  It should also be somewhat
+convoluted.  Players should not understand under what exact circumstances
+an invasion will occur.  A few tools to help you: Use a random chance.  Have
+2 or more events trigger an invasion.  Make the invasion delayed some time.
+Or anything else that may somewhat confuse the players as to why the invasion
+took place.  Remember, the goal is to keep players from causing invasions
+every time they want one, not to make them tear their hair out.
+
+Once the event is triggered, you must call the invasion daemon with:
+#include <daemons.h>
+...
+{triggered event}
+  if(INVA_D -> trigger("invasion name",minimum # people on,approx. average lev)
+{
+    obj1 = clone_object("invading_monster");
+    move_object(obj1,"wherever");
+    INVA_D -> add_invader(obj1)
+    return 1;
+    }
+
+INVA_D is the short_hand for the invasion daemon.  It simply keeps track
+the invasion and how long it has been going on.  The function <trigger>
+starts everything off.  If the invasion cannot go on for some reason, 0 is
+returned.  If the invasion is actually starting, then 1 is returned.  Thus,
+the if statement.  If the invasion goes forward, then we need to clone up
+the right objects, move them where we want them to start, and tell the
+invasion daemon to add that object to our list.  As soon as the invading
+object is sent to the INVA_D, then the object begins to follow its invasion
+orders.  This is a good point to start discussing the necessary code in the
+invading monster.
+
+FIRST: PLEASE NOTE: IMPORTANT: You need to inherit both MONSTER and INVASION.
+So you'll have:
+#include <mudlib.h>
+inherit MONSTER;
+inherit INVASION;
+
+The invading monster has 2 basic parts it needs in order to properly work.
+It needs to call 2 things in reset().  Namely, set_orders(), and set_path().
+Set_orders essentially tells the monster what to do.  Current possible
+orders are:
+
+MARCH             ATTACK            DEFEND
+marching commands
+
+FOLLOW
+secondary marching command
+
+WANDER    SENTRY    GUARD     WAIT      PATROL
+general orders
+
+ESCORT      DESTROY        KILL      KIDNAP
+specific orders
+
+Orders, like weapon types and materials, are done using bits.
+set_orders(MARCH|WAIT);  <---example
+
+Sometimes you need to give another variable. For instance, ESCORT needs
+to know who you want the invader to escort.  In this case, just add another
+variable: set_orders(MARCH|ESCORT,"leader");
+
+Let's talk about each of these in more detail.
+
+MARCH
+An invader under marching orders will continue to march, regardless of
+whether anyone is attacking them or not.
+
+ATTACK
+Attack orders make the invader attack others on sight.
+
+DEFEND
+Defend orders make the invader defend himself from enemy attack, even if
+it means staying put.
+
+FOLLOW
+Follow can only be used with ATTACK or DEFEND.  If the invader is in conflict
+with an enemy, then the invader will follow the hapless victim around.
+(problem: this causes the invader to lose track of his attack path.  We'll
+fix this soon)
+
+WANDER
+The invader uses the random exit function in monster.c.  It ain't great, but
+it's the best we got for right now.
+
+SENTRY
+Sentry is the order for the invader, once he's reached the room of destination
+to attack anyone who enters.
+
+GUARD
+Guard tells the invader to prevent others from going a particular direction,
+Beware, for it stops invaders from going that direction also.
+
+WAIT
+Wait tells the invader simply to stop there and wait for further instructions.
+It's a lot like Sentry, but the invader won't attack.
+
+PATROL
+Patrol is a touch complicated.  But the essence is really simple.  The invader
+keeps going through the invasion path in a loop.  Cool, eh?  You can get the
+invader to appear as if it's patrolling certain rooms.
+
+ESCORT
+Escort tells the invader to follow another invader.  This only works with
+other invaders.  You can use an object or a string to identify the monster.
+The advantage of the string, is if you want a grunt to follow a leader, but
+don't care which one, then just simply have the grunt follow "leader", and
+when the next leader enters the room that the invader is in, then the grunt
+will follow.
+
+DESTROY
+Destroy let's the invader loose on a particular area.  It takes about 20
+seconds, but when it's done, the room will be destroyed.
+
+KILL
+Kill tells the invader, that once it's gotten to the end of its path, to
+kill a particular npc.  String or object may be used to describe the victim.
+
+KIDNAP
+Not implemented yet, but essentially, the invader will carry the victim off.
+
+
+Ok. set_path is the function that gives the individual directions for the
+monster.  Each direction is seperated with a ;(semi-colon).  An example
+would be: set_path("n;n;enter;e");
+That causes the monster to go north, north, enter, east.  If, at any point,
+one of these commands is prevented, the monster will continue to attempt
+to do that direction over and over again.  Note that some orders don't
+mix well with the set_path().  For instance Follow can throw the monster
+off its path, and random implies that there IS no path.  Escort also implies
+no path.
+
+A few last notes: Some of these orders are incompatible.  There's nothing
+to be done about this.  Second, you may have noticed that some of the orders
+need an object or string as a variable for one of the orders.  So that
+set_orders(DEFEND|SENTRY|KILL,"cher") would cause the invader to kill cher,
+if cher was present at the end of its ride.  Do not mix orders that require
+variables.  It's done this way for both simplicity and so that different
+monsters have different duties.
+
+Ok, that's the basics.  Read through it a few times, and try to get the swing
+of it.  If you're still having trouble with your area or monsters, don't
+try an invasion.  There's more about invasion in the Intermedate.doc file
+
+                                                                -Malcolm

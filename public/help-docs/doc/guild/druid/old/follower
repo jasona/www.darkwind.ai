@@ -1,0 +1,15 @@
+You may give the following commands to your followers:
+
+release <name> - Allows you to release your follower early,
+   in case (for instance) you wish to charm a different
+   animal or conjure a different elemental.
+dismiss <name> - Same as 'release'.
+secure <name> - Stops other people from taking items your
+   followers are carrying.
+allow <name> - Allows other people to take items your
+   followers are carrying.
+unleash <target> - Causes your follower to attack the target,
+   assuming the target is valid (PK checks, etc., apply.)
+heel - Causes your follower to stop fighting.
+toggle - Sets whether or not your follower automatically helps
+   you in combat.

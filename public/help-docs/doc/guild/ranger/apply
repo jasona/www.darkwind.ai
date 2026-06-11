@@ -1,0 +1,16 @@
+Ranger Help for: use herbs
+===========================
+
+SYNTAX:      apply <herb> [to <target>]
+USAGE:       Any terrain
+SLOT COST:   5
+BASE SP:     variable
+SKILL TYPE:  healing
+
+SUMMARY:
+This skill allows a Ranger to apply gathered herbs to heal wounds or
+cure ailments. Different herbs have different effects, and a skilled
+Ranger learns to identify and use them effectively. The Ranger can
+apply herbs to themselves or to another player. The effectiveness of
+the treatment depends on the Ranger's wisdom, skill level, and the
+quality of the herbs used. Herbs can be found through foraging.

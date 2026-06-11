@@ -1,0 +1,18 @@
+Ranger Help for: ambush
+=======================
+
+SYNTAX:      ambush <target>
+USAGE:       forest,plains,swamp,desert,jungle,hills,road,beach,
+             underground,mountain,arctic,barren
+SLOT COST:   12
+BASE SP:     70
+SKILL TYPE:  offensive
+
+SUMMARY:
+This skill allows a Ranger to launch a devastating surprise attack
+from concealment. The Ranger must be concealed before using this skill.
+The sudden, brutal strike catches the target off guard and deals heavy
+damage. The effectiveness of the ambush depends on the Ranger's
+strength, dexterity, and skill level. Ambush is one of the most
+powerful melee attacks available to a Ranger, but it requires careful
+preparation and the right conditions to execute.

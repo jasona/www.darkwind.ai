@@ -1,0 +1,11 @@
+There are two things which sets apart a good thief from a poor
+one.  One is the ability to swipe an item without getting caught.
+The second one is stashing the item and getting out without being
+detected.  Conceal is the ability of the skilled thief to obscure
+an item from others view, usually by sneaking it into a cloak.
+
+This is a guild level 7 ability. 
+
+Syntax: conceal <item>
+
+You can 'unhide' an item with that command. See 'thelp unhide'.

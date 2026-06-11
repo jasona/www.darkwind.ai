@@ -1,0 +1,15 @@
+This command allows you to sneak up on your target and
+suprise them with a stab in the back.  This command can be
+used on monsters and players. This is a very powerful skill
+and can only be used when you have suprise. The real strength
+of this skill is attacking in numbers.  When 'jumping' a
+target, after the first stab, other thieves will have
+10 seconds in which they may also stab.  After that time,
+the target will be too 'aware' of its surroundings to be
+taken by anyone else. You *must* be Hidden to stab a fellow
+player.
+
+This skill is based on your Dex & Int, as well as your Glevel.
+It is a Glevel 11 skill.
+
+Syntax: stab <target>

@@ -1,0 +1,19 @@
+Mire
+
+Upon casting this spell, the druid commands the
+ground to rise up and grasp at the feet of all
+creatures in the area -- only other druids and
+their followers are protected.  Affected creatures
+are unable to flee, and, while they can still
+fight, their restricted range of movement slows
+them down.  A particularly strong creature has a
+chance to break free immediately, and stronger
+creatures will struggle free before weaker ones
+in any case.
+
+Command: mire
+Base Cost: 85 SP
+Base Recovery: medium-long
+Base Effect: drain (dexterity, high, area), entangle (area)
+Base Duration: varies
+Guild Level: 19

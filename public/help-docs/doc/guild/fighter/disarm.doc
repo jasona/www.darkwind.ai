@@ -1,0 +1,9 @@
+Skill: Disarm      Timer: Trickster    GL:  6    Cost: 50
+
+This is a more stylish fighter skill. You attempt to out maneuver your
+opponent and knock their weapon from them with your own weapon.
+
+If you are really good and the opponent has two weapons, you have a chance
+to also knock the second weapon from their grasp also.
+
+Syntax is: disarm <target>

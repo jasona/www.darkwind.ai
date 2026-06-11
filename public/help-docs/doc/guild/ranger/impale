@@ -1,0 +1,16 @@
+Ranger Help for: impale
+=======================
+
+SYNTAX:      impale <target>
+USAGE:       Any terrain
+SLOT COST:   NA
+BASE SP:     90
+SKILL TYPE:  attack
+
+SUMMARY:
+This skill allows a Ranger to deliver a devastating piercing attack,
+driving their weapon deep into the target. The Ranger must be wielding
+a pierce-type weapon (spear, dagger, rapier, etc.) to perform this
+skill. Impale deals very high pierce damage and is one of the strongest
+single-hit melee attacks available to Rangers. The damage scales with
+the Ranger's strength and weapon proficiency.

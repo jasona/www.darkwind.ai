@@ -1,0 +1,62 @@
+                         *******************
+                         *   HEADER FILES  *
+                         *******************
+
+    A header file, sometimes referred to as a "rooms.h" file, makes
+it easier for you to code, and easier for others to read your code.
+A header file (often called "rooms.h") is a file in your directory
+which consists of a list of #define statements.  These statements
+define constants as a partial pathname for your code.
+    For instance, a basic rooms.h file might contain:
+ 
+#define MYROOT       "/players/myname/"
+#define MYROOM       MYROOT+"rooms/"
+#define MYWEAP       MYROOT+"weapons/"
+#define MYARMOR      MYROOT+"armor/"
+#define MYNPC        MYROOT+"npc/"
+#define MYITEM       MYROOT+"objects/"
+
+   If you had two separate areas, one in Kerei and one in Souvrael,
+you might also have:
+
+#define MYSOUV       MYROOM+"souvrael/"
+#define MYKER        MYROOM+"kerei/"
+
+    You could then use those definitions to #define others.
+
+    IMPORTANT:  Make sure that the constants you choose aren't
+used elsewhere, or it will cause an error.  For instance, ROOM
+is defined as an inheritable for the basic mudlib room.  If you
+try to use:
+
+#define ROOM     "blah"
+
+then you will get an error, because you're trying to re-define
+something that is already defined elsewhere.
+
+    Once you've created your header file, you can use it to help
+you generate code for rooms and objects.  Just add the following
+line to all your area files:
+ 
+#include "../rooms.h"
+ 
+assuming your files are one "directory level" down from your root
+directory.  (If "/players/myname" is your root directory, then
+"/players/myname/rooms" is one level down, "/players/myname/rooms/blah"
+is two levels down, and so on.)  If the file in question is more than
+one level down, simply add one extra "../" to the beginning of the
+#include statement for each additional level.
+
+    Note that this is a relative path.  Do not use an absolute path
+(for example, #include "/players/myname/rooms.h") -- if your area was
+ever moved, you would then have to change every file, rather than
+just changing the header file.
+
+    You can then use the definitions in your code.  For instance:
+ 
+add_clone(MYNPC + "demon",1);
+make_object("sword", MYWEAP + "sword", 1);
+add_exit("north", MYROOM + "room2");
+ 
+    "Abbreviating" filepaths in this way makes your code much
+easier to read, and also easier for you to type.

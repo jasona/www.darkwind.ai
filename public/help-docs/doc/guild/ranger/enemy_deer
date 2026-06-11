@@ -1,0 +1,16 @@
+
+Ranger Help for: enemy deer
+===========================
+
+SUMMARY:
+Choosing deer means your Ranger is skilled at hunting deer, elk, stags,
+and other antlered woodland or plains creatures.
+
+This is a traditional tracker choice. It fits Rangers who want their enemy
+species to reflect patient pursuit, spoor reading, and clean fieldcraft.
+
+COMMAND:
+  setenemy deer
+
+=============================================================================
+SEE ALSO: enemy, setenemy and terrains

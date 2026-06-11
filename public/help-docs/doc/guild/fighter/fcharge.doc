@@ -1,0 +1,5 @@
+Skill: fcharge     Timer: Trickster    GL:  9    Cost: 15
+This basic fighter skill allows the fighter to charge at a target, attempting
+to knock the target into another room.
+
+Syntax is: fcharge <target>

@@ -1,0 +1,71 @@
+Wild Shape
+
+Wild Shape lets a druid wear a spirit animal form.  Each
+form is learned as its own druid spell, and higher mastery
+of that form improves its strength and duration.
+
+Commands:
+  wildshape wolf
+  wildshape bear
+  wildshape hawk
+  wildshape serpent
+  unshift
+
+Forms:
+
+  Wolf
+    Guild level: 6
+    Cost: 45 spell points
+    Duration: 60 seconds + 30 seconds per wolf mastery level
+    Effect: changes your race and visible form to a spirit-wolf
+            and grants a dodge bonus.
+
+  Bear
+    Guild level: 10
+    Cost: 55 spell points
+    Duration: 60 seconds + 35 seconds per bear mastery level
+    Effect: changes your race and visible form to a spirit-bear
+            and grants a constitution bonus.
+
+  Hawk
+    Guild level: 12
+    Cost: 60 spell points
+    Duration: 55 seconds + 32 seconds per hawk mastery level
+    Effect: changes your race and visible form to a spirit-hawk
+            and grants a dexterity bonus.
+
+  Serpent
+    Guild level: 14
+    Cost: 68 spell points
+    Duration: 55 seconds + 33 seconds per serpent mastery level
+    Effect: changes your race and visible form to a spirit-serpent
+            and grants a strength bonus.
+
+Terrain:
+
+  Wolf and bear last longer in forest, plains, jungle, swamp,
+  hills, farm, and path terrain.
+
+  Hawk lasts longer in sky, mountain, forest, plains, jungle,
+  hills, and path terrain.
+
+  Serpent lasts longer in swamp, jungle, forest, underground,
+  river, and lake terrain.
+
+  When the terrain is favorable, the duration is increased by
+  half.
+
+Restrictions:
+
+  Shifting automatically unequips your worn and wielded gear.
+  While shifted, many speaking, study, spell, and guild power
+  commands are blocked because the spirit body cannot perform
+  them.  Use unshift to return to your natural form early.
+
+  You may only wear one spirit form at a time.  When a form
+  ends, the spirit requires a short recovery before you can
+  wildshape again.
+
+See also:
+  dhelp spells
+  dhelp restrictions

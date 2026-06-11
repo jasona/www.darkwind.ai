@@ -1,0 +1,105 @@
+/*
+ *  SNO are specific restrictions,
+ *  SYES are specific alloweds,
+ *  GNO are general restricts,
+ *  GYES is everything else (allowed)
+ *  Checked in this order:
+ *  if type is a SNO return 0
+ *  if type is a SYES return 1
+ *  if type in GNO return 0
+ *  else return 1  (is GYES)
+ */
+
+#define DRUID_SNO      ({ ({ PLATE, 0 }), ({ CHAIN, 0 }) })
+#define DRUID_SYES     ({ ({ BLUNT, 0 }), ({ MISSILE, 0 }), ({ POLE|SLASH, 0 }) })
+#define DRUID_GNO      ({ POLE|HUGE|LARGE, MAT_METAL })
+#define DRUID_GYES     ({ ALLTYPES, ALLMATERIALS })
+
+#define GAROU_SYES     0
+
+#define FIGHTER_SNO    0
+#define FIGHTER_SYES   0
+#define FIGHTER_GNO    0
+#define FIGHTER_GYES   ({ ALLTYPES, ALLMATERIALS })
+
+#define PALADIN_SNO    ({ ({MISSILE, 0 }) })
+
+#define CS_GNO         ({ ({ BLUNT|PLATE|CHAIN|LARGE|HUGE|POLE, GOLD }) })
+
+#define VAMPIRE_SYES   ({ ({ HELMET, 0 }), ({ GLOVES, 0 }), ({ BOOTS, 0 }), ({ 0, LEATHER }), ({ 0, CLOTH }) })
+#define VAMPIRE_SNO      ({ ({ HUGE, 0 }), ({ PLATE, 0 }) })
+
+#define BARD_SNO       ({ ({ SHIELD, 0 }), ({ PLATE, 0 }) })
+#define BARD_SYES      0
+#define BARD_GNO       0
+#define BARD_GYES      ({ ALLTYPES, ALLMATERIALS })
+
+#define BARBARIAN_SNO  ({ ({ MAGICAL, 0 }), ({ SHIELD, 0 }), ({ PLATE, 0 }), ({ CHAIN, 0 }) })
+#define BARBARIAN_SYES ({ ({ BLUNT, 0 }), ({ SLASH, 0 }), ({ PIERCE, 0 }), ({ AMULET, 0 }), ({ RING, 0 }), ({ POLE, 0 }) })
+#define BARBARIAN_GNO  ({ 0, MAT_METAL })
+#define BARBARIAN_GYES ({ ALLTYPES, ALLMATERIALS })
+
+#define RANGER_SNO     ({ ({ PLATE, 0 }) })
+#define RANGER_SYES    ({ ({ POLE, 0 }), ({ MISSILE, 0 }), ({ RING, 0 }), ({ AMULET, 0 }), ({ BLUNT, 0 }), ({ SLASH, 0 }), ({ PIERCE, 0 }) })
+#define RANGER_GNO     ({ 0, MAT_METAL })
+#define RANGER_GYES    ({ ALLTYPES, ALLMATERIALS })
+
+#define SWASHBUCKLER_SNO  ({ ({ PLATE, 0 }), ({ HELMET, 0 }) })
+#define SWASHBUCKLER_SYES   ({ ({ SMALL|SHIELD, 0 }) })
+#define SWASHBUCKLER_GNO  ({ SHIELD, 0 })
+#define SWASHBUCKLER_GYES ({ ALLTYPES, ALLMATERIALS })
+
+#define NINJA_SNO      ({ ({ PLATE, 0 }), ({ CHAIN, 0 }), ({ SHIELD, 0 }) })
+#define NINJA_SYES      ({ ({ BLUNT, 0 }), ({ POLE, 0 }), ({ SMALL|PIERCE, 0 }), ({ SMALL|SLASH, 0 }), ({ MEDIUM|SLASH, 0 }), ({ MEDIUM|PIERCE, 0 }) })
+#define NINJA_GNO      ({ HUGE|LARGE, MAT_METAL })
+#define NINJA_GYES     ({ ALLTYPES, ALLMATERIALS })
+
+#define MAGE_SNO       ({ ({ PLATE, 0 }), ({ MEDIUM|PIERCE, 0 }), ({ MEDIUM|SLASH, 0 }), ({ SHIELD, 0 }), ({ LARGE|SLASH, 0 }), ({ LARGE|PIERCE, 0 }), ({ HUGE|SLASH, 0 }), ({ HUGE|PIERCE, 0 }) })
+#define MAGE_SYES      ({ ({ BLUNT, 0 }), ({ MAGICAL, 0 }), ({ 0, MITHRIL }), ({ RING, 0 }), ({ AMULET, 0 }) })
+#define MAGE_GNO       ({ LARGE|HUGE|CHAIN, MAT_METAL|ROCK|WOOD })
+#define MAGE_GYES      ({ ALLTYPES, ALLMATERIALS })
+
+#define THIEF_SNO      ({ ({ POLE, 0 }), ({ LARGE, 0 }), ({ HUGE, 0 }) })
+#define THIEF_SYES     ({ ({ PIERCE, 0 }), ({ SLASH, 0 }), ({ MISSILE, 0 }), ({ BLUNT, 0 }), ({ 0, LEATHER }), ({ RING, 0 }), ({ AMULET, 0 }), ({ 0, CLOTH }), ({ SMALL|SHIELD, 0 }) })
+#define THIEF_GNO      ({ SHIELD, MAT_METAL|ROCK|GLASS|CRYSTAL })
+#define THIEF_GYES     ({ ALLTYPES, ALLMATERIALS })
+
+#define PSION_SNO      ({ ({ HELMET, 0 }), ({ LARGE, 0 }), ({ POLE, 0 }), ({ HUGE, 0 }), ({ CHAIN, 0 }), ({ PLATE, 0 }), ({ SHIELD, 0 }) })
+#define PSION_SYES     ({ ({ LEGS, LEATHER }), ({ TORSO, LEATHER }), ({ LEGS, CLOTH }), ({ TORSO, CLOTH}) })
+#define PSION_GNO      ({ LEGS|TORSO, 0 })
+#define PSION_GYES     ({ ALLTYPES, ALLMATERIALS })
+
+#define CHAR_SNO       ({ ({ PLATE, 0 }), ({ HUGE, 0 }), ({ POLE, 0 }) })
+#define CHAR_SYES      0
+// #define CHAR_SYES      ({ ({ GLOVES, MAT_LEATHER }), ({ GLOVES, MAT_CLOTH }), ({ GLOVES, MAT_NATURAL }), ({ GLOVES|CHAIN, MAT_MITHRIL }) })
+#define CHAR_GNO       0
+// #define CHAR_GNO         ({ GLOVES, 0 })
+#define CHAR_GYES      ({ ALLTYPES, ALLMATERIALS })
+
+#define CLERIC_SNO     ({ ({ SLASH, 0 }), ({ PIERCE, 0 }) })
+#define CLERIC_SYES    0
+#define CLERIC_GNO     0
+#define CLERIC_GYES    ({ ALLTYPES, ALLMATERIALS })
+
+#define GUILDS ([ \
+"Fighter"     : FIGHTER; FIGHTER; FIGHTER_SNO; FIGHTER_SYES; FIGHTER_GNO; FIGHTER_GYES, \
+"Samurai"     : SAMURAI; FIGHTER; FIGHTER_SNO; FIGHTER_SYES; FIGHTER_GNO; FIGHTER_GYES, \
+"Swashbuckler": SWASHBUCKLER; FIGHTER; SWASHBUCKLER_SNO; SWASHBUCKLER_SYES; SWASHBUCKLER_GNO; SWASHBUCKLER_GYES, \
+"Morpher"     : MORPHER; FIGHTER; FIGHTER_SNO; FIGHTER_SYES; FIGHTER_GNO; FIGHTER_GYES, \
+"Garou"       : WEREWOLF; DRUID; DRUID_SNO; GAROU_SYES; DRUID_GNO; DRUID_GYES, \
+"Bard"        : BARD; THIEF; BARD_SNO; BARD_SYES; BARD_GNO; BARD_GYES, \
+"Paladin"     : PALADIN; FIGHTER; PALADIN_SNO; FIGHTER_SYES; FIGHTER_GNO; FIGHTER_GYES, \
+"Vampire"     : VAMPIRE; FIGHTER; FIGHTER_SNO; VAMPIRE_SYES; VAMPIRE_SNO; FIGHTER_SYES, \
+"Druid"       : DRUID; DRUID; DRUID_SNO; DRUID_SYES; DRUID_GNO; DRUID_GYES, \
+"Thief"       : THIEF; THIEF; THIEF_SNO; THIEF_SYES; THIEF_GNO; THIEF_GYES, \
+"Cleric_Mitra": CLERIC; CLERIC; CLERIC_SNO; CLERIC_SYES; CLERIC_GNO; CLERIC_GYES, \
+"Mage"        : MAGE; MAGE; MAGE_SNO; MAGE_SYES; MAGE_GNO; MAGE_GYES, \
+"Lunar"       : LUNAR; MAGE; MAGE_SNO; MAGE_SYES; MAGE_GNO; MAGE_GYES, \
+"Charlatan"   : CHARLATAN; THIEF; CHAR_SNO; CHAR_SYES; CHAR_GNO; CHAR_GYES, \
+"Necro"       : NECRO; MAGE; MAGE_SNO; MAGE_SYES; MAGE_GNO; MAGE_GYES, \
+"Psionicist"  : PSION; THIEF; PSION_SNO; PSION_SYES; PSION_GNO; PSION_GYES, \
+"Daemon"      : FIGHTER; FIGHTER; FIGHTER_SNO; FIGHTER_SYES; FIGHTER_GNO; FIGHTER_GYES, \
+"Barbarian"   : BARBARIAN; FIGHTER; BARBARIAN_SNO; BARBARIAN_SYES; BARBARIAN_GNO; BARBARIAN_GYES, \
+"Ranger"      : RANGER; FIGHTER; RANGER_SNO; RANGER_SYES; RANGER_GNO; RANGER_GYES, \
+"Ninja"       : NINJA; THIEF; NINJA_SNO; NINJA_SYES; NINJA_GNO; NINJA_GYES, \
+])

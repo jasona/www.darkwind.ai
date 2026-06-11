@@ -1,0 +1,17 @@
+Ranger Help for: poison arrow
+==============================
+
+SYNTAX:      poison arrow
+             poison bolt
+             taint arrow
+             taint bolt
+USAGE:       Specific terrains
+SLOT COST:   NA
+BASE SP:     10
+SKILL TYPE:  archery
+
+SUMMARY:
+This skill allows a Ranger to coat an arrow or bolt with poison, adding
+toxic damage to the next shot. The Ranger needs ammo and a vial of
+poison in their inventory. The 'taint' command is an alias for poison
+arrow/bolt.

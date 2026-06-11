@@ -1,0 +1,50 @@
+|GKB-- Active Druid Invocations ----------------------------------|000
+
+GL = guild level required to begin studying the invocation.
+Additional mastery levels require one more guild level each.
+
+|CKBInvocation Name         dhelp        GL    Current|000
+----------------------  ---------  ----  ---------
+
+Spirit Aura             aura          1    Marken
+Thorns                  thorns        2    Tellurian
+Living Vines            vines         3    Tellurian
+Stoneskin               stoneskin     3    Tellurian
+Engulf                  engulf        4    Daloan
+Scry                    scry          5    Tekali
+Whirlwind               whirlwind     6    Tekali
+Return to Earth         reclaim       7    Tellurian
+Frost Bolt              frostbolt     7    Tekali
+Flame Blade             flameblade    8    Daloan
+Sky Blade               skyblade      9    Tekali
+Twin Sky Blades         twinsky      10    Tekali
+Entangle                entangle     10    Tellurian
+Stump                   stump        10    Tellurian
+Purify Blood            purify       11    Marken
+Frenzy                  frenzy       12    Daloan
+Nature Step             naturestep   13    Tellurian
+Call Ravens             ravens       14    Tekali
+Wind Walk               windwalk     15    Tekali
+Eagle Eye               eagleeye     16    Tekali
+Locust Swarm            lswarm       17    Daloan
+Sunray                  sunray       18    Marken
+Mire                    mire         19    Tellurian
+Call Lightning          lightning    20    Tekali
+Silverback              silverback   21    Tellurian
+Earthquake              earthquake   22    Tellurian
+Renewal                 renewal      23    Marken
+Inferno                 inferno      24    Daloan
+Drown                   drown        25    Tekali
+Reincarnate             reincarnate  26    Marken
+Moonwell Draught        moonwell     27    chosen
+Living Wellspring       wellspring   28    chosen
+Primal Maelstrom        maelstrom    29    all four
+Worldroot Confluence    confluence   30    all four
+
+Use |CKBnwyfre|000 to see your current vessels.
+Use |CKBdscore|000 to see learned and available invocations.
+Most invocations spend only nwyfre.  Moonwell Draught also consumes
+profession materials; inspect exact ritual and companion materials
+with |CKBnwyfre ritual <name>|000 and |CKBcompanions|000.
+Use |CKBdhelp beginner|000 for a new-druid path through your first
+invocation, first grove, and first ritual.

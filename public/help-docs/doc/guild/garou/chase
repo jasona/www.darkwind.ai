@@ -1,0 +1,13 @@
+|GKO================================================================
+                         |CKOChase
+|GKO================================================================
+
+|YKOChase is a toggle that indicates whether you
+wish to pursue your prey should he leave the
+room. The prey may move in a way you cannot
+handle, such as through magical teleportation,
+and you will be unable to follow. Otherwise,
+when he flees, and you pursue him, you will be
+able to track his scent.
+
+|RKOSyntax: |YKBchase

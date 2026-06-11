@@ -1,0 +1,22 @@
+================================================================
+                   Garou Guild : Pack Commands
+================================================================
+In addition to the combat abilities and spiritual powers
+listed in 'ghelp shaman', 'ghelp guardian', and 'ghelp warrior',
+Garou in packs have access to the following commands.
+
+[Usable by all members]
+pt            - Talk on the pack line
+ept           - Emote to the pack line
+pack          - Shows all member of the pack
+pack on       - Shows members and their location
+lone          - Leave the pack
+
+
+[Usable by leader/keeper]
+adopt         - Adopt a lone wolf into the pack
+drive         - Drives a member from the pack
+
+[Usable only by leader]
+appoint       - Appoint a member as Keeper/Shaman
+disbandpack   - Disbands the pack

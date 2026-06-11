@@ -1,0 +1,17 @@
+make_unique_and_equip(string sFile)
+
+  An lfun defined for monsters. Clones an unique object into the 
+  monster using make_unique_obj and then proceeds to have the monster
+  equip the object. See make_unique_obj for more details about 
+  unique object cloning.
+
+  Note: Like make_unique_obj, this lfun returns 0 when it cannot
+        create a new clone. Useful for cloning non-unique items
+        on failure.
+
+  Example: 
+           if(!make_unique_and_equip("/obj/uniq_sword"))
+             make_and_equip("/obj/regular_sword");
+
+
+See also: make_unique_obj, make_and_equip, make_limited_and_equip

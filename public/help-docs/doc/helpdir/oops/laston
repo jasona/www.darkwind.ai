@@ -1,0 +1,12 @@
+===================
+ 
+SYNTAX
+======
+ 
+laston <player>
+ 
+DESCRIPTION
+===========
+ 
+Tells the last time <player> was logged on or if they are on since 
+they have been on.

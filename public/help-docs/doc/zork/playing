@@ -1,0 +1,28 @@
+Playing Zork
+
+From the Zork portal, type:
+
+  enter portal
+
+Once inside, commands are interpreted by the Zork parser.  Common commands
+include:
+
+  look
+  inventory
+  take <object>
+  drop <object>
+  open <object>
+  close <object>
+  read <object>
+  score
+  north, south, east, west, up, down
+
+Session commands:
+
+  zork save
+  zork restore
+  zork reset
+  zork exit
+  zork help [topic]
+
+Zork inventory is separate from normal Darkwind inventory.

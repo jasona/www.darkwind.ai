@@ -1,0 +1,9 @@
+/doc/attribute/phased_out
+
+Format: (Living_Object)->set_attribute("phased_out", iValue);
+
+Description:
+  While the Living_Object is phased_out, it will take
+  (random(21)+30)/100 less damage from WEAPON_DAM_MASK
+  type damage hits. The iValue is only used to turn the
+  attribute on or off.

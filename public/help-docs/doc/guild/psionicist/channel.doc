@@ -1,0 +1,9 @@
+_______________________________________________________________________________
+"Channel"         
+        The channelling power allows a psionicist to send his own mental
+        energy to others.  Each use of the power will restore 10 spell
+        points (but no hp) to another player.
+ 
+SP Cost:  15		Guild Level:  3		Potential Points:  2
+ 
+Command:  pchannel <target>

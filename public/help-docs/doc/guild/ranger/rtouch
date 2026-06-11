@@ -1,0 +1,16 @@
+Ranger Help for: gaia's touch
+===============================
+
+SYNTAX:      rtouch <target>
+USAGE:       Any terrain
+SLOT COST:   8
+BASE SP:     variable
+SKILL TYPE:  religious
+
+SUMMARY:
+This skill allows a Ranger to channel Gaia's restorative power through
+touch, healing the wounds of a target. The amount of hit points healed
+depends on the Ranger's wisdom, guild level, and connection to Gaia.
+The Ranger may use this skill on themselves or on an ally. Healing is
+more effective in the Ranger's primary terrain, where the connection
+to the land is strongest.

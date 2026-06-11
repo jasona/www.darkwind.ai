@@ -1,0 +1,16 @@
+Ranger Help for: prospect
+=========================
+
+SYNTAX:      prospect
+USAGE:       Mountain/hills only
+SLOT COST:   NA
+BASE SP:     15
+SKILL TYPE:  cartography
+
+SUMMARY:
+This skill allows a Ranger to search the surrounding area for mineral
+deposits such as gold, silver, and other ores. Prospecting can only be
+done in mountain or hills terrain. A successful prospect reveals whether
+the area contains mineable deposits and what type of minerals are
+present. This information is used in conjunction with the mine skill
+to extract ore nuggets for crafting arrow tips and other items.

@@ -1,0 +1,31 @@
+|CKB=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+|WKB                           THE QUEST SYSTEM
+|CKB=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+|YKODarkWind features a quest system that gives you objectives to
+complete for experience and gold rewards. Quests range from simple
+tasks like slaying a few monsters to multi-step adventures involving
+item retrieval, rescues, and escorts.
+
+|WKBGetting Started:|XX0
+
+|YKO  1. Type |YKBqlist |YKOto see all available quests.
+  2. Quests are color-coded by difficulty based on your level:
+     |GKBgreen |YKO= easy, |YKByellow |YKO= moderate, |RKBred |YKO= hard.
+  3. Use |YKBqinfo <number> |YKOto read a quest's description and rewards.
+  4. Use |YKBqaccept <number> |YKOto take on a quest.
+  5. Complete objectives, then collect your reward!
+
+|WKBKey Concepts:|XX0
+
+|YKO  You may accept multiple quests. All accepted quests track progress
+  automatically, so you do not need to choose an active quest.
+
+  Each quest has one or more |WKBobjectives|YKO. These tell you what to
+  do - kill certain creatures, find specific items, rescue someone,
+  or escort an NPC to safety. Use |YKBqstatus |YKOto check your progress.
+
+|CKB=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+|WKBSee also: |YKBhelp quests commands, help quests objectives,
+         help quests rewards
+|CKB=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=

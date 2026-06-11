@@ -1,0 +1,6 @@
+
+Shields are a form of damage mitigation. They act like simple forms of
+temporary health. A generic shield will block all forms of damage, but
+there are specific types of shields that will only block that type of
+incoming damage. Current shields are viewable through 'hp' or '.'
+

@@ -1,0 +1,13 @@
+Ranger Help for: ran
+====================
+
+SYNTAX:      ran <message>
+             eran <message>
+USAGE:       Anywhere
+
+SUMMARY:
+This command sends a message on the Ranger guild chat channel. All
+online Rangers will see the message. Use 'ran' for standard messages
+and 'eran' for emote-style messages. Guild chat is an out-of-character
+communication channel for Rangers to coordinate, ask questions, and
+socialize. Use 'ranhist' or 'rhist' to view recent chat history.

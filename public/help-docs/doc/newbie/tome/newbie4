@@ -1,0 +1,42 @@
+                      |CKB Chapter 4 - Domains
+                   |BKB-----------------------------------
+
+     |WKBDarkwind is divided up into a number of different areas called
+     Domains or Continents. When you enter the game you begin in the
+     Continent of Darkwind. There are five other domains: Souvrael,
+     Hyperborea, Kerei, Talamh Darag, and Underworld.
+     
+     Each domain has its own theme. Souvrael is a desert, and you must
+     carry water with you as you explore, lest you die of thirst.
+     Hyperborea is a frozen wasteland where the icy cold air can kill
+     you if you are not properly attired. Kerei is a jungle, complete
+     with malaria inflicting mosquitoes. Talamh Darag is a mystical
+     woodland based on celtic folklore and inhabited by many wondrous 
+     races such as elves, faeries or dwarves. Underworld can be as 
+     dangerous as it sounds. Here you will find thieves, drow, orcs 
+     and even the undead.
+     
+     There are a number of different ways to reach these domains. A ship
+     called the Fairweather will take you from realm to realm for a small
+     fee. Tickets can be purchased in the Harbour Master's office
+     (3e,2s,e,s,w). You can catch the ship 3 east of the Ticket Office.
+     Players can purchase ships of their own if they tire of waiting for
+     Fairweather. Do not try to swim to these realms. The ocean currents
+     are strong, and you will surely drown. You can, however, fly there.
+     Magical potions, special guild powers and items can allow you to fly
+     through the skies. Directions for flying and sailing ships can be
+     purchased in the scroll shop (6n,e). You can even have a Mage teleport
+     you to some of them.
+
+     The |YKO'where'|WKB command will tell you which Domain you are in, and possibly
+     the name of the wizard to whom the Realm belongs.
+
+     When you quit your session using the |WKO"quit"|WKB command, the game
+     will remember which domain you were in when you quit and you'll
+     start in that domain when you log in again. Since we recognize
+     that newbies might want to explore yet restart back in Darkwind,
+     newbies can use the |WKO"realm"|WKB command to set things up so that
+     they'll always start back in Darkwind, regardless of where they
+     were when they quit. To enable this feature, type |WKO"realm off"|WKB
+     and to reenable it so that you start in the realm where you quit,
+     type |WKO"realm on"|WKB. For more information, type |CKO"help realm"|WKB.

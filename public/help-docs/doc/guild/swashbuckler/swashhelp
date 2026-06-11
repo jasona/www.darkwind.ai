@@ -1,0 +1,18 @@
+Useful Swashbuckler Commands
+----------------------------
+sb, esb  - Talk to other Swashbucklers
+swho     - See which Swashbucklers are online
+stitle   - Set your title on the swho screen
+srestore - Fix problems with your hat when not in town
+
+endtech                    - End a technique earlier than normal
+nameweapon <wpn> to <name> - Personalize your weapons
+scheck                     - Check which techniques are in use
+
+sbhelp new    - Shows recent changes to the guild
+sbhelp styles - Quick reference file for blade styles
+
+sbhelp general - More in-depth guild information, including skills
+sbhelp skills  - A list of skills and their costs (included in 'general')
+sbhelp titles  - Shows titles for all guild levels
+sbhelp emotes  - Shows Swashbuckler emotes

@@ -1,0 +1,15 @@
+Purify Blood
+
+This spell is one of a druid's limited number of
+healing rituals.  It acts to purge poisons from
+the target's bloodstream, preventing them from
+doing any further damage.  At higher levels of
+mastery, it also has influence over alcohol in
+the bloodstream.
+
+Command: purify <target> (defaults to caster)
+Base Cost: 35
+Base Recovery: short
+Base Effect: heal (poisons), detox
+Base Duration: instant
+Guild Level: 11

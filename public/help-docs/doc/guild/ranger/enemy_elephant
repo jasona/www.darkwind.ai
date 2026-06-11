@@ -1,0 +1,16 @@
+
+Ranger Help for: enemy elephant
+===============================
+
+SUMMARY:
+Choosing elephant means your Ranger studies massive tusked beasts:
+elephants, mammoths, mastodons, and similar huge herd creatures.
+
+This is a specialized choice for plains, jungle, beach, and desert-themed
+hunters who expect to fight enormous animals rather than smaller predators.
+
+COMMAND:
+  setenemy elephant
+
+=============================================================================
+SEE ALSO: enemy, setenemy and terrains

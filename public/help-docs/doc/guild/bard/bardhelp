@@ -1,0 +1,37 @@
+BARD HELP
+
+Welcome to the Bard guild. Bards win through momentum, timing, morale,
+misdirection, and the right instrument in the right moment. This help system is
+meant to walk you from your first guild level into the deeper song system.
+
+If you are new, read these in order:
+
+  bardhelp start          Your first checklist as a Bard.
+  bardhelp general        What Bards are good at and how they play.
+  bardhelp songs          Performance, song forms, and hidden harmonies.
+  bardhelp patterns       Reviewing harmonies and pivots you have learned.
+  bardhelp instruments    Lutes, drums, flutes, harps, and other tools.
+  bardhelp combat         How to use songs during fights.
+  bardhelp support        How to help a party or a room.
+  bardhelp archetypes     Guild level 10 specializations.
+  bardhelp commands       Guild-level command list.
+
+Useful daily commands:
+
+  bscore                  Show Bard stats, instrument, archetype, Performance.
+  bpatterns               Show hidden harmonies and pivots you have learned.
+  bmon on                 Show Bard updates without typing bscore constantly.
+  bcmds                   Show your Bard commands in a level-friendly format.
+  fix lute                Restore your guild lute from anywhere.
+  instrument              Show and select carried Bard instruments.
+  help <command>          Show exact syntax for one command.
+
+Other topics:
+
+  bardhelp communication  Guild channels and Bard communication.
+  bardhelp ranks          Old Bard rank lore and titles.
+  bardhelp lute           Instrument and lute reference.
+
+The short version: keep music moving, vary your song forms, watch Performance,
+learn what your instrument changes, and at guild level 10 choose an archetype
+that matches the way you want to perform.

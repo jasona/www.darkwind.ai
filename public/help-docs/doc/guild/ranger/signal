@@ -1,0 +1,15 @@
+Ranger Help for: signal
+=======================
+
+SYNTAX:      signal <player> <message>
+USAGE:       Any terrain
+SLOT COST:   NA
+BASE SP:     1
+
+SUMMARY:
+This skill allows a Ranger to send a short message to another player
+through natural means - bird calls, wind patterns, and other nature
+signals. The target player receives the message regardless of distance.
+Only Rangers can send signals, but any player can receive them. The
+extremely low SP cost reflects the simplicity of using natural phenomena
+to carry messages. This is an in-character alternative to tells.

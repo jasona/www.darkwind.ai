@@ -1,0 +1,195 @@
+from /doc/wizard/shop
+*****************************************************************************
+This is documentation to explain creating a shop, using the shop inheritable.
+The new setup of any shop, will remove the backroom of the shop.  There is a
+storing object, that is left in the void.  You do not need to do anything for
+this to occur.
+
+In every shop you must:
+  #include <mudlib.h>
+  #include <treasure.h
+  #include <material.h>
+  #include <types.h>
+  inherit SHOP;         --> for the shop room.
+
+Do not inherit ROOM, SHOP does that already.
+
+There are a few functions which you have to define: (preferably in this order)
+
+set_shop_ob(this_object());
+  Setup the shop for this particular object.
+
+set_value_info( ({ ({ 200, 20 }), ({ 400, 17 }), ({ 600, 15 }),
+                   ({ 800, 13 }), ({ 1000, 11}), ({ 1400, 9 }),
+                   ({ 1500, 7 }), ({ 2000, 5 }), ({ 2500, 4 }),
+                   ({ 3000, 3 }), ({ 3500, 2 }), ({ 4000, 1 }) }) );
+
+  This function is used to set up how many similar items of a certain value
+  the shop will keep.  (Although it will still buy more than its max value,
+  it will not keep them, but it will destruct them.)  In the above example,
+  the shop will keep 20 items worth less than 200, 17 items less than 400,
+  etc, etc, 3 items less than 3000, 2 items less than 3500 and 1 item less
+  than 4000.  Items worth more than 4000 will be destructed.  The syntax
+  of the function is as follows, a 2 dimensional array (many arrays, within
+  on large array.)
+
+setup();
+  Setup this object.
+
+set_shopkeep(string str, string filename);
+  str = name of the shopkeeper.  filename = filename of the shopkeeper.
+  set_shopkeep("shopkeep","players/myname/shopkeep_guy");
+  NOTE: Do _NOT_ put a '/' up front of the "players" in this string.
+
+set_guard(string str, string filename);
+  str = name of the guard.  filename = filename of the guard for that shop,
+        that's called if the shop is robbed.
+  set_storeroom("players/myname/guard");
+  NOTE: Do _NOT_ put a '/' up front of the "players" in this string.
+
+set_shop_type(int arg);
+  arg = the bits which you are setting for the type of weapons and armours
+        this shop will buy.  You can set ALLTYPES for all armour and
+        weapons.
+  set_shop_type(ALLTYPES);
+  set_shop_type(HELMET|LARGE|BOOTS|SMALL);
+  set_shop_type(~PLATE);  // all types except plate
+
+set_shop_t_type(int iArg);
+  iArg = the bits which you are setting for the type of treasures this shop
+        will buy.  You can set TYP_ALLTREASURES for all of them.
+  set_shop_t_type(TYP_JEWELRY|TYP_FURNITURE);
+
+set_shop_material(int iArg);
+  iArg = the bits which you are setting for the material of objects this shop
+        will buy.  You can set ALLMATERIALS for all materials.
+  set_shop_material(MAT_GOLD|MAT_SILVER|MAT_COPPER);
+
+set_mat_spec(int arg);
+  arg = the bits which you set that the player can sell items of that material
+        for full value, not 1/2.  This includes the material of that item.
+  set_mat_spec(MAT_STEEL|MAT_MITHRIL);
+
+set_typ_spec(int iArg);
+  iArg = the bits which you set that the player can sell items of that type
+        for full value, not 1/2.
+  set_typ_spec(HELMET|GLOVES);
+
+set_t_typ_spec(int iArg);
+  iArg = the bits for the treasure types that the player can sell for full value
+  set_t_type_spec(TYP_BONES|TYP_MAP);
+
+set_typ_exclude(int iArg);
+set_t_typ_exclude(int iArg);
+set_mat_exclude(int iArg);
+  iArg = a type, treasure type, or material that you want the shop totally
+        barred from buying at all, regardless of anything else that is
+        allowed.  For example, a treasure of type TYP_GEM|TYP_BOOK
+        would normally be sellable at a shop that takes TYP_BOOK, but
+        not if you
+  set_t_type_exclude(TYP_GEM);
+
+NOTE:  You can set all of the bitfield functions again and again. The final
+       value will be the total bitfield you have passed, it 'ors' all the
+       passes together.
+
+set_sell();
+  Call this function to tell the inheritable that your shop will sell items.
+
+set_buy();
+  Call this function to tell the inheritable that your shop will buy items.
+
+add_stock(string filename, int number);
+  This is just like add_clone.  However, it puts these items in the store
+  object upon updating.  You can have multiple add_stock() functions.
+
+restock();
+  This stocks the store.
+
+  Note:  With add_stock and restock, you obviously want to restock the store
+         after your add_stock lines, preferably only once per reboot.
+
+There are a few functions already in the init of SHOP.
+You do not need to add_action these.
+  list:
+    - will list the items in the store.
+  sell:
+    - will allow the player to sell any thing they have, provided the shop
+      buys that type of item.  If the it is a specialty item, they will get
+      full price for it.
+  buy:
+    - will alloy the player to buy anything from the shop, provided they have
+      the money, and they can carry it.
+  value:
+    - will value anything on the player, and in the room, telling them what
+      they would get if they sold that item.
+  read:
+    - lets the player read the bounty list.
+  rob:
+    - lets a thief rob the store.
+  loot_me:
+    - will tell you how much cash the shop currently has.
+*****************************************************************************
+Below is an example of a general store that buys and sells anything.  It buys
+all items at half the set value except for MITHRIL items and GLOVES, which it
+pays full value for.
+
+
+#include <mudlib.h>
+#include <treasure.h>
+#include <material.h>
+#include <types.h>
+#include "hyper.h"
+inherit SHOP;
+
+void reset(int iArg)
+{
+   if(iArg) return;
+   ::reset(iArg);
+   set_terrain("city");
+   add_terrain("inside");
+   set_domain("hyperborea");
+   set_light(1);
+   set_short("Ivar's Northern Outfitters");
+   set_long("\
+A large fire burns in a fireplace along the north wall.  The windows\n\
+of this log building are shuttered against the howling wind and\n\
+freezing temperatures.  Tables and shelves are scattered about the\n\
+store where goods may be found.\n\
+Commands: <LIST {items}>, <BUY {item}>, <VALUE {item}>, or <SELL {item}>\n");
+   set_shop_ob(this_object());
+   set_value_info( ({ ({ 200, 20 }), ({ 400, 17 }), ({ 600, 15 }),
+                      ({ 800, 13 }), ({ 1000,11 }), ({ 1400, 9 }),
+                      ({ 1500, 7 }), ({ 2000, 5 }), ({ 2500, 4 }),
+                      ({ 3000, 3 }), ({ 3500, 2 }), ({ 4000, 1 }) }) );
+   setup();
+   set_shopkeep("shopkeep",HYPER + "monsters/ivar");
+   set_guard("guard",HYPER + "monsters/guard");
+   set_shop_type(ALLTYPES)             <-- half price for all items
+   set_shop_t_type(TYP_ALLTREASURES);  <-- half price for all items
+   set_shop_material(ALLMATERIALS);    <-- half price for all materials
+   set_mat_spec(MITHRIL);              <----  full price for mithril items
+   set_typ_spec(GLOVES);               <----  full price for gloves
+/*
+   since they are not set, there are no treasure type specialties,
+   and no type is excluded from being bought/sold here
+*/
+   set_sell();                         <----  you can sell stuff here
+   set_buy();                          <----  you can buy stuff here
+   add_stock(HYPER + "obj/torch", 2);
+   add_stock(HYPER + "obj/furmittens", 2);
+   add_stock(HYPER + "obj/furcloak", 2);
+   restock();
+
+   add_exit("east", HYPER + "town11");
+
+   add_look(({"fire","fireplace","large fire"}),"\
+A large fire burns in the fireplace, keeping the store nice and warm.\n");
+   add_look(({"windows","shutters"}),"\
+The shutters are closed to keep out the wind and the cold.\n");
+   add_look(({"tables","shelves","store"}),"\
+There is a lot of stuff here.\n");
+}
+
+/* EOF - Aeolus - 7/26/95
+ */

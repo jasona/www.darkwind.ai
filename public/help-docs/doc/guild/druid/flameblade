@@ -1,0 +1,13 @@
+|GKB-- Flame Blade -----------------------------------------------|000
+
+The druid draws on the Daloan current to temporarily enchant a weapon
+with savage flame, causing it to burst into
+fire.  This causes the weapon to deliver additional
+damage, and have a greater chance to hit.
+
+|CKBCommand:      |000 flameblade <weapon>
+|CKBBase Cost:    |000 60 Daloan nwyfre
+|CKBBase Recovery:|000 long
+|CKBBase Effect:  |000 enhance (low)
+|CKBBase Duration:|000 long
+|CKBGuild Level:  |000 8

@@ -1,0 +1,17 @@
+make_unique_obj(string sFile)
+
+  An lfun defined for all objects inheriting CLONE, which includes rooms
+  and monsters. Attempts to create a unique object and move it to the
+  calling object. Won't create an object if the object has already been
+  created through make_unique_obj or clone_unique_object previously
+  and such object is still in-game.
+
+  Note: make_unique_obj returns 0 if the clone is unsuccessful.
+
+  Example: 
+           if(!make_unique_obj("/obj/uniq_sword"))
+             make_obj("/obj/regular_sword");
+
+
+See also: make_unique_and_equip, make_obj, make_limited_obj, 
+          clone_unique_object

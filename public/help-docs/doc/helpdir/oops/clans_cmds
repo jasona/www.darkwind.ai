@@ -1,0 +1,48 @@
+Clan: Commands
+--------------
+
+Available to the entire MUD:
+cwar <#>          -- Look at information from wars that have already ended.
+cwar list            The information accessed via this command is deleted
+                     over time. Older wars vanish after awhile, etc.
+clans             -- List the available clans on Darkwind.
+claninfo <clan>   -- Read information about a particular clan.
+who <clan>        -- See who is logged on from a particular clan.
+wclan             -- Show all clan members logged on, sorted by clan reputation.
+wclan leader      -- Show all clan leaders logged on, sorted by clan reputation.
+
+
+Available to anyone in a clan:
+cl/ecl <msg>      -- Talk/emote on your clan channel.
+clhist            -- Display clan channel history.
+clwho             -- See who is logged in from your clan.
+cstat             -- See statistics about your clan.
+clleave           -- Leave your clan.
+clemote           -- Clan emote. Works on channels like normal emotes.
+                     Leaders can talk to James to have the emote customized 
+                     for their clan.
+cvote             -- Vote on outstanding clan issue (listed in cstat).
+checkclan         -- Check if you have unread message on your clan board.
+
+
+Available to clan members while in the Clan Operations Room:
+cdeposit <coins>  -- Deposit money into clan coffers.
+cwithdraw <coins> -- Withdraw money from clan coffers.
+cbalance          -- Show the number of coins currently in the coffers.
+
+
+Available to clan leaders:
+leadercmds        -- List all your leader-only commands.
+cinitiate         -- Add someone to your clan.
+cdismiss          -- Dismiss someone from your clan.
+cdeclare          -- Ask a clan leader if he/she wants to start a war.
+changedesc        -- Change description of a room in clan headquarters.
+                     Can only be used while in one of the rooms.
+cdescribe         -- Change the information shown in 'claninfo'
+caddissue         -- Add issue for members to vote on.
+cdelissue         -- Remove outstanding issue, preventing additional votes.
+ctithe            -- Set your clan automatic tithe amount.
+
+Please see "help clans" for a basic overview.
+Please see "help clans_basics" for a more detailed intro to clans.
+Please see "help clans_war" for warfare information.

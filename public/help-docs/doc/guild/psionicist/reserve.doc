@@ -1,0 +1,15 @@
+_______________________________________________________________________________
+"Psychic Reserve"   
+        This gives the Psionicist a 7th stat representing his inner
+        mind.  The stat maxes at 12 points.  Each point provides a
+        psychic reserve of 25 SP.  These points can be
+        withdrawn into regular sp for power casting purposes, but not
+        over the psionicist's normal sp limit.  The reserve does not
+        regenerate over time, and must be replenished at a cost of 2
+        SP per 1 reserve point replaced.  Each and every
+        increase of the psychic reserve takes 1 purchase point.
+        Psychic Reserve cannot be 'forgotten' once learned.
+ 
+SP Cost:  2 per point	Guild Level:  5		Potential Points:  1
+ 
+Command:  reserve <store/withdraw>

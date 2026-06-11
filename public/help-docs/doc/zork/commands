@@ -1,0 +1,16 @@
+Zork-Only Commands
+
+The Zork-only command path is intentionally small.
+
+  help [topic]       Read help from /doc/zork.
+  commands           List available Zork-only shell commands.
+  look, l            Look at the Zork portal room.
+  gossip <text>      Talk on the global gossip channel.
+  egossip <text>     Emote on the global gossip channel.
+  gossiphist [n]     Review recent gossip.
+  scores             List the top 50 Zork scores.
+  quit               Save and disconnect.
+
+After "enter portal", Zork's own parser handles Zork commands such as
+look, inventory, take, drop, open, close, read, score, save, restore, and
+directions.

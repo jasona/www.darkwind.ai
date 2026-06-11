@@ -1,0 +1,16 @@
+
+Ranger Help for: enemy insect
+=============================
+
+SUMMARY:
+Choosing insect means your Ranger specializes against ants, beetles,
+wasps, mosquitoes, mantises, and other many-legged chitinous creatures.
+
+This is a broad choice across forests, swamps, deserts, jungles, beaches,
+mountains, and underground spaces.
+
+COMMAND:
+  setenemy insect
+
+=============================================================================
+SEE ALSO: enemy, setenemy and terrains

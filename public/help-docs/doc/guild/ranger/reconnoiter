@@ -1,0 +1,17 @@
+Ranger Help for: reconnoiter
+=============================
+
+SYNTAX:      recon <direction>
+             reconnoiter <direction>
+USAGE:       Any terrain
+SLOT COST:   NA
+BASE SP:     40
+SKILL TYPE:  cartography
+
+SUMMARY:
+This skill allows a Ranger to scout an adjacent room without entering
+it, revealing information about what lies in that direction. The scout
+report includes creatures present, other players, notable items, and
+the terrain type. The amount of detail depends on the Ranger's skill
+level and perception. Reconnoiter is useful for planning routes and
+avoiding dangerous encounters. The alias 'recon' can be used for speed.

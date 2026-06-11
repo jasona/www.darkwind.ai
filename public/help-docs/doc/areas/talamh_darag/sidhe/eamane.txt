@@ -1,0 +1,11 @@
+Commands available:
+
+eheal             - Eamane casts a spell to heal you.
+eheal <player>    - Eamane casts a spell to heal another player.
+eequip            - Eamane equips all items on her.
+eunequip          - Eamane unequips all items on her.
+ewear <armor>     - Eamane wears a piece of armor.
+eremove <armor>   - Eamane removes a piece of armor.
+ewield <weapon>   - Eamane wields a weapon.
+eunwield <weapon> - Eamane unwields a weapon.
+ereport           - Eamane reports her hp & sp.

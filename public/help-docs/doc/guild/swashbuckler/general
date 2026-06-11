@@ -1,0 +1,40 @@
+Swashbucklers' Guild Information
+
+Welcome to the swashbucklers' guild.  This is a short list of
+commands, GL requirements, SP costs, and other information about
+the guild.  To get more complete information on a specific ability,
+type 'sbhelp <ability>'.  You can also view the list of guild
+emotes by typing 'sbhelp emotes', or the list of skills (without
+this preliminary information) by typing 'sbhelp skills'.
+
+There are several other commands you should be aware of.  To
+speak on the guild line, use 'sb <text>' or 'esb <text>'.  If
+you are GL 15, you can speak on the Blademaster line with
+'sbm <text>' and 'esbm <text>'.  You can view the swashbucklers
+online with 'swho'.  Finally, you can change your guild title by
+typing 'stitle <text>'.
+
+Many of a swashbuckler's attack powers work only with 'blades'.
+This includes any knife or dagger, as well as all one-handed
+swords, sabres, rapiers, etc.  If you find a weapon which you
+think fits this category, but which does not allow use of powers,
+please inform your guild coder, or use the bug command to report it.
+
+Most guild powers increase in effect as GL increases.  This is most
+evident in the blade styles, but also applies to many other powers
+such as sconsider.
+
+Flair is a spendable combat momentum resource. It starts at zero,
+builds during combat, and decays outside combat. Critical hits and
+wielding a weapon named with 'nameweapon' can generate additional
+Flair. Use 'sbhelp flair' for details.
+
+A one-line summary of the various blade styles is available under
+'sbhelp styles'.  Information about recent changes to the guild is
+available on the guild board and under 'sbhelp new'.
+
+'sbhelp skills' lists the special powers available to swashbucklers,
+as well as guild level, SP, and Flair cost requirements. Note that the costs
+listed are for neutral swashbucklers. You will find that skills are
+cheaper for chaotic swashbucklers and more expensive for lawful ones.
+Good and evil have no effect on swashbucklers' skill costs.

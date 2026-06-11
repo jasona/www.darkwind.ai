@@ -1,0 +1,236 @@
+                                                                 Rev. 6
+
+                                 |CKBUNIQUES
+                                 |BKB=======
+
+|CKBIntroduction:
+|BKB-------------
+|WKOThe purpose of this document is to define exceptional and unique objects
+as well as to state regulations governing their implementations into DW.
+This document is considered law and no exceptions are to be made.
+
+
+|CKBDefinitions:
+|BKB------------
+
+|YKBUnique      |BKB- |WKOAny weapon, armour, or object that performs some function
+              that cannot logically be explained by normal laws of 
+              physics, given the medieval technological level of 
+              Darkwind.  An item is considered unique if it exceeds the 
+              limits contained in ANY document pertaining to that 
+              particular item AND exceeds the rules governing 
+              exceptional items (see definition below). This can include 
+              but is not limited to the object's inherent qualities.
+              All new uniquesmust first be approved for balance before 
+              implementation.  An item can be made unique without it being 
+              required to be unique.
+
+|YKBExceptional |BKB- |WKOAny weapon, armour, or object that performs some function
+              more efficiently or with more positive benefits to the 
+              player (or objects that use it) or more severe
+              consequences to whatever is targeted by the item as 
+              regulated in documents containing guidelines for standard
+              related objects.  The nature of an exceptional can be but 
+              is not limited to the craftsmanship or philosphy regarding 
+              the object or its use or lack of (if beneficial). 
+
+
+|CKBRegulations:
+|BKB-----------
+
+|YKBUnique      |BKB- |WKOIt is the policy of Darkwind that wizards are allowed at
+              most one unique class object per 100 rooms.  Such items
+              must be created using |YKOmake_unique_object()|WKO.
+
+|WKBExceptional |BKB- |WKOIt is the policy of Darkwind that wizards are allowed at
+              most 15% of their items to be of exceptional quality.     
+              This 15% is 15% of all weapons, and armour.  If an object 
+              is not a weapon or armour but is still considered         
+              exceptional, then that item counts as part of the 15% of  
+              all weapons and armours.  This 15% is also a percentage   
+              of the total number in your area at any one time.         
+              Weapons, armour, and exceptional objects all contribute   
+              to the same 15%. For a 100 room area, this would be a total
+              of 15 items, including a unique.
+
+
+|CKBFurther Regulations:
+|BKB--------------------
+
+|YKBWeapons:
+          |WKOThe following qualities will make a weapon exceptional:
+          
+          |MKBQuality greater than 30.
+          Material composition containing MAT_ADAMANTITE.
+          A dodge bonus of 1.
+          A hit bonus of 1.
+          Gives one level of light/darkness.
+          |WKB^|MKBAny stat changes that are not net increases.
+          Allowing use by a normally restricted guilds.
+          |WKB^|MKBAn extra damage type on hit, ie DAM_GOOD.
+          |WKB^|MKBWeapon hits (see below)
+
+          
+          |WKOThe following qualities will make a weapon unique:
+          
+          |WKB^|MKBQuality greater than 50.
+          |WKB^|MKBAny 2 exceptional qualities.
+          |WKB^|MKBAny kind of healing.
+          |WKB^|MKBAny kind of increase in damage resistance, ie DAM_GOOD
+                or DAM_PIERCE.
+          |WKB^|MKBA dodge bonus greater than 1.
+          |WKB^|MKBA hit bonus greater than 1.
+          |WKB^|MKBGives more than 1 level of light/darkness.
+          |WKB^|MKBAny extra attacks/damage.
+          |WKB^|MKBAny net stat increases.
+          |WKB^|MKBArmor piercing damage, or 2 or more extra damage types.
+          |WKB^|MKBWeapon hits (see below)
+
+
+          |WKOThe following are just not allowed, period:
+          
+          |RKBWeapons may not sober a player.
+          Weapons may not make a player unsatiated.
+          Weapons may not lower a player's Soft level.
+          Weapons may not have a quality over 100.
+          **Weapons may not modify combat via the use of tmp_to.
+          Any weapon modification. ie: set_flaming
+          Weapons may not have a hit bonus of greater than 5.
+          Weapons may not have a dodge bonus of greater than 5.
+
+
+        |WKB* |YKOA weapon can contain a weapon_hit function without being
+          considered unique. If the hit_function does no additional damage,
+          then that item is not considered exceptional. It should be noted
+          that the coding wizard should not have an excess amount of
+          weapons yielding hit messages as it defeats the purpose of the 
+          message. If the weapon_hit function returns any value other than
+          0 (thus a bonus on damage), the weapon is considered exceptional.
+          If the weapon_hit is greater than 1, the weapon is considered
+          unique. This applies for the greatest possible bonus, not the
+          average.
+
+       |WKB** |YKOSome items will be able to use the tmp_to modifiers. This is
+          done on a case-by-case basis through a review of the wizards
+          IMP+ and must have valid reason. ie unique rewards on boss mobs.
+          
+        |WKB^ |YKOCharacterstics denoted with this symbol must be
+              set_no_save(1) in the reset function. As you can see
+              all uniques qualify for this. While the make_unique_object
+              code will handle this, it's just good form to put it into
+              the code to be safe.
+
+|CKBArmour:
+          |WKOThe following qualities will make an armor exceptional:
+          
+          |MKBQuality greater than 30.
+          A dodge bonus of 1.
+          |MKBAny stat bonuses:
+          |WKB    1 stat from level 1 to 44.
+          |WKB    3 stats from 46 to 64.
+          |WKB    5 stats from 65+.
+          |MKBAny single damage resistance:
+          |WKB    1 resist from level 1 to 44.
+          |WKB    3 resist from 46 to 64.
+          |WKB    5 resist from 65+.
+          |MKBGives one level of light/darkness.
+          |MKBA ring/amulet of AC 1 or 2.
+          |MKBAllowing use by normally restricted guilds.
+          
+          
+          |WKOThe following qualities will make an armor unique:
+          
+          |WKB^|MKBQuality greater than 50.
+          |WKB^|MKBAny 2 exceptional qualities.
+          |WKB^|MKBAny dodge bonus of more than 1.
+          |WKB^|MKBAny stat bonus of more than 5.
+          |WKB^|MKBAny resistance of more than 5.
+          |WKB^|MKBMultiple damage resistances.
+          |WKB^|MKBAny resistance to a physical damage type (DAM_SLASH etc.)
+          |WKB^|MKBA ring/amulet AC of 3 or more.
+          |WKB^|MKBGives more than 1 level of light/darkness.
+          
+  
+          |WKOThe following are just not allowed, period:
+
+          |RKBArmour may not sober a player.
+          Armour may not make a player unsatiated.
+          Armour may not lower a player's Soft level.
+          Armour may not have a quality over 100.
+          **Armour may not modify combat via the use of tmp_to.
+          Any permanant armour modification. ie set_thorned(1)
+          
+       |WKB** |YKOSome items will be able to use the tmp_to modifiers. This is
+          done on a case-by-case basis through a review of the wizards
+          IMP+ and must have valid reason. ie unique rewards on boss mobs.
+          
+       |WKB^ |YKOCharacterstics denoted with this symbol must be
+              set_no_save(1) in the reset function. As you can see
+              all uniques qualify for this. While the make_unique_object
+              code will handle this, it's just good form to put it into
+              the code to be safe.
+          
+|CKBObjects:
+          |WKOThe following qualities will make an object exceptional:
+          
+          |MKBGiving two (or more) levels of light/darkness.
+          |WKB^|MKBAny stat increases.
+          |WKB^|MKBAny kind of added resistance/weakness.
+          Quality greater than 30.
+          |WKB^|MKBAny extra damage/attacks.
+          
+          |WKO following are just not allowed, period:
+          
+          |RKBObjects may not have a quality over 100.
+          Objects may not modify combat via the use of tmp_to.
+          Objects may not have more than 1 qualifying characteristic.
+
+       |WKB^ |YKOCharacterstics denoted with this symbol must be
+              set_no_save(1) in the reset function. As you can see
+              all uniques qualify for this. While the make_unique_object
+              code will handle this, it's just good form to put it into
+              the code to be safe.
+
+|CKBConclusions:
+|BKB============
+
+|WKOThe purpose of this doc is not to target any one person in particular.
+It is to provide guildelines and regulations regarding objects. This
+doc can be revised at any time. Such revision will follow with posts to
+the wizboards. If you are unsure about the classification of an object,
+please talk to an IMP+. In addition, please provide a variety of strengths
+in the objects you place in your areas. Not everyone in every situation
+could possiblyhave the upper limits of all standard weapons and armour.
+A lot of times, kewl hit messages or even just a kewl looking weapon
+is enough to make it popular.
+
+Also note that there are very few rules concerning how good a unique item
+can be. This should not be taken to mean that uniques can be infinitely
+powerful, but rather that the power of uniques is often hard to quantify.
+Overly powerful uniques may be downgraded/removed at any time. This will
+be decided by the wizards at IMP+.
+          
+          
+|CKBRevision History:
+BKB----------------
+|WKORev. 6 - Changed to reflect even newer standards and include
+         objects. Color also added.
+
+Rev. 5 - Changed to reflect new weapon/armor standards.
+
+Rev. 4 - Added requirements for submitting uniques for review.
+         All changes are marked with a | at the far right side
+         of the doc.
+
+Rev. 3 - Fixed some typos, edited a few of the classifications to
+         reflect the way they've been used on the mud; namely, the
+         add_resistance for armour, the set_guild_allow for weapons
+         and armour, and the AC of amulets.
+
+Rev. 2 - Added clarifications to the 15% exceptional rule.  Also
+         made clarification to the hit_func damage occurance
+         limits for exceptionals.
+
+Rev. 1 - Added clarification as to making uniques.
+
+Rev. 0 - Initial release

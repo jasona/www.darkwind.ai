@@ -1,0 +1,28 @@
+SYNOPSIS
+        varargs int visible_to(object oItem, object oObserver, object oEnv)
+
+DESCRIPTION
+	Returns 1 if '<oItem>' is visible to '<oObserver>' in optional
+	environment '<oEnv>'. If '<oEnv>' is not suppled, it defaults to the
+	environment of '<oItem>'.
+
+	This function performs all standard checks including 'query_invis'
+	checks modified by the 'see_invis' attribute, 'query_inventory_hidden'
+	checks, and finally spectrum checks.
+
+	NOTE: It does not check whether '<oObserver>' and '<oItem>' are actually
+	      in the same environment or even have access to each other's
+	      environments in any way.
+
+EXAMPLE
+	// This first example will take an object 'sword' that is laying on the
+	// ground and if not visible to the player, tell them so.
+	object oObj;
+
+	oObj = present("sword", environment(this_player()));
+	if (!visible_to(oObj, this_player()))
+	  write("You see no sword here!\n");
+
+SEE ALSO
+	environment_visible, tell_visible, visible_inventory, visible,
+	query_invis, query_inventory_hidden, see_invis, present

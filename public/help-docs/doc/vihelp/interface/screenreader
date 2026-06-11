@@ -1,0 +1,23 @@
+Screenreader support.
+
+Screenreader support changes some command output so it is easier to hear through
+a screenreader.
+
+Common forms:
+
+set screenreader on
+  Turn screenreader support on.
+
+set screenreader off
+  Turn screenreader support off.
+
+set
+  Show your current settings.
+
+When screenreader support is on, some commands use plainer language, fewer
+visual tables, and less decorative formatting. The help command also checks
+/doc/vihelp first for screenreader-specific help topics, then falls back to the
+normal help system.
+
+Useful screenreader-friendly commands include look, actions, exits, npcs,
+players, items, inventory, score, and who.

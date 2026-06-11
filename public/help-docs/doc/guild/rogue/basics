@@ -1,0 +1,14 @@
+Rogue Help Doc
+
+cabal               roguehelp cabal for more info.
+emotes              roguehelp emotes for more info.
+roguehist           Rogue channel history.
+rogue/erogue <msg>  The rogue guild line.
+roguehelp           This screen.
+rogues              A listing of the rogues online.
+setrogue            Set various rogue features. 'help setrogue' for more info.
+powers              'help powers' for more info.
+pra(ctice) <skill>  roguehelp practice for more info.
+skills              Give a listing of your skills.
+
+You can get help on each of these with "help <power> or <skill>"

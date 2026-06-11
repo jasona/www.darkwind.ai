@@ -1,0 +1,7 @@
+|YRBAir ferry between Darkwind and Talamh Darag.\n\
+|YRB                                            \n\
+|YRBOur boarding fee is 2000 gold coins.        \n\
+|YRB                                            \n\
+|YRBJust 'board' the blimp if you wish to make  \n\
+|YRBuse of our services, and your captain will  \n\
+|YRBcollect the fee from you.                   \n\

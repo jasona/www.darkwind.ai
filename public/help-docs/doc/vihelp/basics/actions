@@ -1,0 +1,30 @@
+Actions.
+
+Use actions when you want to know what special things you can try in your
+current room.
+
+This is useful for screenreader users because some room details are hidden in
+descriptions, signs, objects, or local commands. Actions summarizes the most
+important exploration hooks in one place.
+
+Common forms:
+
+actions
+  List special actions, things to look at, and things to read in the room.
+
+interact
+roomactions
+readables
+  Other names for the same command.
+
+The output may include lines like:
+
+Actions here are "pull", "search", "touch", and "travel".
+
+Things to look at here are "altar", "pillar", and "markings".
+
+Things to read here are "read sign" and "read inscription".
+
+Actions are commands you can type directly. Things to look at are room details
+you can inspect with look, for example look altar. Things to read are shown as
+full commands, for example read sign.

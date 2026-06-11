@@ -1,0 +1,13 @@
+|GKO================================================================
+                         |CKORemember
+|GKO================================================================
+
+|YKOUse remember when you wish to know the locations
+of the items you have currently buried. It will
+display a short description of the item and its
+location. You must go to the location to dig up
+the item. You can only remember 15 items at a
+time. To clear the list of items you have
+remembered, use forget.
+
+|RKOSyntax: |YKBremember

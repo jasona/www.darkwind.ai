@@ -1,0 +1,17 @@
+
+Ranger Help for: survey(id)
+===========================
+
+SYNTAX:      survey/id
+USAGE:       Any terrain
+SLOT COST:   1
+BASE SP:     2
+SKILL TYPE:  knowledge
+
+SUMMARY:    
+This skill allows a Ranger to survey the type of terrain he or she is in.
+You will note some characteristics of the area and make a decision as to
+what terrain you are in. When a terrain is shown, it will be in its color.
+Also, if your are in your range, primary or secondary terrains, they will
+be show as well.
+

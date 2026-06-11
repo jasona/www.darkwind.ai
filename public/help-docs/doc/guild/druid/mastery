@@ -1,0 +1,29 @@
+|GKB-- Mastery And Study -----------------------------------------|000
+
+The mysteries of Gaea are many, and not easily understood.  Every
+secret discovered reveals a new question, a possible point of
+further study.  Druids now shape their craft through nwyfre
+invocations and rituals.
+
+Invocation mastery still has five levels.  The first level is
+basic knowledge: the druid can invoke the power at minimum
+effectiveness.  Deeper mastery improves the effect, duration,
+or recovery of that invocation depending on its nature.
+
+In order to learn an invocation, your Druid guild level must be
+equal to the level listed in |CKBdhelp spells|000.  For each additional
+level of mastery, your Druid guild level must be one higher.
+
+Use |CKBdscore|000 to see study points, learned invocations, Sacred
+Grove state, and profession-material guidance.  Use |CKBnwyfre|000
+to see your current spirit vessels, active rites, planet, time, and
+conjunction state.
+
+Invocations may only be studied at the Druid Grove inside the
+guild hall.  Rituals are learned there with:
+
+  |CKBlearn ritual <name>|000
+
+New druids should read:
+
+  |CKBdhelp beginner|000

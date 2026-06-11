@@ -1,0 +1,39 @@
+SYNOPSIS
+        object clone_limited_object(string name, int limit)
+DESCRIPTION
+        Clones a new object much like the clone_object efun would.
+        The difference, however, is that clone_limited_object will
+        register the new object with the unique tracking system
+        and only allow a limited number of instances of the object to
+        be in the game at a given time.
+        
+        Note that the pathname must be complete, which means there 
+        are no relative paths allowed.
+
+        NOTE: clone_limited_object will not check if the object in
+              question has been cloned before using clone_object.
+              Thus, it is entirely possible to clone several instances
+              of an object using clone_object and still get a valid
+              object from clone_limited_object even after there are more
+              objects in the game than desired. However, all calls to
+              clone_limited_object itself fully respect object limitations.
+              
+EXAMPLE
+        // Clone limited sword
+        object sword, sword2, sword3;
+
+        sword = clone_limited_object("/obj/sword", 2);
+        sword2 = clone_limited_object("/obj/sword", 2);
+        sword3 = clone_limited_object("/obj/sword", 2);
+
+        // Sword 3 above will be 0, since only two swords
+        // will be allowed in-game at a time.
+
+HISTORY
+        Originally created along with the new additions to UNIQUE_D daemon 
+        by James on January 17, 2004.
+
+SEE ALSO
+        blueprint(E), clonep(E), destruct(E), clones(E), load_name(E),
+        load_object(E), move_object(E), uids(C), program_name(E),
+        clone_object(E), clone_unique_object(E)

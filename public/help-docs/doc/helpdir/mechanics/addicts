@@ -1,0 +1,15 @@
+
+|WKBSYNTAX
+======
+|YKBaddicts
+
+|WKBDESCRIPTION
+===========
+
+|YKOGives a list of the current users and what percentage of their maximum
+possible online time they have been logged in for. ie. The higher the number
+the more that player has been here since their creation date.
+
+|WKONote: Assumptions have been made of people sleeping at
+least part of every day. :P
+

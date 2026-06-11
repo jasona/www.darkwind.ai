@@ -1,0 +1,47 @@
+--------------------------------------------------------------------------
+CODING IN GENERAL
+--------------------------------------------------------------------------
+What you code and how you code here at DarkWind are very important.
+First and formost is theme, as stated in multiple places, the theme
+of DarkWind has a fairly serious tone as well as being medieval in
+nature.  With the opening of New Domains, this is changing slightly,
+but the rule still applies.  You are required to code within the
+the theme of each domain and all domains are to have a fairly serious
+tone to them.  Areas such as Cartoon land, Cybertech, Silly land,
+Futuristic, etc will 100% not be allowed or tolorated period, so don't
+even bother to mention or ask about it.
+ 
+Values of objects are also an important topic.  As far as weapons and
+armours go, you should ALWAYS set_value(-1) on these objects and let
+them be autovalued.  If an object has some sort of unique property that
+doesnt get reflected in the autovalue, you can set_value(-1,<amount>)
+where amount is the amount to be added to the autovalue.  Its always
+great to make that neat object that is worth a fortune, but as a wizard
+you must always keep in mind game balance.  If too much money is put
+into the game, the economy of the game will get thrown out of whack.
+ 
+as far as rooms go, we no longer will approve rooms with 1 or 2 line 
+descs, nor will we approve rooms that don't have add_looks for every
+thing described in the rooms long or in other add_looks.
+ 
+Also, in general, if you feel the need to give a monster something
+of value, please give them an object of value over straight cash.  How
+often do you think monsters walk around with a fortune in cash on them.
+It is much more likely that a monster would carry around his favorite
+sword worth X money while on guard than it is that the guard would be
+carryig around a backpack full of X coins.
+ 
+Remember this simple rule when coding: "Quality is better than quantity".
+Anybody can code 200 boring rooms with random monsters or treasure.
+We want areas that are interesting as well as rewarding.
+ 
+There will also be some policies going into place soon on minimum
+coding requirements to become or stay a wizard.  We do not really want
+wizards that are not even remotly productive.  Part of being a wizard
+is learning to code and opening up an area.  If a person doesn't feel
+up to this then they would probobly do better as a player.  If a person
+wants to stay a wizard but doesn't feel upto opening and area, we can
+find you a project to work on in its place (we have plenty).
+ 
+--------------------------------------------------------------------------
+ 

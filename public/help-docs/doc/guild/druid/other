@@ -1,0 +1,37 @@
+|GKB-- Miscellaneous Druid Commands ------------------------------|000
+
+    Guild commands live under /cmds/guilds/druid/ (dhelp, dchat,
+druids, dscore, dhist, dtitle, resettitle, resettitlealt, nwyfre,
+ritual, etc.) and /cmds/guilds/druid/spells/ (active invocations
+and grove utility commands). See |CKBdhelp general|000 for the full help
+menu.
+
+|CKBattune|000 - Read the terrain(s) of the immediate area.
+
+|CKBdhist <#>|000 - List recent messages on the druid channel.  <#>
+   is the number of lines it goes back, with a maximum of 300
+   and a default of 30.
+
+|CKBdscore|000 - List your druid score report. This includes available
+   study slots, learned powers, grove status, and material guidance.
+
+|CKBdtitle|000 - Changes your title on the |CKBdruids|000 report.
+
+|CKBresettitle|000 - Changes your title to your Druid guild title (the
+   one you get when you advance guild level).  This is not the
+   title on the |CKBdruids|000 report, but the title used in |CKBwho|000,
+   |CKBfinger|000, and other places.
+
+|CKBresettitlealt|000 - Changes your title to a more feminine version of
+   your Druid guild title, eg. 'mistress' instead of 'master'.
+
+|CKBdruids|000 (also |CKBdwho|000) - Lists all druids on the mud, along with
+   a status report.  The status codes are:
+   D - dead
+   E - wiz+ editing a file
+   F - fighting
+   I - input mode (reading, writing, listing 'who', etc.)
+   M - muffed
+   [Idle] - idle
+
+|CKBdruids2|000 - Much like |CKBdruids|000, just a different format.

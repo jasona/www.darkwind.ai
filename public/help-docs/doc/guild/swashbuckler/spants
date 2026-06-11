@@ -1,0 +1,11 @@
+Pants - offensive trick
+------------------------------------------------------------
+A good swashbuckler revels in the chance to both show off
+his blade skills and embarrass his opponent to boot. By
+deftly relieving an enemy of his trousers, he accomplishes
+both in spades.
+
+GL:  7
+SP: 25
+command:  spants <target> (defaults to opponent if in combat)
+duration: instant

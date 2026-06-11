@@ -1,0 +1,4 @@
+Efchat is a basic fighter command that allows you to emote to other fighters
+on the guild line. Also see "fhelp fchat", "fhelp tog", and "fhelp fgrunt."
+
+Syntax is: efchat <text>

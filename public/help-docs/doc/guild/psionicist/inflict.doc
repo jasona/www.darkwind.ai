@@ -1,0 +1,11 @@
+_______________________________________________________________________________
+"Inflict Pain"    
+        This allows the psionicist to generate artificial feelings of
+        pain in the target.  It does no actual damage, but the target
+        will act as if his str and dex were much lower due to the intense
+        crippling effects of the power.  It has a variable duration based
+        on guild level.
+ 
+SP Cost:  40		Guild Level:  9	Potential Points:  3
+ 
+Command:  inflict <target>

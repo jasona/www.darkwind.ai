@@ -1,0 +1,11 @@
+This command allows you to steal a random amount of
+coins from a player.  Your chance of success is based
+on your dexterity and guild rank.  This is a Glevel
+2 power.
+
+Syntax: steal <player>
+
+The cost of this skill is lower for up to 10th Glevel.
+At 10th level, you will begin to pay 20 for the 
+increased effectiveness of the skill.
+

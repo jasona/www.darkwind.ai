@@ -1,0 +1,16 @@
+Ranger Help for: locate
+=======================
+
+SYNTAX:      locate
+USAGE:       Wilderness
+SLOT COST:   NA
+BASE SP:     15
+SKILL TYPE:  husbandry
+
+SUMMARY:
+This skill allows a Ranger to sense the location of their bonded animal
+follower. The Ranger receives information about which direction and
+approximately how far away their companion is. This skill only works in
+wilderness terrain. If the follower has died, the skill will report that
+no companion can be found. Locate is useful when the Ranger and their
+follower have become separated.

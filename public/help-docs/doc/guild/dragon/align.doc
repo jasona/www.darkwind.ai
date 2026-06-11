@@ -1,0 +1,27 @@
+|MKB--------------------------------------------------------------------------------|000
+|YKBType          |BKBDam Type                      |GKBExtra Info|000
+|MKB--------------------------------------------------------------------------------
+|000                                |WKUCHROMATIC - EVIL|000
+|YKBBlack         |BKBACID      |GKB                                                    |000
+|YKBRed           |BKBFIRE      |GKB Evil Dragons receive a STR and DEX bonus, and an   |000
+|YKBWhite         |BKBCOLD      |GKB INT and WIS penalty. They gain an advantage in     |000
+|YKBBlue          |BKBLIGHTNING |GKB melee combat to make up for their weaker damage    |000
+|YKBGreen         |BKBDISEASE   |GKB from SP.                                           |000
+|MKB--------------------------------------------------------------------------------|000
+                                |WKUGEM - NEUTRAL|000
+|YKBCrystal       |BKBLIGHT     |GKB Neutral Dragons do not get any stat bonuses or     |000
+|YKBTopaz         |BKBCOLD      |GKB penalties. They gain a much higher HP and SP       |000
+|YKBAmethyst      |BKBPOISON    |GKB regen however. They have the advantage of being    |000
+|YKBEmerald       |BKBDISEASE   |GKB able to pick melee or sp damage as their main      |000
+|YKBSapphire      |BKBSOUND     |GKB choice.                                            |000
+|MKB--------------------------------------------------------------------------------|000
+                                |WKUMETAL - GOOD|000
+|YKBBrass         |BKBDISEASE   |GKB Good Dragons receive a STR and DEX penalty, and an |000
+|YKBCopper        |BKBACID      |GKB INT and WIS bonus. They gain an advantage in       |000
+|YKBBronze        |BKBLIGHTNING |GKB damage from SP to make up for their weaker damage  |000
+|YKBSilver        |BKBCOLD      |GKB from combat.                                       |000
+|YKBGold          |BKBFIRE      |GKB                                                    |000
+|MKB--------------------------------------------------------------------------------|000
+|GKB Except for transforming, you will need to stay in your declared alignment  |000
+|GKB to perform your Dragon abilities.                                          |000
+|MKB--------------------------------------------------------------------------------|000

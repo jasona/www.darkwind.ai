@@ -1,0 +1,13 @@
+Ranger Help for: cost
+=====================
+
+SYNTAX:      cost (or: tally)
+USAGE:       Any wilderness terrain.
+
+SUMMARY:
+Shows the experience and gold costs to advance your level, guild
+level, and each stat. Also shows how many stat raises you have
+remaining for your current level and your current experience/gold.
+
+=============================================================================
+SEE ALSO: improve, advancement, glevels

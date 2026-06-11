@@ -1,0 +1,15 @@
+SPELL NAME  : Remove Curse
+SPELL SYNTAX: Remove <target> <object>
+SPELL COST  : 30 SP
+DESCRIPTION : This spell serves two different purposes.  First, it
+              relieves the target of any curses inflicted ON the
+              player around the mud. These are curses like diseases,
+              and the like.  Note: Does not include viking. The
+              correct syntax to remove a curse like this is:
+                      Remove <target players name>
+
+              The second type of curse are curses on objects that
+              players carry.  I.e. Weapons and Armour.  To remove
+              a cursed item from a player, you use the following
+              syntax:
+                Remove <target players name> <name of cursed object>

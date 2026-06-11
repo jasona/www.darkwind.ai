@@ -1,0 +1,13 @@
+_______________________________________________________________________________
+"Telekinetic Storm" 
+        This is an impressive attack based on the concepts behind the
+        Ballistic Attack power.  The damage it causes is based solely
+        on what you are carrying at the time.  It will take everything
+        in your inventory that you aren't wearing or wielding and hurl
+        it at the target in a single, giant telekinetic attack.  It can
+	make it either very expensive or very cheap, depending on how 
+	much you are carrying at the time.
+ 
+SP Cost:  25		Guild Level:  4		Potential Points:  3
+ 
+Command:  tstorm <target>

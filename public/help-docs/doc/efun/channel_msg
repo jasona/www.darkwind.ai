@@ -1,0 +1,25 @@
+SYNOPSIS
+        varargs void channel_msg(string sMsg, string sChannel, int iMinLevel,
+          int *aiWrapSettings, mixed xInfo, object *aoExclude,
+          status tRemote, status tNoHist)
+
+DESCRIPTION
+        Sends a message sMsg to channel sChannel that users at least
+        level iMinLevel will receive.
+        sMsg: The message to the channel. "\n" will be added to the end.
+        sChannel: The channel the message will be broadcast to. The default
+          channel is "shout".
+        iMinLevel: The minimum level a user has to be to hear the message.
+          It will default to 1 if no arg is given.
+        aiWrapSettings: An array used by break_string to handle wrapping
+          the message over multiple lines. Default is ({ 75, 5, 1 }).
+        xInfo: A mixed variable that will either resolve to this_player()
+          or an array of Users. It is used to resolve if the sender is
+          invis, an APP, their cap_name and real_name. In most cases
+          you would send 0 as the default arg.
+        aoExclude: an object array of users to exclude from hearing
+          the message.
+        tRemote: Should the message be sent to the other port (ie from
+          dev to live or live to dev). Only certain channels allow for
+          this setting, mostly wiz channels.
+        tNoHist: If 1, the message won't show up in the channel's history.

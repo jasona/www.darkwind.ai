@@ -1,0 +1,40 @@
+------------------------------------------------------------------
+Transmogrifier Help         By: Bullseye a.k.a Scyrus
+------------------------------------------------------------------
+This help file will show you how to create a Transmogrifier and to
+transfer it from your inventory to your test character, or to any
+other character for that matter.  At this point if you're wondering
+what the hell a Transmogrifier is, then I'll explain.  First of all,
+a Transmogrifier is more commonly referred to as a mog or moggy. So
+that's what I'm going to call it for the rest of the doc.  Moggy's
+were made for the purpose of aiding you in modifying your test chars
+stats, hence the file name test_aid.  The following is a list of 
+stats and other things you can do with a Transmogrifier:
+------------------------------------------------------------------
+Edit your:
+level          Guild Level          Wpn Level
+Str            Dex                  Con
+Int            Wis                  Chr
+Money          tmpstats             Guild Stats
+Race
+------------------------------------------------------------------
+Or you can:
+Consider Targets
+Heal back to full hps/sps
+------------------------------------------------------------------
+So now I'll get down to the important stuff.  Your first step will
+be to clone the object.  You can do this by typing:
+
+clone /objects/testchar/test_aid.c
+
+After you've done this you'll want to transfer the object to your
+test char to do that, you'll have to execute a move_object code.
+I've put an example below:
+
+execute move_object(present("moggy", this_player()), find_player("scyrus"));
+
+Obviously, all you'll have to do to customize this example is
+change "scyrus" in the find_player() to "thenameofyourtestchar"
+
+Once you've completed this entire process switch over to your
+test char and type moghelp for a list of commands.

@@ -1,0 +1,9 @@
+Swashbuckler Title - theme skill
+------------------------------------------------------------
+Changes the swashbuckler guild title, which is displayed as
+part of the swho command.
+
+GL:  1
+SP:  0
+command:  stitle <text>
+duration: N/A

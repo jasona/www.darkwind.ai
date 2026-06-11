@@ -1,0 +1,49 @@
+                        add item - Adds an item to your menu
+                    addlong item - Adds an item to your menu and prompts for
+                                   all item settings one after another
+          associate <playername> - Grants associate privileges for that player
+                      associates - Lists all players with associate privileges
+               automail <number> - Activates the automailer to send an expense
+                                   report to the owner every <number> days.
+                         balance - Shows the current balance of the business'
+                                   account
+                        checkash - Shows the current level of ash stocked
+                                   at the Ash Bank
+                           close - Close the pub
+                     clrexpenses - Clears all accounting info [Irrevocable]
+                    clrmenu menu - Clears your menu [Irrevocable]
+                 delete <number> - Removes the specified menu item
+                deposit <amount> - Adds to the business' account
+                       expenses  - Shows a detailed list of accounting
+                                   information. 
+                            hire - Allows you to change the server in
+                                   your business
+                 insert <number> - Inserts an item before the specified item
+           itemdump <number|all> - Dumps an itemrestore string of either the
+                                   specified item or entire menu
+                     itemrestore - Allows you to enter an itemrestore string
+                                   for quick menu/item entry
+         list <product> <number> - Shows all information for the
+                                   specified menu item
+                    mailexpenses - Mails a copy of the expense report to your
+                                   e-mail address
+   moveitem <number> to <number> - Moves an item from the first slot to the
+                                   second slot
+                            open - Opens the business
+                          owners - Shows the command list for the business
+                sales [notowner] - Shows sales report for all items in business
+                                     [notowner] will exclude owner sales
+               setbusname <name> - Sets a new name for the business
+               setcolor <number> - Sets the color of the menu item
+                         setdesc - Lets you to edit the long description
+                                   of the business
+                  sethp <number> - Sets the hp healing of the menu item
+              setmargin <number> - Sets the margin of the menu item
+             setmessage <number> - Sets the drinking message of the menu item
+                setname <number> - Sets the name of the menu item
+                  setsp <number> - Sets the sp healing of the menu item
+            setstrength <number> - Sets the strength of the menu item
+                        topsales - Lists customers that have spent the most
+                                   gold at your business
+            unassociate <player> - Removes associate privileges for that player
+               withdraw <amount> - Withdraws money from the business' account

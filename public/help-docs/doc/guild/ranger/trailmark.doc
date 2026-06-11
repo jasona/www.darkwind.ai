@@ -1,0 +1,18 @@
+
+Ranger Help for: trailmark
+==========================
+
+SYNTAX:      trailmark <message>
+USAGE:       forest,plains,swamp,desert,jungle,hills,road,beach,
+             underground,mountain,arctic,barren,outside
+SLOT COST:   3
+BASE SP:     15 sp 
+SKILL TYPE:  creation
+
+SUMMARY:    
+This skill allows a Ranger to trailmark a message into the surrounding
+terrain. Trailmarks can only be seen by other Rangers, however, they
+only last for so long. A Ranger can use them to help find his or her
+way back or to warn of impending danger around the next turn to other
+Rangers.
+

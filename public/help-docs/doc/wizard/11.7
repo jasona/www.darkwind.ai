@@ -1,0 +1,91 @@
+Player races
+============
+
+The Basics
+----------
+Player races are not races in the normal sense, but rather racially based
+cultures. Each culture is drawn from an in-play area inhabited by that
+culture. Not all areas in DarkWind contain cultures that are appropriate
+for a player race, nor are all appropriate cultures included in the set
+of player races. The minimum criteria for inclusion as a player race
+are that:
+
+        1) The race is drawn from an in-play area.
+        2) A reasonable population of the race be present in the area.
+        3) The area contains a city, camp, or other permanent or
+           semi-permanent gathering place for members of that race.
+
+Although player races are drawn from npc areas, players and npc do not
+have the same kind of race attribute. Player races are specific to a 
+particular culture while npc races are broader groupings along more
+traditional racial divides. For example, the player race "high elf" is
+drawn from the Elf Kingdom, but the npcs of the kingdom are of the
+racial type "elf".
+
+New player races can be added quite easily, and it is expected that over
+time the list of available races will grow considerably.
+
+
+Racial Bonuses
+--------------
+Races are balanced according to a point-based power allocation scheme.
+The point scheme is intended to provide a level of objectivity in
+balancing each race against the other. It is probably possible to abuse
+the system. Don't do it, it's bad.
+
+Each common race is allowed a total of 100 racial power points worth of
+extra powers and characteristics. Common races are available to players
+in the Hall of Races on the appropriate continent.
+
+Each exotic race is allowed a total of 125 racial power points. Exotic
+races should have a separate race room in the originating area where
+players can reincarnate into that race only.
+
+Currently there are the following powers allowed for races:
+
+    Exp bonus:            Bonus to exp gained.
+    Stat bonus/penalty:   % bonus/penalty to base stats.
+    Alignment tendencies: Bonus to moves towards, penalty to moves away.
+    Size:                 Affects relative weapon sizes.
+    Dark vision:          Vision in various levels of darkness.
+    Magic/Psi resistance: Resist magic, psionics.
+    Eat/drink bonus:      Effectively increases capacity and detox/desate.
+    Damage resistance:    Damage reduction vs types. (also vulnerability)
+    Weapon mastery:       Unaffected by out-of-spec weapon penalties.
+    Hyperborean:          Resistance to Hyper cold effect, resist cold,
+                          vulnerable to heat.
+    Souvraeli:            Resistance to Souv heat dam, resist heat,
+                          vulnerable to cold.
+    Winged:               Allows wing piercings.
+    Flight:               Allows flight.
+    Race change:          Allows free race changes.
+    Breath weapon:        Allows use of breath player command.
+    Damage type:          Extra damage type on attacks.
+    SP regen rate:        Increases the base regen rate of sp.
+    Languages:            Free (fluent) languages besides common.
+
+
+Race rooms
+----------
+Race rooms allow players to describe the races available there and
+reincarnate into them. DW, Hyper and Souv have race rooms for common
+races from those continents, whereas exotic races have their own race
+rooms.
+
+
+Technical information
+---------------------
+The guildd.h header contains information on racial guild restrictions.
+
+The race.h header contains most of the information about each race.
+
+The RCOLOR define should be deprecated, but is messy to change over. In
+the future, keys that correspond to the old race set should be removed.
+
+The RACE_MAP define contains the details about the new set of races and
+their powers. DO NOT access RACE_MAP directly to extract racial
+characteristics. Use the function query_race_data() instead. (see the
+funhelp for query_race_data() for usage)
+
+------
+Version 1:  Bob - April 08, 2003

@@ -1,0 +1,13 @@
+Counter - blade technique
+------------------------------------------------------------
+As a swashbuckler increases in skill, he is able to exploit
+openings left by an opponent's attack to strike a quick
+counterattack. While using this skill, the swashbuckler will
+counter a percentage of incoming attacks. This skill does
+not provide any defense against the incoming attacks, only
+allows the counterattacks.
+
+GL:  9
+SP:  15 / counterattack
+command:  counter
+duration: technique mode

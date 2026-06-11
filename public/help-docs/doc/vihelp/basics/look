@@ -1,0 +1,28 @@
+Look.
+
+The look command describes your current room.
+
+When screenreader support is on, look uses a conversational room summary. It
+tells you where you are, gives the first sentence of the room description, lists
+the exits, then lists visible NPCs, visible players, and visible items.
+
+Common forms:
+
+look
+  Describe the room.
+
+l
+  Short alias for look.
+
+look <thing>
+  Look directly at a named person, creature, item, or room detail.
+
+actions
+  List room-specific actions, things to look at, and things to read.
+
+exa <thing>
+examine <thing>
+  Other ways to look closely at something.
+
+If the room is dark or you are blind, look may not be able to describe your
+surroundings.

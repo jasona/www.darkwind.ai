@@ -1,0 +1,76 @@
+ACTION BLOCKS
+
+There is now a bitfield on all living objects to use for restricting
+their actions.  These should be used in all spells/powers/instances where
+you wish to restrict the actions of another, and all abilities that would
+be affected by a block such as these should check for it before allowing
+the action.
+Please note that the purpose of blocks is NOT to make a guild totally
+ineffective.  You should be able to restrict enough powers to make a
+character feel limited, yet leave enough powers untouched so that they
+have some options remaining.
+
+To use the defined block bits,
+#include <blocks.h>
+in your file.  Here are the defined blocks.
+
+BLK_BLIND
+This is for when a character can't see.  Looks, glances, searches and the
+like should check for this.  Remember that sight is the most important
+sense, and things that impose this restriction should be VERY rare.
+
+BLK_CONCENTRATION
+This will disrupt intense concentration.  Primarily this will ruin psionic
+abilities, but perhaps some magical spells as well.  Examples might include
+a swarm of tiny gnats that bite all over you or get into your ears and
+buzz really loud.
+
+BLK_ENTANGLE_ARMS
+If you want to physically restrain a persons arms.  Primarily this will
+ruin most fighting abilities, many thief abilities, and casting of spells
+that require physical freedom to gesture or manipulate components.
+
+BLK_ENTANGLE_LEGS
+For when you want to physically restrain someone from moving.  Any physical
+movement should check for this.
+
+BLK_ENTANGLE
+This is just a combination of the last two, so you can set them both at
+once if you wish.
+
+BLK_PARALYZE
+When you want someone restrained magically or in some other nonphysical
+way, use this rather than an entangle.
+
+BLK_SILENCE
+If this is set on a player, he cannot use abilities that depend on the
+transmission of sound.  These include spellcasting that requires speech,
+playing musical instruments, etc.  Use of this block on players by other
+players should follow all the normal PK check rules.  
+
+BLK_SILENCE_PK
+// As of Dec 17 2003 this block will be phased out and
+// BLK_HEARING should be used instead.
+This block was intended to be the PK version of BLK_SILENCE but
+was used instead for 'deafening' a player.
+
+BLK_HEARING
+Setting this block will stop a player from receiving normal
+communication. The full range of effects will be determined
+by the coders.
+
+
+USING THE BLOCKS
+These functions are defined for your use:
+set_block(int);
+Use this to set the block you want, using the definitions above.
+
+remove_block(int);
+Use this to remove a block, with the definitions given above.
+
+query_block(int);
+Check the status of any of the block bits, using the definitions above
+as arguments.  With no arguments, the entire block field is returned.
+
+
+Antcrusher - Jan 28, 1996

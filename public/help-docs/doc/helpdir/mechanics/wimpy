@@ -1,0 +1,19 @@
+|WKBSYNTAX
+==========|YKB
+
+wimpy # 
+
+|YKOWhere # is equal to the percentage of remaining HP you want to run at
+
+|WKBDESCRIPTION
+===========|YKO
+
+Toggle wimpy mode. If you are in wimpy mode, your legs will run away
+if your hit points goes below whatever percent of your HP you have
+designated.
+
+Default for a new player is brave mode. You will not run away.
+
+This is no secure thing. It might save you, however some monsters hack away 
+more than your allowed % of your HP, and you might find yourself dead 
+without warning. Also, some monsters can run as fast as your legs.

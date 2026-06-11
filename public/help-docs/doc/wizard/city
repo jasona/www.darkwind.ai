@@ -1,0 +1,40 @@
+                         The City of Darkwind 
+                         -------------------- 
+               WC                                     $  - Bank
+              | |   /\/\                              AG - Adventurer Guild
+              | | SM|  |SS                            BG - Bard Guild
+            WS| |   |  |                              C  - Castle Area        
+              | |   |E |DD                            CC - Chambre of Commerce
+           MS_| |___|A |                              DD - Drink Donation Room
+          /  LANE    S |                              FD - Food Donation Room
+	  |          T |FD                            GR - Guild Removal
+          |  _______   |                              H  - Statue of Honor
+          |J|       | R|                              HM - Harbour Master
+          |E|     PS| O|                              HT - Hotel
+          |W|       | A|                              I  - A player owned Inn
+          |E|    [==  D|PL                            JS - Jewel Store
+          |L|NI     |  |                              K  - Keg Shop
+       C  | |   _ HT|  |H                             MG - Mage Guild
+       |  | |   | T |  |  C                           MS - Magic Shop  
+  _____T_/  |___|_T_|  |__|_P______                   NI - Newbie Inn
+ <   VILLAGE               MAIN    Jetty              NR - Newsroom
+ <   ROAD            COT    ROAD  |                   NS - Newbie Shop
+ <___     ___________   ________  |                   P  - A player owned Pub
+   MG\ X / N R  | A |  |        | |                   PG - Psionic Guild
+    MG|E|I S    P G |K |CC    SG| |                   PK - PK Room
+      |N|       K   |H |        |  \_                 PL - Pillory
+    TS|O|P        WT|A |K     GR|__  |                PO - Post Office
+      |R|           |R |           | |    Public      PS - Pet Shop
+    NR| |$          |NR|BG       HM|  === Docks       R  - Hall of Races
+      |R|           | O|           | |                S  - Ship Shop
+      |D|__________/  A|        [==  |                SC - Ship Customizer
+    JS|____________   D|P          |  === Private     SG - Swashbuckler's Guild
+       I   P    P  \   |___        | | S  Docks       SM - Weapons/Armour Smith
+           O    G   |   _  |_______| |                SS - Scroll Shop
+                    \/\/ |___________|SC              T  - Temple of Mitra
+                                WH                    TS - Taylor's Shop
+                                                      TT - Tattoo Parlour
+                                                      WC - Wedding Chapel
+                                                      WH - Warehouse
+                                                      WS - Wedding Shop
+                                                      WT - Weapons Training

@@ -1,0 +1,48 @@
+                            Smithing
+
+    Smithing allows you to create armour from various metals you've 
+mined from across the world. The ore is processed into bars, and the 
+bars are shaped into the objects you're creating.
+
+Getting started:
+  1. Buy profession tools in the profession building, 4e, n from Center of
+     Town.
+  2. Use 'mine ore' in suitable terrain, or hire a mining worker.
+  3. Convert ore into bars in the smithing room.
+  4. Use 'quickcraft <type> <slot> <main bar> <secondary>'.
+
+    Druids can use their silver sickle instead of a mining pick.
+
+    In the smithing room in the profession building, you can convert
+ore into bars. It takes 5 ore to make 1 bar. Bronze Bars take 4 Copper
+Ores and 1 Tin Ore. Steel Bars require 4 Iron Ores and 1 Mithril Ore.
+
+    Smiths can make banded, chain, plate and scale armour. They can make 
+boots, chestplates, helmets and legplates of each type. Bronze armours
+don't have a level restrictions. Iron Armours have a level restriction
+of level 20. Steel Armours have a level restriction of level 45.
+Adamantite Armours have a level restriction of level 65. All armours
+require 6 Bars of their type to craft, plus 4 Bars for any secondary
+metal you add to the armours.
+
+    Bronze armour can be made by anyone, but your skill will max at 100
+crafting them. Iron armour needs a skill of 60, and will max at 200. Steel
+armour requires a skill of 100, and will max at 500. Adamantite armour
+needs a skill of 200 to craft, and will max at 1000.
+
+    All Iron, Steel, and Adamantite armours have an innate bonus of 1 hp.
+Iron armours will have special enhancements of 1. Steel armours will have
+special enhancements of 3. Adamantite armours will have special enhancements
+of 5. The enhancements are based on the secondary metal, or the base metal
+if you do not add any secondary metal.
+
+    Crafted profession gear can also be improved later with
+'inlay <crafted item> with <shard>' in the profession building. This is
+separate from the secondary metal used during smithing.
+
+    Adamantite - Strength        Mithril - Wisdom
+    Bronze - Fire Resistance     Platinum - Intelligence
+    Copper - Disease Resistance  Silver - Dexterity
+    Gold - Charisma              Steel - Constitution
+    Iron - Poison Resistance     Tin - Lightning Resistance
+    Lead - Cold Resistance

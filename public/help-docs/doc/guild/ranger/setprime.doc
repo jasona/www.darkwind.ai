@@ -1,0 +1,33 @@
+
+Ranger Help for: setprime
+=========================
+
+SYNTAX:      setprime/setprime <your primary terrain name here>
+USAGE:       Any wilderness terrain.
+
+SUMMARY:    
+Allows the Ranger to set his or her primary terrain. YOU MAY ONLY USE
+THIS COMMAND ONCE. Available terrains are: 
+
+         forest  plains  swamp  desert  jungle  hills
+         beach   arctic  barren underground  mountain 
+
+A Ranger's primary terrain is the terrain in which he/she grew up in. A
+Ranger's primary terrain will affect such things as fighting, allowing
+him/her to fight better due the fact that he/she knows the terrain better.
+It will also affect what kinds of followers a Ranger might attract, or
+what kinds of animals he/she might try to sooth. It will affect almost
+everything a Ranger does, choose it carefully.
+
+In direct combat, a Ranger's primary terrain currently grants better
+defensive footing and stronger strikes. While fighting in primary terrain,
+the Ranger currently gains +20 dodge and roughly +20% damage. Many Ranger
+skills also feel more efficient or more dangerous in that terrain.
+
+Choose your primary terrain carefully, for it is a one time command. Use
+'rhelp <terrain>' to read about each terrain before choosing.
+
+NOTE: Primary and secondary terrains can be the same.
+
+=============================================================================
+SEE ALSO: setsecond, setenemy, terrains, survey and followers

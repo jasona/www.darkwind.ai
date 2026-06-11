@@ -1,0 +1,10 @@
+Guild Chat Lines
+
+There are three guild chat lines, the druid, heirophant,
+and gaea lines.  The druid line is heard by all druids, 
+The gaea line is heard by both druids and garou, while the
+heirophant line is heard only by those of GL 28 and up.
+
+dchat, edchat - Talk or emote on the druid line.
+hd, ehd - Talk or emote on the heirophant line.
+gaea, egaea - Talk or emote on the Gaea line.

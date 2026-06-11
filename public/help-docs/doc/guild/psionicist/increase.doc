@@ -1,0 +1,12 @@
+_______________________________________________________________________________
+"Increase Density"         
+        Similar to Reduce Weight, the psionicist alters the
+        structure of a piece of armor to make it denser and
+        therefore more resistant to attack.  However, the
+        process also adds weight to the armor, and it is
+        more mentally taxing than Reduce Weight.
+        The bonus is affected, but not determined, by guild level.
+ 
+SP Cost:  100		Guild Level:  11		Potential Points:  3
+ 
+Command:  increase <object>

@@ -1,0 +1,34 @@
+Receive Damage is the function that allows living creatures to take damage.
+The function is defined as:
+
+varargs int receive_damage(int iAmount, int ibDamType, int iAbsorbFlag,
+  object oFrom, status iNoExp, status tFromPlayer)
+
+iAmount is an int defining the amount of damage taken by the target.
+
+ibDamType defines the weapon type being used, defined in
+/secure/include/types.h
+
+iAbsorbFlag flags are defined in /secure/include/living.h
+#define AFLAG_APIERCE  1
+#define AFLAG_ARMOR    2
+#define AFLAG_ABSORB   3
+#define AFLAG_ALL      4
+  *AFLAG_APIERCE will reduce the damage the living will absorb, but does not
+      negate armor altogether.
+  *AFLAG_ARMOR will increase the damage the living will absorb based
+      on their AC.
+  *AFLAG_ABSORB will bypass AC to determine damage.
+  AFLAG_ALL will return the initial iAmount bypassing resists and AC.
+  *Initial damage is first reduced by any damage resists.
+
+oFrom is the object giving the damage, or in the case of an object, should be
+the holding/wearing living.
+
+tNoExp is a 0 if the living gets experience for the damage, 1 if
+  no exp is to be awarded the player.
+
+tFromPlayer should be 0 if it's an object/room/npc, or 1 if the
+  damage is being done by another player.
+
+receive_damage() is defined in /secure/living.c

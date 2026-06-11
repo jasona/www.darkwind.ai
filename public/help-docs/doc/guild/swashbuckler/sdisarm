@@ -1,0 +1,12 @@
+Disarm - offensive trick
+------------------------------------------------------------
+A swashbuckler soon becomes adept at relieving enemies of
+their weapons. A failed attempt will cause the target to
+become enraged and attack, but a successful attempt will
+cause it to drop its weapon. There is no effect on targets
+using natural weaponry--claws, fists, fangs, etc.
+
+GL:  6
+SP: 40
+command:  sdisarm <target> (defaults to opponent if in combat)
+duration: instant

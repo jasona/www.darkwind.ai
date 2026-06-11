@@ -1,0 +1,17 @@
+|YKOAlthough many languages exist on DarkWind, adventurers can get away, for
+the most part, by using the language known as "common". The common tongue
+originated among the humans living in and around the City of Darkwind,
+and grew in popularity as the city gained in prominance in the affairs of
+the world.
+
+All players can automatically speak common, by using the |YKB"csay" |YKOcommand.
+In addition, many socities are fluent in one or more other languages.
+Some of these languages are racially based, while some are more regional
+in nature. Players can speak in their native language using the |YKB"rsay"
+|YKOcommand. Those that do not have a native language will speak in common.
+It is possible for those of sufficient intellect to study at a language
+academy and learn additional languages as well.
+
+The |YKO"say" |YKOcommand will allow you to speak in your default language.
+If you know more than just common, you can switch your default language
+using the |YKB"set language" |YKOcommand.

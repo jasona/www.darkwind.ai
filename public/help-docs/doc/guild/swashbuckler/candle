@@ -1,0 +1,11 @@
+Candle - utility skill
+------------------------------------------------------------
+Being the intrepid explorers that they are, swashbucklers
+usually carry candles in their belt pouches in case they
+find themselves exploring a dark place.  You can light one
+of your candles with this command.
+
+GL:  1
+SP: 20
+command:  candle
+duration: very long

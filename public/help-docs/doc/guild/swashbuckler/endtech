@@ -1,0 +1,11 @@
+Endtech - blade technique
+------------------------------------------------------------
+The endtech command is used to stop using your techniques.
+Using endtech with a style name as an argument will end just
+that technique. Without an argument, endtech alone will end
+all of your techniques.
+
+GL:  1
+SP:  0
+command:  endtech [style]
+duration: instant

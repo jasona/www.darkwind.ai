@@ -1,0 +1,148 @@
+The first lines in any light source should be:
+ 
+#include <mudlib.h>
+#include <treasure.h>
+#include <material.h>
+inherit LIGHT;
+ 
+These lines set up the object to be a light source and will
+allow calls to the light master object as defined below.
+ 
+--------------------
+ 
+set_name("name");
+ 
+        string name.  Adds the name passed in to the id list.
+ 
+set_alias("alias");
+ 
+        string alias.  This is another name for the object.  It doesn't
+        appear anywhere, but it can be used by the player.
+ 
+set_alt_name("alt_name");
+ 
+        string alt_name.  This is yet another name for the object.
+        It doesn't appear anywhere, but it can be used by the player.
+ 
+set_short("short");
+ 
+        string short.  This is the description seen in the player's
+        inventory.
+ 
+set_long("long.\n");
+ 
+        string long.  Sets the long description of the object to long.
+       I added the ".\n" in the LPC line above to remind you that you
+       should add the period and newline in the long description
+       because LPC doesn't add it in for you.  This is what the player
+       will see when they look at the object.
+ 
+set_weight(weight);
+        integer weight.  This is the weight of the object.
+ 
+set_treasure_type(TYP_LIGHT|TYPE2|...);
+ 
+        Needless to say, you must at the very least set the treasure type
+        to TYP_LIGHT.  If there ere other properties to the light, they
+        should be added as well.
+ 
+set_material(TYPE1|TYPE2|...);
+ 
+        bitfield TYPE1, TYPE2, ....
+ 
+set_max_fuel(int);
+ 
+        The integer amount for the maximum amount of fuel the object can
+        hold. If this line is left out, it will default to 1000.
+        IMPORTANT: This line MUST go before the line set_fuel() line.
+ 
+set_fuel(int);
+ 
+        This is the amount of fuel that the light source will start with.
+        For every 1 point of fuel, the light source will stay lit for 2
+        seconds.  So a set_fuel(30) would stay lit for 1 minute.
+        IMPORTANT: This line must go after set_max_fuel();
+ 
+add_fuel(int);
+ 
+       This will add fuel to light source upto a maximum of max_fuel.
+       this function will almost always be called from an external
+       source for the purpose of refilling a light source.
+ 
+set_reusable(int);
+ 
+       Is the object reusable, or will it burn itself up in the process of
+       being used.
+         1 = reusable;
+         0 = burns up in use.
+       If this line is left out, it will default to burn itself up in use.
+ 
+set_can_light(int);
+ 
+        Is the object always on, or can it be turned on and off.  The flag
+        is as follows:
+          1 = can be lit and extinguished.
+          0 = is always on.
+        If this line is left out, it will default to being able to be lit.
+        If object is always on, you don't need either set_max_fuel,
+        set_fuel, or set_reusable.  If an object is always on, this
+        variable needs to be set BEFORE set_power();
+ 
+set_value(value);
+ 
+        integer value.  This is the selling value of the object.  The
+        buyback value is twice this value.  Also, the amount of fuel left
+        in the object will modify the value of the object if it uses fuel.
+        Please note, that the value is determined by a light source with
+        a full supply of fuel.  So if you set_value of 100 but then only
+        put 1/4 of the fuel in it to fill it, you will get a reduced price.
+ 
+set_power(int);
+ 
+        How much light does the light source give off?  Default is 1.
+ 
+set_read("object","message.\n");
+ 
+        string read.  This is what the player will see if they read the
+        object.  I added the ".\n" in the LPC line above to remind you
+        that you should add the period and newline in the long description
+        because LPC doesn't add it in for you.
+ 
+set_info("info.\n");
+ 
+        string info.  This will be displayed to the owner of the object
+        if he identifies it.  This line is required on all objects magical
+        or mundane.  This is a good place to put special information about
+        the object that a player would not normally have access to.
+        A hint of the weight could be given, as well as if the object has
+        any special uses.  If the item is truely a mundane item, state in
+        the set_info that there are no special properties with the item.
+ 
+set_no_buy(n);
+ 
+        status n.  Set this to 0 if you want people to be able to
+        buy and sell this to and from the store.  Set to 1 if you
+        don't.  If you don't set this command, it will default to
+        buyable.
+ 
+
+void set_no_sell(int iX);
+
+Pass a 1 as the parameter to have it be refused in stores. Note that this
+works a bit differently from no_buy, in that the more times you call
+set_no_sell(1), the more times you then have to call set_no_sell(0) to
+get it to a sellable state again. This is done so that the creator can
+set it no_sell, and if a guild uses no_sell to prohibit players from selling
+checked-out/borrowed items, when the guild calls set_no_sell(0) when the
+object is done being borrowed, the item will still not be sellable.
+
+int query_no_sell(); 
+
+
+Returns sellable status.
+set_steal(n)
+ 
+        status n. Set to 1 if you want to make the item unstealable
+        by thieves.  Don't abuse this command!  It is meant only for
+        things like quest items or objects great importance.  If you
+        don't add this command, item defaults to stealable

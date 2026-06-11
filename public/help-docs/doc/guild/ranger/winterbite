@@ -1,0 +1,16 @@
+Ranger Help for: winter's bite
+================================
+
+SYNTAX:      winterbite <target> or wbite <target>
+USAGE:       Any terrain
+SLOT COST:   8
+BASE SP:     variable
+SKILL TYPE:  religious
+
+SUMMARY:
+This skill allows a Ranger to channel the fury of winter into a cold
+damage attack against a target. The biting cold saps the strength of
+the enemy. Winter's Bite is more effective in arctic and cold terrains
+and during the winter season, when the power of frost is at its peak.
+The damage dealt depends on the Ranger's wisdom, guild level, and
+the current terrain and season.

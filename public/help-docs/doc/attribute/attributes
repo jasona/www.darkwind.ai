@@ -1,0 +1,47 @@
+/doc/attribute/attributes
+
+|GKBCurrent global attributes
+
+  |YK0- |YKBALLOW_ALL_ARMORS|YK0 => Bypass guild armour restrictions
+  |YK0- |YKBALLOW_ALL_WEAPONS|YK0 => Bypass guild weapon restrictions
+  |YK0- |YKBALLOW_ALL_WSPECS|YK0 => Allows wielding weapons without wspec penalty
+  |YK0- |YKBALLOW_DUAL_WIELD
+  |YK0- |YKBIGNORE_RACE_SIZE
+  |YK0- |YKBauto_detect_traps|YK0 => Automatically detect TRAP objects
+  |YK0- |YKBcarry_capacity_bonus|YK0 => Modifier to carrying capacity
+  |YK0- |YKBdarkwind_poisons|YK0 => List of poison objects
+  |YK0- |YKBdetect_alignment
+  |YK0- |YKBexp-bonus-percent|YK0 => Extra exp gained
+  |YK0- |YKBextra_hp_function
+  |YK0- |YKBflight
+  |YK0- |YKBhyperborea_warmth|YK0 => Used to prevent freezing
+  |YK0- |YKBimmunity_to_traps|YK0 => Don't take damage from TRAP objects
+  |YK0- |YKBphased_out
+  |YK0- |YKBphased_out|YK0 => Phase out of physical realm. Mage spell generally
+  |YK0- |YKBresist_cold
+  |YK0- |YKBresist_heat
+  |YK0- |YKBscript_cmds_modifier
+  |YK0- |YKBsee_invis
+  |YK0- |YKBsee_terrain
+
+
+|GKBSpecial System Attributes
+
+  |YK0- |YKBfake_idle_time|YK0 => Wizzies can act as idle
+  |YK0- |YKBkill_tracker|YK0 => Measure kills
+  |YK0- |YKBno_tell_window|YK0 => Block tells (tellblock command)
+  |YK0- |YKBnogossip|YK0 => Block player from accessing gossip channel (nogossip command)
+  |YK0- |YKBIGNORE_LOOKS|YK0 => Override notifying player if they're looked at
+  |YK0- |YKBparty_available|YK0 => If open to partying (pavail command)
+  |YK0- |YKBmonitor_xp/monitor_gp/monitor_time|YK0 => Measure xp/gold gain (xpmon command)
+  |YK0- |YKBlog_combat_numbers|YK0 => Log taget's combat to /log/players/
+  |YK0- |YKBshow_combat_numbers|YK0 => Show detailed combat numbers
+
+
+|GKBArea Specific:
+
+  |YK0- |YKBarena-gladiator|YK0 => domains/darkwind/arena/obj/badge.c & arena command
+  |YK0- |YKBdarkwind_garden_heal|YK0 => DarkWind garden heal tracker
+
+
+funhelp <attribute> to get more details on each.

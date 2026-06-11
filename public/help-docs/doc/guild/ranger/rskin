@@ -1,0 +1,16 @@
+Ranger Help for: skin animal
+=============================
+
+SYNTAX:      skin <corpse>
+USAGE:       Any terrain
+SLOT COST:   3
+BASE SP:     variable
+SKILL TYPE:  creation
+
+SUMMARY:
+This skill allows a Ranger to skin the corpse of a slain creature,
+obtaining meat and hide in the process. The hide can be fashioned into
+a leather pouch, and leftover meat can be eaten for sustenance. The
+size of the pouch depends on how large the corpse was. The Ranger must
+be wielding a slash type weapon to perform the skinning. How much
+usable material the Ranger gets depends on skill and dexterity.

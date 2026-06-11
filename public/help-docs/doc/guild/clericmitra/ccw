@@ -1,0 +1,10 @@
+SPELL NAME  : Cure Critical Wounds | Ranged Cure Critical wounds
+SPELL SYNTAX: Ccw <target>         | RCcw <target>
+SPELL COST  : 40 SP                | 80 SP
+DESCRIPTION : Through the love of Mitra and the strength of the Cleric's faith,
+	      the Cleric has the ability to provide massive healing for those
+	      who have met with disaster. Invoking this aspect of Mitra's love
+	      provides healing dependent upon both the faith and devotion
+	      of the cleric. Though Mitra's love is strong, healing at a
+	      distance will prove more taxing and its success dependent upon
+	      the Cleric's devotion.

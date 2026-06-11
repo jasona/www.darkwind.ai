@@ -1,0 +1,20 @@
+Ranger Help for: skilltree
+==========================
+
+SYNTAX:      skilltree (or: tree)
+USAGE:       Anywhere.
+
+SUMMARY:
+Shows the complete Ranger skill tree organized by branch: Survival,
+Cartography, Hunting, Husbandry, Attack, and Archery.
+
+Each skill is marked with its status:
+  [*] = learned (ready to use)
+  [ ] = available to learn (prerequisites met)
+  [-] = locked (prerequisites not yet met)
+
+The tree also shows slot costs and prerequisite skills for each entry.
+Use this to plan which skills to learn next.
+
+=============================================================================
+SEE ALSO: learn, slots, skills, advancement

@@ -1,0 +1,4 @@
+If an object is cursed, you can't get rid of it by any normal
+methods.  You can remove a cursed item by typing 'uncurse <object>'
+at Dierdre.  This will cost 500 coins per item.  Members of the
+Cleric Guild can also remove curse.

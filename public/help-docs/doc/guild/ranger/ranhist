@@ -1,0 +1,13 @@
+Ranger Help for: ranhist
+========================
+
+SYNTAX:      ranhist
+             rhist
+USAGE:       Anywhere
+
+SUMMARY:
+This command displays the recent history of the Ranger guild chat
+channel. It shows the last several messages sent on the 'ran' channel,
+including timestamps and who sent each message. This is useful for
+catching up on conversations you may have missed while away. The
+'rhist' command is a shorter alias for 'ranhist'.

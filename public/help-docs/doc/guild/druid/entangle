@@ -1,0 +1,14 @@
+|GKB-- Entangle --------------------------------------------------|000
+
+The druid draws on the Tellurian current, causing tough, clinging vines to
+grow almost instantly out of the ground and
+wrap around the target, rendering it incapable
+of attacking or broad motions.  Some small
+range of movement is possible, however.
+
+|CKBCommand:      |000 entangle <target> (defaults to attacker)
+|CKBBase Cost:    |000 55 Tellurian nwyfre
+|CKBBase Recovery:|000 long
+|CKBBase Effect:  |000 entangle
+|CKBBase Duration:|000 medium
+|CKBGuild Level:  |000 10

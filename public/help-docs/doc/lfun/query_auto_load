@@ -1,0 +1,23 @@
+SYNOPSIS
+	int query_auto_load()
+
+DEFINED IN
+	ob.c
+
+DESCRIPTION
+	Returns the bit_flag on an object showing if it is an auto_load object
+	or not.
+
+	NOTE: This flag is automatically set on an object that is created
+	      from a players autoload list when they login. It is also set
+	      on an object that is passed to the function 'register_auto_obj'
+
+EXAMPLE
+	// This example checks if an object 'hat' on the player is an
+	// autoload or not, and if so tells the player
+	object oObj = present("hat", this_player());
+	if (oObj->query_auto_load())
+	  write("That hat is an autoloader!\n");
+
+SEE ALSO
+	register_auto_obj, remove_auto_obj, query_auto_obj, set_auto_load

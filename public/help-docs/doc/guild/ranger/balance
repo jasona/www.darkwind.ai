@@ -1,0 +1,15 @@
+Ranger Help for: balance weapon
+================================
+
+SYNTAX:      balance <weapon>
+USAGE:       Any terrain
+SLOT COST:   4
+BASE SP:     15
+SKILL TYPE:  creation
+
+SUMMARY:
+This skill allows a Ranger to carefully adjust the balance of a weapon,
+improving its accuracy in combat. The weapon must be non-magical for
+the Ranger to work with it. The degree of improvement depends on the
+Ranger's skill level and dexterity. A well-balanced weapon can make
+the difference between a hit and a miss in the heat of battle.

@@ -1,0 +1,13 @@
+
+Ranger Help for: rebuild
+========================
+
+SYNTAX:      rebuild quiver
+USAGE:       Any wilderness terrain.
+
+SUMMARY:    
+If a Ranger is having problems with his/her commands, they can try 
+using this command to refresh their quiver. This is logged.
+
+=============================================================================
+SEE ALSO: repair

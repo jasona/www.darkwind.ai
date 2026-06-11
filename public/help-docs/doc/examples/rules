@@ -1,0 +1,50 @@
+These are the rules for a wizard.
+ 
+1. You may not help other players, even if they lost points due to
+   lost connection. They have to go to the post office and ask an ARCH+,
+   or use bug.
+ 
+2. Never attack a player or kill him. If a player behaves badly, file
+   the complaint to an ARCH or SAGE.
+ 
+3. Do not make 'deadly' traps. A player must never die because he didn't
+   know what happens in the next room. If some room is very dangerous,
+   make some hint (like the giant footprints beside the giant lair).
+ 
+4. Never initialize the destination of an object outside your castle.
+   You are not alloed to make a monster that can walk outside your
+   castle period.
+ 
+5. Never generate messages that looks like something it isn't (good
+   and precise rule :-). That is, don't try to fool the player that
+   someone says something when it isn't true etc.
+ 
+6. If you have a "test" character, make sure is isn't seen in the top
+   score list.  He must not be a wizard either.  He must also be set
+   to a test character by using the following command on him:
+     set_testchar <wizardsname>.
+ 
+7. Try to avoid making devices, situations which makes the players
+   loose experience if they are adventuring or examining objects.
+   Players should be rewarded for adventuring and discovering things.
+   If they get killed... Well, they will then loose some experience,
+   but this is a special case!
+ 
+8. The game is supposed to be in the "long distant past", and thus no
+   modern things should exist. If you want some kind of airplane, use a
+   flying horse instead etc.
+ 
+9. If you make available some kind food or drink that heals, then the
+   healing must cost on average 4 gp/hp (or more). The amount of healing
+   must also be limited per reset.
+ 
+10.Teleporting items should be VERY restricted, and very rare. They must
+   not allow teleportations to anywhere, but only to one or more predefined
+   room. Never to a specific player. It must cost at least 50 spell points
+   to use each time.
+ 
+11.Never give objects or money to players ever!  If you have something
+   that you need tested out, either og on your test character or have
+   another wizard help you out.
+ 
+For additional information: 'read basics'.

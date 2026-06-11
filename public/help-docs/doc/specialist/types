@@ -1,0 +1,34 @@
+You must pick a size category in which to specialize.  Remember
+that each size also gives specialization in the next larger
+size; 'small' is really small and medium, 'medium' gives medium
+and large, and 'large' allows use of large and huge weapons.
+
+Small weapons:   daggers, saps, small short swords, hand axes, etc.
+Medium weapons:  larger short swords, maces, clubs, longer swords
+Large weapons:   longswords, battleaxes, long maces, shorter staves
+Huge weapons:    awl pikes, two-handed swords, greatbows, long staves
+
+You may choose a damage type or combination to specialize in.
+Damage types are slash, pierce, blunt, and cleave, and you
+may choose none, one, or two of these types.  If you choose
+two, a weapon must have both types in order to fit into your
+specialty.
+
+Slash:  Most sword variants, naginata, some polearms
+Pierce:  daggers, rapiers, spears, bows, wooden stakes
+Blunt:   staves, maces, clubs, hammers, rocks
+Cleave:  axes, halberds, cleavers, some polearms
+
+Note that there is some overlap, but not much. Some shortswords
+are almost equally usable as piercing weapons or slashing weapons.
+Some polearms are fitted with two different kinds of surfaces
+for harming a foe, such as a halberd's iron spike for piercing
+and wide blade for cleaving. But the majority of weapons on
+Darkwind are one type only.
+
+Finally, you may choose to specialize in missile or pole
+weapons.  If you do not specify, then you will train in
+normal melee (non-pole, non-missile) weapons.
+
+Missile:  bows, crossbows, slings, throwing daggers, darts
+Pole:     most staves, halberds, spears, tridents, etc.

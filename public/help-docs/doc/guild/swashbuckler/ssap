@@ -1,0 +1,15 @@
+Sap - blade utilty skill
+------------------------------------------------------------
+Sap allows you to tap into the spirits of fallen
+Swashbucklers. Performing this action will bind a part of
+that otherworldy energy onto a blade, allowing for a quick
+slash against an opponent. When the blade makes contact,
+the attacker will drain some of the target's dexterity.
+More experienced Swashbucklers will gain more from the
+maneuver.
+
+GL:  14
+SP:  25
+command:  ssap <target>
+duration: 30+ seconds
+

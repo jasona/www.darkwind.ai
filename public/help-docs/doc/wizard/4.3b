@@ -1,0 +1,532 @@
+                                          
+                                                                Rev. 1  |
+                                                                        |
+                       Coding Advanced Monsters                         |
+                       ========================                         |
+                                                                        |
+Purpose                                                                 |
+=======                                                                 |
+                                                                        |
+        The purpose of this document is to explain some of the more     |
+        advanced functions that monsters in Darkwind possess. Basic     |
+        functions can be found in the general monster wizhelp file.     |
+
+Document
+========
+
+*************************************************************************
+                        Monster Spells & Specials
+
+        For coders wanting general abilities, there is the 
+        add_combat_mod() function. The function REQUIRES one input,
+        but can take up to 3 for an adjustable skill. For a 
+        specialized spell/skill, there is always add_spell() and
+        add_special() [Described below].
+
+************************************************************************
+
+-------------------------------------------------------------------
+   A Note on the monster spells:  Many, many coders use the monster
+   spells for all manner of special attacks.  YOU ARE NOT TO DO THIS.
+   All spells are of type MAGIC automatically and are checked against
+   the target's magic resistance automatically.  Therefore, do not
+   set up a monster with a spell attack unless that attack is really
+   a spell!  Instead, give the monster an additional add_attack with
+   appropriate settings.
+
+   There is also new support for multiple spells and special attacks
+   outside of add_attack(). There are two new functions add_spell()
+   and add_special() which you may find useful and are described
+   below. Note that the existing set_spell functions still work.
+-------------------------------------------------------------------
+
+|CKBvarargs void add_combat_mod(mixed mType, int iChance, string sMessage);|WK0
+        mType must be either a bit value or string from the following:
+          SK_MAGIC     <->   (   1   )  <->     "magic"
+          SK_HOLY      <->   (1 << 1 )  <->     "holy"
+          SK_UNHOLY    <->   (1 << 2 )  <->     "unholy"
+          SK_FIRE      <->   (1 << 3 )  <->     "fire"
+          SK_ICE       <->   (1 << 4 )  <->     "ice"
+          SK_LIGHTNING <->   (1 << 5 )  <->     "lightning"
+          SK_WATER     <->   (1 << 6 )  <->     "water"
+          SK_EARTH     <->   (1 << 7 )  <->     "earth"
+          SK_ASTRAL    <->   (1 << 8 )  <->     "astral"
+          SK_PSIONIC   <->   (1 << 9 )  <->     "psionic"
+          SK_DISEASE   <->   (1 << 10)  <->     "disease"
+          SK_SOUND     <->   (1 << 11)  <->     "sound"
+          SK_ACID      <->   (1 << 12)  <->     "acid"
+          SK_HEAL      <->   (1 << 13)  <->     "heal"
+          SK_FEAR      <->   (1 << 14)  <->     "fear"
+          SK_PUNCH     <->   (1 << 15)  <->     "punch"
+          SK_KICK      <->   (1 << 16)  <->     "kick"
+          SK_FLURRY    <->   (1 << 17)  <->     "flurry"
+          SK_DISARM    <->   (1 << 18)  <->     "disarm"
+          SK_STUN      <->   (1 << 19)  <->     "stun"   
+          SK_SILENCE   <->   (1 << 20)  <->     "silence"
+          SK_BLIND     <->   (1 << 21)  <->     "blind"
+          SK_POISON    <->   (1 << 22)  <->     "poison"
+          SK_BITE      <->   (1 << 23)  <->     "bite"
+          SK_SLASH     <->   (1 << 24)  <->     "slash"
+          SK_CLEAVE    <->   (1 << 25)  <->     "cleave"
+        
+        iChance is an optional value for the percent chance each 
+        combat round for the modified combat to happen. Though any
+        integer is accepted, the range is capped from 0 to 25, 
+        with a value of 0 disabling the modification. If no value
+        is supplied, the standard chance of the skill flaring will
+        be used. Since mods are done per round, this is the chance
+        that a monster mod will proc in a given round.
+
+        sMessage is an optional value for the message to be 
+        supplied to the room. It follows the room_message 
+        formatting for a string. If no value is supplied, the
+        standard message will be used. See wizhelp 9.14 for help
+        with string formatting. You can have multiple combat mods
+        with the same type.
+        |RKBNOTE: DO NOT include target if using "heal"|XX0
+
+        Examples:
+          add_combat_mod("kick");
+          add_combat_mod("kick",12);
+          add_combat_mod("kick",15,"$N $vkick $t, HARD!");
+          add_combat_mod("heal",5,"$N $vcast a spell of healing!");
+
+        A word of caution: Stacking multiple combat mods can be
+          extremely dangerous for players. Since the chances are
+          independent, multiple combat mods can fire each round.
+          Here's a useful formula to see a rough chance of how often
+          a mod will fire:
+
+          fire_chance = 1;
+          foreach (mod chance)
+          {
+              fire_chance *= (1 - mod chance)
+          }
+          fire_chance = 1 - fire_chance;
+
+        Here's an example of the above:
+          oMonster->add_combat_mod("kick",10);
+          oMonster->add_combat_mod("disarm",15);
+          oMonster->add_combat_mod("punch",10);
+          oMonster->add_combat_mod("acid",12);
+
+          fire_chance   = 1 - ( (1-.1)*(1-.15)*(1-.1)*(1-.12) ) =
+                        = 1 - ( 0.60588) = 39.41%
+        This means that |GKB39.41%|XX0 of the time, a monster mod will fire.
+
+    |MKBHINT|XX0: Using |CKBquery_avg_mod_chance()|XX0 on a monster will do the
+        math for you.
+
+    |CKBEach combat mod increase mob xp by 10%.|000
+---------------------------------------------------------------------
+The following functions are deprecated. Please use the previously
+described method (add_combat_mod) 
+|KKB
+** set_chance(c);
+** 
+**   int c.  Sets the chance that the monster will cast a spell.  This is
+**   checked every round of battle.
+** 
+** set_spell_mess1("m.");
+** 
+**   string m.  Sets the message written to the room of the monster to
+**   "m".  LPC adds the "\n" newline but not punctuation.
+** 
+** set_spell_mess2("m.");
+** 
+**   string m.  Sets the message written to the victim of the spell to
+**   "m".  LPC adds the "\n" newline but not punctuation.
+** 
+** set_spell_dam(d);
+** 
+**   int d.  Sets the damage done by the spell to d.
+** 
+** set_spell_type(d);
+** 
+**   int d.  Sets the damage type of the spell to d.  The damage type 
+**   will automatically have the type DAM_MAGIC added to it. You can 
+**   set others, such as DAM_FIRE for fireballs, DAM_EVIL for life 
+**   draining, etc.  See 'wizhelp 4.17 (damage types)' for a complete 
+**   list.
+** 
+** add_spell(int c, string m1, string m2, int d, int t, int b)
+**   Adds a spell attack for the monster with a chance c/100 of being 
+**   cast each round. m1 is the message shown to others and is analogous 
+**   to what's passed to set_spell_mess1(). m2 is the message shown to 
+**   the victim and is analogous to set_spell_mess2(). d is the amount 
+**   of damage done while t is the damage type. b is a specific set of 
+**   blocks that are checked to see if the spell can be cast. Note that 
+**   DAM_MAGIC will be added to the damage type and that BLK_SILENCE, 
+**   BLK_SILENCE_PK, BLK_CONCENTRATION, and BLK_PARALYZE are all added 
+**   to the blocks that are checked. The b argument is therefore 
+**   optional. Magic resistence is checked automatically with spells.
+** 
+** ---------------------------------------------------------------------
+** 
+** add_special(c, m1, m2, d, t, b)
+**   This function does essentially the same thing as add_spell() 
+**   except that it doesn't force the damage type to include DAM_MAGIC 
+**   and assumes  no default blocks. Use this function for a quick extra
+**   attack where the overhead of add_attack() isn't required.
+** 
+**   The specials check for range, and will fail if the attacker
+**   is out of range, unless it also has DAM_MAGIC.
+** 
+** ---------------------------------------------------------------------
+** 
+** add_attack(1,2,3,4,5,6,7);                                                     |
+** 
+**   This function gives the monster an attack.  You may call add_attack as
+**   many times as you want to give your monster several different attacks.
+**   The elements of an attack are as follows:
+** 
+**   1. Number of swings.  Integer representing the potential number of times
+**      this attack will be executed each round of combat.
+** 
+**   2. Chance to occur.  Integer representing the % chance that each of the
+**      swings will actually happen on any particular round.
+** 
+**   3. Hit bonus.  This can be a positive or negative integer and will make
+**      the attack more or less likely to hit.  It is also a percentage.
+** 
+**   4. Damage class.  This integer is the amount of damage the attack will
+**      cause and is analogous to the old 'weapon class'.
+** 
+**   5. Damage type.  This is the type of damage done and it set up as a
+**      bitfield.  (See 'wizhelp 4.17 (damage types)' for a list of current types.)
+**      Attacks can be given multiple types separated by |, so a
+**      venemous stinger might be WEAPON_PIERCE|DAM_POISON.
+** 
+**   6. This is the attack type of this attack and is also a bitfield of sorts.
+**      Attack type determines which messages are displayed in combat when this
+**      attack is used.  It has 4 basic settings.  It can be BLUNT, SLASH, or
+**      PIERCE to use the weapon hit strings.  It can be 0 to use the default
+**      "unarmed combat" strings.  If you are going to use custom hit strings,
+**      set this to 0 if you are using a "simple" set of strings, or to some
+**      nonzero number if you are using a "complex" set.
+** 
+**   7. The last argument is optional.  If it is given, it should be either an
+**      array of string arrays or an array of arrays of string arrays.  This
+**      allows you to customize your own messages to be displayed when an attack
+**      is used.  There are 2 options here.  You can use the "simple" method and
+**      include 1 set of strings, or you can use the "complex" method, in which
+**      case the string displayed will depend on damage done.  This requires
+**      a full set of 6 arrays, each array having at least one combat message,
+**      with each combat message itself an array of 4 strings.   /* Yes, it's
+**      complicated.  Believe me, I'm not enjoying explaining this any more than
+**      you are enjoying trying to figure it out. */
+**      A single combat message has the format:
+**       ({"string1","string2","string3","string4"})
+**      The game will use this to create messages in the following formats:
+**      To the attacker:
+**       You hit target, string4 target string1.
+**      To the target:
+**       Attacker hits you, string3 youstring2.   <-no space between you & str2
+**      Others in the room:
+**       Attacker hits target, string3 target string1.
+**      As you can see, string1 and string2 can often be identical, and can be
+**      thought of as the "adverb" while string3 and string4 can be thought of
+**      as the 1st person and 3rd person of the "verb".  Let's say Hillary
+**      strikes Bill with the following combat message: ({"in the face"," in
+**      the face","and slaps","and slap"}).
+**      Hillary would see : You hit Bill, and slap Bill in the face.
+**      Bill would see: Hillary hits you, and slaps you in the face.
+**      Others would see: Hillary hits Bill, and slaps Bill in the face.
+**      Once you've got one combat message right, make a bunch more and put them
+**      into an array: ({ ({string1,string2,string3,string4}),({...}),({...}) })
+**      and pass the entire array as the 7th argument to add_attack.  Make sure
+**      you have set the attack type (6th argument) to 0.  This will cause one
+**      of your messages to be used at random each hit.  If you want the message
+**      displayed to vary according to damage done, then you need to send an
+**      entire array of 6 these arrays, going from least powerful to most
+**      powerful.  So, to review:
+**      ({"string1","string2","string3","string4"}) = one combat message
+**      ({ message1,message2,message3,... }) = one "simple" array
+**      ({ simple1,simple2,simple3,simple4,simple5,simple6 }) = one "complex"
+**      array
+**      If you pass 1 simple array as an argument, the game will pick one random
+**      message from it for each hit.  If you pass a complex array, the game will
+**      pick one of the simple arrays based on the damage done, and then display
+**      a random message from that simple array.
+|WK0
+---------------------------------------------------------------------
+
+|CKBset_viking();|WK0
+
+  no arg.  Gives the monster the viking curse.
+
+|CKBset_whimpy();|WK0
+
+  no arg.  Will make the monster run away when its hit points get low.
+
+|CKBset_wimpy_cmd(s);|WK0
+
+  string s.  If set, this will cause the monster to always perform the
+  command 's' first when trying to wimpy.  You can use this to control
+  which direction a monster attempts to run away.
+
+|CKBload_chat(chance, strs);|WK0
+
+  int chance, string *strs.  Sets the chance that a monster will talk
+  each heartbeat to chance, and sets the things the monster can say
+  to the array passed into load_chat().
+
+|CKBload_a_chat(chance, strs);|WK0
+
+  int chance, string *strs.  Same as load_chat, but these messages are
+  said only during battle.
+
+|CKBenable_player_commands();|WK0
+***** DEPRECATED: all monsters can use standard commands and emotes.
+  You must #include <daemons.h> to do this.  This sets up the monster as
+  able to perform all regular player commands from /cmds/std and
+  /cmds/soul.
+
+|CKBload_cmd(chance, strs);|WK0
+
+  int chance, string *strs.  This works exactly like load_chat, except it
+  is a list of commands the monster will perform.  You must first do an
+  enable_player_commands() or else the monster won't have the ability to do
+  much beyond wielding weapons and moving around.  It is usually easier to
+  enable the player commands and have an array which includes something like
+  ({"say who are you?","say I'm Bob!","sing"}) rather than having to do
+  ({"Monstername asks: who are you?\n","Monstername exclaims: I'm Bob!\n",
+  "Monstername sings a song.\n"}) for fairly obvious reasons.  Anywhere
+  you place a $N, it will be replaced with the name of a random player
+  character in the room, allowing the monster to do directed emotes.
+  "kick $N" would cause the monster to kick a random player, for instance.
+
+|CKBload_a_cmd(chance, strs);|WK0
+
+  Same as load_cmd, except works in combat.
+
+|CKBset_random_pick(r);|WK0
+
+  int r.  Determines if the monster will randomly pick an object from
+  the room's inventory.  If the item it picks up is a weapon which has
+  a better WC than its current wielded weapon, then it wields the weapon.
+  If the item is an armour, and it is not already wearing an armour of
+  that type, it will wear the armour.
+
+|CKBset_death_clone(string sFilePath, status tCloneToEnv, int iQuantity);|WK0
+
+  At death, the monster will clone sFilePath. If tCloneToEnv is 1
+  or the monster is SIZ_NONE, the object will clone to the environment.
+  If iQuantity is not set, it will default to 1. To have any other
+  quantity, you must also set tCloneToEnv. If tCloneToEnv and iQuanity
+  are not set, it defaults to loading on the corpse, and 1 item.
+
+|CKBset_dead_ob(ob);|WK0
+
+  object ob.  Usually this_object() is the object passed to set_dead_ob.
+  Use this function in conjunction with monster_died() when you want
+  something done when the monster dies.  This function is useful for
+  destructing corpses (Like on Stone Golems...)
+
+|CKBset_hit_ob(ob);|WK0
+
+  object ob.  Usually this_object() is the object passed to
+  set_hit_ob.  Use this function in conjunction with monster_hit()
+  when you want the monster to have a special combat ability.  The
+  monster_hit() function should be an integer function which
+  returns an amount of extra damage to be done by the monster that
+  attack.  The monster will pass its attacker to monster_hit() as
+  and argument.  Monster_hit() can be used for many things other
+  than simply doing damage.  It can be used to have the monster
+  talk, run away, heal itself, summon more monsters, steal from
+  the player, etc - what's inside monster_hit is up to the coder.
+
+|CKBset_init_ob(ob);|WK0
+
+  object ob.  Usually this_object() is the object passed to set_init_ob.
+  If this is defined, the function monster_init will be called by the
+  monster whenever it has its init called.  Essentially, this allows you
+  to write a function that is executed whenever your monster meets another
+  monster or player.  Monster_init should return 0 or else it will
+  interrupt the normal init process making aggressive monsters not attack
+  and other things.
+
+|CKBcan_put_and_get(n);|WK0
+
+  optional string n.  If n exists, the monster can put and get things.
+  If n does not exist, the monster cannot pick up and drop things.
+  Further examples:
+
+       can_put_and_get(1);   // The monster can pick up and drop things
+       can_put_and_get(yes); // The monster can pick up and drop things
+       can_put_and_get(no);  // The monster can pick up and drop things
+       can_put_and_get(); // The monster canNOT pick up and drop things
+
+|CKBset_keep_alive(keep_alive);|WK0
+
+  int keep_alive.  This function should be used VERY INFREQUENTLY on
+  UNIQUE monsters.  This will not turn off the heart_beat in monsters.
+  DO NOT use this unless the object you are creating REQUIRES it.
+  If you are not sure of why you would use this, then DON'T USE IT.
+
+|CKBset_death_messages(i_died,you_killed);|WK0
+
+  When the monster dies it will display the you_killed string to the object
+  which killed it and it will display the i_died message to everyone in the
+  room.  If these are not set, the default messages will be used.
+
+|CKBcommand("cmd");|WK0
+
+  string cmd.  Forces the monster to perform the command "cmd".
+  The force_us() function isn't always good, because it checks the level
+  of the caller, and this function can be called by a room.
+
+|CKBset_wander(int chance, int time);|WK0
+
+  This is similar to the move_at_reset function.  It gives the monster
+  a percentage chance equal to 'chance' to move.  This chance will be checked
+  every 'time' seconds.  For example, set_wander(50,20); would cause
+  the monster to have a 50% to make a random move every 20 seconds.
+  This allows greater flexibility than the move_at_reset does.
+  See wizhelp 10.4 for more info.
+  See wizhelp 4.2 for make_room_unique for wandering mobs.
+
+---------------------------------------------------------------------
+
+|CKBset_match(object,functions,types,matches);|WK0
+
+  You use this to allow your monster to react to what it sees.  Object is
+  the object where your functions will be located.  Functions, types, and      |
+  matches are all string arrays.  Each must be exactly the same size as the
+  others, so you should use allocate() and leave the appropriate elements
+  empty.  The following example is Fornay's set_match:
+
+      function = allocate(12);
+      type = allocate(12);
+      match = allocate(12);
+
+      function[0] = "why_did";
+      type[0] = "sells";
+      type[1] = "attack";
+      type[2] = "left";
+      match[2] = "the game";
+      type[3] = "takes";
+      type[4] = "drops";
+      function[5] = "must_be_nice";
+      type[5] = "is now level";
+      function[6] = "smiles";
+      type[6] = "smiles";
+      match[6] = " happily.";
+      function[7] = "say_hello";
+      type[7] = "arrives";
+      function[8] = "test_say";
+      type[8] = "says:";
+      type[9] = "tells you:";
+      function[10] = "follow";
+      type[10] = "leaves";
+      function[11] = "gives";
+      type[11] = "gives";
+
+      set_match(this_object(),function,type,match);
+
+      This doesn't make much sense on first glance, but it is fairly
+clear if a table is made out of it:
+Array       FUNCTION                    TYPE            MATCH
+position: Execute this function:   If monster sees:   followed by:
+
+ 0          why_did                     sells
+ 1                                      attack
+ 2                                      left            the game
+ 3                                      takes
+ 4                                      drops
+ 5          must_be_nice                is now level
+ 6          smiles                      smiles          happily
+ 7          say_hello                   arrives
+ 8          test_say                    says:
+ 9                                      tells you:
+10          follow                      leaves
+11          gives                       gives
+
+        Anywhere there is a blank spot, the array has a 0 in it, done
+  automatically by allocate().  Every time the monster sees a message it
+  will look through the TYPE array, and scan the message to see if it
+  contains the TYPE.  It then sees if the rest of the message contains
+  the MATCH of the same number.  If the MATCH string is present in the
+  message, OR if there is no MATCH at all, then the last FUNCTION that it
+  found is executed with the original message as an argument.  For example,
+  if Fornay sees the text:
+    "Bill takes our taxes"
+  First, it will find the FUNCTION 'why_did' at position 0 and save it, but
+  won't do anything else because "Bill takes our taxes" does not contain the
+  text "sells".  Next, it will go through TYPE until it gets to position 3,
+  where it finds the word "takes".  It then looks for a MATCH.  Since MATCH
+  position 3 is empty, the MATCH is an "automatic" success.  The last function
+  it found was 'why_did' from position 0, so it now does a
+  this_object()->why_did("Bill takes our taxes";
+
+|CKBset_friends(names);|WK0
+
+  names can be either a single string or a string array.  Every heartbeat a
+  npc checks for any npc in its friends list that is being attacked
+  and initiates combat with it.
+
+|CKBcatch_tell(string sStr); |WK0                                                      |
+                                                                               |
+  This function allows you to create responses to your monsters when a specific|
+  string is displayed in the environment that the monster is in.  You can hash |
+  up the string anyway you like to check for matches and then call functions as|
+  appropriate.                                                                 |
+|GKB  ** NOTE ** |XX0
+|GKB  For a way to do easier responses, see wizhelp 5.6|XX0
+                                                                               |
+  ***NOTE***                                                                   |
+                                                                               |
+  It _IS_ possible for a monster's load_chat to get caught and matched in it's |
+  catch_tell.  If this happens the mud can crash depending on what you do with |
+  the catch_tell.  So unless you specifically desire to simulate NPC's         |
+  interacting with each other put an NPC check in the catch_tell before you do |
+  anything with it.                                                            |
+                                                                               |
+  ***NOTE2***                                                                  |
+                                                                               |
+  One thing to remember is that a catch_tell is only looking for a string match|
+  in the environment that the monster is in.  It _IS_ possible to fool a catch |
+  tell with an emote or something else along that line.  So you will have to   |
+  put in the appropriate object checks as necessary.                           |
+
+|CKBfollow(str,i,ob);|WK0
+
+  Using this function allows your monsters to follow other players or monsters
+  around the mud.  Str should be the exit message the monster receives.  If any
+  positive integer i is passed, then wizards in nohassle mode will be exempted
+  from being followed.  Ob is an optional object which, if present, will be
+  the only object the monster will follow.  This function is not used in
+  reset, but should instead be called through the use of catch_tell as in the
+  following example:
+  catch_tell(string str) {
+        follow(str,1,this_object()->query_attack());
+  }
+  In this example, the monster is told to follow its attacker if the attacker
+  leaves the room, but to ignore any other players/npcs or wizards with
+  nohassle mode enabled.
+
+|XX0DEPRECATED: all monsters should work correctly now.|XX0
+***************************************************************
+*Important Note*  Additionally, monsters cloned through the reset() of a room
+will NOT follow properly.  To avoid this, if you wish to add following monsters
+to a room through reset, use a call_out.  For example:
+void reset(int iArg) {
+::reset(iArg);
+call_out("make_monsters",2);
+etc
+}
+
+void make_monsters() {
+   make_object("monster","/players/johndoe/monster",2);
+}
+***************************************************************
+
+
+|CKBvarargs void set_monster_destruct_timer(int iTime, mixed xFunc);|WK0
+  This function will destruct the monster in iTime seconds. If
+  xFunc is defined and is a closure, it will apply the function
+  before destructing it. If it's a string, it will tell_room
+  or tell_object before destructing it. The monster will be moved
+  to the quitroom before destruction, so anything the monster
+  has will NOT be dropped in the room. If the monster is in combat,
+  the call_out will be called again 30 seconds later.

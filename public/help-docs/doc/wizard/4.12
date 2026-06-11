@@ -1,0 +1,146 @@
+-=- /doc/wizard/container -=-
+-----------------------------
+ 
+I never saw the point of making doc files that did not use all of the
+possible functions callable in stuff like armour/weapons in the doc file
+itself.  If it's a doc file, then it's supposed to help you, right?
+Not to mention that LPmud 2.4.5's docs are not the greatest in explaining
+things.  So, I took the time to re-write them.  Here is the documentation
+for containers.
+ 
+--------------------
+ 
+The first few lines in any container should be:
+ 
+#include <mudlib.h>
+inherit CONTAINER;
+ 
+  This line sets up the object to be a container object and will
+  allow calls to the container master object as defined below.
+ 
+--------------------
+
+NOTE: The maximum weight allowed in the container should be no more than
+five (5) times the weight of the filled container itself.  Anything more 
+than this qualifies as a special item that must be created UNIQUE!  
+(I.e., a bag of holding or portable hole.)
+
+--------------------
+ 
+set_name("name");
+ 
+  string name.  This is the a name for the object.
+  Also sets the name and short description to name and the long
+  description to name + ".\n"
+ 
+set_alias("alias");
+ 
+  string alias.  This is another name for the object.  It doesn't
+  appear anwhere, but it can be used by the player.
+ 
+set_alt_name("alt_name");
+ 
+  string alt_name.  This is yet another name for the object.  It
+  also doesn't appear anywhere, but it can be used by the player.
+ 
+set_short("short");
+ 
+  string short.  This is the description seen in the player's
+  inventory plus a ".\n"
+  Sets the short description of the object to short and the long
+  description to short + ".\n"
+ 
+set_long("long.\n");
+ 
+  string long.  Sets the long description of the object to long.
+  I added the ".\n" in the LPC line above to remind you that you
+  should add the period and newline in the long description
+  because LPC doesn't add it in for you.  This is what the player
+  will see when they look at the object.
+ 
+set_weight(weight);
+ 
+  integer weight.  This is the empty weight of the container.
+ 
+set_max_weight(max_weight);
+ 
+  integer max_weight.  This is the maximum weight of all
+  objects inside the container added together.
+
+set_weight_ratio(ratio);
+
+  integer ratio.  The number of weight units that must be put 
+  inside a container to increase the weight of the container 
+  by 1.  Note that if this value is larger than the max_weight, 
+  the container will never become heavier, regardless of what 
+  is put inside it.  The default value is 6.
+
+set_value(value);
+ 
+  integer value.  Sets the selling value of the container to
+  value.  Buy back value will be twice this amount.
+ 
+set_read("read.\n");
+ 
+  string read.  This is what the player will see if they read
+  the object.  I added the ".\n" in the LPC line above to remind
+  you that you should add the period and newline in the long
+  description because LPC doesn't add it in for you.
+ 
+set_no_buy(n);
+ 
+  status n.  Set this to 0 if you want people to be able to buy
+  and sell this to and from the store.  Set to 1 if you don't.
+  If you dont set this command, it will default to buyable.
+ 
+set_steal(n);
+ 
+  status n. Set to 1 if you want to make the item unstealable
+  by thieves.  Don't abuse this command!  It is meant only for
+  things like quest items or objects great importance.  If you
+  don't add this command, item defaults to stealable.
+
+--------------------
+
+Some special functions not normally called in reset()
+
+update_weight();
+
+  This function can be called to make sure the weight of the
+  container is correct.  It may become necessary to call this
+  function if objects are moved into or out of the container
+  by means other than the "put" and "get" commands.
+  ie, when a reset clones and moves something into it.
+
+fix_weight(player);
+
+  Don't use this function.  Command "fixweight" on the player instead.
+  object player.  This function can be called to update the 
+  carried weight of a player if objects are moved into or out
+  of the container by means other than "put" and "get".  Usually
+  used in conjunction with update_weight().
+
+--------------------
+ 
+Here is an example container object for you to look at:
+ 
+#include <mudlib.h>
+inherit CONTAINER;
+ 
+void reset(int iArg) {
+if(!is_clone(this_object())) return;
+  ::reset(iArg);
+  if(iArg) return;
+  set_name("grape bowl");
+  set_alias("bowl");
+  set_alt_name("fruit bowl");
+  set_short("Grape bowl");
+  set_long("This bowl originally contained plump grapes.\n\n");
+  set_weight(2);
+  set_max_weight(6);
+  set_weight_ratio(6);
+  set_value(30);
+  set_read("On the bottom of the bowl reads: Pontius Pilate's\n\n");
+  set_no_buy(0);
+  set_steal(0);
+}

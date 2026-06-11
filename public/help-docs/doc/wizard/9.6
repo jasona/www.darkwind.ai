@@ -1,0 +1,46 @@
+Party System
+=============
+The party system is a means through which players can group together and
+tackle NPCs as a team, sharing experience and gold between all members of
+the party. It is assumed that all wizards already know what the party
+system is and what it does.
+
+This document briefly describes the means by which a wizard can create
+code that will react to party events. The procedure is pretty simple.
+
+1. An object is registered with the player using add_party_listener.
+   [Ex. this_player()->add_party_listener(this_object())]
+   
+2. Any time a party event occurs, a specific function is called on the
+   registered object. These functions are described below.
+   
+void party_add_member(mixed xNewMemberName)   : Called when a new member
+                                                joins the player's party.
+                                             
+void party_remove_member(mixed xOldMemberName): Called when a member is
+                                                removed from the player's
+                                                party (leave/booted).
+                                                 
+void party_flag_adjust(mixed xFlag)           : Called when the "in party"
+                                                flag is adjusted on the
+                                                player, such as when a
+                                                player joins/leaves a
+                                                party. 1 = in party, 
+                                                0 = not in party.
+                                     
+In addition to these particular callbacks, the following party related
+functions exist on all players:
+
+string *query_party_members()  -- Returns array of party member names
+int query_in_party()           -- Returns 1 if in party, 0 otherwise
+void end_party()               -- Remove the player from his party
+
+varargs query_party_members_present(object oMember) --
+                                  If you don't supply oMember, it will
+                                  check all party members and return
+                                  an object array of party members
+                                  present (not including the player
+                                  you're checking from). If none are
+                                  present it returns 0.
+                                  If you supply oMember, it will return
+                                  1 if oMember is present, or 0 if not.

@@ -1,0 +1,228 @@
+BARD SONGS AND PERFORMANCE
+
+Battle songs are different from simple lute practice. They create a bardic
+song field in the room for a short time, pulse effects while they last, and
+feed the Bard's Performance.
+
+Performance is a 0-100 momentum meter shown with bscore. It
+rises when you keep songs moving and falls when combat momentum stalls or your
+voice is disrupted. Repeating the same kind of song builds less Performance
+than keeping the music varied. Charisma improves Performance gains, song field
+strength, song field duration, and the rewards from hidden harmonies.
+
+Battle songs use musical cooldown families. Each song form has its own short
+recovery, so a Rhythm song does not lock out Melody, Harmony, or Dissonance.
+This is intentional: Bards are meant to build momentum by changing forms. A
+tiny song cadence cooldown still prevents button-mashing, and repeating the
+same form waits on that form's timer.
+
+When Performance crests into a Crescendo, you have a brief Finale window. Use
+bmon or bscore to watch for it, then spend it with echoburst,
+battlefieldsilence, or Wail.
+
+Song forms:
+   Rhythm       timing, movement, attack cadence
+   Melody       morale, recovery, emotional control
+   Harmony      group amplification
+   Dissonance   disruption and weakening
+   Crescendo    burst pressure
+   Finale       high-impact endings
+
+Current battle songs:
+
+Pulsebeat March
+   Command: pulsebeat
+   Alias:   pulsebeat_march
+   Form:    Rhythm
+   Timer:   short Rhythm recovery
+   Effect:  Starts a song field around the Bard that follows as the Bard moves
+            and periodically sharpens nearby party members' attack timing.
+
+Ember Aria
+   Command: emberaria
+   Alias:   ember_aria
+   Form:    Melody
+   Timer:   short Melody recovery
+   Effect:  Starts a song field around the Bard that follows as the Bard moves
+            and periodically steadies nearby party members' footing.
+
+Silver Verse
+   Command: silververse
+   Alias:   silver_verse
+   Form:    Melody
+   Timer:   short Melody recovery
+   Effect:  Starts a song field around the Bard that follows as the Bard moves
+            and periodically mends nearby party members.
+
+Echo Chord
+   Command: echochord
+   Alias:   echo_chord
+   Form:    Harmony
+   Timer:   short Harmony recovery
+   Effect:  Starts a song field around the Bard that follows as the Bard moves
+            and periodically binds nearby party members into shared timing.
+
+Dirge of Ash
+   Command: dirgeash
+   Alias:   dirge_of_ash
+   Form:    Dissonance
+   Timer:   short Dissonance recovery
+   Effect:  Starts a song field around the Bard that follows as the Bard moves
+            and presses against nearby enemies' courage.
+
+Lullaby of Ash
+   Command: ashlullaby
+   Alias:   lullaby_of_ash
+   Form:    Dissonance
+   Timer:   short Dissonance recovery
+   Effect:  Starts a song field around the Bard that follows as the Bard moves
+            and presses enemies into a mesmerized haze.
+
+Whisper Canticle
+   Command: whispercanticle
+   Alias:   whisper_canticle
+   Form:    Melody
+   Timer:   short Melody recovery
+   Effect:  A flute-unlocked song that mesmerizes nearby enemies.
+
+Mirror Refrain
+   Command: mirrorrefrain
+   Alias:   mirror_refrain
+   Form:    Harmony
+   Timer:   short Harmony recovery
+   Effect:  A chimes-unlocked song that scatters hostile timing and focus.
+
+Soothe
+   Command: soothe
+   Form:    Melody
+   Timer:   short Melody recovery
+   Effect:  Attempts to end combat in the room and presses hostile creatures
+            into a brief mesmerized calm.
+
+Hero
+   Command: hero
+   Form:    Harmony
+   Timer:   short Harmony recovery
+   Effect:  A role song for good-aligned Bards that reinforces heroic combat.
+
+Villain
+   Command: villain
+   Form:    Dissonance
+   Timer:   short Dissonance recovery
+   Effect:  A role song for evil-aligned Bards that reinforces villainous
+            combat.
+
+Apex Chord
+   Command: apexchord
+   Alias:   apex_chord
+   Form:    Crescendo
+   Timer:   Crescendo recovery
+   Effect:  Requires high Performance. Starts a short, powerful song field
+            that helps push a fight toward a Finale.
+
+Echo Burst
+   Command: echoburst
+   Alias:   echo_burst
+   Form:    Finale
+   Timer:   Finale recovery
+   Effect:  Spends an active Crescendo to make all active song fields pulse
+            with much greater force.
+
+Battlefield Silence
+   Command: battlefieldsilence
+   Alias:   battlefield_silence
+   Form:    Finale
+   Timer:   Finale recovery
+   Effect:  Spends an active Crescendo to disrupt nearby enemies and deepen
+            morale pressure.
+
+Muse Hymn
+   Command: muse
+   Form:    Harmony
+   Timer:   Harmony recovery
+   Effect:  Starts a song field around the Bard that follows as the Bard moves
+            and periodically inspires nearby party members.
+
+Otto's Irresistible Dance
+   Command: otto <target>
+   Form:    Dissonance
+   Timer:   Dissonance recovery
+   Effect:  Tangles a target's rhythm and forces them to dance away.
+
+Rally
+   Command: rally
+   Form:    Harmony
+   Timer:   Harmony recovery
+   Effect:  Lends courage and mental resilience to nearby players.
+
+Wail
+   Command: Wail or Wail <target>
+   Form:    Finale
+   Timer:   Finale recovery
+   Effect:  Spends an active Crescendo to release a focused or room-wide
+            banshee wail.
+
+More than twenty sequences of song forms can resolve into hidden harmonies.
+These are not listed here. Bards are expected to discover them through
+performance. Archetypes can deepen certain hidden harmonies, adding extra
+momentum, lingering resonance, and distinct thematic messages.
+
+When you discover a hidden harmony or cause a song field to pivot into a
+deeper pattern, your Bard soul records it. Use bpatterns to review what you
+have learned. Use bpatterns harmonies, bpatterns pivots, or bpatterns <name>
+to narrow the list and see how to trigger a learned pattern again.
+
+Charisma matters to hidden harmonies. A more charismatic Bard can draw more
+momentum out of a resolved pattern and hold the resonance longer.
+
+Active songs also matter to other Bard commands. A Bard with the right field
+already moving can make related powers stronger:
+
+   Rhythm       helps timing, followers, combat pressure, and support tempo
+   Melody       helps healing, calm, social influence, and control
+   Harmony      helps party support, role songs, lore, and precision
+   Dissonance   helps fear, morale damage, tricks, and enemy control
+   Crescendo    helps burst pressure, Finales, and dramatic command moments
+
+For example, Soothe benefits from Melody or Dissonance, Rally benefits from
+Harmony or Rhythm, Wail benefits from Dissonance, Crescendo, and Finale
+pressure, and Study benefits from Harmony or precise hidden patterns.
+
+Some songs can also shift enemy morale. At higher guild levels, use study on a
+target to read the emotional resonance your music has left behind.
+
+INSTRUMENTS AND ARCHETYPES
+
+Alternate Bard instruments can change how battle songs behave. Buy them at
+the Bard Shoppe in the Darkwind Bard guildhall. Use instrument to list carried
+instruments, instrument <name> to select one, and instrument off to return to
+your base lute. See bardhelp instruments.
+
+At guild level 10, specialize chooses a Bard archetype. Archetypes shape song
+momentum, field strength, instrument affinity, field flavor, and hidden harmony
+resonance. See bardhelp archetypes.
+
+SIMPLE LUTE PRACTICE
+
+These simple songs can be practiced with your lute by playing each note in
+order:
+
+   play lute <note>
+
+Mary Had a Little Lamb
+   E4 D4 C4 D4 E4 E4 E4 D4 D4 D4 E4 G4 G4
+
+Twinkle Twinkle
+   C4 C4 G4 G4 A4 A4 G4 F4 F4 E4 E4 D4 D4 C4
+
+Ode to Joy
+   E4 E4 F4 G4 G4 F4 E4 D4 C4 C4 D4 E4 E4 D4 D4
+
+Scarborough Fair
+   A4 E5 E5 B4 C5 B4 A4 G4 A4 B4 C5 A4 A4
+
+Recommended next topics:
+
+   bardhelp instruments
+   bardhelp combat
+   bardhelp archetypes

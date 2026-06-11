@@ -1,0 +1,20 @@
+/doc/attribute/script_cmds_modifier
+
+Format: (Living_Object)->set_attribute("script_cmds_modifier", iValue);
+
+Description:
+  The script_cmds_modifier will change the number of commands
+  Living_Object can perform without breaking within a script.
+  The default 'maximum' number of commands is 20 (in actuality
+  the max is about 21).
+
+  The iValue can be set to a negative (to decrease the number
+  of commands in one block), or a positive (to increase) value.
+  Though any number can be supplied, the script command will
+  only consider a thirty point spread (from -15 to +15). This
+  correlates to a range of ~5 to ~35 commands in a single
+  execution block.
+  
+  Supplying a 0 will nullify any effect the attribute has,
+  though it is recommended to use remove_attribute instead.
+

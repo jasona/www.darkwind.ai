@@ -1,0 +1,13 @@
+|WKBSyntax:  |YKBmonitor
+|WKBAliases: |YKBmon
+
+|YKOThe monitor command toggles your hit point and spell point monitoring
+on and off. Monitor will show your current hit points and spell points
+each time one or the other changes, whether it be through healing, 
+combat, etc.
+
+If the monitor is toggled to bar, then hp and sp will be shown as a bar
+graph, proportional to your maximums.
+
+For heroes and above, monitor also shows Wrathful Avatar charge. In bar
+mode, the avatar bar fills while charging and drains while Avatar is active.

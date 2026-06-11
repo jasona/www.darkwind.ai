@@ -1,0 +1,42 @@
+So, you're finally a Mage! Congratulations on joining the best guild on
+Darkwind! You have come far in your learnings, but now, I suppose, you
+will want to learn a bit more about your new way of life.
+
+Magi, by their nature, are good creatures. Therefore, they must be of at
+least neutral alignment to cast any spell. If you have evil alignment,
+you will not be able to cast anything.
+
+Also, because of our brotherly link, we can all talk with one another, free
+of charge, no matter where we are on the MUD. You can talk to your kindred
+Magi by typing "mage <message>." The commands "m" and "ma" also work.
+You also can show your emotions over this link by "emage <emotion>" or,
+more simply, "em <emotion>." If you wish to know how many of your brethren
+are on at any given time, you may find this out by typing "magi" or "mages".
+If you are doing something important, like entering a note or mudmailing
+someone, you can choose not to listen to the conversation on your link to
+the other Magi by typing "guild mage muff."
+
+So that they may better run the guild, all GuildMasters (those of Guild Level
+15 only) have a special link, which they can use by "gmage <message>", or,
+more simply, "gm <message>." They may also show their emotions to the other
+GuildMasters by typing "egm <emotion>."
+
+You may view this file at any time by typing "magehelp", "helpmage", or,
+more simply, "mh".
+
+If you discover a problem with the guild, you can report it by using the
+"bug" command. Please, make use of this command. If you are found to be
+exploiting a bug within the guild, you will be punished. Even if you *THINK*
+it *MIGHT* be a bug, it is important that you report it, because if you are
+caught using it, the penalties would be severe.
+
+You can find a list of all the spells, and those you have access to via the
+"spells" command. If you need help on a certain spell, you can just type
+"help <spellname>."
+
+There are a few emotes specific to the guild that you can use. To see a list
+of them use the "magehelp emotes" command. If you have an idea for another
+mage emote you would like to see, use the "idea" command.
+
+If you have any questions about your new guild, please leave notes on the
+board in the guild hall.

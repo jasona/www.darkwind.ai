@@ -1,0 +1,16 @@
+
+Ranger Help for: enemy cat
+==========================
+
+SUMMARY:
+Choosing cat means your Ranger hunts feline predators: wildcats, lions,
+panthers, jaguars, and similar stalking beasts.
+
+This is a strong choice for forests, jungles, hills, and mountains. It
+represents a Ranger who knows how ambush predators move, hide, and spring.
+
+COMMAND:
+  setenemy cat
+
+=============================================================================
+SEE ALSO: enemy, setenemy and terrains

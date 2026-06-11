@@ -1,0 +1,23 @@
+Achievements track long-term progress across combat, exploration,
+social activity, economy, quests, and guild-specific milestones.
+
+Each achievement line has named tiers:
+
+  Bronze
+  Silver
+  Gold
+  Platinum
+  Mythic
+
+Use these commands:
+
+  achievements          view your achievement journal
+  achievements titles   list your unlocked achievement titles
+  atitle                equip or clear an achievement title
+  leaderboard           view the top 50 achievement rankings
+
+Achievement progress is driven by tracked game stats. Most progress is
+permanent once earned. New unlocks can grant titles that you may equip
+separately from your normal title.
+
+See also: help achievements, help achievement_titles, help leaderboard

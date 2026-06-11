@@ -1,0 +1,14 @@
+Skewer - blade technique
+------------------------------------------------------------
+Using the skewer blade technique, a swashbuckler can
+concentrate on deep, powerful strikes that cause much 
+greater damage to the enemy. This skill is aided by the
+ability to discern an enemy's weaknesses and the dexterity
+to attack with precision and speed. Such a powerful attack
+often off-balances a swashbuckler however, making it
+difficult to dodge attacks against himself.
+
+GL: 10
+SP:  9 / attack
+command:  skewer
+duration: technique mode

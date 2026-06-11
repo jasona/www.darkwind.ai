@@ -1,0 +1,30 @@
+|GKB-- Return to Earth ------------------------------------------|000
+
+Invocation: |CKBreturn to earth|000
+Command:    |CKBreclaim [corpse]|000
+Aliases:    |CKBreturnearth|000, |CKBcompost|000
+Current:    Tellurian
+
+Return to Earth lets a Druid kneel beside a fallen creature and
+return its body to the living soil.  The corpse is removed, but any
+items or reagents inside it fall into the room first.
+
+The rite restores nwyfre based on the moons that are present.  Dailos
+feeds Daloan, Markas feeds Marken, and Tekal feeds Tekali.  Fuller
+phases return more, while crescent phases return less.  If no moon is
+visible, the corpse returns to the earth as Tellurian nwyfre instead.
+
+Larger, stronger, and less-harvested corpses return more to the cycle.
+A corpse that has already been skinned, gutted, deboned, decapitated,
+or stripped of teeth still works, but gives less.
+
+Training Return to Earth makes the rite more efficient.  As your
+mastery improves, the invocation costs less Tellurian nwyfre to begin,
+returns more nwyfre from each corpse, and can draw a larger offering
+before reaching your current's natural limit.
+
+If you perform the invocation at your own Sacred Grove, the grove also
+deepens from the offering.  Training the invocation increases this
+grove growth as well.
+
+Player corpses are never consumed by this invocation.

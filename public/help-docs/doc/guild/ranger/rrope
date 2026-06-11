@@ -1,0 +1,16 @@
+Ranger Help for: make rope
+===========================
+
+SYNTAX:      rope
+USAGE:       Any terrain
+SLOT COST:   3
+BASE SP:     15
+SKILL TYPE:  creation
+
+SUMMARY:
+This skill allows a Ranger to craft rope from natural materials such
+as vines and grasses. Rope is an essential component in several other
+crafting skills, including making tents, bows, and fish traps. The
+Ranger must have suitable materials in their inventory. The quality
+and length of the rope depends on the materials used and the Ranger's
+crafting proficiency.

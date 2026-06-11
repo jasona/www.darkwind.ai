@@ -1,0 +1,19 @@
+Exits.
+
+Use exits when you want to know where you can move from the current room.
+
+Common forms:
+
+exits
+  List visible exits from your current room.
+
+look
+  With screenreader support on, look also includes the visible exits in the room
+  summary.
+
+Movement commands are usually directions, such as north, south, east, west, up,
+down, enter, exit, northeast, northwest, southeast, and southwest.
+
+Some rooms hide exits until you examine the room or an object in the room. If
+you feel stuck, try look, then look at anything interesting mentioned by the
+room.

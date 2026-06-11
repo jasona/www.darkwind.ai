@@ -1,0 +1,40 @@
+SYNOPSIS
+        object clone_unique_object(string name)
+
+DESCRIPTION
+        Clones a new object much like the clone_object efun would.
+        The difference, however, is that clone_unique_object will
+        register the new object with the unique tracking system
+        and only allow a single instance of the unique object to
+        be in the game at a given time.
+        
+        Note that the pathname must be complete, which means there 
+        are no relative paths allowed.
+
+        NOTE: clone_unique_object will not check if the object in
+              question has been cloned before using clone_object.
+              Thus, it is entirely possible to clone several instances
+              of an object using clone_object and still get a valid
+              object from clone_unique_object. However, after a single
+              unique object is created, any additional calls to
+              clone_unique_object will not produce a new object as long
+              as the old object is still in the game.
+              
+EXAMPLE
+        // Clone unique sword
+        object sword, sword2;
+        sword = clone_unique_object("/obj/sword");
+        
+        // Following call to clone_unique_object returns 0
+        sword2 = clone_unique_object("/obj/sword");
+        if(!sword2)
+          write("The second sword wasn't cloned!\n");
+
+HISTORY
+        Originally created along with the UNIQUE_D daemon by James on
+        January 3, 2004.
+
+SEE ALSO
+        blueprint(E), clonep(E), destruct(E), clones(E), load_name(E),
+        load_object(E), move_object(E), uids(C), program_name(E),
+        clone_object(E), clone_limited_object(E)

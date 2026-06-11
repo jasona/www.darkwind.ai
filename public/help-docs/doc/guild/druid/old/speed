@@ -1,0 +1,13 @@
+Wild Speed
+
+Using this spell, the druid may borrow for a short
+time the speed of such creatures as the hare,
+hawk, and cheetah.  He may also confer this
+speed on another person.
+
+Command: speed <target> (defaults to caster)
+Base Cost: 50 SP
+Base Recovery: medium-long
+Base Effect: boost (dexterity, moderate)
+Base Duration: medium-long
+Guild Level: 4

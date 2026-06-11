@@ -1,0 +1,21 @@
+Exterminate
+
+While druids act in harmony with nature, there are times
+when they find themselves in conflict with some of
+nature's creatures.  Some druids resolve such conflicts
+peacefully; however, some, particularly those druids
+more inclined toward evil, choose more violent methods.
+This spell is one of those; it calls upon the darker side
+of nature in an attempt to eliminate a life force from
+the cycle.  It can target only vermin, such as insects,
+mice and rats, spiders, and toads.  Higher animals and
+humans are immune to its effects, and the life force
+of plants is sufficiently different to render them
+immune as well.
+
+Command: exterminate <target> (defaults to attacker)
+Base Cost: 60 SP
+Base Recovery: medium-long
+Base Effect: damage (extreme, vermin only)
+Base Duration: instant
+Guild Level: 3

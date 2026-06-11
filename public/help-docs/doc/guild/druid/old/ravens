@@ -1,0 +1,15 @@
+Call Ravens
+
+This spell, which must be cast outdoors, summons dozens
+of ravens to torment the target.  The birds swarm around
+its head, plucking at its eyes and obscuring its sight.
+A creature thus blinded is unable to fight as well as
+usual and may be unable to utilize certain skills, if
+it possesses them.
+
+Command: ravens <target> (defaults to attacker)
+Base Cost: 40 SP
+Base Recovery: medium
+Base Effect: blind
+Base Duration: medium
+Guild Level: 14

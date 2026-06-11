@@ -1,0 +1,41 @@
+------------------------------------------------------------------------------
+                             Fighter Extras
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+Name                               Description
+------------------------------------------------------------------------------
+Huge weapons*                      Fighters have an innate ability to be more
+                                   effective when using huge weapons.
+                                   While using them, your accuracy may not be
+                                   the greatest, but if you land a hit you're
+                                   sure to do massive damage!
+
+Shields*                           Fighters are able to attempt to block their
+                                   opponents blows if they are using a shield.
+
+                                   * Fighters are also able to wear a shield
+                                     while using a 2-Handed or Huge weapon.
+
+Berserk                            If you see a bard around, ask him to party!
+                                   Bards have the ability to incite a berserk
+                                   rage in you, thereby enhancing most of your
+                                   abilities greatly!
+
+Endurance                          Your endurance comes from your constitution,
+                                   strength, wisdom, and dexterity.
+
+Spell Points                       Your SP comes from your strength,
+                                   constitution, and intelligence.
+DarkWind Guild Hall -
+From COT: script 6:n,exit,4:e,s,se,enter
+DarkWind warehouse -
+From COT: script 5:s,e,s,2:e,s
+Hyperborea warehouse -
+From adventurer's guild: script s,e,3:n,w
+Souvrael warehouse -
+From adventurer's guild: script e,2:s
+Talamh Darag warehouse -
+From adventurer's guild: script n,5:e,4:s,2:w,2:s,sw,s,se,s,e,3:s,sw,
+3:s,w,2:sw,2:w,2:nw,2:w,2:s,sw,2:w,3:nw,5:w
+------------------------------------------------------------------------------

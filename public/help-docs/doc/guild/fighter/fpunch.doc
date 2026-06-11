@@ -1,0 +1,8 @@
+Skill: fpunch      Timer: Damage       GL:  1    Cost: 10
+
+The most basic of fighter moves, punching someone as hard
+as you can. The damage may be minimal, but the feeling
+you get from punching someone as hard as you can should
+make up for it.
+
+Syntax is: fpunch <target>

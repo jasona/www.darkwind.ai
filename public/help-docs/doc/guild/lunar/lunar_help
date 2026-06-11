@@ -1,0 +1,60 @@
+<~> ====================================================================
+<~> Welcome!
+<~> 
+<~> Welcome to the order of Lunar Magi! You'll want to know a little bit
+<~> about us I suppose, so here's the skinny:
+<~> 
+<~> Armor:   Primarily Cloth. Some leather pieces are allowed in specific
+<~>          equipment slots.
+<~> Weapons: Daggers, staves, small magical shields.
+<~> Magic:   Mix of self and opponent status-effecting magic, damaging 
+<~>          magic, and generic support magic. 
+<~> Align:   The lunar entities Dailos, Markas, and Tekal will not aid
+<~>          those who are too far towards demonic alignment.
+<~> 
+<~> Clifnord, if you seek him out in the guild hall, can offer you some
+<~> very well crafted daggers that are imbued with the power of the
+<~> moons. These are not required weapons for Lunars, you can obviously
+<~> use whichever weapons you want, but they are available to those who
+<~> wish, and are of appropriate weapon training level, just see them out.
+<~> 
+<~> ====================================================================
+<~> Commands:
+<~> ====================================================================
+<~> lspells - List of your Lunar spells, what moon they're associated
+<~>           with, how much they cost, and whether you have them or
+<~>           not. To obtain more information about a specific spell
+<~>           try "help <spellname>".
+<~> 
+<~>  lwho   - Which Lunars are online currently.
+<~> 
+<~>  lmon   - Lunar monitor, you can turn it 'on' or 'off', or just
+<~>           type "lmon" to toggle it into its opposite position.
+<~> 
+<~>  lulook - Lunar "look". This allows you to see the alignment of
+<~>           the visible living beings in the room. This ability
+<~>           costs 5 sp and does interact with other support abilities.
+<~> 
+<~>  ltell  - Talk with your fellow Lunars! 'lt' can be used for short.
+<~>           You can get the channel hist using "lthist".
+<~> 
+<~> lmtitle - Set your Lunar guild title.
+<~> 
+<~>  gltell - Speak with your fellow Grand Master Lunars, once you're
+<~>           a Grand Master Lunar yourself, of course.
+<~>           You can get the channel hist using "glthist".
+<~> 
+<~> 
+<~> For Garou wolves only:
+<~> 
+<~>  lam_on  - Wear your Lunar guild amulet while in wolf form.
+<~> 
+<~>  lam_off - Remove your Lunar guild amulet while in wolf form.
+<~> 
+<~> ====================================================================
+<~>   lmhelp guildlevels  - To find out more information on the guild
+<~>                         levels in the Lunar guild.
+<~> ====================================================================
+<~> ====================================================================
+
+

@@ -1,0 +1,307 @@
+ 
+    The following documentation is meant to explain the use of the vehicle
+inheritable.  First, please understand what the inheritable is meant to do
+so you aren't using it for the wrong reason.  A vehicle, in the sense of the
+inheritable is some object that a player or multiple players can use to 
+travel around the mud.  It can also store things for that player, and be used
+as a symbol of power.
+    This actual inheritable creates the outside appearance of that vehicle.
+Then, using a vehicle room inheritable, you can create a single, or multiple
+rooms for that vehicle.  The 'hull' of the vehicle actually clones the rooms
+to it, and then travels around with that group of objects, including players
+and their inventories.
+    I will attempt to explain how to use this inheritable for one or multi-room
+vehicles.  These vehicles will check direction hooks for all players on the
+vehicle at the time, and they will check for legal terrain, in the next room.
+Aside from those slight restrictions, it is basically something you can ride
+around the mud in.  
+    The vehicle consists of several files.  You have to have the actual vehicle
+object.  Then, for each 'room' within the vehicle, you will need a file.  Lastly
+there is a sort of driver for the vehicle's rooms, that you will need to code.
+    This is a little more complicated than your average lpc coding.  If you are 
+a little confused, you can find example files in /doc/vehicles:
+    test.c     == The vehicle object.
+    front.c    == A front room for the vehicle.
+    back.c     == A back room for the vehicle.
+    standard.c == That vehicle's standard addition file.
+ 
+********************************************************************************
+The Vehicle Object:
+ 
+    The vehicle will be an object that noone ever enters.  That is the object 
+that will inherit VEHICLE.  This will NOT inherit ROOM or anything else.  You 
+will define all the strings there, such as the movement messages, its name,
+short and long descriptions, etc.  Each room should not do this.  
+ 
+Always #include <mudlib.h> and then just inherit VEHICLE;
+ 
+Your reset function should have a ::reset();  as should your init have ::init();
+You need to init_vehicle(); at the *end* of your reset function.
+ 
+void set_name(string str);
+  The string you pass is the name of the vehicle.  
+ 
+    set_name("ship");
+ 
+string query_name(string str);
+  Returns the ship's name.
+    
+    query_name();
+ 
+void set_alias(string str);
+  The string you pass is an alias for the vehicle.  
+  To set multiple alias's just set_alias again.
+    
+    Single:   set_alias("ship");
+    Multiple: set_alias(({"ship","vehicle"}));
+ 
+varargs mixed query_alias(string str);
+  Returns the array of alias' if nothing is passed.
+  Returns 1 if str is a valid alias set for this vehicle.
+ 
+    query_alias();
+    query_alias("vehicle");
+ 
+void set_short(string str);
+  This is the short description you will see outside of the vehicle.
+ 
+    set_short("Vehicle");
+ 
+string short();
+  Returns the vehicle's short description.
+ 
+    short();
+ 
+int id(string str);
+  Returns 1 if the str passed is a valid id.
+ 
+    id("vehicle");
+ 
+void set_long(string str);
+  This is the long description you will see outside of the vehicle.
+ 
+    set_long("A great looking vehicle.\n");
+ 
+string query_long();
+  Returns the long description of the vehicle.
+ 
+    query_long();
+ 
+void long(string str);
+  Returns the long of the vehicle or of an add_look.
+ 
+    long("vehicle");
+ 
+int query_level();
+  For dir_hooks it returns APPRENTICE;
+ 
+    query_level();
+ 
+void set_arrival(string str);
+  This is the string shown when the vehicle arrives in a room.
+ 
+    set_arrival("The vehicle arrives.\n");
+ 
+void set_departure(string str);
+  This is the string shown when the vehicle leaves the room.
+ 
+    set_departure("The vehicle leaves"); 
+    NOTE:  Do not attach a '.' or a '\n' because the direction which the 
+    vehicle leaves, is added to the end of this string.
+ 
+void set_max_players(int i);
+  This is the maximum number of people allowed on the vehicle.
+  You *must* set this variable.  It must be an appropriate size.
+              For example, a horse would only accept two players.
+ 
+    set_max_players(10);
+ 
+void set_bad_terrain(mixed str);
+  You use this function to set up an array of terrains that this 
+  vehicle cannot travel in.  Like the set_alias function, you can 
+  pass an array for multiple bad terrains.
+ 
+    Single:   set_bad_terrain("inside");
+    Multiple: set_bad_terrain(({"inside","city"}));
+ 
+void add_look(string *name, string desc);
+  If you describe an object on the outside of the vehicle, this would
+  be the description for that object.  You can pass an array as the first
+  argument.
+ 
+    add_look("mast","The mast is extremely tall.\n");
+    add_look(({"mast","masts"}),"They are tall.\n");
+ 
+void set_rooms_path(string str);
+  This is the path to the rooms of your vehicle.
+ 
+    set_rooms_path("/players/myname/vehicle/rooms/");
+ 
+string query_rooms_path();
+  Returns the rooms path of the vehicle.
+   
+    query_rooms_path();
+ 
+void set_addition_path(string str);
+  This is the path to your addition file (standard.c).
+ 
+    set_addition_path("/players/myname/vehicle/");
+ 
+string *query_additions();
+  Returns the array of addition files.
+ 
+    query_additions();
+ 
+void add_addition(string str);
+  This is the 'daemon' that sets up the rooms for your vehicle.
+  You can add as many as you want.  In other words, if you want
+  to have different vehicles, with a different set of rooms, you 
+  can have a different addition file for it.  This must be called
+  after the addition path is set.
+ 
+    add_addition("standard.c");
+    NOTE:  You must add_addition the file that you have setup to clone the
+           vehicle's rooms.  
+ 
+int query_addition(string str);
+  Returns 1 if the str is an addition of that vehicle.
+ 
+    query_addition("standard.c");
+ 
+void remove_addition(string str);
+  Removes that addition for that vehicle.
+ 
+    remove_addtion("standard.c");
+ 
+string query_addition_path();
+  Returns the addition path.
+    
+    query_addition_path();
+ 
+void set_owner(string str);
+  This is the name of the owner of the vehicle, if its owned.
+  This should be used if its a player owned vehicle only.
+ 
+    set_owner("player_name");
+ 
+string query_owner();
+  Returns the name of the owner.
+   
+    query_owner();
+ 
+object find_owner();
+  Returns the object that owns the vehicle, if its online.
+ 
+    find_owner();
+ 
+varargs void tell_vehicle(string str, string *exclude);
+  The first argument is what to be told to the vehicle, and the second argument
+  is an array of string, exclusions, what rooms *not* to tell the string to.
+  You don't always have to pass the second argument.  If for some reason you 
+  want to set_listen in this room, differently than the rest of the vehicle, 
+  you can set_listen(0) or 1 as needed.  (1 listens)
+ 
+The only other special actions in the inheritable is that for 'enter_func'. 
+It is not defined as an add_action in the inheritable, so you will have to 
+add_action it yourself in your init of your vehicle object.  The purpose here,
+was to allow you to define your own type of function for boarding (IE a horse
+would be mount.)  
+ 
+If you wish to use your vehicle for combat, and allow it to have vehicle_points,
+similar to hit_points on a player, use the following functions, much like those
+in living.c:
+ 
+  void set_max_vp(int iArg);
+  int query_max_vp();
+  void restore_vp(int iArg);
+  int query_vp();
+ 
+Currently there is no support for vehicle vs. vehicle combat.  If you wish to 
+do something like that, you will have to prototype that yourself.  There are
+no funtions within that will help, except for the four listed above.
+ 
+If you'd like to use access lists in your vehicle, use the following functions:
+ 
+void use_access(int iX);
+  Set this to 1 if you want to use access lists.
+ 
+int add_access(string name)
+  Add name to your access list.
+ 
+int remove_access(string name)
+  Remove name from your access list.
+ 
+mixed query_access(string name)
+  If name is passed it will check to see if name has access to the vehicle, 
+  returning a 1 if so, 0 otherwise.  If nothing is passed it will return the
+  array access_list containing everyone with access.
+ 
+********************************************************************************
+The Vehicle Room Daemon:
+ 
+Technically, this is not a daemon, but it sets up the rooms of the vehicle.
+You will be better off, calling it an 'additions' file.  This file must be in 
+the addition path you set.  The reason for having a separate file to add 
+rooms, is so you can have one file, to add a typical set of rooms, to different
+vehicles.  Each vehicle must have a standard set of rooms, and it expects you
+to add_addition one file in the addition path.  If you wish to only have 1 set 
+of rooms, then just make one addition file.  A typical example of the code 
+would be this:
+ 
+int do_addition(object oOb) {
+  oOb -> add_room("front","front_room");          
+    - the first arguement is the unique name of the room, and the second 
+    - arguement is the filename of the room, in the rooms path.          
+  oOb -> set_entrance("front");
+    - You should set the entrance to the vehicle if this is the room you
+    - want to be the entrance.                                          
+  oOb -> add_room("back","back_room");
+  oOb -> add_room("secret","secret_room");
+}
+ 
+set_enter_room(n);
+  String n.  This is where you enter the vehicle.
+ 
+    set_entrance("front");
+    NOTE:  This should always be the only room you enter the vehicle in.
+ 
+********************************************************************************
+The Vehicle Rooms:
+ 
+The vehicle clones the 'rooms' of the vehicle to itself.  These rooms should
+inherit VEHICLE_ROOM, *not* ROOM.  Each room file has to be in the rooms path
+you have previously defined.  Then each room adds an exit to the other rooms,
+and the direction function to move the player to that room.  In the add_exit
+line of the rooms, you will do something like this:
+ 
+  add_exit("rear","roomname"); 
+  Note:  Roomname is the actual roomname of the room, that you set in the
+         file of that room.  It will then move the player to the correct room.
+         The filename, is that actual filename, not the entire path, so if its
+         bridge.c, just use 'bridge' for the second arguement.
+ 
+You will need to set the room's name as well:
+  
+  set_room_name("rear");
+ 
+object find_room(string str);
+  Returns the object of that name, where str is the name of the room.
+ 
+    find_room("room_name");
+ 
+Valid functions to add that are in the inheritable are:
+  move_func()              /* Moves the vehicle. */
+  leave_func()             /* Leaves the vehicle. */
+  look_outside_func()      /* Looks outside the vehicle. */
+ 
+You can just add_action("move_func","steer"); for example, then you might
+code a move function to call it, if you want, so you can do your own writes
+and says, etc.  Then you can just do move_func(str);
+ 
+As far as the move code is concerned, please do not use your own move function.
+This move function correctly checks for terrain, dir_hooks, inits and virtual
+rooms.  You can, however, do something like add_action("move","steer");  
+(You will have to add_action something for the move command.)  The syntax for
+calling move, is just move(string);  The string will be the direction you want
+to move in.
+ 

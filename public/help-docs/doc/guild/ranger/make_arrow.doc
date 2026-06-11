@@ -1,0 +1,17 @@
+
+Ranger Help for: carve arrow
+============================
+
+SYNTAX:      carve arrow/carve bolt
+USAGE:       forest,jungle,swamp
+SLOT COST:   5
+BASE SP:     10 sp
+SKILL TYPE:  arrow
+
+SUMMARY:    
+This skill allows a Ranger to carve an arrow or bolt from wooded areas.
+Arrows are used in shortbows and longbows, while bolts are used in
+crossbows. Once carved, arrows and bolts can be enhanced by fire,
+poison and other methods, if they Ranger knows how to. The Ranger must
+have a slash type weapon in order to cut and carve the wood.
+

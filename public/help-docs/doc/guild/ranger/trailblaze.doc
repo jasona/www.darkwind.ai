@@ -1,0 +1,23 @@
+
+Ranger Help for: trailblaze(blaze)
+==================================
+
+SYNTAX:      trailblaze to <target>/backtrack
+USAGE:       forest,plains,swamp,desert,jungle,hills,road,beach,
+             mountain,arctic,barren,outside
+SLOT COST:   8
+BASE SP:     65 sp
+SKILL TYPE:  aid
+
+SUMMARY:    
+Trailblaze allows a Ranger to come to the rescue of a lost explorer.
+The explorer must have called for the Rangers help by using the 'helpme'
+emote. Once a call has been made, the Ranger only has about 5 minutes,
+after which he or she forgets from which direction the call came from.
+A Ranger can't trailblaze from just anywhere, they must be fairy close,
+approximately within the same realm(wizard's area) and both the Ranger
+and the target explorer must be above ground...Rangers can't trailblaze
+through dirt and rock. Once there, the Ranger may elect to 'backtrack'
+to his or her original location at no extra cost. If the explorer you
+trailblazed to is there, they will follow you while you backtrack.
+

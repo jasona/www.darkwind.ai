@@ -1,0 +1,13 @@
+ZorkMUD Version
+
+This version of Zork is a port of the original source code, preserved by
+MITDDC at:
+
+  https://github.com/MITDDC/zork
+
+The game has been ported to the LDMud driver, written in LPC, and runs on
+a slimmed down version of Darkwind.
+
+If you like what you see, come visit us at Darkwind:
+
+  https://play.darkwind.ai

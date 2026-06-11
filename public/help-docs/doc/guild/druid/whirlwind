@@ -1,0 +1,15 @@
+|GKB-- Whirlwind -------------------------------------------------|000
+
+By using the Tekali current, the druid can bind a
+wind spirit to create a whirlwind around an
+opponent, battering and disorienting them.
+The enemy must use some of its strength to
+fight the whirlwind, leaving it less able
+to battle the druid.
+
+|CKBCommand:      |000 whirlwind <target> (defaults to attacker)
+|CKBBase Cost:    |000 40 Tekali nwyfre
+|CKBBase Recovery:|000 medium
+|CKBBase Effect:  |000 drain (strength, moderate), damage (low)
+|CKBBase Duration:|000 medium
+|CKBGuild Level:  |000 6

@@ -1,0 +1,11 @@
+|GKB-- Purify Blood ---------------------------------------------|000
+
+Current: |CKBMarken|000
+Command: |CKBpurify <target>|000
+Guild Level: 11
+
+Purify Blood draws on Marken stability to clear poison, intoxication,
+and fever from the target.  It defaults to the caster.
+
+Higher mastery improves the cleansing strength and adds a small
+restorative wash.

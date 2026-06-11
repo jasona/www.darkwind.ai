@@ -1,0 +1,19 @@
+|WKBSyntax: |YKBignore <name>
+        ignore list
+        unignore <name>
+ 
+ 
+|WKBDESCRIPTION
+|WKO===========
+ 
+|YKOThis command allows you to ignore certain players' tells and emotes.
+This is handy when a player (Or wizard) is bothering you and won't
+leave you alone.  This command will allow you to ignore more than
+one person as well.  If you decide at a later time that you want
+to start talking to that person again, just |YKB'unignore <name>'|YKO,
+where name is the person you want to quit ignoring. You can also
+|YKB'ignore list'|YKO to see who you are ignoring.
+
+If someone has you ignored, do not attempt to go around the ignore.
+This counts in PK as well. Just leave them alone. Failure to do so
+will result in punishment.

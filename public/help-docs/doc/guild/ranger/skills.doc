@@ -1,0 +1,47 @@
+Ranger Help for: skills
+=======================
+
+SUMMARY:
+Rangers learn skills by spending slots and experience. Each skill has
+a slot cost (fixed) and an experience cost (varies by intelligence
+and number of guilds).
+
+HOW SKILLS WORK:
+- Skills are organized in a TREE. Learning one skill unlocks others.
+- Type 'skilltree' to see the full tree with your progress.
+- Type 'learn' to see what you can learn right now.
+- Type 'learn cost <skill>' to see exact costs and requirements.
+- Type 'learn <skill>' to learn it.
+
+SKILL BRANCHES:
+  Survival     Crafting, gathering, camping, herb mixing
+  Cartography  Navigation, scouting, terrain knowledge, mining
+  Hunting      Tracking, stealth, skinning, snares
+  Husbandry    Animal companions, calming, training
+  Attack       Melee combat techniques
+  Archery      Bow crafting, arrow enhancement, ranged specials
+
+TERRAIN BONUSES:
+Many skills work differently based on terrain. Skills used in your
+primary terrain cost less SP, have shorter cooldowns, and deal more
+damage. Your secondary terrain provides smaller bonuses. Some skills
+only work in specific terrains - use 'check <terrain>' to see what
+works where.
+
+CRAFTING CHAIN:
+Rangers are self-sufficient. The basic crafting flow is:
+  harvest -> get wood (in forest terrain)
+  harvest -> get rocks (in mountain/hills/underground)
+  forage herbs -> mix into salve or poison
+  skin corpse -> get meat, hide, and a pouch
+  wood + rope + rock -> make tools
+  tools -> mine for gold/silver nuggets
+  wood -> carve arrows, carve bow, make torch, make rope
+
+STARTING OUT:
+Your first available skill is 'forage'. Learn it, then learn the
+skills it unlocks (make rope, make torch, survey). From there the
+tree branches into all six categories.
+
+=============================================================================
+SEE ALSO: skilltree, learn, slots, glevels, advancement

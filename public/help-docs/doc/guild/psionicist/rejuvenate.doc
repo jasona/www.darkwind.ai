@@ -1,0 +1,20 @@
+_______________________________________________________________________________
+"Rejuvenation"      
+        This is a healing ability that costs time rather than power
+        points.  It is cast with a number of minutes, which will be
+        spent concentrating.  At the end of that time, the psionicist
+        will heal an amount of hit points GREATLY influenced by the
+        amount of time spent rejuvenating.  Rejuvenating once for 6
+        minutes will restore an exponentially greater amount than doing
+        it 3 times for 2 minutes each.  Of course, any commands given
+        during the concentration period will cancel the power completely
+        and no healing will take place at all.  Note that the mental
+        effort necessary to sink into this meditative trance is such
+        that no other power may be used during the rejuvenation time,
+        even if the psionicist cancels the power.  The rejuvenation cost in
+        sp is approximately what would be regenerated normally in the
+        same amount of time.
+ 
+SP Cost:  Variable	Guild Level:  1		Potential Points:  2
+ 
+Command:  rejuvenate <number of minutes>

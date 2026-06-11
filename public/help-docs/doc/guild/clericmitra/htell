@@ -1,0 +1,6 @@
+SPELL NAME  : High Mitra tell           | Emote High Mitra tell
+SPELL SYNTAX: Htell <message>           | Ehtell <emoted message>
+SPELL COST  : NONE                      | NONE
+DESCRIPTION : This ability sends out the <message> to all on-line High
+	      level Clerics and Paladins. These are the guild level 15 
+              clerics and paladins.

@@ -1,0 +1,14 @@
+SYNOPSIS
+        string english_time(int iValue)
+
+DESCRIPTION
+        Returns a string conversion of the value iValue into the
+        standard day/hour/minute/second format.
+
+EXAMPLE
+        write(english_time(10000)+"\n");
+        Prints out: 2 hours, 46 minutes, and 40 seconds
+
+
+SEE ALSO
+        ctime(E), gmtime(E), localtime(E), utime(E)

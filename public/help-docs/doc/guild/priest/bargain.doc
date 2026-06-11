@@ -1,0 +1,8 @@
+|CK0Prayers to Set require more than just a temporary cost. Set requires
+|CK0something greater, an extended bargain. This bargain "reserves" part of
+|CK0the priest's HP or SP for a few minutes.
+|CK0
+|CK0During this time, the health or energy isn't available for other
+|CK0prayers, and cannot be healed nor restored. In the "prayers" command,
+|CK0these show as the "HPR" and "SPR" costs, short for health and
+|CK0spell point reservations.

@@ -1,0 +1,19 @@
+                 --=Daemons and Systems=--
+
+9.1  Object Generators
+9.2  Tithe/Tax System
+9.3  Unit/Regression Testing Framework
+9.4  Portal Client
+9.5  Combat modification system
+9.6  Party system/Party listeners
+9.7  Town Crier
+9.8  Edit Daemon
+9.9  Shops
+9.10 Light System
+9.11 Menu System
+9.12 Stat Tests
+9.13 Events
+9.14 Emote System
+9.15 Player Stats Daemon
+
+To view the help file type wizhelp <number>

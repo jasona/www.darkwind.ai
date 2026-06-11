@@ -1,0 +1,9 @@
+Skill: frush       Timer: Damage       GL:  3    Cost: GL+10 Doubled
+
+A basic fighter attack skill. You rush forward, smashing your shield into
+your target.
+
+You need to be using a shield to use this skill. You get better at rushing
+as you increase your skills as a fighter.
+
+Syntax is: frush <target>

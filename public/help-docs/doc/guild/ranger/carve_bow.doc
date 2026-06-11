@@ -1,0 +1,36 @@
+
+Ranger Help for: carve bow
+==========================
+
+SYNTAX:      carve <shortbow/crossbow/longbow>
+USAGE:       forest,jungle,swamp
+SLOT COST:   10
+BASE SP:     60 sp
+SKILL TYPE:  bow
+
+SUMMARY:    
+This skill allows a Ranger to carve one of three types of bows from
+wooded areas. The three bows are shortbow, longbow and crossbow. Each
+has its advantages and disadvantages as well as more advanced special
+attacks for each. The shortbow, loads faster, but hits with less power.
+The longbow hits pretty hard, but takes longer to load. Both the shortbow
+and longbow use arrows. The crossbow hits the hardest, and takes the
+longest to load. Crossbows use bolts to fire. As a Ranger's level goes up,
+so does his or her ability to carve a bow. The quality of a bow affects
+how well a Ranger shoots it, as well as how tough it is in hand to hand
+combat. When used in hand to hand combat, a bow becomes something more
+akin to a staff, so it is weapon spec'ed as a medium blunt weapon. Ammo
+for the bows can be carved from wooded areas as well, provided the Ranger
+knows the skill carve arrow. Once arrows and bolts have been carved, they
+can be enhanced with several other Ranger skills.
+
+Once a bow has been carved. You need to specify where you want to load ammo
+from by typing 'load from <container>' where container can be the name of
+a container you have, such as your quiver, or from 'me', which loads arrows
+from the arrows you are holding in your hands. The best arrows or bolts you
+have are automatically used first and you can change from what container
+you wish to load from at any time. Too fire your bow at someone, type
+'fire <target>' and you will either score a hit or miss. Arrows and bolts
+can be reused if you get them back by slaying your opponent or picking up
+arrows or bolts that you shot and missed with. 
+

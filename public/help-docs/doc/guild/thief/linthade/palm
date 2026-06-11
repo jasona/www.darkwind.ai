@@ -1,0 +1,10 @@
+This command allows you to pick up items without anyone
+else knowing you picked them up. It works exactly like
+"get" or "take". You can use "palm all". A thief must
+always be the master of deception, so quickly palm that
+item and don't let others see you've picked it up. You
+must be guild level 4 to use this power.
+
+Syntax: palm <item> or "all", or palm <item> from <target>,
+        as well as 'palm all from <target>'.
+

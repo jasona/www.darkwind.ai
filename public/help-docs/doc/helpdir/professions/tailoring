@@ -1,0 +1,73 @@
+                             Tailoring
+
+    Tailors can make padded armour and light clothes. Tailors convert
+piles of cloth found among the corpses of dead monsters into bolts of
+cloth. The bolts can then be made into armour or clothing in the tailoring
+room of the profession building, 4e, n from Center of Town.
+
+Getting started:
+  1. Save cloth reagents by picking them up and saving them, or by using
+     'reagents search <cloth>' to find likely sources.
+  2. Convert cloth piles into bolts in the tailoring room.
+  3. Use 'quickcraft <type> <slot> <shard>' for padded armour.
+  4. Use 'quickcraft clothes <type> <slot>' for light clothing.
+
+                             Converting
+Cotton Bolt:        6 x Piles of cotton
+Silk Bolt:          4 x Piles of pure silk    1 x Velvet Larz
+Emberweave Bolt:    4 x Piles of dark fibre   1 x Dinkweed
+Lunar Cloth Bolt:   4 x Piles of lunar cloth  1 x Star Flower
+Sun Cloth Bolt:     4 x Piles of sun cloth    1 x Sun Flower
+Mage Fibre Bolt:    4 x Piles of mage fibre   1 x Mithril Bar
+
+    Tailors can make 6 kinds of padded armour - boots, breeches, cloaks, 
+doublets, hoods and robes. The tailors can use any of the 6 types of bolts
+to make the armour. Cotton armours doesn't have a level restriction. Silk
+armour has a level restriction of level 20. Emberweave, Lunar Cloth, and
+Sun Cloth armours have a level restriction of level 45. Mage Fibre has a
+level restriction of level 65. All armours with a level restriction have
+an innate bonus of 1 sp.
+
+    Cotton armour can be made by anyone, but your skill will max at 100
+crafting them. Silk armour needs a skill of 60, and will max at 200.
+Emberweave, Lunar Cloth, and Sun Cloth require a skill of 100, and will
+max at 500. Mage Fibre needs a skill of 200 to craft, and will max at 1000.
+
+    All of the crafted armour take 6 Bolts to craft. Those with a level
+restriction also need 1 Shard from the special reagents. The shards infuse
+the armours with special benefits. Silk armours will have an increase of 1,
+while Emberweave, Lunar Cloth, and Sun Cloth will have an increase of 3,
+and Mage Fibre will have an increase of 5.
+
+    Tailors can also make simple clothing from the same bolt types. Clothing
+is light, wearable, and made for style rather than protection. It does not
+use shards and takes 2 Bolts to craft. Clothing slots are boots, cloak,
+gloves, hat, pants, robe, and shirt.
+
+    Quickcraft examples:
+      quickcraft silk robe amber
+      quickcraft clothes silk cloak
+
+    Tailored goods may also appear in profession work orders. Crafted
+profession gear can be improved with 'inlay <crafted item> with <shard>'
+in the profession building.
+
+    Amber Shard - Poison Resist       Onyx Shard - Constitution
+    Beryl Shard - Strength            Pearl Shard - Charisma
+    Bloodstone Shard - Disease Resist Sapphire Shard - Dexterity
+    Garnet Shard - Wisdom             Sunstone Shard - Fire Resist
+    Jade Shard - Intelligence         Topaz Shard - Lightning Resist
+    Moonstone Shard - Cold Resist
+
+Piles of cotton:
+  Can be gotten randomly from bears, deer, dogs, goats and pigs.
+Piles of pure silk:
+  Can be gotten randomly from gypsies, kobolds and spiders.
+Piles of dark fibre:
+  Can be gotten randomly from gnomes, goblins, lizardmen and spiders.
+Piles of lunar cloth:
+  Can be gotten randomly from elves, giants, humans and trolls.
+Piles of sun cloth:
+  Can be gotten randomly from dwarves, faeries, gnolls, halflings and yetis.
+Piles of mage fibre:
+  Can be gotten randomly from elementals, faeries, genies, orcs and spiders.

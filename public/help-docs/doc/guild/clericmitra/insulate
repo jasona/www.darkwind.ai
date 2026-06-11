@@ -1,0 +1,6 @@
+SPELL NAME  : Insulate
+SPELL SYNTAX: Insulate <target>
+SPELL COST  : 25 SP
+DESCRIPTION : Calling upon the power of Mitra, the cleric surrounds the
+              target with a shield of warmth which protects the target 
+              from harsh cold weather for 30 minutes.

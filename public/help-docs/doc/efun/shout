@@ -1,0 +1,6 @@
+SYNOPSIS
+        varargs void shout(string sMsg, int iMinLevel, string sChannel, 
+          string sSpec, object *aoExclude, int iRemote, int iNoHist)
+DESCRIPTION
+        This efun now simply sends channel_msg(sMsg, sChannel, iMinLevel, 
+        0, 0, aoExclude, iRemote, iNoHist);

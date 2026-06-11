@@ -1,0 +1,16 @@
+
+Ranger Help for: signal
+=======================
+
+SYNTAX:      signal <target> <message>
+USAGE:       Any terrain
+SLOT COST:   2
+BASE SP:     1 sp
+SKILL TYPE:  aid
+
+SUMMARY:    
+This skill allows a Ranger to use the elements of nature to communicate
+with friend or foe. The target must be smart enough to understand the
+message, because it will come via a variety of ways. Its use is limited
+to targets on the same continent.
+

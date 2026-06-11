@@ -1,0 +1,7 @@
+Peeking into a victim's container allows the master thief
+to be little bit more choosy in what he steals. Using your
+stealth like abilities, you are able to sneak a peek into
+their container and see if it's worth stealing. This is 
+a Glevel 12 skill.
+
+Syntax: peek <container> on <target>

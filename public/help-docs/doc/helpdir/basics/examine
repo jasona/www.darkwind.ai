@@ -1,0 +1,9 @@
+
+|WKBSyntax: |YKB"examine" |WKBor |YKB"examine <string>"
+
+|WKBDESCRIPTION
+|WKO===========
+|YKOWith no string, examine the room you are currently standing it.
+With a string, you can 'examine <string>'.
+ 
+|WKBSee also: |YKBexamine, l, gl

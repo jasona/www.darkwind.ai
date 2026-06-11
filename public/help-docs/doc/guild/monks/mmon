@@ -1,0 +1,19 @@
+Syntax: mmon
+This command allows you to enable and disable your monk monitor.
+
+The monk monitor now shows:
+  style
+  current chi and max chi
+  whether chi focus is active
+  the current power word, if any
+  your combo summary
+  the active trial objective, if you are in a mastery trial
+
+The two bracket indicators are:
+  first bracket: chi focus
+  second bracket: power word
+
+Examples:
+  [F] means chi focus is active
+  [X] means it is not
+  [S] [C] [D] [A] indicate the active power word

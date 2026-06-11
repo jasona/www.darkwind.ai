@@ -1,0 +1,21 @@
+SYNOPSIS
+	void set_auto_load(int iArg)
+
+DEFINED IN
+	ob.c
+
+DESCRIPTION
+	Sets the bit_flag on an object to '<iArg>' showing it as either an
+	auto_load object or not.
+
+	NOTE: This flag is automatically set on an object that is created
+	      from a players autoload list when they login. It is also set
+	      on an object that is passed to the function 'register_auto_obj'
+
+EXAMPLE
+	// This example flags the object as an auto_load object
+	object oObj = clone("/objects/hat");
+	oObj->set_auto_load(1);
+
+SEE ALSO
+	register_auto_obj, remove_auto_obj, query_auto_obj, query_auto_load

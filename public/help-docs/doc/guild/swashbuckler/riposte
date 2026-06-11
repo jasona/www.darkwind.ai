@@ -1,0 +1,12 @@
+Riposte - blade technique
+------------------------------------------------------------
+Riposte is a mid-level blade technique. The swashbuckler, by
+anticipating an attack is able to respond to an incoming
+blow from a third party (someone he's not attacking) with a
+quick strike of his own. Note that parrying is not necessary
+to execute ripostes.
+
+GL:  7
+SP:  3 / riposte
+command:  riposte
+duration: technique mode

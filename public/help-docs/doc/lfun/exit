@@ -1,0 +1,18 @@
+  exit(): The opposite of init. Called when someone leaves the room.
+    Be very careful when using this function. If there is an
+    error in it, the occupants of the room can't quit, die, leave
+    the room or perform anything that involves them or anything
+    moving out of the room. And if this should happend to you
+    despite this warning (which it most problably will, *sigh*)
+    DON'T call for help. Anyone who enters the room will only
+    get stuck as well. The only thing you can do is hope for
+    a reboot of the game within the near future :) .
+void exit(ob)
+object ob;
+
+This function is called in rooms everytime a living object 'ob' leaves.
+
+The function this_player() will return a random value, don't use it at this
+point.
+
+See also: lfun/init

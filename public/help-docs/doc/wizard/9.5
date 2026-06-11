@@ -1,0 +1,108 @@
+Combat Modification System
+==========================
+The combat modification system is a system for applying temporary mods
+to combat. The system is included by all LIVINGs and provides hooks to
+interact with combat modifying objects. The system requires that an
+object with functions to set modifications be registered with the
+living whose combat is to be modified.
+
+
+Registering combat mod objects
+------------------------------
+  void add_combat_adj(object oArg)
+    - This function must be called on the living that will get the mods.
+      The object passed is registered with the living as an object which
+      modifies combat for that living.
+
+  void remove_combat_adj(object oArg)
+    - This function should be called on the living when a particular
+      modification to combat is unregistered.
+
+  void add_tmp_to_XXX(int iAdjustment)
+    - XXX to be replaced by a mod type.
+      This function will add a temporary mod of the passed value.
+
+  void query_tmp_to_XXX()
+    - This function will return a temporary mod of the given type.
+
+  void reset_tmp_to_XXX()
+   - This function will reset the mod of the given type to 0.
+
+The following modifications exist:
+  tmp_to_hit_stat
+  tmp_to_dam_stat
+  tmp_to_dodge_stat
+  tmp_to_absorb_stat
+  tmp_to_crit_stat
+  tmp_to_hit
+  tmp_to_crit
+  tmp_to_dam
+  tmp_to_dodge
+  tmp_to_absorb
+  tmp_to_type
+  tmp_to_swings
+
+
+Functions to define in combat mod object
+----------------------------------------
+  int modify_combat(object oTarget)
+    - This is called by the attacking living, at the start of the combat
+      round. The target is the current target being attacked. The return
+      value is currently unused, and not tmp mods are expected to be set.
+
+  int modify_attack(object oTarget, mixed* axAtt)
+    - This is called by the attacking living, prior to an attack set axAtt
+      being launched at oTarget. The return value is currently unused, and
+      the following tmp mods are cleared prior to this function being
+      called: tmp_to_hit_stat, tmp_to_dam_stat, tmp_to_crit_stat,
+      tmp_to_swings.
+
+  int modify_swing(object oTarget, mixed* axAtt)
+    - This is called by the attacking living, prior to each swing of an
+      attack set axAtt being launched at oTarget. The return value is
+      currently unused, and the following tmp mods are cleared prior to
+      this function being called: tmp_to_hit, tmp_to_crit.
+      
+  int modify_hit(object oTarget, mixed* axAtt, status tCrit)
+    - This is called by the attacking living, once it has been determined
+      that contact will be made, but before damage is determined. The
+      return value is currently unused, and the following tmp mods are
+      cleared prior to this function being called: tmp_to_dam, tmp_to_type.
+
+  int modify_get_attacked(object oAttacker, mixed* axAtt)
+    - This is called by the defending living, prior to an attack set axAtt
+      being launched by oAttacker. The return value is currently unused, and
+      the following tmp mods are cleared prior to this function being
+      called: tmp_to_dodge_stat, tmp_to_absorb_stat.
+
+  int modify_swung_at(object oAttacker, mixed* axAtt)
+    - This is called by the defending living, prior to each swing of an
+      attack set axAtt being made by oAttacker. The return value is
+      currently unused, and the following tmp mods are cleared prior to this
+      function being called: tmp_to_dodge.
+      
+  int modify_get_hit(object oAttacker, int iDam, int iType, status tCrit)
+    - This is called by the defending living, after contact has been made
+      and damage determined, but prior to damage actually being applied.
+      The return value is currently unused, and the following tmp mods are
+      cleared prior to this function being called: tmp_to_absorb.
+
+
+How much of a bonus to give?
+----------------------------
+The easiest way to give bonuses/penalties to the tmp_to_WHATEVER_stat.
+This effectively lowers the living's stat in one of the four combat
+areas as if they had a lower physical stat. In terms of criticals,
+one temporary stat is the effectiveness of one level. Bear in mind
+that actual combat stats are not as important as their relative
+ratios, meaning that one point of temporary combat stat is far
+more valuable to someone with one point of real stat than to someone
+that already has fifty points. When giving out larger bonuses, it may
+be useful to scale those bonuses in terms of a living's level or
+actual stat.
+
+tmp_to_WHATEVER will increase the final values in a meaningful way.
+For example, if one wants to guarantee a hit, an increase to tmp_to_hit
+of 100 (or more) may be appropriate. In order to increase the actual
+damage done by a hit, increase the tmp_to_dam by the amount desired.
+Note that this method is usually much harder to balance.

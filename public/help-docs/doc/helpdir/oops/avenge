@@ -1,0 +1,36 @@
+Death Avengement
+---------------------------------------------------------------------
+
+Death avengement is the process by which players use to avenge their
+last death, and attempt to restore any lost experience.
+
+This system allows a player that just recently died, and lost experience
+in that death, to ask another player to avenge his/her death. The
+avenged and avenger have a set timeframe from the time of the original
+death to successfully find and avenge the player's death.
+
+If successfully avenged, any lost experience is halved and shared be-
+tween the avenged and avenging player.
+
+Previously, it was impossible to restore any experience that was lost
+from death, so with this new exception, comes a few rules to how the
+system works:
+
+  * From the time of death, the avenged has 30 real time minutes to
+    find an avenger, and for that avenger to track and kill the target
+    mob.
+
+  * Neither the avengee or the avenger may log off during that time, 
+    else that avenge is forever lost.
+
+  * An avenged player can only have one avenger per death.
+
+  * An avenger can only attempt to avenge one player at a time.
+
+  * If the original killing mob is killed, the avengement is cancelled.
+    In the case of PKs, if the killing player logs off, the avengement
+    is cancelled.
+
+
+See also: askavenge, avengeinfo
+---------------------------------------------------------------------

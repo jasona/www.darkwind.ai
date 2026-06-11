@@ -1,0 +1,15 @@
+There are four classifications of pronouns available for use in
+coding.
+   pronoun, possessive, objective, absolute possessive
+
+Darkwind supports single-player, non-archaic male/female/neuter
+pronouns.
+
+The queries will return as follows:
+
+query_pronoun()        returns: he, she, it
+query_possessive()     returns: his, her, its
+query_objective()      returns: him, her, it
+query_abs_possessive() returns: his, hers, its
+
+---Xnedra 08/28/98---

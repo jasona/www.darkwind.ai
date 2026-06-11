@@ -1,0 +1,351 @@
+**************************************************************************
+                         WEAPON AND ARMOUR CODING GUIDELINES
+**************************************************************************
+Note:   A wizard is allowed to have only 1 unique item per 100 rooms, and
+        the number of exceptional items allowed is also restricted.  See
+        'wizhelp 4.14 (uniques)' for details.
+
+
+***************************************************************************
+                         ARMOUR CODING
+***************************************************************************
+
+Note:   For armor coding, there are rules and there are guidelines. You
+        can look at the rules as being related to balance issues and not
+        negotiable. This is because players always gravitate towards the
+        best things. Anything that is overpowered will tend to disrupt
+        overall balance to a disproportionately large extent. Guidelines
+        are more thematic elements that you should try to follow for
+        consistency, but may be violated for other thematic reasons.
+
+        Don't get carried away making all your items really good since
+        too many good items will make the game too easy for players.
+
+***************************************************************************
+                         ARMOUR TYPES/SETTINGS
+***************************************************************************
+When creating your armour, you must make sure you specify its
+COVERAGE TYPE, COMPOSITION, MATERIAL, QUALITY and SIZE. This is done
+by using set_new_type(), set_material(), and set_quality().
+
+-----------------------------Coverage Types------------------------------
+Valid basic coverage types:
+TORSO, LEGS, BOOTS, HELMET, AMULET, SHIELD, RING, CLOAK, GLOVES,
+SHOULDERS, AURA.
+
+RING and AMULET each allow two worn items. Ordinary ring and amulet
+objects will use the first available matching slot. The other basic
+coverage types normally allow one worn item.
+
+Valid composite coverage types:
+ARMOUR, ARMOR - same as TORSO|LEGS
+FULL_SUIT - same as TORSO|LEGS|HELMET|GLOVES|BOOTS
+
+These are the ONLY allowed armour types.  If you set it to something
+else, the game will reset it to ARMOUR. However, you may OR the
+types together to create armors with unique coverage.
+
+-----------------------------Size----------------------------------------
+Size should be specified for all new and recoded armors.  However, only
+SHIELD types are currently affected by size.
+
+Valid sizes: SMALL, MEDIUM, LARGE, HUGE
+NOTE: Shield size is *very* important for guild restrictions.
+
+------------------------------Composition--------------------------------
+Valid compositions:
+PADDED, HIDE, STUDDED, CHAIN, BANDED, SCALE, PLATE, MAGICAL.
+
+If the composition you want is NOT in this list, talk to an IMP+ about
+what category to put it in to.
+
+-------------------------------Material----------------------------------
+Valid materials are described in 'wizhelp 4.16 (materials)'.
+
+Example: set_material(MAT_STEEL);
+
+Materials can be mixed. MAT_NATURAL means woven of grass, etc. If you
+want any materials added to this list, tell us now, as it necessitates
+rebooting the mud to add new ones.
+
+-------------------------------Quality-----------------------------------
+Quality is a percentage range INCREASE of the armor's quality over the
+average armor of the appropriate composition. Use a negative value to
+make armors that are worse than average. Wearing an armor with quality
+under -100 will result in an overall penalty to the player over not
+wearing anything at all.
+
+Quality can be set using set_quality();
+
+-------------------------------Examples----------------------------------
+All of these but size can be mixed. Here are some examples:
+
+leather jerkin      : set_new_type(TORSO|HIDE|MEDIUM);
+                      set_material(MAT_LEATHER);
+                      set_quality(0);
+ogre's robe         : set_new_type(ARMOR|PADDED|LARGE);
+                      set_material(MAT_CLOTH);
+                      set_quality(-30);
+leather leggings    : set_new_type(LEGS|HIDE|MEDIUM);
+                      set_material(MAT_LEATHER);
+                      set_quality(0);
+small shield        : set_new_type(SMALL|SHIELD);
+                      set_material(MAT_WOOD|MAT_STEEL);
+                      set_quality(-20);
+plate               : set_new_type(ARMOR|PLATE|MEDIUM);
+                      set_material(MAT_STEEL);
+                      set_quality(0);
+full plate          : set_new_type(FULL_SUIT|PLATE|MEDIUM);
+                      set_material(MAT_STEEL);
+                      set_quality(0);
+adamantite full     : set_new_type(FULL_SUIT|PLATE|SMALL);
+   battle armour      set_material(MAT_ADAMANTITE);
+   (dwarf sized)      set_quality(30);
+
+*************************************************************************
+                         ARMOUR RULES
+*************************************************************************
+
+Quality ranges normally fall between -100 (for armor that is useless
+because it's falling apart, to +40 for normal armors of the highest
+quality workmanship. The quality must roughly reflect the long/short
+descs of the item.
+
+Any armor with a quality above 40 is considered exceptional, and any
+armor with a quality above 60 must be unique. Under no circumstances
+should quality be above 100.
+
+*************************************************************************
+                         ARMOUR GUIDELINES
+*************************************************************************
+Note:   These values are guidelines only, for thematic purposes.
+
+                        Comp.     Coverage    Weight    Quality   Warmth
+-------------------------------------------------------------------------
+Gold ring               PLATE     RING          1         0         0
+
+Gold necklace           CHAIN     AMULET        1         0         0
+Leather necklace        HIDE      AMULET        1         0         0
+
+Silk cape               PADDED    CLOAK         1         -50       10
+Heavy wool cloak        PADDED    CLOAK         2         0         25
+
+Sandals                 HIDE      BOOTS         1         -80       3
+Fur boots               HIDE      BOOTS         2         0         9
+Knee-high boots         HIDE      BOOTS         2         20        7
+Armor plated boots      PLATE     BOOTS         3         0         5
+
+Garden gloves           PADDED    GLOVES        1         -30       3
+Fur mittens             HIDE      GLOVES        1         0         5
+Mesh gloves             CHAIN     GLOVES        2         0         2
+Bracers                 BANDED    GLOVES        1         -50       1
+Plate gauntlets         PLATE     GLOVES        3         0         1
+
+Straw hat               PADDED    HELMET        1         -50       4
+Leather cap             HIDE      HELMET        1         -20       4
+Crown                   BANDED    HELMET        1         -90       1
+Chain coif              CHAIN     HELMET        3         0         6
+Sallet                  PLATE     HELMET        3         -10       5
+Roman helmet            PLATE     HELMET        4         0         6
+Great helm              PLATE     HELMET        5         20        8
+
+Buckler                 PLATE     SHIELD(SM)    1         0         0
+Leather buckler         HIDE      SHIELD(SM)    1         -30       0
+Medium shield           PLATE     SHIELD(MED)   3         0         0
+Kite shield             PLATE     SHIELD(LG)    5         0         0
+Tower shield            PLATE     SHIELD(HG)    7         0         0
+
+Loincloth               HIDE      LEGS          1         -90       1
+Leather leggings        HIDE      LEGS          3         0         10
+Greaves                 PLATE     LEGS          4         -10       2
+Leather jerkin          HIDE      TORSO         3         0         10
+Fur coat                HIDE      TORSO         3         -20       20
+Chain shirt             CHAIN     TORSO         6         0         8
+Breastplate             PLATE     TORSO         7         -20       6
+
+Robes                   PADDED    ARMOR         2-3       -20       10
+Leather armor           HIDE      ARMOR         4-6       0         20
+Heavy leather armor     HIDE      ARMOR         6-8       25        25
+Chainmail               CHAIN     ARMOR         7-12      0         15
+Platemail               PLATE     ARMOR         10-15     0         15
+Full plate              PLATE     FULL_SUIT     20-25     0         30
+---------------------------------------------------------
+
+***************************************************************************
+**                             *IMPORTANT*                               **
+**  You can only have 1 powerful (unique) item per 100 rooms coded!!!!!  **
+**                                                                       **
+***************************************************************************
+
+The weights are a general guideline.  If you think something is heavy,
+make it heavy!  Remember that weight here also represents bulk, so a
+cloak that is light but awkward could still have a high weight.
+
+The actual usefulness of a piece of armour is determined internally based
+on the coverage, composition and quality of the armour, modified by the
+armour specialization setting of a player. Thus the "armour class" of
+a particular piece of armor is only so useful in determining how good a
+piece of armour is. All things being equal, the quality of the armour
+is a linear modifier over the default (quality 0). Thus an armour with
+a quality of 50 is 50% better than an armour of quality 0.
+
+
+===========================================================================
+**************************************************************************
+                         WEAPON CODING GUIDELINES
+**************************************************************************
+
+Note:   For weapon coding, there are rules and there are guidelines. You
+        can look at the rules as being related to balance issues and not
+        negotiable. This is because players always gravitate towards the
+        best things. Anything that is overpowered will tend to disrupt
+        overall balance to a disproportionately large extent. Guidelines
+        are more thematic elements that you should try to follow for
+        consistency, but may be violated for other thematic reasons.
+
+***************************************************************************
+                         WEAPON TYPES/SETTINGS
+***************************************************************************
+ 
+Types are specified as followed:
+
+        set_new_type(TYPE1|TYPE2|etc.);
+
+where type specifies size, damage type, and type of weapon.
+
+Valid sizes       : SMALL, MEDIUM, LARGE, HUGE
+NOTE:   Size is *very* important for guild restrictions.  The size of
+        the weapon relative to the wielder affects wieldability as well.
+        A weapon that is relatively HUGE compared to a wielder will
+        automatically be used two-handedly.
+
+NOTE:   A SMALL weapon is something that is about 1.5 feet or so long, and
+        smaller. A MEDIUM weapon falls in the 1.5 to 3 feet or so. LARGE
+        weapons range from about 3 to 5 feet long, and anything bigger is
+        HUGE. This is a rough guideline for most melee weapons (swords,
+        axes, maces etc) and some types of weapons are generally longer
+        for their categories (e.g. bows and polearms).
+
+Valid damage types: BLUNT, SLASH, CLEAVE, PIERCE
+
+Valid weapon types: POLE, MISSILE, MAGICAL, TWO-HANDED
+NOTE:   You don't have to use a weapon type if it doesn't fit one of the three
+        categories.  A weapon which uses the POLE type is automatically
+        considered TWO-HANDED, as is a MEDIUM or larger MISSILE.
+ 
+All of these but size can be mixed. Here are some examples:
+dagger           : set_new_type(SMALL|SLASH|PIERCE);
+rapier           : set_new_type(MEDIUM|PIERCE);
+short sword      : set_new_type(MEDIUM|SLASH|PIERCE);
+saber            : set_new_type(MEDIUM|SLASH);
+long sword       : set_new_type(LARGE|SLASH|PIERCE);
+two-handed sword : set_new_type(HUGE|SLASH|PIERCE);
+sap              : set_new_type(SMALL|BLUNT);
+sling            : set_new_type(SMALL|BLUNT|MISSILE);
+mace             : set_new_type(MEDIUM|BLUNT);
+short bow        : set_new_type(MEDIUM|PIERCE|MISSILE);
+war hammer       : set_new_type(LARGE|BLUNT);
+war axe          : set_new_type(LARGE|CLEAVE);
+staff            : set_new_type(LARGE|BLUNT|POLE);
+halberd          : set_new_type(HUGE|CLEAVE|POLE);
+
+The difference between SLASH and CLEAVE is in the manner of damage; CLEAVE
+puts a lot of force behind the blow for sheer power in a small hit area,
+while SLASH tends to be a raking attack, cutting sidewise into the target.
+Axes, cleavers, halberds, and the like are CLEAVE, while swords, daggers,
+and claws are SLASH.
+
+Weights are set using:
+
+        set_weight(int iWeight);
+
+The usefulness of a weapon is set using:
+
+        set_quality(int iQuality);
+
+Similar to armor settings, set_quality ranges from -100 for a totally
+worthless weapon to 100 for the maximum allowed class for a high end
+unique. Any quality setting above 40 is considered exceptional, and any
+over 60 is unique.
+
+***************************************************************************
+                         WEAPON RULES
+***************************************************************************
+
+The damage type and size of a weapon are limited only to be consistent
+with the thematic qualities of the weapon. For example, you can't make
+a normal longsword and call it a CLEAVE|BLUNT. You can make a 'fairy-
+sized longsword' and make it SMALL though.
+
+Weight should be consistent with thematic qualities. When setting weapon
+weights, try to start with a similar size/type guideline weapon, and
+adjust it to fit the particular circumstances.
+
+
+*********************************************************************
+                         WEAPON GUIDELINES
+*********************************************************************
+Note:   These values are guidelines only, for thematic purposes.
+
+TYPE                 SIZE      DAM TYPE       WEIGHT
+------------------------------------------------------------------
+AXE
+  hatchet            SMALL     CLEAVE           2
+  battleaxe          MEDIUM    CLEAVE           3
+  great axe          LARGE     CLEAVE           5
+------------------------------------------------------------------
+BOW
+  short bow          MEDIUM    PIERCE           2
+  long bow           LARGE     PIERCE           2
+  crossbow           MEDIUM    PIERCE           3
+  great bow          HUGE      PIERCE           3
+------------------------------------------------------------------
+DAGGER
+  butter knife       SMALL     PIERCE           1
+  curved dagger      SMALL     PIERCE/SLASH     1
+  dirk               SMALL     PIERCE/SLASH     1
+  heavy kris         SMALL     PIERCE           2
+------------------------------------------------------------------
+HAMMERS/MACES
+  carpenter's hammer SMALL     BLUNT            1
+  smithing hammer    MEDIUM    BLUNT            3
+  warhammer          MEDIUM    BLUNT            3
+  mace               MEDIUM    BLUNT            3
+  heavy mace         LARGE     BLUNT            4
+  maul               HUGE      BLUNT            6
+------------------------------------------------------------------
+POLEARMS
+  spear              LARGE     PIERCE(POLE)     3
+  bardiche           HUGE      CLEAVE(POLE)     7
+  halberd            HUGE      CLEAVE(POLE)     6
+  lance              HUGE      PIERCE(POLE)     4
+  naginata           HUGE      SLASH(POLE)      5
+  pike               HUGE      PIERCE(POLE)     4
+------------------------------------------------------------------
+STAVES
+  stick              SMALL     BLUNT            1
+  cane               MEDIUM    BLUNT            2
+  quarterstaff       LARGE     BLUNT(POLE)      3
+------------------------------------------------------------------
+SWORDS
+  shortsword         MEDIUM    SLASH/PIERCE     2
+  rapier             MEDIUM    PIERCE           2
+  broadsword         MEDIUM    SLASH            3
+  scimitar           MEDIUM    SLASH            3
+  longsword          LARGE     SLASH/PIERCE     4
+  bastard sword      LARGE     SLASH            5
+  greatsword         HUGE      SLASH            6
+-----------------------------------------------------------------
+
+"Weapon class" is no longer set explicitly by builders on weapons,
+except in extremely unusual situations (consult an IMP+ in that case).
+Instead use set_quality() to set the overall power of the weapon. The
+quality is a linear modifier over the default usefulness of a weapon.
+
+The actual usefulness of a weapon is determined internally based on
+the material_composition of a weapon, aspects of it's type and quality.
+
+
+------
+Version 1: ?
+Version 2: Bob - July 17, 2004

@@ -1,0 +1,182 @@
+
+                                                                 Rev. 2
+                                                                 
+                               MATERIALS
+                               =========
+                                 
+                                 
+Introduction:
+------------
+
+This is the Darkwind materials doc, so you know what they are
+before you start setting them on all your objects.
+You can set_material on just about any object on the mud;
+specifically, you can set it on those objects which inherit OBJECT.
+
+Additionally, before you are able to use the materials described
+below, you must first add the following line at the top of the
+object you're creating:
+
+#include <material.h>
+
+Syntax:
+-------
+
+The syntax for specifying the material is:
+
+set_material(MATERIAL);
+
+You can mix the material types if you wish.  For example, a ruby-
+tipped wand might have this line:
+
+set_material(MAT_WOOD|MAT_GEM);
+
+Material Types:
+---------------
+
+MAT_ADAMANTITE  -  is a near-mythical metal highly prized by dwarves,
+who are the chief miners of it.  It is a ferrous metal that is somewhat
+lighter than steel, but much sturdier.  It is reputed to be nearly
+unbreakable, in fact.  Some people claim it is inherently magical, but
+this is not the case.
+
+MAT_BONE  -  forms the structural framework of vertebrates.  While fairly
+strong, it is also brittle.  Some invertebrates have chitin instead of
+true bone, but for our purposes they can be considered the same.
+
+MAT_BRASS  -  is an alloy of copper and zinc.  It is a shiny yellow-orange
+color.
+
+MAT_BRONZE  -  is an alloy of copper and tin.  It is yellowish-brown in
+color.  It is softer and more malleable than steel, and was once the
+primary metal used in weapons and armor.
+
+MAT_CLOTH  -  consists of woven fabrics of natural or man-made fibers.
+On Darkwind, they will be almost exclusively natural.  Examples are
+cotton, wool, flax.
+
+MAT_COPPER - is a reddish brown metal.  It is fairly common throughout       |
+the land of darkwind and because of this is used in many things from         |
+cookware to inexpensive jewelry.  Copper is know to be highly conductive     |
+of heat and electricity.                                                     |
+
+MAT_CRYSTAL  -  is the name for a material formed by the regular
+ordering of molecules into a solid form, such as many of the precious
+stones that are mined from the earth (diamond, peridot, ruby).  Also
+the name for a very fine, clear glass, typically made with lead.
+
+MAT_ELECTRUM - is a naturally occuring alloy of silver and gold.  It is      |
+amber in color.  It is more valuable than silver alone due to its gold       |
+content but less valuable than gold.  It is used in many things from fine    |
+diningware to jewelry to expensive pieces of armour for kings and nobles.    |
+
+MAT_ENERGY - is used for describing something that is associated with energy |
+(such as a ball of lightning) and having no real physical form.  It can also |
+be used to describe things such as force barriers and the like.              |
+
+MAT_GEM  -  is what we will call the precious stones, regardless what their
+nature.  Certain mineral crystals are highly prized (diamonds, etc),
+but there are other noncrystalline gems as well (pearls, amber).
+
+MAT_GLASS  -  is formed from molten sand.  It is easily worked into a
+variety of useful and decorative shapes in this state, and cools into a
+brittle quasi-crystalline form.  The addition of various impurities
+give it color.
+
+MAT_GOLD  -  is a shiny yellow metal that is highly malleable and very
+soft.  It is prized for its beauty and rarity, and is used in coinage and
+jewelry for this reason.
+
+MAT_IRON - The most common and most useful of metals.  It is usually found   |
+naturally in the form of an oxide (such as hematite, magnetite, etc.), or    |
+a hydrous oxide (as limonite, turgite, etc.). Iron usually appears dark      |
+brown, from oxidation or impurity, but when pure, is a gray or white metal.  |
+It is easily oxidized (rusted) by moisture, and is attacked by many          |
+corrosive agents.                                                            |
+
+MAT_LEAD - a heavy, pliable, inelastic metal, having a bright, bluish color, |
+but easily tarnished. It is both malleable and ductile and has a very low    |
+melting point.  It is easily fusible and forms alloys with other metals.     |
+It is commonly used to join different pieces of metal or other materials     |
+together.  Because of its nature lead is impractical to use alone in weapons |
+or armour although some clubs and other bashing type weapons have been know  |
+to employ this metal to make the weapon heavier and provide additional       |
+smashing power.                                                              |
+
+MAT_LEATHER  -  is made from the cured hides of animals.  When the hide
+of large animals, which is generally thicker, is boiled in oil, it can
+become stiff and quite durable.
+
+MAT_MAGICAL - this encompasses all other material that may lack a physical   |
+form and are not better described as being MAT_ENERGY.  This type may also   |
+be used to describe enchanted materials alon with the normal material type.  |                                     |
+
+MAT_MITHRIL  -  is also often called elven steel, or elven silver.  It is
+alleged to be the "true" form of silver by the elves, and attributed
+nearly magical properties.  Whether or not it is truly magic, it is
+known that it is very light for its strength.  A chainmail shirt can be
+worn under other clothing without being noticed.  It is also highly
+prized by spellcasters, who find that its nature does not prohibit
+spellcasting like most other metals.
+
+MAT_NATURAL  -  subsumes all other "natural" substances not herein
+described.  A flower would be natural, as would water.
+
+MAT_PAPER - any type of material that is basically boiled, bleached and      |
+preseed plants that is allowed to dry and for which is used for writing      |
+or other types of craft.  Alchemists use paper in making fireworks and       |
+other incendiary devises.                                                    |
+
+MAT_PLATINUM -  One of the rarest of precious metals, platinum also is one   |
+of the strongest and heaviest.  It has a rich silvery-white color, is        |
+corrosion resistant and is malleable.  It is much rarer than gold and is     |
+worth approximately twice that of gold.  Because of its value and            |
+decorative nature, it is highly prized for use in jewelry.                   |
+
+MAT_ROCK  -  is any kind of stone.  This technically includes many gems,
+but we generally don't set gems to GEM|ROCK.  You might have a
+stone club set with gems that would fit that description, though.
+
+MAT_SILVER  -  is a shiny white metal that is lighter than gold but nearly
+as soft.  It is usually an order of magnitude less valuable, as well.
+Highly decorative, it is used for jewelry and ornamentation as well as
+for coinage.
+
+MAT_STEEL  -  is an alloy of iron with carbon, which yields it more
+malleable and easier to work as well as less brittle.  Once it was
+discovered, it became the metal of choice for making weapons and
+armor, replacing bronze.
+
+MAT_STONE - for the most part MAT_STONE is the same as MAT_ROCK.  One may    |
+use this for things such as stone tablets or bricks that are not truely      |
+rocks.                                                                       |
+
+MAT_TIN  -  is a soft, faintly bluish white metal.  It is quite soft, and is
+seldom used by itself but often as an alloying agent with other
+metals to form bronze and pewter, among other things.
+
+MAT_WOOD  -  is a hard, fibrous substance that makes up the greater part
+of xylemic plants.  It is sturdy and is a good structural agent.  Weight
+for weight, it is stronger than steel.  However, wood has many
+undesireable properties that make various metals preferable in
+many cases.
+
+
+Additional Comments:
+--------------------
+
+Note that the material types must have the "MAT_" in them now as the bits
+require it.
+
+Revision History:
+-----------------
+
+Rev. 2 - Revised the doc to contain all current material types.  Sections 
+         changed have a "|" in the right hand column.  Revision made by 
+         Olgar - 07-31-04.
+
+Rev. 1 - Added the "MAT_" in the material types to reflect changes made
+         to the material bits.  Revision made by Olgar - 03-08-96.
+         
+Rev. 0 - Initial version created by Antcrusher - 12-8-94, 6:42 PM CST.
+

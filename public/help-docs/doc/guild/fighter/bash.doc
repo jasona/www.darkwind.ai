@@ -1,0 +1,12 @@
+Skill: Bash        Timer: Damage       GL: 15    Cost: 25%
+A basic fighter attack skill. You wind up with all your strength and bash
+your enemy on the head.
+
+You will be much more effective if you use a weapon (and one that would
+make sense to use when bashing someone over the head helps!), otherwise you 
+will use your bare hands.
+
+When bashing a target you can sometimes hit them hard enough that it
+decreases their ability to fight back effectively.
+
+Syntax is: bash <target>

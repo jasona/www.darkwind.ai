@@ -1,0 +1,10 @@
+_______________________________________________________________________________
+"Psionic Profile"  
+        A psionicist with psionic profile can alter his "psychic
+        signature" to other psionicists.  It simply allows him to change
+        his guild level title displayed in the guild who list.  Much
+        more interesting than simply being known as "a Psionicist."
+ 
+SP Cost:  10		Guild Level:  2		Potential Points:  1
+ 
+Command:  profile <new description>

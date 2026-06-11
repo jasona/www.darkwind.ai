@@ -1,0 +1,16 @@
+Ranger Help for: guide
+======================
+
+SYNTAX:      guide <player>
+USAGE:       Any terrain
+SLOT COST:   NA
+BASE SP:     20
+SKILL TYPE:  cartography
+
+SUMMARY:
+This skill allows a Ranger to guide another player through the terrain,
+granting them a dodge bonus while the Ranger leads. The guided player
+benefits from the Ranger's knowledge of the land, receiving improved
+evasion as the Ranger directs them through safe paths and advantageous
+positions. The guide effect lasts as long as both players remain in the
+same room. This is a useful support skill for group play.

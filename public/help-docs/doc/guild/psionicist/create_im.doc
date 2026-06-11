@@ -1,0 +1,13 @@
+_______________________________________________________________________________
+"Create Image"   
+        Using this power, the psionicist can trick others into
+        perceiving something that is not in fact present.  This
+        image can be of anything the psionicist can imagine, and
+        can be colored white, yellow, red, or green to imitate
+        items, coins, monsters, or weapons and armor,
+        respectively.  The duration of the image is dependent
+        on guild level.
+ 
+SP Cost:  20	Guild Level:  4	  Potential Points:  1
+ 
+Command:  create <whatever>

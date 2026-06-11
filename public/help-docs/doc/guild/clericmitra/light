@@ -1,0 +1,8 @@
+SPELL NAME  : Light
+SPELL SYNTAX: Light
+SPELL COST  : 10 SP
+DESCRIPTION : This spell enables the caster to bring magical light
+              to be able to see their surroundings.  The light's
+              brightness is dependant on the cleric's level, and
+              is not moveable.  It will only light the room you're
+              standing in.

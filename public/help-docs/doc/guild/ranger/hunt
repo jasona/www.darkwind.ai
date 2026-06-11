@@ -1,0 +1,16 @@
+Ranger Help for: hunt
+=====================
+
+SYNTAX:      hunt <creature>
+USAGE:       Wilderness
+SLOT COST:   NA
+BASE SP:     60
+SKILL TYPE:  hunting
+
+SUMMARY:
+This skill allows a Ranger to track and attack a creature in an adjacent
+room. The Ranger uses their tracking abilities to locate the target, then
+automatically moves to the target's room and initiates combat. The
+creature must be in a room directly adjacent to the Ranger. This skill
+combines the Ranger's tracking expertise with combat readiness, allowing
+them to close distance quickly and strike before the prey can react.

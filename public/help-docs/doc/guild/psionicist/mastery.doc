@@ -1,0 +1,20 @@
+_______________________________________________________________________________
+"Power Mastery"   
+        This is a global power modifier allowing psionicists to become
+        masters of X, where X is one of the other powers.  The power
+        mastery ability itself must first be bought, then each
+        individual power must be individually mastered.  There are 3
+        levels of mastery.  The first causes all uses of the power to be
+        automatically under the influence of enhance and costs 1
+        purchase point.  The second causes all uses of the power to
+        additionally be under the influence of dual mind and costs 1
+        more purchase points.  The last reduces the sp cost of the power
+        by a percentage of its normal cost and costs an additional
+        purchase point.  Note that these benefits are in ADDITION to any
+        enhance or dual mind which might might already be in effect!
+        Power Mastery cannot be forgotten once learned, but the
+        individual powers that are mastered can be 'unmastered'.
+ 
+SP Cost:  none		Guild Level:  8	Potential Points:  3
+ 
+Command:  none - use Guild Advance Board

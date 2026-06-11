@@ -1,0 +1,18 @@
+Ranger Help for: move silently
+================================
+
+SYNTAX:      smove <direction>
+USAGE:       forest,plains,swamp,desert,jungle,hills,road,beach,
+             underground,mountain,arctic,barren
+SLOT COST:   7
+BASE SP:     20
+SKILL TYPE:  stealth
+
+SUMMARY:
+This skill allows a Ranger to move to an adjacent room without being
+noticed by other creatures or players. The chance of being detected
+depends on the Ranger's dexterity, skill level, and the terrain. Some
+terrains are easier to move silently through than others. Forests and
+swamps offer natural cover, while open plains and roads are more
+difficult. Moving silently is essential for setting up ambushes or
+avoiding dangerous encounters.

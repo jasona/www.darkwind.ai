@@ -1,0 +1,10 @@
+_______________________________________________________________________________
+"Precognition"      
+        This allows a psionicist to fortell the future.  "What will I
+        find if I enter the next room?".  It will tell the number of
+        inanimate objects, the number of living objects, and how many
+        of those living objects are hostile.
+ 
+SP Cost:  20		Guild Level:  2		Potential Points:  2
+ 
+Command:  precognition <direction>

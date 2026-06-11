@@ -1,0 +1,93 @@
+   I, Antcrusher, worked on converting soft_dri (as it was the only
+file I had) into a new inheritable for generic drinks.  From what I
+could tell, alco_dri.c ran instant healing and intoxication off one
+variable.  Likewise, soft_dri.c ran instant healing and soaked off one
+variable.  This object will do all three, and they are driven by
+different variables so you can set each separately.  It can be used to
+replace alco_dri and soft_dri.
+
+   Note that the price for the alcoholic healing is less than the instant
+healing by a factor of 3.  You get three points for every point of
+alco_strength, but since it's on a time delay it seems fair.
+   Thus, to figure your value for an item, it is still 4*x + (x^2)/10.  But
+here, x is the AVERAGE of healing and alco_strength.  (Note that the
+'standard' pub drinks are far overpriced.)
+
+   Soft_strength doesn't really do much except keep you from
+drinking more soft drinks too soon.  This value does not contribute to
+healing at all.  The sum of the soft_strength and alco_strength should
+equal the healing value (or more), in order to keep instant healing
+from being too easily available.
+
+   This object now inherits treasure.c, so all the functions from it
+can be used as well, including treasure and material types.  It
+automatically sets to container and drink when created, and type
+drink is removed automatically when drunk.
+ 
+   This object is a standard drink object and works
+   like /obj/food.c or /obj/armour.c
+ 
+   To use this you can do:
+     inherit "obj/gene_dri";
+   ......
+   or,
+
+   object oObj;
+   oObj = clone_object("obj/gene_dri");
+   oObj->set_name("tequila");
+ 
+   These functions are defined in addition to those on treasure:
+
+     set_soft_strength(int)     To set the soaking power of the item. If
+          you don't wish the item to soak players just set this value to 0.
+          This value has nothing to do with healing...it simply keeps
+          players from drinking more soft drinks too soon.
+
+     set_alco_strength(int)     To set the amount of intoxication.  The
+          player will receive three (or whatever it is set to on your
+          MUD) extra hit points for half this number of 'healing rounds',
+          which I believe is every tenth heartbeat, usually.  If you
+          don't want it to be intoxicating then (you could have used
+          obj/soft_dri) set this to 0.  Does not check for negatives.
+
+     set_healing(int)   To set the amount of instant healing.
+
+     set_drinker_mess(string)   To set the message that is written
+          to the player when he drinks the item.
+
+     set_drinking_mess(string)  To set the message given to the
+          surrounding players when this object is drunk.
+
+     set_empty_container(string)        The container of the liquid inside.
+          For example "bottle" or "jug".
+
+This following is an example of a drink.  It's the way the
+beer from the pub looks now.  A drink like this was not possible using
+alco_dri, the pub drinks inherited a special file (because healing
+and alco level were driven by different variables, and alco_dri
+couldn't handle it).
+
+#include <mudlib.h>
+inherit DRINK;
+ 
+void reset(int iArg) {
+  ::reset(iArg);
+  if (iArg) return;
+ 
+  set_name("beer");
+  set_alt_name("alcohol"); /* for use in pub */
+  set_short("a bottle of beer");
+  set_value(12);
+  set_weight(1);
+  set_drinker_mess("That feels good.\n");
+  set_healing(0);
+  set_alco_strength(2);
+  set_soft_strength(0);
+  set_empty_container("bottle");
+}
+
+/*
+White space and hungarian notation added 20/08/98
+References to non-existant files removed 23/08/98
+--Xnedra--
+*/

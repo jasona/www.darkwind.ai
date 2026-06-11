@@ -1,0 +1,6 @@
+SPELL NAME  : Sunray
+SPELL SYNTAX: Sunray <target>
+SPELL COST  : 75 SP (80 SP while hymned)
+DESCRIPTION : Strikes target with a beam of pure good, doing damage 
+              based on the cleric's wisdom and the alignment of the
+              target.

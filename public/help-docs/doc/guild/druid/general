@@ -1,0 +1,43 @@
+|GKB-- Druid Help --------------------------------------------------|000
+
+|CKBbeginner      |000 First-hour path for new druids.
+|CKBgrove         |000 Sacred Grove: planting, commune, sanctum.
+|CKBnwyfre        |000 The four nwyfre currents and spirit vessels.
+|CKBritual        |000 Ritual status, prepared rites, and toggles.
+|CKBspells        |000 Master list of active druid invocations.
+|CKBcompanions    |000 Druid menagerie: summon, dismiss, level, status.
+|CKBmastery       |000 Invocation mastery and study slots.
+|CKBdscore        |000 Study points, learned powers, grove, materials.
+|CKBdmon          |000 Toggle compact nwyfre bars in your monitor.
+|CKBattune        |000 Read the current room's terrain.
+|CKBchat          |000 About the guild lines.
+|CKBemotes        |000 Druid guild emotes.
+|CKBother         |000 Other guild commands.
+|CKBrestrictions  |000 Details about guild restrictions.
+
+There is also help available on each active invocation.  Use
+|CKBdhelp spells|000 to see the exact help-file names.
+
+Your silver sickle also serves as a Druid profession tool.  You can use
+it as a gardening spade for |CKBgather herbs|000, a mining pick for
+|CKBmine ore|000, and a skinning knife for |CKBskin corpse|000.
+
+|GKB-- New Druid Quick Path ---------------------------------------|000
+
+  |CKBnwyfre|000
+  |CKBdscore|000
+  |CKBlearn spirit aura|000
+  |CKBgather herbs|000
+  |CKBmine ore|000
+  |CKBskin corpse|000
+  |CKBreagents|000
+  |CKBgrove plant|000
+  |CKBlearn ritual drawing of the tide|000
+  |CKBritual drawing of the tide marken|000
+  |CKBspirit aura|000
+
+At Druid level 7, |CKBlearn ritual verdant refrain|000 unlocks a
+long-running ritual that can gather small profession herb and reagent
+finds while you travel through natural places.
+
+Newly initiated druids should start with |CKBdhelp beginner|000.

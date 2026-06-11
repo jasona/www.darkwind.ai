@@ -1,0 +1,11 @@
+Skill: frage       Timer: Support      GL: 11    Cost: 50
+
+A fighter builds up intense amounts of rage throughout their life. A
+skilled fighter can apply the knowledge gained about rage and it's
+pros and cons to weapons, imbuing them with some of their own rage.
+
+Some weapons are simply unable to be imbued with rage, have
+magic that would be ruined if you attempted to imbue it with rage, 
+or are simply too special to be imbued with rage.
+
+Syntax is: frage <weapon>

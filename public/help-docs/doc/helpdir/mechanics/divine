@@ -1,0 +1,48 @@
+Divine Omens and Patronage
+
+The divine omen system tracks the influence of Mitra, Gaea, and Set across the
+world. Player action can push pressure toward a god. If one god has enough
+pressure, and enough distance from the others, that god becomes ascendant.
+
+If no god clears that threshold, the world is Godless. Personal patron ranks
+still work during Godless periods, but ascendance bonuses and Set's ascendant
+pressure do not.
+
+Useful commands:
+
+  omens                         Read the current world omen.
+  portents                      Alias for omens.
+  patron                        Read your personal patronage.
+  patron gods                   Learn the three patron identities.
+  patron pledge <mitra|gaea|set> Pledge yourself to a patron.
+  patron renounce               Break your current pledge.
+  patron favor                  Read your broad favor standing.
+  patron pilgrimage start       Begin a shrine pilgrimage.
+  patron pilgrimage status      Check your active pilgrimage.
+  tithe <amount> to <god>       Offer coins toward a god's pressure.
+  tithe <amount> at shrine      Tithe at the shrine in your room.
+  pray at shrine                Pray at the shrine in your room.
+  meter                         Check Wrathful Avatar charge and rate.
+  score                         Check Wrathful Avatar charge and rate.
+
+Shrines, tithes, pilgrimages, Holy Hours, marked enemies, and rare events all
+feed into the divine cycle.
+
+Shrines can currently be found at:
+
+  Mitra  The Temple of Mitra in DarkWind City.
+  Gaea   The rose garden near the chapel.
+  Set    The black altar in the temple of Qazaash.
+
+Patron ranks and world omens affect Wrathful Avatar charge. The system hides
+raw favor and pressure numbers on purpose; the public commands describe broad
+standing, current omens, and visible divine events without exposing exact
+tables.
+
+Related help:
+
+  help patron
+  help omens
+  help avatar
+  help shrine
+  help pilgrimage

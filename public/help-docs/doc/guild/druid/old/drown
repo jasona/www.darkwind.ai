@@ -1,0 +1,15 @@
+Drown
+
+Arguably the most powerful single-combat spell known
+to druidic lore, Drown is also one of the hardest to
+master.  It was named for its apparent effect, but
+it does not literally drown the target, as water-
+breathing and even non-breathing creatures are
+affected in the same manner.
+
+Command: drown <target> (defaults to attacker)
+Base Cost: Minimum 100, based on damage
+Base Recovery: long
+Base Effect: damage (extreme)
+Base Duration: instant
+Guild Level: 25

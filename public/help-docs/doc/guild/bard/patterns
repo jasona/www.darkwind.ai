@@ -1,0 +1,29 @@
+BARD PATTERNS
+
+Bards can discover hidden harmonies by playing song forms in the right order.
+Some song fields can also pivot into deeper patterns when the room, party,
+instrument, archetype, or enemy state is right.
+
+When you discover either kind of pattern, your Bard soul records it.
+
+Useful commands:
+
+  bpatterns              Show every pattern you have learned.
+  bpatterns harmonies    Show only hidden harmonies.
+  bpatterns pivots       Show only song-field pivots.
+  bpatterns <name>       Show one learned pattern by name.
+
+Aliases:
+
+  bharmonies
+  bdiscoveries
+
+The list shows the sequence or condition that triggered the pattern, plus how
+many times you have seen it. Discoveries are saved with your Bard soul and
+remain available after relogging.
+
+Recommended next topics:
+
+  bardhelp songs
+  bardhelp instruments
+  bardhelp archetypes

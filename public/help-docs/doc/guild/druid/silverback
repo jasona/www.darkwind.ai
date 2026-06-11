@@ -1,0 +1,24 @@
+|GKB-- Silverback -----------------------------------------------|000
+
+Current: |CKBTellurian|000
+Command: |CKBsilverback|000
+Aliases: |CKBgorilla|000, |CKBsilverbackguardian|000
+Guild Level: 21
+
+Silverback calls a massive guardian gorilla out of the Tellurian
+current.  The gorilla appears in the room, follows the druid from place
+to place, and stays close while growling, pacing, and watching for
+incoming blows.
+
+While the guardian remains, it throws itself between the druid and
+incoming combat damage.  The druid takes none of the damage from a
+blocked hit; the silverback spends its own strength instead.
+
+The silverback has a pool of guardian strength based on Druid guild
+level and Silverback training.  The pool also fades naturally over
+time, so higher training lets it stay longer and endure more punishment.
+When that strength is gone, the gorilla does not die.  It has simply
+had enough, and takes off back into the wild current.
+
+The silverback is a protector, not a normal target.  Other players and
+creatures cannot attack it directly.

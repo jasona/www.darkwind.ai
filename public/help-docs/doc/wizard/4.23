@@ -1,0 +1,139 @@
+Trap inheritable functions
+
+TRAP is the generic trap inheritable.  It inherits TREASURE and
+all of its functions.  (Do not use set_short or set_long unless
+you set a custom search function, however; this is set up with
+the idea that the typical trap is hidden until triggered.)
+
+In addition, TRAP has the following functions:
+
+set_trap_message(string)
+set_trap_mess(string)
+    Sets the custom message a victim sees when he trips the trap.
+
+set_trap_message2(string)
+set_trap_mess2(string)
+    Sets the custom message the rest of the room sees when a
+    victim trips the trap.
+
+set_setter(object)
+    Sets the person who set the trap, if any.  This person has a
+    100% chance to find or disarm his trap, and can pass it without
+    setting it off, by default.  If the trap does damage, it is also
+    credited to this person.
+
+query_setter()
+    Returns the setter, if any.
+
+set_damage(int)
+    The amount of damage the trap causes, if any.
+
+set_damage_type(int)
+    The type of damage the trap causes.  If damage is set but
+    damage type is not, this defaults to WEAPON_DAM_MASK.
+
+set_ignore_armor(int)
+    Sets whether or not the trap's damage ignores armor.  Set to
+    1 if it does, 0 otherwise.  Defaults to 0.  (Useful for poison
+    gas, etc.)
+
+set_trigger_action(string)
+    Sets the verb which will trip the trap, ie. 'north', or 'pull',
+    or 'search'.  This -must- be set, or the trap will never be
+    tripped!
+
+add_trigger_action(string)
+    Performs the same function as set_trigger_action.
+
+set_trigger_actions(array of strings)
+    Sets the verbs which will trip the trap.  Both this function
+    and the above two will add to the array of verbs, rather than
+    replace them, so which you use is up to you.
+
+set_trigger_object(string)
+    Sets the object which will trigger the trap, if any.  If the
+    trap is triggered by 'north', this will be blank.  If it's
+    triggered by 'pull lever', the trigger_action will be 'pull'
+    and the trigger_object will be 'lever'.  If it's triggered by
+    'search skeleton', the trigger_action is 'search' and the
+    trigger_object is 'skeleton'.  Performing the trigger action
+    on a different object, such as 'search for traps' in the third
+    example above, will NOT set off the trap.
+
+add_trigger_object(string)
+    Performs the same function as set_trigger_object.
+
+set_trigger_objects(array of strings)
+    Performs the same function as the above two, but with an array
+    of strings instead of one string at a time.
+
+query_trigger()
+    Returns the string(s) which must be performed to trigger the
+    trap.  (trigger_actions, plus trigger_objects if applicable)
+
+query_triggers()
+   Returns the same thing as query_trigger.
+
+set_trap_func(closure)
+    If you would like the trap to do something other than damage,
+    this function specifies the function to be called when the
+    trap is triggered.  It can also be used in addition to the
+    damage functions.
+
+set_search_func(closure)
+    If you would like to set a customized search procedure, this
+    function specifies the function to be called.  The default
+    search function is based on int, with thieves and (to a lesser
+    extent) bards having a much better chance than other classes.
+    Mages and necros also have a much better chance, but only if
+    the trap is magical (see below).
+
+set_search_difficulty(int)
+    Subtracts int from the chance of successfully searching (using
+    the default search function).  Used for traps that are particularly
+    difficult or easy to detect.  Note that there is a minimum chance
+    of 1%, and a maximum of 95%, in any case.
+
+query_search_difficulty()
+    Returns the search difficulty.
+
+set_disarm_difficulty(int)
+    Subtracts int from the chance of successfully disarming the
+    trap.  The default is based on int and dex, and favors
+    thieves, bards, mages, and necros in much the same way as
+    the default search function.  Again there is a minimum chance
+    of 1% and a maximum of 95%.  (However, the setter can always
+    disarm his own trap.)
+
+query_disarm_difficulty()
+    Returns the disarm difficulty.
+
+set_trap_type(int)
+    Set to 1 if the trap is magical, 0 if it's mechanical.  This
+    affects the default search function and the disarm function,
+    and also sets the treasure_type to either TYP_MAGIC or
+    TYP_FURNITURE, respectively.
+
+remove_trap()
+    Call this to destruct the trap.  Included in case of trap-
+    removing uniques or the like.
+
+In addition, there are two attributes that apply to traps:
+"auto_detect_traps"
+    Gives the player a 100% chance of finding the trap (with the
+    default search function).  Useful for a 'find traps' spell
+    or item.
+
+"immunity_to_traps"
+    If the player has this, the trap will trigger without harming
+    him.
+
+A trap can be found with the commands 'search', 'find', or
+'detect', and the arguments 'traps', 'trap', 'for traps',
+or 'for trap'.  It can be disabled with the commands
+'disarm', 'remove', or 'disable' and the arguments 'trap'
+or 'traps', but only if the person attempting to
+disable the trap first succeeded in searching for it.
+The default search function displays the trigger on
+a successful search and tells the character that
+they can attempt to 'disable trap'.

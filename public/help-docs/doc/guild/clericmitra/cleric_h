@@ -1,0 +1,43 @@
+ Clerics of Mitra Spell list
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ Spell Name             SP  LV    Syntax
+---------------------------------------------------------------------------
+ Mitra's Fury          VAR   1    Fury <target>          Commands available
+ Cure Light Wounds      10   1    Clw <target>                To all
+ Ranged Clw             11   1    RClw <target>          =-=-=-=-=-=-=-=-=
+ Bless                 VAR   2    Bless                  #   News        #
+ Light                   5   2    Light                  #   Clerics     #
+ Know Alignment          5   3    Know <target>          #   Ctitle      #
+ Cause Light Wounds    VAR   4    -Clw <target>          #   Ctell       #
+ Cloud of sparks    20+2*g   4    Cloud <target>         #   Ectell      #
+ Continual Light        25   5    Clight                 #   Cmuff       #
+ Turn Undead           VAR   5    Turn <target>          #   Cset        #
+ Cure Serious Wounds    20   6    Csw <target>           #   Cunset      #
+ Ranged Csw             22   6    RCsw <target>          #   Roster      #
+ Insulate               50   6    Insulate <target>      #   Emtell      #
+ Cause Serious Wounds  VAR   7    -Csw <target>          #   Mtell       #
+ Cure Affliction       VAR   7    Cure <target>          #   Shist       #
+ Spiritual Hammer      VAR   8    Hammer                 #   Chist       #
+ Hold Creature         VAR   9    Hold <target>          #   Mhist       #
+ Holy Strength         VAR   9    Empower <target>       #   mtimers     #
+ Cause Critical Wounds VAR  10    -Ccw <target>          =-=-=-=-=-=-=-=-=
+ Locate Player          20  10    Locate <target>         For additional
+ Cure Critical Wounds   40  11    Ccw <target>            information on
+ Ranged Ccw             44  11    RCcw <target>              any guild
+ Remove Curse           10  11    Remove <target> <object>  ability, just
+ Wyvern Watch           50  12    Wyvern watch                 do a:
+ Flame Strike          VAR  13    Flamestrike             help <Skill Name>
+ Guardian Angel        VAR  13    Guard
+ Holy Word             150  13    Word [<target>]
+ Mitra's Hand          VAR  13    [-]Mhand [<target>]
+ Portal                100  14    Portal
+ Sunray                VAR  14    Sunray <target>
+ True Sight             30  14    Truesight
+ Cure All Wounds       VAR  15    Caw  <target>
+ Renew Wounds          VAR  15    Renew [<target>]
+ Resurrect             450  15    Resurrect <target>
+ Spiritual Hammers     VAR  15    Hammers
+ Saviour Tell           -   15    Stell <message>
+ Saviour Emote          -   15    Estell <action>
+ High Mitra Tell        -   15    Htell <message>
+ High Mitra Emote       -   15    Ehtell <action>

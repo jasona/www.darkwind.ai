@@ -1,0 +1,17 @@
+Ranger Help for: make trophy
+=============================
+
+SYNTAX:      mount corpse
+             make trophy
+USAGE:       Any terrain
+SLOT COST:   NA
+BASE SP:     20
+SKILL TYPE:  survival
+
+SUMMARY:
+This skill allows a Ranger to mount a trophy from a slain creature's
+corpse. The trophy serves as a decoration and proof of the Ranger's
+hunting prowess. The Ranger must have a corpse present in the room to
+create the trophy. Different creatures produce different trophies. The
+quality of the trophy depends on the Ranger's skill level. Trophies
+can be displayed or carried as mementos of notable kills.

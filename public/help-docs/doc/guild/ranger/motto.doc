@@ -1,0 +1,15 @@
+
+Ranger Help for: motto
+======================
+
+SYNTAX:      motto <your motto here>
+USAGE:       Any wilderness terrain.
+
+SUMMARY:    
+Allows a Ranger to declare a motto, which will show up on the rangers screen.
+Nothing obscene please. Just type 'motto' by itself to erase your current
+motto.
+
+=============================================================================
+SEE ALSO: tog and rbug
+

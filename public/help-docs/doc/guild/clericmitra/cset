@@ -1,0 +1,7 @@
+COMMAND NAME  : Cleric Variable Set  | Cleric Variable Unset
+COMMAND SYNTAX: Cset <var> <value>   | Cunset <var>
+COMMAND COST  : None                 | None
+DESCRIPTION   : These commands allow you to set certain Cleric variables that
+                affect certain aspects of your life as a Cleric. To see the
+                available variables, do 'Info variables'. To see the value
+		of all variables, use the Cset command without arguments.

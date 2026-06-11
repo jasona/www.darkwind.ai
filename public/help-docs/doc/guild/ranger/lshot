@@ -1,0 +1,16 @@
+Ranger Help for: longshot
+=========================
+
+SYNTAX:      longshot <target> or lshot <target>
+USAGE:       Any terrain
+SLOT COST:   8
+BASE SP:     variable
+SKILL TYPE:  bow
+
+SUMMARY:
+This skill allows a Ranger to fire a long-range bow shot at a target
+in an adjacent room. The Ranger draws the bow with great force and
+sends an arrow flying over a considerable distance. This is especially
+useful for initiating combat from safety or harassing fleeing enemies.
+The damage and accuracy of the shot depend on the Ranger's strength,
+dexterity, and proficiency with the skill.

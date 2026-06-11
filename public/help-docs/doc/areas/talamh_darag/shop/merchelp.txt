@@ -1,0 +1,8 @@
+Mercenary commands:
+
+* mfight <target>     Force your mercenary to attack <target>.
+* menace <target>    Make your mercenary scare <target>.
+* combatoff          Tell your mercenary not to fight.
+* combaton           Tell your mercenary to fight.
+* spamoff            Gag your mercenary.
+* spamon             Remove the gag.

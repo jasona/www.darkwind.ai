@@ -1,0 +1,13 @@
+Endurance
+
+The earth and stone endure through ages, and this
+spell enables the druid to borrow a portion of that
+power for himself.  It provides an immediate boost
+in vitality which slowly wears off over time.
+
+Command: endurance
+Base Cost: 50 SP
+Base Recovery: medium-long
+Base Effect: boost (constitution, moderate)
+Base Duration: long (moderate fade)
+Guild Level: 6

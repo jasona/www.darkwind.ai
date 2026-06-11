@@ -1,0 +1,61 @@
+|CKB                        How to purchase a new Ship
+|WKB------------------------------------------------------------------------------
+|YKOWe are currently offering four different types of ships:
+           |WKOCog, Galley, Catamaran, and Carrack.
+
+
+|YKOYour first step is to |YKB"purchase" |YKOone of the ship types at the ship shop
+located: 5:s,e,s,3:e,n,e,s of COT.
+
+         |GKBA cog costs 120,000 gold.
+         A galley cost 180,000 gold.
+         A carrack costs 400,000 gold.
+
+|YKOThe catamaran is only available at the Wayfarian ship shop on Talamh Darag.
+
+To buy a ship, simply |YKB'request application' |YKOin the ship shop. Then |YKB'read
+application' |YKOto see the information required. Please |YKB"fillin [number] [text]"
+|YKOto complete the application. When you are finished, |YKB"turnin" |YKOthe application
+at a ship shop.
+
+Congratulations, then you own a new ship, which will be placed in port for you.
+
+
+                               |CKBOrders
+|WKB------------------------------------------------------------------------------
+         |YKOA small list of orders you can give while onboard ship.
+
+|CKBCaptains Quarters
+|WKB----------------------
+|YKOThe captain can create his own room description by typing |YKB"rename <description>"
+|YKOwhere the description is one continous line with a return at the end.
+Also, anyone one in the room can custom emote by typing |YKB"em <stuff>".
+
+
+|CKBBridge
+|WKB----------------------
+This is where the captain can do the most.
+
+|YKBdemote         |YKO- Demotes a captain to a passenger
+|YKBdock           |YKO- Orders the crew to dock the ship.
+|YKBforbid         |YKO- Repeals a passenger's boarding privilges
+|YKBfurl           |YKO- Orders the crew to pull down the sails.
+|YKBhoist          |YKO- Orders the crew to raise the sails.
+|YKBlist           |YKO- Gives you a current list of the ship's passengers
+                  or captains.
+|YKBpeer           |YKO- To look overboard and see what's around.
+|YKBpermit         |YKO- Grants a player permission to board your ship only
+|YKBpromote        |YKO- Promotes a passenger to captain (can sail the ship)
+|YKBpush off       |YKO- Orders the crew to pull away from the dock.
+|YKBsail <dir>     |YKO- To move the ship.
+|YKByell           |YKO- Yells a message to the area outside your ship
+
+
+|CKBDeck
+|WKB----------------------
+|YKBdisembark      |YKO- Disembark the ship
+|YKBpeer           |YKO- To look overboard and see what's around.
+
+
+While onboard, you can type |YKB"orders" |YKOin any room to see the list of orders
+you may give while in that room. Not all rooms have orders to report.

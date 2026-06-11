@@ -1,0 +1,11 @@
+                 --=Builder Commands=--
+
+In addition to the following you have a number of new abilities.  For a 
+complete list type cmds builder. To get a description of the new ability
+type help <cmd> (e.g. help Audit)
+
+3.1 away          3.4 review
+3.2 banish        3.5 funhelp
+3.3 trans         3.6 file editing
+
+To view the help file type wizhelp <number>

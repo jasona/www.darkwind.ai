@@ -1,0 +1,21 @@
+|GKB-- Druid Monitor ----------------------------------------------|000
+
+|CKBdmon|000 toggles a compact nwyfre monitor in your normal combat
+monitor output.
+
+Commands:
+
+  |CKBdmon        |000 Toggle the Druid monitor.
+  |CKBdmon on     |000 Turn it on.
+  |CKBdmon off    |000 Turn it off.
+
+When enabled, the standard |CKBmon|000 / |CKBmonitor|000 output includes
+one extra line with all four currents:
+
+  T  Tellurian
+  D  Daloan
+  M  Marken
+  K  Tekali
+
+Each current shows a compact bar and percentage so you can see which
+vessel is being spent during combat.

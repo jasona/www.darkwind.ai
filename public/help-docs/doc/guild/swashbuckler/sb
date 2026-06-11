@@ -1,0 +1,11 @@
+Sb/Esb/Sbm/Esbm - guild chatlines
+------------------------------------------------------------
+The guild chat lines. The sb line is the main channel, heard
+by all members; esb emotes over it. Sbm and esbm are the
+Blademaster channels, which can be used (and heard) only by
+Blademasters (GL 15).
+
+GL:  1 (sb) or 15 (sbm)
+SP:  0
+command:  sb/esb/sbm/esbm <text>, sbhist sbmhist
+duration: N/A

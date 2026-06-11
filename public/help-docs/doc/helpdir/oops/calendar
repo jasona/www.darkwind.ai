@@ -1,0 +1,46 @@
+Darkwinds calendar is based on a 300 day year, Each Day is
+approximately 20 hours, and 1 week is a ten-day long.  There
+are 3 ten-day in a month (or 30 days), and 10 months in a
+year.  There are three moons that orbit high above Geshtei
+all of which are distinctly diferentiable because of their
+colors.  The largest is Dailos, also known as the Magenta moon.
+The next largest is Markas, the Red moon, and the smallest,
+Tekal, is called the Green moon.
+ 
+The names of the days of the week and months of the year
+are as follows:
+ 
+        Days of the week
+ 
+Short Name      Full Name
+-----------     --------------------------------
+Godsday         Day of the Gods
+Moonday         Day of the Placid Moon
+Seasday         Day of the Open seas
+Windsday        Day of the Whispering Winds
+Treesday        Day of the Towering Trees
+Hearthday       Day of the Hearth Fire
+Starday         Day of the Blinking stars
+Sunday          Day of the Living Sun
+Peaksday        Day of the Soaring Peaks
+Marketday       Day of the Golden Harvest
+ 
+ 
+        Months of the Year
+ 
+Month           Nickname
+-----------     ----------------------
+Hammer          Deepwinter
+Alturiak        The Claws of Winter
+Ches            The Claws of Storms
+Tarsakh         The Melting
+Mirtul          The Time of Flowers
+Kythorn         Summertide
+Flamerule       Highsun
+Marpenoth       Leafall
+Uktar           The Rotting
+Nighal          The Dawning Down
+ 
+The commands 'time' and 'date' will show you the current time and
+date here on Darkwind.  The year is calculated from the time Darkwind
+first opened.

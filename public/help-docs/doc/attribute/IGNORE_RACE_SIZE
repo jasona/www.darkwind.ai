@@ -1,0 +1,12 @@
+/doc/attribute/IGNORE_RACE_SIZE
+
+Format: (Living_Object)->set_attribute("IGNORE_RACE_SIZE", iValue);
+
+Description:
+  The IGNORE_RACE_SIZE will allow the Living_Object to
+  ignore race size when wielding weapons. A small
+  race would be able to dual wield 2 medium weapons
+  for example. It won't allow them to wield 2 weapons
+  that are normally restricted, like 2 LARGE, etc.
+  The iValue is only used to turn the attribute
+  on and off.

@@ -1,0 +1,10 @@
+This command allows you to customize the message used when you log in and out
+of Darkwind.
+
+Syntax is: fmess <login|logout> <message|default>
+  given without <message> returns your login/logout message.
+  given with default sets your messages back to the default.
+  given with <message> sets your new login/logout message.
+
+NOTE: Use $N for your name when specifying the login
+or logout message.

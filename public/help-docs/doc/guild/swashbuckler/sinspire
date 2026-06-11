@@ -1,0 +1,13 @@
+Inspire - teamwork skill
+------------------------------------------------------------
+A skilled swashbuckler in action is an imposing sight. A
+swashbuckler experienced enough to use this ability knows
+how to use his example of skill, and his sheer force of
+presence to inspire others to fight better. Its effect is
+similar to that of the Call to Arms, but non-Swashbucklers
+can benefit from it as well.
+
+GL: 14
+SP: 60
+command:  sinspire
+duration: long

@@ -1,0 +1,7 @@
+The scout command enables you to peek into adjacent
+rooms without risking any harm to yourself.  The
+currently available directions are all standard
+compass directions plus up and down.  This is a 
+Glevel 3 skill.
+
+Syntax: scout <direction>

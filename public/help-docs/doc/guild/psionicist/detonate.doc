@@ -1,0 +1,10 @@
+_______________________________________________________________________________
+"Detonate"     
+        This allows the psionicist to telekinetically break the pattern
+        holding matter together.  It destructs any droppable, stealable
+        object the player is carrying (so it must have been gettable
+        too).
+ 
+SP Cost:  5		Guild Level:  1		Potential Points:  1
+ 
+Command:  detonate <object>

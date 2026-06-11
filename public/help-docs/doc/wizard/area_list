@@ -1,0 +1,95 @@
+DW
+  Main Contininent/DW City - /domains/darkwind
+  Ashkezazy - /domains/darkwind/areas/ashkenazy
+  Elf Kingdon - /domains/darkwind/areas/elfkingdom
+  Qazaash - /domains/darkwind/areas/qazaash
+  Alarian - /players/alarian
+  Valley - /domains/darkwind/areas/valley
+  Fearland - /domains/darkwind/areas/fearland
+  Guido - /players/guido/newbie
+  Reason - /players/reason/area
+  Abbey - /players/shibboleth/abbey
+  Canith - /players/syckle/Canith
+  Bandit Fortress - /domains/darkwind/areas/archtower
+  Faerie Mound - /domains/darkwind/areas/mound
+  Syldenith - /domains/darkwind/areas/syldenith
+  Endrael - /domains/darkwind/areas/endrael
+  Haxton - /domains/darkwind/areas/haxton
+  Orcslayer - /domains/darkwind/orcslayer
+  Skeleton Caves - /domains/darkwind/mines
+                   /domains/darkwind/areas/skelcaves
+  Newbie Farm - /domains/darkwind/areas/newbie_farm
+  Stoker - /players/rabscuttle/stoker
+  Glavia - /players/malraux/room
+  Sewers - /domains/darkwind/sewers
+  Rome - /domains/darkwind/areas/rome
+  Mansion - /players/memnoch/area/mansion
+  Hades - /domains/darkwind/areas/hades
+  Lingo - /domains/darkwind/areas/lingo
+  Pirate Town - /domains/darkwind/pirate
+  Valour - /players/valour/areas/newbie
+
+HYP
+  Main Continent/Grimmsfjord - /domains/hyperborea
+  Wind Valley - /players/kanan/wind_vall
+  Rath Khan - /domains/hyperborea/areas/tower
+  Battlefield - /vrrooms/aeolus/battle
+  Wolfjord - /domains/hyperborea/areas/wolfjord
+  Ice Hydra - /domains/hyperborea/areas/icehydras
+  Powder Plateau - /domains/hyperborea/areas/powder_plateau
+  Fire Island - /domains/hyperborea/firei
+  Ice Ruins - /domains/hyperborea/areas/ice_ruins
+  North Hyper - /domains/hyperborea/areas/north_hyper
+  Ice Floe - /domains/hyperborea/areas/icefloe
+  Ice Plain - /vrrooms/aeolus/iceplain
+  Viking Village - /domains/hyperborea/areas/VikingVillage
+  Asgard - /domains/hyperborea/areas/asgard
+  Ravenloft - /domains/hyperborea/areas/ravenloft
+  Ice Orcs - /players/abyss/areas/ice_orcs
+  Ghost Town - /players/james/ghtown
+
+SOUV
+  Main Continent/Souvrael City - /domains/souvrael
+  Desert Dwarves - /domains/souvrael/areas/dwarves
+  Crystal Caves - /domains/souvrael/areas/animation
+  Babylon - /players/natas/babylon
+  Minotaur - /domains/souvrael/areas/minotaur
+  Arabia - /domains/souvrael/areas/arabia
+  Egypt - /domains/souvrael/areas/egypt
+  Gold Mines - /players/hayden/souvrael
+  Dao - /domains/souvrael/areas/dao
+  Dune - /domains/souvrael/areas/dune
+  South Desert - /domains/souvrael/areas/southdesert
+  Snake Temple - /domains/souvrael/areas/snaketemple
+  Pyramid - /domains/souvrael/areas/pyramid
+
+KEREI
+  Main Continent/Odako - /domains/kerei
+  Catacombs - /domains/kerei/areas/catacombs
+  Shadez - /players/shadez/area
+  Masher - /players/masher/glair
+  Richelieu - /domains/kerei/areas/garset
+  Plum - /players/memnoch/area/otemple
+  Souldancer - /players/souldancer/areas/ker
+  Memnoch - /players/memnoch/area/temple
+  Snake Fields - /vrrooms/kerei/odako
+  Sunnah - /players/pilaff/sunnah
+  Mintohdar - /players/acer/rooms/temple
+  Chimotage - /domains/kerei/chimotage
+  Amazon Village - /players/kubera/amazon
+
+ISLANDS
+  Main Continent - /domains/islands
+  Volcano Island - /domains/islands/areas/volcano_isle
+  Isle of Dwork - /domains/islands/areas/dwork
+  Rhuddlan - /domains/islands/areas/rhuddlan
+  Cloud Island - /domains/islands/areas/cloud_isle
+  Isle of Briton - /players/redbear/area
+
+Underworld
+  Main Continent - /domains/underworld
+  Worms - /players/acer/rooms/tunnels
+  Mitra's Mines - /domains/underworld/areas/mines
+
+Other
+  DW-Hyper Highway - /domains/highway

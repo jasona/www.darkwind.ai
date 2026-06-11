@@ -1,0 +1,5 @@
+Declare is a basic fighter command that allows you to make a motto visible
+on the "fwho" screen for other fighters to see.
+
+Syntax is: declare <text>
+  <text> of "none" will remove your motto.

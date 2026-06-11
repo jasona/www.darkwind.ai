@@ -1,0 +1,16 @@
+Ranger Help for: coordinate
+============================
+
+SYNTAX:      coordinate <target>
+USAGE:       Any terrain
+SLOT COST:   8
+BASE SP:     40
+SKILL TYPE:  offensive
+
+SUMMARY:
+This skill allows a Ranger to organize a coordinated group attack
+against a target. By calling out tactical instructions, the Ranger
+improves the combat effectiveness of everyone in the party for a
+brief time. The bonus to the group's attacks depends on the Ranger's
+charisma and skill level. This skill works best when the Ranger is
+fighting alongside allies.

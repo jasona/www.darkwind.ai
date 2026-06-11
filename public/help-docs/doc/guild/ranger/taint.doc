@@ -1,0 +1,16 @@
+
+Ranger Help for: taint
+======================
+
+SYNTAX:      taint arrow/bolt
+USAGE:       forest,plains,jungle,swamp,desert
+SLOT COST:   5
+BASE SP:     10 sp
+SKILL TYPE:  arrow
+
+SUMMARY:    
+This skill allows a Ranger to use some of the native poisons in certain
+terrains to poison the tips of arrows and bolts. Poisoned arrows and
+bolts do increased damage over plain ones. Arrows are used in shortbows
+and longbows while bolts are used in crossbows. 
+

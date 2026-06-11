@@ -1,0 +1,16 @@
+Ranger Help for: survey
+=======================
+
+SYNTAX:      survey (or: id)
+USAGE:       Any terrain.
+SLOT COST:   1
+BASE SP:     2
+
+SUMMARY:
+Surveys the terrain you are standing in, identifying all terrain
+types present and displaying them with color codes. Also reports
+whether you are in your primary terrain, secondary terrain, or
+claimed warden range, and shows the domain name.
+
+=============================================================================
+SEE ALSO: terrains, setprime, setsecond, check

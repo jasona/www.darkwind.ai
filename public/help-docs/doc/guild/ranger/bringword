@@ -1,0 +1,16 @@
+Ranger Help for: bringword
+===========================
+
+SYNTAX:      bringword on <player>
+USAGE:       Wilderness
+SLOT COST:   NA
+BASE SP:     60
+SKILL TYPE:  husbandry
+
+SUMMARY:
+This skill allows a Ranger to send a small animal scout to find another
+player and report back with their location. The animal will seek out the
+target player and return with information about where they are. The
+Ranger must be in wilderness terrain to call upon a scout animal. The
+time it takes for the scout to return depends on how far away the target
+player is. This skill is useful for locating friends or tracking targets.

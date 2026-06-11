@@ -1,0 +1,16 @@
+Ranger Help for: repair
+=======================
+
+SYNTAX:      repair quiver
+USAGE:       Anywhere.
+
+SUMMARY:
+Refreshes your existing quiver, fixing any issues with it. This
+destroys your current quiver and creates a fresh one, restoring
+your command paths and guild functionality.
+
+If you have completely lost your quiver, use 'rebuild quiver'
+instead.
+
+=============================================================================
+SEE ALSO: rebuild

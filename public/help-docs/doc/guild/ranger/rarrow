@@ -1,0 +1,19 @@
+Ranger Help for: carve arrow
+=============================
+
+SYNTAX:      make arrow
+             make bolt
+             carve arrow
+             carve bolt
+USAGE:       Any terrain
+SLOT COST:   2
+BASE SP:     variable
+SKILL TYPE:  archery
+
+SUMMARY:
+This skill allows a Ranger to carve arrows or crossbow bolts from wood.
+Arrows are used with shortbows and longbows. Bolts are used with
+crossbows and are required for heartshot.
+
+Ammo can be improved with flame arrow, poison arrow, and tip arrow. The
+same commands can be used on bolts when preparing crossbow ammunition.

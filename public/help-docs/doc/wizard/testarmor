@@ -1,0 +1,33 @@
+------------------------------------------------------------------
+Test Char Armor Help         By: Bullseye a.k.a Scyrus
+------------------------------------------------------------------
+This help file will tell you about the armor that wizards use for
+their test char's, how you can create it, and how to transfer it
+to your test char.  First of all I'll tell you the details of the
+armor, and what you can do with it.
+
+------------------------------------------------------------------
+Test Armor Commands:
+------------------------------------------------------------------
+    setaq - Sets the quality of the armor
+Syntax: setaq <amt>
+------------------------------------------------------------------
+    setac - Sets numerical AC of the armor
+Syntax: setac <amt>
+------------------------------------------------------------------
+    settype - Sets the type of the armor
+Syntax: settype <none|padded|hide|studded|chain|banded|scale|plate> 
+------------------------------------------------------------------
+If you need another list of these commands, then just 'look armor'.
+
+Now you need to clone the armor using the following string:
+
+clone /objects/testchar/test_armor.c
+
+The last step is to transfer the object to your test char, you do
+this by executing a move_object.  The syntax is as follows:
+
+execute move_object(present("armor", this_player()), find_player("scyrus"));
+
+Obviously, all you'll have to do to customize this example is
+change "scyrus" in the find_player() to "thenameofyourtestchar"
