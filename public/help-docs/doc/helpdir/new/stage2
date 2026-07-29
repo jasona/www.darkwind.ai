@@ -7,9 +7,20 @@ practice on the newbie farm.
 
 Death carries NO penalty at level 5 and under, so this is the time to
 take risks and learn |YKBkill|YKO, |YKBassess|YKO, and |YKBwimpy|YKO. Ask
-questions freely on the newbie channel -- everyone started here.|XX0
+questions freely on the newbie channel -- everyone started here.
+
+Choose your corpse automation: |YKBset autogold on|YKO takes coins only,
+while |YKBset autoloot on|YKO takes coins and every gettable item, making
+autogold redundant and filling your inventory faster.
+
+|YKBset autokill on|YKO does not attack by itself; it only makes a manually
+entered bare |YKBkill|YKO choose the first visible NPC. Keep naming targets
+until you are comfortable. |YKBset wimpy 25|YKO retreats below 25 percent
+HP when an escape is possible. |YKBset combatbrief-short on|YKO trims combat
+text; in busy groups, |YKBset combatbrief-self on|YKO keeps attacks by or on
+you, and |YKBset combatbrief-hit on|YKO hides misses and dodges.|XX0
 
 |WKBRead: |CKBhelp kill, help equipment, help wimpy, help combat,
-|CKBhelp communication|XX0
+|CKBhelp communication, help set, help combatbrief|XX0
 |WKBNext: |CKBhelp stage3|WKB    Index: |CKBhelp guide|XX0
-# keywords: erga, newbie farm, free equipment
+# keywords: erga, newbie farm, free equipment, autoloot, autogold, autokill

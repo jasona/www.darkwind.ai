@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "source": {
     "repository": "jasona/darkwind-nextgen",
-    "revision": "1b3ee70bfac465215f8c6bde9e3c6e8eae1af51a",
+    "revision": "089da2efb3093c3b6da4206a9af530e463353715",
     "dirty": false,
-    "contentHash": "d1cfe9e983bb0b61c7e5c729e2700147790f5ea8dbe541bd20e8ed14843398a7",
+    "contentHash": "96d674710ca7a8cc4c84993bdd088cda84baa38d41790a311de28b21ae46004a",
     "normalRoot": "codebase/public/docs/helpdir/new",
     "screenreaderRoot": "codebase/public/docs/vihelp/new",
     "files": [
@@ -35,17 +35,24 @@
       "levelRange": null,
       "paragraphs": [
         "A short tutorial starts automatically for new characters and teaches looking, moving, gear, and safe combat. Darkflow shows it in a hover window. Type tutorial to see your current step and tutorial continue to continue in any client.",
-        "Learn to look at everything (xa <thing>), check your inventory, and read your score. If you ever get lost, ncot returns you to the Center of Town, and the Newbie Tome Dispenser there (pull lever, read tome) holds the town directions."
+        "Learn to look at everything (look <thing>), check your inventory, and read your score. If you ever get lost, ncot returns you to the Center of Town, and the Newbie Tome Dispenser there (pull lever, read tome) holds the town directions.",
+        "Make the interface work for you before you roam. set list shows your saved options. Useful first choices are set autoexits on for named exits, set npcdetail on for NPC levels, and set itemdetail on for raw weapon and armour ratings. Use monitor bar for live HP/SP. If you use a screenreader, run set screenreader on to enable screenreader-friendly output."
       ],
       "commands": [
         "tutorial",
         "tutorial continue",
-        "xa <thing>",
+        "look <thing>",
         "inventory",
         "score",
         "ncot",
         "pull lever",
-        "read tome"
+        "read tome",
+        "set list",
+        "set autoexits on",
+        "set npcdetail on",
+        "set itemdetail on",
+        "monitor bar",
+        "set screenreader on"
       ],
       "relatedTopics": [
         {
@@ -67,13 +74,32 @@
           "topic": "new",
           "command": "help new",
           "docId": "helpdir/new/new"
+        },
+        {
+          "topic": "set",
+          "command": "help set",
+          "docId": "helpdir/interface/set"
+        },
+        {
+          "topic": "monitor",
+          "command": "help monitor",
+          "docId": "helpdir/interface/monitor"
+        },
+        {
+          "topic": "screenreader",
+          "command": "help screenreader",
+          "docId": "helpdir/interface/screenreader"
         }
       ],
       "sourceDocId": "helpdir/new/stage1",
       "nextId": "stage2",
       "keywords": [
         "tutorial",
-        "first steps"
+        "first steps",
+        "settings",
+        "autoexits",
+        "itemdetail",
+        "npcdetail"
       ]
     },
     {
@@ -83,12 +109,21 @@
       "levelRange": "levels 1-5",
       "paragraphs": [
         "Erga's newbie store (from the Center of Town: 4w, s) hands out free equipment fit for anyone under level 5; the donation room (5n, e) has castoffs from generous veterans. Wear and wield everything, then practice on the newbie farm.",
-        "Death carries NO penalty at level 5 and under, so this is the time to take risks and learn kill, assess, and wimpy. Ask questions freely on the newbie channel -- everyone started here."
+        "Death carries NO penalty at level 5 and under, so this is the time to take risks and learn kill, assess, and wimpy. Ask questions freely on the newbie channel -- everyone started here.",
+        "Choose your corpse automation: set autogold on takes coins only, while set autoloot on takes coins and every gettable item, making autogold redundant and filling your inventory faster.",
+        "set autokill on does not attack by itself; it only makes a manually entered bare kill choose the first visible NPC. Keep naming targets until you are comfortable. set wimpy 25 retreats below 25 percent HP when an escape is possible. set combatbrief-short on trims combat text; in busy groups, set combatbrief-self on keeps attacks by or on you, and set combatbrief-hit on hides misses and dodges."
       ],
       "commands": [
         "kill",
         "assess",
-        "wimpy"
+        "wimpy",
+        "set autogold on",
+        "set autoloot on",
+        "set autokill on",
+        "set wimpy 25",
+        "set combatbrief-short on",
+        "set combatbrief-self on",
+        "set combatbrief-hit on"
       ],
       "relatedTopics": [
         {
@@ -115,6 +150,16 @@
           "topic": "communication",
           "command": "help communication",
           "docId": "helpdir/communication/communication"
+        },
+        {
+          "topic": "set",
+          "command": "help set",
+          "docId": "helpdir/interface/set"
+        },
+        {
+          "topic": "combatbrief",
+          "command": "help combatbrief",
+          "docId": "helpdir/interface/combatbrief"
         }
       ],
       "sourceDocId": "helpdir/new/stage2",
@@ -122,7 +167,10 @@
       "keywords": [
         "erga",
         "newbie farm",
-        "free equipment"
+        "free equipment",
+        "autoloot",
+        "autogold",
+        "autokill"
       ]
     },
     {
@@ -132,10 +180,17 @@
       "levelRange": null,
       "paragraphs": [
         "Once the farm feels easy, pick a guild -- it defines your abilities for the climb ahead. Browse the roster, the playstyle archetypes, and which pairings work before committing.",
-        "Level at the adventurers guild with advance; experience costs grow with each level, and your stats shape what your abilities can do."
+        "Level at the adventurers guild with advance; experience costs grow with each level, and your stats shape what your abilities can do.",
+        "You can handle normal advancement from anywhere. remcost is a safe, read-only report of stat costs, available raises, caps, and experience needed. Use remadvance <stat> to raise one stat or remadvance level to buy every level you can currently afford. Guild advancement still happens at your guild hall with advance guild. Despite their names, the rem commands work before remort.",
+        "Non-remort players may use set autolevel on to spend experience on levels automatically; leave it off when you want to bank experience for stat raises. Remort souls always level automatically."
       ],
       "commands": [
-        "advance"
+        "advance",
+        "remcost",
+        "remadvance <stat>",
+        "remadvance level",
+        "advance guild",
+        "set autolevel on"
       ],
       "relatedTopics": [
         {
@@ -172,6 +227,11 @@
           "topic": "stats",
           "command": "help stats",
           "docId": "helpdir/stats/stats"
+        },
+        {
+          "topic": "set",
+          "command": "help set",
+          "docId": "helpdir/interface/set"
         }
       ],
       "sourceDocId": "helpdir/new/stage3",
@@ -179,7 +239,10 @@
       "keywords": [
         "guild choice",
         "advance",
-        "archetype"
+        "archetype",
+        "remcost",
+        "remadvance",
+        "autolevel"
       ]
     },
     {
@@ -241,10 +304,18 @@
       "title": "Money and Craft",
       "levelRange": null,
       "paragraphs": [
-        "Coins pile up: open a bank account early -- auction bids and some purchases are backed by bank liens, and your balance is shared across every branch.",
+        "Coins pile up: open a bank account early -- auction bids and some purchases are backed by bank liens, and your balance is shared across every branch. rembank or rembank balance opens the account on first use and reports its balance, lien, and spendable amount.",
+        "From anywhere that is not warded against teleportation, rembank deposit all banks every carried coin and rembank withdraw <amount> brings coins back. Use rembank lien to check reserved funds. Use rembank transfer <amount|all> from <alt> to pull funds from one of your registered alts into the current character. Balance and lien checks still work in warded rooms.",
         "Learn the player-driven economy: shops, the remote market, and the live auction channel. When you want a break from fighting, professions like fishing, mining, and smithing earn steadily and feed the market."
       ],
-      "commands": [],
+      "commands": [
+        "rembank",
+        "rembank balance",
+        "rembank deposit all",
+        "rembank withdraw <amount>",
+        "rembank lien",
+        "rembank transfer <amount|all> from <alt>"
+      ],
       "relatedTopics": [
         {
           "topic": "economy",
@@ -282,7 +353,9 @@
       "keywords": [
         "gold",
         "coins",
-        "trading"
+        "trading",
+        "rembank",
+        "remote banking"
       ]
     },
     {

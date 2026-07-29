@@ -1,0 +1,41 @@
+|WKBSyntax: |YKBset screenreader <on/off>|WKB
+|WKO=====================================================================
+|YKOScreenreader mode reshapes Darkwind's output for players who use a
+screenreader. While it is on:
+
+  - Colors, screen decoration, and decorative divider lines are
+    stripped, and boxed headings are simplified to plain text.
+  - Lists and tables, such as room contents and your settings, are
+    printed as short numbered lines instead of drawn boxes.
+  - Combat is summarized into a sentence or two each round instead of
+    a stream of blow-by-blow lines.
+  - Channel chatter is rephrased as plain speech, for example:
+    Aeon says on Gossip, "Hello."
+  - Ambient background noise is suppressed.
+
+Enabling: you are asked at character creation whether you use a
+screenreader. Answering yes turns the mode on and applies friendly
+defaults -- plain terminal, monitor off, popups off, and quieter
+channel settings. Review them with |YKBset list|YKO. You can also toggle
+the mode at any time:
+
+  |YKBset screenreader on|YKO
+  |YKBset screenreader off|YKO
+
+Darkflow's visual tutorial hover closes immediately when screenreader
+mode is turned on, and the current objective is repeated as linear terminal
+text. Turning screenreader mode off restores the hover automatically when
+the tutorial is still active. The tutorial remains fully controllable with
+|YKBtutorial continue|YKO, |YKBtutorial hint|YKO,
+|YKBtutorial skip|YKO, and |YKBtutorial restart|YKO.
+
+Help: while the mode is on, the |YKBhelp|YKO command reads a
+screenreader-specific version of a topic when one exists and falls
+back to the regular topic otherwise. Plain |YKBhelp|YKO opens a start
+page written for screenreader users, and topics are shown through the
+pager rather than in pop-up windows.|XX0
+
+|WKBSee also: |YKBset, monitor, client|XX0
+
+# keywords: accessibility, blind, visually impaired, vihelp, audio
+# alias: accessibility

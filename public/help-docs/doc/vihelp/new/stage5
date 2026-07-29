@@ -1,7 +1,16 @@
 Stage 5 of 8: Money and Craft
 
 Open a bank account early; auction bids and some purchases are backed
-by bank liens, and your balance is shared across every branch.
+by bank liens, and your balance is shared across every branch. "rembank"
+or "rembank balance" opens the account on first use and reports its
+balance, lien, and spendable amount.
+
+From anywhere that is not warded against teleportation, "rembank deposit
+all" banks every carried coin and "rembank withdraw <amount>" brings
+coins back. Use "rembank lien" to check reserved funds. The command
+"rembank transfer <amount|all> from <alt>" pulls funds from one of your
+registered alts into the current character. Balance and lien checks still
+work in warded rooms.
 
 Learn the player-driven economy: shops, the remote market, and the
 live auction channel. When you want a break from fighting, professions

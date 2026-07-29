@@ -5,10 +5,21 @@ for the climb ahead. Browse the roster, the playstyle archetypes, and
 which pairings work before committing.
 
 Level at the adventurers guild with |YKBadvance|YKO; experience costs
-grow with each level, and your stats shape what your abilities can
-do.|XX0
+grow with each level, and your stats shape what your abilities can do.
+
+You can handle normal advancement from anywhere. |YKBremcost|YKO is a safe,
+read-only report of stat costs, available raises, caps, and experience needed.
+Use |YKBremadvance <stat>|YKO to raise one stat or
+|YKBremadvance level|YKO to buy every level you can currently afford.
+Guild advancement still happens at your guild hall with
+|YKBadvance guild|YKO. Despite their names, the rem commands work before
+remort.
+
+Non-remort players may use |YKBset autolevel on|YKO to spend experience on
+levels automatically; leave it off when you want to bank experience for
+stat raises. Remort souls always level automatically.|XX0
 
 |WKBRead: |CKBhelp guilds, help archetypes, help combos, help roles,
-|CKBhelp leveling, help costs, help stats|XX0
+|CKBhelp leveling, help costs, help stats, help set|XX0
 |WKBNext: |CKBhelp stage4|WKB    Index: |CKBhelp guide|XX0
-# keywords: guild choice, advance, archetype
+# keywords: guild choice, advance, archetype, remcost, remadvance, autolevel

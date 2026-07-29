@@ -1,0 +1,48 @@
+|YKOCombat in DarkWind runs on heartbeats. Every round, each of your
+attacks -- wielded weapons, or fists and natural attacks without them --
+produces one or more swings, and every swing rolls on its own to crit,
+hit, be dodged, be absorbed, and finally deal damage.
+
+Starting a fight: |YKBkill <target>|YKO opens combat, and most offensive
+guild abilities do the same. Judge a target's experience first with
+|YKBassess <target>|YKO. Attacking other players requires Player
+Killing registration; read |CKBhelp pk|YKO first. See |CKBhelp kill|YKO.
+
+Landing hits: how often you swing depends on your weapon's size and
+speed and on your strength and dexterity, with diminishing returns at
+high stat values. Whether a swing lands pits
+your level, intelligence, and dexterity, plus your weapon's accuracy,
+against the defender's dodge. Roughly one swing in twenty is a critical
+hit for multiplied damage. Weapon training sharpens all of this -- see
+|CKBhelp specialization|YKO.
+
+Dealing damage: damage comes from your damage stat and your weapon's
+damage class. Heavier and two-handed weapons hit harder but swing
+slower and less accurately. Damage carries types (slashing, fire, and
+so on) that are checked against the defender's resistances.
+
+Defending: dodge avoids swings outright. Armour's absorb class applies
+reliable flat and percentage reduction to physical weapon damage, and
+can also absorb a landed blow down to nothing. Armour-piercing attacks
+halve that reliable reduction. Resistances and magical shields shave
+typed damage away. Spells and potions layer on more protection -- see
+|CKBhelp buffs|YKO and |CKBhelp shields|YKO. Check your armor class and
+weapon class anytime with |YKBsc|YKO.
+
+Running away: you can flee any fight by simply leaving the room, though
+a pursuer who catches you gets a free swing. |YKBwimpy <percent>|YKO
+makes your legs flee automatically at low health; see |CKBhelp wimpy|YKO.
+
+Dying: death costs 10% of your experience on hand (nothing at level 5
+or under) and your corpse stays safely with you. See |CKBhelp death|YKO.
+
+Fighting together: |YKBassist <player>|YKO joins a friend's fight, and
+parties split the work and the reward; see |CKBhelp party|YKO. Trim
+combat spam with |YKBcombatbrief|YKO, or use
+|YKBcombatbrief visual|YKO to move routine swings into a ready Darkflow
+Combat pane. Important ability, warning, flee, death, and reward text
+continues in the terminal.|XX0
+
+|WKBSee also: |YKBkill, assess, assist, party, wimpy, buffs, shields, death, pk|XX0
+
+# keywords: fighting, battle

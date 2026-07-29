@@ -7,6 +7,17 @@ pairings work before committing.
 Level at the adventurers guild with "advance". Experience costs grow
 with each level, and your stats shape what your abilities can do.
 
+You can handle normal advancement from anywhere. "remcost" is a safe,
+read-only report of stat costs, available raises, caps, and experience
+needed. Use "remadvance <stat>" to raise one stat or "remadvance level"
+to buy every level you can currently afford. Guild advancement still
+happens at your guild hall with "advance guild". Despite their names,
+the rem commands work before remort.
+
+Non-remort players may use "set autolevel on" to spend experience on
+levels automatically; leave it off when you want to bank experience for
+stat raises. Remort souls always level automatically.
+
 Read: help guilds, help archetypes, help combos, help roles,
-help leveling, help costs, help stats.
+help leveling, help costs, help stats, help set.
 Next: help stage4. Index: help guide.

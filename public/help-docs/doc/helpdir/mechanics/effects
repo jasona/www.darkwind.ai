@@ -1,0 +1,38 @@
+|WKO=====================================================================
+ |CKBStatus Effects: Buffs and Debuffs
+|WKO=====================================================================
+|YKOMost temporary conditions on your character are effects. Helpful
+effects are buffs; harmful ones are debuffs. The |YKBbuffs|YKO command
+lists both, numbered, with the time each has left.
+
+Buffs come from guild abilities, potions, equipment, implants, and
+special events. Timed buffs count down in real time. Buffs supplied by
+an item you are using last as long as the item does and are shown as
+"Permanent". You can end your own buffs early with |YKBclearbuff|YKO.
+
+Debuffs are poisons, diseases, hexes, and similar afflictions. Most
+deal damage every few seconds until they expire. Landing the same
+affliction again either refreshes its timer or simply fails while the
+first still runs - debuffs do not stack into stronger versions of
+themselves. |YKBclearbuff|YKO cannot remove them; they end on their own
+or through the right cure or dispel.
+
+Bodily conditions are a special family of debuff: Burning, Bleeding,
+Chilled, Freezing, Exposed, and Sundered. Burning, Bleeding, and Sundered
+grow in strength
+when fed by further attacks - |YKBbuffs|YKO shows the current strength
+as a number - up to a cap that scales with your level. Being chilled
+again while already chilled deepens into Freezing, Exposed leaves your
+defenses open to critical attacks, and each Sundered stack lowers armour
+class by one, to a maximum of three. These conditions fade with time, and
+some also yield to the world itself: a warm hearth will thaw a deep
+chill.
+
+Not every ability registers with this display, so |YKBbuffs|YKO may not
+show everything acting on you.
+
+|WKBSee also: |YKBhelp buffs, help parasites, help cyberware|XX0
+
+# keywords: buff, debuff, poison, disease, burning, bleeding, sundered, hex
+# alias: debuff, debuffs, status
+# see: buffs, parasites

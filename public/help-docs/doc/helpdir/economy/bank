@@ -1,0 +1,35 @@
+|WKBSyntax: |YKBbalance, deposit <amount>, withdraw <amount>,
+        transfer <amount> from <alt>, lien|WKB
+|WKO=====================================================================
+|YKOBanks keep your coins safe and power the bidding economy. All branches
+share a single account, opened automatically the first time you walk
+into a bank. The commands above only work inside a bank.
+
+  |YKBdeposit <amount>|YKO   Move coins from your pockets into the bank.
+  |YKBwithdraw <amount>|YKO  Take coins back out.
+  |YKBbalance|YKO            Show balance, liens, and amount available.
+  |YKBtransfer <amount> from <alt>|YKO
+                     Pull coins from one of your own registered alts'
+                     accounts into this character's account.
+  |YKBlien|YKO               Show any lien held against your account.
+
+Use "all" in place of an amount to move everything at once. Ghosts
+cannot bank; get resurrected first.
+
+Liens: part of your balance can be held in escrow for a pending deal,
+most commonly an outstanding auction bid or a pub purchase. Liened
+coins stay yours but cannot be withdrawn until the deal completes or
+falls through. |YKBbalance|YKO always shows how much is free and clear.
+
+The bank pays no interest -- it offers safekeeping, not growth. Coins
+must be on deposit to back auction bids, so keep your bidding money
+banked (see |CKBhelp auction|YKO).
+
+Branches operate in most large settlements, including the Bank of
+DarkWind in DarkWind City, the Souvrael Money Handlers in Souvrael,
+and the Grimsfjord Banking House in Hyperborea. Any branch reaches
+the same account.|XX0
+
+|WKBSee also: |YKBauction, economy, money|XX0
+
+# alias: banks, banking

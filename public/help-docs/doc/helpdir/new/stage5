@@ -2,7 +2,16 @@
 |WKO=====================================================================
 |YKOCoins pile up: open a bank account early -- auction bids and some
 purchases are backed by bank liens, and your balance is shared across
-every branch.
+every branch. |YKBrembank|YKO or |YKBrembank balance|YKO opens the account
+on first use and reports its balance, lien, and spendable amount.
+
+From anywhere that is not warded against teleportation,
+|YKBrembank deposit all|YKO banks every carried coin and
+|YKBrembank withdraw <amount>|YKO brings coins back. Use
+|YKBrembank lien|YKO to check reserved funds. Use
+|YKBrembank transfer <amount|all> from <alt>|YKO to pull funds from one of
+your registered alts into the current character. Balance and lien checks
+still work in warded rooms.
 
 Learn the player-driven economy: shops, the remote market, and the
 live auction channel. When you want a break from fighting, professions
@@ -12,4 +21,4 @@ market.|XX0
 |WKBRead: |CKBhelp economy, help bank, help market, help auction,
 |CKBhelp professions, help fishing|XX0
 |WKBNext: |CKBhelp stage6|WKB    Index: |CKBhelp guide|XX0
-# keywords: gold, coins, trading
+# keywords: gold, coins, trading, rembank, remote banking

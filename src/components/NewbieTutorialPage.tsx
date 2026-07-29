@@ -580,7 +580,9 @@ export default function NewbieTutorialPage({ openHelpDoc }: NewbieTutorialPagePr
                                         : "border-[#d6a94b]/25 bg-[#d6a94b]/[0.06] text-[#efd28f] hover:border-[#d6a94b]/55 hover:bg-[#d6a94b]/10"
                                     }`}
                                   >
-                                    <span className="truncate">{command}</span>
+                                    <span className="min-w-0 whitespace-normal break-words text-left">
+                                      {command}
+                                    </span>
                                     {copied ? (
                                       <Check className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
                                     ) : (

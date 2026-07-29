@@ -5,12 +5,20 @@ looking, moving, gear, and safe combat. Darkflow shows it in a hover window.
 Type |YKBtutorial|YKO to see your current step and
 |YKBtutorial continue|YKO to continue in any client.
 
-Learn to look at everything (|YKBxa <thing>|YKO), check your
+Learn to look at everything (|YKBlook <thing>|YKO), check your
 |YKBinventory|YKO, and read your |YKBscore|YKO. If you ever get lost,
 |YKBncot|YKO returns you to the Center of Town, and the Newbie Tome
 Dispenser there (|YKBpull lever|YKO, |YKBread tome|YKO) holds the town
-directions.|XX0
+directions.
 
-|WKBRead: |CKBhelp tutorial, help basics, help movement, help new|XX0
+Make the interface work for you before you roam. |YKBset list|YKO shows your
+saved options. Useful first choices are |YKBset autoexits on|YKO for named
+exits, |YKBset npcdetail on|YKO for NPC levels, and
+|YKBset itemdetail on|YKO for raw weapon and armour ratings. Use
+|YKBmonitor bar|YKO for live HP/SP. If you use a screenreader, run
+|YKBset screenreader on|YKO to enable screenreader-friendly output.|XX0
+
+|WKBRead: |CKBhelp tutorial, help basics, help movement, help new,
+|CKBhelp set, help monitor, help screenreader|XX0
 |WKBNext: |CKBhelp stage2|WKB    Index: |CKBhelp guide|XX0
-# keywords: tutorial, first steps
+# keywords: tutorial, first steps, settings, autoexits, itemdetail, npcdetail

@@ -9,6 +9,16 @@ Death carries no penalty at level 5 and under, so take risks now and
 learn kill, assess, and wimpy. Ask questions freely on the newbie
 channel; everyone started here.
 
+Choose your corpse automation: "set autogold on" takes coins only,
+while "set autoloot on" takes coins and every gettable item, making
+autogold redundant and filling your inventory faster.
+
+"set autokill on" does not attack by itself; it only makes a manually
+entered bare "kill" choose the first visible NPC. Keep naming targets
+until you are comfortable. "set wimpy 25" retreats below 25 percent HP
+when an escape is possible. Screenreader mode already condenses combat
+into short summaries, so the combatbrief display switches are not needed.
+
 Read: help kill, help equipment, help wimpy, help combat,
-help communication.
+help communication, help set.
 Next: help stage3. Index: help guide.

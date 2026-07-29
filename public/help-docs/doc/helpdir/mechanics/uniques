@@ -1,0 +1,36 @@
+|WKBSyntax: |YKBuniques [weapon | armour | claimed | available]|WKB
+        |YKBuniques [favorites | hoarders | playerfavorites] [count]|WKB
+|WKO=====================================================================
+|YKOUnique weapons and armour are one of a kind: only a single copy of
+each can exist in the game at a time. While one is out in the world -
+or in someone's hands - no second copy will appear. Uniques come from
+their usual places in the world; mighty foes guard many of them.
+
+A unique does not last forever. Roughly five days after it appears it
+dissolves into the aether, and a wielded or worn unique pulsates
+softly about half an hour before the end. Heed the warning.
+
+The first player to pick up, wield, or wear a unique after a reboot
+claims it. Claims are announced on the events channel and recorded
+forever in the unique leaderboards. Claimed status clears at reboot,
+so every boot is a fresh race.
+
+|WKBCommands:|YKO
+  |YKBuniques           |YKOList known uniques and whether each is claimed
+                    this reboot or still available.
+  |YKBuniques weapon    |YKOOnly weapons; |YKBuniques armour|YKO for armour.
+  |YKBuniques claimed   |YKOOnly claimed; |YKBuniques available|YKO for the
+                    unclaimed.
+  |YKBuniques favorites [count]        |YKOMost-claimed uniques ever.
+  |YKBuniques hoarders [count]         |YKOPlayers with the most claims.
+  |YKBuniques playerfavorites [count]  |YKOEach player's most-claimed
+                    unique. Counts run 1-50 and default to 10.
+
+Just after a reboot the catalog rebuilds itself, so entries may keep
+appearing for a few minutes while the refresh completes.
+
+|WKBSee also: |YKBhelp sigils, help equip|XX0
+
+# keywords: unique, rare, leaderboard, claimed, hoarders
+# alias: unique
+# see: sigils, equip

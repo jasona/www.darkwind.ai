@@ -1,0 +1,45 @@
+|WKO~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ |CKBDarkwind Remort
+|WKO~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ |YKORemort is Darkwind's late-game rebirth loop. When you reach
+ level 250, you may choose to remort: your character returns to
+ level 1 and climbs again, carrying a permanent remort level that
+ grows by one with every rebirth.
+
+ Remorting is always optional. You can stay at level 250 forever
+ and never remort.
+
+ |MKBWhat you give up each remort:
+  |YKO- Your level (back to 1) and any unspent experience
+  - Your base stats (back to 1, rebuilt with stat raises)
+  - Your guild memberships (you leave all guilds)
+
+ |MKBWhat you keep, always:
+  |YKO- Your name, history, and account progress
+  - Your gold, bank balance, boats, and property
+  - Your inventory
+  - Your remort level, boon points, and every boon you have chosen
+
+ |MKBWhat you gain:
+  |YKO- One |YKBboon point |YKOper remort level, spent on permanent bonuses
+    that persist through every future life (see |YKBhelp boons|YKO)
+  - Automatic leveling: remort players advance the moment they
+    have enough experience, with no guild-hall visit
+  - 6 stat raises per level (spend with |YKBadvance |YKOat a guild hall;
+    stats are capped at 3 x your level)
+  - A remort tag (R1, R2, ...) on the who list
+
+ |MKBThe cost:
+  |YKORemort use a variation of the normal level experience curve. Each
+  remort level adds 10% to that cost. A soul that has lived many
+  lives climbs more slowly, but carries far more power with it.
+
+ |MKBCommands:
+  |YKB remort          |YKOShow your remort status and eligibility
+  |YKB remort boons    |YKOList the permanent bonuses you can choose
+  |YKB remort choose   |YKOSpend a boon point
+  |YKB remort confirm  |YKORemort (only at level 250, asked only once)
+  |YKB marks           |YKOShow the boons marked on your soul
+
+ |YKOSee also: |YKBhelp boons|YKO, |YKBhelp leveling|YKO.
+|WKO~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

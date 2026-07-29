@@ -1,0 +1,36 @@
+|WKO=====================================================================
+|YKOWayshards are towering ancient crystals found across the world, one
+linked to each charted area. A shard remembers every traveler who has
+touched it, and together the shards form a fast travel network.
+
+Attuning: find a wayshard and |YKBtouch shard|YKO. The first touch attunes
+you to it as the shard learns your touch. Look at a shard to see
+whether it already knows you. Ghosts cannot touch the shards, and they
+will not answer during or shortly after combat.
+
+New adventurers: characters up to level 10 automatically know the
+wayshards of the newbie areas.
+
+Traveling: at any wayshard, |YKBtouch shard|YKO again to see your possible
+destinations, grouped by world and region with a level range for each.
+Each destination has a stable waymark ID. Choose with |YKBtravel <id>|YKO or
+|YKBtravel <area>|YKO, or |YKBcancel|YKO to dismiss the menu. Anywhere at all,
+|YKBwaypoints|YKO lists every shard you have attuned to; entries marked
+unavailable are known to you but cannot currently be used for fast travel.
+
+Costs and limits:
+
+  - Travel costs nothing, but the shards need a minute to settle: you
+    must wait 60 seconds between trips.
+  - A shard can only reach other attuned shards on the same planet.
+  - You cannot depart while fighting, shortly after combat, as a
+    ghost, or from places that dampen teleportation.
+
+Wayshards look different from world to world -- deep violet in
+Darkwind, frost-blue in Hyperborea, sea-green in Souvrael, and more --
+but all of them answer to a touch.|XX0
+
+|WKBSee also: |YKBareas, ferries, world|XX0
+
+# keywords: fast travel, attune, teleport, waystone, shard
+# alias: wayshard, waypoint, waypoints

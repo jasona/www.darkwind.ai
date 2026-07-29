@@ -1,0 +1,33 @@
+|WKBSyntax: |YKBauction <item> <starting bid> [extra info]|WKB
+|WKO=====================================================================
+|YKOThe auction block is a live, world-wide auction called over the auction
+channel. Only one item can be on the block at a time, mud-wide.
+
+Selling: |YKBauction <item> <bid>|YKO hands an item from your inventory
+to the auctioneer, who holds it in escrow while the bidding runs. The
+starting bid must be at least 1000 coins. Worn, wielded, no-drop,
+temporary, and soon-expiring unique items cannot be auctioned. If
+nobody bids within 90 seconds the auction closes and the item comes
+back to you; you can also |YKBstopauction|YKO before the first bid.
+Either way, the auctioneer keeps a 100 coin handling fee.
+
+Bidding: |YKBbid <amount>|YKO places a bid, and |YKBbid up|YKO offers
+the next valid amount. Each bid must top the last by at least 250
+coins. Bids are backed by your bank account, not your pockets: the
+coins must be available in the bank, and a lien is held on them until
+you are outbid or the auction ends. See |CKBhelp bank|YKO.
+
+Winning and collecting: a minute after the last bid the auctioneer
+calls going once, going twice, sold. The winner's coins are withdrawn
+from the bank and the item is handed over on the spot (or set at your
+feet if it is too heavy to carry). The seller's proceeds, minus the
+auctioneer's 10% cut of the winning bid, are deposited straight into
+the seller's bank account, even if the seller has since logged out.
+
+|YKBauctioninfo|YKO shows the current item, seller, and high bid, and
+|YKBauctionhist|YKO reviews recent auction traffic. You cannot start
+or bid on an auction from rooms that block teleportation.|XX0
+
+|WKBSee also: |YKBbank, market, economy|XX0
+
+# alias: auctions, auctionhouse

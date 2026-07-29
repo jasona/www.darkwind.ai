@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-29T18:52:09.974Z",
+  "generatedAt": "2026-07-29T21:13:41.257Z",
   "source": "public/help-docs/doc",
-  "totalDocs": 2683,
+  "totalDocs": 2694,
   "categories": [
     {
       "id": "helpdir",
       "label": "Helpdir",
       "description": "Player-facing in-game help topics.",
-      "count": 375
+      "count": 386
     },
     {
       "id": "vihelp",
@@ -16233,6 +16233,24 @@
       "lines": 13
     },
     {
+      "id": "helpdir/economy/auction",
+      "path": "helpdir/economy/auction",
+      "category": "helpdir",
+      "title": "Syntax: auction <item> <starting bid> [extra info]",
+      "excerpt": "Syntax: auction <item> <starting bid> [extra info] ===================================================================== The auction block is a live, world-wide auction called over the auction channel. Only one item can ",
+      "bytes": 1772,
+      "lines": 34
+    },
+    {
+      "id": "helpdir/economy/bank",
+      "path": "helpdir/economy/bank",
+      "category": "helpdir",
+      "title": "Syntax: balance, deposit <amount>, withdraw <amount>,",
+      "excerpt": "Syntax: balance, deposit <amount>, withdraw <amount>, transfer <amount> from <alt>, lien ===================================================================== Banks keep your coins safe and power the bidding economy. All",
+      "bytes": 1673,
+      "lines": 36
+    },
+    {
       "id": "helpdir/economy/economy",
       "path": "helpdir/economy/economy",
       "category": "helpdir",
@@ -16341,6 +16359,15 @@
       "lines": 29
     },
     {
+      "id": "helpdir/guilds/equipment",
+      "path": "helpdir/guilds/equipment",
+      "category": "helpdir",
+      "title": "Guild Equipment Guidance",
+      "excerpt": "# Guild Equipment Guidance Guild equipment rules are checked when you try to wear armour or wield a weapon. These are practical guidelines for normal equipment; special items can still directly allow or restrict specific",
+      "bytes": 6715,
+      "lines": 160
+    },
+    {
       "id": "helpdir/guilds/guilds",
       "path": "helpdir/guilds/guilds",
       "category": "helpdir",
@@ -16408,9 +16435,9 @@
       "path": "helpdir/interface/combatbrief",
       "category": "helpdir",
       "title": "DESCRIPTION",
-      "excerpt": "DESCRIPTION ============ Combatbrief allows you to customize various aspects of the way combat messages are displayed. Each toggle is it's own setting. It's is possible to have all, none, or a few toggled on at a time. c",
-      "bytes": 838,
-      "lines": 22
+      "excerpt": "DESCRIPTION ============ Combatbrief allows you to customize various aspects of the way combat messages are displayed. Each toggle is its own setting. It is possible to have all, none, or a few toggled on at a time. comb",
+      "bytes": 1717,
+      "lines": 37
     },
     {
       "id": "helpdir/interface/interface",
@@ -16440,13 +16467,22 @@
       "lines": 14
     },
     {
+      "id": "helpdir/interface/screenreader",
+      "path": "helpdir/interface/screenreader",
+      "category": "helpdir",
+      "title": "Syntax: set screenreader <on/off>",
+      "excerpt": "Syntax: set screenreader <on/off> ===================================================================== Screenreader mode reshapes Darkwind's output for players who use a screenreader. While it is on: - Colors, screen de",
+      "bytes": 1921,
+      "lines": 42
+    },
+    {
       "id": "helpdir/interface/set",
       "path": "helpdir/interface/set",
       "category": "helpdir",
       "title": "SYNTAX",
-      "excerpt": "SYNTAX ====== set <option> <value> DESCRIPTION =========== The set command allows you to customize several different features as described below: Option may be one of the following: mail <e-mail address> Sets your curren",
-      "bytes": 2186,
-      "lines": 59
+      "excerpt": "SYNTAX ====== set set list set <option> <value> DESCRIPTION =========== The set command lets you view and change saved character options. Use set or set list to show your current settings. Use set <option> <value> to cha",
+      "bytes": 5266,
+      "lines": 167
     },
     {
       "id": "helpdir/interface/timezones",
@@ -16456,6 +16492,15 @@
       "excerpt": "Time zones are based on GMT (Greenwich Mean Time) HST Hawaiian Standard Time Honolulu GMT - 10 AKST Alaska Standard Time Anchorage GMT - 9 PST Pacific Standard Time Los Angeles GMT - 8 MST Mountain Standard Time Phoenix ",
       "bytes": 1012,
       "lines": 18
+    },
+    {
+      "id": "helpdir/leveling/boons",
+      "path": "helpdir/leveling/boons",
+      "category": "helpdir",
+      "title": "Remort Boons",
+      "excerpt": "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Remort Boons ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Boons are permanent bonuses bought with boon points. You earn one boon ",
+      "bytes": 1846,
+      "lines": 42
     },
     {
       "id": "helpdir/leveling/costs",
@@ -16510,6 +16555,15 @@
       "excerpt": "Newbification ----------------------------- On Darkwind, we give players the option to newbify their characters should they choose to do so. This entails 'killing' them down to level 1, reducing all stats down to 1, and ",
       "bytes": 740,
       "lines": 16
+    },
+    {
+      "id": "helpdir/leveling/remort",
+      "path": "helpdir/leveling/remort",
+      "category": "helpdir",
+      "title": "Darkwind Remort",
+      "excerpt": "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Darkwind Remort ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Remort is Darkwind's late-game rebirth loop. When you reach level 25",
+      "bytes": 2014,
+      "lines": 46
     },
     {
       "id": "helpdir/leveling/suicide",
@@ -16665,6 +16719,15 @@
       "lines": 15
     },
     {
+      "id": "helpdir/mechanics/combat",
+      "path": "helpdir/mechanics/combat",
+      "category": "helpdir",
+      "title": "Combat in DarkWind runs on heartbeats. Every round, each of your",
+      "excerpt": "Combat in DarkWind runs on heartbeats. Every round, each of your attacks -- wielded weapons, or fists and natural attacks without them -- produces one or more swings, and every swing rolls on its own to crit, hit, be dod",
+      "bytes": 2534,
+      "lines": 49
+    },
+    {
       "id": "helpdir/mechanics/curse",
       "path": "helpdir/mechanics/curse",
       "category": "helpdir",
@@ -16728,6 +16791,15 @@
       "lines": 7
     },
     {
+      "id": "helpdir/mechanics/effects",
+      "path": "helpdir/mechanics/effects",
+      "category": "helpdir",
+      "title": "Status Effects: Buffs and Debuffs",
+      "excerpt": "===================================================================== Status Effects: Buffs and Debuffs ===================================================================== Most temporary conditions on your character ar",
+      "bytes": 1934,
+      "lines": 39
+    },
+    {
       "id": "helpdir/mechanics/equip",
       "path": "helpdir/mechanics/equip",
       "category": "helpdir",
@@ -16762,6 +16834,15 @@
       "excerpt": "Invasions can happen regularly on Darkwind. They are announced by a siren [DIPPS] and involve regular messages broadcast to the players. During invasions, NPCs and shops in town are regular targets, and the shops may be ",
       "bytes": 619,
       "lines": 14
+    },
+    {
+      "id": "helpdir/mechanics/kingdoms",
+      "path": "helpdir/mechanics/kingdoms",
+      "category": "helpdir",
+      "title": "Kingdoms are player-ruled realms of Darkwind. Each kingdom has a Ruler,",
+      "excerpt": "===================================================================== Kingdoms are player-ruled realms of Darkwind. Each kingdom has a Ruler, a charter, a roster of citizens, its own nobility titles, and a heraldic sigil",
+      "bytes": 2047,
+      "lines": 42
     },
     {
       "id": "helpdir/mechanics/laston",
@@ -16980,6 +17061,15 @@
       "lines": 22
     },
     {
+      "id": "helpdir/mechanics/uniques",
+      "path": "helpdir/mechanics/uniques",
+      "category": "helpdir",
+      "title": "Syntax: uniques [weapon | armour | claimed | available]",
+      "excerpt": "Syntax: uniques [weapon | armour | claimed | available] uniques [favorites | hoarders | playerfavorites] [count] ===================================================================== Unique weapons and armour are one of ",
+      "bytes": 1798,
+      "lines": 37
+    },
+    {
       "id": "helpdir/mechanics/wimpy",
       "path": "helpdir/mechanics/wimpy",
       "category": "helpdir",
@@ -17003,7 +17093,7 @@
       "category": "helpdir",
       "title": "Your Journey Through Darkwind",
       "excerpt": "Your Journey Through Darkwind ===================================================================== A stage-by-stage walkthrough from your first steps to seasoned adventurer. Each stage is its own short help page -- read",
-      "bytes": 1644,
+      "bytes": 1696,
       "lines": 31
     },
     {
@@ -17021,8 +17111,8 @@
       "category": "helpdir",
       "title": "Stage 1 of 8: Your First Minutes",
       "excerpt": "Stage 1 of 8: Your First Minutes ===================================================================== A short tutorial starts automatically for new characters and teaches looking, moving, gear, and safe combat. Darkflow",
-      "bytes": 834,
-      "lines": 17
+      "bytes": 1332,
+      "lines": 25
     },
     {
       "id": "helpdir/new/stage2",
@@ -17030,8 +17120,8 @@
       "category": "helpdir",
       "title": "Stage 2 of 8: Gear Up and Learn to Fight (levels 1-5)",
       "excerpt": "Stage 2 of 8: Gear Up and Learn to Fight (levels 1-5) ===================================================================== Erga's newbie store (from the Center of Town: 4w, s) hands out free equipment fit for anyone und",
-      "bytes": 794,
-      "lines": 16
+      "bytes": 1500,
+      "lines": 27
     },
     {
       "id": "helpdir/new/stage3",
@@ -17039,8 +17129,8 @@
       "category": "helpdir",
       "title": "Stage 3 of 8: Choose Your Path",
       "excerpt": "Stage 3 of 8: Choose Your Path ===================================================================== Once the farm feels easy, pick a guild -- it defines your abilities for the climb ahead. Browse the roster, the playsty",
-      "bytes": 675,
-      "lines": 15
+      "bytes": 1333,
+      "lines": 26
     },
     {
       "id": "helpdir/new/stage4",
@@ -17057,8 +17147,8 @@
       "category": "helpdir",
       "title": "Stage 5 of 8: Money and Craft",
       "excerpt": "Stage 5 of 8: Money and Craft ===================================================================== Coins pile up: open a bank account early -- auction bids and some purchases are backed by bank liens, and your balance i",
-      "bytes": 693,
-      "lines": 16
+      "bytes": 1242,
+      "lines": 25
     },
     {
       "id": "helpdir/new/stage6",
@@ -19066,6 +19156,15 @@
       "excerpt": "<<-- Underworld Area Directions -->> All directions are from the base of the pit in the Underworld: From CoT: script 2:w,s,d,e,2:n,3:w,hole All entries are in the form of: Area Description : Level Ranges Directions Notes",
       "bytes": 1383,
       "lines": 43
+    },
+    {
+      "id": "helpdir/world/wayshards",
+      "path": "helpdir/world/wayshards",
+      "category": "helpdir",
+      "title": "Wayshards are towering ancient crystals found across the world, one",
+      "excerpt": "===================================================================== Wayshards are towering ancient crystals found across the world, one linked to each charted area. A shard remembers every traveler who has touched it, ",
+      "bytes": 1722,
+      "lines": 37
     },
     {
       "id": "helpdir/world/world",
@@ -21998,8 +22097,8 @@
       "category": "vihelp",
       "title": "Your Journey Through Darkwind",
       "excerpt": "Your Journey Through Darkwind A stage-by-stage walkthrough from your first steps to seasoned adventurer. Each stage is its own short help page. Read them as your character grows, not all at once. help stage1: your first ",
-      "bytes": 1114,
-      "lines": 26
+      "bytes": 1157,
+      "lines": 27
     },
     {
       "id": "vihelp/new/stage1",
@@ -22007,8 +22106,8 @@
       "category": "vihelp",
       "title": "Stage 1 of 8: Your First Minutes",
       "excerpt": "Stage 1 of 8: Your First Minutes A short tutorial starts automatically for new characters and teaches looking, moving, gear, and safe combat. Darkflow shows it in a hover window. Type \"tutorial\" to see your current step ",
-      "bytes": 595,
-      "lines": 15
+      "bytes": 876,
+      "lines": 21
     },
     {
       "id": "vihelp/new/stage2",
@@ -22016,8 +22115,8 @@
       "category": "vihelp",
       "title": "Stage 2 of 8: Gear Up and Learn to Fight, levels 1 to 5",
       "excerpt": "Stage 2 of 8: Gear Up and Learn to Fight, levels 1 to 5 Erga's newbie store (from the Center of Town: four west, one south) hands out free equipment fit for anyone under level 5; the donation room (five north, one east) ",
-      "bytes": 595,
-      "lines": 15
+      "bytes": 1152,
+      "lines": 25
     },
     {
       "id": "vihelp/new/stage3",
@@ -22025,8 +22124,8 @@
       "category": "vihelp",
       "title": "Stage 3 of 8: Choose Your Path",
       "excerpt": "Stage 3 of 8: Choose Your Path Once the farm feels easy, pick a guild; it defines your abilities for the climb ahead. Browse the roster, the playstyle archetypes, and which pairings work before committing. Level at the a",
-      "bytes": 482,
-      "lines": 13
+      "bytes": 1078,
+      "lines": 24
     },
     {
       "id": "vihelp/new/stage4",
@@ -22042,9 +22141,9 @@
       "path": "vihelp/new/stage5",
       "category": "vihelp",
       "title": "Stage 5 of 8: Money and Craft",
-      "excerpt": "Stage 5 of 8: Money and Craft Open a bank account early; auction bids and some purchases are backed by bank liens, and your balance is shared across every branch. Learn the player-driven economy: shops, the remote market",
-      "bytes": 502,
-      "lines": 13
+      "excerpt": "Stage 5 of 8: Money and Craft Open a bank account early; auction bids and some purchases are backed by bank liens, and your balance is shared across every branch. \"rembank\" or \"rembank balance\" opens the account on first",
+      "bytes": 996,
+      "lines": 22
     },
     {
       "id": "vihelp/new/stage6",

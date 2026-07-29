@@ -1,58 +1,166 @@
 |YK0SYNTAX
 ======
+|YKBset|YK0
+|YKBset list|YK0
 |YKBset <option> <value>|YK0
 
 DESCRIPTION
 ===========
-The set command allows you to customize several different features
-as described below:
-Option may be one of the following:
-  |YKBmail <e-mail address>|YK0   
-    Sets your current e-mail address.
-  |YKBforwarding <on/off>|YK0
-    Forward your mudmail to your e-mail?
-  |YKBvismail <off|on>|YK0
-    Allows your e-mail address to be seen by others.
-  |YKBweb <valid URL>|YK0
-    Adds your web page address to your 'finger' info.
-  |YKBprompt <string>|YK0
-    Sets the string used as your prompt.
-    As a wiz, you can add the following vars:
-        %d = current working directory
-        %i = current invis level
-        %wi = whoinvis indicator
-        %f = fakeidle indicator
-        %e = environment (D/P for dev/prod)
-  |YKBmonitor <off|on|bar>|YK0
-    Sets how your remaining HP/SP are shown.
+The set command lets you view and change saved character options.
+
+Use |YKBset|YK0 or |YKBset list|YK0 to show your current settings.
+Use |YKBset <option> <value>|YK0 to change one setting.
+
+OPTIONS
+======
+  |YKBallow <off|on>|YK0
+    Controls whether your session may be snooped.
+
+  |YKBanonymous <off|on>|YK0
+    Hides player specifics from finger and who.
+
   |YKBautoexits <off|on>|YK0
     Sets whether detailed exit information is shown.
-  |YKBanonymous <off|on>|YK0
-    Sets how anonymous you are to the other players.
-  |YKBterm <ansi|vt100|vt52|none>|YK0
-    Sets which terminal type you're using to connect.
-  |YKBtimestamps <off|on>|YK0
-    Sets timestamps on|off when viewing channel histories.
+
+  |YKBautoburn <off|on>|YK0
+    Uses a carried corpse burner to run |YKBburn corpse|YK0 after autorefine or
+    autosell, autoloot, and autogold have finished processing an NPC corpse.
+    This uses the normal burn command and destroys anything left inside.
+
+  |YKBautogold <off|on>|YK0
+    Automatically takes only gold from NPC corpses you kill. This is
+    redundant while autoloot is on.
+
+  |YKBautokill <off|on>|YK0
+    Makes a manually entered bare |YKBkill|YK0 target the first visible NPC.
+    It does not start combat automatically and can still choose an NPC you
+    did not intend to attack.
+
+  |YKBautolevel <off|on>|YK0
+    Controls whether non-remort characters automatically spend
+    experience to gain levels.
+
+  |YKBautoloot <off|on>|YK0
+    Automatically takes gold and gettable loot from NPC corpses you kill.
+
+  |YKBautorefine <off|on>|YK0
+    Permanently converts ordinary refinery-eligible equipment from NPCs you
+    kill into saved profession materials. This uses the same yields as the
+    Refinery and disables autosell. Magical, unique, limited, customized,
+    scripted, and otherwise protected items remain in the corpse, exactly
+    as with autosell. Leave it off if you want to inspect equipment drops
+    before deciding what to do with them.
+
+  |YKBautosell <off|on>|YK0
+    Uses a carried corpse burner to sell ordinary weapons and armour from
+    NPC corpses directly to Taylor. His normal Charisma and reputation
+    pricing applies, followed by a 10 percent handling charge. Magical,
+    unique, limited, customized, scripted, and otherwise protected items
+    remain in the corpse. Enabling this disables autorefine.
+
   |YKBbrief <off|on>|YK0
     Sets the amount of room descriptions that are shown.
-  |YKBlanguage <race>|YK0
-    Set your default language to speak with.
-  |YKBcolorblock <off|on>|YK0
-    Setting this |YKBon|YK0 locks the color of your channels
-    to the value you set in 'color'. Leaving it |YKBoff|YK0
-    allows you to see when players use color codes
-    in their channel messages.
-  |YKBshowmulties [off|main|on]|YK0
-    Setting this to |YKBON|YK0 allows other players to see
-    a list of your Main character and registered
-    multies at the bottom of your finger info. This
-    allows players to learn your other characters if
-    you choose.
-    Setting this to |YKBMAIN|YK0 allows other players to see
-    only your |YKBMAIN|YK0 character at the bottom of your
-    finger info, unless the 'finger' is targeting
-    your main character already.
-    Setting this to |YKBOFF|YK0 does not show your multies
-    to other players.
-    Default setting is |YKBOFF|YK0.
 
+  |YKBcolorblock <off|on>|YK0
+    Blocks other players' custom color codes in channel messages.
+
+  |YKBcombatbrief-damage <off|on>|YK0
+    Shows damage numbers at the end of combat messages.
+
+  |YKBcombatbrief-hit <off|on>|YK0
+    Hides misses and dodges from combat messages.
+
+  |YKBcombatbrief-self <off|on>|YK0
+    Shows only attacks by or on you.
+
+  |YKBcombatbrief-short <off|on>|YK0
+    Uses shorter combat messages.
+
+  |YKBcombatbrief-visual <off|on>|YK0
+    Moves routine combat swings into a ready Darkflow Combat pane. Normal
+    combat text continues whenever a compatible pane is unavailable.
+
+  |YKBemail <email@domain.com>|YK0
+    Sets your current e-mail address.
+
+  |YKBforwarding <off|on>|YK0
+    Controls whether MUD mail is forwarded to your e-mail address.
+
+  |YKBgiphy <off|on>|YK0
+    Controls whether shared GIFs auto-open in Darkflow.
+
+  |YKBitemdetail <off|on>|YK0
+    Shows an item's AC or WC in its description.
+
+  |YKBlanguage <language>|YK0
+    Sets your default language to speak with.
+
+  |YKBmonitor <off|on|bar>|YK0
+    Sets how your remaining HP/SP are shown.
+
+  |YKBmorelen <1-75>|YK0
+    Sets the more paging length.
+
+  |YKBnotifylooks <off|on>|YK0
+    Controls whether you are notified when others look at you.
+
+  |YKBnpcdetail <off|on>|YK0
+    Shows a level and indicator on non-player characters.
+
+  |YKBpavail <off|on>|YK0
+    Controls whether you are marked as looking for a party.
+
+  |YKBpk <off|on>|YK0
+    Sets your player killing flag.
+
+  |YKBprompt <string>|YK0
+    Sets the string used as your prompt.
+    Wizards can use:
+      %d  current working directory
+      %i  current invis level
+      %wi whoinvis indicator
+      %f  fakeidle indicator
+      %e  environment, D/P for dev/prod
+
+  |YKBrealm <off|on>|YK0
+    Newbie-only setting for whether you start in the realm where you quit.
+
+  |YKBscreenreader <off|on>|YK0
+    Enables output adjustments for screenreader users.
+
+  |YKBsharedvideo <off|on>|YK0
+    Controls whether shared YouTube videos auto-open in Darkflow.
+
+  |YKBshowmultis <off|on|main>|YK0
+    Controls whether finger shows your registered multies, only your main
+    character, or neither.
+
+  |YKBteapotspam <off|on>|YK0
+    Controls whether your enchanted teapot emits idle room chatter.
+
+  |YKBterm <none|ansi|modern|vt100|vt52>|YK0
+    Sets which terminal type you are using to connect.
+
+  |YKBtimestamps <off|on>|YK0
+    Sets timestamps on or off when viewing channel histories.
+
+  |YKBvirginears <off|on>|YK0
+    Turns your personal profanity filter on or off.
+
+  |YKBvisemail <off|on>|YK0
+    Allows your e-mail address to be seen by others.
+
+  |YKBwebsite <http://...>|YK0
+    Adds your web page address to your finger info.
+
+  |YKBwimpy <0-100>|YK0
+    Sets the HP percentage where you automatically run away.
+
+  |YKBwimpycmd <command|none>|YK0
+    Sets the command attempted when you wimpy, or clears it with none.
+
+SEE ALSO
+========
+|YKBhelp screenreader|YK0
+|YKBhelp monitor|YK0
+|YKBhelp combatbrief|YK0

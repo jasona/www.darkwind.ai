@@ -1,0 +1,41 @@
+|WKO~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ |CKBRemort Boons
+|WKO~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ |YKOBoons are permanent bonuses bought with boon points. You earn
+ one boon point each time you remort (see |YKBhelp remort|YKO). Boons
+ survive death, rebirth, and every remort that follows: once a
+ boon is part of your soul, it is never lost.
+
+ |MKBChoosing boons:
+  |YKB remort boons          |YKOList all boons, your ranks, and costs
+  |YKB remort boon <name>    |YKOSee the details of one boon
+  |YKB remort choose <name>  |YKOSpend a point on a rank of a boon
+  |YKB marks                 |YKOReview the boons on your soul
+
+ |YKOEach boon can be taken multiple times, up to its maximum rank.
+ Choices are permanent, so weigh them carefully.
+
+ |MKBThe boons:
+  |YKOBoon of Vitality    +2% maximum hit points per rank
+  Boon of Spirit      +2% maximum spell points per rank
+  Boon of Might       +2 strength per rank
+  Boon of Grace       +2 dexterity per rank
+  Boon of Endurance   +2 constitution per rank
+  Boon of Intellect   +2 intelligence per rank
+  Boon of Insight     +2 wisdom per rank
+  Boon of Presence    +2 charisma per rank
+  Soul Memory         +5% experience gained per rank
+
+ |YKOSouls tempered by many lives unlock greater boons:
+
+  |YKOMythic Vitality     +5% maximum hit points per rank
+                      (requires remort 5, costs 2 points)
+  Mythic Spirit       +5% maximum spell points per rank
+                      (requires remort 5, costs 2 points)
+
+ |YKOStat boons stack on top of your trained stats and are not
+ limited by the normal stat caps. More boons will be added over
+ time, including some that only open at higher remort levels.
+
+ |YKOSee also: |YKBhelp remort|YKO.
+|WKO~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -3,7 +3,7 @@
 ============|YKO
 
 Combatbrief allows you to customize various aspects of the way combat
-messages are displayed. Each toggle is it's own setting. It's is 
+messages are displayed. Each toggle is its own setting. It is
 possible to have all, none, or a few toggled on at a time.
 
 |YKBcombatbrief        |WKO- |YKODisplays your current combatbrief status
@@ -11,7 +11,7 @@ possible to have all, none, or a few toggled on at a time.
 |YKBcombatbrief short  |WKO- |YKOAll combat messages are displayed as 'A hits B' or
                      'A misses B'
 
-|YKBcombatbrief self   |WKO- |YKOOnly attacks by you will be displayed.
+|YKBcombatbrief self   |WKO- |YKOOnly attacks by or against you will be displayed.
 
 |YKBcombatbrief hit    |WKO- |YKOOnly hits will be displayed. Dodges and misses will
                      be ignored.
@@ -19,3 +19,18 @@ possible to have all, none, or a few toggled on at a time.
 |YKBcombatbrief damage |WKO- |YKODamage numbers will be shown at the end of your combat
                      messages. This setting is available at any level and
                      is on by default.
+
+|YKBcombatbrief visual |WKO- |YKOWhen a compatible Darkflow Combat pane is ready,
+                     routine weapon swings are shown visually instead of
+                     filling the terminal. If the pane or client is not
+                     ready, normal combat messages continue automatically.
+                     This setting is enabled by default for new characters.
+
+Visual mode is independent of short, self, hit, and damage. The self and hit
+filters still decide which exchanges reach the pane, while damage decides
+whether exact numbers are shown. Screenreader combat summaries take priority.
+
+Closing or collapsing the Combat pane restores terminal combat messages
+without changing your saved visual preference. Triggers, highlights, and
+client logs that depend on routine swing text will not receive those replaced
+lines while the visual pane is active.

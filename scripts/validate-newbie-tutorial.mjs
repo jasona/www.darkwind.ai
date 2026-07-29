@@ -42,6 +42,18 @@ assert.deepStrictEqual(
   "The committed tutorial snapshot is stale. Run npm run tutorial:sync.",
 );
 
+for (const stage of snapshot.stages) {
+  for (const related of stage.relatedTopics) {
+    const relatedPath = path.join(localDocsRoot, related.docId);
+    if (!fs.existsSync(relatedPath)) {
+      throw new Error(
+        `Tutorial ${stage.id} links to a missing local help document: ` +
+          `${related.docId}`,
+      );
+    }
+  }
+}
+
 process.stdout.write(
   `Validated newbie tutorial snapshot: 8 stages from ${snapshot.source.revision}\n`,
 );

@@ -1,0 +1,41 @@
+|WKO=====================================================================
+|YKOKingdoms are player-ruled realms of Darkwind. Each kingdom has a Ruler,
+a charter, a roster of citizens, its own nobility titles, and a heraldic
+sigil carried by every citizen.
+
+Founding: new kingdoms are chartered and activated with the help of the
+game administration. If you dream of a throne, speak with the admins.
+
+Joining: citizenship is by induction, in person. A noble with the power
+to induct must stand in the same room as you and make the offer through
+the kingdom's management menu. You are then asked whether you wish to
+become a citizen; answer |YKByes|YKO or |YKBno|YKO. You must be at least
+level 5 and cannot already belong to another kingdom.
+
+Citizenship: you carry your kingdom's sigil, which cannot be dropped,
+sold, or stolen, and it marks you as a citizen to anyone who looks at
+you. You also gain the kingdom channel: |YKBkchat <message>|YKO speaks to
+every citizen, and |YKBekchat <message>|YKO emotes to them.
+
+Nobility: the Ruler may create custom titles, each granting any mix of
+four powers: inducting members, removing members, assigning titles, and
+owning a castle. New citizens start as "Citizen"; the title "Ruler" is
+reserved for the kingdom's owner.
+
+Management: the Ruler types |YKBmanagekingdom|YKO to hold court with the
+Ministry of Administrative Affairs. Its sections are:
+
+  Deeds And Titles         - set and view the charter, create, edit,
+                             and remove titles, view citizens, induct
+                             new members, bestow titles, and strip
+                             citizenship.
+  Heraldry And Propaganda  - name the sigil, choose its colors, and
+                             write its descriptions.
+  Castle Keep And Environs - the office of the Royal Engineer.
+
+The whole kingdom hears arrivals and departures on the kingdom channel.|XX0
+
+|WKBSee also: |YKBclans, kchat, who|XX0
+
+# keywords: kingdom, citizenship, induct, sigil, charter, ruler, title
+# alias: kingdom, nobles, noble
