@@ -1,0 +1,464 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "repository": "jasona/darkwind-nextgen",
+    "revision": "1b3ee70bfac465215f8c6bde9e3c6e8eae1af51a",
+    "dirty": false,
+    "contentHash": "d1cfe9e983bb0b61c7e5c729e2700147790f5ea8dbe541bd20e8ed14843398a7",
+    "normalRoot": "codebase/public/docs/helpdir/new",
+    "screenreaderRoot": "codebase/public/docs/vihelp/new",
+    "files": [
+      "guide",
+      "stage1",
+      "stage2",
+      "stage3",
+      "stage4",
+      "stage5",
+      "stage6",
+      "stage7",
+      "stage8"
+    ]
+  },
+  "title": "Your Journey Through Darkwind",
+  "intro": [
+    "A stage-by-stage walkthrough from your first steps to seasoned adventurer. Each stage is its own short help page -- read them as your character grows, not all at once."
+  ],
+  "guidance": [
+    "At every stage: play at play.darkwind.ai for the live map and panels (help client), browse all topics with help list, and report anything odd with bug, idea, or typo."
+  ],
+  "guideDocId": "helpdir/new/guide",
+  "stages": [
+    {
+      "id": "stage1",
+      "number": 1,
+      "title": "Your First Minutes",
+      "levelRange": null,
+      "paragraphs": [
+        "A short tutorial starts automatically for new characters and teaches looking, moving, gear, and safe combat. Darkflow shows it in a hover window. Type tutorial to see your current step and tutorial continue to continue in any client.",
+        "Learn to look at everything (xa <thing>), check your inventory, and read your score. If you ever get lost, ncot returns you to the Center of Town, and the Newbie Tome Dispenser there (pull lever, read tome) holds the town directions."
+      ],
+      "commands": [
+        "tutorial",
+        "tutorial continue",
+        "xa <thing>",
+        "inventory",
+        "score",
+        "ncot",
+        "pull lever",
+        "read tome"
+      ],
+      "relatedTopics": [
+        {
+          "topic": "tutorial",
+          "command": "help tutorial",
+          "docId": "helpdir/basics/tutorial"
+        },
+        {
+          "topic": "basics",
+          "command": "help basics",
+          "docId": "helpdir/basics/basics"
+        },
+        {
+          "topic": "movement",
+          "command": "help movement",
+          "docId": "helpdir/basics/movement"
+        },
+        {
+          "topic": "new",
+          "command": "help new",
+          "docId": "helpdir/new/new"
+        }
+      ],
+      "sourceDocId": "helpdir/new/stage1",
+      "nextId": "stage2",
+      "keywords": [
+        "tutorial",
+        "first steps"
+      ]
+    },
+    {
+      "id": "stage2",
+      "number": 2,
+      "title": "Gear Up and Learn to Fight",
+      "levelRange": "levels 1-5",
+      "paragraphs": [
+        "Erga's newbie store (from the Center of Town: 4w, s) hands out free equipment fit for anyone under level 5; the donation room (5n, e) has castoffs from generous veterans. Wear and wield everything, then practice on the newbie farm.",
+        "Death carries NO penalty at level 5 and under, so this is the time to take risks and learn kill, assess, and wimpy. Ask questions freely on the newbie channel -- everyone started here."
+      ],
+      "commands": [
+        "kill",
+        "assess",
+        "wimpy"
+      ],
+      "relatedTopics": [
+        {
+          "topic": "kill",
+          "command": "help kill",
+          "docId": "helpdir/basics/kill"
+        },
+        {
+          "topic": "equipment",
+          "command": "help equipment",
+          "docId": "helpdir/basics/equipment"
+        },
+        {
+          "topic": "wimpy",
+          "command": "help wimpy",
+          "docId": "helpdir/mechanics/wimpy"
+        },
+        {
+          "topic": "combat",
+          "command": "help combat",
+          "docId": "helpdir/mechanics/combat"
+        },
+        {
+          "topic": "communication",
+          "command": "help communication",
+          "docId": "helpdir/communication/communication"
+        }
+      ],
+      "sourceDocId": "helpdir/new/stage2",
+      "nextId": "stage3",
+      "keywords": [
+        "erga",
+        "newbie farm",
+        "free equipment"
+      ]
+    },
+    {
+      "id": "stage3",
+      "number": 3,
+      "title": "Choose Your Path",
+      "levelRange": null,
+      "paragraphs": [
+        "Once the farm feels easy, pick a guild -- it defines your abilities for the climb ahead. Browse the roster, the playstyle archetypes, and which pairings work before committing.",
+        "Level at the adventurers guild with advance; experience costs grow with each level, and your stats shape what your abilities can do."
+      ],
+      "commands": [
+        "advance"
+      ],
+      "relatedTopics": [
+        {
+          "topic": "guilds",
+          "command": "help guilds",
+          "docId": "helpdir/guilds/guilds"
+        },
+        {
+          "topic": "archetypes",
+          "command": "help archetypes",
+          "docId": "helpdir/guilds/archetypes"
+        },
+        {
+          "topic": "combos",
+          "command": "help combos",
+          "docId": "helpdir/guilds/combos"
+        },
+        {
+          "topic": "roles",
+          "command": "help roles",
+          "docId": "helpdir/guilds/roles"
+        },
+        {
+          "topic": "leveling",
+          "command": "help leveling",
+          "docId": "helpdir/leveling/leveling"
+        },
+        {
+          "topic": "costs",
+          "command": "help costs",
+          "docId": "helpdir/leveling/costs"
+        },
+        {
+          "topic": "stats",
+          "command": "help stats",
+          "docId": "helpdir/stats/stats"
+        }
+      ],
+      "sourceDocId": "helpdir/new/stage3",
+      "nextId": "stage4",
+      "keywords": [
+        "guild choice",
+        "advance",
+        "archetype"
+      ]
+    },
+    {
+      "id": "stage4",
+      "number": 4,
+      "title": "See the World",
+      "levelRange": "levels 5-30",
+      "paragraphs": [
+        "The world is far bigger than town. The areas command catalogs every region with level ranges; characters up to level 10 already know the newbie-area wayshards, so touch shard networks open fast travel as you explore. Pick up quests for structured goals and bonus experience.",
+        "Above level 5 death starts to cost 10% of your experience on hand -- your corpse keeps your gear, the church will whisk you back, and other players can avenge you to restore what you lost."
+      ],
+      "commands": [
+        "areas",
+        "touch shard"
+      ],
+      "relatedTopics": [
+        {
+          "topic": "areas",
+          "command": "help areas",
+          "docId": "helpdir/world/areas"
+        },
+        {
+          "topic": "wayshards",
+          "command": "help wayshards",
+          "docId": "helpdir/world/wayshards"
+        },
+        {
+          "topic": "recall",
+          "command": "help recall",
+          "docId": "helpdir/mechanics/recall"
+        },
+        {
+          "topic": "quests",
+          "command": "help quests",
+          "docId": "helpdir/quests/quests"
+        },
+        {
+          "topic": "death",
+          "command": "help death",
+          "docId": "helpdir/basics/death"
+        },
+        {
+          "topic": "avengement",
+          "command": "help avengement",
+          "docId": "helpdir/avengement/avengement"
+        }
+      ],
+      "sourceDocId": "helpdir/new/stage4",
+      "nextId": "stage5",
+      "keywords": [
+        "explore",
+        "travel",
+        "fast travel"
+      ]
+    },
+    {
+      "id": "stage5",
+      "number": 5,
+      "title": "Money and Craft",
+      "levelRange": null,
+      "paragraphs": [
+        "Coins pile up: open a bank account early -- auction bids and some purchases are backed by bank liens, and your balance is shared across every branch.",
+        "Learn the player-driven economy: shops, the remote market, and the live auction channel. When you want a break from fighting, professions like fishing, mining, and smithing earn steadily and feed the market."
+      ],
+      "commands": [],
+      "relatedTopics": [
+        {
+          "topic": "economy",
+          "command": "help economy",
+          "docId": "helpdir/economy/economy"
+        },
+        {
+          "topic": "bank",
+          "command": "help bank",
+          "docId": "helpdir/economy/bank"
+        },
+        {
+          "topic": "market",
+          "command": "help market",
+          "docId": "helpdir/economy/market"
+        },
+        {
+          "topic": "auction",
+          "command": "help auction",
+          "docId": "helpdir/economy/auction"
+        },
+        {
+          "topic": "professions",
+          "command": "help professions",
+          "docId": "helpdir/professions/professions"
+        },
+        {
+          "topic": "fishing",
+          "command": "help fishing",
+          "docId": "helpdir/professions/fishing"
+        }
+      ],
+      "sourceDocId": "helpdir/new/stage5",
+      "nextId": "stage6",
+      "keywords": [
+        "gold",
+        "coins",
+        "trading"
+      ]
+    },
+    {
+      "id": "stage6",
+      "number": 6,
+      "title": "Find Your People",
+      "levelRange": null,
+      "paragraphs": [
+        "Darkwind is social. Channels connect the whole game; parties share the fight and the spoils; clans are player-run organizations with wars and coffers; kingdoms crown player rulers with their own nobility.",
+        "Pick a divine patron when the gods start to notice you -- alignment and devotion open their own doors."
+      ],
+      "commands": [],
+      "relatedTopics": [
+        {
+          "topic": "communication",
+          "command": "help communication",
+          "docId": "helpdir/communication/communication"
+        },
+        {
+          "topic": "party",
+          "command": "help party",
+          "docId": "helpdir/mechanics/party"
+        },
+        {
+          "topic": "clans",
+          "command": "help clans",
+          "docId": "helpdir/clans/clans"
+        },
+        {
+          "topic": "kingdoms",
+          "command": "help kingdoms",
+          "docId": "helpdir/mechanics/kingdoms"
+        },
+        {
+          "topic": "patron",
+          "command": "help patron",
+          "docId": "helpdir/mechanics/patron"
+        },
+        {
+          "topic": "deities",
+          "command": "help deities",
+          "docId": "helpdir/mechanics/deities"
+        },
+        {
+          "topic": "discord",
+          "command": "help discord",
+          "docId": "helpdir/communication/discord"
+        }
+      ],
+      "sourceDocId": "helpdir/new/stage6",
+      "nextId": "stage7",
+      "keywords": [
+        "social",
+        "groups",
+        "friends"
+      ]
+    },
+    {
+      "id": "stage7",
+      "number": 7,
+      "title": "Sharpen the Blade",
+      "levelRange": "levels 30-100",
+      "paragraphs": [
+        "Mid-game is about power and polish: track your buffs and debuffs, hunt boss monsters and invasions, brave the eternal dungeon, duel in the arena, and chase achievements, daily rewards, and leaderboard rank.",
+        "Unique weapons and armour -- one copy in the whole game -- are out there for the claiming."
+      ],
+      "commands": [],
+      "relatedTopics": [
+        {
+          "topic": "effects",
+          "command": "help effects",
+          "docId": "helpdir/mechanics/effects"
+        },
+        {
+          "topic": "buffs",
+          "command": "help buffs",
+          "docId": "helpdir/mechanics/buffs"
+        },
+        {
+          "topic": "bosses",
+          "command": "help bosses",
+          "docId": "helpdir/mechanics/bosses"
+        },
+        {
+          "topic": "invasions",
+          "command": "help invasions",
+          "docId": "helpdir/mechanics/invasions"
+        },
+        {
+          "topic": "eternal",
+          "command": "help eternal",
+          "docId": "helpdir/world/eternal"
+        },
+        {
+          "topic": "arena",
+          "command": "help arena",
+          "docId": "helpdir/world/arena"
+        },
+        {
+          "topic": "achievements",
+          "command": "help achievements",
+          "docId": "helpdir/mechanics/achievements"
+        },
+        {
+          "topic": "daily",
+          "command": "help daily",
+          "docId": "helpdir/mechanics/daily"
+        },
+        {
+          "topic": "uniques",
+          "command": "help uniques",
+          "docId": "helpdir/mechanics/uniques"
+        }
+      ],
+      "sourceDocId": "helpdir/new/stage7",
+      "nextId": "stage8",
+      "keywords": [
+        "midgame",
+        "bosses",
+        "dungeon"
+      ]
+    },
+    {
+      "id": "stage8",
+      "number": 8,
+      "title": "Renown and Rebirth",
+      "levelRange": "level 100 and beyond",
+      "paragraphs": [
+        "At level 100 your level becomes renown -- HERO, ADV, or VILN by your deeds. Level 150 makes you a LEGEND and unlocks a free additional multichar slot. New mythic multichar registration is disabled.",
+        "At 250 the true endgame opens: remort, a rebirth that trades your level for permanent boon points and starts the climb again, stronger each cycle. Specialization and the metaphysician path round out a veteran's power."
+      ],
+      "commands": [],
+      "relatedTopics": [
+        {
+          "topic": "hero",
+          "command": "help hero",
+          "docId": "helpdir/leveling/hero"
+        },
+        {
+          "topic": "legend",
+          "command": "help legend",
+          "docId": "helpdir/leveling/legend"
+        },
+        {
+          "topic": "remort",
+          "command": "help remort",
+          "docId": "helpdir/leveling/remort"
+        },
+        {
+          "topic": "boons",
+          "command": "help boons",
+          "docId": "helpdir/leveling/boons"
+        },
+        {
+          "topic": "specialization",
+          "command": "help specialization",
+          "docId": "helpdir/mechanics/specialization"
+        },
+        {
+          "topic": "meta",
+          "command": "help meta",
+          "docId": "helpdir/stats/meta"
+        },
+        {
+          "topic": "multichars",
+          "command": "help multichars",
+          "docId": "helpdir/rules/multichars"
+        }
+      ],
+      "sourceDocId": "helpdir/new/stage8",
+      "nextId": null,
+      "keywords": [
+        "endgame",
+        "rebirth",
+        "renown"
+      ]
+    }
+  ]
+}

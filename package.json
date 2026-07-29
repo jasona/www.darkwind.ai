@@ -4,14 +4,17 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "predev": "npm run help:build",
+    "predev": "npm run tutorial:validate && npm run help:build",
     "dev": "vite",
-    "prebuild": "npm run help:build",
+    "prebuild": "npm run tutorial:validate && npm run help:build",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "extract:darkwind": "node scripts/extract-darkwind-content.mjs",
     "sync:help:local": "node scripts/sync-help-docs.mjs && npm run help:build",
-    "help:build": "node scripts/build-help-index.mjs"
+    "help:build": "node scripts/build-help-index.mjs",
+    "tutorial:sync": "node scripts/sync-newbie-tutorial.mjs",
+    "tutorial:validate": "node scripts/validate-newbie-tutorial.mjs",
+    "test": "node --test tests/*.test.mjs"
   },
   "dependencies": {
     "framer-motion": "^11.0.0",

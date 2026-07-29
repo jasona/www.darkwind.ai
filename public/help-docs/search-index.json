@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-11T20:10:54.681Z",
+  "generatedAt": "2026-07-29T18:52:09.974Z",
   "docs": [
     {
       "id": "3.2vs3.2.1",
@@ -13036,11 +13036,74 @@
       "text": "+---------------------------------------------------------------------+ MINI QUESTS +---------------------------------------------------------------------+ Mini quests are fun, typically fairly simple quests that players of various levels can accomplish. Each quest is made up of one or more objectives, and a set of rewards when all objectives are complete. Some quests are open for all levels, but some quests have a minimum and maximum level. Additionally, some quests require that you must have completed a previous quest. All and all, mini quests should be a lot of fun to complete! For more information, see: \"help quest_commands\" +---------------------------------------------------------------------+ +---------------------------------------------------------------------+"
     },
     {
+      "id": "helpdir/new/guide",
+      "path": "helpdir/new/guide",
+      "category": "helpdir",
+      "title": "Your Journey Through Darkwind",
+      "text": "Your Journey Through Darkwind ===================================================================== A stage-by-stage walkthrough from your first steps to seasoned adventurer. Each stage is its own short help page -- read them as your character grows, not all at once. help stage1 Your first minutes: the tutorial, looking, and finding your way around town help stage2 Gear up and learn to fight (levels 1-5, while death is still free) help stage3 Choose your path: guilds, archetypes, and leveling help stage4 See the world (levels 5-30): areas, wayshards, quests, and what death really costs help stage5 Money and craft: banking, the market, and professions help stage6 Find your people: channels, parties, clans, and kingdoms help stage7 Sharpen the blade (levels 30-100): bosses, dungeons, and uniques help stage8 Renown and rebirth (level 100+): hero, legend, and the remort endgame At every stage: play at play.darkwind.ai for the live map and panels (help client), browse all topics with help list, and report anything odd with bug, idea, or typo. See also: help stage1, help basics, help client, help feedback # keywords: walkthrough, beginner, start, getting started, new player # alias: walkthrough, journey, newplayer, getting_started, gettingstarted"
+    },
+    {
       "id": "helpdir/new/new",
       "path": "helpdir/new/new",
       "category": "helpdir",
       "title": "Welcome to Darkwind!",
       "text": "Welcome to Darkwind! Most of the basic information about Darkwind can be found in the Newbie Tome. You can obtain one from the Newbie Tome Dispenser at Center of Town. Use the command ncot if you need to return there. Do not forget to look at the machine, then pull lever and read tome. The following are basic directions to help you start your adventuring career. This information can also be found in the Newbie Tome. ============================================================================== Equipment, Stores and Bank ============================================================================== Erga's newbie store. Erga hands out free equipment that is perfectly suited for anyone under level 5. Do not waste your time looking elsewhere. He has some good quality stuff. From Cot: w,w,w,w,s [4w,s] Do not forget to read the sign. ______________________________________________________________________________ Donation room. The mighty heroes and legendary adventurers that inhabit the realms of Darkwind may be inclined to donate equipment to the more inexperienced adventurers. You can visit the Donation room to see what they may have to offer you. From Cot: n,n,n,n,n,e [5n,e] ______________________________________________________________________________ Bank. You are able to keep your money safe at the bank. That way, if you die, you will not lose your hard-earned cash. From Cot: w,w,w,w,w,s,s,s,e [5w,3s,e] ______________________________________________________________________________ Taylors. Taylors is the general store in town. He will be happy to buy your goods from you. Selling treasures you find on your adventures is a great way to earn a pretty penny. From Cot: w,w,w,w,w,s,s,w [5w,2s,w] ============================================================================== Newbie Areas ============================================================================== All directions from Cot: Abandoned Village - 6w, exit, 4w, 2n, w, s, w, enter, n, w Ashkenazy's hunting grounds - 5s, exit, s, 4w, s Cemetery - 5w, 2n Farmland - 6w, exit, 4w, 3n, 2e, n Glaverton Forest - 6w, exit, 4w, 2n, e, 3n, e, n, e, n, 5e, 2ne, nw, n Haunted Keep - 5s, exit, 11s, w North Forest path - 6n, exit, 9n, 9nw, w Pegasi - 6n, exit, 8n, 2e, n Pirate Ship - 5e, 4n, climb rope For a more comprehensive listing and descriptions of newbie areas, read chapter 5 of the Newbie Tome. ============================================================================== Further Helpfiles of Interest ============================================================================== help newbie The newbie command allows you to talk on the newbie channel. help set The set command allows you to customize several different features. help wimpy Wimpy allows you to automatically flee combat when your HP drop too low. help mon The monitor allows you to set an HP/SP monitor. help ncot - help npunch - help nkick - help nheal These are your newbie skills. help combatbrief This setting allows you to filter your combat messages. help score - help sc Information on your score tables. help int - help wis - help dex - help con - help str - help chr Information about your stats. help races Information on how to become one of the races that inhabit Darkwind. help guilds A list of existing guilds on Darkwind. Specific info can be obtained from the tome. help rules The rules for Darkwind. Read them, know them, live them. help pk Information on Darkwind's player killing system. ============================================================================== Addendum ============================================================================== Any extra info you feel needs to be added to this file? Use the idea command to suggest it. See help idea."
+    },
+    {
+      "id": "helpdir/new/stage1",
+      "path": "helpdir/new/stage1",
+      "category": "helpdir",
+      "title": "Stage 1 of 8: Your First Minutes",
+      "text": "Stage 1 of 8: Your First Minutes ===================================================================== A short tutorial starts automatically for new characters and teaches looking, moving, gear, and safe combat. Darkflow shows it in a hover window. Type tutorial to see your current step and tutorial continue to continue in any client. Learn to look at everything (xa <thing>), check your inventory, and read your score. If you ever get lost, ncot returns you to the Center of Town, and the Newbie Tome Dispenser there (pull lever, read tome) holds the town directions. Read: help tutorial, help basics, help movement, help new Next: help stage2 Index: help guide # keywords: tutorial, first steps"
+    },
+    {
+      "id": "helpdir/new/stage2",
+      "path": "helpdir/new/stage2",
+      "category": "helpdir",
+      "title": "Stage 2 of 8: Gear Up and Learn to Fight (levels 1-5)",
+      "text": "Stage 2 of 8: Gear Up and Learn to Fight (levels 1-5) ===================================================================== Erga's newbie store (from the Center of Town: 4w, s) hands out free equipment fit for anyone under level 5; the donation room (5n, e) has castoffs from generous veterans. Wear and wield everything, then practice on the newbie farm. Death carries NO penalty at level 5 and under, so this is the time to take risks and learn kill, assess, and wimpy. Ask questions freely on the newbie channel -- everyone started here. Read: help kill, help equipment, help wimpy, help combat, help communication Next: help stage3 Index: help guide # keywords: erga, newbie farm, free equipment"
+    },
+    {
+      "id": "helpdir/new/stage3",
+      "path": "helpdir/new/stage3",
+      "category": "helpdir",
+      "title": "Stage 3 of 8: Choose Your Path",
+      "text": "Stage 3 of 8: Choose Your Path ===================================================================== Once the farm feels easy, pick a guild -- it defines your abilities for the climb ahead. Browse the roster, the playstyle archetypes, and which pairings work before committing. Level at the adventurers guild with advance; experience costs grow with each level, and your stats shape what your abilities can do. Read: help guilds, help archetypes, help combos, help roles, help leveling, help costs, help stats Next: help stage4 Index: help guide # keywords: guild choice, advance, archetype"
+    },
+    {
+      "id": "helpdir/new/stage4",
+      "path": "helpdir/new/stage4",
+      "category": "helpdir",
+      "title": "Stage 4 of 8: See the World (levels 5-30)",
+      "text": "Stage 4 of 8: See the World (levels 5-30) ===================================================================== The world is far bigger than town. The areas command catalogs every region with level ranges; characters up to level 10 already know the newbie-area wayshards, so touch shard networks open fast travel as you explore. Pick up quests for structured goals and bonus experience. Above level 5 death starts to cost 10% of your experience on hand -- your corpse keeps your gear, the church will whisk you back, and other players can avenge you to restore what you lost. Read: help areas, help wayshards, help recall, help quests, help death, help avengement Next: help stage5 Index: help guide # keywords: explore, travel, fast travel"
+    },
+    {
+      "id": "helpdir/new/stage5",
+      "path": "helpdir/new/stage5",
+      "category": "helpdir",
+      "title": "Stage 5 of 8: Money and Craft",
+      "text": "Stage 5 of 8: Money and Craft ===================================================================== Coins pile up: open a bank account early -- auction bids and some purchases are backed by bank liens, and your balance is shared across every branch. Learn the player-driven economy: shops, the remote market, and the live auction channel. When you want a break from fighting, professions like fishing, mining, and smithing earn steadily and feed the market. Read: help economy, help bank, help market, help auction, help professions, help fishing Next: help stage6 Index: help guide # keywords: gold, coins, trading"
+    },
+    {
+      "id": "helpdir/new/stage6",
+      "path": "helpdir/new/stage6",
+      "category": "helpdir",
+      "title": "Stage 6 of 8: Find Your People",
+      "text": "Stage 6 of 8: Find Your People ===================================================================== Darkwind is social. Channels connect the whole game; parties share the fight and the spoils; clans are player-run organizations with wars and coffers; kingdoms crown player rulers with their own nobility. Pick a divine patron when the gods start to notice you -- alignment and devotion open their own doors. Read: help communication, help party, help clans, help kingdoms, help patron, help deities, help discord Next: help stage7 Index: help guide # keywords: social, groups, friends"
+    },
+    {
+      "id": "helpdir/new/stage7",
+      "path": "helpdir/new/stage7",
+      "category": "helpdir",
+      "title": "Stage 7 of 8: Sharpen the Blade (levels 30-100)",
+      "text": "Stage 7 of 8: Sharpen the Blade (levels 30-100) ===================================================================== Mid-game is about power and polish: track your buffs and debuffs, hunt boss monsters and invasions, brave the eternal dungeon, duel in the arena, and chase achievements, daily rewards, and leaderboard rank. Unique weapons and armour -- one copy in the whole game -- are out there for the claiming. Read: help effects, help buffs, help bosses, help invasions, help eternal, help arena, help achievements, help daily, help uniques Next: help stage8 Index: help guide # keywords: midgame, bosses, dungeon"
+    },
+    {
+      "id": "helpdir/new/stage8",
+      "path": "helpdir/new/stage8",
+      "category": "helpdir",
+      "title": "Stage 8 of 8: Renown and Rebirth (level 100 and beyond)",
+      "text": "Stage 8 of 8: Renown and Rebirth (level 100 and beyond) ===================================================================== At level 100 your level becomes renown -- HERO, ADV, or VILN by your deeds. Level 150 makes you a LEGEND and unlocks a free additional multichar slot. New mythic multichar registration is disabled. At 250 the true endgame opens: remort, a rebirth that trades your level for permanent boon points and starts the climb again, stronger each cycle. Specialization and the metaphysician path round out a veteran's power. Read: help hero, help legend, help remort, help boons, help specialization, help meta, help multichars Index: help guide # keywords: endgame, rebirth, renown"
     },
     {
       "id": "helpdir/oldraces/draconian",
@@ -16856,6 +16919,69 @@
       "category": "vihelp",
       "title": "Screenreader support.",
       "text": "Screenreader support. Screenreader support changes some command output so it is easier to hear through a screenreader. Common forms: set screenreader on Turn screenreader support on. set screenreader off Turn screenreader support off. set Show your current settings. When screenreader support is on, some commands use plainer language, fewer visual tables, and less decorative formatting. The help command also checks /doc/vihelp first for screenreader-specific help topics, then falls back to the normal help system. Useful screenreader-friendly commands include look, actions, exits, npcs, players, items, inventory, score, and who."
+    },
+    {
+      "id": "vihelp/new/guide",
+      "path": "vihelp/new/guide",
+      "category": "vihelp",
+      "title": "Your Journey Through Darkwind",
+      "text": "Your Journey Through Darkwind A stage-by-stage walkthrough from your first steps to seasoned adventurer. Each stage is its own short help page. Read them as your character grows, not all at once. help stage1: your first minutes. The tutorial, looking, and finding your way around town. help stage2: gear up and learn to fight, levels 1 to 5, while death is still free. help stage3: choose your path. Guilds, archetypes, and leveling. help stage4: see the world, levels 5 to 30. Areas, wayshards, quests, and what death really costs. help stage5: money and craft. Banking, the market, and professions. help stage6: find your people. Channels, parties, clans, and kingdoms. help stage7: sharpen the blade, levels 30 to 100. Bosses, dungeons, and uniques. help stage8: renown and rebirth, level 100 and beyond. Hero, legend, and the remort endgame. At every stage: screenreader mode tailors output for you (see help screenreader), \"help list\" browses every section, and the bug, idea, and typo commands send feedback straight to the builders. See also: help stage1, help basics, help screenreader, help feedback."
+    },
+    {
+      "id": "vihelp/new/stage1",
+      "path": "vihelp/new/stage1",
+      "category": "vihelp",
+      "title": "Stage 1 of 8: Your First Minutes",
+      "text": "Stage 1 of 8: Your First Minutes A short tutorial starts automatically for new characters and teaches looking, moving, gear, and safe combat. Darkflow shows it in a hover window. Type \"tutorial\" to see your current step and \"tutorial continue\" to continue in any client. Learn to examine things with \"xa\", check your \"inventory\", and read your \"score\". If you get lost, \"ncot\" returns you to the Center of Town, where the Newbie Tome Dispenser (pull lever, read tome) holds the town directions. Read: help tutorial, help basics, help movement, help new. Next: help stage2. Index: help guide."
+    },
+    {
+      "id": "vihelp/new/stage2",
+      "path": "vihelp/new/stage2",
+      "category": "vihelp",
+      "title": "Stage 2 of 8: Gear Up and Learn to Fight, levels 1 to 5",
+      "text": "Stage 2 of 8: Gear Up and Learn to Fight, levels 1 to 5 Erga's newbie store (from the Center of Town: four west, one south) hands out free equipment fit for anyone under level 5; the donation room (five north, one east) has castoffs from veterans. Wear and wield everything, then practice on the newbie farm. Death carries no penalty at level 5 and under, so take risks now and learn kill, assess, and wimpy. Ask questions freely on the newbie channel; everyone started here. Read: help kill, help equipment, help wimpy, help combat, help communication. Next: help stage3. Index: help guide."
+    },
+    {
+      "id": "vihelp/new/stage3",
+      "path": "vihelp/new/stage3",
+      "category": "vihelp",
+      "title": "Stage 3 of 8: Choose Your Path",
+      "text": "Stage 3 of 8: Choose Your Path Once the farm feels easy, pick a guild; it defines your abilities for the climb ahead. Browse the roster, the playstyle archetypes, and which pairings work before committing. Level at the adventurers guild with \"advance\". Experience costs grow with each level, and your stats shape what your abilities can do. Read: help guilds, help archetypes, help combos, help roles, help leveling, help costs, help stats. Next: help stage4. Index: help guide."
+    },
+    {
+      "id": "vihelp/new/stage4",
+      "path": "vihelp/new/stage4",
+      "category": "vihelp",
+      "title": "Stage 4 of 8: See the World, levels 5 to 30",
+      "text": "Stage 4 of 8: See the World, levels 5 to 30 The \"areas\" command catalogs every region with level ranges. Characters up to level 10 already know the newbie-area wayshards, and touching new shards opens fast travel as you explore. Pick up quests for structured goals and bonus experience. Above level 5 death costs 10 percent of your experience on hand. Your corpse keeps your gear, the church will bring you back, and other players can avenge you to restore what you lost. Read: help areas, help wayshards, help recall, help quests, help death, help avengement. Next: help stage5. Index: help guide."
+    },
+    {
+      "id": "vihelp/new/stage5",
+      "path": "vihelp/new/stage5",
+      "category": "vihelp",
+      "title": "Stage 5 of 8: Money and Craft",
+      "text": "Stage 5 of 8: Money and Craft Open a bank account early; auction bids and some purchases are backed by bank liens, and your balance is shared across every branch. Learn the player-driven economy: shops, the remote market, and the live auction channel. When you want a break from fighting, professions like fishing, mining, and smithing earn steadily and feed the market. Read: help economy, help bank, help market, help auction, help professions, help fishing. Next: help stage6. Index: help guide."
+    },
+    {
+      "id": "vihelp/new/stage6",
+      "path": "vihelp/new/stage6",
+      "category": "vihelp",
+      "title": "Stage 6 of 8: Find Your People",
+      "text": "Stage 6 of 8: Find Your People Darkwind is social. Channels connect the whole game; parties share the fight and the spoils; clans are player-run organizations with wars and coffers; kingdoms crown player rulers with their own nobility. Pick a divine patron when the gods start to notice you. Alignment and devotion open their own doors. Read: help communication, help party, help clans, help kingdoms, help patron, help deities, help discord. Next: help stage7. Index: help guide."
+    },
+    {
+      "id": "vihelp/new/stage7",
+      "path": "vihelp/new/stage7",
+      "category": "vihelp",
+      "title": "Stage 7 of 8: Sharpen the Blade, levels 30 to 100",
+      "text": "Stage 7 of 8: Sharpen the Blade, levels 30 to 100 Mid-game is about power and polish: track your buffs and debuffs, hunt boss monsters and invasions, brave the eternal dungeon, duel in the arena, and chase achievements, daily rewards, and leaderboard rank. Unique weapons and armour, one copy in the whole game, are out there for the claiming. Read: help effects, help buffs, help bosses, help invasions, help eternal, help arena, help achievements, help daily, help uniques. Next: help stage8. Index: help guide."
+    },
+    {
+      "id": "vihelp/new/stage8",
+      "path": "vihelp/new/stage8",
+      "category": "vihelp",
+      "title": "Stage 8 of 8: Renown and Rebirth, level 100 and beyond",
+      "text": "Stage 8 of 8: Renown and Rebirth, level 100 and beyond At level 100 your level becomes renown: HERO, ADV, or VILN by your deeds. Level 150 makes you a LEGEND and unlocks a free additional multichar slot. New mythic multichar registration is disabled. At 250 the true endgame opens: remort, a rebirth that trades your level for permanent boon points and starts the climb again, stronger each cycle. Specialization and the metaphysician path round out a veteran's power. Read: help hero, help legend, help remort, help boons, help specialization, help meta, help multichars. Index: help guide."
     },
     {
       "id": "vihelp/start",

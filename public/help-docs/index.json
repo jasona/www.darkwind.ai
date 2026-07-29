@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-06-11T20:10:54.681Z",
+  "generatedAt": "2026-07-29T18:52:09.974Z",
   "source": "public/help-docs/doc",
-  "totalDocs": 2665,
+  "totalDocs": 2683,
   "categories": [
     {
       "id": "helpdir",
       "label": "Helpdir",
       "description": "Player-facing in-game help topics.",
-      "count": 366
+      "count": 375
     },
     {
       "id": "vihelp",
       "label": "Vihelp",
       "description": "Screenreader-focused help overlays.",
-      "count": 9
+      "count": 18
     },
     {
       "id": "adm",
@@ -16998,6 +16998,15 @@
       "lines": 22
     },
     {
+      "id": "helpdir/new/guide",
+      "path": "helpdir/new/guide",
+      "category": "helpdir",
+      "title": "Your Journey Through Darkwind",
+      "excerpt": "Your Journey Through Darkwind ===================================================================== A stage-by-stage walkthrough from your first steps to seasoned adventurer. Each stage is its own short help page -- read",
+      "bytes": 1644,
+      "lines": 31
+    },
+    {
       "id": "helpdir/new/new",
       "path": "helpdir/new/new",
       "category": "helpdir",
@@ -17005,6 +17014,78 @@
       "excerpt": "Welcome to Darkwind! Most of the basic information about Darkwind can be found in the Newbie Tome. You can obtain one from the Newbie Tome Dispenser at Center of Town. Use the command ncot if you need to return there. Do",
       "bytes": 3867,
       "lines": 121
+    },
+    {
+      "id": "helpdir/new/stage1",
+      "path": "helpdir/new/stage1",
+      "category": "helpdir",
+      "title": "Stage 1 of 8: Your First Minutes",
+      "excerpt": "Stage 1 of 8: Your First Minutes ===================================================================== A short tutorial starts automatically for new characters and teaches looking, moving, gear, and safe combat. Darkflow",
+      "bytes": 834,
+      "lines": 17
+    },
+    {
+      "id": "helpdir/new/stage2",
+      "path": "helpdir/new/stage2",
+      "category": "helpdir",
+      "title": "Stage 2 of 8: Gear Up and Learn to Fight (levels 1-5)",
+      "excerpt": "Stage 2 of 8: Gear Up and Learn to Fight (levels 1-5) ===================================================================== Erga's newbie store (from the Center of Town: 4w, s) hands out free equipment fit for anyone und",
+      "bytes": 794,
+      "lines": 16
+    },
+    {
+      "id": "helpdir/new/stage3",
+      "path": "helpdir/new/stage3",
+      "category": "helpdir",
+      "title": "Stage 3 of 8: Choose Your Path",
+      "excerpt": "Stage 3 of 8: Choose Your Path ===================================================================== Once the farm feels easy, pick a guild -- it defines your abilities for the climb ahead. Browse the roster, the playsty",
+      "bytes": 675,
+      "lines": 15
+    },
+    {
+      "id": "helpdir/new/stage4",
+      "path": "helpdir/new/stage4",
+      "category": "helpdir",
+      "title": "Stage 4 of 8: See the World (levels 5-30)",
+      "excerpt": "Stage 4 of 8: See the World (levels 5-30) ===================================================================== The world is far bigger than town. The areas command catalogs every region with level ranges; characters up ",
+      "bytes": 830,
+      "lines": 17
+    },
+    {
+      "id": "helpdir/new/stage5",
+      "path": "helpdir/new/stage5",
+      "category": "helpdir",
+      "title": "Stage 5 of 8: Money and Craft",
+      "excerpt": "Stage 5 of 8: Money and Craft ===================================================================== Coins pile up: open a bank account early -- auction bids and some purchases are backed by bank liens, and your balance i",
+      "bytes": 693,
+      "lines": 16
+    },
+    {
+      "id": "helpdir/new/stage6",
+      "path": "helpdir/new/stage6",
+      "category": "helpdir",
+      "title": "Stage 6 of 8: Find Your People",
+      "excerpt": "Stage 6 of 8: Find Your People ===================================================================== Darkwind is social. Channels connect the whole game; parties share the fight and the spoils; clans are player-run organ",
+      "bytes": 663,
+      "lines": 14
+    },
+    {
+      "id": "helpdir/new/stage7",
+      "path": "helpdir/new/stage7",
+      "category": "helpdir",
+      "title": "Stage 7 of 8: Sharpen the Blade (levels 30-100)",
+      "excerpt": "Stage 7 of 8: Sharpen the Blade (levels 30-100) ===================================================================== Mid-game is about power and polish: track your buffs and debuffs, hunt boss monsters and invasions, br",
+      "bytes": 695,
+      "lines": 16
+    },
+    {
+      "id": "helpdir/new/stage8",
+      "path": "helpdir/new/stage8",
+      "category": "helpdir",
+      "title": "Stage 8 of 8: Renown and Rebirth (level 100 and beyond)",
+      "excerpt": "Stage 8 of 8: Renown and Rebirth (level 100 and beyond) ===================================================================== At level 100 your level becomes renown -- HERO, ADV, or VILN by your deeds. Level 150 makes yo",
+      "bytes": 758,
+      "lines": 16
     },
     {
       "id": "helpdir/oldraces/draconian",
@@ -21910,6 +21991,87 @@
       "excerpt": "Screenreader support. Screenreader support changes some command output so it is easier to hear through a screenreader. Common forms: set screenreader on Turn screenreader support on. set screenreader off Turn screenreade",
       "bytes": 648,
       "lines": 24
+    },
+    {
+      "id": "vihelp/new/guide",
+      "path": "vihelp/new/guide",
+      "category": "vihelp",
+      "title": "Your Journey Through Darkwind",
+      "excerpt": "Your Journey Through Darkwind A stage-by-stage walkthrough from your first steps to seasoned adventurer. Each stage is its own short help page. Read them as your character grows, not all at once. help stage1: your first ",
+      "bytes": 1114,
+      "lines": 26
+    },
+    {
+      "id": "vihelp/new/stage1",
+      "path": "vihelp/new/stage1",
+      "category": "vihelp",
+      "title": "Stage 1 of 8: Your First Minutes",
+      "excerpt": "Stage 1 of 8: Your First Minutes A short tutorial starts automatically for new characters and teaches looking, moving, gear, and safe combat. Darkflow shows it in a hover window. Type \"tutorial\" to see your current step ",
+      "bytes": 595,
+      "lines": 15
+    },
+    {
+      "id": "vihelp/new/stage2",
+      "path": "vihelp/new/stage2",
+      "category": "vihelp",
+      "title": "Stage 2 of 8: Gear Up and Learn to Fight, levels 1 to 5",
+      "excerpt": "Stage 2 of 8: Gear Up and Learn to Fight, levels 1 to 5 Erga's newbie store (from the Center of Town: four west, one south) hands out free equipment fit for anyone under level 5; the donation room (five north, one east) ",
+      "bytes": 595,
+      "lines": 15
+    },
+    {
+      "id": "vihelp/new/stage3",
+      "path": "vihelp/new/stage3",
+      "category": "vihelp",
+      "title": "Stage 3 of 8: Choose Your Path",
+      "excerpt": "Stage 3 of 8: Choose Your Path Once the farm feels easy, pick a guild; it defines your abilities for the climb ahead. Browse the roster, the playstyle archetypes, and which pairings work before committing. Level at the a",
+      "bytes": 482,
+      "lines": 13
+    },
+    {
+      "id": "vihelp/new/stage4",
+      "path": "vihelp/new/stage4",
+      "category": "vihelp",
+      "title": "Stage 4 of 8: See the World, levels 5 to 30",
+      "excerpt": "Stage 4 of 8: See the World, levels 5 to 30 The \"areas\" command catalogs every region with level ranges. Characters up to level 10 already know the newbie-area wayshards, and touching new shards opens fast travel as you ",
+      "bytes": 602,
+      "lines": 15
+    },
+    {
+      "id": "vihelp/new/stage5",
+      "path": "vihelp/new/stage5",
+      "category": "vihelp",
+      "title": "Stage 5 of 8: Money and Craft",
+      "excerpt": "Stage 5 of 8: Money and Craft Open a bank account early; auction bids and some purchases are backed by bank liens, and your balance is shared across every branch. Learn the player-driven economy: shops, the remote market",
+      "bytes": 502,
+      "lines": 13
+    },
+    {
+      "id": "vihelp/new/stage6",
+      "path": "vihelp/new/stage6",
+      "category": "vihelp",
+      "title": "Stage 6 of 8: Find Your People",
+      "excerpt": "Stage 6 of 8: Find Your People Darkwind is social. Channels connect the whole game; parties share the fight and the spoils; clans are player-run organizations with wars and coffers; kingdoms crown player rulers with thei",
+      "bytes": 484,
+      "lines": 13
+    },
+    {
+      "id": "vihelp/new/stage7",
+      "path": "vihelp/new/stage7",
+      "category": "vihelp",
+      "title": "Stage 7 of 8: Sharpen the Blade, levels 30 to 100",
+      "excerpt": "Stage 7 of 8: Sharpen the Blade, levels 30 to 100 Mid-game is about power and polish: track your buffs and debuffs, hunt boss monsters and invasions, brave the eternal dungeon, duel in the arena, and chase achievements, ",
+      "bytes": 517,
+      "lines": 13
+    },
+    {
+      "id": "vihelp/new/stage8",
+      "path": "vihelp/new/stage8",
+      "category": "vihelp",
+      "title": "Stage 8 of 8: Renown and Rebirth, level 100 and beyond",
+      "excerpt": "Stage 8 of 8: Renown and Rebirth, level 100 and beyond At level 100 your level becomes renown: HERO, ADV, or VILN by your deeds. Level 150 makes you a LEGEND and unlocks a free additional multichar slot. New mythic multi",
+      "bytes": 595,
+      "lines": 15
     },
     {
       "id": "vihelp/start",

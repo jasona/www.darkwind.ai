@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { BookOpen, Copy, Eye, FileText, Search, Terminal } from "lucide-react";
+import { ArrowRight, BookOpen, Compass, Copy, Eye, FileText, Search, Terminal } from "lucide-react";
 import { imagePath } from "../data/darkwindSnapshot";
 import { renderDarkwindFragments, stripDarkwindColors } from "../lib/darkwindAnsi";
 
@@ -99,7 +99,7 @@ function TerminalBody({ raw, mode }: { raw: string; mode: ViewMode }) {
   );
 }
 
-export default function HelpPage() {
+export default function HelpPage({ openTutorial }: { openTutorial?: () => void }) {
   const [index, setIndex] = useState<HelpIndex | null>(null);
   const [searchIndex, setSearchIndex] = useState<SearchIndex | null>(null);
   const [query, setQuery] = useState("");
@@ -256,6 +256,19 @@ export default function HelpPage() {
             <p className="mt-6 max-w-3xl text-xl leading-8 text-[#d8cfbd]">
               Search the copied in-game documentation, guild notes, wizard references, driver manuals, and accessibility help in a terminal-style reader.
             </p>
+            <a
+              href="/start"
+              onClick={(event) => {
+                if (!openTutorial) return;
+                event.preventDefault();
+                openTutorial();
+              }}
+              className="mt-7 inline-flex items-center gap-2 rounded border border-[#d6a94b]/55 bg-[#d6a94b]/12 px-4 py-3 font-semibold text-[#f0c761] transition hover:border-[#d6a94b] hover:bg-[#d6a94b]/18"
+            >
+              <Compass className="h-5 w-5" />
+              Follow the Newbie Guide
+              <ArrowRight className="h-4 w-4" />
+            </a>
           </motion.div>
         </div>
       </section>

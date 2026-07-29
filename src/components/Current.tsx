@@ -33,6 +33,7 @@ import {
   type Region,
 } from "../data/darkwindSnapshot";
 import HelpPage from "./HelpPage";
+import NewbieTutorialPage from "./NewbieTutorialPage";
 
 type PageKey = "home" | "about" | "world" | "guilds" | "systems" | "races" | "start" | "help";
 
@@ -53,9 +54,54 @@ const navItems: Array<[string, PageKey]> = [
   ["Guilds", "guilds"],
   ["Systems", "systems"],
   ["Races", "races"],
-  ["Start", "start"],
+  ["Newbie Guide", "start"],
   ["Help", "help"],
 ];
+
+const pageMetadata: Record<PageKey, { title: string; description: string; path: string }> = {
+  home: {
+    title: "DarkWind — Living Fantasy MUD and Browser RPG Since 1992",
+    description:
+      "Explore DarkWind, a living fantasy MUD with deep guild mechanics, professions, reputation, divine powers, and modern browser play.",
+    path: "/",
+  },
+  about: {
+    title: "About DarkWind — Lore, Gods, and the Cataclysm",
+    description: "Learn how the Cataclysm, Race Wars, and active gods shape DarkWind's living fantasy world.",
+    path: "/about",
+  },
+  world: {
+    title: "DarkWind World and Areas",
+    description: "Explore Geshtai, Dailos, notable areas, wayshards, and the roads between DarkWind's dangers.",
+    path: "/world",
+  },
+  guilds: {
+    title: "DarkWind Guilds and Character Paths",
+    description: "Compare DarkWind guilds, roles, commands, resources, and playstyles.",
+    path: "/guilds",
+  },
+  systems: {
+    title: "DarkWind Game Systems",
+    description: "Discover DarkWind professions, reputation, dailies, achievements, waypoints, and Eternal Dungeons.",
+    path: "/systems",
+  },
+  races: {
+    title: "Playable Races in DarkWind",
+    description: "Meet DarkWind's playable heritages and the identities they bring to the world.",
+    path: "/races",
+  },
+  start: {
+    title: "Newbie Guide — Your Journey Through DarkWind",
+    description:
+      "Follow DarkWind's eight-stage newbie guide from your first commands through guilds, exploration, crafting, and the remort endgame.",
+    path: "/start",
+  },
+  help: {
+    title: "DarkWind Help Files",
+    description: "Search copied in-game help topics, guild references, accessibility notes, and builder documentation.",
+    path: "/help",
+  },
+};
 
 const roles: Array<"All" | GuildRole> = [
   "All",
@@ -145,16 +191,24 @@ function go(page: PageKey, setPage: (page: PageKey) => void) {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
+function goHelpDoc(docId: string, setPage: (page: PageKey) => void) {
+  window.history.pushState({ page: "help", docId }, "", `/help?doc=${encodeURIComponent(docId)}`);
+  setPage("help");
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
 function PageLink({
   page,
   setPage,
   children,
   className,
+  ariaCurrent,
 }: {
   page: PageKey;
   setPage: (page: PageKey) => void;
   children: React.ReactNode;
   className?: string;
+  ariaCurrent?: "page";
 }) {
   return (
     <a
@@ -164,6 +218,7 @@ function PageLink({
         go(page, setPage);
       }}
       className={className}
+      aria-current={ariaCurrent}
     >
       {children}
     </a>
@@ -186,19 +241,35 @@ function TopNav({ page, setPage }: { page: PageKey; setPage: (page: PageKey) => 
               key={key}
               page={key}
               setPage={setPage}
+              ariaCurrent={page === key ? "page" : undefined}
               className={`transition hover:text-white ${page === key ? "text-[#d6a94b]" : ""}`}
             >
               {label}
             </PageLink>
           ))}
         </nav>
-        <a
-          href="https://play.darkwind.ai/"
-          className="inline-flex items-center gap-2 rounded border border-[#d6a94b]/55 bg-[#d6a94b] px-3 py-2 text-sm font-bold text-[#18100a] transition hover:bg-[#f0c761]"
-        >
-          Play
-          <ArrowRight className="h-4 w-4" />
-        </a>
+        <div className="flex items-center gap-2">
+          <PageLink
+            page="start"
+            setPage={setPage}
+            ariaCurrent={page === "start" ? "page" : undefined}
+            className={`inline-flex h-10 items-center justify-center gap-2 rounded border px-3 text-sm font-semibold transition lg:hidden ${
+              page === "start"
+                ? "border-[#d6a94b] bg-[#d6a94b]/15 text-[#f0c761]"
+                : "border-white/15 bg-white/5 text-[#d7d0be] hover:border-white/30"
+            }`}
+          >
+            <Compass className="h-4 w-4" />
+            <span className="hidden sm:inline">Guide</span>
+          </PageLink>
+          <a
+            href="https://play.darkwind.ai/"
+            className="inline-flex h-10 items-center gap-2 rounded border border-[#d6a94b]/55 bg-[#d6a94b] px-3 text-sm font-bold text-[#18100a] transition hover:bg-[#f0c761]"
+          >
+            Play
+            <ArrowRight className="h-4 w-4" />
+          </a>
+        </div>
       </div>
     </header>
   );
@@ -230,12 +301,12 @@ function Hero({ setPage }: { setPage: (page: PageKey) => void }) {
               Play in browser
             </a>
             <PageLink
-              page="world"
+              page="start"
               setPage={setPage}
               className="inline-flex items-center justify-center gap-2 rounded border border-white/20 bg-white/8 px-5 py-3 font-bold text-white backdrop-blur transition hover:bg-white/14"
             >
-              <Map className="h-5 w-5" />
-              Explore the world
+              <Compass className="h-5 w-5" />
+              Follow the newbie guide
             </PageLink>
           </div>
         </motion.div>
@@ -304,7 +375,7 @@ function HomePage({ setPage }: { setPage: (page: PageKey) => void }) {
               ["Guilds", "guilds", "Commands, resources, unlocks, and playstyle details for the major guild paths.", Crown],
               ["Systems", "systems", "Professions, reputation, waypoints, Eternal Dungeons, dailies, achievements, and Darkflow.", Hammer],
               ["Races", "races", "Playable heritages with origin flavor and identity hooks.", Globe2],
-              ["Getting Started", "start", "A practical first-session route through city services, commands, guilds, and survival habits.", Compass],
+              ["Newbie Guide", "start", "Eight stages from your first commands through guilds, exploration, crafting, and endgame.", Compass],
               ["Help Files", "help", "Search in-game help, guild notes, wizard docs, LPC references, and copied source manuals.", BookOpen],
             ].map(([title, key, copy, Icon]) => {
               const LucideIcon = Icon as typeof Map;
@@ -848,78 +919,6 @@ function RacesPage() {
   );
 }
 
-function StartPage() {
-  return (
-    <>
-      <PageHero
-        kicker="Getting started"
-        title="A practical first-session path."
-        copy="DarkWind is old and deep, so the best first experience is to learn the core loop, pick a guild direction, and use the browser client panes instead of trying to memorize everything."
-        image="hero-castle-gate"
-      />
-      <section className="grain py-20">
-        <div className="mx-auto grid max-w-7xl gap-4 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
-          {[
-            ["1", "Create and orient", "Use the browser client, read the room, find city services, and learn the prompt, score, inventory, and help habits."],
-            ["2", "Try nearby areas", "Stay near Darkwind City at first. Early areas teach combat pacing, looting, retreating, and reading descriptions."],
-            ["3", "Choose a guild", "Pick based on mechanics: Bard performance, Druid nwyfre, Monk chi, Ranger survival, Ninja marks, or a classic path."],
-            ["4", "Learn systems slowly", "Professions, reputation, wayshards, daily rewards, and divine systems are long-term layers, not day-one chores."],
-            ["5", "Ask players", "DarkWind is intentionally mysterious. Player knowledge is part of the game loop, and social channels matter."],
-            ["6", "Return tomorrow", "Daily streaks, guild training, crafting, exploration, and area discovery reward repeated play."],
-          ].map(([step, title, copy]) => (
-            <motion.article key={step} {...fadeUp} className="panel p-6">
-              <div className="font-rune text-3xl text-[#d6a94b]">{step}</div>
-              <h2 className="mt-4 font-display text-2xl text-white">{title}</h2>
-              <p className="mt-3 leading-7 text-[#c8bfad]">{copy}</p>
-            </motion.article>
-          ))}
-        </div>
-      </section>
-      <section className="bg-[#0c1015] py-20">
-        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
-          <motion.div {...fadeUp}>
-            {sectionKicker("Client")}
-            <h2 className="font-display text-4xl font-semibold text-white sm:text-5xl">
-              Browser play is the recommended first route.
-            </h2>
-            <p className="mt-5 text-lg leading-8 text-[#d8cfbd]">
-              Darkflow gives new players a modern terminal with panels, maps, truecolor, sound hooks, GMCP
-              vitals, guild panes, and notifications while preserving traditional MUD play.
-            </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a
-                href="https://play.darkwind.ai/"
-                className="inline-flex items-center justify-center gap-2 rounded border border-[#d6a94b] bg-[#d6a94b] px-5 py-3 font-bold text-[#15100a] transition hover:bg-[#f1c965]"
-              >
-                <Monitor className="h-5 w-5" />
-                Open Darkflow
-              </a>
-              <a
-                href="telnet://darkwind.ai:4242"
-                className="inline-flex items-center justify-center gap-2 rounded border border-white/20 bg-white/8 px-5 py-3 font-bold text-white backdrop-blur transition hover:bg-white/14"
-              >
-                <Terminal className="h-5 w-5" />
-                Telnet
-              </a>
-            </div>
-          </motion.div>
-          <motion.div {...fadeUp} className="panel p-5">
-            <div className="rounded border border-white/10 bg-black/60 p-4 font-rune text-sm leading-7 text-[#d7d0be]">
-              <div className="text-[#d6a94b]">Connected to DarkWind</div>
-              <div className="mt-4 text-[#8bd3ff]">You stand before the gates of Darkwind.</div>
-              <div>Obvious exits: north, south, east, west</div>
-              <div className="mt-3 text-[#f2e98f]">A wayshard hums with quiet blue fire.</div>
-              <div className="text-[#8effad]">A bard tunes a lute nearby.</div>
-              <div className="mt-5 text-[#d6a94b]">&gt; look</div>
-              <div>The city smells of rain, iron, horse leather, and old magic.</div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </>
-  );
-}
-
 function Footer({ setPage }: { setPage: (page: PageKey) => void }) {
   return (
     <footer className="border-t border-white/10 bg-[#060708] py-10">
@@ -953,9 +952,9 @@ function PageBody({ page, setPage }: { page: PageKey; setPage: (page: PageKey) =
     case "races":
       return <RacesPage />;
     case "start":
-      return <StartPage />;
+      return <NewbieTutorialPage openHelpDoc={(docId) => goHelpDoc(docId, setPage)} />;
     case "help":
-      return <HelpPage />;
+      return <HelpPage openTutorial={() => go("start", setPage)} />;
     default:
       return <HomePage setPage={setPage} />;
   }
@@ -969,6 +968,27 @@ export default function Current() {
     window.addEventListener("popstate", onPopState);
     return () => window.removeEventListener("popstate", onPopState);
   }, []);
+
+  useEffect(() => {
+    const metadata = pageMetadata[page];
+    const canonicalUrl = `https://www.darkwind.ai${metadata.path}`;
+    const description = document.querySelector<HTMLMetaElement>('meta[name="description"]');
+    const canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    const openGraphTitle = document.querySelector<HTMLMetaElement>('meta[property="og:title"]');
+    const openGraphDescription = document.querySelector<HTMLMetaElement>('meta[property="og:description"]');
+    const openGraphUrl = document.querySelector<HTMLMetaElement>('meta[property="og:url"]');
+    const twitterTitle = document.querySelector<HTMLMetaElement>('meta[name="twitter:title"]');
+    const twitterDescription = document.querySelector<HTMLMetaElement>('meta[name="twitter:description"]');
+
+    document.title = metadata.title;
+    description?.setAttribute("content", metadata.description);
+    canonical?.setAttribute("href", canonicalUrl);
+    openGraphTitle?.setAttribute("content", metadata.title);
+    openGraphDescription?.setAttribute("content", metadata.description);
+    openGraphUrl?.setAttribute("content", canonicalUrl);
+    twitterTitle?.setAttribute("content", metadata.title);
+    twitterDescription?.setAttribute("content", metadata.description);
+  }, [page]);
 
   return (
     <Shell page={page} setPage={setPage}>

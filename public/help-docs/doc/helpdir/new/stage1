@@ -1,0 +1,16 @@
+|CKB              Stage 1 of 8: Your First Minutes|XX0
+|WKO=====================================================================
+|YKOA short tutorial starts automatically for new characters and teaches
+looking, moving, gear, and safe combat. Darkflow shows it in a hover window.
+Type |YKBtutorial|YKO to see your current step and
+|YKBtutorial continue|YKO to continue in any client.
+
+Learn to look at everything (|YKBxa <thing>|YKO), check your
+|YKBinventory|YKO, and read your |YKBscore|YKO. If you ever get lost,
+|YKBncot|YKO returns you to the Center of Town, and the Newbie Tome
+Dispenser there (|YKBpull lever|YKO, |YKBread tome|YKO) holds the town
+directions.|XX0
+
+|WKBRead: |CKBhelp tutorial, help basics, help movement, help new|XX0
+|WKBNext: |CKBhelp stage2|WKB    Index: |CKBhelp guide|XX0
+# keywords: tutorial, first steps
