@@ -60,10 +60,12 @@ export type AreaSpotlight = {
 
 export type Race = {
   name: string;
-  image: string;
+  slug: string;
   origin: string;
   note: string;
 };
+
+export type RaceAvatarGender = "female" | "male";
 
 export type SystemFeature = {
   title: string;
@@ -89,6 +91,7 @@ export type God = {
 };
 
 export const imagePath = (name: string) => `/images/${name}.jpg`;
+export const raceAvatarPath = (gender: RaceAvatarGender, slug: string) => `/assets/avatars/${gender}-${slug}.png`;
 
 export const maturityStats: MaturityStat[] = [
   {
@@ -107,9 +110,9 @@ export const maturityStats: MaturityStat[] = [
     detail: "Highlighted live guilds with distinct playstyles, resources, commands, and progression.",
   },
   {
-    value: "17",
+    value: "31",
     label: "playable peoples",
-    detail: "From humans and elves to ogres, northmen, kereians, and stranger bloodlines.",
+    detail: "From regional peoples and fae bloodlines to dragons, fiends, and stranger forms.",
   },
 ];
 
@@ -838,23 +841,192 @@ export const worldRegions: Region[] = [
 ];
 
 export const races: Race[] = [
-  { name: "Human", image: "race-human", origin: "Geshtai", note: "Flexible, familiar, and woven into nearly every city story." },
-  { name: "Elf", image: "race-elf", origin: "Old forests", note: "Graceful bloodlines tied to magic, memory, and ancient conflict." },
-  { name: "Half-Elf", image: "race-half-elf", origin: "Between peoples", note: "Adaptable outsiders who often understand more than one world." },
-  { name: "Drow", image: "race-drow", origin: "Deep places", note: "Dangerous, elegant, and marked by the shadows below." },
-  { name: "Dark Elf", image: "race-dark-elf", origin: "Fallen courts", note: "A darker branch of elven history with its own edge." },
-  { name: "Dwarf", image: "race-dwarf", origin: "Stone halls", note: "Hardy, practical, and naturally at home around metal and mountain." },
-  { name: "Gnome", image: "race-gnome", origin: "Hidden enclaves", note: "Clever, strange, and often underestimated until it is too late." },
-  { name: "Halfling", image: "race-halfling", origin: "Quiet roads", note: "Small, quick, and excellent at surviving larger people's mistakes." },
-  { name: "Goblin", image: "race-goblin", origin: "Rough warrens", note: "Scrappy survivors with a talent for trouble and improvisation." },
-  { name: "Ogre", image: "race-ogre", origin: "Wild borders", note: "Huge, blunt, and hard to ignore in a fight." },
-  { name: "Troll", image: "race-troll", origin: "Old wilds", note: "Regenerative, brutal, and tied to the rougher edges of the world." },
-  { name: "Northman", image: "race-northman", origin: "Hyperborea", note: "Cold-born and hard-tested by northern roads." },
-  { name: "Frost Giant", image: "race-frost-giant", origin: "Frozen heights", note: "A towering bloodline with the weight of winter behind it." },
-  { name: "Centaur", image: "race-centaur", origin: "Open plains", note: "Swift, proud, and visibly different from city-born peoples." },
-  { name: "Lizardman", image: "race-lizardman", origin: "Warm wetlands", note: "Scaled, patient, and tied to older instincts." },
-  { name: "Kereian", image: "race-kereian", origin: "Kerei", note: "A people shaped by the eastern continent's culture and dangers." },
-  { name: "Blancmange", image: "race-blancmange", origin: "Strange origins", note: "One of DarkWind's weirder reminders that the world is not generic." },
+  {
+    name: "Arctic Elf",
+    slug: "arctic-elf",
+    origin: "Hyperborea",
+    note: "Quick, bright northern elves shaped by ice, old ruins, and territorial wars.",
+  },
+  {
+    name: "Barbarian",
+    slug: "barbarian",
+    origin: "Canith",
+    note: "Rugged humans whose lives favor strength, stamina, honesty, and the common good.",
+  },
+  {
+    name: "Crannian Gnome",
+    slug: "crannian-gnome",
+    origin: "Talamh Darag",
+    note: "Earth-dwelling treasure guardians with quick hands, clever minds, and strange appetites.",
+  },
+  {
+    name: "Darkwinder",
+    slug: "darkwinder",
+    origin: "Darkwind",
+    note: "Adaptable city-born humans known for trade, adventure, and an affinity for reincarnation.",
+  },
+  {
+    name: "Desert Dwarf",
+    slug: "desert-dwarf",
+    origin: "Souvrael",
+    note: "Strong, hardy desert settlers accustomed to magic, harsh sun, and long thirst.",
+  },
+  {
+    name: "Desert Nomad",
+    slug: "desert-nomad",
+    origin: "Souvrael",
+    note: "Wandering people shaped by faith, hospitality, endurance, and the open sand.",
+  },
+  {
+    name: "Dragon",
+    slug: "dragon",
+    origin: "Dragon class rites",
+    note: "Enormous mythic bodies whose scale changes travel, equipment, appetite, and language.",
+  },
+  {
+    name: "Faerie",
+    slug: "faerie",
+    origin: "Faerie places",
+    note: "Small, winged woodland folk with keen wisdom and a mischievous reputation.",
+  },
+  {
+    name: "Glavian",
+    slug: "glavian",
+    origin: "Glavia",
+    note: "Open-minded mountain humans from a peaceful kingdom tested by demonic forces.",
+  },
+  {
+    name: "Gypsy",
+    slug: "gypsy",
+    origin: "Wanderer camps",
+    note: "Bright-clothed travelers, performers, fortune tellers, and quick-fingered storytellers.",
+  },
+  {
+    name: "Halfling",
+    slug: "halfling",
+    origin: "Darkwind region",
+    note: "Small, charming homebodies with quick reflexes and a taste for food, comfort, and fun.",
+  },
+  {
+    name: "High Elf",
+    slug: "high-elf",
+    origin: "Darkwind forests",
+    note: "Bright, graceful forest elves with keen senses, old magic, and fragile constitutions.",
+  },
+  {
+    name: "Hyperborean Gnome",
+    slug: "hyperborean-gnome",
+    origin: "Hyperborea",
+    note: "Nimble, clever northern folk with a surprising tolerance for hostile environments.",
+  },
+  {
+    name: "Ice Gnoll",
+    slug: "ice-gnoll",
+    origin: "Hyperborea",
+    note: "Strong, fast northern predators driven more by appetite than mercy.",
+  },
+  {
+    name: "Ice Ogre",
+    slug: "ice-ogre",
+    origin: "Hyperborea",
+    note: "Huge mercenary brutes with immense strength, rugged bodies, and little subtlety.",
+  },
+  {
+    name: "Kender",
+    slug: "kender",
+    origin: "Hidden Darkwind enclaves",
+    note: "Small, fearless wanderers with quick hands, restless curiosity, and questionable caution.",
+  },
+  {
+    name: "Northman",
+    slug: "northman",
+    origin: "Grimsfjord",
+    note: "Hardy northern humans and capable hagglers shaped by cold roads and long trade routes.",
+  },
+  {
+    name: "Pixie",
+    slug: "pixie",
+    origin: "Talamh Darag",
+    note: "Small winged tricksters whose intelligence and magic make other people's plans worse.",
+  },
+  {
+    name: "Rift Duergar",
+    slug: "rift-duergar",
+    origin: "Rift depths",
+    note: "Strong, suspicious subterranean dwarves twisted by old darkness and hardened under stone.",
+  },
+  {
+    name: "Scro",
+    slug: "scro",
+    origin: "Wildspace outposts",
+    note: "Disciplined, mentally capable orcs adapted to wildspace and organized war.",
+  },
+  {
+    name: "Shel-Zaranite",
+    slug: "shel-zaranite",
+    origin: "Shel-zaran",
+    note: "Agile underground elves steeped in a hidden city's customs and forgotten gods.",
+  },
+  {
+    name: "Sidhe",
+    slug: "sidhe",
+    origin: "Talamh Darag",
+    note: "Unseelie, winged fae marked by vampiric corruption, potent magic, and frail bodies.",
+  },
+  {
+    name: "Silver Elf",
+    slug: "silver-elf",
+    origin: "Northern road",
+    note: "Graceful moon elves who honor Luna and keep their keenest eyes for the night.",
+  },
+  {
+    name: "Souvraeli",
+    slug: "souvraeli",
+    origin: "Souvrael",
+    note: "Cosmopolitan desert humans made quick learners and cunning negotiators by city life.",
+  },
+  {
+    name: "Stone Dwarf",
+    slug: "stone-dwarf",
+    origin: "Darkwind underworld",
+    note: "Stubborn surface dwarves devoted to mines, stonework, tradition, and Mitra.",
+  },
+  {
+    name: "Swamp Troll",
+    slug: "swamp-troll",
+    origin: "Troll marshes",
+    note: "Large, hard-hitting marsh survivors with powerful healing and a dislike of sharp points.",
+  },
+  {
+    name: "Sylph",
+    slug: "sylph",
+    origin: "Kerei",
+    note: "Winged high-air fae from mountains and tall trees, graceful in mind and motion.",
+  },
+  {
+    name: "Thraxian",
+    slug: "thraxian",
+    origin: "Thrax, Hyperborea",
+    note: "Draconian humanoids with wings, fiery breath, physical power, and an alien presence.",
+  },
+  {
+    name: "Uruk",
+    slug: "uruk",
+    origin: "Darkwind borderlands",
+    note: "Warlike orcs who prize strength, stamina, weapons, and survival in rough ground.",
+  },
+  {
+    name: "Wayfarian",
+    slug: "wayfarian",
+    origin: "Wayfare",
+    note: "Elves marked by Mitra's blessing and a holy aura born from generations of resistance.",
+  },
+  {
+    name: "Yugoloth",
+    slug: "yugoloth",
+    origin: "Deathknight bargains",
+    note: "A powerful fiendish bargain-form resistant to evil and chaos but vulnerable to holy order.",
+  },
 ];
 
 export const systems: SystemFeature[] = [

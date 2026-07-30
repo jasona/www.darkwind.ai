@@ -26,10 +26,12 @@ import {
   imagePath,
   loreTimeline,
   maturityStats,
+  raceAvatarPath,
   races,
   systems,
   worldRegions,
   type GuildRole,
+  type RaceAvatarGender,
   type Region,
 } from "../data/darkwindSnapshot";
 import HelpPage from "./HelpPage";
@@ -428,16 +430,18 @@ function PageHero({
   title,
   copy,
   image,
+  imageSrc,
 }: {
   kicker: string;
   title: string;
   copy: string;
   image: string;
+  imageSrc?: string;
 }) {
   return (
     <section className="relative overflow-hidden pt-28">
       <div className="absolute inset-0 opacity-38">
-        <img src={imagePath(image)} alt="" className="h-full w-full object-cover" />
+        <img src={imageSrc ?? imagePath(image)} alt="" className="h-full w-full object-cover" />
       </div>
       <div className="absolute inset-0 bg-gradient-to-b from-[#07090b]/80 via-[#07090b]/92 to-[#07090b]" />
       <div className="relative mx-auto max-w-7xl px-4 pb-16 pt-16 sm:px-6 lg:px-8">
@@ -891,28 +895,62 @@ function AboutPage() {
 }
 
 function RacesPage() {
+  const [avatarGender, setAvatarGender] = useState<RaceAvatarGender>("female");
+
   return (
     <>
       <PageHero
         kicker="Playable peoples"
-        title="Seventeen heritages, each with a place in the world."
-        copy="Character identity starts before guild choice. Heritage influences fantasy, culture, and how a player imagines moving through the old conflicts of Geshtai and beyond."
+        title="Thirty-one peoples and forms, each with a place in the world."
+        copy="Character identity starts before guild choice. Race influences fantasy, culture, and how a player imagines moving through the old conflicts of Geshtai and beyond."
         image="race-human"
+        imageSrc={raceAvatarPath(avatarGender, "darkwinder")}
       />
       <section className="grain py-20">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-3 px-4 sm:grid-cols-3 sm:px-6 lg:grid-cols-5 lg:px-8 xl:grid-cols-6">
-          {races.map((race) => (
-            <motion.article key={race.name} {...fadeUp} className="group overflow-hidden rounded border border-white/10 bg-white/5">
-              <div className="aspect-[3/4] overflow-hidden">
-                <img src={imagePath(race.image)} alt={race.name} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
-              </div>
-              <div className="p-3">
-                <h2 className="font-display text-base text-white">{race.name}</h2>
-                <p className="mt-1 text-xs text-[#d6a94b]">{race.origin}</p>
-                <p className="mt-2 text-xs leading-5 text-[#b6ad9c]">{race.note}</p>
-              </div>
-            </motion.article>
-          ))}
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-8 flex flex-col gap-4 border-b border-white/10 pb-6 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <div className="text-xs font-semibold uppercase tracking-[0.24em] text-[#d6a94b]">Race portraits</div>
+              <p className="mt-2 max-w-2xl text-sm leading-6 text-[#aaa294]">
+                Browse the current race roster and switch between the two available portrait sets.
+              </p>
+            </div>
+            <div className="inline-flex w-fit rounded border border-white/10 bg-black/25 p-1" aria-label="Race portrait set">
+              {(["female", "male"] as RaceAvatarGender[]).map((gender) => (
+                <button
+                  key={gender}
+                  type="button"
+                  aria-pressed={avatarGender === gender}
+                  onClick={() => setAvatarGender(gender)}
+                  className={`rounded px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] transition ${
+                    avatarGender === gender
+                      ? "bg-[#d6a94b] text-[#11100d]"
+                      : "text-[#b6ad9c] hover:bg-white/5 hover:text-white"
+                  }`}
+                >
+                  {gender}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className="grid grid-cols-1 gap-4 min-[460px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            {races.map((race) => (
+              <motion.article key={race.name} {...fadeUp} className="group overflow-hidden rounded border border-white/10 bg-white/5">
+                <div className="aspect-square overflow-hidden bg-black/20">
+                  <img
+                    src={raceAvatarPath(avatarGender, race.slug)}
+                    alt={`${race.name}, ${avatarGender} portrait`}
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-4">
+                  <h2 className="font-display text-xl text-white">{race.name}</h2>
+                  <p className="mt-1 text-xs font-semibold uppercase tracking-[0.12em] text-[#d6a94b]">{race.origin}</p>
+                  <p className="mt-3 text-sm leading-6 text-[#b6ad9c]">{race.note}</p>
+                </div>
+              </motion.article>
+            ))}
+          </div>
         </div>
       </section>
     </>
