@@ -20,6 +20,22 @@ Equipment modifications such as hardening, lightening, and flaming effects are s
 
 Guild storage, shop storage, boats, ponies, and similar helpers do not preserve equipment through reboot. Money on your character and in the bank does.
 
+## Equipment Loadouts
+
+Use `loadout save <name>` to record your currently worn armor and wielded
+weapons. `loadout use <name>` switches to that complete setup outside combat,
+including removing standard equipment from slots that were empty when the
+loadout was saved.
+
+Every referenced item must be directly in your inventory before switching.
+Loadouts do not retrieve or recreate gear, and they do not change installed
+cyberware or other internal equipment. Use `loadout show <name>` to check
+whether all of a preset's items are available.
+
+Normal equipment restrictions still apply. If an item prevents a switch after
+it begins, the game attempts to restore the equipment you were using before
+the switch.
+
 ## Weapons
 
 See [Specialization](specialization.md) for weapon and armor specialization.

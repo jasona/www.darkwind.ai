@@ -1,0 +1,32 @@
+Fighter Guild Advancement
+-------------------------
+
+Fighters advance through battle. Every worthy kill earns Fighter XP, and
+your guild level (1 to 15) rises automatically when you have earned enough.
+
+Earning Fighter XP:
+- Any NPC kill where you struck the killing blow, or dealt at least a
+  tenth of the victim's health, awards Fighter XP to everyone in the
+  group who qualifies.
+- Tougher prey is worth more. Rewards taper when prey is more than five
+  levels beneath you and reach nothing at fifteen levels beneath you.
+  Bosses carry large bonuses.
+- Variety pays. Hunting the same spawn over and over decays the reward;
+  ranging widely keeps it at full value.
+
+Guild levels:
+- Levels advance on their own the moment you have earned enough XP.
+- Your guild level can never exceed your character level, and your
+  combined guild levels can never exceed your character level. XP earned
+  while you are held back is banked, and the levels pop when you next
+  advance your character.
+- Guild level 15 is the pinnacle. XP earned beyond it is recorded, but
+  buys nothing further.
+
+Commands:
+- 'fstats' shows your guild level and Fighter XP.
+- 'cost' and 'advance guild' at the Grand Hall report your progress.
+- Skills still unlock by guild level; see 'fs' for the list.
+
+Your battle record survives leaving the guild. Should you return, your
+standing is restored.

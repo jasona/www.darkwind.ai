@@ -1,0 +1,20 @@
+|WKBNAME|000
+    clear_shield_callback
+
+|WKBSYNOPSIS|000
+    |YK0int|000 |CKBclear_shield_callback|000(|YK0closure|000 |GKBcDepleted|000)
+    |YK0int|000 |CKBclear_shield_callback|000(|YK0closure|000 |GKBcDepleted|000,
+        |YK0int|000 |GKBiType|000)
+
+|WKBDESCRIPTION|000
+    Removes and returns the shield points owned by the exact |GKBcDepleted|000
+    closure in the generic pool or optional damage-type pool. This is explicit
+    cleanup, so it does not invoke the callback.
+
+    The same retained closure passed to |CKBadd_shield|000() must be used.
+
+    |CKBclear_shield_callback|000() is defined in /secure/living.c
+
+|WKBSEE ALSO|000
+    |CKBadd_shield|000(L), |CKBquery_shield_callback|000(L),
+    |CKBremove_shield|000(L)

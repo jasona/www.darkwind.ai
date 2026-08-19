@@ -1,0 +1,25 @@
+|WKO=====================================================================
+|YKOMoongates connect Darkwind to Dailos, Markas, and Tekal. At the old
+Lunar Gate, use |YKBenter dailos|YKO, |YKBenter markas|YKO, or
+|YKBenter tekal|YKO. The matching portal chambers in the Plaza of Three
+Moons work the same way.
+
+Moon phases change how quickly a gate opens, but never close a route:
+
+  - A visible destination moon provides immediate passage.
+  - If the destination is new, the Afterlight Relay borrows light from
+    the brightest visible moon. Hold still for 3 seconds.
+  - If all three moons are new, the Eclipse Reserve releases stored
+    afterlight. Hold still for 8 seconds.
+
+Borrowed and reserve passages cost nothing and use no limited charge.
+Moving away, disconnecting, dying, or entering combat before the gate
+opens breaks the gathering pattern; simply return and try again.
+
+Look at a lunar gate, portal, or moonstone to see its current phase and
+travel mode. Returning from a moon to Darkwind is always immediate.|XX0
+
+|WKBSee also: |YKBworld, wayshards, ferries|XX0
+
+# keywords: lunar travel, moons, afterlight relay, eclipse reserve
+# alias: moongate, lunar gate, moon gate, moon travel

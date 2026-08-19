@@ -1,8 +1,10 @@
-                       |BKB-= |CKBSteal Coins |BKB=-
-               
-|MKOThis command allows you to steal a random amount of coins from
-a player or mob.  The chance of success is based on your dexterity 
-(mental and physical) and your guild level.
+                      Steal Coins
+---------------------------------------------------------------------
 
-|CKOGLVL required: |GKB2
-|CKOSyntax: |YKOsteal <target>               |CKOCost: |WKO~20
+Lift a bounded fraction of a target's carried coins. Training and Light
+Fingers improve the fraction, but even a perfect attempt never empties a
+whole purse. Suitable NPC theft can grant Thief GXP; noticed crime can
+start an incident.
+
+  GLVL: 2
+  Syntax: steal|tsteal|lift <target>

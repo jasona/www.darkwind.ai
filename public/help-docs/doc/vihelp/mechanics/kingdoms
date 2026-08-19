@@ -1,0 +1,35 @@
+Kingdoms.
+
+Kingdoms are player-ruled realms. Each kingdom has a Ruler, a charter, a
+roster of citizens, its own nobility titles, and a sigil carried by every
+citizen.
+
+Founding. New kingdoms are chartered and activated with the help of the
+game administration. If you want a throne, speak with the admins.
+
+Joining. Citizenship is by induction, in person. A noble with the power to
+induct must stand in the same room as you and make the offer. You are then
+asked whether you wish to become a citizen. Answer yes or no. You must be
+at least level 5 and cannot already belong to another kingdom.
+
+Citizenship. You carry your kingdom's sigil. It cannot be dropped, sold, or
+stolen, and it marks you as a citizen to anyone who looks at you. You also
+gain the kingdom channel. Type kchat followed by a message to speak to
+every citizen. Type ekchat followed by a message to emote to them.
+
+Nobility. The Ruler may create custom titles. Each title can grant any mix
+of four powers: inducting members, removing members, assigning titles, and
+owning a castle. New citizens start with the title Citizen. The title Ruler
+is reserved for the kingdom's owner.
+
+Management. The Ruler types managekingdom to open the management menu, the
+Ministry of Administrative Affairs. The Deeds And Titles section sets and
+views the charter, creates, edits, and removes titles, views citizens,
+inducts new members, bestows titles, and strips citizenship. The Heraldry
+And Propaganda section names the sigil, chooses its colors, and writes its
+descriptions. The Castle Keep And Environs section is the office of the
+Royal Engineer.
+
+The whole kingdom hears arrivals and departures on the kingdom channel.
+
+Related help: help clans, help kchat.

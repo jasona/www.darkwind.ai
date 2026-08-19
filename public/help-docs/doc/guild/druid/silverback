@@ -15,10 +15,12 @@ incoming combat damage.  The druid takes none of the damage from a
 blocked hit; the silverback spends its own strength instead.
 
 The silverback has a pool of guardian strength based on Druid guild
-level and Silverback training.  The pool also fades naturally over
-time, so higher training lets it stay longer and endure more punishment.
-When that strength is gone, the gorilla does not die.  It has simply
-had enough, and takes off back into the wild current.
+level, Silverback training, and your maximum health.  Higher training
+protects between one-half and two full health bars, with the old
+guild-level calculation retained as a minimum.  Its time in the world
+is tracked separately, so taking damage no longer shortens its natural
+duration.  If the final blow exceeds its remaining strength, only the
+remaining amount is blocked.
 
 The silverback is a protector, not a normal target.  Other players and
 creatures cannot attack it directly.

@@ -1,0 +1,13 @@
+|RKB☾  VAMPHELP · PREPARED RITUALS  ☽|000
+|CK0════════════════════════════════════════════════════════════|000
+
+Rituals are durable Blood Sorcery preparations, not instant powers. Preparing
+requires attuned Blood Sorcery, Vitae, an open slot, no combat, and an approved
+anchor such as the Covenant's Red Chapel or coffin vault.
+
+  |GKBritual prepare <name>|000
+  |GKBritual invoke <name> [target]|000
+
+Invocation consumes one prepared use. Prepared uses survive logout and remort.
+
+|CK0Next:|000 |GKBvamphelp ritual catalog|000

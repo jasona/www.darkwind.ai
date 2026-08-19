@@ -1,0 +1,172 @@
+|RKB☾  VAMPIRE · THE CRIMSON COVENANT  ☽|000
+|CK0════════════════════════════════════════════════════════════|000
+
+Vampire is an open remort class. It is a permanent supernatural nature, not a
+guild, and composes with your guild. A character may have only one class.
+Remort level 1 characters may find the First Grave below Stoker's church and
+type |GKBattune shrine|000 to accept the Embrace.
+
+The First Grave is the public threshold to the Crimson Covenant. After the
+Embrace, descend into its safe sanctuary: gather in the Crimson Hall, bind a
+coffin in the Vault of Sealed Earth, and work Blood Sorcery in the Red Chapel.
+The sanctuary supplies no free blood and bypasses none of the class's limits.
+
+The class revolves around Vitae, Hunger, prey selection, prepared discipline
+loadouts, and regional Exposure. Vitae does not regenerate or decay. Feeding
+restores it; discipline powers spend it. Hunger is derived from the remaining
+Vitae: Sated, Stirring, Ravenous, or Frenzy.
+
+|MKBESSENTIAL COMMANDS|000
+
+  |GKBvamphelp [topic|command|power]|000
+  |GKBvampwho|000 / |GKBvwho|000 / |GKBvampires|000
+  |GKBvamprepair|000
+  |GKBvampire|000 / |GKBvscore|000
+  |GKBvampire abilities|000
+  |GKBvampire progression|000
+  |GKBfeed <prey> [careful|quick|deep|drain]|000
+  |GKBfeed <carefully|quickly|deeply> from <prey>|000
+  |GKBfeed from <corpse>|000
+  |GKBbloodsense [target|memories]|000
+  |GKBattune <discipline, discipline, ...>|000
+  |GKBdiscipline list|000
+  |GKBdiscipline <power> [target]|000
+  |GKBritual [list|prepare <name>|invoke <name> [target]]|000
+  |GKBbloodline [list|choose <name>|vault <store|list|use #>]|000
+  |GKBcoffin [bind|rest]|000
+  |GKBmask shed|000
+  |GKBvchat <message>|000
+
+|MKBHUNGER, BLOOD, AND THE HUNT|000
+
+Feeding establishes one active blood profile: Martial, Predatory, Mystic,
+Noble, Vital, or Feral / Profane. Quality ranges from Common through Mythic.
+Only living NPC prey and non-player corpses are valid; bloodless creatures,
+players, protected prey, and unearned shared-combat targets are rejected.
+Careful feeding can leave no evidence when no one notices. Obvious feeding is
+seen by nearby living witnesses, and each confirmed witness worsens the local
+record. Deep or lethal feeding creates much more Exposure even in private;
+feeding on Dawnward's sanctified ground creates especially durable evidence.
+
+|MKBEXPOSURE AND BLOOD MEMORIES|000
+
+Exposure is tracked separately in every area. Its tiers are Quiet (0-9),
+Whispers (10-39), Suspected (40-74), and Hunted (75-100). 'bloodsense' shows
+the local tier, latest cause, witness count, and known regional totals;
+'bloodsense memories' lists significant prey preserved permanently in your
+blood. Fallows witnesses can also be asked what rumors name you. Ordinary
+evidence fades during quiet time, sanctified evidence fades more slowly, and
+coffin rest or a Nameless mask can actively reduce it. Hunted Vampires may be
+recognized by Dawnward sentinels or pursued by a blood hunter.
+
+Most significant boss feedings become permanent Blood Memories and grant
+Vampire GXP. Four curated bosses also leave a resonance with a permanent
+behavioral reward. Lady Vesper strengthens Presence's Awe and changes court
+recognition. Lord Blackbriar lets active Obfuscate defeat one witness during
+careful feeding. Nhal Serev teaches Bloodsense to identify bloodless prey.
+Vaelkor teaches Bloodsense to identify the deep-feed and drain thresholds.
+Because Lady Vesper, Lord Blackbriar, and Nhal Serev have no living blood,
+meaningful participation in defeating a curated boss can preserve its memory
+through the normal class kill-award contract. Use 'bloodsense memories' to
+see each known resonance and its exact reward.
+Attuned Auspex previews a curated resonance when Bloodsense examines its boss.
+
+|MKBPROGRESSION AND BLOOD MASTERY|000
+
+Vampire GXP survives remort and advances five milestones: The Embrace,
+Bloodline Rite, Night Court, Crimson Dominion, and First Night. The final
+milestone also requires remort level 750. Knowledge widens as milestones open,
+but only three disciplines may normally be attuned; First Night grants a
+fourth slot. Attunement changes only at a bound coffin, the First Grave, the
+Covenant's Red Chapel, or approved Vespercourt anchors.
+
+GXP and remorts also increase Blood Mastery continuously. Seventy-five percent
+of its eventual power comes from an asymptotic GXP curve; the final twenty-five
+percent grows across the remort journey through R1000. Blood Mastery improves
+bounded discipline damage, healing, duration, and passive combat effects. It
+also modestly improves feeding yield, haven recovery, Torpor recovery, and the
+Night Familiar. It never raises maximum Vitae or removes Hunger, sunlight,
+fire, or holy weaknesses. Use 'vscore' to see the current percentage.
+
+|MKBBLOODLINES|000
+
+At 1,000 GXP choose one permanent bloodline: House Vesper, The Nameless, The
+Bloodwrights, The Red Hunt, or The Graveborn. Bloodwrights may vault up to
+three active blood profiles, which degrade to Common when recalled.
+
+|MKBDISCIPLINES AND POWERS|000
+
+Each discipline is now a complete mastery track. Foundation powers open when
+the discipline is learned; deeper powers require 15%, 35%, 55%, 75%, or 85%
+Blood Mastery as listed by 'discipline list'. Celerity, Potence, Fortitude,
+Auspex, Obfuscate, Presence, Protean, Animalism, and Blood Sorcery retain their
+existing passive and legacy invocations. Dominate opens at Night Court, or at
+Bloodline Rite for House Vesper. First Night opens Oblivion. Existing
+invocations such as Mend, Mist, Awe, Claws, and the Night Familiar remain
+available for compatibility.
+
+Every catalog power declares its Vitae cost, cooldown, discipline, mastery,
+target, Hunger behavior, day/night behavior, profile and bloodline mutations,
+regional Exposure, boss fallback, and cleanup policy. Ancient encounter powers
+share a Vampire major cooldown so several capstones cannot be chained. Bosses
+receive bounded damage or debuffs instead of executions or hard control.
+Players are never valid targets for Vampire control powers.
+
+Blood profiles mutate matching powers: Martial favors Potence and Fortitude;
+Predatory favors Celerity and Animalism; Mystic favors Auspex and Blood
+Sorcery; Noble favors Presence, Dominate, and Obfuscate; Vital favors
+Fortitude and blood recovery; Feral / Profane favors Protean, Animalism, and
+violent Potence at greater frenzy risk. Potent, Exceptional, and Mythic blood
+add bounded depth without permanently unlocking abilities.
+
+|MKBPREPARED RITUALS|000
+
+Blood Sorcery can prepare Ward of the Threshold, Sanguine Compass, Seal of
+Quiet Earth, Draught of False Life, and Hunter's Malediction. Preparation
+costs Vitae and requires an approved Vampire anchor outside combat. The Red
+Chapel and Vault of Sealed Earth are Covenant anchors. Prepared uses persist
+through logout and remort and are consumed on invocation. Bloodwrights prepare
+more efficiently and receive one additional ritual slot.
+
+|MKBWHERE TO BEGIN|000
+
+New Vampires should begin with |GKBvamphelp start|000. Use |GKBvamphelp status|000 to
+decode every field shown by vscore. Use 'vamphelp commands' for
+the compact topic tree, or ask for a command or power directly, such as
+'vamphelp feed' or 'vamphelp quickening'.
+
+|MKBREPAIRING THE COVENANT|000
+
+|YKBVamprepair|000 is a recovery command, not routine maintenance. It preserves
+Vampire progression while refreshing the live Covenant soul, autoload,
+registered command paths, Vitae registration, runtime hooks, and client
+status. It preserves the exact current Vitae amount and never refills it.
+Use it after a Vampire update, when class commands are missing, or when an
+architect directs you to repair the installation. Active Vampire power
+effects end during the refresh.
+
+|MKBOLD RIVALRIES|000
+
+Moonwold werewolves recognize Vampires as ancestral rivals. In their caverns,
+each side gains a small offensive edge against the other. Vespercourt instead
+recognizes lineage and the Blood Memories carried into court.
+
+|MKBSUNLIGHT, HAVEN, AND TORPOR|000
+
+Open daylight burns Vampires unless the room is inside, underground, or under
+canopy. Dawn and twilight are less severe than full day. The class always
+retains sunlight, fire, and holy banes. 'discipline mist' provides an emergency
+route to the bound coffin when local wards and combat permit it. The Vampire
+channel announces dawn, full day, twilight, and night once per transition so
+every online Vampire receives the warning even while under cover.
+
+'coffin bind' binds the First Grave, the Covenant's Vault of Sealed Earth, or
+Vespercourt crypt as a haven. Resting there restores wounds, steadies low
+Vitae toward 75 without lowering a higher pool, and reduces evidence in every
+known region. It is recovery, not a full refill or a way around feeding. Once
+per reboot, a non-hardcore Vampire death becomes Torpor at the bound coffin.
+Torpor begins at one hit point for a new Vampire and recovers up to ten percent
+maximum health as Blood Mastery approaches its limit. Later deaths use the
+normal death system.
+
+# alias: vampirism

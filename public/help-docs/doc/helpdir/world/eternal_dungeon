@@ -60,3 +60,44 @@ checkpoint. Skipped floors do not grant reward compensation. V2 and
 legacy leaderboards are separate because the dungeon rules are different.
 
 See also: help eternal, help boss_tiers
+
+Reward Chests
+-------------
+Every leader or boss kill leaves a personal reward chest for each member
+present in the run. Chests are name-locked, fade after ten minutes, and
+do not follow you through the portal - open yours before advancing.
+
+Chest quality is earned, not farmed:
+
+  - The FIRST chest of each reward tier you earn per real day is GILDED:
+    full rolls, a guaranteed rare roll, and the only grade that can ever
+    hold a permanent relic.
+  - The next two chests of that tier the same day are PLAIN (fewer
+    rolls, no guarantees).
+  - After that, and whenever you fight roughly ten or more floors below
+    your personal best, chests dim to SHARD CACHES: a small Eternal
+    Shard payout, no premium treasure, and a modest chance at crafting
+    material.
+
+Each member's chest is scaled to their own record, so carrying a
+lower-floor friend gives them real chests while your own reflect your
+personal best. Chest contents include consumables, ember crafting
+materials and recipe cards for the professions, timed emberforged gear
+that burns away when its ember is spent, and - very rarely, from deep
+gilded chests - permanent relics that the dungeon yields at most once
+per adventurer in their lifetime.
+
+Crafting supply is rolled separately from premium treasure. Gilded chests
+guarantee two materials, plain chests guarantee one, and shard caches may
+still yield one. Recipe cards only appear in gilded or plain chests and
+match the effective reward tier: Emberdraught at low tiers, Phoenix Tonic
+through the middle tiers, and Emberforged Whetstone at the deepest tier.
+Each eligible chest without a card advances that tier's pity counter; once
+five misses are shown, the next eligible chest guarantees a card. Use
+'eternal status' to inspect those counters.
+
+The shard shop ('eternal shop') also carries permanent items at fixed
+prices, likewise one per adventurer, ever. It also sells persistent,
+tradeable ember materials and recipe cards at fixed prices so shard caches
+remain a deterministic path into Eternal crafting. 'eternal status' shows
+how many premium chests of each tier you have earned today.

@@ -1,0 +1,67 @@
+Runes personalize a Practiced working. Practiced mastery opens one socket and
+Inscribed mastery opens a second. Use "inscribe <rune> on <working>" to bind a
+known pattern and "unbind <rune> from <working>" to lift it without losing
+mastery. "Runes <rune>" lists every working that pattern can actually change;
+an incompatible rune cannot consume a socket.
+
+Ashkenazy -- Exaltation
+  Damaging workings only. Raises their raw power by fifteen percent.
+
+Falx -- Alacrity
+  Every working. Shortens its manual cooldown by twenty percent and may also
+  quicken a compatible prepared barrage, subject to the ordinary two-round
+  floor.
+
+Saloman -- Bastion
+  Every SP-costing working. Damaging workings return a small amount based on
+  damage, capped at one quarter of discounted ordinary cost. Utility workings
+  return ten percent of discounted base cost. Recollection has no SP cost and
+  cannot use Saloman. Automatic barrage does not generate a return.
+
+Talek -- Boreal
+  Damaging workings only. Adds ten percent and cold to the primary hit, plus
+  Chilled.
+
+James -- Whimsy
+  Every working. Adds harmlessly unnecessary casting punctuation; Mage Eye and
+  Teleport also gain their own ridiculous manifestations.
+
+Marsellus -- Augmentation
+  Damaging workings only. Adds a little raw power and a chance for a second
+  force impact.
+
+Mezari -- Amity
+  Every SP-costing working. Lowers ordinary SP cost by ten percent.
+  Recollection has no SP cost and cannot use Mezari.
+
+Ravidel -- Igneous
+  Damaging workings only. Adds ten percent and fire to the primary hit, plus
+  Burning.
+
+Rodney -- Continuance
+  Duration-bearing buffs and controls only: Echoform, Illuminate, Insane,
+  Investiture, Invisibility, Levitate, Mana Barrier, Phase, Powerup, Armor,
+  Stasis, and Wrath. Extends durations through two minutes by twenty-five
+  percent, durations over two minutes by thirty-five percent, and durations
+  over five minutes by fifty percent.
+
+Aiken -- Severance
+  Damaging workings only. Halves normal armor absorption without bypassing
+  resistance, intrinsic reduction, shields, or Mana Barrier.
+
+Arcanarton -- Entropy
+  Damaging workings, plus Insane. Adds ten percent, chaos, and disease to the
+  primary hit; Insane gains its forbidden variation.
+
+Bodach -- Demise
+  Damaging workings, plus Insane and Powerup. Adds ten percent and death to the
+  primary hit, plus a small life return. It changes Insane's malison and turns
+  Powerup into a guarded, pulsing HP-to-SP conversion.
+
+Trivlian -- Putrefaction
+  Damaging workings only. Converts their native damage to evil and acid while
+  preserving other rune damage types merged into the hit.
+
+Ordinary Arcane study teaches some patterns. Others require mastery, repeated
+fire practice, or discoveries on the old Isle of the Magi. Use "runes" for
+your current concordance and the exact clue attached to each sealed pattern.

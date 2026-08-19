@@ -1,4 +1,4 @@
-/doc/attribute/flight
+/public/docs/attribute/flight
 
 Format: (Living_Object)->set_attribute("flight", iValue);
 

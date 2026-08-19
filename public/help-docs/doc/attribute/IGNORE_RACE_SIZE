@@ -1,4 +1,4 @@
-/doc/attribute/IGNORE_RACE_SIZE
+/public/docs/attribute/IGNORE_RACE_SIZE
 
 Format: (Living_Object)->set_attribute("IGNORE_RACE_SIZE", iValue);
 

@@ -1,0 +1,49 @@
+|CKBStreet Samurai Hardware|000
+
+|CK0Every Street Samurai routine depends on one or more signature implants.
+The Cortex OS hosts the platform and is installed automatically when joining.
+Rin Kade and Othra Veyr sell the remaining signature lines as they unlock from
+GL2 through GL14.|000
+
+|CKBIntegrated weapon systems|000
+|CK0The right-eye Photon Targeting Suite supports Threat Scan and unlocks
+Photon Lance at GL4. The left-shoulder Dorsal Tempest Driver becomes available
+at GL8 for Micro-Missile Swarm and later coordinates Chrome Tempest. The torso
+Thermal Exchange Manifold provides Cold Signal and unlocks Thermal Purge at
+GL11. Older names such as Targeting Suite, Tempest Driver, and Coolant System
+remain valid when speaking with the Cortex or a ripperdoc.|000
+
+|CKBChoosing hardware|000
+|CK0Engage a ripperdoc and inspect the signature catalog before buying. Each
+entry shows its paired implant, internal location, strain, grade, Guild Level
+requirement, and exact price. Buying places the hardware in your inventory;
+installation is a separate confirmed procedure. The clinic refuses an implant
+when its location conflicts or its strain would exceed current capacity.
+Street Samurai signature hardware remains contract-locked: no ripperdoc can
+install it in someone who is not a registered Street Samurai.|000
+
+|CKBGrades|000
+|CK0The grade order from weakest to strongest is Prototype, Street, Military,
+and Ghost. Prototype is available first, with Street at GL7, Military at GL10,
+and Ghost at GL13. A specific implant's own unlock can require a later Guild
+Level.|000
+
+|CK0Higher grades improve their paired firmware and built-in equipment
+benefits, resist accumulated physical wear more effectively, and usually
+consume more strain. Grade does not replace maintenance: even exceptional
+hardware should be repaired and defragmented when its condition declines.|000
+
+|CKBStrain and slots|000
+|CK0Installed cyberware consumes strain capacity and occupies an internal
+location. Character level, remort progress, and the Street Samurai contract
+all contribute to capacity. Reaching Ronin-sama at Guild Level 16 provides a
+substantial final capacity surge for installing new hardware or upgrading an
+existing implant. Use cyberware or implants to review the complete internal
+layout and live strain limit; dashboard shows Street Samurai implant load and
+condition.|000
+
+|CKBInspecting the loadout|000
+|CK0Use implants for all installed internal equipment, cyberware for available
+and occupied implant locations, dashboard for Street Samurai grade, integrity,
+fragmentation, and runtime state, and samskills for missing required hardware.
+Samhelp firmware contains the complete routine-to-implant map.|000

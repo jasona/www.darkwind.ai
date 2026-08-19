@@ -1,0 +1,24 @@
+|CKBThree Roads, No Refunds|000
+
+Syntax: croads train <misdirection|volatility|contraband>
+
+Every Charlatan Rank after the first earns one road point. Spending it is
+immediate and permanent, which is why the clerk asks you to spell the road.
+Road awards stop after 30 points, enough to raise all three roads to ten.
+Ranks after 30 build reputation and open advanced schemes instead.
+
+  Misdirection
+    Confuse the mark, manufacture openings, and throw your voice. Improves
+    confuse and suckerpunch, and opens distract.
+
+  Volatility
+    Make corpse ash useful and meals suspicious. Opens cookash and concoct.
+    Alchemy or Herbalism may still be required for a particular recipe.
+
+  Contraband
+    Load weapons and stretch acquired poisons. Alchemy and Smithing decide
+    which dangerous ideas you can put into practice.
+
+Use 'gscore charlatan' to see your Rank, guild XP, roads, spare points, and
+relevant trade skills. Use 'chskills available' when you want the short answer
+to, "What can I get away with today?"

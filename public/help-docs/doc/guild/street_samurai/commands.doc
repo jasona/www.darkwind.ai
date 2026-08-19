@@ -1,0 +1,73 @@
+|CKBStreet Samurai Command Index|000
+
+|CKBStatus and progression|000
+|CK0dashboard - firmware version, Cortex, implant, strain, integrity, and alert diagnostic
+samstatus - compact contract, progression, resource, and cycle report
+samxp - Guild Level, Cortex Rank, banked GXP, and the next requirement
+samspam [verbose|brief|off] - control implant activation message detail
+samsignature [profile] - inspect or select room-visible movement firmware
+gscore - shared progression display for all of your guilds
+samskills - every routine, unlock, resource cost, and current readiness
+monitor - automatic HP, SP, Edge, Heat, and active-process output
+implants - all installed cyberware and other internal equipment
+cyberware - internal locations, installed hardware, and strain capacity|000
+
+|CKBNetwork|000
+|CK0samwho - visible connected operators and pertinent guild state
+samchat <message> - normal private Cortex transmission
+samchat :<emote> - channel emote syntax
+esamchat <message> - narrative channel syntax
+samhist [lines] - recent private Cortex transmissions|000
+
+|CKBMaintenance|000
+|CK0defrag <process|all> - reduce firmware fragmentation
+patch <process|all> - apply queued firmware updates
+purge <process|all> - remove detected ICE intrusions
+reboot <process|all> - clear registered runtime faults
+logs [process] - review maintenance events for all or one process
+samrepair - diagnose and recover a corrupt guild installation|000
+
+|CKBFabrication|000
+|CK0fabricate list - list Cortex fabrication blueprints
+fabricate inspect <recipe> - inspect skill, guild level, and component costs
+fabricate materials - show saved cybernetic components
+fabricate <recipe> - build a repair kit at the fabrication table
+salvage <hardware> - preview dismantling extracted cyberware
+salvage <hardware> confirm - permanently dismantle the previewed hardware
+repairkit <process_id> - consume a field kit to repair implant integrity|000
+
+|CKBFirmware commands|000
+|CK0neonwake, snapcut, jolt, overclock, threatscan, ripcut, armorweave,
+photonlance, smartsmoke, ghoststep, traumabuffer, monowire, jammer, microswarm,
+nanomend, predict, thermalpurge, zerosignal, tempest, and cyberblade. The
+cyberblade command also accepts retract while the Ronin Edge is deployed.|000
+
+|CK0Thermal Purge also accepts "vent" instead of a foe. This emergency mode
+clears all Heat immediately but inflicts severe integrity wear on the Cortex OS
+and Thermal Exchange Manifold.|000
+
+|CKBPassive topics|000
+|CK0samhelp cold signal - automatic thermal control
+samhelp second spur - expanded Edge capacity and off-hand cutting support
+samhelp overdrive - opening-burst Heat control
+samhelp ronin-sama kernel - GL16 Cortex ascension and combat protocols|000
+
+|CKBSystem topics|000
+|CK0samhelp start - first-deployment checklist and first combat loop
+samhelp contract - primary, secondary, inactive, and leaving states
+samhelp progression - battle GXP, Guild Level, and Cortex Rank
+samhelp resources - Edge, Heat, redline, cooling, and lockout
+samhelp mon - monitor controls and process-indicator legend
+samhelp firmware - requirements, interactions, and troubleshooting
+samhelp hardware - grades, slots, strain, and loadout inspection
+samhelp fabrication - salvage, Cybernetics, recipes, and repair kits
+samhelp maintenance - integrity, fragmentation, alerts, and repairs
+samhelp network - private chat, history, and samwho fields
+samhelp prices - hardware purchases and procedure fees
+samhelp leaving - consequences of ending membership|000
+
+|CKBQuick diagnosis|000
+|CK0If a routine fails, read its message. Then use samstatus for resources and
+the Cortex cycle, samskills for unlocks and missing hardware, and dashboard for
+implant condition or alerts. Use samhelp <command> for focused syntax and
+operational guidance.|000

@@ -1,0 +1,13 @@
+|WKBSYNTAX
+======
+
+|CKBdrops|WKB
+
+DESCRIPTION
+===========
+
+|YKOShows the registered drops you have discovered in your current area.
+Items you have not found remain unnamed, but the command reveals how many
+remain and their rarity.
+
+A discovery is recorded when an item successfully drops for you in that area.

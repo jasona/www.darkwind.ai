@@ -1,0 +1,38 @@
+|CKBStreet Samurai Progression|000
+
+|CK0Street Samurai have 16 Guild Levels and 200 Cortex Ranks. GXP comes from
+combat and boss victories recognized by Darkwind's shared battle progression.
+Repeating firmware commands does not award GXP.|000
+
+|CKBGuild Level and Cortex Rank|000
+|CK0Use samxp or gscore to see Guild Level, Cortex Rank, current GXP, and the
+next rank requirement. Through the early ranks, Cortex Rank also advances
+Guild Level. If a character-level requirement temporarily blocks an early
+Guild Level, earned GXP remains banked and advancement resumes when the
+requirement is met.|000
+
+|CK0After GL16, Guild Level remains fixed while Cortex Rank continues through
+CR200. Later Cortex Ranks take more sustained combat progress. The host OS
+continues gaining bounded throughput improvements across that full progression,
+but hardware grade,
+character capabilities, Heat, and maintenance still matter independently.
+Dashboard reports the current Cortex throughput.|000
+
+|CKBCortex Rank 200|000
+|CK0Reaching CR200 grants final bladeware authorization. With an installed
+Cortex OS and Monofilament Spur, cyberblade deploys the Ronin Edge as a
+temporary primary weapon. This is a Cortex Rank capstone, not another Guild
+Level. Use samhelp cyberblade for its operating requirements and combat
+interactions.|000
+
+|CKBUnlocks|000
+|CK0Firmware and signature implants unlock from GL1 through GL16. Prototype
+hardware is available first, followed by street grade at GL7, military grade
+at GL10, and ghost grade at GL13. The paired routine's Guild Level can still
+delay a specific implant even when its grade is otherwise available.|000
+
+|CKBWhen progress seems stalled|000
+|CK0Check samxp for the current requirement, confirm the contract is active,
+and continue fighting opponents that the shared battle system recognizes as
+appropriate progression. Samskills shows the next routine unlock; Rin Kade's
+catalog shows hardware that is available now and future contract unlocks.|000

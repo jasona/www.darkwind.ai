@@ -57,18 +57,16 @@ bags and repair kits. Recipe cards can be read, then used with
 materials may also be requested by profession work orders.
 
     Crafted profession gear can be improved with
-'inlay <crafted item> with <shard>' in the profession building.
+'inlay <crafted item> with <shard>' in the profession building. Leatherworking
+inlays use saved shards from your profession materials:
 
-    Bear - Intelligence          Horse - Poison Resistance
-    Cow - Fire Resistance        Mammal - Lightning Resistance
-    Deer - Wisdom                Reptile - Constitution
-    Dragon - Strength            Wolf - Dexterity
-    Elephant - Charisma          Yeti - Cold Resistance
-    Goat - Disease Resistance
+    Amber Shard - Poison Resist       Onyx Shard - Constitution
+    Beryl Shard - Strength            Pearl Shard - Charisma
+    Bloodstone Shard - Disease Resist Sapphire Shard - Dexterity
+    Garnet Shard - Wisdom             Sunstone Shard - Fire Resist
+    Jade Shard - Intelligence         Topaz Shard - Lightning Resist
+    Moonstone Shard - Cold Resist
 
-    Adamantite - Strength        Mithril - Wisdom
-    Bronze - Fire Resistance     Platinum - Intelligence
-    Copper - Disease Resistance  Silver - Dexterity
-    Gold - Charisma              Steel - Constitution
-    Iron - Poison Resistance     Tin - Lightning Resistance
-    Lead - Cold Resistance
+    The leather and metal lists above describe legacy quickcraft secondary
+materials. The inlay command uses shards; see 'help inlays' for the shared
+inlay syntax.

@@ -2,7 +2,7 @@ Zork-Only Commands
 
 The Zork-only command path is intentionally small.
 
-  help [topic]       Read help from /doc/zork.
+  help [topic]       Read help from /public/docs/zork.
   commands           List available Zork-only shell commands.
   look, l            Look at the Zork portal room.
   gossip <text>      Talk on the global gossip channel.

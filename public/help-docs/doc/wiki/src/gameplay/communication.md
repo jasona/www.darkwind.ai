@@ -26,17 +26,31 @@ New players can use the newbie channel to ask questions.
 | `tune newbie off` | Stop listening to newbie |
 | `tune newbie on` | Listen to newbie again |
 
-The newbie channel is for new-player help. General chatter belongs on other channels.
+The newbie channel is for new-player help. Levels 6 through 20 appear with a
+`(Newer)` tag; more experienced players appear as `(Helper)`. Broader gameplay
+discussion belongs on `game`; off-topic social chat belongs on `gossip`.
 
 ## Channels
 
 Channels connect players across the world. Guilds, clans, parties, and special groups have their own lines.
+
+| Command | Use |
+| --- | --- |
+| `game <message>` | Discuss Darkwind gameplay, builds, areas, mechanics, and events |
+| `egame <message>` | Emote on the game channel |
+| `game :<emote>` | Use a channel soul emote on game |
+| `gamehist [lines]` | Read recent game-channel history |
+| `gossip <message>` | Off-topic social chat |
+| `egossip <message>` | Emote on gossip |
+| `gossiphist [lines]` | Read recent gossip history |
+| `chanhist <channel> [lines]` | Read recent history for any channel you can access |
 
 Common channel patterns:
 
 - `<channel> <message>` to speak
 - `e<channel> <message>` to emote
 - `<channel>hist` to read recent history where available
+- `chanhist <channel> [lines]` to read any channel history you can access
 - `tune <channel> off` to stop hearing a channel
 - `tune <channel> on` to hear it again
 
@@ -88,9 +102,17 @@ Emotes are nonspoken social actions.
 | --- | --- |
 | `feelings` | List standard feelings |
 | `feelings <prefix>` | List feelings beginning with a prefix |
+| `feelings guild [<guild>] [<prefix>]` | List accessible guild feelings |
 | `semote <feeling>` | Preview an emote |
 | `emotelist` | List emotes where available |
 | `emoteapropos <text>` | Search emotes where available |
+| `emoteapropos guild [<guild>] <text>` | Search accessible guild emotes |
+| `random [<player>]` | Invoke a random available global or guild emote |
+
+Guild emotes use the normal targeting and perspective system but can only be
+invoked by active members of their guild. Guild channel commands that support
+colon emotes can use them directly, such as `samchat :<emote>`. Leaving a guild
+or deactivating its abilities immediately removes access to its emotes.
 
 ## Away Messages
 

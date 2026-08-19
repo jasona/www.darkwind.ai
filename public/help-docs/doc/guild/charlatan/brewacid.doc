@@ -1,0 +1,12 @@
+|CKBBrew Acid: The Necessary Bad Idea|000
+
+Syntax: brewacid
+
+At Rank 2, Volatility 1, and Alchemy 25, prepare one owner-bound acid flask.
+Cook Ash consumes that flask and all relevant ash to make a combat stimulant.
+Only one uncooked flask may be carried at a time. It lasts two hours and
+can instead be thrown for modest acid damage.
+
+Throw it with 'throw acid flask at <target>'. While fighting, 'throw acid
+flask' uses your current foe. Throwing engages combat, consumes the flask,
+and splashes one fifth of the dealt damage back onto you.

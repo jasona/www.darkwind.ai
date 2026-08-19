@@ -2,8 +2,8 @@
 |BKB-------------------------------------------------------------------------
 ' <msg>                 say <msg>                 newbie <msg>
 shout <msg>             tell <player> <msg>
+chanhist <channel> [n]  channels                  tune <channel> on|off
 
 |WKOExample: |YKBnewbie Hello |YKOwould display |MKB[Newbie] (Wizard) Dink: Hello|XX0
 
 |YK0See "|YKBhelp list communication|YK0"
-

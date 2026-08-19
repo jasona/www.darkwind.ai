@@ -1,25 +1,16 @@
-|GKOMYTHIC GUILDS
+|YK0#|YKB Guilds and Classes|000
 
-|WKOMythic guilds are more powerful guilds that can only be joined
-at mythic character creation. A mythic character is a multicharacter
-attained by either reaching LEGEND (lvl 65) with your primary character,
-reaching HERO (lvl 45) with both your primary and secondary characters,
-or by buying the mythic character slot for 20MIL in gold. Please see
-|YKBhelp multichars |WKOfor more information on the multichar system.
+|GK0The old "mythic guild" category mixed learned guilds with innate classes.
+That category is retired. Guilds are skills, disciplines, faiths, and
+traditions a character learns. Classes describe what a character innately is.|000
 
-|YK0Bastet/Gurahl|XX0   |RKB[CLOSED]    |BKB---|XX0 |CKBDink|XX0
-|YK0BattleMage|XX0      |RKB[CLOSED]    |BKB---|XX0 |CKBKlaughihin|XX0
-|YK0Blood Mage|XX0      |RKB[CLOSED]    |BKB---|XX0 |CKBCales/Lukodi|XX0
-|YK0Deathknights|XX0    |RKB[CLOSED]    |BKB---|XX0 |CKBCales|XX0
-|YK0Dragons|XX0         |WKB[OPEN]      |BKB---|XX0 |CKBThomas|XX0
-|YK0Druid|XX0           |WKB[OPEN]      |BKB---|XX0 |CKBCales/Dink|XX0
-|YK0Glyph|XX0           |RKB[CLOSED]    |BKB---|XX0 |CKBKlaughihin|XX0
-|YK0Monks|XX0           |WKB[OPEN]      |BKB---|XX0 |CKBAcer|XX0
-|YK0Morphers|XX0        |RKB[CLOSED]    |BKB---|XX0 |CKBKlaughihin|XX0
-|YK0Necromancers|XX0    |WKB[OPEN]      |BKB---|XX0 |CKBCales|XX0
-|YK0Ranger|XX0          |WKB[OPEN]      |BKB---|XX0 |CKBDink|XX0
-|YK0Samurai|XX0         |RKB[CLOSED]    |BKB---|XX0 |CKBCales|XX0
+|GK0Use |CKBhelp guilds|GK0 for the current learned-guild roster and
+|CKBhelp classes|GK0 for the current innate-class roster.|000
 
-|XX0See Also:
-|XX0    |CKBdual_guilds|XX0, |CKBcoders|XX0, |CKBguilds|XX0,
-|XX0    |CKBcombos|XX0
+|YK0##|YKB See also|000
+
+|CKBhelp guilds|000
+|CKBhelp classes|000
+|CKBhelp dual guilds|000
+
+# alias: mythic_guilds

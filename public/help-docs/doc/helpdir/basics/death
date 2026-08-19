@@ -1,15 +1,25 @@
-|YKOWhen you are killed, you become a ghost and lose many of the
-abilities you had while alive. If you are level 5 and under,
-you can go to the church and |YKB<pray> |YKOand you will be resurrected
-with no penalty. Above level 5, each death brings about a loss
-of all your experience on hand, one level, and one from each
-of your stats. Some guilds have the ability to resurrect dead
-players. This saves some of the stat loss, but the victim still
-loses a level and his experience on hand. 
+|YKOWhen you are killed, you become a ghost and your spirit is
+whisked away to the church of the land you died in. Your corpse,
+holding all of your belongings and gold, travels with you - it is
+tucked safely into your inventory, so there is no corpse run and
+nobody can loot you.
 
-After dying, you can get someone to avenge your death. If you
-are avenged, you can get some of your lost experience back. See
-|YKBhelp deathavengement |YKOfor for information. Don't ask for avengement
-if you are level 5 or under, just go to Plum and pray.
+If you are level 5 or under, death carries no penalty at all.
+Above level 5, death costs you 10% of your experience on hand.
+Nothing else is lost: no stats, no levels.
+
+At the church you have two choices:
+
+  |YKB<pray>|YKO       Resurrect yourself. The experience loss stands.
+  |YKBguild rez|YKO   Have another player resurrect you with a guild
+              ability. This restores the lost experience.
+
+Once alive, take your equipment back out of your corpse and get
+back to adventuring. The emptied corpse rots away on its own.
+
+You can also have your death avenged. A friend who avenges your
+death earns a bounty of coins and experience scaled by your
+killer's toughness, and your lost experience is restored. See
+|YKBhelp deathavengement|YKO.
 
 |WKBSee also: |YKBghost, ghostemotes, deathavengement

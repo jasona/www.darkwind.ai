@@ -15,6 +15,11 @@ activates under some condition (when hit, when performing a hit, etc), or once p
 round.  The costs happen when the technique is activated, which means a proc-based
 technique may activate multiple times per round.
 
+Each triggered technique awards 2 GXP at most once per ten seconds across all
+techniques. Flow discounts positive technique costs from 0% at empty to 50%
+at full Flow. Zero-cost techniques remain free. While Flow is full, each
+eligible combat round also has a 5% chance to steal one guaranteed weapon hit.
+
 
 ## Techniques
 
@@ -46,7 +51,8 @@ damage.
 
 SP:  2 SP (proc)
 
-*Effects(s)*: Chance of +6 damage on hit
+*Effects(s)*: Chance of +6/+7/+9/+10/+12 damage below Hero and at the Hero,
+Legend, Epic, and Mythic brackets.
 
 
 ### Dodge - Guild Level 3
@@ -90,7 +96,8 @@ to the enemy.
 
 SP:  3 SP (proc)
 
-*Effects(s)*: Chance of +12 damage on hit
+*Effects(s)*: Chance of +12/+15/+18/+21/+24 damage below Hero and at the Hero,
+Legend, Epic, and Mythic brackets.
 
 
 ### Disarm - Guild Level 6
@@ -164,7 +171,8 @@ impaling attack.
 
 SP:  9 SP (proc)
 
-*Effects(s)*: Chance of +45 damage on hit
+*Effects(s)*: Chance of +45/+56/+67/+78/+90 damage below Hero and at the Hero,
+Legend, Epic, and Mythic brackets.
 
 
 ### Flurry - Guild Level 12
@@ -174,6 +182,9 @@ and nowhere is that more obvious than the flurry skill. By
 concentrating on the offensive, a swashbuckler can take
 advantage of the slightest openings and strike at his enemy
 more often.
+
+Each proc guarantees one extra swing. Hero level unlocks a chance for a
+second extra swing, and Legend level unlocks a chance for a third.
 
 SP:  8 SP (proc)
 
@@ -211,23 +222,24 @@ SP:  5 SP (proc)
 *Effects(s)*: 25% increased hit chance
 
 
-### Dance of Death (sdance) - Guild Level 15
+### Dance of Death - Tier 15 passive
 
 The Dance of Death, the kensai's legendary '*whirlwind attack*',
 is the swashbuckler's ultimate technique. A
 synthesis of mind, body, and blade which is deceptively
 delicate and lethally beautiful. It combines the aspects
 of many of the swashbuckler's individual techniques to
-create a cocoon of steel round the warrior. In order to
-engage in the Dance of Death, the swashbuckler must become
-one with his blade in the heat of combat. As he approaches
-this state, he will find his technique gradually improving
-until he reaches the pinnacle of his skill, and his
-movements become almost effortless. A swashbuckler will
-all his faculties - speed, intellect and charm in order to
-execute the Dance of Death to the utmost effect.
+create a cocoon of steel round the warrior. Dance is now passive: at Tier 15
+and 100 Flow, it can very rarely make the next paid triggered technique free.
 
-SP:  Varies each round
+SP: Free; it discounts one later technique
 
-*Effects(s)*: Improves most combat attributes
+*Effect*: One-shot free-technique token
 
+### Spectral Siphon - Tier 18
+
+The spectral brethren drink magical strength from an opponent on a successful
+hit. A proc costs 6 SP before its Flow discount, drains up to 12 currently
+available SP, and restores exactly that amount to the Swashbuckler.
+
+Command: *starttech siphon*

@@ -2,50 +2,26 @@
 |WKB                          QUEST COMMANDS
 |CKB=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-|YKOThe following commands are available for managing quests:
+|YKOThe following commands and interactions manage quests:
 
-  |YKBqlist |WKB[filter]
-    |YKOLists all available quests. Quests are color-coded by difficulty
-    relative to your level. You can filter by domain, level, deity,
-    reputation, type, tag, or status.
-
-    |YKOExamples:
-      |YKBqlist darkwind
-      |YKBqlist level 1-10
-      |YKBqlist deity set
-      |YKBqlist rep villain
-      |YKBqlist type kill
-      |YKBqlist available
-
-  |YKBqinfo |WKB<number>
-    |YKODisplays full details for a quest: its description, level range,
-    area hint, quest points, reputation/deity tags, rewards, and a
-    list of objectives.
-
-  |YKBqaccept |WKB<number>
-    |YKOAccepts a quest using its number from |YKBqlist|YKO. Suggested
-    levels are guidance, not requirements, but prerequisite quests still
-    apply. You cannot accept a quest you have already completed or accepted.
-    |YKBqinfo |YKOand |YKBqaccept |YKOuse the most recent |YKBqlist |YKOresult, so
-    filtered quest numbers stay stable.
-
-  |YKBqactive |WKB<number>
-    |YKOThis command is kept for compatibility. Active quests are no
-    longer needed; all accepted quests track progress automatically.
+  |YKBengage waysteward
+    |YKOReviews local quests at an area's wayshard or entrance. A bright
+    yellow |YKB[?] |YKOmeans new work is available; |YKB[!] |YKOmeans a
+    completed quest can be turned in. The dialogue shows suggested levels,
+    objectives, prerequisites, and rewards before you accept.
 
   |YKBmyquests
-    |YKOLists all quests you have accepted, showing which one is active
-    and the current status of each.
+    |YKOLists all quests you have accepted and their current status.
 
   |YKBqstatus
-    |YKOShows detailed progress reports for your accepted unfinished quests,
-    including each objective and how much you have completed. You can use
+    |YKOShows detailed progress for accepted unfinished quests. Use
     |YKBqstatus <number> |YKOwith numbers from |YKBmyquests|YKO.
 
+  |YKBqactive |WKB<number>
+    |YKOCompatibility command. All accepted quests track automatically.
+
   |YKBescort
-    |YKOBegins an escort sequence if one of your accepted quests has an escort
-    objective. The NPC will start moving and you must follow and
-    protect them.
+    |YKOBegins an escort objective when its NPC does not start automatically.
 
 |CKB=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 |WKBSee also: |YKBhelp quests, help quests objectives

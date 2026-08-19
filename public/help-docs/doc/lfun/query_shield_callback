@@ -1,0 +1,20 @@
+|WKBNAME|000
+    query_shield_callback
+
+|WKBSYNOPSIS|000
+    |YK0int|000 |CKBquery_shield_callback|000(|YK0closure|000 |GKBcDepleted|000)
+    |YK0int|000 |CKBquery_shield_callback|000(|YK0closure|000 |GKBcDepleted|000,
+        |YK0int|000 |GKBiType|000)
+
+|WKBDESCRIPTION|000
+    Returns the shield points currently owned by the exact |GKBcDepleted|000
+    closure in the generic pool or optional damage-type pool. It does not
+    include unowned shield points or points owned by another callback.
+
+    The same retained closure passed to |CKBadd_shield|000() must be used.
+
+    |CKBquery_shield_callback|000() is defined in /secure/living.c
+
+|WKBSEE ALSO|000
+    |CKBadd_shield|000(L), |CKBclear_shield_callback|000(L),
+    |CKBquery_shield|000(L)

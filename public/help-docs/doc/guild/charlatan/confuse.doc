@@ -1,8 +1,14 @@
-|GKB================================= Confuse ================================
-|GKB=|XX0   Syntax: confuse |YKB<target>|XX0                                             |GKB=
-|GKB=|XX0                                                                        |GKB=
-|GKB=|XX0   Confuse distracts the target in a way that makes them blunder        |GKB=
-|GKB=|XX0   about, unable to attack. The more convincing you are, the longer     |GKB=
-|GKB=|XX0   the effect will last.                                                |GKB=
-|GKB=|XX0   |RKBNOTE: You must be level 20 to use this skill!|XX0                        |GKB=
-|GKB==========================================================================
+|CKBConfuse: Certainty Applied Incorrectly|000
+
+Syntax: confuse [foe]
+
+Point out the ambush that is not there. Correct your foe's stance with great
+authority. Ask whether they remembered to lock the door. For a few precious
+moments, the mark may be too tangled in your certainty to act properly.
+
+Confuse is available from Charlatan Rank 1. Misdirection makes the lie easier
+to sell, keeps it alive longer, and makes it less exhausting. The cloak will
+never stake more than 150 SP on one story. Confuse takes longer to recover than
+the distraction lasts. Success tells you when Sucker Punch is primed. A foe
+who sees through you still costs the effort and recovery time; embarrassment
+is not a refund policy.

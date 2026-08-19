@@ -1,9 +1,9 @@
                           DarkWind Professions
 
-    DarkWind has eight professions. Herbalism, Mining, Skinning, and
-Fishing gather resources from the world. Alchemy, Leatherworking,
-Smithing, Tailoring, and Refining turn saved materials, reagents, and
-equipment into useful outputs.
+    DarkWind has eleven professions. Herbalism, Mining, Skinning, Fishing,
+and Forestry gather resources from the world. Alchemy, Leatherworking,
+Smithing, Tailoring, Cybernetics, and Carpentry turn saved materials,
+reagents, and equipment into useful outputs. Refining is a profession service.
 
 Where to go:
   The profession building is 4e, n from Center of Town. It contains tools,
@@ -13,7 +13,7 @@ Getting started:
   1. Go to the profession building and buy the tools you need.
   2. Use 'professions guide' for a practical first route.
   3. Gather materials with 'gather herbs', 'mine ore', 'skin corpse',
-     'bait hook', and 'fish'.
+     'bait hook', 'fish', and 'chop tree'.
   4. Check saved materials with 'reagents' and source hints with
      'reagents search <item>'.
   5. Use 'professions craftable' or 'professions check ...' before
@@ -23,13 +23,26 @@ Getting started:
 recipe cards. Mining gathers ore for bars, smithing, work orders, and
 some guild preparations. Skinning gathers hides that become leather for
 armor, bags, recipes, and guild preparations. Fishing catches food and
-fish-part reagents used by recipes, guildcraft, and orders.
+fish-part reagents used by recipes, guildcraft, and orders. Forestry uses a
+forestry axe at marked Kingswood stands to save oak, ash, and pine timber in
+standard through masterwork quality.
 
     Alchemy creates potions and recipe-card outputs. Leatherworking
 creates hide and studded armor, converts hides to leather, and supports
 crafted bags and utility recipes. Smithing creates metal armor and bars.
 Tailoring creates padded armor and light clothing. Refining breaks old
-equipment back into saved profession materials.
+equipment back into saved profession materials. Use 'set autorefine on' to
+apply the same refining rules automatically to equipment from NPCs you kill.
+Autorefine is mutually exclusive with autosell.
+
+    Carpentry works in the Kingdom Commons or inside a homestead. It mills
+timber into matching planks, crafts persistent placeable furniture, and makes
+Framing Bundles required for every home upgrade after the hut. Species and
+quality must match through timber, planks, and the finished piece. Inside your
+own home, use 'place <furniture>', 'homestead furnishings', and 'remove
+furniture <id|type>'. Rooms hold eight persistent furnishings. Use 'carpentry
+list', 'reagents wood', 'help forestry', and 'help carpentry' for the complete
+workflow and plan skill requirements.
 
 Useful commands:
   professions

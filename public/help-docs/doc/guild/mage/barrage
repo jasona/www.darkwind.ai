@@ -1,0 +1,25 @@
+Barrage prepares one combat working to cast automatically beside ordinary
+attacks. Mana Shard, Missile, Fireball, Icestorm, and Bolt are eligible.
+
+Without a FOCUS weapon, the page must be Practiced and each automatic cast
+spends SP. With FOCUS, even a Copied page can be prepared and fires for zero SP.
+AURA completes battlemage resonance and improves cadence and power. Mastery
+and Falx can quicken the rhythm, but two combat rounds is the ordinary floor.
+
+At Arcane 16, a real wielded FOCUS opens a more severe exchange. The prepared
+page fires every combat round and produces multiple complete barrages. Their
+count is based on the FOCUS weapon's WC and item level, not the Mage's ordinary
+number of swings:
+
+  barrages = 1 + floor((10 * WC + item level) / 100), from 2 to 6
+
+The same weave removes weapon swings according to player level: one below 50,
+two at 50, three at 100, four at 150, five at 200, and six at 250 or above.
+Investiture's borrowed FOCUS cannot enable this exchange. Releasing the
+prepared barrage removes the penalty.
+
+Concentration pauses cadence without erasing the page. Silence or paralysis
+collapses it. Automatic casts still teach mastery and can earn rate-limited
+field GXP.
+
+Use "barrage <working>", "barrage off", and "battlemage".

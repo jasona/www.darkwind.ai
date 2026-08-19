@@ -39,10 +39,20 @@ New adventurer equipment loop:
 1. Visit Erga's Newbie Shop
 2. `equip`
 3. Hunt a beginner area
-4. `get all from corpse`
-5. Return to the Main Shop
-6. Sell ordinary loot
-7. Bank spare coins
+4. Inspect useful loot and `get all from corpse`
+5. Return to the Main Shop and sell ordinary loot, or carry a corpse burner
+   with `set autosell on` to send ordinary sellable loot to Taylor as you hunt.
+   Alternatively, `set autorefine on` converts refinery-eligible equipment
+   directly into saved profession materials
+6. Bank spare coins
+
+Taylor deducts 10% for automatic selling after applying the same Charisma and
+reputation appraisal he would use at his counter. Noteworthy gear is left on
+the corpse rather than transmitted.
+
+Autosell and autorefine cannot be active together. Autorefine does not require
+a burner, uses normal Refinery yields, and permanently processes eligible
+equipment before autoloot. Keep it off when you want to inspect drops first.
 
 At level 2 and above, check the Donation Room. Return useful donated gear when you are done with it.
 
@@ -99,4 +109,3 @@ DarkWind City also has social and account services.
 - Weapons training
 
 If you are lost, ask on `newbie`, use `where`, or return to COT with `ncot` or `recall` when available.
-

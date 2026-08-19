@@ -1,27 +1,23 @@
 # Classes
 
-Work in progress: the class roster is being built toward this design, and
-current game behavior differs in places.
+Availability varies by class. Use in-game class help and shrine responses when
+planning a permanent character choice.
 
-Classes are remort-scale transformations. A guild teaches what a character does.
-A class changes what a character is.
+Classes are things a character innately is. A guild teaches a skill or
+discipline; a class changes the character's body, mind, nature, or relationship
+with the world.
 
 See [Remort](mechanics/remort.md) for the larger progression system.
 
 ## Class Roster
 
-| Class | Description |
-| --- | --- |
-| [Artificer](classes/artificer.md) | Artificers solve problems with schematics, devices, salvage, and crafted tools |
-| [Dragon](classes/dragon.md) | Dragons become mythic bodies defined by age, lineage, breath, lair, and hoard |
-| [Morpher](classes/morpher.md) | Morphers reshape flesh into weapons, defenses, movement, and regeneration |
-| [Psionicist](classes/psionicist.md) | Psionicists turn disciplined mind into perception, force, telepathy, and control |
-
-## Candidate Class
-
-| Class | Description |
-| --- | --- |
-| [Vampire](classes/vampire.md) | Vampires live through hunger, blood, night, charm, fear, and predatory restraint |
+| Class | Availability | Description |
+| --- | --- | --- |
+| [Artificer](classes/artificer.md) | Coming | Schematics, devices, salvage, and crafted tools |
+| [Dragon](classes/dragon.md) | Open | Age, lineage, breath, lair, and hoard |
+| [Morpher](classes/morpher.md) | Closed | Flesh shaped into weapons, defenses, movement, and regeneration |
+| [Psionicist](classes/psionicist.md) | Open | Perception, force, telepathy, and control |
+| [Vampire](classes/vampire.md) | Open | Vitae, Hunger, prey profiles, disciplines, and regional Exposure |
 
 ## How Classes Work
 
@@ -29,4 +25,4 @@ See [Remort](mechanics/remort.md) for the larger progression system.
 - Classes sit above guild membership rather than replacing it automatically
 - Class power brings class-shaped costs
 - Remort choices create new play patterns, not just larger numbers
-- Candidate classes stay out of the confirmed roster until the play pattern is stable
+- Closed and coming classes remain unavailable until their play patterns are ready

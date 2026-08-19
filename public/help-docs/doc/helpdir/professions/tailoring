@@ -10,6 +10,7 @@ Getting started:
      'reagents search <cloth>' to find likely sources.
   2. Convert cloth piles into bolts in the tailoring room.
   3. Use 'quickcraft <type> <slot> <shard>' for padded armour.
+     Cotton armour uses 'none' for the shard.
   4. Use 'quickcraft clothes <type> <slot>' for light clothing.
 
                              Converting
@@ -39,12 +40,17 @@ the armours with special benefits. Silk armours will have an increase of 1,
 while Emberweave, Lunar Cloth, and Sun Cloth will have an increase of 3,
 and Mage Fibre will have an increase of 5.
 
+    Cotton armour is the starter padded armour path and does not take a
+shard during quickcraft. If you want a shard bonus on cotton gear, craft it
+with 'none' first and then use the inlay system.
+
     Tailors can also make simple clothing from the same bolt types. Clothing
 is light, wearable, and made for style rather than protection. It does not
 use shards and takes 2 Bolts to craft. Clothing slots are boots, cloak,
 gloves, hat, pants, robe, and shirt.
 
     Quickcraft examples:
+      quickcraft cotton cloak none
       quickcraft silk robe amber
       quickcraft clothes silk cloak
 

@@ -62,5 +62,4 @@ Blackmar has three moons:
 | [Markas](markas.md) | Red |
 | [Tekal](tekal.md) | Green |
 
-The moons matter to lore, omens, divine systems, lunar travel, and future guild features.
-
+The moons matter to lore, omens, divine systems, and lunar travel.

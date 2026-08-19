@@ -5,9 +5,8 @@ SYNTAX:      cost (or: tally)
 USAGE:       Any wilderness terrain.
 
 SUMMARY:
-Shows the experience and gold costs to advance your level, guild
-level, and each stat. Also shows how many stat raises you have
-remaining for your current level and your current experience/gold.
+Shows character level and stat advancement costs, plus combat-earned Ranger
+XP progress and the slots granted by the next Ranger guild level.
 
 =============================================================================
 SEE ALSO: improve, advancement, glevels

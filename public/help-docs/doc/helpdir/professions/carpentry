@@ -1,0 +1,54 @@
+                          Carpentry
+
+Carpentry turns saved Forestry timber into planks, furniture, and construction
+framing. Work in the Kingdom Commons or inside any homestead.
+
+  carpentry list
+  carpentry mill [quality] <oak|ash|pine> [amount]
+  carpentry craft [quality] <oak|ash|pine> <plan>
+
+Use 'reagents wood' first. One timber mills into two matching planks, and the
+species and quality must match through every step. Valid qualities are
+standard (omitted), fine, superior, and masterwork. For example:
+
+  carpentry mill pine 1
+  carpentry craft pine stool
+  carpentry mill fine oak 2
+  carpentry craft fine oak chair
+
+Furniture plans:
+
+  Stool         2 planks      0 Carpentry skill
+  Chair         3 planks     50 Carpentry skill
+  Table         6 planks    100 Carpentry skill
+  Bookshelf     8 planks    175 Carpentry skill
+  Bed          10 planks    250 Carpentry skill
+
+Inside your own homestead:
+
+  place <furniture>
+  homestead furnishings
+  remove furniture <id|type>
+
+You must own the homestead and carry the crafted furniture when placing it.
+Use a specific name such as 'place pine stool'. Placed furniture is saved with
+that room and returns after logout or reboot. Each room holds up to eight
+furnishings. 'homestead furnishings' shows stable ids such as furniture_1;
+remove by that id or by type. Removing one returns it to inventory or leaves it
+on the floor if it is too heavy to carry.
+
+The physical furniture plans are stool, chair, table, bookshelf, and bed.
+Decorations such as rugs, lanterns, paintings, blankets, and crockery are room
+descriptions rather than crafted objects; represent those with 'homestead
+look', 'homestead smell', and 'homestead action'. Remove an old descriptive
+placeholder when replacing it with a physical furnishing to avoid duplication.
+
+A Framing Bundle costs five matching planks. Deliver completed bundles to
+Brant in the Kingdom Commons:
+
+  deliver framing bundles
+  deliver <amount> framing bundles
+
+Post-hut upgrades consume both coins and delivered framing. Use 'homestead
+upgrades' for exact requirements and 'homestead status' for current delivery
+progress.

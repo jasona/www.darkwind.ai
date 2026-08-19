@@ -1,0 +1,28 @@
+|CKBOverdrive|000
+
+|CK0Overdrive is passive burst-control firmware unlocked at Street Samurai
+Guild Level 14. It requires the right-ear Overdrive Module and has no
+activation command, SP cost, Edge cost, or Heat cost.|000
+
+|CKBOpening burst control|000
+|CK0When firmware first tries to add Heat during an engagement, Overdrive can
+automatically vent most or all of that opening burst. Once it intervenes, the
+profile is spent for the current engagement. Samstatus and the combat monitor
+report whether Overdrive is ready or spent.|000
+
+|CK0Overdrive reduces one incoming Heat request. It does not raise maximum
+Heat, accelerate normal cooling, remove Heat already present, or prevent all
+later lockout risk. If part of the burst remains, Cold Signal can still reduce
+that remainder before it reaches the Cortex.|000
+
+|CKBWhat affects it|000
+|CK0Hardware grade determines how aggressively the opening profile can vent,
+while integrity and fragmentation affect its reliability. The module also
+provides passive intelligence and spell-point hardware benefits even after its
+Heat profile has been spent.|000
+
+|CKBUsing it well|000
+|CK0Overdrive gives an engagement a cleaner opening, so it is most valuable
+when the first successful routine would otherwise create substantial Heat.
+Watch OD on the monitor or overdrive in samstatus, then plan the rest of the
+fight around ordinary Heat, Cold Signal, and available headroom.|000

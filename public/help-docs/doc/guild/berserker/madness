@@ -1,0 +1,45 @@
+Madness
+
+When Fury is already full, further Fury gain builds overflow. Enough overflow
+raises Madness instead of starting another Frenzy. Madness is cumulative: each
+level retains the effects of the levels below it. The "bvent" command clears
+Fury and Madness outside combat, though high Madness can make Vent fail.
+
+Every Madness level adds 5% base weapon resistance before Thick Hide,
+Defiance mastery, and scar effects. Madness also removes the Fury cost from
+Fury-spending abilities, though their other costs and cooldowns still apply.
+At any Madness level, combat can briefly disrupt concentration.
+
+  Madness 1: grants 5% base weapon resistance.
+  Madness 2: raises base weapon resistance to 10%, adds 15% critical damage,
+             and prevents voluntary retreat during combat.
+  Madness 3: raises base weapon resistance to 15%, gains a 15% chance to
+             counter a weapon hit with the current main-hand or unarmed attack
+             without changing targets, and gains a 25% chance to resist
+             paralysis or entanglement.
+  Madness 4: raises base weapon resistance to 20%, raises the critical damage
+             bonus to 30%, can add extra main-hand swings, and has a 35%
+             chance per attack to provoke an uncontrolled attack.
+  Madness 5: raises base weapon resistance to 25%, raises paralysis and
+             entanglement resistance to 50%, gives each hit a 25% chance to
+             leave its target Exposed, and leaves the Berserker Exposed.
+             Outside combat it also deals 2% maximum health as blunt damage
+             every ten seconds. A strong Black Scar reduces this self-damage;
+             a fully effective Black Scar suppresses it.
+
+At Madness 4, each main-hand attack has a 15% chance to gain at least one
+extra swing, a 4% chance to gain at least two, a 1% chance to gain at least
+three, and a 0.25% chance to gain four. One roll determines the whole result,
+so most surges are small and the larger bursts are increasingly rare.
+
+At Madness 5 those baseline chances become 20%, 6%, 2%, and 0.5%. Momentum
+mastery improves every tier of the distribution. A surge can never add more
+than four swings.
+
+Madness is powerful by design, but holding its highest levels carries the risk
+of lost control, Exposed, failed Vent attempts, and persistent self-damage.
+
+An uncontrolled attack cannot schedule another uncontrolled attack while it
+is pending or executing. Frenzy pulse attack rounds also cannot generate
+uncontrolled attacks. Normal combat rounds may still trigger one at Madness 4
+or 5, but the resulting bonus round is bounded and non-reentrant.

@@ -1,0 +1,33 @@
+|WKBSYNTAX
+======
+
+|CKBengage
+engage <npc>
+engage <choice number>|WKB
+
+DESCRIPTION
+===========
+
+|YKOEngage opens a dialogue with an NPC in your current room.
+
+If the NPC has something to say, Darkflow will show the NPC's portrait,
+dialogue, and any available choices. You can click a choice in Darkflow, or
+use |CKBengage <choice number>|YKO from the command line.
+
+If the NPC has no special dialogue configured, the dialogue window still opens
+with a silent response and an option to disengage.
+
+Using |CKBengage|YKO by itself works when there is only one NPC nearby that can
+be engaged. If there are several, use |CKBengage <npc>|YKO instead.|WKB
+
+EXAMPLES
+========
+
+|CKBengage crier
+engage guard
+engage 1|WKB
+
+SEE ALSO
+========|CKB
+
+look, talk, say

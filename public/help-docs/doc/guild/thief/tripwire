@@ -1,13 +1,10 @@
-                       |BKB-= |CKBTripwire |BKB=-
-               
-|MKOThis skill will allow you to lay a barely noticeable tripwire
-in a room. A thief guild apprentice will hide in the shadows
-with specific instructions to inform you immediately if a 
-threat has tripped the wire, or if the wire has become useless.
+                       Tripwire
+---------------------------------------------------------------------
 
-|WKONOTE: |MKBTripwires make use of the 'Thief Alarm' channel. This
-will broadcast when any wire's been tripped to the entire guild.
+Lay a hidden alarm wire across the room. When a valid threat crosses it,
+the Thief Alarm channel reports the victim and location. It deals no
+damage and expires after five minutes.
 
-
-|CKOGLVL required: |GKB3
-|CKOSyntax: |YKOtripwire                 |CKOCost: |WKO20
+  GLVL: 9
+  Syntax: tripwire
+  Remove: disarm tripwire

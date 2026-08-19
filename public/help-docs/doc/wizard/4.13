@@ -54,7 +54,26 @@ NOTE: Shield size is *very* important for guild restrictions.
 
 ------------------------------Composition--------------------------------
 Valid compositions:
-PADDED, HIDE, STUDDED, CHAIN, BANDED, SCALE, PLATE, MAGICAL.
+CLOTHES, PADDED, HIDE, STUDDED, CHAIN, BANDED, SCALE, PLATE.
+
+Common armour identities are defined in <basic_armour.h>. New armour should
+use set_armour_template() when a stock form fits, or use the closest semantic
+ARMOUR_* identity instead of assembling size, composition, and coverage bits
+by hand:
+
+        set_armour_template("breastplate");
+
+or:
+
+        set_new_type(ARMOUR_BREASTPLATE);
+
+Templates provide default material, aliases, weight, value, and generated
+material/quality prose. Builders may override those defaults after selecting
+the template. Clonable stock forms live in
+/objects/standard_equipment/armour/. If a recurring armour form has no
+suitable identity, extend <basic_armour.h> rather than copying a new bit
+combination into area code. MAGICAL may be added deliberately to an identity;
+it is not an armour composition.
 
 If the composition you want is NOT in this list, talk to an IMP+ about
 what category to put it in to.
@@ -80,25 +99,25 @@ Quality can be set using set_quality();
 -------------------------------Examples----------------------------------
 All of these but size can be mixed. Here are some examples:
 
-leather jerkin      : set_new_type(TORSO|HIDE|MEDIUM);
+leather jerkin      : set_new_type(ARMOUR_LEATHER_JERKIN);
                       set_material(MAT_LEATHER);
                       set_quality(0);
-ogre's robe         : set_new_type(ARMOR|PADDED|LARGE);
+ogre's robe         : set_new_type(ARMOUR_SIZED(ARMOUR_ROBE, LARGE));
                       set_material(MAT_CLOTH);
                       set_quality(-30);
-leather leggings    : set_new_type(LEGS|HIDE|MEDIUM);
+leather leggings    : set_new_type(ARMOUR_LEATHER_LEGGINGS);
                       set_material(MAT_LEATHER);
                       set_quality(0);
-small shield        : set_new_type(SMALL|SHIELD);
+small shield        : set_new_type(ARMOUR_BUCKLER);
                       set_material(MAT_WOOD|MAT_STEEL);
                       set_quality(-20);
-plate               : set_new_type(ARMOR|PLATE|MEDIUM);
+plate               : set_new_type(ARMOUR_PLATEMAIL);
                       set_material(MAT_STEEL);
                       set_quality(0);
-full plate          : set_new_type(FULL_SUIT|PLATE|MEDIUM);
+full plate          : set_new_type(ARMOUR_FULL_PLATE);
                       set_material(MAT_STEEL);
                       set_quality(0);
-adamantite full     : set_new_type(FULL_SUIT|PLATE|SMALL);
+adamantite full     : set_new_type(ARMOUR_SIZED(ARMOUR_FULL_PLATE, SMALL));
    battle armour      set_material(MAT_ADAMANTITE);
    (dwarf sized)      set_quality(30);
 
@@ -207,11 +226,21 @@ Note:   For weapon coding, there are rules and there are guidelines. You
                          WEAPON TYPES/SETTINGS
 ***************************************************************************
  
-Types are specified as followed:
+Weapon identities are defined in <basic_weap.h>. New weapons should include
+that header and use the closest semantic WEAPON_* identity instead of
+assembling size and damage bits by hand:
 
-        set_new_type(TYPE1|TYPE2|etc.);
+        set_new_type(WEAPON_DAGGER);
 
-where type specifies size, damage type, and type of weapon.
+The identity supplies the standard size, damage types, and FINESSE, MARTIAL,
+FOCUS, POLE, or MISSILE role where appropriate. MAGICAL and a deliberately
+exceptional TWO_HANDED flag may be added to the identity. If a recurring
+weapon form has no suitable identity, extend <basic_weap.h> rather than
+copying a new bit combination into area code.
+
+Clonable stock weapons live in /objects/weapons/. They provide sensible
+material, quality, weight, value, and description defaults. Area weapons with
+custom behavior should continue to inherit WEAPON and use a WEAPON_* identity.
 
 Valid sizes       : SMALL, MEDIUM, LARGE, HUGE
 NOTE:   Size is *very* important for guild restrictions.  The size of
@@ -233,21 +262,21 @@ NOTE:   You don't have to use a weapon type if it doesn't fit one of the three
         categories.  A weapon which uses the POLE type is automatically
         considered TWO-HANDED, as is a MEDIUM or larger MISSILE.
  
-All of these but size can be mixed. Here are some examples:
-dagger           : set_new_type(SMALL|SLASH|PIERCE);
-rapier           : set_new_type(MEDIUM|PIERCE);
-short sword      : set_new_type(MEDIUM|SLASH|PIERCE);
-saber            : set_new_type(MEDIUM|SLASH);
-long sword       : set_new_type(LARGE|SLASH|PIERCE);
-two-handed sword : set_new_type(HUGE|SLASH|PIERCE);
-sap              : set_new_type(SMALL|BLUNT);
-sling            : set_new_type(SMALL|BLUNT|MISSILE);
-mace             : set_new_type(MEDIUM|BLUNT);
-short bow        : set_new_type(MEDIUM|PIERCE|MISSILE);
-war hammer       : set_new_type(LARGE|BLUNT);
-war axe          : set_new_type(LARGE|CLEAVE);
-staff            : set_new_type(LARGE|BLUNT|POLE);
-halberd          : set_new_type(HUGE|CLEAVE|POLE);
+Use one identity and add only deliberate exceptional flags. Examples:
+dagger           : set_new_type(WEAPON_DAGGER);
+rapier           : set_new_type(WEAPON_RAPIER);
+short sword      : set_new_type(WEAPON_SHORTSWORD);
+saber            : set_new_type(WEAPON_SABER);
+long sword       : set_new_type(WEAPON_LONGSWORD);
+greatsword       : set_new_type(WEAPON_GREATSWORD|TWO_HANDED);
+sap              : set_new_type(WEAPON_SAP);
+sling            : set_new_type(WEAPON_SLING);
+mace             : set_new_type(WEAPON_MACE);
+short bow        : set_new_type(WEAPON_SHORTBOW);
+war hammer       : set_new_type(WEAPON_WARHAMMER);
+battleaxe        : set_new_type(WEAPON_BATTLEAXE);
+staff            : set_new_type(WEAPON_STAFF);
+halberd          : set_new_type(WEAPON_HALBERD);
 
 The difference between SLASH and CLEAVE is in the manner of damage; CLEAVE
 puts a lot of force behind the blow for sheer power in a small hit area,

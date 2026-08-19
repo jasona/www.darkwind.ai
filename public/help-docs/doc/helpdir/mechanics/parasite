@@ -1,0 +1,43 @@
+|WKBSYNTAX
+======
+
+|YKBparasite|WKB
+|YKBswallow <parasite>|WKB / |YKBeat <parasite>|WKB
+
+|WKBDESCRIPTION
+===========
+
+|YKOParasites are finite living infections that improve hit point recovery,
+spell point recovery, or both while carrying real costs. Carriers --
+larvae, worms, cysts, and stranger things -- are sold at |YKBThe Brood
+Apothecary|YKO in DarkWind City, south of Xenor Road. Inside the shop,
+|YKBlist parasites|YKO and |YKBdescribe parasite <name>|YKO preview
+each strain before you commit.
+
+Once swallowed, the infection is represented as active internal equipment.
+Its burden and any sigils therefore use the same stat and sigil machinery as
+worn gear, while remaining separate from cyberware location conflicts.
+
+Infection is voluntary: buy a carrier, hold it, and |YKBswallow|YKO or
+|YKBeat|YKO it. Each strain has a minimum level, some accept only hosts
+of a particular guild, and only one parasite can live in you at a time.
+
+While you are hurt or drained, the parasite mends you each pulse: some
+strains restore hit points, some restore spell points, and the
+strongest do both. It never heals past your maximums. In exchange it
+exacts a burden that varies by strain: reduced maximum hit or spell
+points, weakened dodge, damage, or swings, and sometimes an appetite
+that drinks your spell points while it works. If you cannot feed a
+hungry parasite's full appetite, it goes starved and does not mend you
+that pulse.
+
+A parasite lives for a fixed amount of online time; its clock pauses
+while you are logged out, and it goes still for good when the time runs
+out. It dies with you if you die, and guild-bound strains die if you
+leave their guild. Use |YKBparasite|YKO to inspect your infection:
+healing, burden, appetite, fed or starved state, and time remaining.
+
+To be rid of one early, return to The Brood Apothecary and use
+|YKBpurge parasite|YKO for a 2500 gold fee.|XX0
+
+|WKBSee also: |YKBparasites, brood apothecary, buffs, inventory|XX0

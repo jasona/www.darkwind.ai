@@ -2,7 +2,7 @@ Command: ed
 Argument: file
 
 Edit the file 'file'. For documentations about how to use 'ed', look
-at /doc/build.
+at /public/docs/build.
 
 You can leave 'ed' with the command 'q', or 'Q' if the file has been
 modified.

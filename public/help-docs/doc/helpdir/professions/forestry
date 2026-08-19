@@ -1,0 +1,26 @@
+                          Forestry
+
+Forestry gathers construction wood from marked timber stands in the
+Kingswood. The profession building is 4e, n from Center of Town. In its
+general store, use 'list' and 'buy forestry axe'. Carry the axe to a visible
+harvestable timber stand in the Kingswood and use:
+
+  chop tree
+
+The stand is exhausted after a successful harvest and returns when its virtual
+room resets. Forestry skill increases yield and can produce fine, superior, or
+masterwork oak, ash, and pine timber. Timber is saved automatically rather
+than carried as a normal inventory object.
+
+  reagents wood       Show saved timber, planks, and framing bundles.
+  carpentry list      Show timber refinement and crafting plans.
+  help carpentry      Explain refinement, furniture, and construction supply.
+
+Carpentry works in the Kingdom Commons or inside any homestead. Preserve the
+harvested species and quality when milling and crafting. For example:
+
+  carpentry mill pine 1
+  carpentry craft pine stool
+
+If 'reagents wood' shows Fine Pine Timber, use 'carpentry mill fine pine 1'
+and 'carpentry craft fine pine stool'. One timber becomes two matching planks.

@@ -1,0 +1,93 @@
+|WKBSyntax: |YKBcyberware [player]|WKB / |YKBcyberscan <implant>|WKB / |YKBinstall <implant>|WKB /
+        |YKBextract <implant or location>|WKB / |YKBuninstall <implant or location>|WKB
+|WKO=====================================================================
+|YKOCyberware is machinery grafted into your own body. An installed
+implant grants its bonuses - stats, resistances, or chance-based "proc"
+effects - for as long as it stays inside you.
+
+Every implant occupies one or more body locations: eyes, ears, brain,
+skull, jaw, throat, neck, spine, heart, lungs, torso, skin, shoulders,
+arms, hands, legs, and feet. Only one implant may occupy a location.
+
+Implants also strain the body. No implant can cost more than 10 strain, and
+the 24 cyberware locations create an absolute capacity of 240. Your natural
+limit starts at 6 and grows with your level: +1 per 10 levels, plus larger
+bonuses at levels 50, 100, 150, 200, and 250. Cyber-touched origins grant
++2 strain each, to a maximum of +10. Each remort closes part of the distance
+between your natural limit and 240, reaching full capacity at remort 50.
+You cannot install an implant that would push your total strain past your
+limit, and an implant may demand a minimum level or stranger things before
+your body accepts it.
+
+World cyberware is built in four broad qualities. Standard chrome offers
+dependable basic benefits; refined chrome is more efficient or specialized;
+military chrome carries stronger combat systems; and artifact chrome can
+transform a build at the maximum strain cost or several body locations.
+Quality does not replace item level: hardware recovered deeper into Tekal is
+generally stronger even when it shares a grade with earlier equipment.
+
+|WKBCommands:|YKO
+  |YKBcyberware            |YKOShow installed technological implants, occupied
+                       body locations, and cybernetic strain.
+  |YKBcyberware <player>   |YKOWizards may inspect a currently connected
+                       player's installed cyberware and strain.
+  |YKBimplants             |YKOShow every object-backed implant by family,
+                       including cyberware and bound relics.
+  |YKBcyberscan <implant>  |YKOInspect an implant's type, grade, locations,
+                       strain, visibility, and procs before installing.
+                       Street Samurai receive additional contract details for
+                       signature hardware. Their own installed implants also
+                       show integrity, fragmentation, firmware effectiveness,
+                       software issues, and recommended maintenance actions.
+  |YKBinstall <implant>    |YKOInstall an implant you are carrying.
+  |YKBextract <implant or location>  |YKORemove an installed implant,
+                       returning it to your inventory. Alias: |YKBuninstall|YKO.
+
+Installation and extraction require a staffed ripperdoc clinic, and the
+ripperdoc will not operate while you are fighting. The Forbidden Replacement
+Table in Nethrys Undercity's Ripperdoc Quarter is a formal clinic. You may use
+|YKBengage ripperdoc|YKO there to review carried or installed hardware, see
+the exact service fee, and confirm a procedure. You may use |YKBcyberware|YKO
+and |YKBcyberscan|YKO anywhere.
+
+Street Samurai diagnostics are private. A carried signature implant shows its
+contract requirements and hardware profile, but current maintenance state
+appears only when that exact implant is installed in the scanning Street Samurai.
+Ordinary implants and scans by other players retain the standard report.
+
+Installation costs 10,000 coins per point of implant strain, with a 10,000
+coin minimum. Extraction costs 5,000 coins per strain, with a 5,000 coin
+minimum.
+
+Installed implants cannot be dropped and stay with you across sessions. They
+are hidden from normal inventory while installed, but remain visible through
+|YKBcyberware|YKO or |YKBimplants|YKO. Implant grade does not change this:
+standard, refined, military, and artifact chrome all persist normally.
+
+Only an implant explicitly created as temporary or nonpersistent is excluded,
+and normal clinic installation rejects hardware that cannot be preserved. A
+saved implant may also be temporarily unavailable if its blueprint cannot load
+or a one-of-a-kind implant is already active elsewhere; its installation record
+is retained for a later retry. Only active restored implants consume strain, so
+missing or inactive hardware releases its strain automatically.
+
+Relics and other non-technological implants can occupy the same anatomical
+slots, but do not consume strain unless their own rules say otherwise.
+Some implants are outwardly visible - anyone who looks at you will see
+them - while hidden ones stay your secret. Procs trigger on their own
+in combat: on your hits, when you take damage, when you are badly hurt,
+or when you make a kill, each with its own chance and cooldown.
+
+General Tekal forbids cybernetics, so recoverable implants are uncommon and
+normally expose an illicit source: contraband wetware dealers and surgeons,
+augmented criminals, Green Door and Reca operatives, forbidden experiments,
+or repurposed machinery. Rarer grades are normally found on specialists,
+elites, or named threats. Shimmerdeep's Miura do not implant themselves;
+cyberware recovered there comes only from corrupted external machinery and
+mechaplants.
+
+|WKBSee also: |YKBhelp effects, help equip, help parasite|XX0
+
+# keywords: implants, chrome, strain, augmentation, procs, ripperdoc, uninstall
+# alias: implant, implants, cyberscan, uninstall
+# see: effects, equip, parasite

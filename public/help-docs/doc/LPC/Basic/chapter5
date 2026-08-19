@@ -92,7 +92,7 @@ In actual practice, each mudlib is different, and thus requires you to use
 a different set of standard functions, often to do the same thing.  It is
 therefore beyond the scope of this textbook even to describe what
 functions exist and what they do.  If your mudlib is well documented,
-however, then (probably in /doc/build) you will have tutorials on how
+however, then (probably in /public/docs/build) you will have tutorials on how
 to use the inheritable files to create such objects.  These tutorials
 should tell you what functions exist, what input they take, the data
 type of their output, and what they do.

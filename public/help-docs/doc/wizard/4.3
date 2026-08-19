@@ -1,5 +1,5 @@
 
-                                                                          Rev. 2
+                                                                          Rev. 3
 
                          |CKBCoding Monsters
                         |BKB ===============
@@ -466,11 +466,21 @@ position: Execute this function:   If monster sees:   followed by:
   it found was 'why_did' from position 0, so it now does a
   this_object()->why_did("Bill takes our taxes";
 |BKB-----------------------------------------------------------------
-|GKBset_friends(names);
+|GKBset_friends(names, chance);
 
-  |WKOnames can be either a single string or a string array.  Every heartbeat a
-  npc checks for any npc in its friends list that is being attacked
-  and initiates combat with it.
+  |WKOnames can be either a single string or a string array.  Each heartbeat an
+  npc has a chance to check whether an npc in its friends list is being attacked
+  and join that combat.  The optional chance is a percentage from 1 to 100 and
+  defaults to 10.  Use 100 to make friends always join as they did previously.
+
+|GKBset_friend_join_chance(chance);
+
+  |WKOChanges the percentage chance that the npc will check and join its friends
+  each heartbeat.  Values are limited to 0 through 100; 0 disables joining.
+
+|GKBint query_friend_join_chance();
+
+  |WKOReturns the npc's current friend join chance.
 |BKB-----------------------------------------------------------------
 |GKBcatch_tell(string sStr);|WKO                                                       |
                                                                                |
@@ -620,21 +630,27 @@ void make_monsters() {
   the call_out will be called again 30 seconds later.
 |BKB-----------------------------------------------------------------
 |GKBvarargs set_variable_level(int iBaseLevel, int iResetTime,
- string sMess, status tCanGoLow);|WK0
+ string sMess, status tCanGoLow, status tOverrideLimit);|WK0
   |WK0This function will change the level of the monster to the level
-  of the first player that it encounters. After iResetTime if not
-  in combat, it will reset to iBaseLevel. If iBaseLevel isn't set,
-  it will revert to whatever level you set_level the monster. If
-  iResetTime isn't set, it will default to 300 seconds. sMess will
-  default to "$N $vlook different." and is a room_message that
-  only uses the monster, not the player when setting the string.
-  If you set tCanGoLow to 1, then the monster can go lower than the
-  level you set_level, otherwise it won't.
+  of the first player that it encounters, up to 50 levels above its
+  configured base level. For example, a level 10 monster will scale
+  to level 20 for a level 20 player, but only to level 60 for a level
+  70 player. After iResetTime, if not in combat, it will reset to
+  iBaseLevel. If iBaseLevel isn't set, it will use whatever level you
+  set_level the monster. If iResetTime isn't set, it will default to
+  300 seconds. sMess will default to "$N $vlook different." and is a
+  room_message that only uses the monster, not the player when setting
+  the string. If you set tCanGoLow to 1, then the monster can go lower
+  than the level you set_level; otherwise it won't. Set tOverrideLimit
+  to 1 only when the monster should preserve the old behavior and scale
+  all the way to the player's level without the 50-level increase cap.
   |YK0Eg. set_variable_level(); |000// Will set everything to the default.
   |YK0Eg. set_variable_level(0,60,"$N $vlook BEEFY!"); |000// Will set
     the base level to what was set, reset time of 60 seconds,
     message to looks BEEFY, and won't allow the monster to go under
     the set_level of the monster.
+  |YK0Eg. set_variable_level(0,0,0,0,1); |000// Uses the default base,
+    reset time, and message, but preserves uncapped legacy scaling.
 |BKB-----------------------------------------------------------------
 |GKBvoid set_npc_elite(status tElite);|WK0
   |WK0This function will change a regular monster into a slightly
@@ -653,6 +669,9 @@ void make_monsters() {
 
 |CKBREVISION HISTORY
 |BKB================
+
+|WKORev. 3 - Documented the 50-level variable monster increase cap and
+         the explicit legacy scaling override.  Revised 07/06/26.
 
 |WKORev. 2 - Moved a few functions to 4.3b (Advanced Monsters).
 

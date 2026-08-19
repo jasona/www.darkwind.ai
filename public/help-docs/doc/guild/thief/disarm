@@ -1,0 +1,10 @@
+                         Disarm
+---------------------------------------------------------------------
+
+Dismantle a deployed Thief trap or tripwire. Your own device is always
+safe to remove. Removing another setter's device tests Dexterity,
+Intelligence, Thief training, Locksmith, and the Cat Method; failure may
+trigger it.
+
+  GLVL: 9
+  Syntax: disarm <trap|tripwire>

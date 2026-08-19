@@ -9,12 +9,13 @@ Display your full Ranger score report. Shows rank, skill scores,
 terrains, stats, and camp information.
 
 FIELDS:
-  Rank          Your rank based on total skills learned
+  Rank          Your rank based on skill slots invested
+  Ranger XP     Progress toward your next Ranger guild level
   Wilderness    Score from Survival + Cartography + Hunting skills
   Martial       Score from Attack + Archery skills
   Spiritual     Score from Husbandry skills
-  Skills        Number learned out of 59 total
-  Slots         Remaining slots to spend on skills
+  Skills        Number learned out of the current skill table
+  Slots         Remaining and invested skill slots
   Terrain       Your primary and secondary terrain
   Enemy         Your enemy species (+30% crit bonus)
   Adapt         Arctic or Desert survival specialization

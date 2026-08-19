@@ -1,0 +1,80 @@
+Cyberware.
+
+Cyberware is machinery grafted into your own body. An installed implant
+grants its bonuses, such as stats, resistances, or chance-based proc
+effects, for as long as it stays inside you.
+
+Every implant occupies one or more body locations: eyes, ears, brain,
+skull, jaw, throat, neck, spine, heart, lungs, torso, skin, shoulders,
+arms, hands, legs, and feet. Only one implant may occupy a location.
+
+Implants also strain the body. No implant can cost more than 10 strain,
+and the 24 cyberware locations create an absolute capacity of 240. Your
+natural limit starts at 6 and grows with your level: one point per 10
+levels, plus larger bonuses at levels 50, 100, 150, 200, and 250.
+Cyber-touched origins grant 2 extra strain each, to a maximum of 10.
+Each remort closes part of the distance between your natural limit and
+240, reaching full capacity at remort 50. You cannot install an implant
+that would push your total strain past your limit, and an implant may
+demand a minimum level or stranger things before your body accepts it.
+
+World cyberware comes in standard, refined, military, and artifact
+qualities. Higher qualities provide more specialized or powerful benefits,
+but source level still matters. Artifact systems may consume the maximum
+strain or occupy several locations.
+
+Commands:
+
+cyberware [player]
+  Show your installed implants, occupied body locations, and strain.
+  Wizards may name a currently connected player to inspect that player's
+  installed cyberware and strain.
+
+cyberscan <implant>
+  Inspect an implant's type, grade, body locations, strain, visibility,
+  and proc count before installing it.
+
+install <implant>
+  Have a ripperdoc install an implant you are carrying.
+
+extract <implant or location>
+uninstall <implant or location>
+  Have a ripperdoc remove an installed implant, returning it to your
+  inventory.
+
+Installation and extraction require a staffed ripperdoc clinic, and the
+ripperdoc will not operate while you are fighting. The Forbidden Replacement
+Table in Nethrys Undercity's Ripperdoc Quarter is a formal clinic. Cyberware
+status and implant scans remain available anywhere. Use "engage ripperdoc"
+at the clinic to review hardware, see the exact service fee, and confirm the
+procedure.
+
+Installation costs 10,000 coins per point of implant strain, with a 10,000
+coin minimum. Extraction costs 5,000 coins per strain, with a 5,000 coin
+minimum.
+
+Installed implants cannot be dropped and stay with you across sessions. They
+are hidden from normal inventory while installed, but remain visible through
+cyberware or implants. Grade does not change persistence: standard, refined,
+military, and artifact chrome all persist normally.
+
+Only hardware explicitly created as temporary or nonpersistent is excluded,
+and normal clinic installation rejects hardware that cannot be preserved. A
+saved implant can be temporarily unavailable when its blueprint cannot load or
+a one-of-a-kind implant is active elsewhere; its record remains for a later
+retry. Only active restored implants consume strain, so missing or inactive
+hardware releases its strain automatically.
+
+Some implants are outwardly visible and anyone who looks at you will see them;
+hidden ones stay your secret. Procs trigger on their own in combat: on your
+hits, when you take damage, when you are badly hurt, or when you make a kill,
+each with its own chance and cooldown.
+
+General Tekal forbids cybernetics, so recoverable implants are uncommon and
+normally expose an illicit source: contraband wetware, augmented criminals,
+Green Door or Reca operatives, forbidden experiments, or repurposed machinery.
+Specialists, elites, and named enemies are the usual sources of rarer hardware.
+Shimmerdeep's Miura do not implant themselves; cyberware found there comes
+from corrupted external machinery and mechaplants.
+
+See also: help effects, help equip.

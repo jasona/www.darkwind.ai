@@ -1,68 +1,35 @@
-/doc/guild/mage/nonmage
-=======================
+Peering into the Dark Wind, Magi study the patterns beneath matter, memory,
+light, distance, heat, death, and spellwork itself. They keep those patterns in
+leather-bound spellbooks and carry them into the field, where a good idea can
+become a fireball, a hidden path, a stolen moment, or a way home.
 
-So, you're interested in the ways of the magi... a wise decision.  Magi have
-the ability to do the most direct damage of any guild in Darkwind.  While
-we do not wear heavy armor or wield large weapons other than staves, our
-spells more than make up for it in time of need.  Of course, magi also have
-a variety of utility spells for use in non-combat situations.
+Mage is a broad spellcasting guild with a gentle first page and considerable
+room to grow. Mana Shard and Missile give a new member dependable attacks;
+Analyze, Detect, and Blaze make the same character useful while exploring.
+Fighting suitable enemies earns Mage GXP, and useful field magic awards 10 GXP
+for a utility working or 20 for a combat working, at most once per working
+every thirty seconds. That GXP raises Arcane through fifteen ranks and reveals
+new workings along the way.
 
-The magi are ranked in power by their Guild Level (GL).  The GL 1 magi is
-just learning the crafts of summoning light and casting magic missiles, while
-the GL 15 mage can bring the touch of death itself against an opponent.  Of
-course, in the hands of a GL 15 mage, even the meager magic missile can do
-tremendous damage...
+The spellbook grows through use as well as rank. Individual workings become
+Practiced, Fluent, Inscribed, and Instinctive, opening lower costs, rune
+sockets, and automatic barrage casting. A Mage can prepare a Practiced combat
+working to fire alongside ordinary attacks. Wielding a FOCUS weapon opens that
+style immediately and channels the automatic spell for no SP; adding worn AURA
+equipment creates full battlemage resonance, improving its speed and force.
+Investiture, learned at Arcane 4, can temporarily supply either quality but not
+both at once.
 
-Combat Spells
-=============
-As mentioned above, as the magi increase in guild level, they increase in
-firepower.  I've listed the various attack spells below as well as the guild
-level when they are acquired.  The spell point cost refers to the cost when
-the mage has just learned the skill; as the mage increases in ability, the
-cost increases, as does the destructive potential of the spell.
+Runes change the character of a familiar working. Some are part of ordinary
+study, while others appear only after the spellbook has witnessed enough
+mastery, fire, or stranger discoveries. The deepest trail returns to the
+ruined Isle of the Magi, where the broken Tower of Arcanarton still remembers
+the war that separated Mage and Necromancer lore.
 
-     Magic Missile  - GL 1 -  7 SP
-     Fireball       - GL 3 - 10 SP
-     Icestorm       - GL 4 - 15 SP (attacks multiple creatures at once!)
-     Wrath          - GL 7 - 50 SP
-     Touch of Death - GL 15 (and Normal Level 18) - 150 SP & 50 HP!
+GXP continues to matter after the fifteenth Arcane rank. Long study opens new
+styles of marginalia, giving completed workings a visible signature without
+turning those flourishes into another compulsory source of power.
 
-Now, magi sometimes find themselves in actual physical combat.  While this
-is not our forte, we have spells which can help us in this endeavor as well,
-providing both physical protection from weapons and increasing our resistance
-to enemy spells.
-
-     Armor  - GL 5 -  75 SP
-     Negate - GL 9 - 100 SP
-
-Non-Combat Spells
-=================
-
-An adventurer's life consists of more than combat, and so does the mage's
-repetoire of spells.  Magi can see into remote locations, determine secret
-information concerning an object, and teleport objects to other players.  A
-more complete list of abilities follows:
-
-     Find (GL 1) - Locate other people
-     Illuminate (GL 1) - Create light
-     Detect (GL 2) - Detect evil monsters
-     Analyze (GL 2) - Identify objects
-     Insanity (GL 4) - Great ice-breaker at parties!
-     Magic Eye (GL 6) - Spies into an adjacent room
-     Blink (GL 8) - Teleports the mage to another location 
-     Darkwind/Souvrael (GL 9) - Teleports a person to Darkwind/Souvrael
-     Gate (GL 11) - Teleports an object to another player
-     Powerup (GL 13) - Converts hit points into spell points
-
-The Life of the Magi
-====================
-
-Magi are inherently good, so they may not cast spells if they have an
-evil alignment.  Intelligence is of primary importance in spell casting,
-so a prospective mage must have an intelligence of at least 6 in order to
-join the guild.  Finally, the magi form a close fellowship, able to
-communicate with each other regardless of physical location.
-
-While this is a good introduction, the best way to find out about the life
-of a magi is to ask one!  We will be glad to show you why the magi form the
-best guild in Darkwind!
+Prospective Magi need at least 6 Intelligence. Speak with Merlin here to join;
+afterward, open the new spellbook with "spellbook" and let "research" point
+toward the next page.

@@ -1,4 +1,4 @@
-|WKBSyntax: |YKBuniques [weapon | armour | claimed | available]|WKB
+|WKBSyntax: |YKBuniques [tabular] [weapon | armour | claimed | available]|WKB
         |YKBuniques [favorites | hoarders | playerfavorites] [count]|WKB
 |WKO=====================================================================
 |YKOUnique weapons and armour are one of a kind: only a single copy of
@@ -6,21 +6,27 @@ each can exist in the game at a time. While one is out in the world -
 or in someone's hands - no second copy will appear. Uniques come from
 their usual places in the world; mighty foes guard many of them.
 
-A unique does not last forever. Roughly five days after it appears it
-dissolves into the aether, and a wielded or worn unique pulsates
-softly about half an hour before the end. Heed the warning.
+Uniques do not expire on a timer. If one is accidentally sold to an
+ordinary shop or lost in the quit room, it is transferred to the world
+market so that it can return to circulation.
 
 The first player to pick up, wield, or wear a unique after a reboot
 claims it. Claims are announced on the events channel and recorded
 forever in the unique leaderboards. Claimed status clears at reboot,
-so every boot is a fresh race.
+so every boot is a fresh race. Destruction releases the unique to spawn
+again, but does not erase that boot's first claim. A market status shows
+when the live copy is currently listed for sale.
 
 |WKBCommands:|YKO
   |YKBuniques           |YKOList known uniques and whether each is claimed
-                    this reboot or still available.
+                    this reboot or still available, with its source
+                    continent or domain.
   |YKBuniques weapon    |YKOOnly weapons; |YKBuniques armour|YKO for armour.
   |YKBuniques claimed   |YKOOnly claimed; |YKBuniques available|YKO for the
                     unclaimed.
+  |YKBuniques tabular [filter]|YKO Force aligned columns instead of the
+                    sentence-style rows used for narrow terminals and
+                    screen-reader mode.
   |YKBuniques favorites [count]        |YKOMost-claimed uniques ever.
   |YKBuniques hoarders [count]         |YKOPlayers with the most claims.
   |YKBuniques playerfavorites [count]  |YKOEach player's most-claimed

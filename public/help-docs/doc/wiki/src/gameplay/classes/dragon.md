@@ -1,7 +1,7 @@
 # Dragon
 
-Work in progress: Dragon is being built toward this design, and current game
-behavior differs in places.
+In-game class help is authoritative for the Dragon abilities available to your
+character.
 
 Dragon is a mythic body path. The character becomes a dragon and accepts the
 consequences.

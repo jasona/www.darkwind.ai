@@ -5,9 +5,9 @@ SYNTAX:      rcost
 USAGE:       Any wilderness area.
 
 SUMMARY:
-Check the cost to advance your stats, game level, and guild level
-from anywhere in the wilderness. Shows experience and gold required
-for each advancement option.
+Check character advancement costs and combat-earned Ranger XP progress
+from anywhere in the wilderness. Also shows the slots granted by the next
+Ranger guild level.
 
 =============================================================================
 SEE ALSO: radvance, advancement, glevels

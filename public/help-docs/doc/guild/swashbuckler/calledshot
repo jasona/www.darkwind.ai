@@ -7,7 +7,10 @@ both a steady hand and knowledge of weaknesses. These well-
 placed strikes, when they land, will cause greater damage
 to the enemy.
 
+Damage increases at each character-level bracket: +12 below Hero,
++15 at Hero, +18 at Legend, +21 at Epic, and +24 at Mythic.
+
 GL:  5
-SP:  2 / attack
+SP:  3 / proc, reduced by Flow
 command:  calledshot
 duration: technique mode

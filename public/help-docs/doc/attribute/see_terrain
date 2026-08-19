@@ -1,4 +1,4 @@
-/doc/attribute/see_invis
+/public/docs/attribute/see_invis
 
 Format: (Living_Object)->set_attribute("see_terrain", tValue);
 

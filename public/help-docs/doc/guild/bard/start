@@ -52,13 +52,25 @@ This is the practical path for a new Bard.
    Bards are social explorers. perform can earn coins, legend reads objects,
    and lore helps you judge creatures.
 
-7. Buy instruments when you can.
+7. Build your Bard legend.
+
+   gscore Bard
+   bscore
+   glevel
+
+   Bards earn Bard XP by contributing to level-appropriate battles. Bard XP
+   advances your guild level automatically when your character level, total
+   guild levels, and Charisma allow it. Excess Bard XP remains banked until a
+   blocked level becomes available. The glevel command at a Bard hall explains
+   any current gate; it no longer spends ordinary character experience.
+
+8. Buy instruments when you can.
 
    Alternate instruments are sold in the Bard Shoppe in the Darkwind Bard
    guildhall. Use instrument to choose one. Instruments change newer battle
    songs and unlock a few songs.
 
-8. Choose an archetype at guild level 10.
+9. Choose an archetype at guild level 10.
 
    specialize
    specialize <archetype>

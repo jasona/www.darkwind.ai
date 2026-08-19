@@ -1,0 +1,22 @@
+|CKBCook Ash: Waste Not, Warn Nobody|000
+
+Syntax: cookash <grey|red|blue|mixed>
+Alias:  ccook
+
+At Rank 2 and Volatility 1, use an acid flask made with 'brewacid' and empty
+all relevant ash from a carried corpse burner into it. A single-colour batch
+needs at least 10 matching ash. Mixed needs at least 10 of every colour and
+empties all three stores.
+
+  Grey   - Alchemy 25; accuracy and defensive footwork
+  Red    - Alchemy 75; direct combat damage
+  Blue   - Alchemy 75; accuracy and one extra swing
+  Mixed  - Alchemy 150; a smaller blend of red and blue benefits
+
+Aim for 100 ash when you want a proper batch. Feeding it more still stretches
+the rush, but the difference soon becomes difficult to notice. The resulting
+owner-bound vial goes flat after two hours. Quaffing starts a Cookash Rush
+shown in 'buffs'; only one rush can be active. Throwing the cooked vial keeps
+its elemental surprise and always splashes the Charlatan too. This is called
+quality control. The cloak needs only a few seconds before it can cook another,
+provided you have another acid flask and enough ash.

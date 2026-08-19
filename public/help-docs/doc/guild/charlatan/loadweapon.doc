@@ -1,0 +1,40 @@
+|CKBLoad Weapon: Improvements Made While You Wait Nervously|000
+
+Syntax: loadweapon <weapon> with <corrosive|dazzling|oiled|silvered|flaming|frozen|poisoned|shocking>
+
+Treat a carried, unwielded, ordinary weapon. Unique pieces refuse the work,
+presumably on advice from better lawyers.
+
+  Dazzling
+    Contraband 1, Alchemy 50. A shifting finish leaves the weapon Razzled.
+    "Flash" remains accepted when ordering.
+
+  Oiled
+    Contraband 2, Alchemy 70. Makes the weapon markedly easier to place. The
+    benefit takes hold as soon as the weapon is ready again.
+
+  Corrosive
+    Contraband 2, Alchemy 75, and one fresh acid flask. Acid strikes can
+    leave a living victim Sundered, but the treatment lowers weapon class by
+    one while it remains applied. "Acid" remains accepted when ordering.
+
+  Poisoned
+    Contraband 2, Alchemy 100. Adds a direct poison treatment. Stretch Poison
+    remains the better way to preserve a prepared poison's special payload.
+
+  Flaming / Frozen
+    Contraband 3, Alchemy 100. Adds fire or cold to each convincing strike,
+    which may leave the victim Burning or Chilled.
+
+  Silvered
+    Contraband 4, Alchemy 125, Smithing 50, and one saved Silver Bar. Leaves
+    the weapon Silvered. "Quicksilver" remains accepted when ordering.
+
+  Shocking
+    Contraband 4, Alchemy 150. Adds lightning and a slim chance that the
+    victim's muscles briefly reconsider their obligations.
+
+Greater trade skill improves the treatment's strength and lifetime. Every
+load has a drawback. Dazzling can very rarely steal concentration; Sharpened
+weapons made elsewhere can very rarely leave a foe Bleeding. If it did not
+have fine print, someone reputable would sell it.

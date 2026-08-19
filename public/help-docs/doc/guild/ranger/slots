@@ -10,7 +10,8 @@ you can currently learn with their slot costs.
 
 Slots are earned by advancing your guild level. Each guild level
 grants between 4 and 20 slots (higher levels give more). You
-spend slots plus experience to learn skills.
+spend slots to learn skills. Learning never consumes ordinary experience
+or banked Ranger XP.
 
 =============================================================================
 SEE ALSO: glevels, learn, skilltree

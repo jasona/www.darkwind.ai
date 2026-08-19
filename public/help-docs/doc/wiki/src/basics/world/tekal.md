@@ -1,36 +1,32 @@
 # Tekal
 
-Work in progress: this page describes the Tekal setting we are building toward, and current game content differs in places.
+Tekal is the green moon of knowledge, sealed archives, Vyra refinement, and forbidden augmentation. It is technologically stranger than most of Blackmar, but its wonders grow from ash-fired furnaces, pressure engines, copper conduits, green glass, calculation halls, and carefully guarded learning rather than gunpowder or effortless magic.
 
-Tekal is the green moon of knowledge, balance, Luna, and advanced technology. It is the technological wonder of Blackmar's sky: clean lines, machine cities, cybernetic labs, virtual spaces, and computation that most mainland scholars can only describe as magic with better manners.
+Tekal is known from lunar lore, travelers' accounts, recovered devices, and people who have brought its practices elsewhere. A safe public route to the moon is not currently known.
 
-Tekal is not AshPunk. Ashad is soot, pressure, heat, and brass. Tekal is glass, signal, circuitry, precision, artificial minds, and lunar balance expressed as design.
+> The light of knowledge casts the deepest shadows.
 
-Green moonlight belongs to knowledge, balance, Luna, and calm precision. The Techno-City, cybernetics labs, virtual environments, robot factories, quantum study, prosthetics, artificial minds, and interface craft make Tekal feel impossible by mainland standards.
+## Knowledge And Law
 
-Its dangers are precise rather than wild: controlled systems, simulated spaces, machine governance, prediction failures, and questions about where a body ends when technology begins.
+The Tekai treat knowledge as sacred, dangerous, and earned through discipline. Their society is brilliant, beautiful, class-bound, and secretive. Knowledge Houses decide who may learn, who may heal, who may build, and who must remain outside the next gate.
 
-## Areas
+Miniaturized ash-electric weapons are forbidden after the Small Coil Catastrophe. Legal craft favors infrastructure, medicine, controlled refinement, observatories, and licensed machinery. Beneath that order are stories of black markets, forbidden schools, illicit implants, and people who believe no discovery should remain locked away.
 
-| Area | Description |
-| --- | --- |
-| The Techno-City | Main urban domain of lights, transit, systems, and machine governance |
-| The Robot Factory | Manufacturing complex of automata, assembly lines, and emergent hazards |
-| The Virtual Reality Arcade | Simulated adventures, training spaces, and dangerous games |
-| The Cybernetics Lab | Prosthetic craft, body interfaces, and experiments in selfhood |
-| The Quantum Computing Center | Deep research site where prediction and possibility become terrain |
+## Vyra And The Core Four
 
-## What Players Find Here
+Vyra is a root liquid refined into four better-known forms:
 
-- Machine cities and clean artificial spaces
-- Cybernetics, prosthetics, and body-interface questions
-- Artificial minds, factories, signal systems, and predictive hazards
-- Virtual training or trial spaces
-- Strong links to Luna, Mage research, Artificer concepts, and future class play
-- Technology that feels advanced without becoming AshPunk
+| Liquid | Color | Associated Effects |
+| --- | --- | --- |
+| Azurene | Blue | Focus, hydration, cognition |
+| Viridene | Green | Healing, regeneration, vitality |
+| Pyrene | Red | Strength, aggression, adrenaline |
+| Aurene | Yellow or gold | Speed, reflexes, perception, energy conduction, luminosity |
 
-## Travel Mood
+Vyrariums are the shops and clinics that refine, sell, serve, or administer these liquids. Surface accounts describe licensed practice and careful records; darker stories speak of unlicensed surgery and augmentation below the moon's ordered cities.
 
-Tekal feels precise. Doors, lights, voices, machines, and simulated spaces all behave according to rules the mainland never taught you. The danger is not mud, hunger, or wilderness. The danger is a system that understands itself better than it understands you.
+## What Tekal Means Elsewhere
 
-Tekal makes the world suddenly vertical, electric, and strange. Its technology is not dirty, medieval, or industrial. A player on Tekal feels like the rules are written in another language and the moon expects them to learn.
+Tekal's influence reaches Blackmar through green-glass instruments, ash-electric machinery, Vyra, cybernetic knowledge, credentials, and censored histories. Not every Tekal-made object proves that its city of origin can be visited, but each is evidence that the moon is more than a light in the sky.
+
+Use `areas tekal` if a route becomes available to your character.

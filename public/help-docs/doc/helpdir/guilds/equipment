@@ -1,16 +1,16 @@
-|YK0#|YKB Guild Equipment Guidance|000
+|YK0#|YKB Guild and Class Equipment Guidance|000
 
-|GK0Guild equipment rules are checked when you try to wear armour or wield a
-weapon. These are practical guidelines for normal equipment; special items can
-still directly allow or restrict specific guilds.|000
+|GK0Guild and class equipment rules are checked when you try to wear armour or
+wield a weapon. These are practical guidelines for normal equipment; special
+items can still directly allow or restrict specific guilds or classes.|000
 
 |CKBImportant notes|000
 |GK0- Specific bans are checked before specific allows.
 - Specific allows are checked before broad bans.
-- Item-level guild allow/restrict flags override the normal table.
+- Item-level guild or class allow/restrict flags override the normal table.
 - Size, damage type, armour composition, slot, and material can all matter.|000
 
-|YK0##|YKB Standard guilds|000
+|YK0##|YKB Guilds|000
 
 |CKBFighter|000
 |GK0Weapons: any normal weapon.
@@ -55,13 +55,6 @@ leather cloaks, rings, and amulets are explicitly supported.
 Materials: broad armour restrictions hit metal, leather, rock, and wood unless
 a specific allowed slot/material exception applies.|000
 
-|CKBLunar|000
-|GK0Uses the same normal equipment profile as Mage.
-Weapons: avoid medium or larger slash, pierce, and cleave weapons.
-Armour: no plate or shields; light cloth/leather utility slots are safest.
-Materials: broad armour restrictions hit metal, leather, rock, and wood unless
-a specific allowed exception applies.|000
-
 |CKBNecro|000
 |GK0Uses the same normal equipment profile as Mage.
 Weapons: avoid medium or larger slash, pierce, and cleave weapons.
@@ -90,13 +83,6 @@ Armour: no shields. Rings, amulets, and auras are explicitly supported. Avoid
 plate, scale, banded, and chain.
 Materials: avoid metal armour unless a specific allowed slot applies.|000
 
-|CKBPsionicist|000
-|GK0Weapons: avoid large and huge weapons, especially slash, pierce, and cleave
-weapons. Blunt polearms with the supported size/type combination are the
-notable exception.
-Armour: no helmets, plate, chain, scale, banded, or shields.
-Materials: leather, natural, and cloth armour are explicitly supported.|000
-
 |CKBSwashbuckler|000
 |GK0Weapons: no huge weapons, large cleaving weapons, missile weapons, or
 polearms.
@@ -105,7 +91,7 @@ explicitly supported. Avoid banded, chain, scale, plate, and shields.
 Materials: avoid crystal, glass, metal, rock, and wood armour unless a specific
 allowed type applies.|000
 
-|YK0##|YKB Mythic and special guilds|000
+|YK0##|YKB Additional guilds|000
 
 |CKBDruid|000
 |GK0Weapons: nature-friendly gear is safest. Small weapons, large or huge blunt
@@ -132,18 +118,28 @@ Armour: only auras are allowed.
 Materials: all normal weapon and armour materials are restricted unless the
 item fits the allowed weapon profile or aura slot.|000
 
+|CKBBerserker|000
+|GK0Weapons: any normal weapon.
+Armour: light, medium, or heavy armour, including shields.
+Materials: no normal material restriction.|000
+
+|YK0##|YKB Classes|000
+
+|GK0Class restrictions reflect what a character innately is rather than a
+learned guild discipline.|000
+
+|CKBPsionicist|000
+|GK0Weapons: avoid large and huge weapons, especially slash, pierce, and cleave
+weapons. Blunt polearms with the supported size/type combination are the
+notable exception.
+Armour: no helmets, plate, chain, scale, banded, or shields.
+Materials: leather, natural, and cloth armour are explicitly supported.|000
+
 |CKBMorpher|000
 |GK0Weapons: no large, huge, or missile weapons.
 Armour: no plate or chain.
 Materials: no normal material restriction outside those weapon and armour
 types.|000
-
-|CKBBerserker|000
-|GK0Uses the same normal equipment profile as Mage.
-Weapons: avoid medium or larger slash, pierce, and cleave weapons.
-Armour: no plate or shields; light cloth/leather utility slots are safest.
-Materials: broad armour restrictions hit metal, leather, rock, and wood unless
-a specific allowed exception applies.|000
 
 |YK0##|YKB Quick material reminders|000
 
@@ -151,9 +147,11 @@ a specific allowed exception applies.|000
 brass, tin, lead, copper, and platinum.
 Natural-friendly materials usually include natural, wood, rock, bone, glass,
 crystal, gem, cloth, leather, skin, fur, flowers, and similar non-metal
-materials, though each guild still checks slot and armour/weapon type.|000
+materials, though each guild or class still checks slot and armour/weapon
+type.|000
 
 |YK0##|YKB See also|000
 |CKBhelp basics equipment|000
 |CKBhelp mechanics equip|000
 |CKBhelp guilds|000
+|CKBhelp classes|000

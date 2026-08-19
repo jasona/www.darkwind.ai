@@ -1,4 +1,17 @@
 +-------------------------------------------------------------------+
+
+Devotion
+--------
+
+'devote' displays every trainable devotion and your available points.
+'devote <skill>' allocates one point to that devotion.
+'devote reset' previews a complete devotion reset and its offering.
+'devote reset confirm' performs the reset before Mitra's statue in the
+Paladin guild hall. You cannot reset while fighting. Your first reset is
+free; later resets use an escalating coin offering. Resetting returns all
+allocated points and ends active Paladin blessings, sanctifications,
+consecrations, seals, and holy javelins.
+
 GL    Skill                   Description
 +-------------------------------------------------------------------+
 
@@ -52,4 +65,3 @@ GL    Skill                   Description
 
 +-------------------------------------------------------------------+
 +-------------------------------------------------------------------+
-

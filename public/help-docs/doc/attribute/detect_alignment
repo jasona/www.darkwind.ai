@@ -1,4 +1,4 @@
-/doc/attribute/detect_alignment
+/public/docs/attribute/detect_alignment
 
 Format: (Living_Object)->set_attribute("detect_alignment", tValue);
 

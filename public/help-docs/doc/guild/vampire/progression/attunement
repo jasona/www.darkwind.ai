@@ -1,0 +1,13 @@
+|RKB☾  VAMPHELP · ATTUNEMENT  ☽|000
+|CK0════════════════════════════════════════════════════════════|000
+
+|MKBKnown|000 disciplines are permanent. |MKBAttuned|000 disciplines are your
+active loadout. You normally have |GKBthree slots|000; First Night grants four.
+
+Change the entire loadout with:
+
+  |GKBattune <discipline, discipline, ...>|000
+
+Attune at your coffin, the First Grave, Covenant vault or Red Chapel,
+Vespercourt crypt, or Blood Archive.
+|YKBKnown but unattuned disciplines cannot be invoked.|000

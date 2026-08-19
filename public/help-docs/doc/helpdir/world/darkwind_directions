@@ -100,6 +100,9 @@ All entries are in the form of:
 |WKBThe northwestern mountain range : |YKB10-25
     |MKB6:w, exit, 4:w, 6:n, climb, up, n
 
+|WKBVarg's Teeth : |YKB225-250
+    |MKB6:w, exit, 4:w, 6:n, climb, up, n, e, n
+
 |WKBA monestary in Glavia : |YKB15+
     |MKB6:w, exit, 4:w, 2:n, e, 3:n, e, n, e, n, 5:e, 5:ne, n, 4:w, 2:n
 

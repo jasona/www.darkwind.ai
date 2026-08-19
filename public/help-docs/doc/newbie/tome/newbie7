@@ -1,37 +1,40 @@
-                            |CKBChapter 7 - Equipment
-                      |BKB-----------------------------------
-     
-     |WKBTo begin with you will not need a great deal of equipment. Some light
-     body armour and a weapon should suffice. Weight is important to combat,
-     and if you are overencumbered you will fight more slowly. To check
-     your weight, type |YKO'weight'|WKB. You can get equipment from the Newbie shop
-     (|CKO4w,s|WKB) from the donation room (|CKO5n,e|WKB), from the Smithy (|WKO6n,w|WKB), from the
-     shop (|CKO5w,2s,w|WKB) or from the NPCs that you kill.
-     
-     There are 8 different types of armour: body, leg, hands, feet, head,
-     about body, neck, and finger. Some armours will have magical qualities
-     that offer extra special protection. As you adventure and grow in levels
-     you will determine which armours suit you best.
-     
-     There are many types of weapons. One of the strongest factors in 
-     determining which weapon to use is Guild restrictions. Different guilds
-     have different preferences for weapon types. You can increase your
-     effectiveness with a particular weapon by specializing in that type. 
-     The Weapons Training Hall is |CKO2s,w|WKB.
+                         |CKBChapter 7 - Equipment
+                     |BKB-----------------------------------
 
-     Since combat here is done differently than anywhere else, how weapons
-     work is done differently. A level 1 player with the most powerful 
-     non-magical weapon in the game will not do well here. Each weapon has a 
-     range that is most effective for certain levels. Low level players will 
-     do much better with lower power weapons than they will with a weapon that 
-     was not designed for them. Magical weapons, of course, can bend this rule, 
-     but even then a magic weapon designed for a high level player will not work
-     well in the hands of a lower level player. This isn't to say that low
-     level players only get wimpy weapons, it just means that players can get
-     powerful weapons comparable to their level.   
+|YKOCharacters can wear equipment on the head, body, legs, hands, feet,
+shield arm, cloak/body, shoulders, aura, two fingers, and two neck slots.
+Weapons occupy your hands according to their own rules. Race, size, guild,
+class, strength, curses, and scripted restrictions can all affect what fits.
 
-     Once you have weapons and armour you will need 2 more things to complete
-     your equipment - A torch and a bag. Never adventure without a light
-     source. A bag to carry the loot will help to keep your encumbrance low.
-     Darkwind features many other methods of carrying loot such as ponies,
-     camels, mercenaries and more.
+Use:
+
+  |YKBeq|YKO or |YKBmyeq|YKO           Review equipped items
+  |YKBequip <item>|YKO                 Equip an item in an appropriate slot
+  |YKBwear <item>|YKO                  Wear armour
+  |YKBwield <item>|YKO                 Wield a weapon
+  |YKBgearcheck|YKO                    Compare carried and equipped gear
+  |YKBgearcheck <item>|YKO             Inspect one detailed comparison
+  |YKBloadout|YKO                      Manage named equipment presets
+
+|YKBset itemdetail on|YKO adds raw weapon and armour ratings to item
+descriptions. Gearcheck considers protection, weapon class, stats,
+resistances, durability, known effects, and the slots an item would replace.
+Its result is advice; sidegrades can still suit a particular build.
+
+Equipment may also have an item level. This describes where it belongs in
+game progression and how ranked weapons and armour interact; it is not by
+itself a minimum character level. Read separately listed restrictions.
+
+Qualifying carried, worn, and wielded gear saves when you leave. Donated,
+broken, unique, consumable, non-droppable, and specially restricted gear may
+not save. Items inside containers do not save merely because the container
+does, and temporary equipment modifications are stripped on return.
+
+With a corpse burner carried, |YKBset autosell on|YKO transmits ordinary
+sellable NPC loot to Taylor.
+|YKBset autorefine on|YKO converts eligible ordinary NPC equipment into
+profession materials. They are mutually exclusive, and both permanently
+process items before autoloot, so leave them off while learning what drops.|000
+
+|WKBRead next: |CKBhelp equipment, help gearcheck, help loadout,
+help set, help refining, help professions|000

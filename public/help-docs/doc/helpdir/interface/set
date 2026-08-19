@@ -52,11 +52,11 @@ OPTIONS
     before deciding what to do with them.
 
   |YKBautosell <off|on>|YK0
-    Uses a carried corpse burner to sell ordinary weapons and armour from
-    NPC corpses directly to Taylor. His normal Charisma and reputation
-    pricing applies, followed by a 10 percent handling charge. Magical,
-    unique, limited, customized, scripted, and otherwise protected items
-    remain in the corpse. Enabling this disables autorefine.
+    Uses a carried corpse burner to sell ordinary loot from NPC corpses
+    directly to Taylor when his shop would buy it. His normal Charisma and
+    reputation pricing applies, followed by a 10 percent handling charge.
+    Magical, unique, limited, customized, scripted, and otherwise protected
+    items remain in the corpse. Enabling this disables autorefine.
 
   |YKBbrief <off|on>|YK0
     Sets the amount of room descriptions that are shown.

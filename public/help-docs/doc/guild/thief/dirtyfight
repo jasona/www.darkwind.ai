@@ -1,0 +1,13 @@
+                      Dirty Fight
+---------------------------------------------------------------------
+
+Syntax: dirtyfight <feint|punch|sand> [target]
+
+Spend one Opportunity on one of three distinct tricks. Feint applies
+Exposed. Punch deals blunt damage and disrupts Concentration. Sand
+attempts to Blind the target.
+
+Establishing a fresh condition finds one Opportunity. If a target is
+immune to Punch or Sand's control, the attempt uses half SP, half its
+normal recovery, and has a 50% chance to retain the Opportunity.
+

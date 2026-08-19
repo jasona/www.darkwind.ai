@@ -1,0 +1,24 @@
+The deaths command shows locally tracked NPC-caused player death statistics.
+
+Syntax:
+
+  deaths
+  deaths here
+
+The global view shows the top 10 entries in each of these groups:
+
+  Players Who Have Fallen Most
+  Deadliest NPCs
+  Most Fatal Rivalries
+
+The first group also names each player's most common NPC killer. The
+second includes the number of unique players killed by each NPC.
+
+Use "deaths here" to restrict all three groups to the cataloged area
+where you are standing. Player kills, player-controlled creatures, and
+environmental deaths are not included in these rankings.
+
+The tracker records deaths immediately when they happen and preserves its
+summaries across reboots. Its tracking date is shown in the command output.
+
+See also: help combatbrief, help score

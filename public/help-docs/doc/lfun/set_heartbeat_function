@@ -21,6 +21,10 @@ xEndMessage - will give a room_message(({TO}),ENV(TO),
 
 sFunction - the function that will be called on TO.
 -- Examples: "add_con", "receive_damage"
+-- To dispatch to an object carried by TO, use "call_inventory_lfun" and
+-- pass ({ object ID, function name, ({ persistent arguments }) }). The
+-- carried object's function receives TO as its first argument. This avoids
+-- saving an object reference in the heartbeat effect.
 
 axVariables - the args that will get passed to the sFunction.
 -- Examples: ({ -10 }),({10,WEAPON_PIERCE,0,TP})
@@ -56,6 +60,12 @@ oTarget->set_heartbeat_function("thomas_MR_end",30,0,0,
  "$N $vare no longer protected against magic!",
 "add_natural_resistance",({ DAM_MAGIC, -10 }),-1);
 
+Example calling a carried object without persisting that object:
+oTarget->set_heartbeat_function("example_inventory_tick",15,0,0,0,
+ "call_inventory_lfun",
+ ({ "example_soul", "effect_tick", ({ 10, "source" }) }),0);
+// Calls example_soul->effect_tick(oTarget, 10, "source").
+
 mapping query_heartbeat_functions() will return the mapping
 so you can check for unique IDs.
 
@@ -81,3 +91,8 @@ To register an effect as a *debuff* (visible in the player's `buffs`
 list but not removable via `clearbuff`), add an entry to
 GLOBAL_DEBUFF_MAPPING in secure/include/buffs.h. Effects not in either
 mapping remain invisible to the `buffs` UI but still tick down normally.
+
+Do not use heartbeat callbacks to implement Burning, Bleeding, Chilled,
+Freezing, or Exposed. Those are living-owned status effects; use the
+apply_status_effect() API documented by `funhelp apply_status_effect` and
+`wizhelp 9.16`.

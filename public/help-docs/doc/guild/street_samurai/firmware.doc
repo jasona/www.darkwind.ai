@@ -1,0 +1,115 @@
+|CKBStreet Samurai Firmware|000
+
+|CK0The Cortex OS hosts every Street Samurai routine. Firmware needs an active
+contract, an installed Cortex OS, the required Guild Level, enough SP,
+acceptable Heat, and any paired signature implant. Edge is normally an optional
+amplifier rather than an activation requirement. Samskills reports readiness;
+samhelp <routine> explains the command's intended use and interactions.|000
+
+|CKBExecution cycle|000
+|CK0Active routines have no separate long cooldowns. A successful activation
+uses the shared Cortex execution cycle and Darkwind's normal damage or support
+action pacing. Persistent effects generally cannot be activated again while
+their existing instance remains online.|000
+
+|CKBActive and passive firmware|000
+|CK0Active firmware is deployed with a command. Passive firmware comes online
+automatically when its Guild Level and required hardware are present. Passive
+systems appear in samskills even though they do not have activation commands.
+Dashboard and the combat monitor show whether many of those systems are active
+or ready.|000
+
+|CKBNotable interactions|000
+|CK0Threat Scan reports a target's armour and resistances. Ripcut consumes its
+lock for a stronger armour-piercing strike. Photon Lance calibrates its
+wavelength from the lock, Micro-Missile Swarm adds a guided missile, and
+deployed Monowire reads the lock without consuming it. Most active routines
+automatically route one available Edge into a stronger version of their normal
+effect. Damaging Photon Lance and Micro-Missile Swarm executions also generate
+Edge. Specialized routines can route more or spend it only when a particular
+response occurs.|000
+
+|CK0Overclock creates temporary thermal headroom and improves movement and
+attack response, but every activation stresses the Cortex OS. Cortex Rank
+improves its duration, avoidance response, and thermal headroom. Armor Weave
+turns Dermal Plating into persistent shielding whose strength and thermal load
+follow Guild Level, Cortex Rank, grade, and condition. When the shield collapses
+it creates another Heat burst and produces Edge.|000
+
+|CK0Smart Smoke and Jammer Field solve different defensive problems. Smart
+Smoke is personal physical cover: it strongly disrupts ranged attacks aimed at
+the operator and offers only modest protection in melee. It can be deployed
+before a fight. Jammer Field is active battlefield control: it suppresses the
+outgoing damage of hostiles fighting the operator or nearby party members and
+periodically desynchronizes one attack swing. It protects the team by degrading
+hostiles rather than making the operator harder to target.|000
+
+|CK0Signal Shroud supplies the operator's passive dodge telemetry. Jammer Node
+instead reserves additional SP bandwidth for interference firmware. Edge adds
+a real point of Smart Smoke cover. In Jammer Field it strengthens suppression,
+accelerates the desynchronization pulse, and extends field duration.|000
+
+|CK0Ghoststep and Zero Signal solve different pressure states. Ghoststep is an
+in-fight reposition: it keeps the primary target engaged, drops secondary
+attackers and hunts, and arms the Reflex Lattice to improve avoidance against
+the next incoming attack sequence. Zero Signal is the full escape routine: it
+erases current combat and hunts, rejects remote tracking or scrying locks, and
+uses the Ghost Circuit to mask a limited number of attempts to start combat
+again. Ghost Circuit grade establishes that reacquisition capacity, while
+Cortex Rank expands it over continued progression.|000
+
+|CK0Monowire deploys as an unbreakable weapon for thirty minutes. It adjusts to
+the operator's combat progression and remains useful with different weapon
+loadouts. Threat Scan guides additional armour-piercing cuts, monowire edge
+arms a stronger breach, and Second Spur can join that breach.|000
+
+|CK0At CR200, cyberblade reconfigures the Monofilament Spur into the Ronin
+Edge, a temporary primary weapon governed by Cortex throughput, blade grade,
+and maintenance. Its Cortex Sever route executes at a regular hit cadence.
+Threat Scan can guide the Sever through armour, a badly wounded target exposes
+a stronger execution line, and the first damaging Sever against each opponent
+generates Edge. Cyberblade retract collapses the weapon early.|000
+
+|CKBRequired hardware|000
+|CK0Every routine depends on the Cortex OS. Neonwake, Snap Cut, Jolt,
+Overclock, Ripcut, and the Ronin-sama Kernel use the Cortex as primary
+hardware. Other firmware also requires the following paired implant:|000
+
+|CK0Threat Scan - Photon Targeting Suite
+Photon Lance - Photon Targeting Suite
+Armor Weave - Dermal Plating
+Smart Smoke - Signal Shroud
+Ghoststep - Reflex Lattice
+Trauma Buffer - Trauma Buffer Node
+Monowire - Monofilament Spur
+Ronin Edge - Monofilament Spur at Cortex Rank 200
+Jammer Field - Jammer Node
+Micro-Missile Swarm - Dorsal Tempest Driver
+Nanomend - Repair Coprocessor
+Predictive Sight - Predictive Coprocessor
+Cold Signal - Thermal Exchange Manifold
+Thermal Purge - Thermal Exchange Manifold
+Zero Signal - Ghost Circuit
+Second Spur - Second Spur
+Overdrive - Overdrive Module
+Chrome Tempest - Dorsal Tempest Driver|000
+
+|CK0Some optional hardware strengthens a routine without being required. Blade
+hardware supports Snap Cut and Ripcut; reflex hardware supports Jolt and
+Overclock. Samskills reports only missing required hardware, so use dashboard
+or implants when checking optional enhancements.|000
+
+|CKBWhat changes effectiveness|000
+|CK0Hardware grade improves the firmware paired with that implant. Cortex Rank
+gradually improves host throughput. Character capabilities and current Heat
+shape combat routines where relevant. Low integrity or high fragmentation weakens
+the affected hardware and poor Cortex condition can influence the entire
+platform. These factors work together, but maintenance never makes a routine
+completely useless.|000
+
+|CKBFailures and readiness|000
+|CK0Read the command's failure message first. Samstatus checks contract, Edge,
+Heat, and the Cortex cycle. Samskills checks Guild Level and required hardware.
+Dashboard checks the Cortex, implant condition, active effects, strain, and
+maintenance alerts. An invalid target, an existing copy of an effect, normal
+room safeguards, or insufficient SP can also reject a command.|000

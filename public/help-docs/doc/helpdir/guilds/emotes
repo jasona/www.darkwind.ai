@@ -1,0 +1,38 @@
+|CKBGuild Emotes|000
+
+|CK0Guild emotes are social actions reserved for active members of a guild.
+They behave like standard feelings: they can have untargeted, targeted, and
+free-text forms, work in rooms, and can be used through guild channels that
+support colon emotes.|000
+
+|CKBPlayer commands|000
+|CK0feelings guild - list every guild emote available to you
+feelings guild <guild> - list emotes for one of your guilds
+feelings guild <guild> <prefix> - filter that guild's list
+semote <emote> - preview each supported form
+emoteapropos guild [<guild>] <text> - search guild emote messages
+random [<player>] - invoke a random available global or guild emote|000
+
+|CK0A guild emote stops working immediately if you leave the guild or if that
+guild's abilities become inactive. Seeing the result of an emote does not
+grant access to use it.|000
+
+|CKBArchitect commands|000
+|CK0addemote -guild <guild> <name> [<rule>]
+showemote -guild <guild> <name>
+rmemote -guild <guild> <name> [<rule>]|000
+
+|CK0The guild name is matched case-insensitively against the configured guild
+list. Guild emotes use the standard addemote rule grammar, messages, preview,
+and optional variable-emote redirects. They are stored separately from global
+emotes and persist with the emote daemon. New names must not collide with a
+global emote, another guild's emote, or an available command.|000
+
+|CK0Use |YKBshowemote -guild|CK0 before editing or removing a definition.
+Omitting |YKB-guild|CK0 operates on the global emote with that name, not the
+guild definition.|000
+
+|WKBSee also: |YKBaddemote, emotes, emoteapropos, feelings, random, rmemote,
+semote, showemote|000
+
+# alias: guild_emotes, guildemotes

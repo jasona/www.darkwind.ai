@@ -1,4 +1,4 @@
-/doc/attribute/phased_out
+/public/docs/attribute/phased_out
 
 Format: (Living_Object)->set_attribute("phased_out", iValue);
 

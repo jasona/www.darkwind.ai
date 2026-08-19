@@ -1,50 +1,28 @@
 # Artificer
 
-Work in progress: Artificer is being built toward this design, and current game
-behavior differs in places.
+> Artificer is not currently available as a player-selectable class.
 
-Artificers solve problems by making, modifying, deploying, and maintaining
-objects. Their power lives in preparation, clever materials, field devices, and
-equipment that remembers its maker.
+Artificers find the hidden seam between body and soul and hammer it into useful shapes. Their craft is transformation rather than ordinary manufacture: a smith makes excellent equipment, while an Artificer makes an ordinary thing become impossible for a little while.
 
-## In Play
+## Class Identity
 
-An Artificer enters danger with a plan, a kit, and a bag full of parts.
+An Artificer is envisioned as a prepared problem-solver who studies dangerous enemies, harvests unusual essences, and uses those materials to alter equipment or assemble a small number of temporary inventions.
 
-- Learn schematics
-- Salvage useful material from equipment, constructs, and ruins
-- Prepare devices in a workshop
-- Carry field kits for quick work
-- Repair, reinforce, modify, and deploy devices during travel
+Their work follows three themes:
 
-## Progression
+- **Body** uses cinder, slag, bone, and shell for force, fire, armour, and endurance.
+- **Soul** uses ichor, memory, and resonance for lightning, strange light, and spectral properties.
+- **Confluence** joins both disciplines for riskier transformations.
 
-Artificers advance through schematics, prototypes, mastery, salvage work, and
-workshop milestones.
+The class is distinct from professions. Smithing, Alchemy, and other trades make dependable goods for a wider economy. Artificer work is personal, temporary, costly, and shaped around a particular danger.
 
-| Threshold | Opens |
-| --- | --- |
-| Tinker | Repair, salvage, simple devices |
-| Maker | Weapon and armor modifications |
-| Engineer | Field kits, traps, turrets, charged tools |
-| Savant | Experimental prototypes and unstable devices |
-| Master Artificer | Signature inventions and rare schematics |
+## Expected Play Style
 
-## Core Devices
+The intended play style emphasizes preparation over a long command rotation. An Artificer would study what an enemy can yield, choose which problems to prepare for, carry only a few inventions, and decide when an unusual transformation is worth its cost.
 
-| Device | Use |
-| --- | --- |
-| Field Repair | Restores damaged equipment |
-| Reinforce | Temporarily strengthens armor or shields |
-| Edgework | Improves a weapon's cutting or piercing behavior |
-| Spark Coil | Small lightning device |
-| Smoke Ampule | Escape, concealment, or room cover |
-| Clockwork Snare | Prepared control tool |
-| Deployable Ward | Temporary protective station |
-| Salvage Lens | Reads material value and hidden structure |
+Ordinary equipment would provide the safest material. Unique equipment carries
+distinct histories and powers and would not be casually rewritten or consumed.
 
-## Workbenches And Field Kits
-
-Workshop work handles serious modification, rare schematics, and dangerous
-prototypes. Field kits handle quick repairs, simple devices, and emergency
-salvage when the Artificer is away from safety.
+This page is a class preview, not a list of usable commands or costs. If
+Artificer becomes available, in-game class help and the shrine that grants
+access will describe its actual rules.

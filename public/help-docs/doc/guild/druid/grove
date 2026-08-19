@@ -22,9 +22,11 @@ wilderness anchor; nurture and regen pulses begin there.
 
 |GKB-- Growth -----------------------------------------------------|000
 
-  |CKBStage 0-2|000  Young grove.  Anchor only.
-  |CKBStage 3  |000  Mature grove.  Commune enters an inner sanctum.
-  |CKBStage 4  |000  Ancient grove.  Inner sanctum is safe sanctuary.
+  |CKBStage 0|000  Seedling for the first 10 minutes.
+  |CKBStage 1|000  Sapling after 10 minutes.
+  |CKBStage 2|000  Young grove after 30 minutes.
+  |CKBStage 3|000  Mature after 90 minutes; unlocks the inner sanctum.
+  |CKBStage 4|000  Ancient after 4 hours; sanctum becomes safe.
 
 When the grove becomes mature, |CKBcommune|000 takes you into a
 private spirit-room tied to your grove instead of the shared
@@ -52,8 +54,11 @@ Grove stash.  Use |CKBreagents|000 and |CKBreagents search <item>|000
 to inspect what you carry.  Any old stash contents are migrated into
 profession materials when possible.
 
-Leaving the Druid guild removes your grove registration, destroys the
-anchor token, and releases the sanctum.
+Remorting makes your grove dormant while you are between Druid lives.
+Its location, age, and nurtured growth remain saved; the anchor and
+sanctum return when you rejoin.  A dormant grove is not public and
+provides no benefits.  Leaving the Druid guild voluntarily still removes
+the registration, destroys the anchor token, and releases the sanctum.
 
 |GKB-- Limits -----------------------------------------------------|000
 

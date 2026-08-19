@@ -11,7 +11,7 @@ The learn command is how Rangers acquire new skills.
 
   learn              Shows all skills you know about, marking which
                      are learned and which are available to learn.
-  learn <skill>      Learn a skill. Costs slots and experience.
+  learn <skill>      Learn a skill. Costs slots only.
   learn cost <skill> Shows the exact cost, prerequisites, terrains,
                      and what the skill unlocks.
 

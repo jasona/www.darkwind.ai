@@ -1,0 +1,45 @@
+|CKBStreet Samurai Cortex Fabrication|000
+
+|CKBLocation and access|000
+|CK0The Cortex Fabrication Bay is east of Rin Kade's private ripperdoc clinic.
+Only registered Street Samurai may enter or operate its fabrication table.
+Builders may enter for administration, but fabrication still requires an active
+Street Samurai contract.|000
+
+|CKBCybernetics|000
+|CK0Salvaging and fabrication use the Cybernetics profession, with normal
+profession progression from 0 to 1000. Salvaging lower-grade hardware stops
+improving Cybernetics earlier than salvaging advanced hardware. Fabrication
+blueprints also have skill and Street Samurai guild-level requirements.|000
+
+|CKBSalvage|000
+|CK0Only extracted cyberware directly in your inventory may be salvaged.
+Kept, installed, equipped, unique, temporary, auto-loaded, contract-bound,
+and explicitly protected hardware is rejected. Use unkeep <hardware> first
+only when you intend to destroy a kept item. Salvaging is permanent.|000
+
+|CK0Use:
+  salvage <hardware>
+  salvage <hardware> confirm
+
+The first command previews and reserves the exact component yield for sixty
+seconds. The confirmation destroys that same hardware only after all recovered
+components can be deposited. Use reagents cyber or fabricate materials to see
+your persistent component balances.|000
+
+|CKBFabrication|000
+|CK0Use:
+  fabricate list
+  fabricate inspect <recipe>
+  fabricate <recipe>
+
+The initial blueprints create field and reinforced hardware repair kits. A
+failed blueprint or material transaction consumes nothing.|000
+
+|CKBField repair|000
+|CK0Carry a fabricated kit and use repairkit <process_id>. Process IDs match
+dashboard and logs, such as cortex_os or targeting_suite. A field kit repairs
+15 integrity and a reinforced kit repairs 30. Kits work on one installed Street
+Samurai process, cannot be used during combat, never exceed 100 integrity, and
+are consumed only after a successful repair. They do not clear fragmentation,
+patches, ICE, runtime faults, or Heat.|000

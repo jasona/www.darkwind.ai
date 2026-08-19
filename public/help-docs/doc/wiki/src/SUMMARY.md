@@ -50,6 +50,7 @@
   - [Swashbuckler](gameplay/guilds/swashbuckler.md)
   - [Thief](gameplay/guilds/thief.md)
   - [Berserker](gameplay/guilds/berserker.md)
+  - [Charlatan](gameplay/guilds/charlatan.md)
 - [Traits](gameplay/traits.md)
 - [Professions](gameplay/professions.md)
 - [Sigils](gameplay/sigils.md)
@@ -59,7 +60,7 @@
   - [Dragon](gameplay/classes/dragon.md)
   - [Morpher](gameplay/classes/morpher.md)
   - [Psionicist](gameplay/classes/psionicist.md)
-  - [Vampire (Candidate)](gameplay/classes/vampire.md)
+  - [Vampire](gameplay/classes/vampire.md)
 - [Mechanics](gameplay/mechanics.md)
   - [Divine Patronage](gameplay/mechanics/divine.md)
   - [Wrathful Avatar](gameplay/mechanics/avatar.md)
@@ -87,4 +88,3 @@
 - [Communication](gameplay/communication.md)
 - [Economy](gameplay/economy.md)
 - [Feedback And Reports](gameplay/feedback.md)
-

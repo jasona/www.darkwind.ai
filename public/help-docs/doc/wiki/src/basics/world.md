@@ -1,12 +1,14 @@
 # World
 
-Work in progress: these pages describe the Blackmar setting we are building toward, and current game content differs in places.
+Some places described in these pages are known through lore before they can be
+reached. Use `areas <domain>` in game for available routes and level guidance.
 
 Blackmar is the known world of Darkwind: a continent of old roads, rebuilt cities, dangerous wilderness, and domains that feel like their own countries. Most of Blackmar uses medieval fantasy technology. Swords, ships, temples, caravan roads, guildhalls, old keeps, and dangerous ruins form the common shape of daily life.
 
 That common shape breaks in a few places. Ashad runs on AshPunk craft, where ash, pressure, brass, glass, and alchemy create machines that look impossible beside a knight's forge. Tekal, the green moon, is stranger still: a technological domain of cybernetics, virtuality, and machine cities.
 
-Use `areas <domain>` in game for current level guidance. These pages focus on what the places are, what they feel like, and what kinds of stories live there.
+These pages focus on what the places are, what they feel like, and what kinds
+of stories live there.
 
 ## Start Here
 

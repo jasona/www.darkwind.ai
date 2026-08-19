@@ -27,7 +27,8 @@ See [Areas](areas.md) for area-list usage and early hunting suggestions.
 | Command | Use |
 | --- | --- |
 | `recall` | Return to Center of Town with a cooldown |
-| `ncot` | New-adventurer return to Center of Town |
+| `ncot` / `acot` | Level 1–5 / level 6–49 return to Center of Town |
+| `ndomain` / `adomain` | Return to an Adventurers' Guild through level 49 |
 | `gocot` | Ghost or bugged-room return |
 | `cinis` | Corpse burner return to a nearby Adventurers' Guild |
 
@@ -38,7 +39,7 @@ Recall notes:
 - `recall` has a 15-minute cooldown after a successful use
 - `recall` cannot be used from Center of Town
 - `recall` cannot be used in rooms that block teleportation
-- New adventurers usually use `ncot`
+- Levels 1–5 use `ncot`; levels 6–49 use `acot`
 - `gocot` is for ghosts and bugged-room recovery
 
 ## Ferries
@@ -59,6 +60,8 @@ Buy a ticket near the docks, board when the ferry arrives, and keep the ticket u
 ## Ships
 
 Players can own ships. Ship types include cogs, galleys, catamarans, and carracks.
+At a ship shop, use `inquire <ship name>` to learn where a registered ship is
+currently docked and who owns it. Ship names must be one word.
 
 Common ship commands:
 

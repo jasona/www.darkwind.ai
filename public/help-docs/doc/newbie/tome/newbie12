@@ -1,35 +1,37 @@
-                     |CKBChapter 12 - Partying
-              |BKB-----------------------------------
-     
-     |WKBAt levels 1-5 you can form parties with other newbies to make
-     your newbie experience more enjoyable. After level 6 you will
-     only be able to party with players level 6 and up. 
-     
-     Party experience is shared based on the level of the players,
-     and whether or not all members are present in the room where
-     the experience was awarded. More experience is granted to
-     those of higher level. Gold is split equally between all members.
-     
-     To form a party, go up to another unpartied person and use the
-     |YKB'poffer' |WKBcommand.
-     
-     |BKBParty Commands:
-     |MKOpstatus                   |BKB- |CKOLists members and other info.
-     |MKOpsplit <amount>           |BKB- |CKOShares amount of gold with party.
-     |MKOpautosplit <on|off>       |BKB- |CKOTurns on or off automatic gold split
-     |MKOpleave                    |BKB- |CKOUse this to leave the party.
-     |MKOpfollow <on|off>          |BKB- |CKOToggles following the party leader.
-     |MKOpsay <message>            |BKB- |CKOSends a message to all members.
-     |MKOepsay <message>           |BKB- |CKOEmotes a message to all members.
-     |MKOpartyhist                 |BKB- |CKOShows the history of the party channel
-  
-     |WKBIf you're the party leader, you can also do the following:
-     |MKOpoffer <member>           |BKB- |CKOAdds a member to your party. This can
-                                 also be used by a person not in a
-                                 party to form a new party.
-     |MKOpboot <member>           |BKB - |CKORemoves a member from your party.
-     |MKOpname <party_name>        |BKB- |CKOSets a party name (displayed in who).
-     |MKOpleader <member>          |BKB- |CKOChanges the leader of the party.
+                    |CKBChapter 12 - Parties and Community
+                   |BKB-----------------------------------
 
-     |WKBFor more information on any of these commands, use |RKB'help <command>'|WKB.
-     General information on parties is listed in |RKB'help party'|WKB.
+|YKOParties hold two to six players. Members can coordinate on a private
+channel, share experience from kills, follow a leader, and optionally split
+gold. Use |YKBassist <player>|YKO to join the intended fight.
+
+Useful party commands:
+
+  |YKBpoffer <player>|YKO              Start a party or invite someone
+  |YKBpstatus|YKO                      Review members and status
+  |YKBpsay <message>|YKO               Speak privately to the party
+  |YKBpemote <message>|YKO             Emote privately to the party
+  |YKBpfollow on|YKO / |YKBpfollow off|YKO
+  |YKBpsplit <amount>|YKO              Split coins once
+  |YKBpautosplit on|YKO / |YKBpautosplit off|YKO
+  |YKBpleader <player>|YKO             Transfer leadership
+  |YKBpname <name>|YKO                 Name the party
+  |YKBpboot <player>|YKO               Remove a member
+  |YKBpleave|YKO                       Leave the party
+
+Parties are only one part of the community. Channels connect players across
+the game. Clans are player-run organizations; kingdoms have rulers,
+nobility, and shared projects. Patrons and deities add another path of
+alignment and devotion. Darkwind's Discord keeps the conversation going
+outside the game.
+
+Be clear about the destination, loot, quests, and retreats before a dangerous
+run. Keep quest spoilers off public channels, wait for disconnected members
+when possible, and ask before joining another player's fight.
+
+You have reached the end of the Newbie Tome, not the end of Darkwind.
+Return to |YKBhelp guide|YKO for the current eight-stage path and ask on the
+|YKBnewbie|YKO channel whenever you need a hand.|000
+
+|WKBRead next: |CKBhelp party, help communication, help clans,
+help kingdoms, help patron, help deities, help discord, help guide|000

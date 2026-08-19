@@ -1,0 +1,16 @@
+SYNOPSIS
+        string comma_number(int iValue)
+
+DESCRIPTION
+        Converts an integer to a string with commas separating each group
+        of three digits. Negative values retain their leading minus sign.
+
+EXAMPLES
+        comma_number(0)          returns "0"
+        comma_number(999)        returns "999"
+        comma_number(1000)       returns "1,000"
+        comma_number(123456789)  returns "123,456,789"
+        comma_number(-1234567)   returns "-1,234,567"
+
+SEE ALSO
+        format_time(E), sprintf(E)

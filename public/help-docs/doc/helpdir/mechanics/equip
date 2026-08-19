@@ -8,3 +8,10 @@
 Be warned though, it is not a foolproof way to get equiped with the
 best of all your equipment you might be carrying.  After equipping,
 make sure you are wearing and using the correct armours and weapons.
+
+Use |CKBloadout|YKO when you want to save and switch between named,
+repeatable equipment configurations.
+
+Use |CKBsmartequip|YKO when you want the game to compare directly carried
+armour and weapons with |CKBgearcheck|YKO scores, fill open slots, and attempt
+to equip the stronger choices.

@@ -1,6 +1,7 @@
 # Virodia
 
-Work in progress: this page describes the Virodia setting we are building toward, and current game content differs in places.
+Some places described here are known through lore before they can be reached.
+Use `areas virodia` in game for available routes and level guidance.
 
 Virodia is tropical, but not jungle. It is a bright coastland of reef harbors, warm rain, fruit terraces, tiled villas, sea roads, island temples, pearl markets, and storms that arrive with theatrical force.
 

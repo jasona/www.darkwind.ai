@@ -15,9 +15,11 @@ consistently, but as the brotherhood likes to hunt in
 packs, it is not difficult to find thieves from varying
 levels of skill.
 
-|WKONOTE: |MKBA thief must be hiding in the shadows to execute this
-manuever
+|WKONOTE: |MKBA thief must be hiding with at least one Opportunity.
+The target must be Studied or Exposed. Backstab spends all current
+Opportunity and gains 20% damage for each point spent.
+
 
 
 |CKOGLVL required: |GKB20
-|CKOSyntax: |YKOstab <target>                 |CKOCost: |WKOVaried
+|CKOSyntax: |YKOstab|backstab|astrike <target>  |CKOCost: |WKOVaried

@@ -1,0 +1,48 @@
+|CKBStreet Samurai|000
+
+|CK0Street Samurai are cybernetic combat specialists whose Cortex OS links
+signature implants into one platform. They earn guild experience through
+Darkwind's shared battle progression, create and spend Edge, manage Heat, and
+maintain their installed hardware.|000
+
+|CK0Most active firmware remains usable at zero Edge. When Edge is available,
+the Cortex automatically routes it into stronger damage, duration, shielding,
+healing, or control effects. Specialized routines have their own Edge behavior,
+explained through samhelp resources and samhelp <routine>.|000
+
+|CK0Guild Level unlocks firmware and signature implants through GL16. Cortex
+Rank continues through CR200 as long-term progression. The public contract
+office is east of Fountain Court near Moongate Plaza; joining installs the
+starter Cortex OS automatically.|000
+
+|CK0At CR200, members with a Monofilament Spur unlock the Ronin Edge. Use
+cyberblade to deploy this temporary primary weapon, cyberblade retract to
+collapse it early, and samhelp cyberblade for operating details.|000
+
+|CK0Rin Kade operates the restricted guild clinic beyond the contract office.
+Active members pay for signature hardware but receive covered installation,
+extraction, and signature repair services. Samrepair is only for a corrupt or
+incomplete guild installation, not normal onboarding.|000
+
+|CKBCore skills and combat loop|000
+|CK0Snap Cut, Jolt, and Ripcut establish early offense; Smart Smoke, Armor
+Weave, Ghoststep, Jammer Field, Nanomend, and Zero Signal provide defense,
+control, recovery, and escape. Build Edge through effective combat, spend it
+through firmware for stronger results, and keep Heat below thermal lockout.
+Every routine depends on its signature implant and that hardware's condition.|000
+
+|CKBStarting commands|000
+|CK0dashboard [-text] - graphical Cortex dashboard or terminal diagnostic
+samskills - routine unlocks, costs, and readiness
+samstatus - compact combat and resource state
+samxp - Guild Level, Cortex Rank, and GXP progress
+samspam [verbose|brief|off] - implant activation message detail
+samsignature [profile] - selectable arrival and departure firmware
+samhelp start - first-deployment checklist and combat loop
+samhelp commands - complete command and topic index|000
+
+|CK0Use samhelp <routine> for focused firmware guidance. Samhelp resources,
+firmware, hardware, maintenance, mon, contract, prices, and network explain the
+guild's major systems and the decisions each one supports.|000
+
+# alias: street samurai

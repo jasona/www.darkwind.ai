@@ -1,32 +1,42 @@
 # Guilds
 
-Work in progress: the guild roster is being built toward this design, and
-current game behavior differs in places.
+Guild availability and training can change with a character's choices. Use
+`checkout <guild>` and in-game guild help before committing.
 
-Guilds are organizations, disciplines, faiths, orders, and traditions. They give
-characters a social home and a trained way to act in the world.
+Guilds are organizations, disciplines, faiths, orders, and traditions. A guild
+is something a character learns to do as a skill. It gives the character a
+social home and a trained way to act in the world. Innate character identities
+belong to [Classes](classes.md), not the guild roster.
 
 ## Guild Roster
 
-| Guild | Description |
+| Guild | Availability |
 | --- | --- |
-| [Bard](guilds/bard.md) | Bards turn performance and lore into morale, misdirection, and social pressure |
-| [Acolyte](guilds/acolyte.md) | Acolytes serve a patron through devotion, rites, protection, and holy battle |
-| [Fighter](guilds/fighter.md) | Fighters master weapons, armor, stances, and battlefield control |
-| [Garou](guilds/garou.md) | Garou carry Gaea's werewolf burden through forms, pack duty, rage, and balance |
-| [Druid](guilds/druid.md) | Druids serve Gaea through groves, nature rites, wild shape, moon, and storm |
-| [Mage](guilds/mage.md) | Mages study the Dark Wind through spellbooks, runes, barrage, and secret formulae |
-| [Monk](guilds/monk.md) | Monks turn breath, chi, staff work, and body discipline into precise combat |
-| [Ninja](guilds/ninja.md) | Ninjas use stealth, focus, pressure points, and timing to control when violence happens |
-| [Ranger](guilds/ranger.md) | Rangers survive and hunt through terrain, tracking, archery, camps, and companions |
-| [Swashbuckler](guilds/swashbuckler.md) | Swashbucklers win with nerve, footwork, light blades, charm, and risky tempo |
-| [Thief](guilds/thief.md) | Thieves turn access, secrets, theft, traps, and contacts into leverage |
-| [Berserker](guilds/berserker.md) | Berserkers convert wounds, rage, and bad odds into brutal momentum |
+| [Bard](guilds/bard.md) | Open |
+| [Berserker](guilds/berserker.md) | Open |
+| Cleric of Mitra | Open |
+| [Fighter](guilds/fighter.md) | Open |
+| [Garou](guilds/garou.md) | Open |
+| [Mage](guilds/mage.md) | Open |
+| [Ninja](guilds/ninja.md) | Open |
+| Paladin | Open |
+| Priest of Set | Open |
+| [Swashbuckler](guilds/swashbuckler.md) | Open |
+| [Thief](guilds/thief.md) | Open |
+| [Druid](guilds/druid.md) | Open |
+| [Monk](guilds/monk.md) | Open |
+| Necro | Open |
+| [Ranger](guilds/ranger.md) | Open |
+| Bastet/Gurahl | Closed |
+| [Charlatan](guilds/charlatan.md) | Open |
+| Blood Mage | Closed |
+| Deathknights | Closed |
+| [Street Samurai](guilds/street-samurai.md) | Open |
 
 ## How Guilds Work
 
 - Guilds give characters a trained discipline and shared home
-- Classes are separate remort-scale transformations
+- Classes are innate identities, separate from learned guild skills
 - Advancement uses traits, devotion, mastery, renown, paths, or other guild-native measures
 - Some paths are hidden and discovered in play
 
@@ -61,18 +71,9 @@ DarkWind City has ways to sever guild ties, but the price is serious enough that
 guild choice remains meaningful. Talk to current members, read the guild page,
 and try the early command set before committing to a long-term path.
 
-## Reading Older Names
+## Guilds And Classes
 
-Some older in-game help, player habits, and area text use names from previous
-guild structures. This wiki uses the future-facing roster above.
-
-| Older name or theme | Read as |
-| --- | --- |
-| Cleric, Paladin, Priest | Acolyte patron and vocation choices |
-| Lunar | Druid lunar, gravity, tide, storm, and astral paths |
-| Necromancer | Secret Mage study tied to Bodach and Arcanarton |
-| Dragon | Class |
-| Morpher | Class |
-| Psionicist | Class |
-| Artificer | Class |
-| Vampire | Candidate class |
+Guild and class choices can both shape combat, equipment, and advancement, but
+they represent different parts of a character. A guild is learned. A class is
+innate. See the [class roster](classes.md) for Artificer, Dragon, Morpher,
+Psionicist, and Vampire.

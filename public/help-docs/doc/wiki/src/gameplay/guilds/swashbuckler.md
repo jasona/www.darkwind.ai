@@ -1,8 +1,5 @@
 # Swashbuckler
 
-Work in progress: Swashbuckler is being built toward this design, and current
-game behavior differs in places.
-
 Dashing rogues, gallant courtiers, outlaw kings, pirates, kensai, duelists,
 and dockside troublemakers all find a home in the Swashbucklers. They trust
 quick feet, light armor, a ready blade, a better insult, and the kind of nerve
@@ -55,6 +52,24 @@ Technique strain comes from:
 Too much strain makes the dance ugly. A good Swashbuckler knows when to add
 another flourish and when to stop before the feet get tangled.
 
+## Rank and Flow
+
+Swashbuckler Rank is open-ended and earned through GXP from qualifying kills,
+active combat windows, and triggered techniques. Ability Tier is
+`1 + floor(2 * sqrt(rank - 1))`; higher tiers open abilities and titles.
+
+Flow rises by 5 on eligible combat heartbeats, to a maximum of 100. It holds
+for six seconds after combat ends, then falls by 10 per heartbeat. Flow
+discounts positive technique SP costs by up to 50%. At full Flow, each
+eligible combat round has a 5% chance to steal one guaranteed weapon hit. At
+Tier 15 and full Flow, Dance of Death can separately and very rarely make the
+next paid triggered technique free.
+
+An effect that prevents fleeing does not disable in-room attacks such as
+Slip, Press, Wound, Sap, Thrust, or Flank. Physical restraint still blocks
+those maneuvers, while Skulk retains the fleeing/movement check because it
+actually changes rooms.
+
 ## Flair
 
 Flair is the visible part of Swashbuckler skill: the glove slap, the impossible
@@ -71,7 +86,7 @@ Flair spenders currently include:
 | Skill | Guild level | Cost | Effect |
 | --- | ---: | ---: | --- |
 | `slip <foe>` | 3 | 2 Flair, no SP | Makes a quick strike with a slashing or piercing main-hand weapon; uses a micro damage timer |
-| `press <foe>` | 8 | 8 Flair, no SP | Makes an immediate attack round with no timer; the target must be the Swashbuckler's current opponent and still answering that Swashbuckler's challenge |
+| `press <foe>` | 8 | 8 Flair, no SP | Presses a controlled current foe: own Challenge grants a full round, hard control a main-weapon sequence, and soft control one swing plus four seconds of Exposed |
 
 ## Techniques
 
@@ -82,24 +97,23 @@ pull effort every round. They can be started and stopped with `starttech` and
 | Technique | What it does |
 | --- | --- |
 | Parry | Deflects the force of incoming blows |
-| Slash | Trades refinement for direct power |
+| Slash | Trades refinement for direct power, scaling at each character-level bracket |
 | Dodge | Lets footwork carry the Swashbuckler out of danger |
 | Offensive Spin | Hides true attacks behind spinning steel |
-| Called Shot | Finds weak places in armor and guard |
+| Called Shot | Finds weak places in armor and guard, scaling at each character-level bracket |
 | Disarm | Relieves an enemy of a weapon |
 | Riposte | Answers an incoming blow with a quick strike |
 | Critical Strikes | Drives the blade deeper when a clean opening appears |
 | Weapon Break | Catches a weapon and ruins it with a sharp twist |
 | Phantom Strikes | Calls fallen brethren to lash through the enemy's defense |
-| Impale | Follows through with deep piercing wounds |
-| Flurry | Uses speed to steal extra swings from small openings |
+| Impale | Follows through with deep piercing wounds, scaling at each character-level bracket |
+| Flurry | Guarantees one extra swing when triggered; Hero and Legend levels unlock rank-heavy chances for a second and third extra swing |
 | Flourish | Mesmerizes with beautiful, dangerous blade work |
 | Thousand Blades | Buries the real attack inside false ones |
-| Dance of Death | Turns mind, body, blade, charm, and speed into one motion |
+| Dance of Death | Full Flow can steal a weapon hit; Tier 15 adds the rarer chance for one free triggered technique |
+| Spectral Siphon | Drains up to 12 SP and restores exactly what was drained |
 
-The Dance of Death is the guild's legendary end point. The Swashbuckler becomes
-one with the blade in the heat of the fight until the motion looks almost
-effortless.
+Dance of Death is passive at Tier 15. Spectral Siphon unlocks at Tier 18.
 
 ## Phantom Brethren
 
@@ -123,16 +137,19 @@ a brawl into a truce.
 | --- | --- |
 | Challenge | Insults a foe into staying for the fight |
 | Charm | Draws every eye in the room and sharpens presence |
+| Kiss of True Love | Restores a little health to the Swashbuckler and another out-of-combat player |
 | Parley | Negotiates a truce in the room |
 | Skulk | Enters or leaves a room unnoticed |
 | Doubloon | Offers coin for a lucky defensive charm |
 | Slip | Spends a little Flair for a quick weapon strike |
-| Press | Spends heavy Flair to attack a challenged current foe |
+| Press | Spends heavy Flair to exploit Challenge or another crowd-control opening |
 | Flank | Sidesteps into extra blade work |
 | Thrust | Finishes a wounded foe with precise force |
 | Wound | Opens a cut that keeps bleeding |
 | Sap | Drains dexterity through a ghostly blade cut |
 | Stagger | Turns unsteady movement into a brief reset |
+| Flame | Burns a target using intoxication, with a chance of a five-tick self-burn |
+| Defensive Spin | Uses a slashing weapon to counter attackers for 60 seconds |
 
 Some of the guild's theater is practical. Some of it is simply necessary. A
 dramatic bow, a glove slap, a carved initial, a lucky coin, and a weapon juggled
@@ -192,7 +209,10 @@ seen.
 | Famed Swashbuckler | Phantom strikes, impale, doubloon |
 | Legendary Duellist | Flurry, wound, chosen weapon |
 | Paragon of Swashbucklers | Flourish, thousand blades, sap, inspire |
-| Blademaster | Dance of Death, Bravado mastery, blademaster line, legendary style |
+| Blademaster | Passive Dance of Death, blademaster line, legendary style |
+| Tier 16 | Flame |
+| Tier 17 | Defensive Spin |
+| Tier 18 | Spectral Siphon |
 
 ## Deck Commands
 
@@ -206,6 +226,7 @@ seen.
 | `stoptech [technique]` | Stops one technique or all techniques |
 | `challenge <foe>` | Challenges a foe to stay and fight |
 | `charm`, `parley`, `skulk <direction>` | Uses social or escape tools |
+| `sbkiss <player>` | Shares a small out-of-combat heal with another player |
 | `sevaluate <weapon>` | Studies a weapon |
 | `sbsharpen <weapon>` | Improves a suitable blade |
 | `nameweapon <weapon> to <name>` | Names a weapon |
@@ -214,3 +235,4 @@ seen.
 | `slip <foe>`, `press <foe>` | Spends Flair for immediate blade pressure |
 | `sbflank <foe>`, `sthrust <foe>` | Uses position or thrust attacks |
 | `wound <foe>`, `ssap <foe>`, `stagger` | Uses dirty blade work |
+| `flame <foe>`, `dspin [off]` | Uses post-Blademaster fire and defense |

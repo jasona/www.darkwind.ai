@@ -1,7 +1,7 @@
 # Morpher
 
-Work in progress: Morpher is being built toward this design, and current game
-behavior differs in places.
+Morpher is not currently open to new characters. Its page describes the path's
+identity rather than promising access.
 
 Morphers make the body into the tool. Skin, bone, hands, blood, movement, and
 pain all become mutable material.

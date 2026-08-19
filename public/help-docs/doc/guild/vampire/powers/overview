@@ -1,0 +1,13 @@
+|RKB☾  VAMPHELP · POWERS  ☽|000
+|CK0════════════════════════════════════════════════════════════|000
+
+Browse every power with |GKBdiscipline list|000. Invoke one with:
+
+  |GKBdiscipline <power> [target]|000
+
+Every power checks knowledge, attunement, milestone, Blood Mastery, Vitae,
+cooldowns, targets, world restrictions, and Exposure.
+
+|CK0Example:|000 |GKBvamphelp quickening|000
+|CK0Topics: |000 |GKBvamphelp disciplines|000, |GKBmajor powers|000, |GKBforms|000,
+        or |GKBpower targets|000

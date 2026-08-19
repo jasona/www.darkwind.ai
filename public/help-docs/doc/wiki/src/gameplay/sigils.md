@@ -1,68 +1,35 @@
 # Sigils
 
-Sigils are passive effects granted by equipment, forms, boons, guild features, or other sources. A sigil changes how your character behaves without adding a normal command.
+Sigils are passive effects carried by equipment, forms, boons, guild features, and other sources. They never grant commands. Instead, they change the value of things you already do: fight, recover, gather materials, burn corpses, receive healing, or survive dangerous situations.
 
-Some sigils are simple stat-like bonuses. Others react to combat, terrain, food, magic, alignment, or specific enemy types.
+## Building with sigils
 
-## Common Sigils
+Every source adds one or more levels to its sigil while that source is active. Levels from different sources combine up to the sigil's maximum. Anything beyond that maximum is wasted, so the useful question is not simply whether an item has a sigil, but whether it completes or competes with the rest of your equipment.
 
-| Sigil | Effect |
-| --- | --- |
-| Ruthless | Deal extra damage to badly wounded enemies |
-| Critical Strike | Increase critical hit chance |
-| Evade | Gain a chance to dodge incoming attacks |
-| Buffer | Increase shielding received |
-| Hardy | Increase HP |
-| Meditation | Regenerate faster while sitting |
-| Imbiber | Avoid the headache from intoxication |
-| Burned Resist | Reduce burn duration or become immune at higher values |
-| Riposte | Gain a chance to counter an incoming attack |
-| Spellsteal | Drain some SP when attacking |
-| Glutton | Increase the effect of food |
-| Flight | Grant flight where the area allows it |
-| Lifesaver | Survive an otherwise fatal attack |
-| Fortified | Improve defense while facing multiple opponents |
-| Mystic | Gain a chance to avoid magical attacks |
+Most marked equipment contributes one level. This makes sigils a choice across several slots: you might push one important effect to its maximum, maintain several different effects at low levels, or keep alternate pieces for different opponents. A few signature items contribute two levels and can anchor a build, but they still use the same stacking limit.
 
-## Alignment Sigils
+Weapons tend to carry offensive marks, armour tends to carry defensive marks, and unusual rewards are more likely to carry reactive effects. These are tendencies rather than restrictions. Examine an item and use `sigils` after equipping it to see exactly how it changes your active totals.
 
-| Sigil | Effect |
-| --- | --- |
-| Good Natured | Combat actions tend to move alignment upward |
-| Neutral Natured | Combat actions tend to move alignment toward neutral |
-| Evil Natured | Combat actions tend to move alignment downward |
+A sigil briefly glows when you pick up a marked item. The glow identifies the item as marked without revealing the sigil's name or level.
 
-## Enemy Sigils
+## What to expect
 
-| Sigil | Effect |
-| --- | --- |
-| Dragonheart | Deal extra damage to dragon enemies |
-| Giant Slayer | Deal extra damage to larger opponents |
+The earliest sigils are deliberately practical. Ashbound improves corpse ash, Gleaner helps with profession materials, Scavenger improves autosalvage proceeds, and Meditation rewards resting between fights. These are useful introductions to combining marked equipment without demanding an entire combat build.
 
-## Domain Sigils
+Combat sigils offer more pointed choices. Some improve critical strikes or evasion. Some favor particular damage types, defend against them, or reward fighting larger, stronger, wounded, or draconic enemies. These marks are often most useful as swappable sets: the right resistance or damage affinity can matter more than a generally stronger-looking piece.
 
-Some sigils reflect the place they came from.
+The strangest sigils appear on later and more unusual rewards. They may react to killing blows, repeated hits, excess healing, low health, or otherwise fatal damage. These effects remain passive, but their timing can shape how a character approaches a difficult encounter.
 
-| Sigil | Source Flavor | Effect |
-| --- | --- | --- |
-| Frostborn | Hyperborea | Resist cold and fight better in freezing places |
-| Valkyrie's Fury | Hyperborea | Call a brief ally during dangerous fights |
-| Thundersoul | Hyperborea | Gain speed after lightning damage |
-| Jade Strike | Kerei | Add poison to attacks |
-| Mystic Meditation | Kerei | Improve regeneration in hidden meditation places |
-| Forest Spirit | Kerei | Receive occasional healing from a summoned spirit |
-| Spore Burst | Lerquird | Release poisonous spores when struck |
-| Fungal Growth | Lerquird | Regenerate faster around fungal terrain |
-| Swamp Stalker | Lerquird | Move and hide better in swamp terrain |
-| Rotting Touch | Lerquird | Infect enemies with weakening rot |
-| Fiery Focus | Iglantu | Improve fire damage |
-| Magma Walker | Iglantu | Cross volcanic terrain more safely |
-| Infernal Rejuvenation | Iglantu | Regenerate near flame or heat |
-| Molten Armor | Iglantu | Gain temporary armor that burns attackers |
+Use `sigils catalog` for the exact effects and maximum levels of every sigil your character recognizes. The catalog is the authoritative current listing; this guide is about how to use those choices.
 
-## Reading Sigils
+## Discovery
 
-Sigils are easiest to understand by looking at the item, form, or effect that grants them. A weapon sigil usually changes attacks. Armor sigils usually change defense, resistance, survival, or regeneration. Domain sigils often become stronger in matching terrain.
+Not every marking is immediately understandable. An occult sigil may function while its name and purpose remain unknown. Until your character learns to recognize it, item inspection describes only an uninterpretable marking, `gearcheck` counts its power without naming it, and the sigil does not appear in your catalog or active-sigil list.
 
-Future guild and class designs can build on sigils directly. A protective guild buff can add or improve `Buffer`, a fire stance can interact with `Fiery Focus`, and a travel feature can grant `Flight` or `Magma Walker`.
+A quest, remort milestone, notable encounter, or piece of lore may reveal such a sigil. Once discovered, it remains known to that character and is described normally wherever it appears.
 
+## Reading your active sigils
+
+The `sigils` command shows each recognized active sigil, its combined level, its maximum, and the sources currently contributing to it. A bright total has reached the maximum. The source columns cover worn armour and jewellery, main and secondary weapons, internal equipment, and other inherent sources.
+
+When comparing gear, watch for three things: whether the new piece raises a sigil you care about, whether removing the old piece breaks another combination, and whether either total already exceeds its useful maximum. `gearcheck` includes sigil power in its comparison, including the power of markings your character cannot yet interpret.

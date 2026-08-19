@@ -1,0 +1,17 @@
+|RKB☾  VAMPHELP · COMPACT INDEX  ☽|000
+|CK0════════════════════════════════════════════════════════════|000
+
+  |MKBStart      |000 start, core loop
+  |MKBStatus     |000 status, vitae, hunger, active blood, loadout, chronicle
+  |MKBFeeding    |000 feeding, feeding prey, feeding modes, blood
+  |MKBProgression|000 progression, GXP, milestones, mastery, attunement
+  |MKBPowers     |000 powers, disciplines, major powers, forms, power targets
+  |MKBIdentity   |000 identity, profiles, bloodlines, memories
+  |MKBRituals    |000 rituals, ritual catalog
+  |MKBSurvival   |000 survival, sunlight, haven, torpor, covenant
+  |MKBEvidence   |000 exposure, witnesses, hunted
+  |MKBCommunity  |000 vampwho, vchat
+  |MKBRepair     |000 vamprepair
+
+Commands and all 56 powers work as topics.
+|CK0Example:|000 |GKBvamphelp coffin|000 or |GKBvamphelp cauldron|000

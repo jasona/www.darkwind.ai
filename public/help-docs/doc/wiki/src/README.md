@@ -21,7 +21,7 @@ the command line.
 | [Combat](gameplay/combat.md) | Attacking, assessing, healing, wimpy, and staying alive |
 | [Death And Recovery](gameplay/death.md) | Ghosts, prayer, resurrection, avengement, and recovery |
 | [Travel](gameplay/travel.md) | Recall, ferries, ships, domains, hazards, and navigation |
-| [Guilds](gameplay/guilds.md) | Guild roster, joining, changing guilds, and future-facing guild structure |
+| [Guilds](gameplay/guilds.md) | Guild roster, joining, changing guilds, and choosing a play style |
 | [Economy](gameplay/economy.md) | Gold, banks, shops, auctions, professions, inns, pubs, and markets |
 
 ## Useful Commands

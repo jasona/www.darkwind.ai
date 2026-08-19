@@ -1,4 +1,4 @@
-/doc/attribute/resist_cold
+/public/docs/attribute/resist_cold
 
 Format: (Living_Ojbect)->set_attribute("resist_cold", tValue);
 

@@ -1,33 +1,47 @@
-                           |CKBChapter 9 - Guilds
-                  |BKB-----------------------------------
+                     |CKBChapter 9 - Guilds and Classes
+                    |BKB-----------------------------------
 
-     |WKBDarkwind has an extensive and expanding guild system. Guilds
-     represent occupations, and in this case they represent occupations
-     useful in an adventuring career.
+|YKOGuilds are disciplines, organizations, faiths, and traditions your
+character learns. Classes describe what a character innately is. They are
+separate choices; use |YKBhelp guilds|YKO and |YKBhelp classes|YKO for the
+current rosters.
 
-     All guilds have their perks and drawbacks, and the administration
-     tries very hard to ensure that no one guild has a distinct edge over
-     any other. So when you are hunting for a guild, find one that is
-     right for you, because you won't be able to find the one that is the
-     "best." There isn't one. Each guild tries to be fun and unique,
-     offering abilities you won't find elsewhere.
+Joining requirements, directions, advancement, equipment rules, and
+playstyles vary. Many guilds begin around level 5, but that is not a universal
+rule. Read the guild page, ask current members, and review
+|YKBhelp archetypes|YKO, |YKBhelp roles|YKO, and |YKBhelp combos|YKO before
+committing.
 
-     There are no set requirements for joining guilds, other than that
-     you must be fifth level. Individual guilds all have their own
-     requirements, however, which vary from guild to guild. It would be
-     wise for you to find out from a guild member what those requirements
-     are before trying to join. These requirements could relate to your
-     alignment, your characteristics, or even having a current guild member
-     sign you in.
+Current open guilds:
 
-     If you find you have made the wrong choice, you can change guilds. Be
-     warned that this has its price:
+  |YKBcheckout bard|YKO                 Bard
+  |YKBcheckout berserker|YKO            Berserker
+  |YKBcheckout cleric|YKO               Cleric of Mitra
+  |YKBcheckout fighter|YKO              Fighter
+  |YKBcheckout garou|YKO                Garou
+  |YKBcheckout mage|YKO                 Mage
+  |YKBcheckout ninja|YKO                Ninja
+  |YKBcheckout paladin|YKO              Paladin
+  |YKBcheckout set|YKO                  Priest of Set
+  |YKBcheckout swashbuckler|YKO         Swashbuckler
+  |YKBcheckout thief|YKO                Thief
+  |YKBcheckout druid|YKO                Druid
+  |YKBcheckout monk|YKO                 Monk
+  |YKBcheckout necro|YKO                Necro
+  |YKBcheckout ranger|YKO               Ranger
+  |YKBcheckout street samurai|YKO       Street Samurai
 
-     If you _really_ don't like your guild, Grimtila the witch (|CKO3e,2s,w|WKB)
-     can remove those ties, but her fee is nearly akin to losing your life.
+These paths are closed to new applicants, but their pages remain available
+for existing and returning characters:
 
-            |CKOThere are currently 11 open guilds on Darkwind:
-            |CKBBard, Charlatan, Cleric, Fighter, Garou, Mage, Lunar,
-            Ninja, Paladin, Psionicist, Swashbuckler, & Thief.
+  |YKBcheckout bastet/gurahl|YKO        Bastet/Gurahl
+  |YKBcheckout charlatan|YKO            Charlatan
+  |YKBcheckout blood mage|YKO           Blood Mage
+  |YKBcheckout deathknights|YKO         Deathknights
 
-     Type |YKO'checkout <guildname>' |WKBfor more information.
+Use |YKBcheckout guilds|YKO for this list at any time. At level 50, a
+character may learn a second compatible guild; the maximum is two. Read
+|YKBhelp dual guilds|YKO and |YKBhelp combos|YKO before choosing a pair.|000
+
+|WKBRead next: |CKBhelp guilds, help classes, help archetypes,
+help roles, help combos, help dual guilds|000

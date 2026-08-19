@@ -1,0 +1,27 @@
+|CKBFighter|000
+
+|CK0Fighters are durable weapon masters built for direct, dependable combat.
+They can use almost any weapon or armour and develop a large set of attacks,
+defensive reactions, rescue tools, and battlefield controls.|000
+
+|CKBHow it plays|000
+|CK0Worthy combat earns Fighter XP and raises Guild Level automatically.
+Defensive toggles such as counter, feint, guts, and shieldblock spend Endurance
+when they trigger; fsurge restores that reserve. The result is an active front
+line that can change stance and protect others instead of merely absorbing
+hits.|000
+
+|CKBCore skills|000
+|CK0bash disrupts a foe, cleave attacks with force, disarm removes a weapon,
+fcharge closes on an enemy, fdefend guards an ally, and shield techniques,
+counterattacks, frenzy, and surge cover defense and sustained pressure.|000
+
+|CKBBest fit|000
+|CK0Choose Fighter if you want broad equipment freedom, clear martial tools,
+strong survivability, and a guild that rewards learning when to attack,
+interrupt, defend, or recover Endurance.|000
+
+|CK0After joining, use |CKBfhelp advancement|CK0, |CKBfhelp endurance|CK0, and
+|CKBfs|CK0 for the full skill list.|000
+
+# alias: fighters

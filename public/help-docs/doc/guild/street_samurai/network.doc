@@ -1,0 +1,37 @@
+|CKBStreet Samurai Cortex Network|000
+
+|CK0The Cortex network is restricted to authenticated Street Samurai members.
+Its messages, emotes, media shares, history, login notices, and logout notices
+are not sent to nonmembers or external channel bridges. An inactive contract
+still retains membership and network access.|000
+
+|CKBTransmitting|000
+|CK0samchat <message> sends a normal transmission.
+samchat :<emote> uses channel-emote syntax.
+esamchat <message> uses narrative egossip-style syntax.
+The channel supports the same speech, emote, and shared-media forms as gossip.
+Sending while reception is muted restores the channel automatically.|000
+
+|CKBDisplay color|000
+|CK0Use color street_samurai to select the foreground, background, and effect
+used for Cortex network traffic. This preference applies when sending, receiving,
+or reviewing newly recorded transmissions through samhist.|000
+
+|CKBHistory and operators|000
+|CK0samhist shows recent Cortex transmissions; supply a line count when you
+need more or less than the normal view. samwho runs a shell-style listing of
+visible connected members. Invisible operators remain hidden when the viewer
+would not normally be able to see them.|000
+
+|CKBsamwho fields|000
+|CK0samwho reports name, Guild Level, Cortex Rank, Edge, Heat, strain, contract
+state, and current activity. PRIMARY and SECONDARY are active membership states.
+INACTIVE means guild systems are paused by an equipment conflict. SIGNAL LOST,
+IDLE, IN COMBAT, and COMMS MUTED describe connection or activity rather than
+hardware condition.|000
+
+|CKBTroubleshooting|000
+|CK0If you can read but not transmit, check silence effects and normal channel
+restrictions. If the channel was muted, sending samchat restores reception.
+Samhist confirms whether a message reached the network; samwho confirms which
+visible operators are currently connected.|000

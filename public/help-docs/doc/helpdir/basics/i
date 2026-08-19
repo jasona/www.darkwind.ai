@@ -7,3 +7,6 @@ DESCRIPTION
 ===========
  
 |YKOShows all the objects which you are carrying.
+
+Your inventory may also show an active parasite if one is living inside you.
+Use |YKBparasite|YKO or |YKBhelp parasites|YKO for details.

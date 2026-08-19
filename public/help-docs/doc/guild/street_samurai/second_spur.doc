@@ -1,0 +1,37 @@
+|CKBSecond Spur|000
+
+|CK0Second Spur is passive off-hand firmware unlocked at Street Samurai Guild
+Level 13. It requires the left-hand Second Spur implant and has no activation
+command, SP cost, Edge cost, or Heat cost.|000
+
+|CKBExpanded Edge capacity|000
+|CK0While the implant is online, it raises maximum Edge above the normal cap.
+Better grades can provide additional headroom when the spur is well maintained.
+The monitor, samstatus, dashboard, and samwho all report the resulting live
+maximum rather than assuming a fixed value.|000
+
+|CKBOff-hand cutting line|000
+|CK0Second Spur gives Chrome Tempest an additional cutting line. Stronger,
+well-maintained hardware can contribute more to the sequence. The spur must be
+installed and online when Tempest begins; installing it after the sequence
+starts does not alter that activation.|000
+
+|CK0The second line also joins an armed Monowire Edge breach. It does not arm
+the breach itself: deploy Monowire, use monowire edge, and let the next
+confirmed hit trigger both lines.|000
+
+|CKBHardware benefits|000
+|CK0The implant adds +4/+6/+8/+10 damage stat and +2/+3/+4/+5 critical stat
+from prototype through ghost grade. Every confirmed weapon hit can invoke an
+independent off-hand cut. Better grades increase its chance from 11% to 20%
+and reduce its cooldown from 12 seconds to 6 seconds.|000
+
+|CK0The cut deals armour-piercing slash damage that scales with your level,
+Street Samurai Guild Level, hardware grade, Cortex power, and firmware
+effectiveness. A damaging cut generates 1 Edge. If another valid enemy is
+already attacking you, the filament cleaves that enemy for half damage. This
+proc has no SP, Edge, or Heat cost.|000
+
+|CK0Low Second Spur or Cortex integrity and high Second Spur fragmentation
+weaken the cut, Edge-cap bonus, and Chrome Tempest contribution without taking
+the spur completely offline. Use dashboard and implants to inspect it.|000

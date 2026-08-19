@@ -1,0 +1,46 @@
+|CKBStreet Samurai Combat Monitor|000
+
+|CKBUsing the monitor|000
+|CK0The standard monitor command can print HP, SP, and Cortex combat state when
+your HP or SP changes. Use monitor on for the compact display, monitor bar for
+resource bars, or monitor off to disable automatic updates. The hp and .
+commands always request a current snapshot manually.|000
+
+|CK0The Cortex line begins with the cortexmesh shell prompt. It shows current
+and maximum Edge, current and maximum Heat, the live thermal state, and compact
+process indicators. PAUSED means the contract is inactive. UNMANAGED means the
+Cortex OS is missing. LOCKOUT means Heat-producing firmware cannot run until
+the system cools.|000
+
+|CKBProcess indicators|000
+|CK0A green {X} means a process is online, active, or ready. A red {X} means it
+is offline, unavailable, or spent. The indicators are:|000
+
+|CK0OC - Overclock is currently running.
+OD - Overdrive readiness is available for the current engagement.
+AW - Armor Weave shielding is active.
+SM - Your Smart Smoke is active in the current room.
+TB - Trauma Buffer is delaying incoming damage.
+MW - Monowire is deployed; this does not show whether a breach is armed.
+RE - The CR200 Ronin Edge cyberblade is deployed.
+JF - Your Jammer Field is active in the current room.
+PS - Predictive Sight is active.
+GS - A Ghoststep avoidance frame is armed.
+ZS - Zero Signal is active.
+TS - Threat Scan has at least one active target lock.|000
+
+|CK0OD represents readiness rather than a persistent buff. It turns red after
+Overdrive has handled the opening Heat burst for the current engagement. TS
+does not identify which target is locked; Threat Scan output and combat
+messages provide that context. Room-local indicators turn red after you leave
+the room containing their effect.|000
+
+|CKBRefresh timing|000
+|CK0The line refreshes when the normal HP or SP monitor redraws. Heat may cool,
+a lock may expire, or an effect may end between redraws. Use hp or . for an
+immediate reading, samstatus for a detailed local state query, and dashboard
+for implant condition and alerts.|000
+
+|CK0Screen-reader mode replaces the compact abbreviations with complete process
+names and status sentences. Turning the automatic monitor off does not disable
+Street Samurai resources or firmware; it only stops automatic display updates.|000

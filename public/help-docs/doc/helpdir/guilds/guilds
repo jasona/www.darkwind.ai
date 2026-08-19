@@ -1,52 +1,43 @@
-|WKBThese are the guilds on Darkwind:|XX0
+|YK0#|YKB Guilds|000
 
-|YKBStandard guilds:|XX0
-|GKBBard|XX0              |WKB[OPEN]|XX0
-|GKBCleric of Mitra|XX0   |WKB[OPEN]|XX0
-|GKBFighter|XX0           |WKB[OPEN]|XX0
-|GKBGarou|XX0             |WKB[OPEN]|XX0
-|GKBLunar|XX0             |RKB[CLOSED]|XX0
-|GKBMage|XX0              |WKB[OPEN]|XX0
-|GKBNinja|XX0             |WKB[OPEN]|XX0
-|GKBPaladin|XX0           |WKB[OPEN]|XX0
-|GKBPriest of Set|XX0     |WKB[OPEN]|XX0
-|GKBPsionicist|XX0        |WKB[OPEN]|XX0
-|GKBSwashbuckler|XX0      |WKB[OPEN]|XX0
-|GKBThief|XX0             |WKB[OPEN]|XX0
+|GK0Guilds are disciplines, organizations, faiths, and traditions that teach
+skills. A guild is something your character learns to do; it is not something
+your character innately is. See |CKBhelp classes|GK0 for innate character
+classes.|000
 
-|YKBMythic guilds:|XX0
-|GKBBastet/Gurahl|XX0     |RKB[CLOSED]|XX0
-|GKBBattlemage|XX0        |RKB[CLOSED]|XX0
-|GKBBlood Mage|XX0        |RKB[CLOSED]|XX0
-|GKBDeathknights|XX0      |RKB[CLOSED]|XX0
-|GKBDragon|XX0            |WKB[OPEN]|XX0
-|GKBDruid|XX0             |WKB[OPEN]|XX0
-|GKBGlyph|XX0             |RKB[CLOSED]|XX0
-|GKBMonk|XX0              |WKB[OPEN]|XX0
-|GKBMorpher|XX0           |RKB[CLOSED]|XX0
-|GKBNecro|XX0             |WKB[OPEN]|XX0
-|GKBRanger|XX0            |WKB[OPEN]|XX0
-|GKBSamurai|XX0           |RKB[CLOSED]|XX0
+|YK0##|YKB Guild roster|000
 
+|GK0Every open guild has a public preview. Use |CKBhelp <guild>|GK0, such as
+|CKBhelp bard|GK0, |CKBhelp monk|GK0, or |CKBhelp street samurai|GK0, to see
+its combat identity, core mechanics, representative skills, and playstyle
+before joining.|000
 
-|YK0| |YKBGuild            |YK0| |YKBArchetype |YK0| |YKBRoles                |YK0||000
-|YK0| ---------------- |YK0| --------- |YK0| -------------------- |YK0||000
-|YK0| |CK0Bard             |YK0| |YKBMelee     |YK0| |CK0Nuker, Specialist    |YK0||000
-|YK0| |CK0Cleric of Mitra  |YK0| |YKBMelee     |YK0| |CK0Healer, Tank         |YK0||000
-|YK0| |CK0Fighter          |YK0| |YKBMelee     |YK0| |CK0Bruiser, Tank        |YK0||000
-|YK0| |CK0Garou - Wolf     |YK0| |YKBMelee     |YK0| |CK0Bruiser, Specialist  |YK0||000
-|YK0| |CK0Garou - Guardian |YK0| |YKBMelee     |YK0| |CK0Bruiser, Tank        |YK0||000
-|YK0| |CK0Garou - Shaman   |YK0| |YKBMelee     |YK0| |CK0Healer, Tank         |YK0||000
-|YK0| |CK0Lunar            |YK0| |BKBCaster    |YK0| |CK0Nuker, Specialist    |YK0||000
-|YK0| |CK0Mage             |YK0| |BKBCaster    |YK0| |CK0Nuker, Specialist    |YK0||000
-|YK0| |CK0Ninja            |YK0| |GKBHybrid    |YK0| |CK0Bruiser, Specialist  |YK0||000
-|YK0| |CK0Paladin          |YK0| |YKBMelee     |YK0| |CK0Specialist, Tank     |YK0||000
-|YK0| |CK0Priest of Set    |YK0| |YKBMelee     |YK0| |CK0Healer, Specialist   |YK0||000
-|YK0| |CK0Psionicist       |YK0| |GKBHybrid    |YK0| |CK0Bruiser, Nuker       |YK0||000
-|YK0| |CK0Swashbuckler     |YK0| |GKBHybrid    |YK0| |CK0Bruiser, Specialist  |YK0||000
-|YK0| |CK0Thief            |YK0| |GKBHybrid    |YK0| |CK0Nuker, Specialist    |YK0||000
+|YK0Developer  Guild              Status|000
+|CK0(Acer)     |GK0Bard               |WKB[OPEN]|000
+|CK0(Cales)    |GK0Berserker          |WKB[OPEN]|000
+|CK0(Acer)     |GK0Cleric of Mitra    |WKB[OPEN]|000
+|CK0(Acer)     |GK0Fighter            |WKB[OPEN]|000
+|CK0(Dink)     |GK0Garou              |WKB[OPEN]|000
+|CK0(Cales)    |GK0Mage               |WKB[OPEN]|000
+|CK0(Cales)    |GK0Ninja              |WKB[OPEN]|000
+|CK0(Acer)     |GK0Paladin            |WKB[OPEN]|000
+|CK0(Cales)    |GK0Priest of Set      |WKB[OPEN]|000
+|CK0(Cales)    |GK0Swashbuckler       |WKB[OPEN]|000
+|CK0(Cales)    |GK0Thief              |WKB[OPEN]|000
+|CK0(Acer)     |GK0Druid              |WKB[OPEN]|000
+|CK0(Acer)     |GK0Monk               |WKB[OPEN]|000
+|CK0(Cales)    |GK0Necro              |WKB[OPEN]|000
+|CK0(Acer)     |GK0Ranger             |WKB[OPEN]|000
+|CK0(Dink)     |GK0Bastet/Gurahl      |RKB[CLOSED]|000
+|CK0(Cales)    |GK0Charlatan          |WKB[OPEN]|000
+|CK0(Cales)    |GK0Blood Mage         |RKB[CLOSED]|000
+|CK0(Cales)    |GK0Deathknights       |RKB[CLOSED]|000
+|CK0(Acer)     |GK0Street Samurai     |WKB[OPEN]|000
 
-|XX0See Also:
-|XX0    |CKB"help list guilds"|XX0
-|XX0    |CKB"help guilds roles"|XX0
-|XX0    |CKB"help guilds archetypes"|XX0
+|YK0##|YKB See also|000
+
+|CKBhelp classes|000
+|CKBhelp guilds roles|000
+|CKBhelp guilds archetypes|000
+|CKBhelp guilds equipment|000
+|CKBhelp dual guilds|000

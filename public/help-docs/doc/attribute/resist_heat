@@ -1,4 +1,4 @@
-/doc/attribute/resist_heat
+/public/docs/attribute/resist_heat
 
 Format: (Living_Ojbect)->set_attribute("resist_heat", tValue);
 

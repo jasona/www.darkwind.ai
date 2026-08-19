@@ -1,11 +1,11 @@
-                |BKB-= |CKBTendon Strike |BKB=-
-               
-|MKOUsing their quickness and dexterity, a Thief can
-slash at an opponent. By aiming for the hamstring,
-the Thief can attempt to render the target unable
-to move for a short while. However, this could
-cause the Thief to drop their weapon instead.
+                         Hamstring
+---------------------------------------------------------------------
 
+Syntax: tstrike <target>
+Alias:  hamstring <target>
 
-|CKOGLVL required: |GKB18
-|CKOSyntax: |YKOtstrike <target>            |CKOCost: |WKOVaried
+Spend two Opportunity to strike a target's movement. The control lasts
+longer when the target is already Bleeding, including Bleeding supplied
+by another guild or party member.
+
+Guild level: 18

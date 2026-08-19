@@ -1,0 +1,43 @@
+|WKBSYNTAX
+======
+
+|CKBloadout|WKB
+|CKBloadout list|WKB
+|CKBloadout save <name>|WKB
+|CKBloadout update <name>|WKB
+|CKBloadout show <name>|WKB
+|CKBloadout use <name>|WKB
+|CKBloadout rename <old> <new>|WKB
+|CKBloadout delete <name>|WKB
+|CKBgearset ...|WKB
+
+DESCRIPTION
+===========
+
+|YKOEquipment loadouts are named presets for your worn armour and wielded
+weapons. Save your current equipment with |CKBloadout save <name>|YKO, then
+use |CKBloadout use <name>|YKO to return to that setup.
+
+A loadout is a complete equipment state. Standard armour or weapons not named
+in the preset are removed when it is used, which allows a preset to preserve
+intentionally empty slots. Installed cyberware and other internal equipment
+are never changed.
+
+Every saved item must be directly in your inventory before a loadout can be
+used. Loadouts do not retrieve items from containers, banks, rooms, or other
+storage, and they never clone or replace missing gear. If an item is missing
+or cannot be identified safely, nothing is changed.
+
+Normal equipment rules remain in force. Cursed items, scripted restrictions,
+guild requirements, race and size limits, shields, and weapon combinations can
+prevent a switch. If a restriction stops a switch after it begins, DarkWind
+attempts to restore your original equipment and tells you whether that
+restoration succeeded.
+
+You cannot switch loadouts during combat, while dead, or while phased out.
+You may save up to ten loadouts. Names may contain up to twenty lowercase
+letters, numbers, underscores, or hyphens.
+
+The |CKBgearset|YKO command is an alias for |CKBloadout|YKO.
+
+# alias: gearset

@@ -1,14 +1,12 @@
-Skewer - blade technique
+Skewer - retired blade technique name
 ------------------------------------------------------------
-Using the skewer blade technique, a swashbuckler can
-concentrate on deep, powerful strikes that cause much 
-greater damage to the enemy. This skill is aided by the
-ability to discern an enemy's weaknesses and the dexterity
-to attack with precision and speed. Such a powerful attack
-often off-balances a swashbuckler however, making it
-difficult to dodge attacks against himself.
+Skewer was the former name for the Impale blade technique.
+Use 'starttech impale' to concentrate on deep piercing
+strikes. Impale's damage now increases at each character-
+level bracket: +45 below Hero, +56 at Hero, +67 at Legend,
++78 at Epic, and +90 at Mythic.
 
-GL: 10
-SP:  9 / attack
-command:  skewer
+GL: 11
+SP:  9 / proc, reduced by Flow
+command:  starttech impale
 duration: technique mode

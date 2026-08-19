@@ -5,11 +5,11 @@ SYNTAX:      radvance <level|guild|str|dex|con|int|wis|chr>
 USAGE:       Any wilderness area.
 
 SUMMARY:
-Advance your stats, game level, or guild level from anywhere in
-the wilderness. You do not need to return to the guild lodge.
+Advance your stats or game level, or review automatic Ranger guild progress,
+from anywhere in the wilderness. You do not need to return to the lodge.
 
-  radvance level     Advance your game level (costs exp + gold)
-  radvance guild     Advance your guild level (costs exp only)
+  radvance level     Advance your game level (costs experience)
+  radvance guild     Show combat-earned Ranger XP progress
   radvance str       Raise your strength
   radvance dex       Raise your dexterity
   radvance con       Raise your constitution
@@ -19,9 +19,9 @@ the wilderness. You do not need to return to the guild lodge.
 
 REQUIREMENTS:
 - Must be in the wilderness (not city, indoors, or dock)
-- Must have terrains and enemy species set before advancing
+- Terrains and enemy species must be set before guild level 2
 - Guild level cannot exceed your game level
-- Use 'rcost' to check what it costs
+- Use 'rcost' to check character costs and Ranger XP
 
 =============================================================================
 SEE ALSO: rcost, advancement, glevels

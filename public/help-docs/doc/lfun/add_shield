@@ -4,6 +4,8 @@
 |WKBSYNOPSIS|000
     |YK0void|000 |CKBadd_shield|000(|YK0int|000 |GKBiAmount|000)
     |YK0void|000 |CKBadd_shield|000(|YK0int|000 |GKBiAmount|000, |YK0int|000 |GKBiType|000)
+    |YK0void|000 |CKBadd_shield|000(|YK0int|000 |GKBiAmount|000, |YK0int|000 |GKBiType|000,
+        |YK0closure|000 |GKBcDepleted|000)
 
 |WKBDESCRIPTION|000
     Increase a living creature/player's shield for damage
@@ -14,9 +16,21 @@
     damage the shield will block/absorb.  If not specified, this shield
     will block all types of damage. May be useful to check <types.h>
 
+    |GKBcDepleted|000 optionally supplies a depletion callback and acts as the
+    stable handle for the shield points it owns. Callback-owned points absorb
+    before unowned points in the same shield pool. When those points reach zero,
+    the closure is called with the protected living and damage type:
+
+        |CKBfuncall|000(|GKBcDepleted|000, |GKBprotected_living|000, |GKBiType|000)
+
+    The caller must retain and reuse the exact same closure for later top-ups,
+    queries, and cleanup. Existing one- and two-argument callers remain unowned
+    and retain their previous behavior.
+
 
     |CKBadd_shield|000() is defined in /secure/living.c
 
 |WKBSEE ALSO|000
-    |CKBset_shield|000(L), |CKBquery_shield|000(L), |CKBremove_shield|000(L)
-
+    |CKBset_shield|000(L), |CKBquery_shield|000(L),
+    |CKBquery_shield_callback|000(L), |CKBclear_shield_callback|000(L),
+    |CKBremove_shield|000(L)

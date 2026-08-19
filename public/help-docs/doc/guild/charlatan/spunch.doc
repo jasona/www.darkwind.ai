@@ -1,10 +1,6 @@
-|GKB============================== Sucker Punch ==============================
-|GKB=|XX0   Syntax: spunch |YKB<target>|XX0                                              |GKB=
-|GKB=|XX0                                                                        |GKB=
-|GKB=|XX0   Your sucker punch ability combines your ability to distract an       |GKB=
-|GKB=|XX0   opponent with your knowledge of where it will hurt the most.         |GKB=
-|GKB=|XX0                                                                        |GKB=
-|GKB=|XX0   A good weapon will help you dish out a stronger punch, and at the    |GKB=
-|GKB=|XX0   highest level of the skill, you can even benefit from a dual-        |GKB=
-|GKB=|XX0   weapon approach.                                                     |GKB=
-|GKB==========================================================================
+|CKBSpunch|000
+
+'Spunch' is the street name for 'suckerpunch'.
+
+Use 'charlhelp suckerpunch' for the complete and entirely unbiased sales
+pitch.

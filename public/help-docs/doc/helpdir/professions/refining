@@ -7,6 +7,16 @@ it will not be refined. If you '|GKBrefine verbose|000' while in the refinery,
 it will tell you the item name as well what was recovered. If you simply 
 type '|GKBrefine|000' it will just list what was recovered.
 
+    You may also use '|GKBset autorefine on|000' to automatically refine
+eligible equipment from NPCs you kill. Automatic and manual refining use
+the same material rules and yields. Autorefine is permanent and runs before
+autoloot, so leave it off when you want to inspect equipment drops first.
+Autorefine skips the same magical, unique, limited, customized, scripted,
+and otherwise protected items that autosell refuses to sell; those stay in
+the corpse for you to inspect or loot normally.
+Autorefine and autosell cannot be enabled at the same time; enabling either
+one disables the other. Autorefine does not require a corpse burner.
+
     The refinery is in the profession building, 4e, n from Center of Town.
 Refining is a good way to turn unused equipment into saved profession
 materials for crafting, work orders, recipe cards, and guildcraft.

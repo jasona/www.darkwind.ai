@@ -1,0 +1,55 @@
+                      Modern Thief Systems
+---------------------------------------------------------------------
+
+Advancement:
+  Thief uses automatic Guild XP advancement, not carried gold.
+  Each Rank grants one Knack point. Meaningful combat skill use grants
+  about 5 GXP behind one 10-14 second guild-wide practice delay. Use
+  'tstatus' and 'knacks'.
+
+Combat:
+  Case one target for two Opportunity, build up to five, then spend it
+  on dirtyfight, trip, sidestep, circle, envenomstrike, hamstring,
+  disembowel, or backstab. Quickstrike uses canonical Bleeding and has
+  a 60% chance to find Opportunity when it lands on the Studied mark.
+  Establishing a fresh qualifying condition also finds Opportunity.
+  Disembowel benefits
+  from any guild's Bleeding and does not consume it. Circle cooperates
+  with any guild's Exposed.
+
+  Abilities have a two-second category recovery and a separate reuse
+  time for that exact skill. Change techniques to keep a combination
+  moving; repeating the same move requires longer. Backstab's personal
+  reuse time is twenty-four seconds.
+
+  Sidestep spends one Opportunity for a large dodge bonus lasting about
+  two combat rounds. Runner extends it; Opportunist recovers the point
+  if no attack lands during the effect.
+
+Customization:
+  Ghost, Grifter, and Knife each contain six five-rank Knacks. Complete
+  a branch to open diminishing mastery. After training 10 Knack ranks
+  in a discipline, choose one Method; swaps are free in a Thieves Guild
+  hall. Use 'knacks reset confirm' there for a paid full retrain.
+
+World play:
+  Detect hidden exits and traps. Disguise as a laborer, courier, pilgrim,
+  or merchant to interact with guard notice without changing real
+  reputation. Contacts reports guard attention, passes, and the current
+  bribe estimate. Incidents replace a separate Heat meter. Dangerous
+  NPC schemes work on suitable local intelligent NPCs without custom
+  monster hooks. Frame throws your voice so one nearby NPC appears to
+  insult another; Agitators and master Masterminds can choose the pair.
+
+  Pilfer randomly takes one safe loose NPC item; Pick chooses one. Coin
+  theft takes only part of a purse. Slip and Vanish use normal exits, while
+  Shadow can be noticed after each followed move.
+
+Traps:
+  Tripwire is a movement alarm. Trap is a pressure weapon that also springs
+  on stationary NPCs once they fight its setter. Disarm owns removal, and
+  'lace <poison> into trap' adds a prepared dose to the pressure strike.
+
+Poisoncraft:
+  Extract, prepare, then envenom. Prepared doses remain in your poison
+  inventory between sessions; weapon coatings do not. See 'thelp poison'.

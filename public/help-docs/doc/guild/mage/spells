@@ -1,81 +1,142 @@
-This is a list of all the spells/commands for the Guild of the Magi listed
-by Guild Level.
- 
-General Powers
-==============
-mage/m/ma <msg>
-emage/em/ema <emotion>
-magi/mages
-magehelp [<topic>]/mh [<topic>]/helpmage [<topic>]
-magebug <bug>
-gtitle
-titleme
- 
-Guild Level 1
-=============
-blaze <direction>
-detect
-analyze <object>
-missile [<target>]
- 
-Guild Level 2
-=============
-find <target>
-illuminate
- 
-Guild Level 3
-=============
-fireball [<target>]
- 
-Guild Level 4
-=============
-icestorm
-insane [<target>]
- 
-Guild Level 5
-=============
-tport [<remember><list><forget><#>]
-mbarrage [<lightning><fireball><icestorm><off>]
- 
-Guild Level 6
-=============
-meye <direction>
-armor
- 
-Guild Level 7
-=============
-bolt [<target>]
- 
-Guild Level 8
-=============
-levitate
- 
-Guild Level 9
-=============
-munlock <direction>
- 
-Guild Level 10
-==============
-phase [<target>]
+The Mage spellbook begins with simple, dependable ideas and becomes stranger as
+Arcane rises. Mana Shard and Missile carry the early fighting load. Analyze and
+Detect reward curiosity, while Blaze turns an ordinary exit into a thoroughly
+immodest departure. Recollection arrives early enough to shape a young Mage's
+adventuring rhythm, and the later pages introduce delayed workings, shared
+status effects, travel, forbidden research, and finishers built for a group.
+Detect reveals verbs registered by the current room. Authored magical clues can
+expand a verb into exact syntax when the action needs an argument.
 
-Guild Level 11
-==============
-gate <<item> to <person>>
+Workings appear at these Arcane ranks:
 
-Guild Level 12
-==============
-inferno
- 
-Guild Level 13
-==============
-powerup
+  Arcane 1   Analyze, Blaze, Detect, Mana Shard, Missile
+  Arcane 2   Find, Illuminate
+  Arcane 3   Fireball, Recollection; Ashkenazy and Falx runes
+  Arcane 4   Icestorm, Insane, Investiture; Saloman and Talek runes
+  Arcane 5   Teleport; James rune
+  Arcane 6   Armor, Echoform, Mage Eye
+  Arcane 7   Bolt, Mana Barrier; Rodney rune
+  Arcane 8   Levitate, Stasis; Aiken rune
+  Arcane 9   Invisibility, Mage Unlock, Necrosis
+  Arcane 10  Phase
+  Arcane 11  Gate, Glassstorm
+  Arcane 12  Inferno
+  Arcane 13  Powerup
+  Arcane 14  Wrath
+  Arcane 15  Singularity, Touch, Grand Mage channel, marginalia
 
-Guild Level 14
-==============
-wrath [<target>]
- 
-Guild Level 15
-==============
-gmage <msg>/gm <msg>
-gmage <emotion>/egm <emotion>
-touch [<target>]
+Fireball lands lightly but kindles deep flames; most of its harm arrives as
+Burning rather than in the first impact. Inferno also leaves its victims
+Burning. Icestorm chills a room, while Statis closes a
+delayed frost equation around one target and applies Freezing.
+Glassstorm waits in the air before shattering across nearby enemies and leaving
+them Exposed. Singularity is the natural conclusion: it consumes hostile
+statuses from the room and gains fifteen percent damage from each condition,
+up to seventy-five percent. Echoform approaches the same problem differently,
+copying the next direct attack for a smaller strike two seconds later. Necrosis
+begins with a blackleaf impact and leaves a short heartbeat-driven disease
+behind to keep damaging the target.
+
+Area workings gain some total force as more hostile patterns enter their
+geometry, up to twice their one-target total, and still divide that total among
+their targets.
+
+Sometimes a working finds a perfect line through its target and critically
+converges, striking with half again its usual force before ordinary defenses
+blunt it. Equipment and an Exposed enemy can make that moment more likely.
+Every missile and every separate barrage seeks its own line, as does the
+working against each enemy caught in its area.
+
+Overchannel opens at Arcane 8. "overchannel 5" spends five percent of maximum
+SP in addition to the normal cost of each manual damaging working. Arcane 16
+opens ten percent and Arcane 32 opens twenty percent. Mastery and Mezari do not
+discount the added amount. Use "overchannel off" to return to ordinary casting.
+Arcane 500 opens twenty-five percent and Arcane 1000 opens thirty percent.
+Spell unlocks end at Arcane 15, but prestige study continues to rank 1000 with
+sharply increasing costs and square-root spell scaling beyond rank 32.
+Overchannel's added damage also gains half the integer cube root of true Arcane
+as an additional damage-per-SP multiplier, so deep ranks make the exchange
+more worthwhile.
+
+While any cooldown is active, each heartbeat has a rare chance to revise all
+cooldowns away: 1 in 10,000 at low ranks, 25 in 10,000 at Arcane 500, and 100
+in 10,000 at Arcane 1000. "mageaura" lists cosmetic prestige auras.
+
+Recollection restores every missing SP after a four-second weave. It costs ten
+percent of maximum health and uses a private ten-minute timer, so it does not
+occupy ordinary support recovery. Practice shortens that timer; FOCUS and AURA
+equipment shorten it further, down to a five-minute floor.
+
+Investiture temporarily borrows one battlemage equipment quality. It can lend
+FOCUS to a currently wielded non-FOCUS weapon or write an AURA around the Mage.
+The two modes share one effect, so Investiture can complete equipment the Mage
+already owns but cannot create full resonance by itself.
+
+Mana Shard, Missile, Fireball, Icestorm, and Bolt have barrage forms. They can
+be prepared once Practiced and will then cast lighter versions of themselves
+beside ordinary attacks. A wielded FOCUS can prepare a known working while it
+is still Copied and pays the automatic cast's SP cost itself. Wearing AURA at
+the same time completes battlemage resonance, improving cadence and damage.
+These automatic casts continue to teach the spellbook. Missile lands as a
+visible two-bolt volley, Fireball leaves a light Burning effect, Icestorm divides its
+damage among nearby hostile targets and Chills them, and Bolt emphasizes one
+heavier impact. A manually cast Bolt is now a standalone lightning working
+with stronger scaling and does not depend on the prepared barrage. A
+concentration block pauses barrage cadence without erasing the prepared page;
+the cadence resumes where it left off when concentration returns. Silence and
+paralysis still collapse it. An ordinary barrage cannot fire more often than
+every two combat rounds.
+
+The exception opens at Arcane 16 with a real wielded FOCUS. Its prepared page
+fires every round and produces two to six complete barrages based on the
+FOCUS weapon's WC and item level. In exchange, it removes one weapon swing
+below player level 50, then one more at each fifty-level threshold, up to six
+at level 250. The barrage count never reads or copies ordinary weapon swings,
+and an Investiture FOCUS does not qualify.
+
+Mana Barrier lasts from forty-five seconds upward and gives each damaging hit
+a chance to spend SP instead of HP after ordinary defenses have reduced the
+blow. That chance rises with true Arcane rank on a diminishing curve, while
+Mana Barrier mastery reduces the SP spent per point absorbed. Costs round up;
+if SP cannot cover the whole hit, the barrier absorbs as much as the remaining
+reserve permits. "battlemage" reports the exact current chance and efficiency.
+
+Powerup normally converts chosen HP immediately at 175 percent. When Bodach is
+bound, it becomes a visible fifteen-pulse buff instead: each pulse spends the
+chosen HP amount without taking the Mage below ten HP and restores three times
+that amount as SP. Touch has a fourteen-second base cooldown.
+
+Use "spells <working>" or "spellbook <working>" for the details of one page.
+"battlemage" reports the exact behavior of your current equipment and barrage.
+"overchannel" reports its current percentage and added SP.
+
+Falx shortens a bound working's manual cooldown by twenty percent and also
+quickens eligible barrage cadence. Talek, Ravidel, Arcanarton, and Bodach each
+add ten percent to the working's primary hit and merge their damage types into
+that hit. Prepared barrage copies use the same rule.
+Rodney can only be bound to a duration-bearing buff or control working. It
+extends that working by twenty-five percent through two minutes, thirty-five
+percent over two minutes, or fifty percent over five minutes. This includes
+Insane and Wrath concentration blocks, Stasis freezing, and Bodach Powerup
+pulses, but not Burning.
+Aiken can only be bound to a damaging working. It uses the established armor
+piercing path, halving normal armor absorption while leaving resistance,
+intrinsic reduction, shields, and Mana Barrier intact.
+Trivlian converts a damaging working's native damage to evil and acid. Other
+elemental rune types remain part of the unified hit when they share the page.
+Its pattern waits in the Darkwind Mage attic and will only open after Bodach or
+Arcanarton.
+James's Whimsy rune is harmless; Mage Eye sends absurd little scouts, and
+Teleport portals acquire colors that responsible geometry would refuse.
+
+The spellbook will not spend a socket on a rune that has no effect on that
+working. Use "runes <rune>" to list compatible workings or
+"spellbook <working>" to list compatible runes. Falx and James can annotate
+every page. Saloman and Mezari fit SP-costing workings. Rodney fits only real
+buff or control durations. Damage runes fit damaging workings, with the
+intentional forbidden exceptions shown under "magehelp runes". Saloman also
+returns ten percent of discounted base cost from utility workings.
+
+Teleport answers to both "tport" and "teleport". The fixed destinations accept
+"dw" for Darkwind, "hyper" for Hyperborea, "souv" for Souvrael, and "vi" for
+Volcano Isle.

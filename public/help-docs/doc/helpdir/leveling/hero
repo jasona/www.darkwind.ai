@@ -1,21 +1,22 @@
 |WKO~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  |CKBDarkwind Renown
 |WKO~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- |YKOAt level 45, your level display is replaced by
+ |YKOAt level 100, your level display is replaced by
  a renown label on the who list. Your heroism
  reputation determines whether you appear as
  [HERO], [ADV], or [VILN]. Heroism is changed by
  notable actions in the world, not by guild membership
  alone.
 
- Several advantages are given to those who 
+ Several advantages are given to those who
  reach this level band. Along with the prestige
- of renown, this includes the ability to change
- your title at will with the |YKB'ltitle' |YKOcommand.
+ of renown, players may change their title at will
+ with the |YKB'ltitle' |YKOcommand (unlocked earlier,
+ at CHAMPION, level 50).
 
- In addition, level 45+ players have the option of adding
+ In addition, level 100+ players have the option of adding
  a second guild, broadening their skills and
- overall scope. This second guild is governed 
+ overall scope. This second guild is governed
  by a variety of restrictions which are outlined
  in the dualguilds help file.
 

@@ -1,0 +1,42 @@
+|WKBSYNTAX
+======
+
+|CKBgearcheck|WKB
+|CKBgearcheck <item>|WKB
+|CKBupgrades|WKB
+
+DESCRIPTION
+===========
+
+|YKOCompares the equipment in your inventory with the equipment you are
+currently using. It accounts for weapon class, armour protection, equipment
+stats, resistances, sigils, known combat effects, cyberware strain, durability,
+the equipment slots that an item would replace, and the normal bonus or penalty
+from your trained weapon specialization.
+
+The normal report shows every comparable item, including upgrades, sidegrades,
+downgrades, and items with effects that cannot be scored confidently. Use
+|YKBgearcheck <item>|YKO for the full numeric breakdown.
+
+Ranked equipment also shows its item level. Item level describes the part of
+the game's progression for which the equipment was designed; it does not
+prevent a lower-level character from using the item. Ranked weapons penetrate
+some worn armour, while ranked armour resists weapons below its own level.
+Equal-level weapon and armour ratings cancel each other.
+
+When you have an empty equipment slot, gearcheck shows a separate
+|GKB➕ EMPTY SLOT|YKO section and recommends the strongest compatible item in
+your inventory. For ring and amulet slots, it can show multiple choices when
+more than one slot is open.
+
+|GKB🟢 UPGRADE|YKO means the carried item is measurably stronger.
+|YKB🟡 SAME POWER (SIDEGRADE)|YKO means its overall score is close, but its
+strengths may be distributed differently.
+|RKB🔴 DOWNGRADE|YKO means the currently equipped item or loadout is stronger.
+|YKB⚠ UNCERTAIN|YKO means an item has a scripted effect that cannot be scored
+until its builder declares a power value.
+
+Gearcheck never equips, removes, installs, or otherwise changes an item.
+Scripted item effects are only included when the item explicitly declares
+their power value. Use |CKBsmartequip|YKO to automatically apply positive,
+high-confidence armour and weapon improvements from your direct inventory.

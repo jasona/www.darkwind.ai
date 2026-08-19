@@ -4,6 +4,9 @@ This help path is shown first because your screenreader setting is on. If a
 screenreader-specific help topic exists, you will hear that version. If it does
 not exist yet, Darkwind falls back to the normal help topic.
 
+New to Darkwind? Type help guide for a short, stage-by-stage walkthrough
+from your first steps to the endgame.
+
 Good first commands:
 
 help basics look

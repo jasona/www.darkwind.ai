@@ -1,0 +1,46 @@
+|WKO=====================================================================
+ |CKBSigils
+|WKO=====================================================================
+|YKOSigils are arcane markings worked into rare equipment.
+Each marking carries a level. While you wield, wear, or internally bind the
+item, its levels count toward your total for that sigil. Marked pieces work
+as a set: equip several and their levels add together, up to the sigil's
+maximum useful level.
+
+Sigils are part of an item as it is found - you cannot inscribe them
+yourself. A sigil briefly glows when you pick up a marked item. Examine a
+piece of equipment to see any recognized markings it bears, each listed with
+its level and that sigil's maximum.
+Ordinary marked equipment usually supplies one level, so building around a
+sigil means choosing several compatible pieces. Marked gear can be found in
+both older and newer regions. A few powerful signature items supply two
+levels from one item.
+
+Some sigils may be occult. Their markings and effects cannot be identified,
+and they do not appear in your catalog until your character uncovers the
+secret that reveals them. Discovery is permanent for that character.
+Unrecognized markings still function and still count toward equipment power.
+
+|WKBWhat sigils can do:|YKO
+Early marks improve practical rewards such as corpse ash, profession
+materials, salvage returns, and seated recovery. Later marks improve offense,
+defense, and elemental affinities, or react to events such as excess healing,
+killing blows, repeated hits, and otherwise fatal damage. No sigil grants a
+new command.
+
+Type |CKBsigils catalog|YKO for every sigil your character recognizes, its
+maximum useful level, where it tends to appear, and a concise description.
+
+Type |YKBsigils|YKO for a table of your active sigils: each combined
+level against its maximum, and which piece of equipment supplies it.
+The columns are head (H), cloak (C), shoulders (Sh), aura (A), neck
+(N1/N2), body (B), legs (L), shield (S), feet (F), rings (R1/R2),
+gloves (G), main and secondary weapons (MW/SW), internal equipment (I),
+and other sources (O).
+A total shown in bright color has reached that sigil's maximum.
+
+|WKBSee also: |YKBhelp equip, help uniques|XX0
+
+# keywords: markings, set bonus, critical strike, evade, ruthless, catalog, discovery
+# alias: sigil
+# see: equip, uniques

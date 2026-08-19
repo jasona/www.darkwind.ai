@@ -1,0 +1,41 @@
+|CKBCold Signal|000
+
+|CK0Cold Signal is passive thermal-control firmware unlocked with the
+torso-mounted Thermal Exchange Manifold. Older systems may still call this
+implant the Coolant System. It operates automatically while the implant is
+installed and the Street Samurai contract is active. It has no activation
+command and no SP, Edge, or Heat cost.|000
+
+|CKBWhat it does|000
+|CK0Cold Signal watches new Heat created by firmware. When a burst is large
+enough for the coolant loop to help, it vents part of that burst before the
+load reaches the Cortex. It also gives the platform more room to operate in
+redline before the monitor reports overheat.|000
+
+|CK0Cold Signal does not erase existing Heat, raise maximum Heat, replace
+ordinary cooling, or guarantee that a large burst cannot cause lockout. Its
+value is sustained thermal control: repeated routines leave less load for the
+Cortex to clear.|000
+
+|CKBWhat affects it|000
+|CK0Thermal Exchange Manifold grade and maintenance condition influence how
+much pressure the passive can handle. Damaged or fragmented hardware still
+functions but may vent less. When Cold Signal intervenes, the Cortex reports
+the amount of Heat removed from that burst.|000
+
+|CKBChecking the passive|000
+|CK0Samskills reports whether the Thermal Exchange Manifold is installed.
+Dashboard lists its grade, condition, and COLD SIGNAL state. Samstatus shows
+whether the passive is online, while monitor shows the resulting live Heat
+band.|000
+
+|CK0Thermal Purge uses the same manifold in reverse to drive a short-range flame
+projector. The attack creates Heat normally and does not disable Cold Signal.
+In an emergency, "thermalpurge vent" can dump all existing Heat immediately,
+including during thermal lockout, but the backwash inflicts severe integrity
+wear on both the Cortex OS and Thermal Exchange Manifold.|000
+
+|CK0Cold Signal and Overclock solve different problems. Cold Signal reduces
+incoming thermal pressure throughout a fight. Overclock temporarily raises the
+thermal ceiling by stressing the Cortex OS. Overdrive handles an engagement's
+opening Heat burst.|000

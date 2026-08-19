@@ -1,10 +1,14 @@
-                       |BKB-= |CKBCase |BKB=-
-               
-|MKOA Thief's eyeball of a potential mark is a critical skill to
-learn.  Case will not only give you the mark's inventory, it
-will give you a good idea of the value of each item and how you
-compare physically to it, in case you'd prefer to attack instead
-of just steal.
+                            Case
+---------------------------------------------------------------------
 
-|CKOGLVL required: |GKB6
-|CKOSyntax: |YKOcase <target>               |CKOCost: |WKO10
+Syntax: case <target>
+
+Case reports a mark's visible inventory and makes that living your one
+Studied target for two minutes. Studying a fresh mark creates two
+Opportunity.
+Meaningful successful jobs against NPCs award small Thief GXP scaled
+by the shared kill tracker. Repeating one target within thirty minutes
+pays 100%, 50%, 25%, then no job GXP.
+
+Switching Studied targets normally carries at most two Opportunity.
+Ghost mastery can raise that carry limit to three, four, and five.

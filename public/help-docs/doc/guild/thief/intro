@@ -1,26 +1,26 @@
                          Thieves
 ---------------------------------------------------------------------
- 
-Thieves are the masters of sleight-of-hand.  If they desire something
-they don't bother with formalities like asking permission from the
-owner or paying for a desired item, they just take it (hopefully
-unnoticed).  If they are short on cash they find an unwitting donor
-and 'borrow' a few coins from them just to get them by.
- 
-Thieves tend to be loners or work with others of their class, as
-it seems many do not like the thieves' way of making a living.  It
-is also not uncommon for there to be bounties placed upon the heads
-of thieves, from their disgruntled 'victims'.
- 
-Because of the need to move silently thieves cannot be encumbered
-with heavy armours or huge weapons.  They tend to prefer to wear
-lighter armours such as leather, and carry weapons such as daggers
-or shortswords.
- 
-Because thieves work with their hands a lot, dexterity is a prime
-requisite for them being able to perform their skills.  Thieves
-are also masters in the ability of not being noticed, so they
-are very good at blending into the woodwork.
- 
-Remember to choose your guild carefully, because once chosen, its
-a lifetime commitment.
+
+Thieves turn information, access, and timing into power. Case a mark,
+build Opportunity through meaningful setup, then spend it on dirty
+control or a prepared finish. Thieves work in ordinary PvE, parties,
+and dual-guild builds: Bleeding and Exposed are the common conditions
+used by every guild.
+
+Thief advancement uses Guild XP, not gold. Ranks 1 through 20 open the
+command kit; later uncapped ranks support Knacks, diminishing mastery,
+and utility progression. Each rank grants one Knack point.
+
+Useful starting commands:
+
+  tstatus                 Current GXP, Opportunity, study, and incident
+  knacks                  Ghost, Grifter, and Knife training
+  case <target>           Study one mark and create two Opportunity
+  quickstrike <target>    Open a canonical Bleeding wound
+  dirtyfight <option>     Spend Opportunity on feint, punch, or sand
+  sidestep                Spend Opportunity on short evasive footwork
+  detect                  Find trap signs and hidden exits
+  extract <corpse>        Harvest a poisoncraft reagent
+  prepare <poison>        Prepare a persistent dose
+
+Use 'thelp revival' for the complete system overview.

@@ -31,9 +31,14 @@
 |CK0  Use "mskills" to see what each technique is for, and "mcombo" to
 |CK0  see your current combo state and route guidance.
 
-|CK0  Monks have a long, arduous road to becoming a Master. Along the
-|CK0  way, all monks must meet and defeat challenges as they gain
-|CK0  experience. 
+|CK0  Monks earn Monk XP in battle. It advances guild level automatically,
+|CK0  but the road to mastery still passes through formal challenges at
+|CK0  guild levels 4, 9, 14, and 19. Monk XP earned while a challenge or
+|CK0  regular level blocks advancement remains banked.
+
+|CK0  Use "msc" or "gscore Monk" to review your progress. The "cost" and
+|CK0  "advance guild" commands explain the next gate but never spend ordinary
+|CK0  experience.
 
 |CK0  On the surface, monks are but a ripple on the water. But, as
 |CK0  that ripple carries, so it grows. 

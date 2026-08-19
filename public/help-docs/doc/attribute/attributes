@@ -1,4 +1,4 @@
-/doc/attribute/attributes
+/public/docs/attribute/attributes
 
 |GKBCurrent global attributes
 
@@ -8,13 +8,12 @@
   |YK0- |YKBALLOW_DUAL_WIELD
   |YK0- |YKBIGNORE_RACE_SIZE
   |YK0- |YKBauto_detect_traps|YK0 => Automatically detect TRAP objects
-  |YK0- |YKBcarry_capacity_bonus|YK0 => Modifier to carrying capacity
   |YK0- |YKBdarkwind_poisons|YK0 => List of poison objects
   |YK0- |YKBdetect_alignment
   |YK0- |YKBexp-bonus-percent|YK0 => Extra exp gained
   |YK0- |YKBextra_hp_function
   |YK0- |YKBflight
-  |YK0- |YKBhyperborea_warmth|YK0 => Used to prevent freezing
+  |YK0- |YKBhyperborea_warmth|YK0 => Hyperborea environmental warmth controller; not the Freezing status effect
   |YK0- |YKBimmunity_to_traps|YK0 => Don't take damage from TRAP objects
   |YK0- |YKBphased_out
   |YK0- |YKBphased_out|YK0 => Phase out of physical realm. Mage spell generally

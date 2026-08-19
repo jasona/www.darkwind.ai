@@ -27,6 +27,10 @@ such as:
 Each delayed step may wait up to 60 seconds, and a single script may
 contain up to 300 total seconds of delay.
 
+Global emotes and guild emotes currently available to your character may be
+used as script steps. A guild emote becomes invalid immediately if you leave
+that guild or its abilities become inactive.
+
 |CKOExamples
 |WKO--------
 

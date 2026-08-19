@@ -1,0 +1,25 @@
+Battlemage resonance joins ordinary weapon attacks to a prepared barrage.
+
+A wielded FOCUS may prepare a known barrage page even while it is still Copied,
+and pays zero SP for its automatic casts. A worn AURA adds another cadence and
+power improvement. Wearing both completes resonance. Investiture may supply
+one missing half temporarily, but cannot create both halves by itself.
+
+Mana Shard, Missile, Fireball, Icestorm, and Bolt can become barrages. Without
+FOCUS they require Practiced mastery and spend SP. Their cadence improves with
+mastery and Falx but ordinarily never becomes faster than once every two
+combat rounds.
+Concentration pauses the prepared page; silence and paralysis collapse it.
+
+Beyond Arcane 15, a real wielded FOCUS changes the bargain. Barrage fires every
+round and produces two to six complete barrages according to the weapon's WC
+and item level. It does not copy the Mage's weapon-swing count. Instead, the
+Mage gives up one swing below player level 50, then another at each 50-level
+threshold, to a maximum of six at level 250. Investiture does not qualify.
+The visual battlemage display condenses the FOCUS weapon's combined WC and item
+level rating into a short Weave Power bar and shows how much remains before
+the next barrage. Screen-reader output gives the same progress numerically.
+
+Use "barrage <working>" to prepare a page, "barrage off" to release it, and
+"battlemage" for the live FOCUS, AURA, cadence, SP, Overchannel, Grand
+Revision, multibarrage exchange, and Recollection readout.

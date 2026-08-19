@@ -4,22 +4,14 @@
 
   There are various commands that you'll need when doing quests:
 
-  * "qlist"       This command lists all available quests. All quests
-                  are color coded by difficult based on level guidelines
-                  of the quest, and your current level. You can filter
-                  by domain, level, deity, reputation, type, tag, or
-                  status. Examples: "qlist deity set", "qlist rep
-                  villain", "qlist level 1-10".
-
-  * "qinfo [#]"   This command prints out details for the given quest 
-                  using the number shown in your most recent "qlist".
+  * "engage waysteward"
+                  Quest givers stand beside area wayshards. A bright yellow
+                  [?] means new work is available and [!] means completed
+                  work can be turned in. Engage them to review details,
+                  accept work, report progress, or collect rewards.
 
   * "myquests"    This command lists all quests that you have accepted.
-                  To accept a quest, you would use the "qaccept" command.
-
-  * "qaccept [#]" As previously mentioned, you use the qaccept command
-                  and the quest number found in your most recent
-                  "qlist".
+                  New quests are accepted from local waystewards.
 
   * "qactive [#]" This command is kept for compatibility. Active quests
                   are no longer required.

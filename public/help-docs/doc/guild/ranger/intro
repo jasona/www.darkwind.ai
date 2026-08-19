@@ -1,0 +1,22 @@
+|CKBRanger|000
+
+|GK0Rangers are practical wilderness specialists. They study terrain, tracks,
+weather, tools, camps, animal helpers, and the preparation that happens before
+the first arrow lands.|000
+
+|GK0A Ranger chooses favored terrain and quarry, then develops a personal
+skill tree. Their toolkit includes tracking, foraging, camps, concealment,
+ambushes, archery, fieldcraft, and support for allies traveling through land
+the Ranger understands.|000
+
+|YKOCurrent roster status: |WKBOPEN|000
+
+|YKOUseful starting commands:|000
+  |YKBranhelp|YKO             Open the Ranger help system
+  |YKBrscore|YKO              Review Ranger progress
+  |YKBskilltree|YKO           Review learned and available skills
+  |YKBsurvey|YKO              Identify the current terrain
+  |YKBrangers|YKO             List visible Rangers
+
+|YKOJoining requirements and directions can change. Check
+|YKBhelp guilds|YKO and ask a current Ranger before committing.|000

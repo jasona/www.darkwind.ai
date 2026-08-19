@@ -14,7 +14,11 @@ movements become almost effortless. A swashbuckler will
 all his faculties - speed, intellect and charm in order to
 execute the Dance of Death to the utmost effect.
 
+Dance is passive. At 100 Flow, each eligible combat round has a 5%
+chance to steal one guaranteed weapon hit. At GL 15, full Flow also
+has a separate, very rare chance to make the next paid technique free.
+
 GL: 15
-SP: Variable
-command:  sdance
-duration: technique mode
+SP: Passive
+command:  sdance (compatibility information only)
+duration: passive at full Flow

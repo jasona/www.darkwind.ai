@@ -1,6 +1,7 @@
 # Hyperborea
 
-Work in progress: this page describes the Hyperborea setting we are building toward, and current game content differs in places.
+Some places described here are known through lore before they can be reached.
+Use `areas hyperborea` in game for available routes and level guidance.
 
 Hyperborea is the northern domain of fjords, mountain passes, snow forests, old walls, and mythic war. Grimsfjord stands against the cold as a practical village of gates, outfitters, wharves, ponies, fires, and hard roads. Beyond it, the land climbs into icy valleys where clouds swallow the ridges.
 

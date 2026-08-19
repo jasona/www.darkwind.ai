@@ -1,6 +1,7 @@
 # Markas
 
-Work in progress: this page describes the Markas setting we are building toward, and current game content differs in places.
+Some places described here are known through lore before they can be reached.
+Use `areas markas` in game for available routes and level guidance.
 
 Markas is the red moon of strength, stability, healing, and sanctuary. It is beautiful in the way a protected place is beautiful: ordered gardens, crystal water, enchanted forests, high mountains, and gates that feel closer to heaven than to stone.
 

@@ -1,0 +1,12 @@
+                        Sidestep
+---------------------------------------------------------------------
+
+Syntax: sidestep
+
+During combat, spend one Opportunity and 15 SP to gain a large dodge
+bonus for about two combat rounds. Sidestep cannot be stacked or
+refreshed while active and has a twelve-second reuse time.
+
+The Runner Method extends Sidestep by one heartbeat. The Opportunist
+Method returns its Opportunity when the effect ends if no attack landed
+on the Thief while it was active.

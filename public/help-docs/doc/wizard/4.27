@@ -1,0 +1,322 @@
+***************************************************************************
+                                 Sigils
+***************************************************************************
+
+Sigils are passive, levelled effects supplied by active equipment or by an
+explicit inherent source on a living. They modify existing game actions; a
+sigil should not grant a command of its own.
+
+This file covers the builder-facing contracts. Players can use "sigils" to
+see their active recognized sigils and "sigils catalog" to see the effects
+their character recognizes. See wizhelp 4.26 for equipment power and
+gearcheck generally.
+
+Applicant-level and higher wizards also have two diagnostic forms:
+
+====================
+sigils <player>
+sigils report
+====================
+
+"sigils <player>" shows the same source breakdown for another online living
+or a saved player. "sigils report" summarizes every currently online
+non-immortal player, including players with no active recognized sigils. The
+report excludes NPCs and Applicant-level or higher users. Both forms apply
+the viewing wizard's normal hidden-sigil discovery rules.
+
+The system has four main owners:
+
+    /secure/include/sigils.h
+        Stable IDs and display/scoring metadata.
+
+    /inherits/equip.c
+        The API used to place sigils on equipment.
+
+    /secure/living/equipment.c
+        Active equipment and inherent-source aggregation.
+
+    /secure/living/sigils.c
+        Shared effect calculations, cooldowns, counters, discovery, and
+        effect messages.
+
+Do not put a standard sigil's mechanical implementation on every marked
+item. The item contributes levels; the shared living layer implements the
+effect once.
+
+***************************************************************************
+                        Putting Sigils on Equipment
+***************************************************************************
+
+Weapons, armour, implants, and other objects inheriting EQUIP already have
+the sigil API. Configure a mark with its lowercase registry ID:
+
+====================
+set_sigil("rime focus", 1);
+====================
+
+An item can carry more than one sigil:
+
+====================
+set_sigil("fortified", 1);
+set_sigil("venom ward", 1);
+====================
+
+|CKBvoid set_sigil(string sSigil, int iLevel);|XX0
+        Adds or replaces the item's contribution for a registered sigil.
+        The ID is normalized to lowercase. Unknown IDs and levels below 1
+        remove that entry. Values above the registry maximum are clamped.
+
+|CKBvoid remove_sigil(string sSigil);|XX0
+        Removes the named contribution from the item.
+
+|CKBint query_sigil(string sSigil);|XX0
+        Returns this item's contribution, or 0 when absent.
+
+|CKBmapping query_sigils();|XX0
+        Returns the item's valid sigil contributions, clamped to their
+        registry maxima. Use this public query in consumers.
+
+The sigil is active only while the item participates in the living's active
+equipment set. That includes worn armour, main and secondary weapons, and
+properly activated internal equipment. Merely carrying an item is not enough.
+Use the normal armour, weapon, or internal-equipment lifecycle; do not make a
+carried object alter the player's inherent sigil mapping as a shortcut.
+
+Contributions from active sources add together and the final level is capped.
+Excess levels have no effect. Ordinary marked equipment usually contributes
+one level. A two-level contribution is a deliberate reward and balance choice,
+not a default. Review the item's slot, acquisition difficulty, item level, and
+the ease of completing the sigil's cap.
+
+Looking at an item automatically shows recognized sigils and their item/max
+levels. The "sigils" command automatically reports active totals and their
+equipment sources. Builders do not need to duplicate either display.
+
+An explicit successful "get" or "take" calls the living's
+notify_sigil_pickup() helper. query_sigil_pickup_message() owns the generic
+text used by that notification. Neither helper names sigils, changes discovery
+state, or runs during unrelated inventory delivery and restoration paths.
+
+Sigils are scored automatically by EQUIPMENT_POWER_D at:
+
+====================
+item contribution * registry power per level
+====================
+
+Do not add add_power_feature() or set_power_adjustment() for the same sigil.
+That would count its power twice. Use "gearcheck <item>" to inspect the
+result; hidden sigils are still scored even when their identity is concealed.
+
+***************************************************************************
+                         Inherent Sigil Sources
+***************************************************************************
+
+Livings have a separate inherent sigil mapping for forms, boons, guild
+features, and other non-equipment sources:
+
+====================
+player->set_sigil("evade", 1);
+player->remove_sigil("evade");
+player->query_inherent_sigil("evade");
+====================
+
+This setter replaces the entire inherent value for that ID. It does not keep
+independent contributions for several systems. If several features can grant
+the same inherent sigil, one owning soul, daemon, or inheritable must retain
+their primitive source state, calculate the combined value, and publish that
+value through set_sigil(). Do not have unrelated objects race to overwrite or
+remove each other's contribution.
+
+Temporary inherent sources must reapply through their normal restore or
+activation path and remove their contribution on every exit path, including
+expiry, form change, guild cleanup, destruction, quit, and reconnect where
+applicable. Prefer equipment sigils when a concrete equipped object is the
+actual source; equipment aggregation already owns that lifecycle.
+
+Useful living queries are:
+
+|CKBint query_sigil(string sSigil);|XX0
+        Returns the capped effective total from inherent and active-equipment
+        sources. Mechanics should use this query.
+
+|CKBmapping query_sigils();|XX0
+        Returns all capped effective totals.
+
+|CKBint query_equipment_sigil(string sSigil);|XX0
+        Returns the uncapped sum from active equipment only.
+
+|CKBmapping query_equipment_sigils();|XX0
+        Returns all uncapped active-equipment sums.
+
+|CKBint query_inherent_sigil(string sSigil);|XX0
+        Returns the living's inherent contribution only.
+
+The uncapped source queries are useful for presentation and diagnostics. Game
+effects should consume query_sigil() so excess sources cannot exceed the
+mechanical maximum.
+
+***************************************************************************
+                         Extending the Registry
+***************************************************************************
+
+Sigil IDs are player-visible compatibility contracts. Before adding one,
+search all producers and consumers, confirm that an existing sigil cannot
+express the design, and settle the effect, cap, progression band, power per
+level, acquisition plan, and exact integration boundary.
+
+Add the definition to SIGILS in /secure/include/sigils.h:
+
+====================
+"open mark": SIGIL_DEF(3, 100, "mid",
+  "Its concise player-facing effect summary"),
+====================
+
+Each definition supplies:
+
+    max
+        Maximum effective level. Current effects support a maximum of 3,
+        except Critical Strike and Ruthless, which support 5. A new maximum
+        is not metadata-only: update and test query_sigil() in
+        /secure/living/equipment.c and query_sigil_effect_level() in
+        /secure/living/sigils.c rather than allowing display and mechanics
+        to disagree.
+
+    power
+        Equipment power per contributed level. Set this from expected value
+        in ordinary play, not the largest possible activation. It is scored
+        automatically as utility by the current power daemon.
+
+    band
+        The player-facing progression label: "low", "mid", or "high".
+        This is catalog metadata, not an equip restriction.
+
+    summary
+        Concise player-facing text used by "sigils catalog". Describe what
+        the sigil does, without implementation jargon.
+
+    hidden
+        Supplied by SIGIL_DEF() or HIDDEN_SIGIL_DEF(). See Hidden Sigils
+        below.
+
+Keep the ID lowercase and stable. Renaming an ID changes equipment source,
+effect, discovery, display, tests, and possibly saved character progression.
+Preserve an alias or migrate persisted discovery state if a live hidden ID
+must change.
+
+***************************************************************************
+                         Implementing the Effect
+***************************************************************************
+
+Implement shared behavior in /secure/living/sigils.c. Read levels through
+query_sigil() or query_sigil_effect_level(); do not rescan worn inventory or
+reimplement source aggregation. Keep the operation bounded, validate object
+arguments, and avoid retaining LPC object references in persistent state.
+
+Use the narrowest existing integration boundary. Current examples include:
+
+    /secure/living.c
+        Damage dealt/received, fatal damage, kills, shields, and regen.
+
+    /secure/living/combat.c
+        Critical-hit and dodge calculations.
+
+    /secure/living/stats.c
+        Overhealing.
+
+    /inherits/ash_burner.c
+        Ash yield and autosalvage proceeds.
+
+    /objects/professions/profession_material.c
+        Profession-material quantity.
+
+Prefer a named helper in the sigil effect layer with one call at the owning
+gameplay boundary. Do not scatter string-ID checks through item files or
+several unrelated callers. Add a compatible forward declaration in the
+consumer when that file's compilation style requires one.
+
+Runtime cooldowns, counters, object references, and caches must be nosave.
+Use stable string keys for independent counters and cooldowns. Messages about
+a hidden effect must pass through the shared hidden-aware presentation helper
+or provide equivalent concealment; a hidden ID must not leak through combat
+spam before discovery.
+
+When adding a reactive effect, decide and test:
+
+* whether it triggers before or after ordinary mitigation;
+* whether misses, zero damage, reflected damage, and self-damage count;
+* whether repeated hits retain state across targets or combat;
+* whether cooldowns are per living, per target, or global to that effect;
+* whether NPCs and players use the same behavior;
+* whether the effect can recurse through the event it creates;
+* what happens on death, linkdeath, reconnect, and destruction.
+
+Use catch() only at optional integration boundaries where a sigil failure must
+not break the owning action. The effect itself should remain deterministic
+where practical and must not mutate state from a display or power query.
+
+***************************************************************************
+                            Hidden Sigils
+***************************************************************************
+
+Use a hidden definition only when discovering the mark is real progression:
+
+====================
+"secret mark": HIDDEN_SIGIL_DEF(3, 160, "high",
+  "Its concise player-facing effect summary"),
+====================
+
+Hidden sigils remain mechanically active and fully power-scored. Until a
+character discovers one, item inspection reports an uninterpretable marking,
+gearcheck reports an undiscovered sigil, the active list and catalog omit its
+identity, and generic effect messages must not reveal its name.
+
+The system that owns the actual discovery criterion reveals it only after the
+criterion succeeds:
+
+====================
+if (player->discover_sigil("secret mark"))
+  /* criterion-specific follow-up, if any */
+====================
+
+discover_sigil() returns true only for a newly learned hidden ID, persists the
+player immediately, and normally sends a generic discovery message. Pass a
+nonzero second argument when the owning quest, encounter, remort, or lore
+interaction supplies its own message:
+
+====================
+player->discover_sigil("secret mark", 1);
+====================
+
+query_sigil_known() returns true for public or discovered registry IDs.
+query_discovered_sigils() returns a defensive copy of learned hidden IDs.
+Do not use item possession, display text, or an object's alias as discovery
+state. Do not add hidden definitions to public exhaustive wiki tables.
+
+***************************************************************************
+                              Validation
+***************************************************************************
+
+For ordinary marked gear:
+
+* compile the item with both standard LPC checks;
+* look at it before and after equipping it;
+* verify "sigils" reports the correct source and capped total;
+* verify removing, unwielding, or extracting it removes the contribution;
+* inspect "gearcheck <item>" and confirm the sigil is scored once;
+* exercise save/login and reconnect when the equipment kind requires it.
+
+For a new or changed sigil, extend the focused regression in
+/secure/obj/sigil_effects_test.c. Validate the registry entry, level 1, the
+maximum level, one level beyond the cap, and the exact mechanical boundary.
+Update the regression's expected registry count when adding or retiring an
+entry. For chance effects, bound the result rather than asserting one random
+roll. For counters and cooldowns, test one event before activation,
+activation, and the immediate repeat or reset path.
+
+Compile every changed LPC file and representative consumers of a changed
+shared include or living inheritable. Then exercise the effect through its
+real gameplay action on a live or test MUD. Compilation alone does not prove
+equipment activation, cleanup, discovery persistence, or event ordering.
+
+------
+Version 1: Codex - Aug 10, 2026

@@ -102,31 +102,54 @@ the matching 'LIV' RULE.
 Guild Emotes
 ============
 
-Guild emotes are really just variable emotes in a specific directory
-within /cmds/soul/ and a Guild Flag in the re-direct statement. To add a
-guild emote, you need to code a small emote command like you would with a
-variable emote and place it in an appropriate directory in /cmds/soul/.
-Directory names must be all -lowercase-, and be exact matches of the guild
-name as defined in guildd.h
+Guild emotes are definitions stored in a separate, guild-scoped mapping in
+EMOTE_D. They use the same RULE and Message String grammar as global emotes,
+but only active members of the selected guild can list, preview, invoke, or
+use them through a channel soul.
 
-  (ie. "/cmds/soul/cleric_mitra/", "/cmds/soul/psionicist/")
+Create a static guild emote with the normal addemote flow and the -guild
+option:
 
+  addemote -guild Street_Samurai jackin STR
+  New message: $N $vjack into $o.
 
-The only other thing that is built differently is the re-direct link.
-Instead of '-><emote command>', the re-direct must take the form of
-'->Guild_<guild>_<emote command>' where '<guild>' is the -Correctly
-Capitalized- name of the guild, again as defined in guildd.h
+The guild name is matched case-insensitively against GUILD_NAMES. Definitions
+are persisted in /secure/savedir/soul with the rest of the emote daemon state.
+Because that save data is environment-local, definitions must still be added
+or migrated separately wherever they are expected to exist.
 
-  (ie. "->Guild_Psionicist_spoon" will look at /cmds/soul/psionicist/spoon
-       "->Guild_Ninja_weak" will look at /cmds/soul/ninja/weak)
+Use these commands to inspect and remove guild definitions:
 
+  showemote -guild Street_Samurai jackin
+  rmemote -guild Street_Samurai jackin STR
+  rmemote -guild Street_Samurai jackin
 
-'<guild>' is screened against a proper guild name, and the player that is
-attempting to use/view the emote is checked to verify they are in that
-guild before being allowed to use it.
+Omitting -guild operates on a global emote. A new guild-emote name may not
+collide with a global emote, another guild's emote, or a command available to
+the architect creating it.
+
+A guild emote only needs an object under /cmds/soul/ when its output must be
+computed dynamically. Put the get_emote() object in the lower-case guild
+directory, then use a guild redirect as the stored Message String:
+
+  /cmds/soul/psionicist/spoon.c
+  ->Guild_Psionicist_spoon
+
+The guild token in a redirect must use the configured guild name. Static
+guild emotes should store their Message String directly and do not need a
+redirect object.
+
+Players can discover and inspect the definitions available to them with:
+
+  feelings guild [<guild>] [<prefix>]
+  semote <emote>
+  emoteapropos guild [<guild>] <text>
+
+See also: help guild emotes, help addemote, help showemote, help rmemote
 
 
 
 
 =============================
 Version 1.0: 12-08-03 Aiken  [Parts ripped from addemote command help]
+Version 2.0: 07-20-26        [Documented scoped guild emotes]

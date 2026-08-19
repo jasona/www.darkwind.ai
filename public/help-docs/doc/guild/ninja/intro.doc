@@ -6,11 +6,13 @@ and intelligence are especially important to the guild. Dexterity
 supports the precision and speed expected of a Ninja, while intelligence
 supports study, technique and control.
 
+Joining requires level 5 and at least 10 unmodified Dexterity.
+
 A list of abilities can be shown with the <nskills> command. The
-<practice> command trains abilities, and <master> can remove the
-remaining failure chance from a fully practiced ability. Ninja earn
-one mastery slot at guild level 15 and a second mastery slot at guild
-level 20.
+<practice> command spends rank-earned training sessions to improve an
+ability from its starting 70% reliability toward 100%. Ninja rank comes
+from guild XP, while guild level comes only from unique assassination
+<marks>; neither progression track spends or advances the other.
 
 Several combat abilities add pieces to the Ninja combo system. Recent
 pieces can combine into special combat bursts; see <ninhelp combo>.

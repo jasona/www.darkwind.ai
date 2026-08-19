@@ -8,12 +8,12 @@ GETTING STARTED:
 SKILLS & ADVANCEMENT:
   skilltree / tree     View the full skill tree and your progress.
   learn                See skills available to learn.
-  learn <skill>        Learn a new skill (costs slots + experience).
+  learn <skill>        Learn a new skill (costs slots).
   learn cost <skill>   See the cost and details of a skill.
   skills / myskills    Show your learned skills.
   slots                Show your available skill slots.
-  improve <what>       Advance stats or guild level.
-  cost / tally         Show advancement costs.
+  improve <what>       Advance stats/level or review Ranger XP.
+  cost / tally         Show character costs and Ranger XP.
   check <terrain>      See what skills work in a terrain.
 
 INFORMATION:

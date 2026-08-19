@@ -1,0 +1,57 @@
+|CKBStreet Samurai: First Deployment|000
+
+|CKB1. Verify the installation|000
+|CK0Joining installs a prototype-grade Cortex OS automatically. Run dashboard
+and confirm that the contract is active, the Cortex OS is online, and no alert
+requires attention. A normal new member does not need samrepair.|000
+
+|CK0Neonwake is available immediately. Run neonwake to wake every installed
+implant into a carried lighting mesh if darkness prevents you from seeing a
+room; run it again to switch the mesh off.|000
+
+|CKB2. Review available firmware|000
+|CK0Run samskills to see every routine, its Guild Level, resource use, and
+current readiness. READY means the routine is available. A red HARDWARE status
+means its required implant is missing. Use samhelp <routine> before deploying
+unfamiliar firmware and samhelp firmware for the complete implant map.|000
+
+|CKB3. Learn the combat loop|000
+|CK0Snap Cut produces Edge whenever it deals damage, making it a dependable
+way to establish momentum. Jolt offers lightning damage and becomes another
+source of Edge while the Cortex is running hot. At GL2, Threat Scan reports a
+foe's armour and resistances and establishes a lock that strengthens the next
+Ripcut. A scanned Ripcut consumes that lock and produces Edge when it lands.|000
+
+|CK0When Edge is available, most active routines automatically route one point
+into a stronger version of their normal effect. The base routine still works at
+zero Edge. Watch for the shell's EDGE ROUTE message to see when damage,
+duration, shielding, healing, or control strength has been amplified.|000
+
+|CK0Most successful active routines add Heat and all active routines use the
+shared Cortex execution cycle. Redline can improve some offensive firmware,
+but reaching the thermal ceiling locks Heat-producing routines until the
+system cools. Overclock adds temporary headroom without producing Heat, at the
+cost of wear to the Cortex OS. Watch the live state with monitor or samstatus.|000
+
+|CKB4. Build the loadout|000
+|CK0Rin Kade operates the restricted clinic beyond the contract office. Engage
+Rin to inspect every current and future unlock. The catalog shows the implant
+slot, grade, strain, and exact price before confirmation. Active members pay
+for hardware but not guild-covered installation, extraction, or signature
+repair services.|000
+
+|CKB5. Maintain the hardware|000
+|CK0Combat damage can wear down implant integrity, while firmware use can add
+fragmentation. Dashboard names the affected process and shows whether to use
+defrag, patch, purge, or reboot. Rin repairs physical integrity. Use logs when
+you need to understand how a process reached its current state.|000
+
+|CKB6. Use the network|000
+|CK0Samwho lists connected Street Samurai, samchat transmits on the private
+Cortex network, and samhist reviews recent transmissions. Samhelp network
+explains the available syntax and visibility rules.|000
+
+|CK0If a routine will not start, read its failure message first. Then check
+samstatus for contract, Edge, Heat, and the Cortex cycle; check samskills for
+Guild Level and hardware; and check dashboard for implant or maintenance
+problems.|000

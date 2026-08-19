@@ -1,8 +1,11 @@
 |WKBDual Guilding.
 |WKO___________________________
 
-|YKOPlayers have the options of joining a second guild
-once they have attained HERO status.
+|YKOPlayers have the option of joining a second guild
+once they have attained CHAMPION status at level 50.
+
+Classes describe what a character innately is. They are separate from learned
+guild membership and are not choices in the dual-guild system.
 
 There are many restrictions on the available guilds 
 that can be chosen as your 'second' guild, including,
@@ -24,5 +27,4 @@ You can checkout the guilds you are able to join
 via |YKB"help combos"
 
 |XX0See Also:
-|XX0    |CKBcoders|XX0, |CKBmythic_guilds|XX0, |CKBguilds|XX0, 
-|XX0    |CKBcombos|XX0
+|XX0    |CKBcoders|XX0, |CKBguilds|XX0, |CKBclasses|XX0, |CKBcombos|XX0

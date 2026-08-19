@@ -1,0 +1,24 @@
+|YK0#|YKB Classes|000
+
+|GK0Classes describe what a character innately is. They alter the character's
+body, mind, nature, or relationship with the world. Unlike guilds, classes are
+not learned disciplines. See |CKBhelp guilds|GK0 for skills and traditions a
+character can learn.|000
+
+|YK0##|YKB Class roster|000
+
+|YK0Developer  Class              Status|000
+|CK0(Cales)    |GK0Artificer          |YKB[COMING]|000
+|CK0(Acer)     |GK0Dragon             |WKB[OPEN]|000
+|CK0(Acer)     |GK0Morpher            |RKB[CLOSED]|000
+|CK0(Cales)    |GK0Psionicist         |WKB[OPEN]|000
+|CK0(Acer)     |GK0Vampire            |WKB[OPEN]|000
+
+|YK0##|YKB See also|000
+
+|CKBhelp guilds|000
+|CKBhelp guilds archetypes|000
+|CKBhelp guilds roles|000
+|CKBhelp guilds equipment|000
+
+# alias: class

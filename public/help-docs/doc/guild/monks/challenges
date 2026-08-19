@@ -9,6 +9,14 @@
 |CK0  complete mastery challenges in order to advance to guild level
 |CK0  5, 10, 15 and 20.
 
+|CK0  Monk XP continues to accumulate while a trial is incomplete. Completing
+|CK0  the trial immediately releases every rank your banked Monk XP and regular
+|CK0  level permit.
+
+|CK0  Dragon Rebind becomes available at guild level 19 as the graduation
+|CK0  technique for the final mastery trial. Full Dragon style remains the
+|CK0  reward for reaching guild level 20.
+
 |CK0  These are no longer simple duels. Each trial asks you to prove
 |CK0  that you understand a sequence of forms. The early trials focus
 |CK0  on one style at a time, while the final trial demands that you

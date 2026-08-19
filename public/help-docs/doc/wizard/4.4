@@ -24,6 +24,7 @@ Your armour file MUST have the following lines of code at the top:
 #include <mudlib.h>
 #include <types.h>
 #include <material.h>
+#include <basic_armour.h>
 inherit GEN_ARMOUR;
 ====================
 
@@ -42,6 +43,31 @@ void reset(int iArg) {
 
 Even a basic armour has to have a few settings to make it interesting.
 You should have the following settings for your armour:
+
+For a standard armour form, prefer the shared template contract:
+
+====================
+set_armour_template("chainmail");
+====================
+
+Templates supply a canonical size, composition, coverage, default material,
+aliases, weight, value, and material/quality-aware description. The clonable
+stock forms live under /objects/standard_equipment/armour/. Call template
+selection before deliberate overrides such as set_material(), set_quality(),
+set_short(), or set_long(). Use query_armour_templates() to inspect the live
+template names and query_armour_template_definition(name) to inspect one.
+
+Area armour with custom prose can instead include <basic_armour.h> and use the
+closest semantic ARMOUR_* identity:
+
+====================
+set_new_type(ARMOUR_BREASTPLATE);
+====================
+
+Do not assemble a recurring standard form from raw size, composition, and
+coverage bits. Extend <basic_armour.h> when a genuinely recurring form is
+missing. The individual setters below remain valid for exceptional forms and
+for overriding template defaults.
 
 set_short("short");
         Replace "short" with the quoted short description of your armour.
@@ -124,8 +150,9 @@ set_value(-1);
         means to use the automatically generated value). NB this should
         be the LAST function called in your reset routine.
 
-That's it! An example basic armour is given in
-/open/EXAMPLES/ARMOURS/basic_armour.c
+That's it! An example manually configured armour is given in
+/open/EXAMPLES/ARMOURS/basic_armour.c. Stock template examples are under
+/objects/standard_equipment/armour/.
 
 If all you want is to make a basic armour, copy that file to directory
 where your area's armours are, and replace all the content values (e.g.
@@ -256,6 +283,10 @@ int remove_func(oArmour);
         job to fill out the this function with whatever special things
         that are to happen. If this function returns 0, then the remove
         will fail.
+
+        Armour with a scripted wear effect must declare that effect for
+        gearcheck with add_power_feature("scripted_wear", ...). See
+        wizhelp 4.26 for the equipment power API and examples.
 
 |CKBvoid add_equipment_stat(string sStat, int iValue, string sStart, string sSto
 p);|XX0

@@ -1,0 +1,280 @@
+***************************************************************************
+                    Equipment Power and Gearcheck
+***************************************************************************
+
+Weapons, armour, implants, and other objects inheriting EQUIP expose a common
+power-scoring API. The player command "gearcheck" uses this API to compare
+carried equipment against the equipment and slots a player is currently using.
+
+***************************************************************************
+                             Item Level
+***************************************************************************
+
+Every object inheriting EQUIP can declare its intended progression level:
+
+====================
+set_item_level(150);
+====================
+
+|CKBvoid set_item_level(int level);|XX0
+        Sets the equipment's item level. Values are bounded from 0 through
+        the current player level cap of 250. Level 0 means that legacy or
+        deliberately unranked equipment has no item level. Calling this
+        function, including with 0, is an explicit override of area inference.
+
+|CKBvoid clear_item_level();|XX0
+        Removes an explicit override and allows the equipment to infer its
+        level again from the owning area's catalog metadata.
+
+|CKBint query_item_level();|XX0
+        Returns the explicit item level when one was set. Otherwise, the first
+        query resolves the equipment blueprint's owning area and caches that
+        area's equipment level on the object. This API is shared by weapons,
+        armour, implants, cyberware, relics, and other EQUIP descendants.
+
+Item level describes the progression context for which an item was designed.
+It is not a minimum-use restriction: use set_level_restriction() separately
+when a real mechanical gate is required. For implants, cyberware, relics, and
+other non-weapon/non-armour equipment, item level remains descriptive unless
+the owning mechanic explicitly consumes it.
+
+Weapons and armour use item level in physical combat. Their inherent rating is:
+
+====================
+min(25, item_level / 10)
+====================
+
+A weapon uses the rating as inherent armour penetration. Armour uses it as
+inherent armour strength. The ratings oppose each other, so equal-level gear
+preserves the ordinary combat result:
+
+====================
+armour factor = 100 + armour strength - weapon penetration
+armour factor is bounded from 75 through 125
+====================
+
+Level 150 therefore supplies a 15% rating and level 250 supplies 25%. Worn
+armour strength is weighted by each piece's absorb contribution; a small ring
+cannot raise an otherwise weak suit to its own item level. Only worn armour's
+share of physical flat reduction, percentage reduction, and armour-derived
+absorb chance participates. Intrinsic absorb, temporary absorption, shields,
+resistances, guild mitigation, boss reduction, dodge, accuracy, and
+nonphysical damage are unchanged.
+
+NPCs without a weapon use their capped monster level as the item level of
+natural physical attacks. NPC intrinsic armour likewise uses capped monster
+level when worn armour is not supplying the effective absorb class. When worn
+armour overtakes the NPC's intrinsic armour floor, the actual worn equipment
+levels are used instead. These fallbacks do not apply to unarmed or naked
+players. A source-owned player intrinsic attack may explicitly supply a
+clamped item level, which provides the same standard level-derived penetration
+without requiring a hidden weapon object. Boss tier remains separate from item
+level.
+
+The matchup applies after the ordinary physical-armour cap is calculated.
+DAM_AP then halves the remaining armour contribution. Do not manually add a
+power feature for inherent penetration or strength; EQUIPMENT_POWER_D scores
+both automatically.
+
+Area-owned equipment normally needs no setter. Its blueprint path resolves
+through AREA_CATALOG_D, which uses area.json's optional equipment_level or the
+midpoint of recommended_min_level and recommended_max_level. The result is
+cached, so combat does not repeatedly query the catalog. Existing objects keep
+their resolved value; newly cloned objects see refreshed catalog metadata.
+
+Use set_item_level() for boss, quest, shop, crafted, generated, shared-path, or
+otherwise exceptional rewards whose intended progression differs from the
+surrounding area. Shared-path equipment cannot infer where it was acquired.
+Use set_item_level(0) to deliberately opt an item out of area inference.
+
+Normal structured properties are scored automatically, including weapon class,
+hit bonus, armour dodge and absorb class, equipment stats, resistances, sigils,
+item-level armour penetration and strength, standard weapon and armour
+modifications, generated item procs, implant procs, cyberware strain,
+durability, and temporary item warnings.
+
+***************************************************************************
+                        Hidden Sigil Discovery
+***************************************************************************
+
+See wizhelp 4.27 for the complete builder-facing sigil guide, including how
+to mark equipment, add registry entries and effects, wire discovery, and
+validate the result.
+
+The shared sigil registry in <sigils.h> distinguishes public and hidden
+definitions:
+
+====================
+"open mark": SIGIL_DEF(3, 100, "mid", "Its concise effect summary"),
+"secret mark": HIDDEN_SIGIL_DEF(3, 160, "high",
+  "Its concise effect summary"),
+====================
+
+A hidden sigil remains mechanically active and contributes its full equipment
+power. Its ID, level, summary, and named effect messages are concealed from a
+character until discovery. Item inspection reports only an uninterpreted
+marking, gearcheck reports an undiscovered sigil, and the sigils command omits
+it. Do not use display text or equipment possession as discovery state.
+
+The system owning the real criterion reveals it at the successful mutation
+boundary:
+
+====================
+if (player->discover_sigil("secret mark"))
+  /* criterion-specific follow-up, if any */
+====================
+
+discover_sigil() returns true only for a newly learned hidden registry ID,
+saves player progression immediately, and gives a generic discovery message.
+Pass a nonzero second argument to suppress that message when the owning quest,
+encounter, remort, or lore interaction supplies its own presentation.
+query_sigil_known() reports public or discovered IDs, and
+query_discovered_sigils() returns a defensive copy of learned hidden IDs.
+
+Discovery is an additive player-save field. Existing saves restore with an
+empty discovery list, and lazy normalization removes malformed, duplicate,
+public, or retired entries. Hidden definitions should not be added to public
+wiki tables or other static exhaustive lists.
+
+Custom scripted callbacks cannot be executed while an item is being inspected.
+Running weapon_hit(), wear_func(), or an implant callback during gearcheck could
+damage something, change state, or otherwise cause side effects. Builders must
+therefore describe the relative value of custom effects explicitly.
+
+***************************************************************************
+                         Declaring Custom Effects
+***************************************************************************
+
+|CKBvoid add_power_feature(string sId, int iPower, string sDescription,
+    string sCategory);|XX0
+
+Adds or replaces one explicitly scored feature on the equipment.
+
+    sId
+        A stable lowercase identifier. Use underscores instead of spaces.
+        Reusing an identifier replaces the previous declaration.
+
+    iPower
+        The feature's relative power contribution. Positive values make the
+        item stronger; negative values represent a drawback or tradeoff.
+
+    sDescription
+        Short text describing the mechanical effect being scored.
+
+    sCategory
+        One of "offense", "defense", "utility", or "reliability".
+        Invalid or omitted categories default to "utility".
+
+Example:
+
+====================
+add_power_feature("scripted_hit", 300,
+  "Burning cinder on-hit burst", "offense");
+====================
+
+Power values should reflect the effect's expected value over ordinary play,
+not its maximum possible single activation. Consider damage or healing amount,
+activation chance, cooldown, duration, targeting limits, reliability, and any
+cost paid by the player. Compare the result with similar existing items and
+inspect it with "gearcheck <item>" before release.
+
+Do not add declarations for properties already scored automatically. For
+example, do not manually score weapon class, AC, add_equipment_stat(),
+resistances, sigils, standard modifications, or structured generated procs.
+Doing so would count the same power twice.
+
+***************************************************************************
+                    Required Scripted Feature IDs
+***************************************************************************
+
+Use these exact identifiers for the standard opaque equipment hooks:
+
+    "scripted_hit"
+        A weapon using set_hit_func() or set_hit_obj().
+
+    "scripted_wield"
+        A weapon using set_wield_func() or set_wield_obj() when the callback
+        grants a benefit or drawback beyond permission checks and messaging.
+
+    "scripted_wear"
+        Armour using set_wear_func() or set_wear_obj() when the callback
+        grants a benefit or drawback beyond permission checks and messaging.
+
+For an implant proc whose effect is "call_function", use the proc's exact
+"id" as the power feature identifier.
+
+Example implant callback:
+
+====================
+add_power_feature("offhand_cleave", 540,
+  "Armour-piercing off-hand cleave", "offense");
+add_implant_proc(([
+  "id" : "offhand_cleave",
+  "trigger" : "combat_hit",
+  "chance" : 17,
+  "cooldown" : 6,
+  "effect" : "call_function",
+  "function" : "execute_offhand_cleave"
+]));
+====================
+
+If the required declaration is missing, gearcheck marks the item UNCERTAIN.
+Its visible score still includes all measurable properties, but the scripted
+effect is omitted from that score.
+
+***************************************************************************
+                         Supporting Functions
+***************************************************************************
+
+|CKBvoid remove_power_feature(string sId);|XX0
+        Removes one explicit feature declaration.
+
+|CKBmapping query_power_features();|XX0
+        Returns a copy of all explicit feature declarations. Each entry
+        contains "power", "description", and "category".
+
+|CKBint query_power(object oPlayer);|XX0
+        Returns the item's final integer power score. Pass the player when
+        player-specific context is available.
+
+|CKBmapping query_power_profile(object oPlayer);|XX0
+        Returns the full scoring explanation used by gearcheck. Important
+        fields include:
+
+            "score"           final non-negative score
+            "item_level"      declared progression level, or 0 when unranked
+            "offense"         offensive subtotal
+            "defense"         defensive subtotal
+            "utility"         stats, resources, and general utility
+            "reliability"     durability and reliability adjustments
+            "components"      individual scored reasons
+            "warnings"        restrictions and temporary-item notes
+            "unknown_effects" scripted effects not yet declared
+            "confidence"      "high", "uncertain", or "invalid"
+
+|CKBvoid set_power_adjustment(int iPower);|XX0
+        Adds a general item-specific correction to the final score.
+        Prefer add_power_feature() for named mechanics because it provides
+        a useful explanation. Use this only when a named feature cannot
+        reasonably describe the correction.
+
+|CKBint query_power_adjustment(object oPlayer);|XX0
+        Returns the general correction. An unusual item may override this
+        function when its correction genuinely depends on the player.
+        It must be deterministic and must not change game state.
+
+***************************************************************************
+                              Guidelines
+***************************************************************************
+
+* Power scoring is comparison guidance, not permission to exceed equipment
+  balance, uniqueness, guild, or area-building rules.
+* Annotation functions must be called during normal item configuration, such
+  as reset() or a tier/grade configuration function.
+* Scoring functions and overrides must never deal damage, send combat spam,
+  consume resources, roll random outcomes, or modify the player or item.
+* Keep identifiers stable so saved or restored equipment remains explainable.
+* When an effect changes by tier or grade, calculate its declared power from
+  that same tier or grade.
+* Validate the result in game with "gearcheck <item>" and compare it with
+  equipment intended for the same level and slot.

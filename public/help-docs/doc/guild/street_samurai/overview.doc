@@ -1,0 +1,40 @@
+|CKBStreet Samurai|000
+
+|CK0Street Samurai are cybernetic combat specialists whose Cortex OS links
+signature implants into one fighting platform. Their combat rhythm is to read
+the encounter, create Edge, spend it on decisive routines, and manage Heat
+before the Cortex enters thermal lockout.|000
+
+|CKBYour first steps|000
+|CK0The public contract office is east of Fountain Court near Moongate Plaza.
+Joining installs a prototype-grade Cortex OS automatically. The secured clinic
+beyond the office is open to members and wizards; engage Rin Kade there to
+inspect, purchase, install, extract, or repair signature hardware. Contract
+services are covered for active members, but new hardware still costs coins.|000
+
+|CK0A new member should run dashboard, samskills, and samhelp start. Dashboard
+shows the contract, resources, strain, installed implants, and maintenance
+state. Samskills shows what is unlocked and whether required hardware is
+present. Samrepair is only for a damaged or incomplete guild installation; it
+is not part of normal onboarding.|000
+
+|CKBProgression and combat|000
+|CK0Street Samurai earn GXP from combat and boss victories recognized by
+Darkwind's shared battle progression, not by repeating firmware commands.
+Guild Level unlocks routines and hardware through GL16. Cortex Rank continues
+through CR200 and gradually improves the host OS after Guild Level stops
+advancing.|000
+
+|CK0Snap Cut is the most reliable early source of Edge. Threat Scan prepares a
+target for Ripcut and later interacts with Monowire. Most active routines add
+Heat when they succeed. Available Edge is automatically routed into stronger
+versions of most routine effects, but an empty Edge pool never blocks the base
+routine. Overclock trades Cortex wear for temporary thermal headroom. Use the
+combat monitor, samstatus, or dashboard to decide when to press an advantage
+and when to cool down.|000
+
+|CKBWhere to look|000
+|CK0Use samhelp start for onboarding, samhelp commands for the full index,
+samhelp resources for Edge and Heat, samhelp firmware for routine and hardware
+relationships, and samhelp maintenance when dashboard reports a problem.
+Samhelp <routine> explains any active firmware command.|000

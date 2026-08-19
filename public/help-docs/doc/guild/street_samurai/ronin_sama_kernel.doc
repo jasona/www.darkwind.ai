@@ -1,0 +1,28 @@
+|CKBRonin-sama Kernel|000
+
+|CK0Ronin-sama Kernel is the passive Street Samurai capstone unlocked at Guild
+Level 16. It uses the brain-mounted Cortex OS and has no activation command,
+SP cost, Edge cost, or Heat cost.|000
+
+|CKBCortex ascension|000
+|CK0Reaching the capstone reconfigures the installed Cortex OS to ghost grade.
+The kernel remains active while a GL16 Street Samurai has that ghost-grade
+Cortex installed and the contract is active. Dashboard identifies RONIN KERNEL
+as the Cortex process state.|000
+
+|CKBEngagement telemetry|000
+|CK0When a new attacker enters the engagement, the kernel reads the hostile
+telemetry and attempts to establish Edge if capacity is available. It can also
+answer incoming swings with an automatic slashing counterattack. These are
+passive responses; no command is required.|000
+
+|CKBKeeping it effective|000
+|CK0The counter protocol benefits from the operator's combat development and
+the Cortex's firmware effectiveness. Continued Cortex Rank improves both the
+counter protocol's response rate and the force of its return strike. Poor Cortex
+integrity or fragmentation can make the response less dependable, so the
+capstone does not remove the need for maintenance.|000
+
+|CK0Cortex Rank continues after the kernel comes online. Use samxp for rank
+progress, dashboard for throughput and Cortex condition, and samhelp
+maintenance when the host OS reports a problem.|000

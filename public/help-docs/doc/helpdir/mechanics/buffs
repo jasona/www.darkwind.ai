@@ -12,3 +12,10 @@
     |YKB'clearbuff'|YKO. Debuffs expire on their own, or via cures and
     dispels designed for them. Wizards may use |YKB'dispelall'|YKO for
     stuck debuffs.
+
+    An active parasite appears at the end of |YKB'buffs'|YKO with its real
+    remaining online time and starvation state. Parasites are not normal
+    buffs and cannot be removed with |YKB'clearbuff'|YKO. Use
+    |YKB'parasite'|YKO for full details or |YKB'purge parasite'|YKO to remove one.
+
+|WKBSee also: |YKBhelp effects|XX0

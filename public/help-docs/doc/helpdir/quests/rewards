@@ -2,28 +2,29 @@
 |WKB                          QUEST REWARDS
 |CKB=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-|YKOWhen you complete all objectives for a quest, your rewards are
-granted automatically. You do not need to turn anything in or
-visit a specific NPC - the system handles it for you.
+|YKOWhen you complete all objectives for a quest, return to the quest's
+area waysteward and turn it in. Rewards are granted when the waysteward
+records the completion.
 
 |WKBReward Types:|XX0
 
   |YKBExperience |YKO- Bonus experience points added directly to your
-  total. The amount is shown in |YKBqinfo|YKO.
+  total. The amount is shown by the waysteward before acceptance.
 
   |YKBGold |YKO- Coins deposited into your inventory. The amount is
-  shown in |YKBqinfo|YKO.
+  shown in the waysteward's quest dialogue.
 
   |YKBQuest Points |YKO- Permanent quest progress points used by the
-  wider level progression system. The amount is shown in |YKBqinfo|YKO.
+  wider level progression system. The amount is shown before acceptance.
 
-  |YKBItems |YKO- Some quests grant special objects as rewards. These
-  are placed in your inventory when the quest completes.
+  |YKBItems |YKO- Some quests grant a special object on first completion.
+  It is placed in your inventory. If you cannot carry it, it is placed
+  at your feet instead.
 
 |WKBDifficulty and Rewards:|XX0
 
   |YKOHigher-level quests with tougher objectives tend to offer better
-  rewards. The quest list (|YKBqlist|YKO) color-codes quests by difficulty
+  rewards. The waysteward dialogue shows the suggested level range
   relative to your level:
 
     |gKB  green   |YKO- Well below your level. Easy, smaller rewards.
@@ -34,9 +35,11 @@ visit a specific NPC - the system handles it for you.
 
 |WKBCompletion:|XX0
 
-  |YKOEach quest can only be completed once. Completed quests are
-  tracked permanently on your character. Use |YKBmyquests |YKOto see
-  which quests you have finished.
+  |YKONon-repeatable quests can only be completed once. Repeatable quests
+  become available again after their cooldown and grant scaled experience
+  and gold, but no additional quest points or item rewards. Daily quests
+  become available again at midnight UTC (00:00). Use |YKBmyquests |YKOto
+  review your quest history.
 
 |CKB=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 |WKBSee also: |YKBhelp quests, help quests objectives

@@ -1,19 +1,38 @@
 |WKO~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 DarkWind Player Levels
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+|MKBADVANCEMENT:
+  |YKOAdvancing a level costs experience. Characters can advance
+  manually by visiting an Adventurer's Guild, or by using
+  |YKBautolevel on |YKOto spend exp and gain levels automatically.
+  Remort characters always level automatically.
+
 |MKBNEWBIE:
   |YKOPlayers are considered newbies until their 6th level, though
   most guilds will allow membership at level 5.
 
-|MKB20:
-  |YKOPlayers at level 20 gain the |YKB'whotitle' |YKOcommand.
+|MKB5:
+  |YKOPlayers at level 5 gain the |YKB'whotitle' |YKOcommand.
+
+|MKBCHAMPION:
+  |YKOPlayers who reach level 50 show CHMP on the who list, gain
+  the |YKB'ltitle' |YKOcommand, earn a free multichar slot, and can
+  join a compatible second guild.
 
 |MKBRENOWN:
-  |YKOPlayers who reach level 45 receive a renown label on who:
-  HERO, ADV, or VILN. Level 45+ players gain the |YKB'ltitle'
-  |YKOcommand, and can dual guild.
+  |YKOPlayers who reach level 100 receive a renown label on who:
+  HERO, ADV, or VILN.
 
 |MKBLEGEND:
-  |YKOPlayers who reach level 65.
-  LEGEND+ player gain the ability to register a free mythic
-  character.
+  |YKOPlayers who reach level 150.
+  LEGEND+ players gain the ability to register a free mythic
+  character, and earn a second free multichar slot.
+
+|MKBEPIC:
+  |YKOPlayers who reach level 200 show EPIC on the who list.
+
+|MKBMYTHIC:
+  |YKOPlayers who reach level 250 stand at the mortal peak. Mythic
+  characters may optionally |YKBremort|YKO: return to level 1, keep
+  their wealth and belongings, and earn a permanent boon point
+  for every rebirth. See |YKBhelp remort|YKO and |YKBhelp boons|YKO.

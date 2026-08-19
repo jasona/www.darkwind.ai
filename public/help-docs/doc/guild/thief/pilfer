@@ -1,0 +1,10 @@
+                        Pilfer
+---------------------------------------------------------------------
+
+Blindly lift one random ordinary carried item from an unprotected,
+intelligent humanoid NPC. Pilfer cannot create loot and observes the same
+item-safety and transactional movement rules as Pick. Each NPC becomes
+wary of another Pilfer attempt for one hour.
+
+  GLVL: 4
+  Syntax: pilfer <npc>

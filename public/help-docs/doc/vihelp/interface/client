@@ -1,0 +1,35 @@
+The Darkflow web client.
+
+Darkflow is Darkwind's official web client. Open play.darkwind.ai in a web
+browser and play. There is nothing to install. It is a real terminal with
+everything telnet offers, plus optional graphical features driven by the
+game.
+
+Panels. Dockable panels show vitals, stats, worth, an XP monitor, your
+room, a room image, inventory, group, chat, quests, achievements, buffs,
+the sky, fishing, and more. Panels can be docked to either side or floated,
+and your layout is remembered between sessions.
+
+Live map. A graphical tile map is built from the exploration of all
+players. Clicking a room on the map walks you there step by step, and the
+client verifies each step with the game before taking the next.
+
+Area maps. The command areas map followed by an area number opens that
+area's map for browsing in its own Area Map pane, separate from the live
+map.
+
+Sound. Game-driven sound effects and ambient audio, with volume and mute
+controls.
+
+Help. Help topics open in a pop-up window. With screenreader mode on, help
+is shown as plain text through the pager instead.
+
+Automation. Aliases, triggers, highlights, and scripts, plus settings
+export and import as JSON.
+
+Comfort. Dark and light themes, command history, tab completion, and
+screenreader support, including a setting that sends set screenreader on to
+the game.
+
+Related help: help monitor, help alias, help scripts, help areas, and help
+interface screenreader.

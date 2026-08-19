@@ -1,0 +1,24 @@
+object *query_targetable([int limit])
+
+Returns living objects in the caller's current room that are generically
+valid hostile targets for the caller.
+
+The living layer excludes:
+
+- the caller
+- objects that are not living
+- targets rejected by can_kill()
+- dead or ghost targets
+- nohassle targets
+- the caller's party members
+- pets owned by the caller or a party member
+
+The optional limit bounds the returned array. It defaults to 100 and is
+always capped at 100.
+
+This function does not apply ability-specific rules. Commands must still
+filter for requirements such as hearing, visibility, race, terrain, range,
+or an existing combat relationship.
+
+pick_random_melee() uses query_targetable() and then applies its private
+random_melee_no_target exclusion before selecting one result.

@@ -2,12 +2,12 @@
                
 |MKOThe quintessential Thiefly hiding skill.  This command will
 allow you to turn invisible for a limited amount of time.  
-Being invisible costs 20 sps per use, and an additional 15 sps
-per minute invis. Your degree of invisibility will be
+Being invisible has a bounded duration and costs SP when activated.
+Your degree of invisibility will be
 dependent on the level standing of the potential victim you
 are hiding from. The higher you advance within the guild
 ranks will aid in shortening the level gap at which a 
 potential victim may discover you lurking in the shadows.
 
-|CKOGLVL required: |GKB11
-|CKOSyntax: |YKOhide <on/off>               |CKOCost: |WKO20+
+|CKOGLVL required: |GKB5
+|CKOSyntax: |YKOhide <on/off>               |CKOCost: |WKOVaried

@@ -2,29 +2,46 @@
     Fishing is an art form. Not everyone can just grab a stick, some twine,
 and stick some glob of something on the end of a hook... NO!
 
-    You must buy a real fishing pole, and some real bait. Once you've found 
-the proper place to fish, simply bait your hook and put it in the water. But,
-it's not quite so simple. Be ready to react to the fish's actions! From there
-you'll need to maneuver and work that fish, in order to get him to the shore.
+    You must buy a real fishing pole, and some real bait. Once you've found
+the proper place to fish, bait your hook and cast your line. When something
+bites, fight it to the shore.
 
     Commands:
-      bait hook
-      fish
+      bait hook   - put a glob of bait on your hook
+      fish        - cast your line (opens the Fishing panel on the web
+                    client)
+      fish stop   - give up on the current session
 
-    Fishing works in beach, swamp, lake, and sea terrain.
+    Fishing works in beach, swamp, lake, sea, river, and underwater terrain.
+
+Playing on the web client (play.darkwind.ai):
+    Typing 'fish' opens the Fishing panel. Hold to charge your cast - more
+power reaches rarer fish, but they fight harder. When the bobber plunges,
+hook the fish fast, then hold and release to keep your line on the fish as
+it runs. Watch the tension meter: too tight and the line snaps, too slack
+and the fish wriggles free. Fill the catch bar to land it.
+
+Playing from other clients:
+    The same 'bait hook' and 'fish' commands work anywhere; your cast
+resolves on its own after a few moments.
+
+What you can catch:
+    Sixteen species swim Darkwind's waters, from the humble mud toad fish
+to legends like the Leviathan Fry - each with its own waters, moods, and
+fight. Rarer fish demand higher Fishing skill to even take your hook. Every
+fish can be eaten (better catches nourish more) or sold, and a clean fight
+lands a higher-quality catch.
 
 Getting started:
   1. Buy a fishing pole and bait in the profession building, 4e, n from
      Center of Town.
-  2. Travel to beach, swamp, lake, or sea terrain.
+  2. Travel to beach, swamp, lake, sea, river, or underwater terrain.
   3. Use 'bait hook', then 'fish'.
-  4. React to the fish as it fights the line.
+  4. Land the fish!
 
-    As you start reeling the fish in, be careful of your line tension! Not
-too soft, not too hard! The better you get at fishing, the easier it will get
-to catch fish, and the better fish you'll pull up. Your Fishing skill improves
-your reaction windows, fish-attraction chances, hook and catch chances, and
-the quality of the fish you land.
+    Your Fishing skill improves with successful catches. Higher skill
+attracts rarer fish, quickens their bite, steadies your line, and raises
+the quality of what you land.
 
     Successful catches can also recover profession reagents from the fish:
 fish bones, fish gills, bloody fins, and fish tails.

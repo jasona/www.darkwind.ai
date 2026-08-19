@@ -19,6 +19,9 @@ You gain a multichar slot once your main character reaches [Champion](leveling.m
 
 Additional multichar slots can be purchased. The cost increases as more slots are added.
 
+New mythic multichar registration is currently disabled. Existing registered
+mythic multichars remain playable.
+
 ## Account Use
 
 Your registered multichars use your main account login. Keep that login secure.

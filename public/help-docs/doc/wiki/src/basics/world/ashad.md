@@ -1,6 +1,10 @@
 # Ashad
 
-Work in progress: this page describes the Ashad setting we are building toward, and current game content differs in places.
+Ashad lies west and slightly south of the Darkwind mainland, beyond the
+mountains west of Syldenith and Endrael. Its western Oasis of Life opens onto
+the Mirage Sea, while the Ocarian Sea curls around the continent's southern
+approaches. Travelers can come ashore at the Oasis and follow the soot roads
+into a full continental progression.
 
 Ashad is the desert that learned to burn productively. Its cities do not merely survive the heat; they harvest it, refine it, and build with it. Where Souvrael is mythic desert, Ashad is industrial desert: furnace towers, brass pipes, soot-black walls, pressure gauges, glass lenses, ash mills, and caravan engines coughing across the dunes.
 
@@ -14,12 +18,40 @@ Glasswork is everywhere: lenses, warded windows, distillation towers, mirrors, h
 
 | Area | Description |
 | --- | --- |
-| Cinderwake | Capital furnace city where noble houses, ash guilds, and refinery cults compete |
-| The Glass Dunes | Blinding dunes where heat has fused sand into dangerous sheets and ridges |
-| The Brass Yards | Foundry district of engines, lifts, water pumps, armor rigs, and soot workers |
-| The Wound Wells | Deep wells where water, ash, and old magic rise together |
-| The Soot Caravanserai | Trade fortress for engine caravans crossing the dead interior |
-| The Old Kilns | Abandoned industrial ruins where early AshPunk experiments still breathe heat |
-| The Pressure Line | Overland engine route that moves water, ore, pilgrims, and contraband |
+| Oasis of Life | Protected western port, wayshard hub, market, public mendery, and Lifehouse |
+| Cinder Flats | Vast soot-road wilderness crossed by pressure lines, mirage engines, predators, and fixed waystations |
+| Scraplands | Active salvage claims full of old machinery, living rivets, and a self-directing breaker |
+| Keeo | Pressure observatory whose storm charts, condensers, and signal mirrors watch the continent |
+| Sandstorm Ridge | Permanent wall of salt and glass crossed by guide ropes, shelters, and storm anchors |
+| Sunken City | Buried civic roofs, drowned archives, and an impossible engine beneath the wells |
+| Crystal Caves | Resonant eastern caverns with protected moth nurseries and a sealed crystal heart |
+| Dunmoss Char Spires | Black northern peaks supporting soot-fed moss, grazers, harriers, and wyverns |
+| Ashad Ruins | Oldest civic kilns and the dormant Brass Crucible foundation at the southern tip |
+| Pyre | Vertical plateau city built along Ashfall Road, with working lifts, public refuges, an ash exchange, pub, shop, and inn |
+| Cinder Watchtowers | Four corner outposts that relay road conditions and keep rescue supplies open to travelers |
+| Cinder Wells | Deep mineable ash vents whose pressure bells warn of geyser-like eruptions |
+| Ashcar Outcrop | A minor western rise occupied by one caravan keep, wild rams, and raiders |
 
-Ashad rewards preparation. Heat, scarcity, machines, and human ambition all matter. A player feels the desert pressing in from every direction while civilization hisses, clanks, and refuses to die.
+## Heat
+
+Ashad rewards preparation. Severe and extreme heat ramps up rather than
+striking immediately. The first sustained exposure leaves a traveler Exposed;
+remaining outside then applies Burning stacks. Full daylight checks most often
+and applies the strongest stacks, dawn and twilight are milder, and night is
+half strength. Type `heat` in an Ashad room to see the local tier, cadence, and
+the stacks expected for your character.
+
+Marked shelters stop new exposure. Resist Heat prevents it, Ranger desert
+survival reduces Burning stacks, and Souvraeli adaptation helps further.
+Ordinary fire resistance mitigates the resulting Burning damage. Existing
+Burning decays normally after reaching safety, and Exposed expires shortly
+afterward.
+
+Heat, scarcity, machines, and human ambition all matter. A player feels the
+desert pressing in from every direction while civilization hisses, clanks,
+and refuses to die.
+
+Ashad is crossed as one connected desert rather than a collection of detached
+destinations. Its settled regions meet the Cinder Flats through narrow,
+defended approaches, while Pyre climbs through terraces above the ash roads.
+Blank stretches on the map are part of the desert, not missing exits.

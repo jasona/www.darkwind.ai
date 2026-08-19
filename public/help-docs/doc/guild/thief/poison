@@ -1,15 +1,28 @@
-                         |BKB-= |CKBPoison Edge |BKB=-
+                         Poisoncraft
+---------------------------------------------------------------------
 
-|MKOThieves can purchase poison packets from the guild and
-use them to taint the weapon in their main hand. Applying a
-poison costs both gold and spell points, so the effect is
-meant to last through a real hunt rather than a single quick
-fight.
+Extract a suitable corpse for one recipe reagent, then prepare that
+reagent into a persistent dose:
 
-|MKOA poisoned weapon is not guaranteed to trigger on every
-hit. Instead, it uses the weapon's normal poisoned-hit proc.
-The toxic poison currently sold by the guild lasts for about
-one hour once applied.
+  extract <corpse>
+  prepare <poison> [count]
+  poison <poison> [on <weapon>]
+  envenom <weapon> with <poison>
 
-|CKOGLVL required: |GKB3
-|CKOSyntax: |YKOpoison <poison type>          |CKOCost: |WKOVaried
+A coating is runtime-only. It lasts for three landed delivery attempts
+or fifteen minutes, and consumes a charge even if the victim resists.
+It is never saved on the weapon. Effects and damage belong to whoever
+is wielding the weapon when it lands. A victim can carry no more than
+two distinct Thief poison effects. Reapplying one refreshes the
+stronger effect; a third distinct poison expires the oldest.
+
+Use 'envenomstrike <target>' in combat to spend one Opportunity and
+force a coating delivery attempt at reduced direct damage.
+
+Recipes: greenbite, widows_kiss, grave_milk, nerve_lace, black_lotus,
+throatdust, glassblood, dreamrot, and nightshade. Recipes open every
+two Thief Ranks from 3 through 19. Glassblood uses common Bleeding.
+
+Forced NPC dosing uses 'lace <poison> into <npc>' on a suitable local
+intelligent NPC. At Rank 16, the same command can lace a deployed pressure
+trap: 'lace <poison> into trap'.

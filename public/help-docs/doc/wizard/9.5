@@ -42,6 +42,10 @@ The following modifications exist:
   tmp_to_type
   tmp_to_swings
 
+The crit modifications are critical damage modifiers. They do not alter
+the chance that an attack becomes a critical hit.
+Use STATUS_EXPOSED from <status_effects.h> for incoming critical chance.
+See `wizhelp 9.16` for the living-owned status-effect API.
 
 Functions to define in combat mod object
 ----------------------------------------
@@ -87,19 +91,34 @@ Functions to define in combat mod object
       The return value is currently unused, and the following tmp mods are
       cleared prior to this function being called: tmp_to_absorb.
 
+  int filter_standard_block(int iBlock, string sEffectId)
+    - This is called by the blocked living when set_standard_block() is
+      about to apply a standard block. The value of iBlock is the current
+      block mask, possibly already modified by earlier combat mod objects.
+      The value of sEffectId is the effect id passed to set_standard_block().
+
+      Return the block mask that should continue being applied. Returning
+      0, or any value less than 1, prevents the block from being applied.
+      Returning iBlock leaves the block unchanged. A filter may also remove
+      individual block bits from iBlock before returning it.
+
+      The living-side dispatcher for this hook is
+      apply_filter_standard_block(int iBlock, string sEffectId). It calls
+      filter_standard_block() on each registered combat mod object in order
+      before the living's normal noblocks mask is applied.
+
 
 How much of a bonus to give?
 ----------------------------
-The easiest way to give bonuses/penalties to the tmp_to_WHATEVER_stat.
+The easiest way to give bonuses/penalties is with tmp_to_WHATEVER_stat.
 This effectively lowers the living's stat in one of the four combat
-areas as if they had a lower physical stat. In terms of criticals,
-one temporary stat is the effectiveness of one level. Bear in mind
-that actual combat stats are not as important as their relative
-ratios, meaning that one point of temporary combat stat is far
-more valuable to someone with one point of real stat than to someone
-that already has fifty points. When giving out larger bonuses, it may
-be useful to scale those bonuses in terms of a living's level or
-actual stat.
+areas as if they had a lower physical stat. The critical variants add
+to damage before the critical multiplier is applied. Bear in mind that
+actual combat stats are not as important as their relative ratios,
+meaning that one point of temporary combat stat is far more valuable
+to someone with one point of real stat than to someone that already
+has fifty points. When giving out larger bonuses, it may be useful to
+scale those bonuses in terms of a living's level or actual stat.
 
 tmp_to_WHATEVER will increase the final values in a meaningful way.
 For example, if one wants to guarantee a hit, an increase to tmp_to_hit

@@ -1,6 +1,7 @@
 # Blackmar
 
-Work in progress: this page describes the Blackmar setting we are building toward, and current game content differs in places.
+Some places described here are known through lore before they can be reached.
+Use `areas` in game for available routes and level guidance.
 
 Blackmar is the known world of Darkwind. The name covers the great continent, the seas and island frontiers around it, the deep roads beneath it, and the three moons that hang above it as separate domains.
 

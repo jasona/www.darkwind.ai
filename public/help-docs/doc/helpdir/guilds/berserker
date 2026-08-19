@@ -1,0 +1,49 @@
+|YK0#|YKB The Berserker Guild|000
+
+|GK0Berserkers are melee warriors who turn injury and combat pressure into
+Fury. When Fury peaks, it can erupt as Frenzy: a rapid series of attacks
+that spends the accumulated rage against the Berserker's current enemy.|000
+
+|GK0Experienced Berserkers can restrain Frenzy and let excess Fury become
+Madness. Madness increases their violence and resilience, but its highest
+levels carry serious risks. The |CKBbvent|GK0 command can clear Fury and
+Madness after combat.|000
+
+|YK0##|YKB Core skills|000
+
+|GK0Berserkers can use |CKBbenrage|GK0 to trade health for Fury,
+|CKBfrenzymode|GK0 to control automatic or directed Frenzy, and |CKBbvent|GK0
+to recover control. Vex techniques such as |CKBprimal_strike|GK0,
+|CKBrend|GK0, and |CKBwildrage|GK0 add offense and momentum, while awakened
+scars and Flare provide permanent late-game identity.|000
+
+|YK0##|YKB Rank, Vex, and scars|000
+
+|GK0Berserkers advance through a separate Berserker Rank earned in combat.
+Each Rank grants Vex that can be trained through the Blood, Momentum, and
+Defiance branches. Permanent scars record exceptional ordeals and can later
+be awakened with Flare.|000
+
+|YK0##|YKB Equipment and joining|000
+
+|GK0Berserkers may use light, medium, or heavy armour, including shields.
+Their training pit lies west of the plain on Darkwind's southern shore.
+Join there with |CKBjoin berserker|GK0 when you meet the guild requirements.|000
+
+|YK0##|YKB Useful commands|000
+
+|CKBberhelp|GK0                  Read the full member guide
+|CKBbstatus|GK0                  Review Rank, XP, Vex, Fury, and Madness
+|CKBberskills|GK0                List abilities and trained Vex techniques
+|CKBvex tree|GK0                 Review the three advancement branches
+|CKBscars|GK0                    Review permanent scars and their effects
+|CKBfrenzymode|GK0               Control automatic or directed Frenzy
+|CKBberserkers|GK0               List visible Berserkers online
+
+|YK0##|YKB See also|000
+
+|CKBhelp guilds|000
+|CKBhelp guilds equipment|000
+|CKBhelp guilds gscore|000
+
+# alias: berserkers

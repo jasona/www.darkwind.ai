@@ -54,7 +54,7 @@ DESCRIPTION
 
         Never use one of the functions 'create' 'reset' 'init' 'exit'
         'heart_beat' etc as the first argument to add_action(). In
-        general, a function with a name defined in /doc/applied should
+        general, a function with a name defined in /public/docs/applied should
         have the behaviour defined there.
 
 

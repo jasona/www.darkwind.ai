@@ -1,87 +1,72 @@
 # Ninja
 
-Work in progress: Ninja is being built toward this design, and current game
-behavior differs in places.
+Ninja are disciplined assassins built around stealth, disabling strikes,
+bare-handed combat, and short technique combos.
 
-Ninja is disciplined stealth and controlled violence. A Ninja wins by choosing
-when the fight starts, what the target loses first, and when to vanish.
+Joining requires level 5 and at least 10 unmodified Dexterity.
+Ninja and Street Samurai are compatible multi-guild choices in either join
+order, subject to the normal level and membership limits.
 
-## In Play
+## Progression
 
-Ninja is patience, silence, precision, and sudden violence.
+Ninja have two independent progression tracks:
 
-- Observe the room, exits, and target
-- Build Focus
-- Mark or track the target
-- Open with a disable, blind, shuriken, or point strike
-- Control the fight briefly
-- Fade before the fight turns honest
+- Guild level rises only when Yagyu accepts proof of a newly completed unique
+  assassination mark. Marks do not cost experience or guild XP. There are 50
+  marks and guild level 50 is final.
+- Ninja rank rises every 250 guild XP (GXP). Each rank after rank 1 grants one
+  training session. Rank does not change guild level.
 
-### Focus
+Qualifying combat kills use the shared guild-kill award system. Battle GXP
+tapers for NPCs more than five levels below the Ninja and reaches zero at
+fifteen levels below. A fully validated Ninja skill attempt awards 2 GXP,
+whether its reliability roll
+succeeds or fails, subject to per-skill pacing. Resolving a three-piece combo
+awards another 10 GXP.
 
-Focus steadies technique, improves the first strike, and fuels escape. It rises
-through concealment, tracking, marking, meditation, and clean setup. It falls
-when spent on attack, escape, failed setup, or long open fighting.
+## Reliability and Training
 
-### Marks
+Unlocked trainable skills start at 70% reliability. `practice <skill>` spends
+one available session to add 5%, up to 100%. Failed reliability rolls charge
+one fifth of the evaluated SP cost and do not consume required items, start the
+normal cooldown, or add a combo piece.
 
-Marks make a target easier to read, disable, track, or finish. They come from
-tracking, hidden observation, shuriken setup, focused study, and body-point
-contact.
+`nskills` displays guild level, marks, Ninja rank, residual GXP, available
+sessions, and each skill's reliability.
 
-### Stealth
+`gscore ninja` also reports whether `nswitch` is currently using bare hands
+or ordinary weapons, including the screen-reader presentation.
 
-Stealth is a rhythm: hidden approach, sudden violence, disappearance.
+## Marks
 
-| Step | Use |
-| --- | --- |
-| Observe | Read room, target, exits, and risk |
-| Mark | Prepare the target through focus or tracking |
-| Strike | Deliver a disabling or lethal opening |
-| Control | Keep the target off-balance |
-| Vanish | Leave before the fight becomes fair |
+Ask Yagyu in the Kerei guildhouse to `accept challenge`. Kill the assigned
+target yourself, use `bloody` to mark the kunai with that exact target's
+corpse, and give the kunai back to Yagyu. Suggested target level influences
+assignment selection but is not an advancement gate.
 
-### Body Points
+Every assignment permits one free `reroll challenge`. The replacement is a
+different incomplete mark; the rejected mark remains eligible later. Use
+`list challenge` to review the active assignment and completion count.
 
-Body-point work attacks function instead of raw health.
+## Combos and Pummel
 
-| Target | Result |
-| --- | --- |
-| Eyes | Blindness or opening denial |
-| Legs | Slower movement and weaker escape |
-| Arms | Weaker grip, offense, or defense |
-| Breath | Silence, stagger, or focus break |
-| Heart | High-end assassination finish |
+Successful offensive techniques add pieces to the wraps. Three recent pieces
+resolve during combat, producing a specialized result for recognized
+combinations or a general burst otherwise. Pieces expire after a short time.
 
-## Abilities
+Pummel applies a stacking physical vulnerability. Its duration is
+`min(90, 30 + 2 * guild level)` seconds and it can end early after its extra
+damage budget is exhausted.
 
-| Ability | Use |
-| --- | --- |
-| Focus | Builds readiness and steadies technique |
-| Hide | Conceals presence |
-| Fade | Slips from attention |
-| Track | Follows a target's trail |
-| Mark | Prepares a target |
-| Shuriken | Ranged setup and interruption |
-| Blind | Denies vision or opening response |
-| Cripple | Damages movement, grip, or defense |
-| Tsubo | Body-point strike |
-| Heartstop | High-end assassination technique |
-| Dim Mak | Legendary body control and finishing work |
-
-## Shadow Commands
+## Common Commands
 
 | Command | Use |
 | --- | --- |
-| `ninja`, `ninjas` | Speaks on the Ninja channel or lists Ninjas |
-| `ninhist` | Reviews recent Ninja channel history |
-| `ninhelp`, `skills` | Opens help or shows skills |
-| `nfocus`, `nmed` | Builds Focus |
-| `nmark` | Marks a target |
-| `ntrack` | Follows a target |
-| `fade`, `nmelt`, `nshroud` | Escapes or hides presence |
-| `shuriken` | Throws a setup weapon |
-| `blind`, `cripple`, `tsubo` | Uses disabling strikes |
-| `heartstop`, `dimmak` | Uses high-end finishing techniques |
-| `practice`, `master` | Reviews or improves mastery |
-| `ntimers` | Shows technique recovery |
+| `ninhelp` | Opens in-game Ninja help |
+| `nskills` | Shows abilities and both progression tracks |
+| `practice <skill>` | Spends a training session for 5% reliability |
+| `ninja`, `ninjas`, `ninhist` | Guild channel and history |
+| `nfocus`, `nmed`, `nmark`, `ntrack` | Setup and target study |
+| `fade`, `nmelt`, `nshroud`, `onmitsu` | Concealment and escape |
+| `blind`, `cripple`, `kekomi`, `pummel`, `tsubo`, `tsuki` | Combat control |
+| `shuriken`, `heartstop`, `dimmak` | Ranged and finishing attacks |

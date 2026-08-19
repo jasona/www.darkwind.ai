@@ -1,6 +1,7 @@
 # Kerei
 
-Work in progress: this page describes the Kerei setting we are building toward, and current game content differs in places.
+Some places described here are known through lore before they can be reached.
+Use `areas kerei` in game for available routes and level guidance.
 
 Kerei is a chain of connected jungle islands. It mixes fortress roads, river travel, coastal docks, hidden temples, faerie borders, ninja clans, Amazon villages, and old island cities. The land feels lush, but not gentle. Paths disappear under leaves, river crossings hide politics, and the next shrine may belong to a faction that does not name itself twice.
 

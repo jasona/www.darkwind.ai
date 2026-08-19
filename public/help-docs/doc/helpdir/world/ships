@@ -13,6 +13,9 @@ located: 5:s,e,s,3:e,n,e,s of COT.
 
 |YKOThe catamaran is only available at the Wayfarian ship shop on Talamh Darag.
 
+At a ship shop, use |YKB'inquire <ship name>' |YKOto learn where a registered
+ship is currently docked and who owns it. Ship names must be one word.
+
 To buy a ship, simply |YKB'request application' |YKOin the ship shop. Then |YKB'read
 application' |YKOto see the information required. Please |YKB"fillin [number] [text]"
 |YKOto complete the application. When you are finished, |YKB"turnin" |YKOthe application

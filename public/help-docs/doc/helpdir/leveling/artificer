@@ -1,0 +1,60 @@
+Artificer
+
+Artificer is not currently available for player selection. The class is under
+wizard testing and the Brass Crucible route and attunement rite are disabled.
+
+Artificer is a remort class, not a guild. Its membership and GXP survive
+future remorts even though level, stats, and guilds reset normally.
+
+An Artificer's Cinis Engine replaces the ordinary corpse burner. It retains
+burn corpse, burn all corpse, check burner, and cinis while also storing class
+status, ash, essence, prototypes, and active workings.
+
+Commands:
+  artificer
+  crucible
+  artificer abilities
+  artificer progression
+  artificer study <body|soul|confluence>
+  resonate <item|living>
+  bellowsblow [foe]
+  temper <equipment> with <cinder|ichor|confluence>
+  bulwark
+  awaken <carried weapon>
+  fabricate aether mount
+  artifice <primary unique armour> with <carried unique armour>
+  prototype <coil|ward|starburst>
+  deploy <coil [foe]|ward|starburst>
+  unmake [number|all]
+
+Bosses yield cinder when their physical nature dominates and ichor when their
+mental or spiritual nature dominates. Boss tier controls the amount. Harvests,
+tempering, and inventions award permanent Artificer GXP.
+
+Permanent Artificer GXP determines rank and available Load. Mastery uses the
+same cumulative GXP with diminishing returns. It is roughly 90 percent at 31,500 GXP,
+94 percent at 60,000, and 99 percent at 350,000. It strengthens bounded parts
+of class abilities but never replaces current level and stats.
+
+Body costs five cinder per rank. Soul costs five ichor. Confluence requires at
+least one rank in each and costs three of each. Discipline ranks cap at five.
+
+Prepared inventions persist through logout and remort. Coil requires Soul 1,
+ward requires Body 1, and starburst requires Confluence 1. Prototype slots grow
+slowly with permanent mastery.
+
+Chimera armour opens at Confluence 2 and 50 percent mastery. It costs ten
+cinder and ten ichor to fold part of one carried unique armour into a worn
+or carried unique using exactly the same non-accessory slots. Each seam uses
+2 Load and reserves 5 percent maximum HP and 8 percent maximum SP. The donor
+remains reserved at full carried weight. Removing the primary suspends its
+benefits; the seam ends on expiry or unmaking. Higher GXP permits multiple
+seams, to a hard cap of three. Unique scripts are never copied. Confluence 3
+also echoes the donor's strongest positive resistance.
+
+Portable Bulwark opens at rank 3 and Body 2. It spends grey ash and reserves
+4 percent HP, 4 percent SP, and one Load. Awaken Weapon opens at rank 4 with
+Body 2 and Soul 2; it reserves a real non-unique weapon inside a temporary
+combat construct and returns it when the working ends. At rank 5 and Soul 3,
+Fabricate creates a persistent shoulder implant whose automatic aether shot
+consumes SP and blue ash.

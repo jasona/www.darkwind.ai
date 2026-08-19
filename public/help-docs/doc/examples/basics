@@ -25,7 +25,7 @@ First of all, try to remember this at all times
    do it. If you know what you are doing, but not if you should do it,
    then you probably shouldn't do that either.
  
-   There is a file called /doc/wizard/policy, which you should read
+   There is a file called /public/docs/wizard/policy, which you should read
    immediately after finishing this scroll. It contains SOME of the
    rules for how a wizards should behave on Darkwind.
  
@@ -57,10 +57,10 @@ Some commands for handling files:
 Where do I find the documentation?
 ----------------------------------
  
-There is a directory called "/doc" (try the commands "ls" and "ls /doc"),
-that contains documentation. The subdirectory "/doc/wizard" contains files
-with information about the language LPC.  In the directory "/doc/efun"
-you will find descriptions of the external functions, and "/doc/lfun"
+There is a directory called "/public/docs" (try the commands "ls" and "ls /public/docs"),
+that contains documentation. The subdirectory "/public/docs/wizard" contains files
+with information about the language LPC.  In the directory "/public/docs/efun"
+you will find descriptions of the external functions, and "/public/docs/lfun"
 contains descriptions of commonly used local functions.
  
 It can happend that you won't find what you look for in the documentation.
@@ -68,7 +68,7 @@ In that case, either ask another wizard, read the code (which actually
 contains some very useful comments), or find out by testing.
  
 One of the first things you should do is to read the entire contents of
-/doc. This is not as much work as it seems and it really pays off very soon,
+/public/docs. This is not as much work as it seems and it really pays off very soon,
 since you later will remember where to look for explanations of commands
 and routines.
  
@@ -76,13 +76,13 @@ Remember also that the Archwizards, i.e all wizards with level > 1000, have
 as part of their duties the obligation to help other wizards with their
 problems in Darkwind.
  
-The best way of reading the documentation is to do "cd /doc" and then "ls"
+The best way of reading the documentation is to do "cd /public/docs" and then "ls"
 to see what you have there. Then you can change directory down into the
 different subdirectories and do "ls" in them to see what you can read
 there. I specially want to point out that the information on the editor
-"ed" can be found in "/doc/wizard" in the files ed0 - ed6. You read any
-file with the command "more" like "more /doc/wizard/ed0" or just "more ed0"
-if you already have already done a "cd /doc/wizard".
+"ed" can be found in "/public/docs/wizard" in the files ed0 - ed6. You read any
+file with the command "more" like "more /public/docs/wizard/ed0" or just "more ed0"
+if you already have already done a "cd /public/docs/wizard".
  
 Also many of the most commonly used docs can be accessed by doing the
 command 'wizhelp'.  This will bring up a help screen that will list
@@ -176,9 +176,9 @@ Examples of local functions are the functions set_value and query_value
 in "/obj/treasure.c". Examples of external functions are write(), time()
 and add_action().
  
-All external functions are documented in "/doc/efun/FUNCTION", where FUNCTION
+All external functions are documented in "/public/docs/efun/FUNCTION", where FUNCTION
 is the name of the function. Many local functions are documented in
-"/doc/lfun/FUNCTION". Not all can be documented, as they are unlimited.
+"/public/docs/lfun/FUNCTION". Not all can be documented, as they are unlimited.
  
  
 Error messages
@@ -213,7 +213,7 @@ command "more /room/forest2.c" or "cat /room/forest2.c".
 For most purposes it is sufficient to use the standard room routines that
 you get by inheriting ROOM.
  
-Read more about how to build in the files in the directory "/doc/build".
+Read more about how to build in the files in the directory "/public/docs/build".
  
 Remember also that there exists a special directory called "/open"
 which contains examples of how to write objects on Darkwind in LPC.

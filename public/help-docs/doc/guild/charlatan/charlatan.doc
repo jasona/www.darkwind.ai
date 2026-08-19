@@ -1,0 +1,41 @@
+|CKBThe Confidence: A Charlatan's First Honest Document|000
+
+Welcome to the Confidence. The name is impressive, the paperwork is
+questionable, and your cloak has more pockets than anyone remembers sewing.
+
+Charlatans win by making the wrong thing look certain. Some talk a foe into
+forgetting the fight. Some turn corpse ash into something fizzy and legally
+distinct from medicine. Some improve weapons with substances best handled by
+someone else. The wisest learn a little of all three and deny everything.
+
+Your reputation is measured in Charlatan Rank and guild XP. Worthy fights and
+boss victories earn guild XP. Each Rank after the first gives you one road
+point until you have earned thirty, enough to complete all three roads:
+
+  Misdirection - lies, openings, thrown voices, and weaponized confidence
+  Volatility    - unstable brews, additives, ash, and regrettable chemistry
+  Contraband    - loaded weapons, stretched poison, and excellent excuses
+
+Use:
+
+  chskills [available]   Inspect the tricks in your cloak
+  gscore charlatan       See Rank, guild XP, roads, and profession skills
+  croads train <road>    Spend an uninvested road point
+  schemes                Inspect Rank 35+ cons and active cloak notes
+  charlhelp commands     Read the full command ledger
+  charlatan <message>    Work the guild line
+
+Every new Charlatan can confuse a mark and suckerpunch the opening. Roads add
+specialties after Rank 1; they do not make you earn your first unfair fight.
+At Rank 35 and every five Ranks through 105, Drina opens another horizontal
+scheme. You can learn every scheme eventually, but only a few cloak notes can
+be active at once.
+
+Alchemy, Herbalism, and Smithing are learned through their own trades. Your
+roads decide what sort of rascal you are; those professions decide whether
+you can safely execute the technical parts. "Safely" is used generously.
+
+The old Alchemist and Illusionist focus ledgers are closed. The practical old
+poison-dart idea survives as 'cdip', using real modern flasks and prepared
+poisons. If an ancient page promises flying potions or a personal shadow army,
+check the date, check your pockets, and use 'chskills'.

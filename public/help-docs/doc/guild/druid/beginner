@@ -19,9 +19,17 @@ Your first useful path is:
 |CKB2. Check your druid status.|000
 
      |CKBdscore|000
+     |CKBgscore Druid|000
 
-   This shows study points, learned invocations, grove status, and
-   a reminder that Druid rites use profession materials.
+   These show your guild level and combat-earned Druid XP alongside
+   study points, learned invocations, grove status, and profession
+   materials.  Druid XP advances your guild level automatically when
+   your regular level permits it.  Any blocked XP remains banked.
+   Druid XP and rank progress survive remort; the current progression
+   curve is designed to reach guild level 30 within one normally played
+   remort life.
+   The |CKBcost|000 and |CKBadvance guild|000 commands in the advancement
+   cavern explain your next rank, but do not spend ordinary experience.
 
 |CKB3. Learn a first invocation.|000
 
@@ -52,7 +60,8 @@ Your first useful path is:
 
    Plant it in a wild place you want to return to.  Later,
    |CKBcommune|000 returns you to your grove.  |CKBdhelp grove|000
-   explains grove growth, return, and the inner sanctum.
+   explains grove growth, return, the inner sanctum, and how the grove
+   rests safely between remort lives.
 
 |CKB6. Learn and perform a first ritual.|000
 

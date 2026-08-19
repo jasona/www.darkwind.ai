@@ -1,42 +1,151 @@
-So, you're finally a Mage! Congratulations on joining the best guild on
-Darkwind! You have come far in your learnings, but now, I suppose, you
-will want to learn a bit more about your new way of life.
+Magi peer into the Dark Wind to understand and alter the hidden fabric of the
+world. Your spellbook records that understanding as workings, mastery, runes,
+and notes gathered in the field. New pages begin with dependable magic and
+grow toward fire, frost, distance, memory, forbidden death-work, and moments
+that do not pass until you permit them.
 
-Magi, by their nature, are good creatures. Therefore, they must be of at
-least neutral alignment to cast any spell. If you have evil alignment,
-you will not be able to cast anything.
+Magi call the art as a whole gramarye and a single spell a working. A working
+may be as slight as a cantrip, as patient as a charm, or as cruel as a malison;
+the word describes magic made real, not merely the words used to cast it.
 
-Also, because of our brotherly link, we can all talk with one another, free
-of charge, no matter where we are on the MUD. You can talk to your kindred
-Magi by typing "mage <message>." The commands "m" and "ma" also work.
-You also can show your emotions over this link by "emage <emotion>" or,
-more simply, "em <emotion>." If you wish to know how many of your brethren
-are on at any given time, you may find this out by typing "magi" or "mages".
-If you are doing something important, like entering a note or mudmailing
-someone, you can choose not to listen to the conversation on your link to
-the other Magi by typing "guild mage muff."
+Arcane is the guild's rank and rises through Mage GXP. Level-appropriate combat
+and useful field casting both advance it. A useful utility working awards 10
+GXP, while a useful combat working awards 20, at most once per working every
+thirty seconds. A working has its own history as well. Fifty useful casts make it
+Practiced, one hundred fifty Fluent, two hundred fifty Inscribed, and one
+thousand Instinctive.
+Practiced workings gain a rune socket and eligible combat workings can be
+prepared with "barrage". Inscribed pages gain a second socket, while deeper
+mastery steadily improves efficiency and barrage speed.
 
-So that they may better run the guild, all GuildMasters (those of Guild Level
-15 only) have a special link, which they can use by "gmage <message>", or,
-more simply, "gm <message>." They may also show their emotions to the other
-GuildMasters by typing "egm <emotion>."
+Battlemagi wield FOCUS weapons. The weapon channels a known barrage working
+beside normal attacks even while that working is still Copied, and those
+automatic casts cost no SP. A worn piece of AURA equipment completes the
+resonance, adding speed and power. Automatic casts still improve their page and
+can earn rate-limited field GXP. "battlemage" shows the exact cadence, cost,
+equipment state, and current Recollection timer. Ordinary barrage cadence has
+a floor of two combat rounds. Fireball barrage leaves a light Burning effect, Icestorm
+barrage reaches nearby hostile targets and Chills them, and Missile lands as a
+visible two-missile volley rather than every page using the same impact.
 
-You may view this file at any time by typing "magehelp", "helpmage", or,
-more simply, "mh".
+At Arcane 16, preparing a barrage with a real wielded FOCUS trades weapon
+swings for a barrage every round. The penalty is one swing below player level
+50 and rises by one each fifty levels, reaching six at level 250. Each round
+produces two to six complete barrages based on the FOCUS weapon's WC and item
+level, not on the Mage's remaining swing count. Investiture cannot enable it.
+The battlemage display reduces that combined weapon rating to a short Weave
+Power bar, with numeric progress in screen-reader output.
 
-If you discover a problem with the guild, you can report it by using the
-"bug" command. Please, make use of this command. If you are found to be
-exploiting a bug within the guild, you will be punished. Even if you *THINK*
-it *MIGHT* be a bug, it is important that you report it, because if you are
-caught using it, the penalties would be severe.
+The battlemage style also permits practical shields. Magi may use small and
+medium shields of any composition, plus the lightweight wood-and-natural
+fighter shield. Large conventional shields and tower shields remain too
+restrictive for working magic.
 
-You can find a list of all the spells, and those you have access to via the
-"spells" command. If you need help on a certain spell, you can just type
-"help <spellname>."
+At Arcane 8, "overchannel" can press five percent of maximum SP into each
+manual damaging working. Arcane 16 opens ten percent and Arcane 32 opens
+twenty percent. Arcane 500 opens twenty-five percent and Arcane 1000 opens
+thirty percent. This added cost is not reduced by mastery or Mezari; it becomes
+additional spell power and gives deep reserves a deliberate combat use.
+The exchange gains another half point of damage per SP for each whole cube-root
+step of true Arcane, in addition to effective-rank scaling.
+Overchannel lasts for the current play session and never modifies barrage or
+automatic echoes.
 
-There are a few emotes specific to the guild that you can use. To see a list
-of them use the "magehelp emotes" command. If you have an idea for another
-mage emote you would like to see, use the "idea" command.
+Traditional spell and guild-level unlocks end at Arcane 15, but Arcane study
+itself continues to rank 1000 on a sharply rising cost curve. Ordinary spell
+scaling gains only the square root of ranks beyond 32, giving prestige severe
+diminishing returns. Marginalia measures that long study cumulatively.
 
-If you have any questions about your new guild, please leave notes on the
-board in the guild hall.
+While any cooldown is active, the spellbook has a rare heartbeat chance to
+revise every cooldown away at once. This rises from 1 in 10,000 to 25 in
+10,000 at Arcane 500 and 100 in 10,000 at Arcane 1000. "mageaura" selects
+purely cosmetic prestige effects earned along the way.
+
+Arcane study also cuts through magical resistance, using the same heavily
+diminished effective rank after Arcane 32.
+
+At Arcane 4, Investiture can temporarily supply one missing half of that
+resonance. "investiture focus" lends FOCUS to an ordinary wielded weapon;
+"investiture aura" writes an AURA around the Mage. Only one may be sustained at
+a time, which makes the working a bridge into battlemage equipment rather than
+a permanent substitute for it.
+
+Recollection appears at Arcane 3. It restores all missing SP after a four-second
+weave, costs ten percent of maximum health, and cannot settle during combat. Its
+private timer begins at ten minutes. Recollection mastery can remove as much as
+four minutes, while FOCUS and AURA each remove another minute; the timer never
+falls below five minutes.
+
+Ashkenazy, Falx, Saloman, Talek, James, Rodney, and Aiken are taught through
+Arcane study.
+Rodney opens at Arcane 7, can only be placed on a buff or control working with
+a real duration, and extends it by twenty-five percent through two minutes,
+thirty-five percent over two minutes, or fifty percent over five minutes. It
+can lengthen concentration blocks, Freezing, and Bodach Powerup, but not Burning. Falx
+shortens a bound working's manual cooldown by twenty percent as well as
+quickening its barrage cadence. Marsellus, Mezari, and Ravidel reveal
+themselves when the spellbook records the right feats of mastery or elemental
+practice, but each still has the Arcane threshold shown by "runes". Elemental
+and forbidden damage runes add ten percent apiece to the working's primary hit
+and merge their damage types into it. Mezari lowers the
+inscribed working's SP cost by ten percent. Saloman's damaging return is capped
+at one quarter of a manual working's discounted ordinary cost; utility
+workings return ten percent of discounted base cost. Free barrage impacts
+cannot generate SP.
+At Arcane 9, the broken Tower of Arcanarton on the old Isle of the Magi begins
+a more dangerous line of research into the Arcanarton and Bodach runes.
+Once either pattern is known, a green-spined grimoire in the Darkwind Mage
+attic can reveal Trivlian's evil-and-acid rune. James's Whimsy rune gives Mage
+Eye and Teleport harmlessly ridiculous manifestations.
+Aiken opens at Arcane 8 and can only be bound to damaging workings. It halves
+normal armor absorption without bypassing elemental resistance, intrinsic
+reduction, shields, or Mana Barrier.
+
+Fireball lands lightly and writes most of its harm into the flames that follow.
+Burning may stack to fifty times an NPC's level. Against players it remains
+capped at the target's level.
+
+Mana Barrier opens at Arcane 7. While active, each damaging hit has a chance
+to spend SP in place of HP after ordinary defenses. Its chance improves with
+true Arcane rank, while mastery makes the conversion more efficient.
+"battlemage" reports the exact current values.
+Concentration blocks pause a prepared barrage without discarding it; the same
+cadence resumes when the block lifts. A manual Bolt is independent of the
+prepared barrage and scales as a dedicated lightning strike. Bodach changes
+Powerup into a guarded fifteen-pulse HP-to-SP buff. Touch uses a fourteen-second
+base cooldown. Its final page has unusually deep margins; forbidden runes can
+make the working answer to older names, and paired inscriptions do not always
+settle for the name either rune would choose alone. Some such workings refuse
+to end when the hand draws back.
+
+Useful commands include:
+
+  research / mstudy            Arcane GXP and the next open page
+  spells [working]             working index and Arcane thresholds
+  spellbook [working]          mastery, rune sockets, and prepared barrage
+  barrage <working|off>        prepare automatic combat casting
+  overchannel [off|5|10|20|25|30]
+                                spend maximum SP for added spell power
+  mageaura [style|off]         select a cosmetic prestige aura
+  battlemage                   inspect FOCUS and AURA resonance
+  runes [rune]                 known patterns and clues for sealed runes
+  inscribe / unbind            change a working's rune bindings
+  marginalia [style]           choose an Arcane 15 casting flourish
+  showoff                      spend 3 SP on a prismatic armor flourish
+  mage <message>               speak on the guild channel
+  magi                         list visible Magi
+
+Individual guide pages include:
+
+  magehelp spells          working progression and combat relationships
+  magehelp mastery         practice thresholds and socket progression
+  magehelp runes           every rune and its compatible kinds of working
+  magehelp barrage         automatic casting rules
+  magehelp battlemage      FOCUS, AURA, and resonance
+  magehelp overchannel     extra-SP settings and scaling
+  magehelp marginalia      long-study cosmetic writing hands
+  magehelp emotes          guild emotes
+
+Use "help <command>" when you want the exact syntax of one ability.
+Both "help tport" and "help teleport" open the travel working. Its fixed
+destinations accept dw, hyper, souv, and vi as common shorthand.

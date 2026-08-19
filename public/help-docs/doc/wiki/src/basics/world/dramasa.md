@@ -1,6 +1,8 @@
 # Dramasa
 
-Work in progress: this page describes the Dramasa setting we are building toward, and current game content differs in places.
+Ships can reach Heffenpurt through the Cold Sea. Other inland places are known
+through stories, but travelers should use `areas dramasa` for routes that are
+currently open.
 
 Dramasa is a barren ice-covered land. It is not the lived-in northern myth of Hyperborea. Dramasa is harsher, emptier, and more alien: white plains, frozen roads, black rock, silent ruins, and auroras that make the snow look haunted.
 
@@ -14,12 +16,18 @@ Ice pilgrimages cross the barrens as tests of endurance, memory, and sacrifice. 
 
 | Area | Description |
 | --- | --- |
-| The White Barrens | Open frozen waste where navigation, warmth, and supplies matter |
-| Frostglass Coast | Black water, blue ice cliffs, wrecked ships, and salt storms |
-| The Sunken Road | Ancient highway visible below clear ice in broken lengths |
-| Last Watch | Fortress shelter that guards the last reliable pass inland |
-| The Cathedral of Rime | Frozen holy ruin where breath, bell, and prayer become visible |
-| The Dead Aurora | Haunted skyfield where color moves without sound |
-| The Hoarfrost Vaults | Buried chambers preserving relics, bodies, and unfinished vows |
+| Heffenpurt | Western log-built port, safe hub, public hearth, and wayshard |
+| Shtun Forest | Frozen forest between Veshte and the impassable Hyperborean cliffs |
+| Veshte | Vast frozen lake crossed by wind, old roads, and frost-giant settlements |
+| Feern Caverns | Shifting cavern country beneath Veshte |
+| Veyrglass Ruins | Aurora-lit Veyr city beyond Veshte's southeastern causeway |
+
+In Hearth Square, `sit by fire` clears Chilled and Freezing and grants 15
+minutes of Hearth-Warmed protection. Touch the aurora-pale wayshard to remember
+Heffenpurt for later travel.
+
+The White Barrens, Frostglass Coast, Sunken Road, Last Watch, Cathedral of
+Rime, Dead Aurora, and Hoarfrost Vaults remain possible names and themes for
+later expansion beyond the initial map.
 
 Dramasa is quiet pressure. Hyperborea asks players to endure a living north. Dramasa asks them what remains when the world has already gone still.

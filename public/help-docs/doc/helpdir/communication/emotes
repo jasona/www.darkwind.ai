@@ -1,3 +1,9 @@
-|YKOEmotes are the nonspoken social interactions between players.
+|YKOEmotes are nonspoken social interactions between players. Most are
+available to everyone. Guild emotes use the same targeting and message system,
+but only active members of their guild can invoke them.
 
-|WKBSee also: |YKBemoteapropos, emotelist, semote
+Use |YKBfeelings|YKO to list available emotes, |YKBfeelings guild|YKO to list
+guild emotes, and |YKBsemote <emote>|YKO to preview one. The |YKBrandom|YKO
+command chooses from the global and guild emotes currently available to you.
+
+|WKBSee also: |YKBemoteapropos, feelings, guild emotes, random, semote|000

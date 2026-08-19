@@ -6,7 +6,12 @@ concentrating on the offensive, a swashbuckler can take
 advantage of the slightest openings and strike at his enemy
 more often.
 
+Every successful Flurry proc grants one extra swing. Hero-level
+Swashbucklers can gain a second extra swing, and Legend-level
+Swashbucklers can gain a third. Rank provides most of each chance;
+character level adds a smaller bonus.
+
 GL: 12
-SP: 20 / flurry
-command:  flurry
+SP: 8 / proc, reduced by Flow
+command: starttech flurry
 duration: technique mode

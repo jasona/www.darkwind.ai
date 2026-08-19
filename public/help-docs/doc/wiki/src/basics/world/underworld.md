@@ -1,6 +1,7 @@
 # Underworld
 
-Work in progress: this page describes the Underworld setting we are building toward, and current game content differs in places.
+Some deep places are known through lore before a route to them is known. Use
+`areas underworld` in game for available routes and level guidance.
 
 The Underworld is the deep realm beneath Blackmar: mines, tunnels, old cities, lava breaches, dwarf halls, broken towns, worm roads, and darker places where surface law has no reach. It is not one culture. It is a stacked geography of pressure, hunger, secrecy, and forgotten architecture.
 

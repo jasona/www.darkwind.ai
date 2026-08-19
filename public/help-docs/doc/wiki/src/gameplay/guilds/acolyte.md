@@ -1,7 +1,7 @@
 # Acolyte
 
-Work in progress: Acolyte is being built toward this design, and current game
-behavior differs in places.
+In-game guild help is authoritative for Acolyte training and abilities
+available to your character.
 
 Acolytes serve a divine patron. They heal, curse, bless, bargain, cleanse,
 resurrect, read omens, walk pilgrimages, consecrate ground, and protect allies

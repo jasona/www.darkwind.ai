@@ -5,16 +5,16 @@ SYNTAX:      improve <str/dex/con/wis/int/chr/level/guild>
 USAGE:       Any wilderness terrain.
 
 SUMMARY:
-Advance your stats, game level, or guild level. You must be in a
-wilderness area (not city, inside, or dock terrain).
+Advance your stats or game level, or review automatic Ranger guild progress.
+You must be in a wilderness area (not city, inside, or dock terrain).
 
   improve str/dex/con/int/wis/chr   Raise a stat (costs experience)
-  improve level                      Raise game level (costs exp + gold)
-  improve guild                      Raise guild level (costs experience)
+  improve level                      Raise game level (costs experience)
+  improve guild                      Show combat-earned Ranger XP progress
 
-Your guild level cannot exceed your game level. Use 'cost' to see
-current prices. You must have your primary terrain, secondary terrain,
-and enemy species set before you can advance anything.
+Your guild level cannot exceed your game level. Use 'cost' to see current
+prices and Ranger XP. You must set your primary terrain, secondary terrain,
+and enemy species before Ranger XP can raise your guild level above 1.
 
 =============================================================================
 SEE ALSO: cost, advancement, glevels

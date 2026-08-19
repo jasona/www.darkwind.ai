@@ -1,0 +1,11 @@
+                          Trip
+---------------------------------------------------------------------
+
+Syntax: trip [target]
+
+Spend one Opportunity to block a target's movement briefly and leave
+them Exposed. Establishing either fresh condition finds one Opportunity.
+
+If the target cannot be movement-blocked, Trip uses half SP, half its
+normal recovery, and has a 50% chance to retain the Opportunity.
+

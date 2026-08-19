@@ -1,0 +1,26 @@
+|CKBCharlatan Help: The Index Nobody Swears Is Complete|000
+
+Syntax: charlhelp [topic|command]
+Alias:  chelp
+
+Useful entries in the Confidence's little black book:
+
+  intro       Who the Confidence claims to be
+  commands    Every trick currently admitted into evidence
+  abilities   A guided tour of the dangerous pockets
+  roads       Misdirection, Volatility, and Contraband
+  schemes     Rank 35+ cons, cloak notes, and active loadouts
+  chat        Etiquette for the Charlatan line, allegedly
+  members     The Confidence's active roll
+
+You can also ask about a trick by name:
+
+  charlhelp confuse
+  charlhelp brewacid
+  charlhelp brewelement
+  charlhelp cookash
+  charlhelp loadweapon
+  charlhelp schemes
+
+If a crossed-out entry disagrees with 'chskills', trust the cloak. The cloak
+is newer, armed, and standing closer to you.

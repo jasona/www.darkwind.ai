@@ -5,6 +5,8 @@ Use:
 
   eternal enter [floor]
   eternal status
+  eternal shop
+  eternal buy <item>
   eternal leave
   eternal rejoin
   eternal leaderboard [v2|legacy]
@@ -37,5 +39,11 @@ party is assembled, any group checkpoints for that composition.
 Leaderboard entries show the starting floor when a run began from a
 checkpoint. Skipped floors do not grant reward compensation. V2 and
 legacy leaderboards are separate because the dungeon rules are different.
+
+Personal leader and boss chests separate premium treasure from crafting
+supply. Gilded and plain chests guarantee ember materials, repeat shard
+caches retain a smaller material chance, and tier-appropriate recipe cards
+are protected by a five-miss pity counter. Persistent materials and cards
+are also available from eternal shop for fixed shard prices.
 
 See also: help eternal, help eternal_dungeon

@@ -19,9 +19,9 @@ DESCRIPTION
         or if the file has less than start lines).
 
 EXAMPLE
-        cat("/doc/efun/cat", 5, 9);
+        cat("/public/docs/efun/cat", 5, 9);
 
-        This will print out the file "/doc/efun/cat" begining at line
+        This will print out the file "/public/docs/efun/cat" begining at line
         5 and ending with line 13.
 
 SEE ALSO

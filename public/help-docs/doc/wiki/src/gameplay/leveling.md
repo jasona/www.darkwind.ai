@@ -2,7 +2,13 @@
 
 Levels unlock stat growth, titles, account perks, and late-game systems.
 
-The Adventurers' Guild shows how much experience and gold are needed for your next level.
+The Adventurers' Guild shows how much experience is needed for your next
+level.
+
+A non-remort character may enable automatic leveling with `autolevel on` and
+disable it with `autolevel off`.
+The setting persists across sessions. Remort characters always level
+automatically.
 
 ## Level Ranks
 
@@ -31,7 +37,11 @@ See [Stats](stats.md).
 
 ## Mythic And Remort
 
-Mythic players can seek out a [Shrine of Creation](mechanics/shrines-of-creation.md). These shrines are part of the planned [Remort](mechanics/remort.md) system.
+At level 250, players may optionally [remort](mechanics/remort.md): return to
+level 1, keep their wealth and belongings, and earn a permanent boon point for
+every rebirth. Boon points buy permanent bonuses that persist through every
+future life. Some [Shrines of Creation](mechanics/shrines-of-creation.md) may
+offer a different story around rebirth when they answer a character.
 
 ## Newbification
 

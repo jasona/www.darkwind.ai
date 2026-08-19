@@ -9,12 +9,11 @@ item retrieval, rescues, and escorts.
 
 |WKBGetting Started:|XX0
 
-|YKO  1. Type |YKBqlist |YKOto see all available quests.
-  2. Quests are color-coded by difficulty based on your level:
-     |GKBgreen |YKO= easy, |YKByellow |YKO= moderate, |RKBred |YKO= hard.
-  3. Use |YKBqinfo <number> |YKOto read a quest's description and rewards.
-  4. Use |YKBqaccept <number> |YKOto take on a quest.
-  5. Complete objectives, then collect your reward!
+|YKO  1. Find the waysteward beside an area's wayshard or entrance.
+  2. A bright yellow |YKB[?] |YKOmeans the steward has work available.
+  3. Use |YKBengage waysteward |YKOto review and accept a quest.
+  4. Complete its objectives; a bright yellow |YKB[!] |YKOthen appears.
+  5. Engage the same area's waysteward to turn in the quest and collect rewards.
 
 |WKBKey Concepts:|XX0
 

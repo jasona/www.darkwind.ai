@@ -1,0 +1,18 @@
+|WKBGuild Score (gscore)
+|WKO___________________________
+
+|YKOThe 'gscore' command (alias 'guildscore') shows one block per learned
+guild or innate class recorded on your character:
+
+|BKB* |CKBGuild or class level or Rank, and the maximum where one applies.
+|BKB* |CKBWhat your next advance costs - guild XP earned in battle
+  (Fighter, Paladin, Cleric of Mitra, Priest, Berserker),
+  experience, or carried gold for the Thief guild.
+|BKB* |CKBBerserkers also see how much Vex they have to spend.
+
+|YKOYour main learned guild is marked (main). A guild or class your current
+equipment restricts is marked (inactive).
+
+|XX0See Also:
+|XX0    |CKBguilds|XX0, |CKBclasses|XX0, |CKBdual_guilds|XX0, |CKBguild|XX0,
+|XX0    |CKBsc|XX0

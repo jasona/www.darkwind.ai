@@ -1,0 +1,17 @@
+|RKB☾  VAMPHELP · GETTING STARTED  ☽|000
+|CK0════════════════════════════════════════════════════════════|000
+
+|MKBSEVEN STEPS INTO NIGHT|000
+
+  |RKB1.|000 Read Vitae, Hunger, blood, and Exposure with |GKBvscore|000.
+  |RKB2.|000 Inspect prey with |GKBbloodsense <npc>|000.
+  |RKB3.|000 Begin carefully: |GKBfeed <npc> careful|000.
+  |RKB4.|000 Browse your powers with |GKBdiscipline list|000.
+  |RKB5.|000 Choose a loadout with |GKBattune <discipline, ...>|000.
+  |RKB6.|000 Bind a coffin in the Covenant vault before danger finds you.
+  |RKB7.|000 Find the Covenant with |GKBvampwho|000 and |GKBvchat|000.
+
+|YKBVamprepair|000 repairs a missing or outdated Covenant installation. It
+preserves your exact Vitae and can never refill the pool.
+
+|CK0Next:|000 |GKBvamphelp covenant|000, |GKBfeeding|000, or |GKBpowers|000

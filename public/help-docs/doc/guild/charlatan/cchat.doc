@@ -1,0 +1,16 @@
+|CKBThe Charlatan Line: Confidential, Naturally|000
+
+  charlatan <message>       Speak to the Confidence
+  cchat <message>           A shorter lie for the same line
+  echarlatan <emote>        Emote manually
+  ecchat <emote>            The shorter manual emote
+  charlatan :<soul emote>   Use a channel soul
+
+Media links and soul emotes work as they do on the other guild lines.
+
+  guild Charlatan muff
+  guild Charlatan unmuff
+  guild Charlatan color <color>
+
+Muffling the line is called "incognito" on cwho. It sounds much better than
+"ignoring everyone."

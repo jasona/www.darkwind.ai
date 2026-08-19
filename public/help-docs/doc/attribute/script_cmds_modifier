@@ -1,4 +1,4 @@
-/doc/attribute/script_cmds_modifier
+/public/docs/attribute/script_cmds_modifier
 
 Format: (Living_Object)->set_attribute("script_cmds_modifier", iValue);
 

@@ -34,8 +34,9 @@ type '|GKBworkers|000' to get a list of your workers, then fire the # of worker
 
     Currently, every player can get 1 worker for each profession. At HERO
 you can hire another worker, then another at LEGEND, and finally one more
-at EPIC. You also get 1 worker when you reach 500 in the profession, then
-1 more when you reach 1000. That is a max of 6 workers per profession.
+at the maximum level (250). You also get 1 worker when you reach 500 in
+the profession, then 1 more when you reach 1000. That is a max of 6
+workers per profession.
 Reagent scavengers use your level-based worker count because they are not
 tied to a single profession skill. You can't double up the same worker
 target for the same profession. If you're a ghost, linkdead, or relogged

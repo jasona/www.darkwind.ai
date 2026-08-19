@@ -1,6 +1,7 @@
 # Iglantu
 
-Work in progress: this page describes the Iglantu setting we are building toward, and current game content differs in places.
+Some places described here are known through lore before they can be reached.
+Use `areas iglantu` in game for available routes and level guidance.
 
 Iglantu is a hellish continent of elemental fire. It is not simply hot. Heat is the weather, the road, the border, the weapon, and the law. Rivers of lava cut the land into black islands. Basalt cities cling to shelves above molten channels. Smoke makes daylight red.
 

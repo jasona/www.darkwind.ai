@@ -1,10 +1,16 @@
 
 |YKOCurrently, Darkwind does not support spells for players without guilds.
-The exception to this rule is for unguilded newbies who can use the spells
-|YKB"ncot", "nkick, "npunch" |YKOand|YKB "nheal"|YKO. See individual help files 
-for details.
+The exception is the introductory Dark Wind powers. Unguilded newbies through
+level 5 may use |YKBncot, ndomain, nbolt, nkick, npunch|YKO and |YKBnheal|YKO.
+Players from levels 6 through 49 may use their adventurer forms:
+|YKBacot, adomain, abolt, akick, apunch|YKO and |YKBaheal|YKO.
+
+While fighting, characters through level 20 may occasionally feel the Dark
+Wind refresh a small amount of SP. Both its chance and strength taper with
+level.
 
 |WKOSEE ALSO
 ========
 
-|YKBkill, ncot, nkick, npunch, nheal
+|YKBkill, ncot, ndomain, nbolt, nkick, npunch, nheal, acot, adomain,
+abolt, akick, apunch, aheal

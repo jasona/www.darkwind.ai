@@ -2,9 +2,8 @@ Ranger Help for: skills
 =======================
 
 SUMMARY:
-Rangers learn skills by spending slots and experience. Each skill has
-a slot cost (fixed) and an experience cost (varies by intelligence
-and number of guilds).
+Rangers learn skills by spending slots. Each skill has a fixed slot cost;
+learning does not consume ordinary experience or Ranger XP.
 
 HOW SKILLS WORK:
 - Skills are organized in a TREE. Learning one skill unlocks others.

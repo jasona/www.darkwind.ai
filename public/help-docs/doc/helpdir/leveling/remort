@@ -31,8 +31,10 @@
 
  |MKBThe cost:
   |YKORemort use a variation of the normal level experience curve. Each
-  remort level adds 10% to that cost. A soul that has lived many
+  remort level adds 2% to that cost. A soul that has lived many
   lives climbs more slowly, but carries far more power with it.
+
+ You must be alive, out of combat, and in your natural form to remort.
 
  |MKBCommands:
   |YKB remort          |YKOShow your remort status and eligibility

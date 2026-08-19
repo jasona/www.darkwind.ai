@@ -1,7 +1,8 @@
-|WKBConstitution:                Range: |YKB1-200
+|WKBConstitution:                Range: |YKB1-300
 
     |YKOConstitution is a measure of physical toughness and stamina. High
 constitution allows a player to perform strenuous tasks for a longer
 time. It increases the amount of hit points the player has, and therefore
 increases the amount of damage that can be taken before needing to rest
-or heal.
+or heal. Your guild determines constitution's base hit-point multiplier.
+That multiplier increases by one at levels 50, 100, 150, 200, and 250.

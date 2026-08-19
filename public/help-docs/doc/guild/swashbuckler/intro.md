@@ -16,6 +16,12 @@ choosing offense or defense as the situation demands.  The most
 skilled among them master the infamous *Dance of Death*, which can
 decimate opponents.
 
+Combat builds *Flow*, lowering technique costs as the Swashbuckler settles
+into rhythm and occasionally granting a guaranteed weapon hit at full Flow.
+Swashbuckler Rank comes from GXP and produces the Tier that unlocks abilities.
+Dance of Death is a rarer passive expression of full Flow, not a toggled
+technique.
+
 ## Joining
 
 If you wish to learn more about the Swashbucklers, visit their
@@ -26,4 +32,3 @@ just outside of Odako's fortress.  In Souvrael, you can visit the
 Desert Legion headquarters just south of Souvrael City, and in
 Hyperborea, we maintain a small cave near the docks as a base for
 our activities.
-

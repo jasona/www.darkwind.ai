@@ -1,0 +1,46 @@
+|CKBStreet Samurai Maintenance|000
+
+|CK0Maintenance applies only to Street Samurai signature hardware. It does not
+add integrity wear or fragmentation to ordinary cyberware or another guild's
+equipment.|000
+
+|CKBIntegrity|000
+|CK0Integrity is physical implant condition. Incoming damage, severe thermal
+events, and specific high-load firmware can accumulate wear. Dashboard begins
+warning before output is affected. Below 50% integrity, the paired routine's
+damage, duration, mitigation, or other output is reduced, but the hardware
+continues to function.|000
+
+|CK0The Cortex OS is shared by the entire platform, so poor Cortex integrity
+can influence routines that also use another implant. Higher hardware grades
+are more durable and lose visible integrity more slowly under comparable wear.
+Rin Kade restores signature hardware integrity for active members.|000
+
+|CKBFragmentation|000
+|CK0Fragmentation is firmware disorder created by routine use. Above 50%, it
+reduces the affected process's effectiveness and produces warnings. Use
+defrag <process> to clean one implant or defrag all to service the entire
+loadout. Defrag does not repair physical integrity.|000
+
+|CKBAlerts and actions|000
+|CK0Dashboard names the process and the required response. PATCH READY uses
+patch <process>. ICE INTRUSION uses purge <process>. RUNTIME FAULT uses
+reboot <process>. These commands also accept all, but each addresses only its
+own issue type. Logs [process] shows recent changes and their causes.|000
+
+|CK0Maintenance commands cannot run while the contract is inactive, and some
+require you to be out of combat. A Repair Coprocessor can perform limited
+automatic stabilization in severe cases, but it does not replace clinic
+repairs or routine defragmentation.|000
+
+|CKBRepair workflow|000
+|CK0Start with dashboard. Use the named maintenance command for fragmentation,
+patches, ICE, or faults. If integrity is damaged, visit Rin Kade, engage him,
+and choose repair for one implant or all damaged signature hardware. Field and
+reinforced hardware repair kits can instead restore one process while away from
+the clinic. Use repairkit <process_id>; kits cannot be used during combat and
+do not affect fragmentation, patches, ICE, faults, or Heat. Use logs afterward
+if you need to confirm what changed.|000
+
+|CK0Samrepair is different from all of these tools. It recovers a corrupt or
+incomplete guild installation and is not needed after a normal join.|000

@@ -1,0 +1,78 @@
+|CKBStreet Samurai Resources|000
+
+|CKBEdge|000
+|CK0Edge represents positioning, telemetry, and openings created during a
+fight. It is a temporary combat resource, not experience. The monitor,
+samstatus, and dashboard always show the current amount and live maximum. An
+installed Second Spur can expand that maximum.|000
+
+|CK0Snap Cut produces Edge whenever it deals damage. A Threat Scan lock lets a
+damaging Ripcut pierce armour, deal additional damage, consume the lock, and
+produce Edge. Jolt can produce Edge while the Cortex is already under elevated
+thermal load. A damaging Photon Lance or Micro-Missile Swarm salvo also produces
+Edge. The Ronin-sama Kernel can establish Edge when a new attacker enters its
+telemetry.|000
+
+|CK0Most active routines automatically route one available Edge as an optional
+bonus. That bonus improves what the routine already does: damage, duration,
+shielding, healing, or control strength. The shell reports an EDGE ROUTE when
+this happens. No ordinary routine requires Edge to perform its base effect.|000
+
+|CK0Smart Smoke routes Edge into one additional point of personal cover and a
+longer deployment. Jammer Field routes Edge into stronger hostile-output
+suppression, a faster attack-desynchronization pulse, and additional duration.
+These bonuses remain distinct: Smoke protects its operator, while Jammer
+degrades hostiles fighting the operator's nearby team.|000
+
+|CK0Ghoststep repositions without Edge, keeps the primary engagement, sheds
+secondary pressure, and arms a short-lived avoidance frame. Its follow-up can
+route up to two Edge into the primary target; the full two-Edge route makes the
+cut armour-piercing. Zero Signal uses available Edge differently: one routed
+Edge extends concealment and adds another blocked combat reacquisition attempt.
+Armor Weave creates Edge when its shielding is fully depleted. Predictive Sight
+commits Edge only when it actually prevents damage and can refund it on a
+particularly strong response.|000
+
+|CK0A deployed Monowire produces Edge on its first confirmed cut against each
+opponent. The command monowire edge deliberately spends Edge to arm the next
+confirmed hit as an armour-piercing breach; it never spends Edge without that
+command. Chrome Tempest works with an empty pool and converts any accumulated
+Edge into a stronger finishing sequence. Tempest stabilize still reserves one
+Edge specifically to avoid thermal lockout.|000
+
+|CKBHeat|000
+|CK0Heat is the Cortex's live thermal load. The monitor labels the current band
+as CLEAN, REDLINE, OVERHEAT, or LOCKOUT. Some offensive routines become more
+effective outside the clean band, but reaching the current thermal ceiling
+causes thermal lockout. While locked, routines that would create Heat cannot
+start until the system cools far enough to authenticate them again.|000
+
+|CKBRedline and lockout|000
+
+|CK0Most active routines add Heat only after they produce their intended
+effect. Rejected commands, missing targets, and failed validation do not create
+thermal load. Active routines have no individual cooldowns; they use a short,
+shared Cortex execution cycle alongside Darkwind's normal action pacing.|000
+
+|CK0Heat clears automatically over time and cools faster outside combat.
+Overclock does not add Heat; it temporarily raises the thermal ceiling while
+placing wear on the Cortex OS. Cold Signal reduces some incoming thermal
+bursts, and Overdrive can absorb the opening burst of an engagement. These
+systems provide headroom but do not make Heat irrelevant.|000
+
+|CK0At Guild Level 11, "thermalpurge vent" provides an emergency escape from
+accumulated Heat and thermal lockout. It clears the entire thermal load at once,
+but the forced backwash causes severe integrity wear to both the Cortex OS and
+Thermal Exchange Manifold. It is an emergency trade, not routine cooling.|000
+
+|CK0Armor Weave and Monowire report their applied thermal load when used.
+Armor Weave's Heat follows the shield charge it creates and its collapse adds
+another burst when the shielding is fully consumed. Chrome Tempest normally
+drives the Cortex to lockout; tempest stabilize uses the sequence's reserved
+Edge to stop just short of that shutdown.|000
+
+|CKBReading the system|000
+|CK0Use samstatus for a compact resource and cycle report, dashboard for full
+hardware diagnostics, and samhelp mon for the combat-monitor legend. If a
+routine says the system is thermally locked, stop issuing Heat-producing
+firmware and allow the live Heat value to fall.|000

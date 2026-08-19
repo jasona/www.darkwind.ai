@@ -1,20 +1,18 @@
 |WKBDeath Avengement
 |CKO---------------------------------------------------------------------
 
-|YKODeath avengement is the process by which players use to avenge their
-last death, and attempt to restore any lost experience.
+|YKODeath avengement is the process by which a player avenges another
+player's recent death, collecting a bounty and restoring the
+victim's lost experience.
 
-This system allows a player that just recently died, and lost experience
-in that death, to ask another player to avenge his/her death. The
-avenged and avenger have a set timeframe from the time of the original
-death to successfully find and avenge the player's death.
+When you die, you may ask another player to avenge you. The bounty
+- experience and coins - scales with the toughness of whatever
+killed you: mightier killers pay far better. If the avenger
+succeeds, they collect the bounty, and your death penalty (10% of
+your experience on hand) is restored to you, unless a resurrection
+already refunded it.
 
-If successfully avenged, any lost experience is halved and shared be-
-tween the avenged and avenging player.
-
-Previously, it was impossible to restore any experience that was lost
-from death, so with this new exception, comes a few rules to how the
-system works:
+The rules of the system:
 
   |BKB* |GKBFrom the time of death, the avenged has 30 real time minutes to
     find an avenger, and for that avenger to track and kill the target

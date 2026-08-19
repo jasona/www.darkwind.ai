@@ -1,0 +1,13 @@
+|CKBBrew Element: Weather, Now Available in Glass|000
+
+Syntax: brewelement <fire|ice|lightning>
+Alias:  elementpotion
+
+At Rank 3, Volatility 2, and Alchemy 75, prepare one owner-bound flask of
+bottled fire, ice, or lightning. Only one elemental flask may be carried at a
+time. It lasts two hours and delivers the advertised weather when thrown.
+
+Use 'throw <element> flask at <target>'. While fighting, omit 'at <target>'
+to throw it at your current foe. Each successful throw consumes the flask,
+engages combat, and kicks some of the blast back onto you. Drinking one is
+technically possible and medically discouraging.

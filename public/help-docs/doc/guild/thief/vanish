@@ -1,0 +1,10 @@
+                         Vanish
+---------------------------------------------------------------------
+
+Turn combat or an active incident into a clean directional escape. The
+move uses an ordinary visible exit, ends active pursuit after a successful
+move, establishes cover, and reduces the incident by one step.
+
+Vanish unlocks at GLVL 14 and also requires ten trained Ghost Knack ranks.
+
+  Syntax: vanish <direction>

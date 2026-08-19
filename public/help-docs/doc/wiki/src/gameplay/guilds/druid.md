@@ -2,8 +2,8 @@
 
 ![Druids](images/druid.jpg)
 
-Work in progress: Druid is being built toward this design, and current game
-behavior differs in places.
+In-game guild help is authoritative for Druid training and abilities available
+to your character.
 
 Druids serve Gaea through grove, storm, root, beast, moon, water, stone, fire,
 rot, and renewal. The sea and stone, the storm and sun, the animals and plants,
@@ -19,7 +19,7 @@ and sacred grove all change which rites feel near at hand.
 - Gather components and profession materials
 - Tend a sacred grove
 - Use rites that match the land, path, and form
-- Craft Druid-only Alchemy blueprints
+- Craft Druid-only Alchemy recipes
 - Master favorite rites through real use
 
 ## Natural Attunement
@@ -84,9 +84,9 @@ changes certain rites.
 
 Druids use [Professions](../professions.md) as part of guild life. Herbalism
 turns wild herbs into potions, poultices, grove offerings, rite catalysts, and
-blueprint ingredients.
+recipe ingredients.
 
-| Blueprint Family | Examples | Use |
+| Recipe Family | Examples | Use |
 | --- | --- | --- |
 | Poultices and balms | Grove Poultice, Renewal Salve, Rootmender Balm | Healing, recovery, poison care |
 | Wards and oils | Barkskin Resin, Storm Oil, Moon-Glass Wash | Defensive buffs and rite prep |
@@ -95,7 +95,7 @@ blueprint ingredients.
 | Grove offerings | Seed Cakes, Root Tea, Moonwell Dew, Ancient Compost | Grove growth and root-stash expansion |
 | Rebirth preparations | Last Breath Moss, Reincarnation Seed, Green Grave Oil | Renewal and reincarnation |
 
-Blueprints unlock through Alchemy, Attunement, path work, and grove stage.
+Recipes unlock through Alchemy, Attunement, path work, and grove stage.
 
 ## Paths And Spheres
 
@@ -187,7 +187,7 @@ Extreme holiness or corruption disrupts spellcasting.
 | `grove stash` | Stores or retrieves components from the grove |
 | `groves`, `commune` | Lists mature groves or enters a grove sanctum |
 | `study`, `learn`, `meditate`, `master` | Reviews, learns, or deepens powers |
-| `begin`, `quickcraft`, `read`, `manufacture` | Uses Alchemy and blueprints |
+| `begin`, `quickcraft`, `read`, `manufacture` | Uses Alchemy recipes |
 | `wildshape <form>`, `unshift` | Enters or leaves spirit-form |
 | `release`, `dismiss`, `secure`, `allow` | Manages followers and carried items |
 | `unleash`, `heel`, `toggle` | Controls follower combat behavior |

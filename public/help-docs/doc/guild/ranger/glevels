@@ -3,9 +3,9 @@ Ranger Help for: glevels
 ========================
 
 SUMMARY:
-Rangers advance their guild level by spending experience at any
-wilderness location using 'radvance guild'. Each guild level grants
-additional skill slots for learning new abilities.
+Rangers advance their guild level automatically by earning Ranger XP in
+battle. Each guild level grants additional skill slots for learning new
+abilities. Use 'rcost', 'radvance guild', or 'gscore ranger' to see progress.
 
 Guild level cannot exceed your game level. So to reach guild level 5,
 you must be at least game level 5. Maximum guild level is 15.
@@ -25,11 +25,11 @@ more immediately, for a maximum total of 163 slots across all 15 guild
 levels.
 
 RANK:
-Your rank is derived from total skills learned, not guild level:
-  Novice     (0-5 skills)     Captain    (31-40 skills)
-  Regular    (6-12 skills)    Commander  (41-50 skills)
-  Veteran    (13-20 skills)   Warden     (51+ skills)
-  Elite      (21-30 skills)
+Your Ranger rank is derived from skill slots invested, not guild level:
+  Novice     (0-9 slots)       Captain    (70-99 slots)
+  Regular    (10-24 slots)     Commander  (100-129 slots)
+  Veteran    (25-44 slots)     Warden     (130+ slots)
+  Elite      (45-69 slots)
 
 SKILL SCORES:
 As you learn skills, three scores increase automatically:

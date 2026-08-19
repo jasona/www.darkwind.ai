@@ -13,12 +13,12 @@ You must set all three of these first (one-time choices):
   setenemy <race>       Your enemy species
 
 HOW TO ADVANCE:
-You can advance from the guild lodge or anywhere in the wilderness
-using remote commands on your quiver:
+Ranger guild levels are earned automatically with Ranger XP from battle.
+The lodge and your quiver report your progress:
 
-  rcost                 See what it costs to advance
-  radvance level        Advance your game level (costs exp + gold)
-  radvance guild        Advance your guild level (costs exp only)
+  rcost                 See Ranger XP and slot progress
+  radvance level        Advance your game level (costs experience)
+  radvance guild        See Ranger XP and any blocked advancement
   radvance <stat>       Raise str, dex, con, int, wis, or chr
 
 These commands require you to be in the wilderness (not a city,
@@ -32,7 +32,7 @@ LEARNING SKILLS:
 Once you have slots, spend them on skills:
   skilltree             See the full skill tree
   learn                 See what skills you can learn right now
-  learn <skill>         Learn a skill (costs slots + experience)
+  learn <skill>         Learn a skill (costs slots)
   learn cost <skill>    Check the cost before committing
 
 Skills have prerequisites - learning one skill unlocks others. Start
@@ -40,8 +40,7 @@ with 'forage' (your first available skill) and branch out from there.
 Use 'skilltree' to plan your path.
 
 COST FACTORS:
-- Intelligence reduces the experience cost of learning skills.
-- Being in multiple guilds increases skill learning costs.
+- Skill slots are the only cost for learning Ranger skills.
 - Skills cost more SP to use outside your primary/secondary terrain.
 - Alignment far from neutral increases SP costs for all skills.
 

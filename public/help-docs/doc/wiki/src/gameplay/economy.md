@@ -1,7 +1,5 @@
 # Economy
 
-Work in progress: this page documents live economy systems first, then planned economy ideas. Planned items are not live unless they appear in-game.
-
 DarkWind's economy is built from coins, banks, player markets, auctions, professions, corpse ash, and player-owned businesses. Most players interact with it by banking money, buying from shops, selling useful gear, gathering profession materials, burning corpses into ash, and visiting player-run pubs and inns.
 
 ## Quick Start
@@ -108,7 +106,7 @@ Lottery notes:
 - Each player can buy up to 75 tickets per drawing
 - Tickets are bought with coins carried on you
 - The prize pot grows as players buy tickets
-- Drawings run on the boot cycle, with warnings before a winner is chosen
+- Drawings run every 12 hours, with warnings before a winner is chosen
 - Drawings without a winner roll their prize forward
 
 ## Player-Owned Pubs And Inns
@@ -154,6 +152,11 @@ Owner commands:
 
 Owning a business means keeping the account funded, keeping the menu useful, watching sales, and adjusting prices. Rent, staff, and menu choices all affect profit.
 
+Standard pub and inn menus support fare through Epic (level 200). Strength is
+three halves of the intended consumer level, up to 300, and each use may heal
+up to ten times its strength: 3,000 HP and 3,000 SP at the ceiling. Drinks,
+servings, kegs, jugs, meals, and snacks use the same scale.
+
 Business owners also receive a ceremonial owner key with owner-channel commands:
 
 | Command | Use |
@@ -173,7 +176,14 @@ Getting started:
 - Find an ash processor
 - `press button` or `push button` to receive a corpse burner
 - Carry the burner while adventuring
+- Use `set autosell on` if you want it to transmit ordinary sellable loot from
+  NPC corpses directly to Taylor
+- Or use `set autorefine on` to convert ordinary refinery-eligible NPC
+  equipment directly into saved profession materials without carrying it
+  back to town
 - Use `burn corpse` or `burn all corpse` after fights
+- Use `set autoburn on` to run `burn corpse` after your other automatic corpse
+  processing finishes. Anything still inside the corpse will be destroyed.
 - Use `check burner` to see stored ash
 - Return to an ash processor and use `process all ash`
 
@@ -184,12 +194,33 @@ Ash commands:
 | `burn corpse` | Burn one corpse into ash |
 | `burn all corpse` | Burn all valid corpses in the room |
 | `check burner` | Show stored grey, red, and blue ash |
+| `set autoburn on` | Burn a corpse after other automatic corpse processing |
+| `set autoburn off` | Stop automatically burning corpses |
+| `set autosell on` | Automatically sell ordinary sellable loot from your kills |
+| `set autosell off` | Stop automatically selling equipment |
+| `set autorefine on` | Automatically convert eligible NPC equipment into profession materials |
+| `set autorefine off` | Stop automatically refining equipment |
 | `process all ash` | Sell all stored ash |
 | `process <amount> <color> ash` | Sell a specific amount |
 | `process all <color> ash` | Sell all ash of one color |
 | `cinis` | Return to a nearby Adventurers' Guild after a cooldown |
 
 Ash color comes from where the corpse was made. Grey ash is common around Darkwind. Red and blue ash come from other parts of the world and pay according to the current ash rates.
+
+Autosell uses Taylor's normal appraisal, including your Charisma and your
+reputation in his lawful market, then deducts a 10% handling charge. The
+transmitted equipment enters Taylor's normal shop stock. Magical, unique,
+limited, customized, scripted, cursed, kept, unsellable, and container items
+are left behind for you to inspect or loot normally. Keys are always left in
+the corpse so they can be collected onto your keyring.
+
+Autosell and autorefine are mutually exclusive; enabling either option turns
+the other off. Autorefine uses the same yields as the Refinery, requires no
+corpse burner, and permanently consumes every ordinary refinery-eligible
+equipment drop before autoloot runs. It leaves behind the same magical,
+unique, limited, customized, scripted, cursed, kept, unsellable, and
+container items that autosell protects. Leave autorefine off if you want to
+inspect drops.
 
 ## Professions And Crafted Goods
 
@@ -220,102 +251,3 @@ Common money uses:
 - Travel services
 - Storage and bank use
 - Donations, tips, and player-to-player trades
-
-## New And Upcoming
-
-These are planned economy directions for future development.
-
-### Player Housing
-
-Player housing gives characters a long-term place in the world.
-
-Housing features:
-
-- Purchasable rooms, homes, apartments, ships, towers, crypts, or domain-themed retreats
-- Guest lists and access controls
-- Decoration and furniture
-- Storage with limits and upkeep
-- Display spaces for trophies, rare gear, books, and crafted objects
-- Neighborhoods tied to cities, guilds, islands, or remote domains
-
-### Player Shops And Stalls
-
-Player shops expand the market into more personal storefronts.
-
-Shop features:
-
-- Stocked shelves and price tags
-- Consignment sales
-- Crafted goods displays
-- Limited stock specials
-- Owner-written shop descriptions
-- Domain markets with local flavor
-
-### Work Orders
-
-Work orders let players ask for specific goods or services.
-
-Examples:
-
-- A smith requests rare ore
-- An alchemist requests herbs and reagent drops
-- A ranger requests hides
-- A clan requests food and potions before a raid
-- A business owner requests ash or menu supplies
-- A player posts a reward for a specific crafted item
-
-### Shipping And Caravan Jobs
-
-Regional economies work better when goods move across the world.
-
-Future shipping jobs:
-
-- Carry trade goods between cities
-- Escort caravans
-- Deliver supplies to remote domains
-- Move ash, ore, herbs, and crafted goods
-- Take higher-risk routes for better pay
-- Tie rewards to distance, danger, and cargo value
-
-### Business Upgrades
-
-Owned pubs and inns can grow beyond menus and margins.
-
-Upgrade ideas:
-
-- Better servers
-- More menu slots
-- Local advertising
-- Specialty house items
-- Ash processor improvements
-- Owner rooms
-- Private event spaces
-- Decorations that change the room
-- Loyalty rewards for regular customers
-
-### Contracts And Commissions
-
-Contracts create player-to-player jobs without requiring both players to be online at the same time.
-
-Contract ideas:
-
-- Crafting commissions
-- Resource bounties
-- Escort jobs
-- Delivery jobs
-- Rare item finder's fees
-- Guild supply requests
-- Clan treasury jobs
-
-### Regional Trade
-
-Each domain has its own materials, dangers, and travel costs. Regional trade gives those differences economic weight.
-
-Regional trade ideas:
-
-- Local commodities with changing demand
-- Better prices for goods far from their source
-- Domain-specific crafting ingredients
-- Festival markets and temporary trade fairs
-- Smuggling and customs hooks where they fit the area
-- Merchant reputation by city or domain

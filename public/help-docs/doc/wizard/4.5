@@ -246,6 +246,9 @@ int weapon_hit(oTarget);
         a unique-class weapon, so be warned and ask questions before using
         it. See wizhelp 4.14 'uniques' for guidelines on special hits.)
 
+        A weapon using set_hit_func() must declare its scripted hit value
+        for gearcheck with add_power_feature("scripted_hit", ...). See
+        wizhelp 4.26 for the equipment power API and examples.
 
 set_wield_func(oFuncObject);
         Pass the object that defines wield_func() and unwield_func()
@@ -272,6 +275,10 @@ int unwield_func(oWeapon);
         job to fill out the this function with whatever special things
         that are to happen. If this function returns 0, then the unwield
         will fail.
+
+        A weapon with a scripted wield effect must declare that effect for
+        gearcheck with add_power_feature("scripted_wield", ...). See
+        wizhelp 4.26.
 
 |CKBvoid add_equipment_stat(string sStat, int iValue, string sStart, string sStop);|XX0
         This function will handle adding the stat sStat to the

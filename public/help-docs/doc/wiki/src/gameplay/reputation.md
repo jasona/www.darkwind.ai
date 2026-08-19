@@ -44,19 +44,4 @@ Deeds with clear divine meaning can tug the omen cycle.
 
 During a god's Holy Hour, matching deeds carry farther.
 
-## Future Uses
-
-Reputation can grow into many world responses.
-
-- Rumors
-- NPC reactions
-- Guild rites
-- Shop treatment
-- Services
-- Bounty pressure
-- Safehouses
-- Quest branches
-- Divine omens
-
 See [Divine Patronage](mechanics/divine.md) and [Quests](quests.md).
-

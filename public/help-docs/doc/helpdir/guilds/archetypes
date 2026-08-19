@@ -1,20 +1,26 @@
-|YK0#|YKB Guild Archetypes|000
+|YK0#|YKB Combat Archetypes|000
 
-|GK0Guilds fall into 3 archetypes: Caster, Melee, and Hybrid.|000
+|GK0Guild and class abilities can be described through three combat
+archetypes: Caster, Melee, and Hybrid. This describes how a toolkit plays; it
+does not make a class into a learned guild.|000
 
 |YK0##|YKB Caster|000
 
-|GK0Caster guilds have few inherent bonuses to their combat. They generally|000
-|GK0have large SP pools and efficient abilities.|000
+|GK0Caster toolkits have few inherent bonuses to ordinary weapon combat. They
+generally have large SP pools and efficient abilities.|000
 
 |YK0##|YKB Melee|000
 
-|GK0Melee guilds are almost the reverse: they have strong inherent bonuses|000
-|GK0to combat, including additional swings.|000
+|GK0Melee toolkits are almost the reverse: they have strong inherent bonuses
+to combat, including additional swings.|000
 
 |YK0##|YKB Hybrid|000
 
-|GK0Hybrid guilds fall in between. They have some bonuses to their combat|000
-|GK0but typically have higher SP pools than melee guilds and more|000
-|GK0efficient abilities.|000
+|GK0Hybrid toolkits fall in between. They have some bonuses to combat but
+typically have higher SP pools than melee toolkits and more efficient
+abilities.|000
 
+|YK0##|YKB See also|000
+
+|CKBhelp guilds|000
+|CKBhelp classes|000

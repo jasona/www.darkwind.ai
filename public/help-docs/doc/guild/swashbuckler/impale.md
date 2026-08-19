@@ -6,5 +6,5 @@ impaling attack.
 
 SP:  9 SP (proc)
 
-*Effects(s)*: Chance of +45 damage on hit
-
+*Effects(s)*: Chance of bracket-scaled damage on hit: +45 below Hero, +56 at
+Hero, +67 at Legend, +78 at Epic, and +90 at Mythic.

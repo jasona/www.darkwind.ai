@@ -1,18 +1,33 @@
 Cleric of Mitra Guild Levels
-Level	Title			Experience
-=====   ===============		==========
+
+Clerics rise through righteous battle. Every worthy kill earns Cleric
+XP, and your guild level rises automatically when you have earned
+enough. Type 'cost' or 'advance guild' at the guild hall to see your
+progress.
+
+Level	Title			Cleric XP to reach
+=====   ===============		==================
   1	Aspiring Acolyte	       0
-  2	Acolyte			    4927
-  3	Adept			    9835
-  4	Evangelist		   11665
-  5	Ecclesiastic		  104298
-  6	Curate			  100049
-  7	Predicant		  136442
-  8	Canon			  169944
-  9	Minister		  520689
- 10	Patriarch		  562068
- 11	Spiritual One		  603447
- 12	Blessed One		  644826
- 13	Divine One		  686205
- 14	Chosen One		  727584
- 15	Saviour			  768963
+  2	Acolyte			    1000
+  3	Adept			    2000
+  4	Evangelist		    3000
+  5	Ecclesiastic		    5000
+  6	Curate			    7000
+  7	Predicant		   10000
+  8	Canon			   13000
+  9	Minister		   16000
+ 10	Patriarch		   20000
+ 11	Spiritual One		   24000
+ 12	Blessed One		   28000
+ 13	Divine One		   32000
+ 14	Chosen One		   36000
+ 15	Saviour			   40000
+
+Your guild level can never exceed your character level, and your
+combined guild levels can never exceed your character level. Mitra
+grants nothing while your alignment is evil - XP earned while you
+stray is banked, and the levels pop when you atone. At guild level
+15 her Champions join the himitra and saviour channels.
+
+Your battle record survives leaving the guild. Should you return in
+good standing, your guild level is restored.

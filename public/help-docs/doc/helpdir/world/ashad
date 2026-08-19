@@ -1,0 +1,18 @@
+|YKOAshad is an AshPunk desert continent west of the Darkwind mainland. Reach
+the Oasis of Life across the Ocarian Sea, then follow its soot roads through
+the Cinder Flats toward the continent's cities and hunting regions.
+
+Severe and extreme Ashad heat ramps up while you remain exposed. Its first
+check applies |YKBExposed|YKO. Continued checks refresh Exposed and apply
+|RKBurning|YKO stacks. Daylight checks every 20 seconds at full strength;
+dawn and twilight check every 25 seconds at reduced strength; night checks
+every 30 seconds at half strength.
+
+Marked shelters and rooms with light or no heat stop new exposure. Resist Heat
+prevents the hazard. Ranger desert survival halves its Burning stacks,
+Souvraeli adaptation reduces them further, and fire resistance mitigates the
+damage Burning deals. Existing Burning decays normally after reaching safety;
+Exposed expires shortly afterward.
+
+Type |YKBheat|YKO in any Ashad room to see its tier, whether it protects you,
+the current cadence, and the Burning stacks expected for your character.

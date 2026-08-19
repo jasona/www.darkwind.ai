@@ -1,26 +1,48 @@
-|WKBThese are the allowable combos for each guild|WK0
+|YK0#|YKB Guild Combinations|000
 
-Guilds are broken into 4 distinct groups:
+|GK0You may hold at most two learned guilds, and a second guild opens at
+level 50. Both guilds must accept the pairing; race, allegiance, and each
+guild's own joining requirements still apply. Classes describe what a
+character innately is and are not part of the dual-guild system.|000
 
-|YK0Neutral Aligned|WK0
-    Bard        |  Psionicist     |  Fighter
-    Swashbuckler|  
+|YK0##|YKB The groups|000
 
-|YK0Aligned with |GKBGaea|WK0
-    Garou       |  Lunar         |  Ninja
+|CKBNeutral:|000  Bard, Berserker, Charlatan, Fighter, Psionicist,
+           Street Samurai, Swashbuckler
+|CKBGaea:|000     Druid, Garou, Lunar, Ninja
+|CKBMitra:|000    Cleric of Mitra, Mage, Paladin
+|CKBSet:|000      Priest, Thief
 
-|YK0Aligned with |YKBMitra|WK0
-    Cleric      |  Mage          |  Paladin
+|YK0##|YKB What pairs with what|000
 
-|YK0Aligned with |RK0Set|WK0
-    Priest      | Thief
+|GK0Neutral guilds|000 pair with each other and with any Gaea, Mitra, or
+Set guild -- with one exception: |CKBStreet Samurai|000. The Gaea guilds
+will not take one whose flesh is threaded with chrome, and no street
+samurai will kneel to the green. Street samurai may still pair with the
+other neutrals and with the Mitra and Set guilds.
 
+|GK0Gaea guilds|000 (Druid, Garou, Lunar, Ninja) pair with each other and
+with the neutral guilds except Street Samurai. In addition:
+|BKB* |CKBGarou|000 may also pair with |CKBThief|000 and |CKBRanger|000.
 
-Those aligned with a diety may not join a guild aligned with another diety.
-Neutrally aligned guilds may join any other guild, regardless of diety.
+|GK0Mitra guilds|000 (Cleric of Mitra, Mage, Paladin) pair with each other
+and with all seven neutral guilds. They do not mix with Gaea or Set.
 
-For example, a Lunar may not join the Cleric guild, but can join the
-ranks of Bard or even Ninja.
+|GK0Set guilds|000 (Priest, Thief) pair with each other and with all seven
+neutral guilds. Thief may also pair with |CKBGarou|000.
 
-|XX0See Also:
-|XX0    |CKB"help list guilds"|XX0
+|GK0Ranger|000 pairs only with |CKBGarou|000.
+
+|YK0##|YKB Solo guilds|000
+
+|GK0Dragon, Monk, Morpher, Necro, Vampire, and BloodMage walk alone: their
+disciplines permit no second guild.|000
+
+|GK0BattleMage, Deathknight, Glyph, and UberGarou are special orders with
+their own entry requirements -- ask their halls, not this list.|000
+
+|YK0##|YKB See also|000
+
+|CKBhelp guilds|000
+|CKBhelp classes|000
+|CKBhelp dual guilds|000

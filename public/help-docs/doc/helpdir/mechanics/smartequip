@@ -1,0 +1,51 @@
+|WKBSYNTAX
+======
+
+|CKBsmartequip|WKB
+|CKBsmartequip -v|WKB
+
+DESCRIPTION
+===========
+
+|YKOUses the same equipment-power scores as |CKBgearcheck|YKO to improve your
+currently equipped armour and weapons. Smart equip fills open equipment slots
+and replaces equipped items only when the new combination has a higher,
+high-confidence score.
+
+Hand equipment is evaluated as a complete setup rather than one item at a
+time. Smart equip compares a two-handed weapon against compatible dual-wielded
+weapon pairs and weapon-and-shield combinations. A secondary weapon's offense
+is weighted for its reduced attack rate, and your trained weapon
+specialization adds its normal combat advantage or disadvantage to the score.
+
+Only armour and weapons carried directly in your inventory are considered.
+Equipment stored inside bags or other containers is left where it is.
+Installed implants and other internal equipment are never changed.
+
+Smart equip applies the best compatible hand setup atomically, then checks
+other armour improvements one at a time. If an item cannot be worn or wielded
+because of a character requirement, curse, size restriction, weapon
+combination, or another equipment rule, your displaced equipment is restored
+and that setup or item is skipped.
+
+You cannot use smart equip during combat, while dead, or while phased out.
+Use |CKBgearcheck|YKO afterward when you want to inspect the detailed score
+behind each decision. Use |CKBloadout|YKO to save the resulting equipment as a
+named preset.
+
+VERBOSE MODE
+============
+
+|CKBsmartequip -v|YKO performs the same equipment changes and then shows every
+standard equipment slot. For each slot it lists the currently equipped item,
+all inventory candidates that can use that slot, the candidate and displaced
+item scores, score difference, gearcheck classification, confidence, items
+that would be replaced, rejection reason, and final decision.
+
+Each slot begins with a bright |GKBSELECTED|YKO summary. Winning equipment is
+shown first with a |GKB★ WINNER|YKO badge, while kept current gear, rejected
+items, replaced gear, and unselected candidates use distinct labels and
+colors.
+
+Equipment inside containers and implants also appear with an explanation of
+why smart equip did not consider them.

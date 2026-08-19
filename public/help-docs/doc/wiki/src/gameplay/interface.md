@@ -39,6 +39,15 @@ Monitor is one of the most useful early settings. It shows your HP and SP as the
 | `combatbrief self` | Show only your attacks |
 | `combatbrief hit` | Hide misses and dodges |
 | `combatbrief damage` | Show damage numbers |
+| `combatbrief visual` | Toggle Darkflow's visual Combat pane for routine swings |
+
+The five choices are independent toggles. Visual combat keeps `short` for
+terminal fallback, applies the existing `self` and `hit` filters to pane
+events, and uses `damage` to decide whether exact numbers appear. If a
+compatible, visible Darkflow pane is unavailable, ordinary combat text
+continues automatically. Closing or collapsing the pane restores that text
+without changing the saved preference. Visual combat starts enabled for new
+characters; existing characters retain their saved preference.
 
 ## Personal Settings
 
@@ -63,4 +72,3 @@ DarkWind has a language system. If people do not understand what you say, use:
 `set language common`
 
 See [Communication](communication.md) for speaking, tells, channels, language, and mail.
-

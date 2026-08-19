@@ -1,0 +1,21 @@
+varargs status apply_status_effect(int effect, int strength, int duration,
+ object source, status silent)
+
+Apply one living-owned status effect from <status_effects.h>. effect must be
+one exact STATUS_* bit. duration is in seconds; Burning ignores duration and
+derives its lifetime from strength. source may be 0.
+Set silent when refreshing or transforming an effect without application
+messages. State and GMCP still update.
+
+Named wrappers are preferred:
+  apply_burning(int stacks, object source, status silent)
+  apply_bleeding(int strength, int duration, object source, status silent)
+  apply_chilled(int duration, object source, status silent)
+  apply_freezing(int duration, object source, status silent)
+  apply_exposed(int duration, object source, status silent)
+  apply_sundered(int strength, int duration, object source, status silent)
+
+Use query_status_effect(mask), query_status_effect_strength(effect),
+query_status_effect_remaining(effect), query_status_effect_source(effect),
+and remove_status_effect(mask, silent) to inspect or cure effects. See
+`wizhelp 9.16` for stacking, caps, and lifecycle.

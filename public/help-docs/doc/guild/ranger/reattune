@@ -13,17 +13,17 @@ Warden Thorn can perform a reattunement ritual for Rangers who need to
 change their primary terrain, secondary terrain, or enemy species after
 their first choice.
 
-The ritual requires experience, cannot be performed while fighting, and
-cannot be performed while you have an active follower with you. After a
-successful reattunement, your bond must settle for seven days before the
-ritual can be performed again.
+The ritual cannot be performed while fighting or while you have an active
+follower with you. It does not cost experience. After a successful
+reattunement, your bond must settle for seven days before the ritual can be
+performed again.
 
 If you change your primary terrain and your current enemy species is not
 valid for the new terrain, your enemy species will be cleared. Use 'setenemy'
 to choose a new one.
 
 Use 'reattune' with no arguments to see your current affinities, ritual
-cost, and cooldown.
+attunement state and cooldown.
 
 =============================================================================
 SEE ALSO: setprime, setsecond, setenemy, rscore and survey

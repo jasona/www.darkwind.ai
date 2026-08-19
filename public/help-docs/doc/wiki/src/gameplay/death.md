@@ -1,44 +1,51 @@
 # Death And Recovery
 
-Death is part of DarkWind. It hurts, but it is not the end of a character.
+Death is part of DarkWind, but it is forgiving. It costs a little, never a lot.
 
 ## What Happens
 
-When you die, you become a ghost and lose many living abilities.
+When you die, you become a ghost and your spirit is whisked to the church of
+the continent or planet you died on. Your corpse - holding all of your
+belongings and gold - travels with you, tucked into your inventory. There is
+no corpse run, and nobody can loot you.
 
 At level 5 and under:
 
-- You can pray at the church to return to life
-- Death has no stat, level, or experience penalty
+- Death has no penalty at all
 
 Above level 5:
 
-- You lose your experience on hand
-- You lose one level
-- You lose one point from each stat
-- Guild resurrection can save some stat loss
-- The level and experience loss still happen
+- You lose 10% of your experience on hand
+- Nothing else is lost: no stats, no levels, no gear
 
 ## Returning To Life
 
-Common recovery steps:
+At the church you have two choices:
 
-1. Go to the church
-2. `pray`
-3. Return to your corpse if it is safe
-4. Ask for help if the corpse is in a dangerous area
-5. Re-bank coins and replace lost supplies
+1. `pray` - resurrect yourself; the experience loss stands
+2. Have another player resurrect you with a guild ability - this restores
+   the lost experience
 
-Ghosts can use `gocot` if trapped or unable to reach Center of Town.
+Once alive, take your equipment back out of your corpse (`get all from
+corpse`, `get coins from corpse`). The emptied corpse rots away on its own.
+
+If you log out before unpacking your corpse, it is stored safely and can be
+recovered with `claim corpse` at the temple.
+
+Ghosts can use `gocot` if trapped or unable to reach a church.
 
 ## Death Avengement
 
-Death avengement lets another player avenge your last death and recover part of the lost experience.
+Avenging a death pays a bounty and makes the victim whole.
 
 | Command | Use |
 | --- | --- |
 | `askavenge <player>` | Ask a player in the room to avenge you |
 | `avengeinfo` | Show avengement status |
+
+The avenger earns a bounty of experience and coins scaled by the toughness of
+the killer - mightier killers pay far better. On success the victim's 10%
+experience loss is also restored (unless a resurrection already refunded it).
 
 Avengement rules:
 
@@ -48,8 +55,6 @@ Avengement rules:
 - Only one avenger can be assigned per death
 - One avenger can only avenge one player at a time
 - If the killer dies before the avenger succeeds, the avengement ends
-
-Do not use avengement for deaths at level 5 and under. Prayer restores new adventurers without penalty.
 
 ## Avoiding Death
 
@@ -61,4 +66,3 @@ Do not use avengement for deaths at level 5 and under. Prayer restores new adven
 - Use `areas <domain>` to choose level-appropriate places
 - Leave when enemies hit too hard
 - Ask the newbie channel or guildmates before pushing deeper
-

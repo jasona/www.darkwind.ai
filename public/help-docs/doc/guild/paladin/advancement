@@ -1,0 +1,42 @@
+Paladin Guild Advancement
+-------------------------
+
+Paladins rise through righteous battle. Every worthy kill earns Paladin
+XP, and your guild level (1 to 15) rises automatically when you have
+earned enough.
+
+Earning Paladin XP:
+- Any NPC kill where you struck the killing blow, or dealt at least a
+  tenth of the victim's health, awards Paladin XP to everyone in the
+  group who qualifies.
+- Tougher prey is worth more. Rewards taper when prey is more than five
+  levels beneath you and reach nothing at fifteen levels beneath you.
+  Bosses carry large bonuses.
+- Variety pays. Hunting the same spawn over and over decays the reward;
+  ranging widely keeps it at full value.
+
+Guild levels:
+- Levels advance on their own the moment you have earned enough XP.
+- Your guild level can never exceed your character level, and your
+  combined guild levels can never exceed your character level.
+- Your charisma must grow with your rank - roughly three charisma for
+  every two guild levels. Guild level 15 requires charisma 22.
+- Mitra grants nothing while your alignment is evil. XP earned while
+  fallen is banked, and the levels pop when you atone.
+- XP earned while you are held back by any of these is never lost.
+- Guild level 15 is the pinnacle; Mitra's Champions join the himitra
+  and lord channels.
+
+Commands:
+- 'cost' and 'advance guild' at the guild hall report your progress.
+- Devotion points still come with each guild level; spend them with
+  'devote'. Use 'devote reset' to preview renewing all of your devotion
+  choices before Mitra's statue in the guild hall. Your first renewal is
+  free; later renewals require an escalating coin offering.
+- A confirmed renewal returns every allocated devotion point and ends all
+  active Paladin effects, including blessings, sanctifications,
+  consecrations, summoned seals, and holy javelins.
+- Titles remain yours to choose via 'ptitle' and 'title'.
+
+Your battle record survives leaving the guild. Should you return in
+good standing, your guild level is restored.

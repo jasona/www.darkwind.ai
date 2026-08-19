@@ -8,5 +8,9 @@ reliable early pressure tool. Reapplying it to a foe you
 have already opened will rip the wound wider and force an
 immediate extra gush of damage.
 
+Against your Studied mark, each landed Quick Strike has a 60% chance
+to find one Opportunity. Establishing fresh Bleeding finds another,
+so one strike can produce two Opportunity.
+
 |CKOGLVL required: |GKB1
 |CKOSyntax: |YKOqstrike <target>               |CKOCost: |WKOVaried

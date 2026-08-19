@@ -40,6 +40,8 @@ The Eternal Dungeon is an instanced endless dungeon for solo players or small gr
 | --- | --- |
 | `eternal enter [floor]` | Enter the dungeon |
 | `eternal status` | Show run and checkpoint status |
+| `eternal shop` | List shard purchases, including crafting supplies |
+| `eternal buy <item>` | Buy an item with Eternal Shards |
 | `eternal leave` | Leave the run |
 | `eternal rejoin` | Rejoin a run |
 | `eternal leaderboard` | Show rankings |
@@ -56,6 +58,13 @@ Deaths inside the Eternal Dungeon are not normal deaths. Failed runs return play
 
 Checkpoints unlock every 5 floors. Solo checkpoints belong to the player. Group checkpoints belong to the exact party composition.
 
+Leader and boss kills leave personal reward chests. Premium treasure dims
+from gilded to plain and then shard-cache rewards as a tier is repeated in
+one day. Crafting supply is separate: gilded and plain chests guarantee
+ember materials, caches retain a smaller material chance, and recipe cards
+use tier-specific pools with protection against long dry streaks. Materials
+and cards can also be purchased from `eternal shop` at fixed shard prices.
+
 ## Bosses
 
 Boss encounters are larger fights with stronger enemies, special mechanics, and better rewards.
@@ -71,7 +80,14 @@ Useful habits:
 - Watch for special attacks
 - Retreat before the party collapses
 
-Boss kills often announce on the Events channel. Crushing a low-tier boss far beneath your level can earn mockery instead of a normal celebration.
+Boss-kill announcements go to the Events channel. A character is eligible for
+an announcement only on their first kill of that particular boss during a
+reboot; repeat kills by that character remain quiet. A few bosses may
+explicitly opt into mocking much higher-level killers, but ordinary boss
+announcements do not shame players for being overlevel.
+
+If a boss later defeats a character who has already defeated that boss during
+the same reboot, the boss's Events-channel taunt remains quiet as well.
 
 ## Daily Rewards
 

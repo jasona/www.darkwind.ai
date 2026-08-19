@@ -1,11 +1,13 @@
-                       |BKB-= |CKBTrap Room |BKB=-
-               
-|MKOThis command will allow you to quickly construct a lethal trap
-that can be placed in a room.  Anybody, except Thieves, that 
-attempt to leave the room, or pick up the trap will set it off,
-causing damage to that person.   Any Thief can remove a trap with 
-'disarm trap'.
+                         Trap
+---------------------------------------------------------------------
 
+Conceal a pressure trap in the room. It springs when a valid non-Thief
+threat leaves or handles it. It also springs on a stationary NPC once
+that NPC begins fighting the setter in the trapped room.
 
-|CKOGLVL required: |GKB10
-|CKOSyntax: |YKOtrap                 |CKOCost: |WKO~35
+Before combat, use 'lace <poison> into trap' to spend one prepared dose
+and add its normal poison effect to the trap strike. Traps expire after
+five minutes and are removed with 'disarm trap'.
+
+  GLVL: 15
+  Syntax: trap

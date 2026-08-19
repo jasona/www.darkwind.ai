@@ -1,0 +1,32 @@
+|WKBTHE BROOD APOTHECARY
+====================
+
+|YKOThe Brood Apothecary is a DarkWind City shop that sells parasite carriers:
+larvae, worms, cysts, fleas, and stranger living bargains. These carriers can
+be swallowed or eaten to grant elevated hit point regeneration, spell point
+regeneration, or both for a finite amount of online time.
+
+The shop is south of Xenor Road. Its stock is level-gated, and some parasites
+have additional host requirements.
+
+|WKBSHOP COMMANDS
+=============
+
+  |YKBlist parasites|YKO
+    Shows available parasite carriers.
+
+  |YKBdescribe parasite <number or name>|YKO
+    Shows the required level, regen per pulse, cost, duration, appetite, and
+    penalties for a parasite.
+
+  |YKBbuy <number>|YKO
+    Buys the numbered parasite carrier from the shop list.
+
+  |YKBpurge parasite|YKO
+    Removes your active parasite for a fee.
+
+After buying a carrier, hold it and use |YKBswallow <parasite>|YKO or
+|YKBeat <parasite>|YKO to install it. Use |YKBparasite|YKO afterward to inspect
+the infection.
+
+See also: |YKBhelp parasites|YKO.

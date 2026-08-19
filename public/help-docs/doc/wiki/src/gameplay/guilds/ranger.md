@@ -1,7 +1,7 @@
 # Ranger
 
-Work in progress: Ranger is being built toward this design, and current game
-behavior differs in places.
+In-game guild help is authoritative for Ranger training and abilities
+available to your character.
 
 Rangers are practical wilderness specialists. They know terrain, tracks,
 weather, tools, camps, animal helpers, and the quiet work that happens before

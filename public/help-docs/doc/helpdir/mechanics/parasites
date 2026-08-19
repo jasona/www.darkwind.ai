@@ -1,0 +1,57 @@
+|WKBSYNTAX
+======
+
+|YKBhelp parasites|WKB
+|YKBparasite|WKB
+
+|WKBDESCRIPTION
+===========
+
+|YKOParasites are living healing bargains bought at |YKBThe Brood Apothecary|YKO
+in DarkWind City. A parasite can be swallowed to live inside you for a finite
+amount of online time. While it is alive, it can restore hit points, spell
+points, or both during heartbeat pulses when you are depleted.
+
+Only one parasite may live in you at a time. Parasites do not restore past
+your maximum hit points or spell points, and do not last forever.
+Their remaining time pauses while you are offline, but they do not survive
+death.
+
+Stronger parasites can carry serious costs. Depending on the parasite, these
+may include reduced maximum hit points, reduced maximum spell points, spell
+point appetite while regenerating, weaker damage output, or other combat
+burdens. If a parasite needs spell points as appetite and you cannot pay the
+full appetite, it becomes starved for that pulse and does not mend you.
+
+|WKBCOMMANDS
+========
+
+  |YKBparasite|YKO
+    Shows your active parasite, healing pulse, burden, appetite, starvation
+    state, and remaining online time.
+
+  |YKBswallow <parasite>|YKO
+    Installs a parasite carrier you are holding, if you meet its requirements.
+
+  |YKBeat <parasite>|YKO
+    Also installs a parasite carrier you are holding.
+
+  |YKBlist parasites|YKO
+    Used inside The Brood Apothecary to see available parasites.
+
+  |YKBdescribe parasite <number or name>|YKO
+    Used inside The Brood Apothecary to inspect requirements, healing, cost,
+    duration, appetite, and burdens before buying.
+
+  |YKBpurge parasite|YKO
+    Used inside The Brood Apothecary to pay for removal of your active
+    parasite.
+
+|WKBLOCATION
+========
+
+|YKOThe Brood Apothecary is south of Xenor Road near the DarkWind City shop
+district. From the road, look for the narrow apothecary doorway.
+
+See also: |YKBhelp brood apothecary|YKO, |YKBhelp economy apothecary|YKO,
+|YKBhelp buffs|YKO, |YKBhelp inventory|YKO.

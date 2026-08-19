@@ -20,6 +20,10 @@ Constitution affects toughness and stamina.
 - Endure physical strain
 - Recover from hard fights with more room for error
 
+Your guild sets Constitution's base HP multiplier. That multiplier increases
+by one at every 50th level, so reaching Champion, Hero, Legend, Epic, and
+Mythic increases maximum HP even when Constitution does not change.
+
 ## Dexterity
 
 Dexterity affects coordination, balance, aim, and reflexes.
@@ -87,4 +91,3 @@ Examples:
 [Clades](clades.md), equipment, guild abilities, buffs, debuffs, sigils, and other effects can raise or lower total stats.
 
 Base stats are the points you train. Total stats are what your character has after bonuses and penalties.
-

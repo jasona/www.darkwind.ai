@@ -37,6 +37,25 @@ for our players.
   fingers, and two neck slots. Ordinary rings and amulets will fill
   the first available matching slot.
 
-  Use |YKOeq|WKO or |YKOmyeq|WKO to see what you are currently wearing.
+  Use |YKOeq|WKO or |YKOmyeq|WKO to see what you are currently wearing,
+  wielding, or using as active non-cybernetic internal equipment.
+  Use |YKOsmartequip|WKO to fill open armour and weapon slots and replace
+  weaker standard equipment using the same power scores shown by gearcheck.
+  Use |YKOloadout|WKO to save named armour and weapon presets and switch
+  between them outside combat. Loadouts do not change installed cyberware
+  or other internal equipment.
   Strength and level both help determine how much gear you can carry
   before becoming encumbered.
+
+|WKBITEM LEVEL
+|WKO==========
+
+  |YKOEquipment may have an item level showing where it belongs in game
+  progression. Ranked weapons penetrate part of the physical protection from
+  lower-level worn armour; ranked armour gains protection against lower-level
+  weapons. Equal-level ratings cancel. Item level is not automatically a
+  minimum character level—actual restrictions are listed separately. Most
+  equipment found in a cataloged area inherits the midpoint of that area's
+  recommended level range; special rewards may use their own level. Monsters
+  fighting with natural attacks or intrinsic armour use their monster level
+  when no effective weapon or worn armour supplies an item level.

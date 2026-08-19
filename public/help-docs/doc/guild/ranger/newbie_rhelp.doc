@@ -26,9 +26,9 @@ FIRST STEPS (do these immediately):
 
 HOW RANGERS WORK:
 -----------------
-- You earn SLOTS by advancing your guild level (type 'cost' to see
-  requirements, 'improve guild' to advance when ready).
-- Spend slots + experience to LEARN skills (type 'learn' to see what's
+- You earn Ranger XP in battle and gain guild levels automatically. Type
+  'cost', 'radvance guild', or 'gscore ranger' to see your progress.
+- Spend slots to LEARN skills (type 'learn' to see what's
   available, 'learn <skill>' to learn one).
 - Skills have TERRAIN requirements - some only work in certain places.
   Type 'check <terrain>' to see what works where.
@@ -43,8 +43,8 @@ skilltree / tree     View the entire skill tree and your progress.
 learn                See available skills and learn new ones.
 skills / myskills    See your learned skills.
 slots                See your available slots.
-cost / tally         See advancement costs.
-improve <stat>       Advance stats or guild level.
+cost / tally         See character costs and Ranger XP progress.
+improve <stat>       Advance stats, or show Ranger XP with 'improve guild'.
 rscore / rsc         Your full Ranger status report.
 rangers              See who else is online.
 ran <message>        Chat with other Rangers.

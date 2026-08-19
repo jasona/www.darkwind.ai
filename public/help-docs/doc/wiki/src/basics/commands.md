@@ -66,7 +66,9 @@ If there are several similar objects, add a number: `look corpse 2`, `get sword 
 | `wimpycmd <direction>` | Set the direction used by wimpy |
 | `consider <target>` | Judge a target where available |
 
-New adventurers also have `nheal`, `ncot`, `npunch`, and `nkick`.
+Levels 1–5 have `nheal`, `nbolt`, `ncot`, `ndomain`, `npunch`, and `nkick`.
+From levels 6–49, use their adventurer forms: `aheal`, `abolt`, `acot`,
+`adomain`, `apunch`, and `akick`.
 
 ## Help
 
@@ -102,4 +104,3 @@ Examples:
 - `talias bob bobert`
 
 Some commands cannot be aliased, including `get`, `drop`, `equip`, `wear`, `wield`, `take`, and `unwield`.
-

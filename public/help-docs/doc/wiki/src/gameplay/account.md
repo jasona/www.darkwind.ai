@@ -11,11 +11,16 @@ score, and a first newbie quest.
 
 | Command | Use |
 | --- | --- |
-| `tutorial` | Start or resume the tutorial |
+| `tutorial` | Show the current tutorial objective or status |
 | `tutorial status` | Show your current tutorial progress |
+| `tutorial continue` | Begin the objective shown in the current lesson |
 | `tutorial hint` | Get a hint for the current tutorial step |
-| `tutorial skip` | Skip the current tutorial step |
+| `tutorial skip` | Stop the tutorial for this character |
 | `tutorial restart` | Restart the tutorial from the beginning |
+
+Darkflow opens the tutorial automatically in a non-blocking hover. Other
+clients and screenreader mode receive the same complete tutorial in terminal
+text, controlled by the commands above.
 
 The tutorial is useful even for players familiar with other MUDs, because it
 teaches DarkWind-specific city locations and commands.
@@ -45,6 +50,10 @@ not preserve everything across reboot. Keep important coin in the bank and check
 | `password <none>` | Set a password when the character currently has a blank password |
 
 After entering the command, the game prompts for the new password twice.
+
+Passwords must be 8 to 16 printable characters long. Spaces are allowed, and
+all characters are significant. Accounts using the older password format are
+prompted once at login to choose a replacement password.
 
 Use a password that is not your character name, not a common word, and not reused
 from another site. Shared or guessed passwords can compromise every registered

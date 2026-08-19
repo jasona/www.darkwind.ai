@@ -1,6 +1,7 @@
 # Souvrael
 
-Work in progress: this page describes the Souvrael setting we are building toward, and current game content differs in places.
+Some places described here are known through lore before they can be reached.
+Use `areas souvrael` in game for available routes and level guidance.
 
 Souvrael is the great desert domain of Blackmar. Its walls rise from the Segovia Desert, its beaches touch the Gearnat Sea, and its roads vanish into dunes, oases, pyramids, snake temples, and older empires buried under sand.
 

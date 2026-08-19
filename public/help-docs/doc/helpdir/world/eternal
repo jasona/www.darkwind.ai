@@ -9,6 +9,8 @@ Basic commands:
 
   eternal enter [floor]
   eternal status
+  eternal shop
+  eternal buy <item>
   eternal leave
   eternal rejoin
   eternal leaderboard [v2|legacy]
@@ -56,5 +58,13 @@ party is assembled, any group checkpoints for that composition.
 Leaderboard entries show the starting floor when a run began from a
 checkpoint. Skipped floors do not grant reward compensation. V2 and
 legacy leaderboards are separate because the dungeon rules are different.
+
+Leader and boss kills leave personal reward chests. Daily limits govern
+premium treasure, while materials use separate supply rolls: gilded and
+plain chests guarantee ember materials and repeat shard caches retain a
+smaller material chance. Tier-appropriate recipe cards gain a guaranteed
+drop after five eligible misses. Use eternal status to inspect chest and
+card-pity counters. The shard shop sells persistent materials and recipe
+cards at fixed prices for a deterministic alternative.
 
 See also: help eternal_dungeon, help leaderboard

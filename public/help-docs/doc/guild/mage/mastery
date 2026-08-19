@@ -1,0 +1,15 @@
+Every useful working keeps its own practice history.
+
+  Copied          0 casts     ordinary casting
+  Practiced      50 casts     first rune socket; barrage access if eligible
+  Fluent        150 casts     better efficiency and quicker barrage
+  Inscribed     250 casts     second rune socket; better efficiency
+  Instinctive  1000 casts     best ordinary efficiency and barrage cadence
+
+A useful cast normally adds one point. Repeating the same page faster than the
+spellbook can settle it, or attacking something far below your level, does not
+teach the working. Delayed workings count when they resolve successfully, not
+when their geometry first opens.
+
+Use "spellbook" for every known page, "spellbook <working>" for one page, and
+"runes" for the patterns that can occupy its sockets.

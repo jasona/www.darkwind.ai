@@ -9,5 +9,5 @@ to the enemy.
 
 SP:  3 SP (proc)
 
-*Effects(s)*: Chance of +12 damage on hit
-
+*Effects(s)*: Chance of bracket-scaled damage on hit: +12 below Hero, +15 at
+Hero, +18 at Legend, +21 at Epic, and +24 at Mythic.

@@ -1,0 +1,27 @@
+|CKBNecro|000
+
+|CK0Necros are physically fragile death-mages who combine destructive spells,
+curses, runes, battlefield control, and undead followers. They rely on magical
+preparation and minion management rather than ordinary armour and weapons.|000
+
+|CKBHow it plays|000
+|CK0Two personal runes support the Necro's spell catalog and supernatural power.
+The guild can raise and direct undead, spread diseases and curses, protect
+itself with deathly wards, and escalate a fight through rituals and sustained
+spell pressure.|000
+
+|CKBCore skills|000
+|CK0nraise creates an undead follower, nliege and nmarch direct minions,
+ncurse, npox, nfester, and nplague weaken enemies, nburst and ndeath provide
+damage, nbshield and nward defend the caster, and nritual prepares deeper
+necromancy.|000
+
+|CKBBest fit|000
+|CK0Choose Necro if you enjoy caster fragility, commanding followers, combining
+afflictions, and managing a dangerous toolkit whose strength comes from death
+rather than direct martial durability.|000
+
+|CK0After joining, use |CKBnechelp intro|CK0, |CKBnechelp spell|CK0, and
+|CKBnechelp follower|CK0 for the full grimoire.|000
+
+# alias: necromancer, necromancers, necros

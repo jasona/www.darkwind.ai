@@ -1,11 +1,7 @@
                          |BKB-= |CKBShadowstep |BKB=-
                
-|MKOMasking their movements with shadows, thieves can land a 
-nearly instantaneous strike against an opponent. Shadowstep
-costs more than Quick Strike, but it opens a deeper wound,
-causes blood loss immediately on impact, and keeps that
-bleed active much longer. It is meant to feel like your
-premium early bleed setup, not just a tiny opener.
+|MKOShadowstep is a compatibility name for Quick Strike. Use Slip
+to break away from combat.
 
-|CKOGLVL required: |GKB3
+|CKOGLVL required: |GKB4
 |CKOSyntax: |YKOshadowstep <target>          |CKOCost: |WKOVaried

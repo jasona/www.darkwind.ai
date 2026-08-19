@@ -1,0 +1,33 @@
+|CKBStreet Samurai Contracts|000
+
+|CK0A contract is Street Samurai membership. An active contract authenticates
+the Cortex OS, firmware commands, battle GXP, Edge and Heat, maintenance
+automation, the guild strain contribution, clinic coverage, and access to the
+private Cortex network.|000
+
+|CKBContract states|000
+|CK0Primary means Street Samurai is the character's main guild. Secondary means
+another guild is primary while Street Samurai remains active. Both states can
+use Street Samurai progression, firmware, hardware, services, and the private
+network normally.|000
+
+|CK0Inactive means membership still exists, but equipped gear conflicts with a
+guild restriction. Firmware, battle GXP, Edge and Heat activity, maintenance
+automation, and the guild strain contribution pause until the conflict is
+removed. Installed implants and network membership remain in place.|000
+
+|CKBDiagnosing a paused contract|000
+|CK0Samstatus and dashboard identify the contract as inactive. Review recently
+equipped armour, weapons, or other restricted gear, remove the conflict, and
+check the status again. Inactivity is not caused by low integrity, high
+fragmentation, low health, or an unfinished quest.|000
+
+|CKBLeaving|000
+|CK0Leaving is different from becoming inactive. It removes membership and
+guild systems and permanently destroys installed Street Samurai signature
+implants. Unrelated cyberware is unaffected. Read samhelp leaving before
+making that decision.|000
+
+|CK0Use samwho to see the primary, secondary, or inactive state of visible
+connected operators. Use samhelp hardware for what remains installed and
+samhelp maintenance for problems that do not involve contract state.|000

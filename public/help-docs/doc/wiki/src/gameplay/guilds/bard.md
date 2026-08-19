@@ -1,7 +1,7 @@
 # Bard
 
-Work in progress: Bard is being built toward this design, and current game
-behavior differs in places.
+In-game guild help is authoritative for Bard training and abilities available
+to your character.
 
 Bards turn attention into power. Songs, stories, rumors, morale, reputation,
 old lore, loyal fans, and enchanted instruments all become tools in the hands

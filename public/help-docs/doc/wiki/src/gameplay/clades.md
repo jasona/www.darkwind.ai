@@ -1,7 +1,8 @@
 # Clades
 
-Work in progress: Clades are being built toward this design. Some current
-rooms and commands still use the older word "race".
+Some rooms and commands still use the older word "race" for a character's
+clade. The available choices are the ones presented during creation or by an
+earned transformation.
 
 A clade is the body, ancestry, culture, and old magic a character carries into
 the adventuring life. Clades change stats, size, vision, resistances,
@@ -413,10 +414,11 @@ and chaos, and deeply vulnerable to holy order.
   tendency
 - Languages: Common, Demonic
 
-## Future Unlock Clades
+## Rumored Clades
 
-The following clades are design targets for remort, shrine, quest, class, or
-other special unlocks. They are not normal Hall of Races choices.
+Stories describe other bodies tied to remort, shrines, quests, and distant
+domains. They are not normal Hall of Races choices and should not be treated
+as available unless the game presents the transformation to your character.
 
 ### Ashborn
 

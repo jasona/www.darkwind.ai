@@ -6,3 +6,10 @@
 |CK0Set only lends his power to his followers that follow this evil path.
 |CK0Additionally, a priest may find that some or most of their beneficial
 |CK0prayers will only apply to other evil aligned players.
+|CK0
+|CK0At guild level 6, 'dispensation' petitions Set for a five-minute
+|CK0exception to the priest's own alignment restriction. It does not bypass
+|CK0target alignment or any other rule. During the exception, all direct and
+|CK0reserved HP and SP prayer costs, and all prayer cooldowns, are 25 percent
+|CK0higher. Dispensation itself has no HP or SP cost and has a ten-minute
+|CK0support cooldown.

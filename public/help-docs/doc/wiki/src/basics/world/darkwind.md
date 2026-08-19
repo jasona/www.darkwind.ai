@@ -1,6 +1,6 @@
 # Darkwind
 
-Work in progress: this page describes the Darkwind setting we are building toward, and current game content differs in places.
+Use `areas darkwind` in game for available routes and level guidance.
 
 Darkwind is the rebuilt heart of Blackmar. The first immortal city rose here after the Dark Wind, on the bay where the surviving clades gathered and began again. Its streets are open to almost everyone, which makes the city less pure kingdom and more living crossroads: merchants, guilds, pilgrims, rogues, adventurers, priests, and old grudges all pass through the same gates.
 

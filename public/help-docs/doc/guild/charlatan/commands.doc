@@ -1,46 +1,45 @@
-|GKB==========================================================================|XX0
-|GKB||XX0 Ability        |GKB||XX0  Command                |GKB||XX0   Prerequisite?   |GKB||XX0  Focus  |GKB||XX0
-|GKB================================= COMMON =================================|XX0
-|GKB||XX0 stat potion    |GKB||XX0 cpotion |YK0<chr|XX0||YK0con|XX0||YK0dex|XX0||XX0   |GKB||XX0                   |GKB||XX0 A  / I* |GKB||XX0
-|GKB||XX0                |GKB||XX0          |YK0int|XX0||YK0str|XX0||YK0wis>   |GKB||XX0                   |GKB||XX0         |GKB||XX0
-|GKB||XX0 heal potion    |GKB||XX0 cpotion heal            |GKB||XX0 stat potion       |GKB||XX0 A  / I* |GKB||XX0
-|GKB||XX0 detox potion   |GKB||XX0 cpotion detox           |GKB||XX0 heal potion       |GKB||XX0 A  / I* |GKB||XX0
-|GKB||XX0 regen potion   |GKB||XX0 cpotion |YK0<regensp|XX0|       |GKB||XX0 detox potion      |GKB||XX0 A  / I* |GKB||XX0
-|GKB||XX0                |GKB||XX0          |YK0regenhp>|XX0       |GKB||XX0                   |GKB||XX0         |GKB||XX0
-|GKB||XX0 acid potion    |GKB||XX0 cpotion acid            |GKB||XX0                   |GKB||XX0 A  / I* |GKB||XX0
-|GKB||XX0 appraise       |GKB||XX0 cappraise |YK0<target>      |GKB||XX0                   |GKB||XX0 A* / I  |GKB||XX0
-|GKB||XX0 critical       |GKB||XX0 ccritical               |GKB||XX0 appraise          |GKB||XX0 A* / I  |GKB||XX0
-|GKB||XX0 ventriloquism  |GKB||XX0 cventriloquism |YK0<target> |GKB||XX0                   |GKB||XX0 A* / I  |GKB||XX0
-|GKB||XX0 dazzle         |GKB||XX0 cdazzle |YK0<target>        |GKB||XX0                   |GKB||XX0 A* / I  |GKB||XX0
-|GKB||XX0 economics      |GKB||XX0 cbuy/csell              |GKB||XX0                   |GKB||XX0 A* / I  |GKB||XX0
-|GKB================================ ALCHEMY =================================|XX0
-|GKB||XX0 elemental      |GKB||XX0 cpotion |YK0<fire|XX0||YK0ice|XX0||XX0      |GKB||XX0 acid potion       |GKB||XX0 A       |GKB||XX0
-|GKB||XX0   potion       |GKB||XX0          |YK0lightning>|XX0     |GKB||XX0                   |GKB||XX0         |GKB||XX0
-|GKB||XX0 poison dart    |GKB||XX0 cpoison                 |GKB||XX0 elemental potion  |GKB||XX0 A       |GKB||XX0
-|GKB||XX0 cook ash       |GKB||XX0 ccook |YK0<ash>             |GKB||XX0 poison dart       |GKB||XX0 A       |GKB||XX0
-|GKB||XX0 flight potion  |GKB||XX0 cpotion |YK0<flying>        |GKB||XX0 cook ash          |GKB||XX0 A       |GKB||XX0
-|GKB||XX0 calter         |GKB||XX0 calter |YK0<weapon|XX0||YK0armour>|XX0  |GKB||XX0                   |GKB||XX0 A       |GKB||XX0
-|GKB||XX0 tattoo         |GKB||XX0 ctattoo                 |GKB||XX0 calter            |GKB||XX0 A       |GKB||XX0
-|GKB================================ ILLUSION ================================|XX0
-|GKB||XX0 sucker punch   |GKB||XX0 spunch |YK0<target>         |GKB||XX0 critical          |GKB||XX0      I  |GKB||XX0
-|GKB||XX0 confuse        |GKB||XX0 confuse |YK0<target>        |GKB||XX0 ventriloquism     |GKB||XX0      I  |GKB||XX0
-|GKB||XX0 shadow         |GKB||XX0 cshadow |YK0<amount>        |GKB||XX0 confuse           |GKB||XX0      I  |GKB||XX0
-|GKB||XX0   illusion     |GKB||XX0                         |GKB||XX0                   |GKB||XX0         |GKB||XX0
-|GKB||XX0 blur           |GKB||XX0 cblur                   |GKB||XX0 dazzle            |GKB||XX0      I  |GKB||XX0
-|GKB||XX0 bluff          |GKB||XX0 cbluff |YK0<target>         |GKB||XX0 blur              |GKB||XX0      I  |GKB||XX0
-|GKB||XX0 evade hunter   |GKB||XX0 cevade                  |GKB||XX0                   |GKB||XX0      I  |GKB||XX0
-|GKB||XX0 escape         |GKB||XX0 cescape |YK0[home]          |GKB||XX0 evade             |GKB||XX0      I  |GKB||XX0
-|GKB||XX0 sense watcher  |GKB||XX0 csense                  |GKB||XX0 cescape           |GKB||XX0      I  |GKB||XX0
-|GKB================================= OTHER ==================================|XX0
-|GKB||XX0 cemote    ccemote    chist    cgtitle    cskill    cloakcolor    cwho  |GKB||XX0
-|GKB==========================================================================|XX0
-|GKB||XX0           A = Alchemy                        I = Illusion              |GKB||XX0
-|GKB||XX0        * = Skill is of a lesser degree than the opposing focus         |GKB||XX0
-|GKB==========================================================================|XX0
-|GKB||XX0 See also:  chelp/help <command>                                        |GKB||XX0
-|GKB||XX0            chelp emotes                                                |GKB||XX0
-|GKB==========================================================================|XX0
-|GKB||XX0  You can train skills in the wagons off of the fireside. Drina will    |GKB||XX0
-|GKB||XX0 train you in common skills (northeast of the fireside). Koloro (west)  |GKB||XX0
-|GKB||XX0 handles alchemy, and Tshurka (south) handles the skills of illusion.   |GKB||XX0
-|GKB==========================================================================|XX0
+|CKBThe Charlatan's Working Ledger|000
+
+Information, reputation, and gossip:
+
+  charlhelp [topic|command]      The little black book; alias: chelp
+  chskills [available]           Your trick ledger; alias: cskills
+  gscore charlatan               Rank, guild XP, roads, and professions
+  croads train <road>            Invest one available road point
+  schemes [list|info <name>]      Inspect Rank 35+ scheme notes
+  schemes learn <name>            Pay Drina to learn an open scheme
+  schemes activate <name>         Fill an empty active slot at Drina
+  schemes swap <old> for <new>    Pay Drina to rewrite the active loadout
+  charlatan <message>            Guild line; alias: cchat
+  chist [lines]                   Recent Confidence gossip
+  cwho                            Visible Charlatans; alias: charlatans
+
+Misdirection -- for marks who insist on paying attention:
+
+  confuse [foe]
+  suckerpunch [foe]              Alias: spunch
+  distract [foe]
+  avoid
+
+Volatility -- chemistry with an exit strategy:
+
+  brewacid
+  brewelement <fire|ice|lightning>  Alias: elementpotion
+  cookash <grey|red|blue|mixed>  Alias: ccook
+  concoct <red salt|blue mixer|cutting bitters>
+                                  Alias: cmix
+
+Contraband -- improvements without warranties:
+
+  loadweapon <weapon> with <corrosive|dazzling|oiled|silvered|flaming|frozen|poisoned|shocking>
+  cdip <dart|darts> in <acid flask|element flask|poison>
+                                  Aliases: cpoison, poisondart
+  stretchpoison <poison> onto <weapon>
+  pocketsand [foe]
+
+The caravan shops also sell ordinary throwing darts. Carry one and use
+'throw <target>'. Cdip can turn one real flask or poison dose into as many as
+ten coated darts; Liquid Assets removes that limit. Acid coatings can leave a
+victim Sundered.
+
+Use 'charlhelp <command>' or 'chskills' for costs and requirements.

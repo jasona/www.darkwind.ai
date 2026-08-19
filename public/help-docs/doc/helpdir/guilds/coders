@@ -1,34 +1,19 @@
-|WKBStandard guilds:
+|YK0#|YKB Guild and Class Developers|000
 
-|YKOBard            |YKBDink
-|YKOCleric          |YKBZureal
-|YKOFighter         |YKBThomas
-|YKOGarou           |YKBDink
-|YKOLunar           |YKBKlaughihin
-|YKOMage            |YKBKlaughihin
-|YKONinja           |YKBCales
-|YKOPaladin         |YKBAcer
-|YKOPriest          |YKBCales
-|YKOPsionicist      |YKBAiken
-|YKOSwashbuckler    |YKBCales
-|YKOThief           |YKBDink
+|YK0##|YKB Guilds|000
 
-|WKBMythic guilds:
+|CK0Acer|GK0: Bard, Cleric of Mitra, Fighter, Paladin, Druid, Monk, Ranger,
+Street Samurai|000
+|CK0Cales|GK0: Berserker, Mage, Ninja, Priest of Set, Swashbuckler, Thief,
+Necro, Charlatan, Blood Mage, Deathknights|000
+|CK0Dink|GK0: Garou, Bastet/Gurahl|000
 
-|YKOBaster/Gural    |YKBDink
-|YKOBattleMage      |YKBKlaughihin
-|YKOBloodMage       |YKBCales
-|YKODeathknights    |YKBCales
-|YKODragon          |YKBThomas
-|YKODruid           |YKBCales/Dink
-|YKOGlyph           |YKBKlaughihin
-|YKOMonk            |YKBAcer
-|YKOMorpher         |YKBKlaughihin
-|YKONecro           |YKBCales
-|YKORanger          |YKBDink
-|YKOSamurai         |YKBCales
+|YK0##|YKB Classes|000
 
+|CK0Acer|GK0: Dragon, Morpher, Vampire|000
+|CK0Cales|GK0: Artificer, Psionicist|000
 
+|YK0##|YKB See also|000
 
-|XX0See Also:
-|XX0    |CKB"help list guilds"|XX0
+|CKBhelp guilds|000
+|CKBhelp classes|000

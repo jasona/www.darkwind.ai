@@ -1,0 +1,85 @@
+Living Status Effects
+=====================
+
+Burning, Bleeding, Chilled, Freezing, Exposed, and Sundered are stored directly on
+every living. Include <status_effects.h> and use the STATUS_* bit flags.
+The flags are saved compatibility contracts; never renumber or reuse one.
+
+Application
+-----------
+  varargs status apply_status_effect(int effect, int strength, int duration,
+    object source, status silent)
+
+Only one STATUS_* bit may be applied per call. duration is in seconds and is
+rounded up to a two-second heartbeat. Burning derives its duration from its
+stack count and ignores duration. source is optional and is converted to a
+primitive identifier immediately; no object reference is saved.
+Set silent for a refresh or transformation that should update state and GMCP
+without producing application messages.
+
+Prefer the named wrappers in normal content:
+
+  target->apply_burning(stacks, attacker);
+  target->apply_bleeding(strength, seconds, attacker);
+  target->apply_chilled(seconds, attacker);
+  target->apply_freezing(seconds, attacker);
+  target->apply_exposed(seconds, attacker);
+  target->apply_sundered(strength, seconds, attacker);
+
+All functions return 1 when the effect was accepted and 0 for invalid input.
+
+Queries And Removal
+-------------------
+  int query_status_effect_mask()
+  status query_status_effect(int mask)
+  int query_status_effect_strength(int effect)
+  int query_status_effect_remaining(int effect)
+  int query_status_effect_duration(int effect)
+  object query_status_effect_source(int effect)
+  mapping query_status_effects()
+  varargs status remove_status_effect(int mask, status silent)
+  void clear_all_status_effects()
+
+Queries and removal may use combined masks. Strength and duration queries
+require one exact bit. Source queries resolve the stored primitive identifier
+to a currently loaded living, or return 0. For example, a cure for either
+cold tier can use:
+
+  target->remove_status_effect(STATUS_COLD);
+
+query_status_effects() returns a deep copy. Do not inspect or modify the
+living's saved state mapping directly.
+
+Effect Contracts
+----------------
+  Burning X
+    Adds stacks up to max(1, target level). Each heartbeat deals X fire
+    damage, then replaces X with floor(X/2). The 1-stack tick is final.
+
+  Bleeding X
+    Adds strength up to max(5, target level/5). X is added to melee damage
+    before defensive modifiers and absorption. Movement has a 25 percent
+    chance to deal X slash damage. The caller supplies the duration.
+
+  Chilled / Freezing
+    Chilled reduces final swings by 10 percent and adds 1 second to new
+    set_spell_limit() cooldowns. Applying Chilled twice promotes it to
+    Freezing. Freezing uses 20 percent and 2 seconds. Direct Freezing is
+    allowed. These do not affect custom call_out or soul-owned timers.
+
+  Exposed
+    Adds 5 percentage points to incoming critical chance. It does not stack;
+    reapplication keeps the longer duration.
+
+  Sundered X
+    Subtracts X from final armour class, after equipment and armour
+    specialization. It stacks to 3 and reapplication refreshes duration.
+    General acid damage has a bounded chance to apply one stack.
+
+Lifecycle And Display
+---------------------
+State is primitive and saved on the living. Timers pause when the player
+object is absent and resume after restore. Death clears all effects. The
+`buffs` command and Char.Defences GMCP list expose them as non-clearable
+debuffs. Add future display names to GLOBAL_STATUS_EFFECT_MAPPING in
+<buffs.h>; do not put these bit flags in GLOBAL_DEBUFF_MAPPING.

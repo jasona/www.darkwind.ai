@@ -6,6 +6,7 @@ without locking you into a separate training area.
 Commands:
   tutorial          Show your current tutorial step.
   tutorial status   Show whether the tutorial is active, skipped, or finished.
+  tutorial continue Begin the objective shown in the current lesson.
   tutorial hint     Repeat a concrete command suggestion.
   tutorial skip     Stop the tutorial for this character.
   tutorial restart  Start over if you skipped or did not finish.
@@ -15,7 +16,27 @@ channel, getting starter equipment from Erga, wearing and wielding gear,
 traveling to the newbie farm, basic combat safety, newbie combat commands,
 score, and accepting a first newbie quest.
 
+In Darkflow, a non-blocking tutorial hover opens automatically and stays with
+you while the tutorial is active. It shows the current objective, progress,
+hint, example command, and travel directions without taking focus from the
+command line. Continue begins each objective. Minimizing the hover does not
+skip the tutorial.
+
+Other clients and screenreader mode receive the complete tutorial in terminal
+text. Use tutorial continue in place of the hover's Continue button. Every
+objective, hint, skip, and restart remains available from the command line.
+
+During travel lessons, directions are computed from wherever you are actually
+standing. Tutorial hint includes the current route. If you walk the wrong way
+for a couple of rooms, the text fallback calls out a correction. If no route can
+be charted, ncot returns you to the Center of Town so the route can be plotted
+again.
+
+Each lesson also names a help topic to read for the bigger picture, and the
+journey continues after the tutorial in help guide.
+
 Erga's Newbie Shop gives level 1-5 characters free starter gear with the
 equipment command. The tutorial shows how to wear the leather and shield,
 wield the dagger, find the newbie farm, and practice kill, wimpy, mon, nheal,
-nkick, npunch, and ncot.
+nbolt, nkick, npunch, and ncot.
+# see: guide, stage1

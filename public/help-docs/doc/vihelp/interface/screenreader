@@ -11,12 +11,18 @@ set screenreader on
 set screenreader off
   Turn screenreader support off.
 
+Darkflow closes its visual tutorial hover when screenreader support is
+turned on and repeats the current objective as linear terminal text.
+Turning screenreader support off restores the hover when the tutorial is
+still active. Use "tutorial continue", "tutorial hint", "tutorial skip",
+and "tutorial restart" to control it entirely from the command line.
+
 set
   Show your current settings.
 
 When screenreader support is on, some commands use plainer language, fewer
 visual tables, and less decorative formatting. The help command also checks
-/doc/vihelp first for screenreader-specific help topics, then falls back to the
+/public/docs/vihelp first for screenreader-specific help topics, then falls back to the
 normal help system.
 
 Useful screenreader-friendly commands include look, actions, exits, npcs,

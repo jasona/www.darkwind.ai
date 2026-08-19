@@ -1,3 +1,14 @@
 Usage: feelings [<prefix>]
-       This command lists all the standard feelings on
-       Darkwind [beginning with the prefix if supplied].
+       feelings guild [<guild>] [<prefix>]
+
+Lists standard feelings and the guild feelings currently available to you.
+The optional prefix limits the results by name. Guild listings never reveal
+emotes belonging to guilds you cannot currently use.
+
+Examples:
+  feelings grin
+  feelings guild
+  feelings guild Street_Samurai
+  feelings guild Street_Samurai jack
+
+See also: emotes, emoteapropos, guild emotes, semote

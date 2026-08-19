@@ -1,4 +1,4 @@
-/doc/attribute/ALLOW_DUAL_WIELD
+/public/docs/attribute/ALLOW_DUAL_WIELD
 
 Format: (Living_Object)->set_attribute("ALLOW_DUAL_WIELD", iValue);
 

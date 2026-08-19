@@ -1,6 +1,7 @@
 # Islands
 
-Work in progress: this page describes the island frontiers we are building toward, and current game content differs in places.
+Some islands are known through lore before a safe route to them is known.
+Use `areas islands` in game for available routes and level guidance.
 
 The islands around Blackmar gather the world's strangest edges. Some are coastal kingdoms. Some float in the sky. Some feel like pocket-realms caught around a volcano, a cloud, a ruined tower, or a door that never belonged on a map.
 

@@ -1,0 +1,25 @@
+|CKBConcoct: Season to Taste, Disclose Nothing|000
+
+Syntax: concoct <red salt|blue mixer|cutting bitters>
+Alias:  cmix
+
+At Rank 2 and Volatility 2, prepare one additive that lasts thirty minutes.
+Use 'mix <additive> into <carried food or drink>'. One packet treats an entire
+snack, meal, jug, or keg, provided the fare is not above the maker's level.
+
+  Red restorative salt
+    Alchemy 75; four red ash. Improves health recovery and adds brief health
+    regeneration, but collects spell points at the door.
+
+  Effervescent blue mixer
+    Alchemy 75; four blue ash. Improves spell-point recovery and adds brief
+    spell-point regeneration, but takes a small bite out of the customer.
+
+  Cutting bitters
+    Herbalism 50; three grey ash. Improves both kinds of healing and makes the
+    meal easier to stomach, but briefly ruins concentration.
+
+Higher Alchemy helps the red and blue mixtures, within reason. The packet is
+transferable; the warranty is not. Inspect treated fare for exact values.
+When consumed, it tells the customer how strong the lingering recovery is and
+how long it will last. A humble meal does not secretly water down the dose.

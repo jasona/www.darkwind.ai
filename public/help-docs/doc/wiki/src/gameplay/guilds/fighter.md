@@ -1,7 +1,7 @@
 # Fighter
 
-Work in progress: Fighter is being built toward this design, and current game
-behavior differs in places.
+In-game guild help is authoritative for Fighter training and abilities
+available to your character.
 
 Fighters are trained combatants. They own weapons, armor, shields, positioning,
 endurance, discipline, and the practical art of keeping a battle from falling
@@ -85,21 +85,31 @@ coverage, protection, warmth, and fit. Balance improves a suitable weapon.
 
 ## Advancement
 
-Fighters advance through drills, endurance practice, weapon use, ally defense,
-inspection, armsman service, and hard fights.
+Fighters advance through battle. Every worthy NPC kill (killing blow, or at
+least 10% of the victim's health dealt) awards Fighter XP — more for tough
+prey and bosses, less for repeat farming, nothing for trivial kills. Guild
+levels 2 through 15 pop automatically as XP accumulates; there is no exp or
+gold cost and no purchase step.
 
-| Rank | Opens |
-| --- | --- |
-| Recruit | Feint, shieldblock, consider, punch, guild stats |
-| Shieldbearer | Defend, make shield, make torch, shield rush |
-| Tested Blade | Guts, fighter grunts, first endurance discipline |
-| Armsman | Balance weapon, kick, recruit armsman |
-| Veteran | Weapon inspection, armsman call |
-| Sergeant | Thrust, disarm, armor inspection |
-| Banner Guard | Hack, behead trophies, better field presence |
-| Captain | Charge, counter, formation work |
-| Weaponmaster | Frenzy, rage weapon, surge, cleave |
-| Battlelord | Veteran armsmen, advanced drills, command presence |
+Two gates hold advancement back: your guild level can never exceed your
+character level, and your combined guild levels across guilds can never
+exceed your character level. XP earned while gated is banked and the levels
+pop when you next advance your character. Skills unlock by guild level as
+listed under `fs`.
+
+| To level | Fighter XP | To level | Fighter XP |
+| --- | --- | --- | --- |
+| 2 | 1,000 | 9 | 16,000 |
+| 3 | 2,000 | 10 | 20,000 |
+| 4 | 3,000 | 11 | 24,000 |
+| 5 | 5,000 | 12 | 28,000 |
+| 6 | 7,000 | 13 | 32,000 |
+| 7 | 10,000 | 14 | 36,000 |
+| 8 | 13,000 | 15 | 40,000 |
+
+Total to Battle Lord (level 15): 237,000 Fighter XP. `fstats` shows your
+progress; the battle record survives leaving the guild and is restored on
+rejoining.
 
 ## Fighter Commands
 

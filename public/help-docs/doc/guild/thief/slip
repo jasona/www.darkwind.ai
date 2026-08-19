@@ -1,0 +1,10 @@
+                          Slip
+---------------------------------------------------------------------
+
+Break from combat through an ordinary visible exit and hide briefly in
+the destination. Slip executes the real movement command, so doors,
+locks, movement blocks, and exit hooks still apply. A failed move still
+commits the attempt.
+
+  GLVL: 4
+  Syntax: slip <direction>

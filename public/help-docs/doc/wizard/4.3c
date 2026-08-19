@@ -1,0 +1,464 @@
+                                                                          Rev. 0
+
+                       |CKBCoding Boss Monsters
+                      |BKB====================
+
+Purpose
+|BKB=======
+
+|WKOThis document explains the shared BOSS_NPC inherit: when to use it,
+how tiers and phases are scaled, how special attacks and personal rewards
+work, and how a boss room must own respawning. Read |MKOwizhelp 4.3|WKO and
+|MKOwizhelp 4.3b|WKO first. A boss is still a monster and uses all normal
+monster descriptions, races, equipment, resistances, and combat functions.
+
+The inherit is not a substitute for encounter design. A good boss has a
+recognizable identity, readable phase changes, attacks which ask different
+questions of a group, and a room from which players can retreat. More hit
+points alone make a longer monster, not a better boss.
+
+|BKB-----------------------------------------------------------------
+|CKBWHEN TO USE BOSS_NPC
+|BKB-----------------------------------------------------------------
+
+Use BOSS_NPC when the creature needs one or more of the following:
+
+|BKB- |WKOA named encounter with one or more fresh hit-point phases.
+|BKB- |WKOGroup-aware tier scaling and per-hit damage caps.
+|BKB- |WKOA scheduled set of attacks with targets and cooldowns.
+|BKB- |WKOContributor tracking and personal reward chests.
+|BKB- |WKOA persistent, blueprint-wide respawn cooldown.
+|BKB- |WKOThe standard boss event, death, and adaptive-counter lifecycle.
+
+Do not use BOSS_NPC merely to mark a captain, shopkeeper, or ordinary rare
+spawn as important. MONSTER plus normal combat mods is cheaper and clearer
+when the encounter does not need boss lifecycle behavior.
+
+The first lines of a boss should normally be:
+
+|YKO#include <mudlib.h>
+#include <types.h>
+inherit BOSS_NPC;
+
+|WKOUse <blocks.h> only when the monster directly refers to BLK_* constants.
+Use a legal race from |MKO/open/INCLUDE/monster_race.h|WKO.
+
+|BKB-----------------------------------------------------------------
+|CKBMINIMUM BOSS SETUP
+|BKB-----------------------------------------------------------------
+
+The normal monster reset contract still applies:
+
+|YKOvoid reset(int iArg)
+{
+  if (!is_clone(this_object())) return;
+  ::reset(iArg);
+  if (iArg) return;
+
+  set_name("ember warden");
+  set_level(55);
+  set_boss_name("the Ember Warden");
+  set_boss_tier(2);
+  /* normal monster setup and set_boss_phases() follow */
+}
+
+|WKOCall the inherited reset exactly once. Set the normal name and level before
+the phase list. set_level() establishes the base level used by phases which do
+not provide their own level.
+
+|GKBset_boss_name(string name);
+
+  |WKOThis is the encounter name used in boss information, reward chests, and
+  event announcements. It may be more complete than set_name().
+
+|GKBset_boss_tier(int tier);
+
+  |WKOSets tier 1 through 5. Values below 1 become tier 1; values above 5 use
+  the tier-5 profile. Tier is a mechanical group profile, not a synonym for
+  monster level.
+
+|GKBset_boss_reset_timeout(int seconds);
+
+  |WKOSets the time out of combat before an abandoned encounter returns to
+  phase one. The minimum is 10 seconds and the default is 45. Values from
+  60 to 120 seconds are common when players may need a short retreat.
+
+|GKBset_boss_respawn_cooldown(int seconds);
+
+  |WKOOverrides the tier default. This is a persistent cooldown for the boss
+  blueprint, not merely a call_out in one loaded room. Use 0 to restore the
+  tier-derived default; 0 does not disable the cooldown.
+
+|GKBset_boss_overlevel_roasts(status enabled);
+
+  |WKOOverlevel insults in the Events channel are opt-in. Normal boss victory
+  announcements are the default. Enable this only when the public tone is an
+  intentional part of the encounter.
+
+|BKB-----------------------------------------------------------------
+|CKBTIERS AND THE NUMBERS YOU ACTUALLY GET
+|BKB-----------------------------------------------------------------
+
+Phase hp, wc, and ac are inputs to the tier profile. They are not final
+combat values. The core tier values are:
+
+|YKO Tier  Group  HP Mult.  WC Bonus  AC Bonus  Reduction  Hit Cap  Respawn
+   1      1      x1.60       +2        +4         8%       18%     10 min
+   2      2      x3.00       +6       +10        18%       12%     15 min
+   3      3      x5.50      +10       +16        32%       11%     20 min
+   4      4     x10.00      +14       +24        50%        6%     30 min
+   5      5     x18.00      +20       +34        68%        3%     40 min
+
+|WKOThe hit cap is a percentage of the smallest scaled phase pool. Higher tiers
+also add outgoing damage, accuracy, swing rate, regeneration, attack cadence,
+and group-pressure mechanics. Those bonuses weaken when fewer than the
+expected number of contributors are present. The framework does not make an
+undersized group more lethal simply because players are missing.
+
+Example: a tier-2 phase with "hp":5000 starts with 15000 HP. Do not first
+calculate a final 15000-HP phase and then place 15000 in the mapping unless
+you actually intend a 45000-HP phase.
+
+Tier 3 and above also choose adaptive counters from the contributing group's
+guild composition. These temporarily pressure magic, healing, burst damage,
+martial attackers, or pets. They are part of the tier profile; do not add a
+second homemade anti-group system without first reviewing the combined fight.
+
+|BKB-----------------------------------------------------------------
+|CKBPHASES
+|BKB-----------------------------------------------------------------
+
+|GKBset_boss_phases(mapping *phases);
+
+  |WKOReplaces the phase list. A lethal hit before the final phase is capped,
+  the transition is announced, and the next phase receives a fresh scaled HP
+  pool. The final phase dies normally.
+
+|GKBadd_boss_phase(mapping phase);
+
+  |WKOAppends one phase. Prefer one set_boss_phases() call when the full fight
+  is known in reset; it is easier to read and review.
+
+A phase mapping supports:
+
+|YKOname               Player-visible phase name.
+hp                 Base HP before the tier multiplier.
+wc                 Base weapon class before the tier bonus.
+ac                 Base armour class before the tier bonus.
+level              Optional level for this phase.
+attacks            Array of attack mappings.
+attacks_per_round  Maximum successful scheduled attacks each round.
+transition_msg     Room text shown when entering this phase after phase one.
+enter_func         Named function called after phase stats are applied.
+
+|WKOThe enter function receives the phase mapping and the one-based phase
+number:
+
+|YKOvoid awaken_furnace(mapping mPhase, int iPhase)
+{
+  /* Change room fixtures, summon support, or update encounter state. */
+}
+
+|WKOAn enter function also runs when phase one is applied during setup or an
+encounter reset. Make it idempotent. Validate the room with objectp() before
+calling it, and clean up anything it creates when the encounter resets.
+
+Use a transition message to explain what mechanically changed. Good phase
+text identifies a new stance, exposed weakness, summoned hazard, or changed
+arena. Color strings are permitted, but end them with a reset. The framework
+also repairs legacy newline and white-color tokens in transition text.
+
+|BKB-----------------------------------------------------------------
+|CKBPHASE ATTACKS
+|BKB-----------------------------------------------------------------
+
+Each phase attack is a mapping. The scheduler walks the list in order until
+attacks_per_round attacks have fired. Every attack rolls independently, so
+putting the strongest attack first gives it first claim on the round's budget.
+
+Supported attack fields are:
+
+|YKOname          Required in practice; also identifies its cooldown.
+chance        Percent chance when the attack is off cooldown. Default 20.
+cooldown      Seconds before that named attack may fire again. Default 3.
+target_mode   current, random, lowest_hp, or all. Default current.
+damage        Two-element ({ low, high }) range. Default ({ 40, 80 }).
+damage_type   Exact WEAPON_* and DAM_* bitfield. Default DAM_MAGIC.
+effect        damage, heal, fear, disarm, stun, paralyze, silence,
+              blind, movement, poison, or callback. Default damage.
+duration      Duration used by stun, silence, and movement effects.
+room_msg      One string or an array of room_message-formatted strings.
+victim_msg    One string or an array of messages sent to a single target.
+callback      Named function used when effect is callback.
+
+|WKOAttack names should be unique within a phase. Cooldowns are keyed by name
+and are cleared at a phase change.
+
+The damage range is rolled first, then tier outgoing-damage scaling and any
+tier threat floor are applied. Boss phase attacks deliberately do not roll
+magic resistance and do not perform a weapon-range check. damage_type still
+matters for resistances, weaknesses, and combat reporting.
+
+For current, random, and lowest_hp attacks, room_msg and victim_msg may use
+the normal room_message placeholders described in |MKOwizhelp 9.14|WKO. For
+an all-target attack, write room text which does not depend on one $t target.
+The room sees one attack announcement and the effect is then applied to every
+valid target.
+
+Custom room_msg and victim_msg values join the framework's built-in variants;
+they do not replace them. An array can weight the encounter's own voice more
+heavily. The phase transition remains the clearest guaranteed custom telegraph.
+
+Damage, stun, paralyze, silence, and movement apply the rolled attack damage.
+Heal restores the rolled amount to the boss. Fear, disarm, blind, and poison
+perform their named effect without applying immediate attack damage.
+
+Built-in stun, paralyze, silence, and movement effects participate in the
+shared boss-control recovery window. Prefer them to callbacks which directly
+set blocks. This prevents several bosses from chaining control with no chance
+for the player to recover.
+
+|BKB-----------------------------------------------------------------
+|CKBCUSTOM ATTACK CALLBACKS
+|BKB-----------------------------------------------------------------
+
+Use effect "callback" only when the built-in effects cannot express the
+mechanic. The function signature is:
+
+|YKOMy_callback(object target, int damage, mapping attack);
+
+|WKOA successful callback owns the whole effect, including applying damage.
+If the callback is missing or errors, the framework falls back to ordinary
+damage. Keep callbacks small and defensive:
+
+|YKOvoid brand_target(object oTarget, int iDamage, mapping mAttack)
+{
+  if (!objectp(oTarget) || environment(oTarget) != environment(this_object()))
+    return;
+  oTarget->receive_damage(iDamage, mAttack["damage_type"], 0,
+    this_object());
+  /* Apply the area's established status-effect contract here. */
+}
+
+|WKODo not retain a target object in saved state or across delayed work. Capture
+primitive identity, validate objectp() and environment again in a call_out,
+and remove callbacks/effects on both normal completion and destruction.
+
+|BKB-----------------------------------------------------------------
+|CKBORDINARY COMBAT MODS
+|BKB-----------------------------------------------------------------
+
+Ordinary add_combat_mod() attacks are disabled on BOSS_NPC by default. This
+prevents the monster combat-mod scheduler and the boss phase scheduler from
+both firing specials in the same round.
+
+|GKBset_boss_combat_mods_enabled(status enabled);
+
+  |WKOOpt in only after reviewing the combined proc rate and attack budget.
+  A normal phase list plus layered combat mods can create unexpected burst
+  damage. Usually the right answer is to move the attack into the phase list.
+
+|BKB-----------------------------------------------------------------
+|CKBREWARDS AND CONTRIBUTORS
+|BKB-----------------------------------------------------------------
+
+The framework records players who damage or actively fight the boss. Pet
+damage resolves to the player owner. At final death, each eligible contributor
+still in the room may receive a chest bearing that player's name. Chests last
+five minutes. A player who has left the room or is dead at the delivery
+boundary is not eligible.
+
+With no configuration, tier selects the normal reward-pool rolls and coin
+range. To override them:
+
+|GKBset_boss_reward_config(mapping rewards);
+
+Supported fields are:
+
+|YKOenabled       0 disables personal chests; 1 enables them.
+rolls         Number of random tier-pool item rolls.
+reward_rolls  Legacy alias for rolls.
+items         Exact object paths placed in every eligible chest.
+coins         One integer or an inclusive ({ low, high }) range.
+
+|WKOExamples:
+
+|YKOset_boss_reward_config(([ "rolls":2, "coins":({15000,30000}) ]));
+
+set_boss_reward_config(([
+  "items":({ CITADEL_EQUIP + "emberglass_cloak" }),
+  "coins":24000
+]));
+
+set_boss_reward_config(([ "rolls":0, "coins":0 ]));
+
+|WKOThe items array is not a pool. Every listed item is cloned into every
+eligible player's chest. An explicit items array also suppresses the generic
+golden-elixir roll. Do not place a UNIQUE object in personal rewards. Use
+UNIQUE_D's clone_unique_object() or make_unique_object() contract for a shared
+unique, and use an area or quest-owned delivery path for personal quest items.
+
+|GKBset_boss_rewards_enabled(status enabled);
+
+  |WKOUse set_boss_rewards_enabled(0) when an area controller completely owns
+  rewards. Do not let both systems deliver the same encounter reward.
+
+If monster_died() is overridden, call the inherited implementation exactly
+once. It owns the respawn timestamp, room retry, death-watch cleanup, personal
+chests, Events announcement, and EB_BOSS_DEFEATED event.
+
+|YKOint monster_died(object oKiller, object *aoAllKillers)
+{
+  object oRoom;
+
+  oRoom = environment(this_object());
+  if (objectp(oRoom) && function_exists("boss_defeated", oRoom))
+    oRoom->boss_defeated(oKiller, aoAllKillers);
+  return ::monster_died(oKiller, aoAllKillers);
+}
+
+|BKB-----------------------------------------------------------------
+|CKBTHE BOSS ROOM OWNS RESPAWNING
+|BKB-----------------------------------------------------------------
+
+A fixed boss should normally be populated with count-aware add_clone(). Put
+the call before the room's periodic-reset return so the room reasserts its
+population target:
+
+|YKOvoid reset(int iArg)
+{
+  ::reset(iArg);
+  add_clone(CITADEL_MOBS + "ember_warden", 1);
+  if (iArg) return;
+
+  /* descriptions, looks, terrain, domain, and exits */
+}
+
+|WKOadd_clone() recognizes BOSS_NPC, registers this room as the spawn owner,
+checks BOSS_RESPAWN_D, and schedules a bounded retry when the cooldown has not
+expired. Do not clone the boss manually, bypass add_clone() with an area-wide
+population daemon, or build a second respawn call_out for the same blueprint.
+
+The room should have an unconditional retreat route. A dangerous aggressive
+boss plus a locked only exit is not difficulty; it is a trap. Gates which open
+after the kill should guard progression beyond the arena, not the route back
+out. See |MKOwizhelp 4.2|WKO for the rest of the room contract.
+
+|BKB-----------------------------------------------------------------
+|CKBCOMPLETE TWO-PHASE EXAMPLE
+|BKB-----------------------------------------------------------------
+
+|YKO#include <mudlib.h>
+#include <types.h>
+#include "../citadel.h"
+
+inherit BOSS_NPC;
+
+void reset(int iArg)
+{
+  if (!is_clone(this_object())) return;
+  ::reset(iArg);
+  if (iArg) return;
+
+  set_name("ember warden");
+  set_aliases(({ "warden", "construct", "boss" }));
+  set_level(55);
+  set_boss_name("the Ember Warden");
+  set_boss_tier(2);
+  set_boss_reset_timeout(75);
+  set_boss_respawn_cooldown(1800);
+  set_boss_reward_config(([ "rolls":1, "coins":({18000,26000}) ]));
+
+  set_short("the Ember Warden");
+  set_long(wrap("Black iron plates overlap around a furnace-bright core. "
+    "Every joint exhales a measured ribbon of sparks, as though the "
+    "construct were counting down to a breach."));
+  set_race("golem");
+  set_size(SIZ_LARGE);
+  set_al(-700, 500);
+  set_aggressive(1);
+  set_no_scare(1);
+  add_resistance(DAM_FIRE);
+  add_weakness(DAM_COLD);
+
+  load_chat(6, ({
+    "The Ember Warden turns one plated hand toward the nearest doorway.\n",
+    "A furnace pulse passes through the Warden's iron ribs.\n"
+  }));
+  load_a_chat(10, ({
+    "The Warden measures the room through a slit of white fire.\n"
+  }));
+
+  set_boss_phases(({
+    ([ "name":"The Sealed Furnace", "hp":4800, "wc":30, "ac":28,
+       "attacks_per_round":2,
+       "attacks":({
+         ([ "name":"iron_rebuke", "chance":30, "cooldown":2,
+            "target_mode":"current", "damage":({38,54}),
+            "damage_type":WEAPON_BLUNT ]),
+         ([ "name":"cinder_arc", "chance":24, "cooldown":4,
+            "target_mode":"random", "damage":({32,46}),
+            "damage_type":DAM_FIRE|DAM_MAGIC ]),
+         ([ "name":"locking_grip", "chance":18, "cooldown":5,
+            "target_mode":"current", "damage":({26,38}),
+            "damage_type":WEAPON_BLUNT, "effect":"movement",
+            "duration":2 ])
+       }) ]),
+    ([ "name":"The Open Furnace", "hp":6200, "wc":34, "ac":30,
+       "attacks_per_round":2,
+       "transition_msg":"The Warden's chest plates peel apart, "
+         "exposing a furnace-white core as heat floods the chamber.\n",
+       "attacks":({
+         ([ "name":"furnace_wave", "chance":26, "cooldown":4,
+            "target_mode":"all", "damage":({28,42}),
+            "damage_type":DAM_FIRE|DAM_MAGIC,
+            "room_msg":"The open furnace releases a flat wave of "
+              "white heat across the chamber!\n" ]),
+         ([ "name":"slag_hammer", "chance":32, "cooldown":2,
+            "target_mode":"current", "damage":({48,68}),
+            "damage_type":WEAPON_BLUNT|DAM_FIRE ]),
+         ([ "name":"furnace_draft", "chance":15, "cooldown":6,
+            "target_mode":"current", "damage":({150,210}),
+            "effect":"heal" ])
+       }) ])
+  }));
+}
+
+|WKOThe associated room still needs its full light, domain, terrain,
+description, looks, and exits. Its population portion is simply:
+
+|YKOvoid reset(int iArg)
+{
+  ::reset(iArg);
+  add_clone(CITADEL_MOBS + "ember_warden", 1);
+  if (iArg) return;
+
+  /* Set up the room. Keep the retreat exit unconditional. */
+}
+
+|BKB-----------------------------------------------------------------
+|CKBREVIEW CHECKLIST
+|BKB-----------------------------------------------------------------
+
+Before submitting a boss encounter, verify:
+
+|BKB- |WKOThe blueprint uses BOSS_NPC and the clone-only reset guard.
+|BKB- |WKOset_name() and set_level() precede set_boss_phases().
+|BKB- |WKOThe race exists and size, alignment, descriptions, and aliases are set.
+|BKB- |WKOFinal phase HP was calculated after applying the tier multiplier.
+|BKB- |WKOAttack names, chances, cooldowns, target modes, and types are intentional.
+|BKB- |WKOControl is readable and uses built-in recovery-aware effects where possible.
+|BKB- |WKOAll-target attacks have text which makes sense without a single target.
+|BKB- |WKOPhase transitions say what changed instead of only announcing anger.
+|BKB- |WKOThe room uses add_clone(path, 1) before its periodic-reset return.
+|BKB- |WKOThe arena has a usable retreat and progression locks do not trap entrants.
+|BKB- |WKOOnly one system owns rewards and unique items use UNIQUE_D correctly.
+|BKB- |WKOAny monster_died() override returns ::monster_died() exactly once.
+|BKB- |WKORoom callbacks and delayed work validate objectp() and environment().
+|BKB- |WKOThe monster and its owning room compile with lpc-check.
+
+|CKBREVISION HISTORY
+|BKB================
+
+|WKORev. 0 - Initial BOSS_NPC, tier, phase, attack, reward, and room ownership
+         documentation. 07/14/26.

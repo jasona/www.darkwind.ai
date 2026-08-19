@@ -82,12 +82,12 @@ ISLANDS
   Main Continent - /domains/islands
   Volcano Island - /domains/islands/areas/volcano_isle
   Isle of Dwork - /domains/islands/areas/dwork
-  Rhuddlan - /domains/islands/areas/rhuddlan
   Cloud Island - /domains/islands/areas/cloud_isle
   Isle of Briton - /players/redbear/area
 
 Underworld
   Main Continent - /domains/underworld
+  Rhuddlan - /domains/underworld/areas/rhuddlan
   Worms - /players/acer/rooms/tunnels
   Mitra's Mines - /domains/underworld/areas/mines
 

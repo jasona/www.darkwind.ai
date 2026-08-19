@@ -1,19 +1,16 @@
 Skills and Abilities
-Ninjas do not passivly gain abilities as they gain guild levels.
-Instead, a ninja must <practice> an ability before they can use it.
-This is done through practice points. Ninjas start with 10 
-practice points, and gain some additional points with every
-<guild level>. Eventually, a Ninja can earn a maximum of 100
-practice points. Training begins at 25% success and each additional
-practice point increases the percentage by 10%, up to a maximum of
-95%. This percentage determines how often a Ninja can use an ability
-without failing. Currently, a Ninja has enough practice points to fully
-practice all skills.
+Ninja abilities unlock at their listed <guild level> and begin at 70%
+reliability. A failed reliability roll costs one fifth of the ability's
+spell-point cost, but does not consume its item, start its cooldown, or add
+a combo piece.
 
-Upon reaching guild level 15 and guild level 20, a Ninja can
-<master> an ability. This can only be done to skills practiced
-up to rank 8. Mastering an ability increases the chance of successfully
-using it to 100%.
+Ninja rank is separate from guild level. Every rank after rank 1 earns one
+training session. Use <practice> to spend a session and improve one ability
+by 5%, up to 100%. Rank costs 250 guild XP (GXP) each time. Valid skill
+attempts, completed combos, and qualifying combat kills award GXP. Battle GXP
+tapers for NPCs more than five levels below you and reaches zero at fifteen
+levels below you. Use <nskills> to review rank, GXP, sessions, marks, and
+reliability.
 
 Many offensive techniques also add a piece to the Ninja combo system.
 When enough recent pieces are present, the wraps may release a special

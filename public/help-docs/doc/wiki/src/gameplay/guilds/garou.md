@@ -1,7 +1,7 @@
 # Garou
 
-Work in progress: Garou is being built toward this design, and current game
-behavior differs in places.
+In-game guild help is authoritative for Garou training and abilities available
+to your character.
 
 Garou are Gaea's werewolf children: protectors, predators, spirits, and warning
 teeth. They carry rage and duty in the same body.

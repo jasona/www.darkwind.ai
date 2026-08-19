@@ -1,6 +1,7 @@
 # Dailos
 
-Work in progress: this page describes the Dailos setting we are building toward, and current game content differs in places.
+Some places described here are known through lore before they can be reached.
+Use `areas dailos` in game for available routes and level guidance.
 
 Dailos is the magenta moon of disease, chaos, plague, and savagery. It is the home of the God of Disease and the lunar domain that punishes casual curiosity. The land feels infected rather than merely dangerous: forests sicken, cities rot, foothills corrupt, and ruins curse the memory of whoever built them.
 

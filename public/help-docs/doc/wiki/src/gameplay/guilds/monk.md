@@ -1,7 +1,7 @@
 # Monk
 
-Work in progress: Monk is being built toward this design, and current game
-behavior differs in places.
+In-game guild help is authoritative for Monk training and abilities available
+to your character.
 
 Monks train the body until discipline becomes a weapon. Breath, chi, staff
 work, empty-hand forms, notches, challenges, and combos define the guild.
@@ -37,7 +37,7 @@ natural.
 
 ### Combos
 
-Combos are planned routes. Example routes:
+Example combo routes include:
 
 - Sweep into staff strike
 - Body point into open punch

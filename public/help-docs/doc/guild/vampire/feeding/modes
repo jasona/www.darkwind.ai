@@ -1,0 +1,11 @@
+|RKB☾  VAMPHELP · FEEDING MODES  ☽|000
+|CK0════════════════════════════════════════════════════════════|000
+
+  |GKBcareful|000  Slow, controlled, and best for avoiding witnesses.
+  |GKBquick  |000  Faster and rougher, with more evidence.
+  |YKBdeep   |000  More blood from wounded prey at greater risk.
+  |RKBdrain  |000  Maximum predation against prey already near death.
+  |GKBcorpse |000  Limited feeding from an eligible non-player corpse.
+
+|CK0Syntax:      |000 |GKBvamphelp feed|000
+|CK0Consequences:|000 |GKBvamphelp exposure|000

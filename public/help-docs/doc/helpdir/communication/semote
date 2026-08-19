@@ -1,3 +1,13 @@
 
-|WKBCommand:  |YKBsemote <feeling>
-|WKBDescription:  |YKODisplays what a particular emote will look like.
+|WKBCommand: |YKBsemote <feeling>|000
+
+|YKODisplays every supported form of an emote from your perspective. This
+includes guild emotes that are currently available to you. Guild emotes from
+guilds you do not belong to, or whose abilities are inactive, cannot be
+previewed.|000
+
+|WKBExamples:|000
+  |YKBsemote grin|000
+  |YKBsemote jackin|000
+
+|WKBSee also: |YKBemotes, feelings, guild emotes, emoteapropos|000

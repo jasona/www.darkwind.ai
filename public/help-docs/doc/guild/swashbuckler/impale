@@ -6,7 +6,10 @@ impaling attack. A swashbuckler must be light on his feet
 to successfully make such a deep attack without becoming
 excessively vulnerable to counterattack.
 
+Damage increases at each character-level bracket: +45 below Hero,
++56 at Hero, +67 at Legend, +78 at Epic, and +90 at Mythic.
+
 GL: 11
-SP:  8 / attack
+SP:  9 / proc, reduced by Flow
 command:  impale
 duration: technique mode

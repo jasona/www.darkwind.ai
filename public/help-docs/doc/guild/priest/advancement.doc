@@ -1,0 +1,36 @@
+Priest of Set - Advancement
+---------------------------
+
+The Order advances those who spill blood in Set's name. Every worthy
+kill and every committed prayer bargain earns Priest XP, and your guild level (1 to 20) rises
+automatically when you have earned enough.
+
+Earning Priest XP:
+- Any NPC kill where you struck the killing blow, or dealt at least a
+  tenth of the victim's health, awards Priest XP to everyone in the
+  group who qualifies.
+- Tougher prey is worth more. Rewards taper when prey is more than five
+  levels beneath you and reach nothing at fifteen levels beneath you.
+  Bosses carry large bonuses.
+- Variety pays. Hunting the same spawn over and over decays the
+  reward; ranging widely keeps it at full value.
+- A committed prayer that reserves HP or SP earns one Priest XP per
+  ten points of its base reservation, with a minimum of 1 and maximum
+  of 25. Prayers with no reservation earn none. Dispensation's added
+  reserve does not increase this reward.
+
+Guild levels:
+- Levels advance on their own the moment you have earned enough XP.
+- Your guild level can never exceed your character level, and your
+  combined guild levels can never exceed your character level.
+- Set grants nothing to those who walk in the light. XP earned while
+  your alignment is good is banked, and the levels pop when you
+  return to darkness - just as your prayers demand.
+- Guild level 20 is the summit of the priesthood.
+
+Commands:
+- 'cost' and 'advance guild' at the Church of Set report your
+  progress. Prayers still unlock by guild level; see 'prayers'.
+
+Your record survives leaving the Order. Should you return, your
+standing is restored - to the truly evil.

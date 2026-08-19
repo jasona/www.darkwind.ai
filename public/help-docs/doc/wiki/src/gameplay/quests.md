@@ -6,26 +6,15 @@ Quests give structured objectives, experience, coins, quest points, and occasion
 
 | Command | Use |
 | --- | --- |
-| `qlist` | Show available quests |
-| `qlist <filter>` | Filter the quest list |
-| `qinfo <number>` | Show quest details |
-| `qaccept <number>` | Accept a quest |
+| `engage waysteward` | Review, accept, report on, or turn in local quests |
 | `myquests` | Show accepted and completed quests |
 | `qstatus` | Show accepted quest progress |
 | `escort` | Start an escort objective |
 
-Quest numbers come from your most recent `qlist`. If you filter the list, `qinfo` and `qaccept` use that filtered numbering.
-
-## Filters
-
-Useful `qlist` examples:
-
-- `qlist darkwind`
-- `qlist level 1-10`
-- `qlist deity set`
-- `qlist rep villain`
-- `qlist type kill`
-- `qlist available`
+Quest-bearing areas have a waysteward beside their wayshard or entrance. A
+yellow `[?]` marks available work and `[!]` marks work ready to turn in.
+Quest descriptions, suggested levels, objectives, and rewards are presented
+through the `engage` dialogue before acceptance.
 
 ## Difficulty Colors
 
@@ -48,8 +37,8 @@ enemy abilities, and your guild tools matter.
 | Rescue | Locate and free an NPC |
 | Escort | Guide and protect an NPC while they move |
 
-All accepted quests track progress automatically. You do not need to choose an
-active quest before hunting, collecting, rescuing, or escorting.
+All accepted quests track progress automatically. Rewards are held until every
+objective is complete and you return to the quest area's waysteward.
 
 ## Rewards
 

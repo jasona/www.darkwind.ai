@@ -1,0 +1,17 @@
+|WKBSyntax: |YKBchanhist <channel> [lines]|WKB
+|WKO=====================================================================
+|YKOShows recent history for a channel you currently have access to. This
+works with public, guild, clan, staff, and other dynamic channels according
+to your current permissions and memberships.
+
+A channel may be tuned off and still have its history reviewed. The optional
+line count is limited to 300 entries.
+
+|WKOExamples:
+  |YKBchanhist gossip
+  chanhist auction 50
+  chanhist Street Samurai 20|XX0
+
+|WKBSee also: |YKBchannels, tune, communication|XX0
+
+# alias: channelhistory, channelhist

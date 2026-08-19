@@ -1,9 +1,12 @@
-                       |BKB-= |CKBPick |BKB=-
-               
-|MKOThe highlight of being a Thief is stealing objects from players
-or monsters.  The pick command allows you to do so at some 
-predetermined percentage level.
+                         Pick
+---------------------------------------------------------------------
 
+Choose one visible, ordinary item from a mark's inventory and try to
+steal it. Worn, wielded, kept, unique, auto-loading, protected, no-drop,
+and otherwise unsafe items cannot be taken. A failed delivery leaves the
+item and both inventories unchanged.
 
-|CKOGLVL required: |GKB9
-|CKOSyntax: |YKOpick <item>               |CKOCost: |WKO~30
+Successful theft from a suitable NPC can grant Thief GXP.
+
+  GLVL: 6
+  Syntax: pick <item> from <target>

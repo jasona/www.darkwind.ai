@@ -1,0 +1,16 @@
+Overchannel commits extra maximum SP to each manual damaging working.
+
+  Arcane 8       5 percent
+  Arcane 16     10 percent
+  Arcane 32     20 percent
+  Arcane 500    25 percent
+  Arcane 1000   30 percent
+
+Use "overchannel <percent>" to select an open setting and "overchannel off" to
+release it. The added SP is not discounted by mastery or Mezari. It becomes
+additional spell power using effective Arcane and a smaller true-Arcane
+prestige term.
+
+Overchannel lasts for the current play session. It does not affect utility
+workings, automatic barrage, or Echoform. A resisted or interrupted working
+still spends the power committed to the attempt.

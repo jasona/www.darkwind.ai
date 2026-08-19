@@ -2,7 +2,7 @@
 
 Professions are [traits](traits.md) used for gathering, crafting, and supplying other players. They give every character a way to participate in the economy beyond killing monsters.
 
-DarkWind has eight professions.
+DarkWind has eleven professions.
 
 ## Commands
 
@@ -10,7 +10,9 @@ DarkWind has eight professions.
 | --- | --- |
 | `professions` | Show profession skill levels |
 | `traits` | Show all known traits |
-| `reagents` | Show known reagents |
+| `reagents` | Show known reagents and saved materials |
+| `reagents wood` | Show saved timber, planks, and framing bundles |
+| `carpentry list` | Show Carpentry refinement and crafting plans |
 
 Profession tools can be bought from the profession building in town. Most transformed forms do not need profession tools.
 
@@ -25,6 +27,8 @@ The profession building is also where workers, refining, and several crafting st
 | Herbalism | `gather herbs` | Gather herbs from terrain for alchemy and other recipes |
 | Mining | `mine ore` | Mine ore for smithing and manufacturing |
 | Skinning | `skin corpse` | Harvest hides for leatherworking |
+| Fishing | `bait hook`, `fish` | Catch food and fish-part reagents |
+| Forestry | `chop tree` | Harvest quality timber from marked Kingswood stands |
 
 Gathering professions are tied to terrain and what you kill. Different domains provide different materials.
 
@@ -38,10 +42,64 @@ Gathering professions can always skill up, though the chance gets lower as the s
 | Leatherworking | Create leather armor, bags, and hide goods |
 | Smithing | Create metal armor and other forged goods |
 | Tailoring | Create clothing, padded armor, cloth bags, bandages, and poultices |
+| Cybernetics | Salvage cyberware and fabricate specialized hardware supplies |
+| Carpentry | Mill timber and craft furniture or construction framing |
 
 Manufacturing uses gathered resources and reagents dropped by NPCs.
 
 Manufacturing skillups depend on the tier of item being made. Crafting far below your current skill eventually stops improving the profession until the final tier.
+
+Cybernetics recipes are learned through Street Samurai fabrication. Extracted
+cyberware can be dismantled into saved components, shown with `reagents cyber`
+and consumed by those recipes.
+
+## Forestry
+
+Forestry requires a forestry axe from the profession general store (`4e, n`
+from Center of Town). Marked timber stands appear in the Kingswood. `chop tree`
+harvests weighted oak, ash, or pine timber and exhausts the visible stand until
+its virtual room resets. Higher Forestry skill improves yield and can produce
+fine, superior, or masterwork timber. Harvested wood is saved automatically in
+`reagents wood` rather than carried as an inventory object.
+
+## Carpentry
+
+Carpentry works in the Kingdom Commons or inside a homestead.
+
+| Command | Use |
+| --- | --- |
+| `carpentry mill [quality] <species> [amount]` | Turn each timber into two matching planks |
+| `carpentry craft [quality] <species> <plan>` | Craft furniture or a Framing Bundle |
+| `homestead furnishings` | List furniture placed in the current room |
+| `place <furniture>` | Place carried crafted furniture persistently in your room |
+| `remove furniture <id or type>` | Return placed furniture to inventory |
+
+One timber becomes two matching planks. Species and quality must match through
+timber, planks, and the finished item.
+
+| Plan | Planks | Carpentry skill |
+| --- | ---: | ---: |
+| Stool | 2 | 0 |
+| Chair | 3 | 50 |
+| Table | 6 | 100 |
+| Bookshelf | 8 | 175 |
+| Bed | 10 | 250 |
+
+For a standard pine stool, use `carpentry mill pine 1`, `carpentry craft pine
+stool`, and then `place pine stool` inside your own room. Include the quality
+for improved timber, such as `carpentry mill fine pine 1` followed by
+`carpentry craft fine pine stool`.
+
+A room can hold eight furnishings, and placed furniture persists with the
+homestead across logout and reboot. `homestead furnishings` lists stable ids
+for removing duplicate types. The five plans above are physical furniture;
+use homestead custom looks, smells, and actions for descriptive decorations
+such as rugs, lanterns, paintings, blankets, and crockery.
+
+Framing Bundles cost five matching planks. Deliver them to Brant in the
+Kingdom Commons with `deliver framing bundles` or `deliver <amount> framing
+bundles`. Every home upgrade after the hut requires delivered framing in
+addition to coins and the existing full-room prerequisite.
 
 ## Crafting Tiers
 
@@ -241,4 +299,6 @@ Professions feed directly into [Economy](economy.md).
 
 ## Guild And Class Hooks
 
-Some guild and class designs build on professions directly. Druid uses harvesting and nature work as part of guild life. Mage research can use purchased inks, reagents, and ash-derived materials. Future class systems can treat profession mastery as a path into specialized crafting and support play.
+Some guilds build on professions directly. Druid uses harvesting and nature
+work as part of guild life, while Mage research can use purchased inks,
+reagents, and ash-derived materials.

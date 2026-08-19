@@ -1,0 +1,78 @@
+|MKBAdvanced Schemes: Notes Nobody Admits Dictating|000
+
+Syntax:
+  schemes [list]
+  schemes info <name>
+  schemes learn <name>
+  schemes activate <name>
+  schemes swap <active> for <learned>
+
+Charlatan Rank opens one new scheme every five Ranks from 35 through 105.
+Drina teaches each open scheme for gold and you permanently scribble its notes
+inside your cloak. Learning automatically activates the scheme when an empty
+slot is available. A learned, inactive scheme may fill a newly earned empty
+slot for free; replacing an occupied slot costs gold.
+
+One scheme may be active initially. Rank 50 opens a second active slot, Rank
+100 opens a third, and every fifty Ranks thereafter opens another. By Rank
+105 every scheme can be learned, but only three can be active.
+
+  Rank 35   Hair Trigger
+    Loading a weapon in combat immediately throws a carried elemental or acid
+    flask at the current foe.
+
+  Rank 40   Unstable Mixture
+    Elemental flasks deal 20 percent less direct damage but leave Burning,
+    Chilled, or lost concentration behind.
+
+  Rank 45   Bad Batch
+    Cookash gains two potency and loses one quarter of its duration. One batch
+    in four reveals itself as the wrong colour when quaffed.
+
+  Rank 50   Hot Merchandise
+    Weapon loads last 50 percent longer and double their fitting side effect.
+
+  Rank 55   Cut Product
+    Stretch Poison leaves a second owner-bound weaker dose that preserves the
+    source poison's unusual nastiness. Both coatings lose one strength.
+
+  Rank 60   Loaded Question
+    Successful Confuse blocks concentration for three extra seconds instead
+    of fully paralyzing the mark.
+
+  Rank 65   Second Story
+    A resisted Confuse may still spoil concentration for two seconds.
+
+  Rank 70   Improvised Exit
+    Avoid breaks the current fight as it begins, but Fancy Footwork lasts half
+    as long.
+
+  Rank 75   Fine Print
+    Red salt and blue mixer halve their immediate bonus and double their
+    regeneration duration.
+
+  Rank 80   Plausible Deniability
+    Volatile flasks stop splashing their thrower and deal 30 percent less
+    direct damage.
+
+  Rank 85   Marked Cards
+    Pocket Sand used on an already distracted mark exposes instead of blinds.
+
+  Rank 90   False Bottom
+    Carry two acid and two elemental flasks at once. Flasks brewed while the
+    scheme is active lose one potency.
+
+  Rank 95   Double Bluff
+    Distract exposes a fooled mark instead of trying to end the fight.
+
+  Rank 100  The Long Con
+    An opening-powered Sucker Punch trades half its bonus burst for a longer
+    Exposed condition.
+
+  Rank 105  Liquid Assets
+    Cdip coats every clean caravan dart carried or stored in the cloak instead
+    of stopping after ten.
+
+Listing and inspecting schemes works anywhere. Drina must be present to teach,
+activate, or swap cloak notes. She does not extend credit and denies ever
+having seen your handwriting.

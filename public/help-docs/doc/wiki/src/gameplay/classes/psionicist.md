@@ -1,7 +1,7 @@
 # Psionicist
 
-Work in progress: Psionicist is being built toward this design, and current game
-behavior differs in places.
+In-game class help is authoritative for the Psionicist abilities available to
+your character.
 
 Psionicists turn disciplined mind into force. They reshape perception, push
 bodies, touch thoughts, and bend the timing of a fight.

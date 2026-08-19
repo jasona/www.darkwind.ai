@@ -1,7 +1,9 @@
 Guild Levels and Advancement
-In addition to experience, a Ninja must complete a challenge
-each guild level. The <Training Master> will assign a challenge that is
-appropriate for the Ninja. To complete this challenge, the Ninja will
-have to kill the assigned target. Then, they must dip a <kunai> in the
-blood of the corpse. This can be done with the <bloody> command.
+Ninja guild level and Ninja rank are separate. Guild level unlocks abilities
+and rises only when the <Training Master> accepts proof of a newly completed
+<mark>. General experience and GXP are never spent on guild level. The final
+guild level is 50.
 
+Ninja rank is earned with GXP. Every rank costs 250 GXP and every rank after
+rank 1 supplies one training session. Rank never raises guild level. See
+<abilities> for training and <marks> for assassination advancement.

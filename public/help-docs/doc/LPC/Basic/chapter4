@@ -117,12 +117,12 @@ efun: 1) what return type does it have, and 2) what parameters of what
 types does it take.
 
 Information on efuns such as input parameters and return types is often
-found in a directory called /doc/efun on your mud.  I cannot
+found in a directory called /public/docs/efun on your mud.  I cannot
 detail efuns here, because efuns vary from driver to driver.  However,
 you can often access this information using the commands "man" or "help"
 depending on your mudlib.  For instance, the command "man write" would
 give you information on the write efun.  But if all else fails,
-"more /doc/efun/write" should work.
+"more /public/docs/efun/write" should work.
 
 By looking it up, you will find write is declared as follows:
 
@@ -208,7 +208,7 @@ In addition, each mudlib has special functions like efuns in that they
 are already defined and declared for you, but different in that they
 are defined in the mudlib and in LPC.  They are called simul_efuns, or
 simulated efuns.  You can find out all about each of these as they are
-listed in the /doc/efun directory on most muds.  In addition many
+listed in the /public/docs/efun directory on most muds.  In addition many
 muds have a command called "man" or a "help" command which allows you
 simply to call up the info files on them.
 
