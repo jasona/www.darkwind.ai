@@ -73,6 +73,16 @@ test("newbie quality-of-life and remote commands stay in their intended stages",
   assert.ok(byId.stage2.commands.includes("set autoloot on"));
   assert.ok(byId.stage2.commands.includes("set autokill on"));
   assert.ok(byId.stage2.commands.includes("set wimpy 25"));
+  assert.ok(byId.stage2.commands.includes("read sign"));
+  assert.ok(byId.stage2.commands.includes("equipment"));
+  assert.match(
+    byId.stage2.paragraphs.join(" "),
+    /Center of Town: 4w, 3n, e/,
+  );
+  assert.doesNotMatch(
+    byId.stage2.paragraphs.join(" "),
+    /Center of Town: 4w, s/,
+  );
 
   assert.ok(byId.stage3.commands.includes("remcost"));
   assert.ok(byId.stage3.commands.includes("remadvance <stat>"));

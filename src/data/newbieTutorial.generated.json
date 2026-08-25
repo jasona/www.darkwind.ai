@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "source": {
     "repository": "jasona/darkwind-nextgen",
-    "revision": "089da2efb3093c3b6da4206a9af530e463353715",
+    "revision": "91a08e668c56396d30eec3c4c7387bb3771ba3a1",
     "dirty": false,
-    "contentHash": "96d674710ca7a8cc4c84993bdd088cda84baa38d41790a311de28b21ae46004a",
+    "contentHash": "517dbee0a9638da34f8e5fa19c0db97865e0d7cbd5575564d42b54ca2dac7bd1",
     "normalRoot": "codebase/public/docs/helpdir/new",
     "screenreaderRoot": "codebase/public/docs/vihelp/new",
     "files": [
@@ -108,12 +108,14 @@
       "title": "Gear Up and Learn to Fight",
       "levelRange": "levels 1-5",
       "paragraphs": [
-        "Erga's newbie store (from the Center of Town: 4w, s) hands out free equipment fit for anyone under level 5; the donation room (5n, e) has castoffs from generous veterans. Wear and wield everything, then practice on the newbie farm.",
+        "Erga's newbie store (from the Center of Town: 4w, 3n, e) hands out free equipment fit for anyone under level 5. At the shop, read sign, type equipment, then wear the leather and shield and wield the dagger. The donation room (5n, e) has castoffs from generous veterans. Once equipped, practice on the newbie farm.",
         "Death carries NO penalty at level 5 and under, so this is the time to take risks and learn kill, assess, and wimpy. Ask questions freely on the newbie channel -- everyone started here.",
         "Choose your corpse automation: set autogold on takes coins only, while set autoloot on takes coins and every gettable item, making autogold redundant and filling your inventory faster.",
         "set autokill on does not attack by itself; it only makes a manually entered bare kill choose the first visible NPC. Keep naming targets until you are comfortable. set wimpy 25 retreats below 25 percent HP when an escape is possible. set combatbrief-short on trims combat text; in busy groups, set combatbrief-self on keeps attacks by or on you, and set combatbrief-hit on hides misses and dodges."
       ],
       "commands": [
+        "read sign",
+        "equipment",
         "kill",
         "assess",
         "wimpy",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-19T21:15:09.872Z",
+  "generatedAt": "2026-08-25T16:00:21.378Z",
   "source": "public/help-docs/doc",
   "totalDocs": 2680,
   "categories": [
@@ -18049,9 +18049,9 @@
       "path": "helpdir/new/stage2",
       "category": "helpdir",
       "title": "Stage 2 of 8: Gear Up and Learn to Fight (levels 1-5)",
-      "excerpt": "Stage 2 of 8: Gear Up and Learn to Fight (levels 1-5) ===================================================================== Erga's newbie store (from the Center of Town: 4w, s) hands out free equipment fit for anyone und",
-      "bytes": 1500,
-      "lines": 27
+      "excerpt": "Stage 2 of 8: Gear Up and Learn to Fight (levels 1-5) ===================================================================== Erga's newbie store (from the Center of Town: 4w, 3n, e) hands out free equipment fit for anyone",
+      "bytes": 1598,
+      "lines": 28
     },
     {
       "id": "helpdir/new/stage3",
@@ -21919,9 +21919,9 @@
       "path": "vihelp/new/stage2",
       "category": "vihelp",
       "title": "Stage 2 of 8: Gear Up and Learn to Fight, levels 1 to 5",
-      "excerpt": "Stage 2 of 8: Gear Up and Learn to Fight, levels 1 to 5 Erga's newbie store (from the Center of Town: four west, one south) hands out free equipment fit for anyone under level 5; the donation room (five north, one east) ",
-      "bytes": 1152,
-      "lines": 25
+      "excerpt": "Stage 2 of 8: Gear Up and Learn to Fight, levels 1 to 5 Erga's newbie store (from the Center of Town: four west, three north, one east) hands out free equipment fit for anyone under level 5. At the shop, read the sign, t",
+      "bytes": 1248,
+      "lines": 26
     },
     {
       "id": "vihelp/new/stage3",
